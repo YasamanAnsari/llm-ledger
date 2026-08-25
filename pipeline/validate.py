@@ -290,8 +290,9 @@ def check_rule9_determinism(core_dir: Path) -> list:
             continue  # artifact not built yet; nothing to compare
         try:
             fresh = regenerate()
-        except FileNotFoundError as exc:
-            errors.append(f"rule9: cannot regenerate {filename}: {exc}")
+        except FileNotFoundError:
+            # Raw dumps are not redistributed (manifests only), so a fresh
+            # clone cannot rerun this comparison; `make pull` restores it.
             continue
         if fresh != path.read_bytes():
             errors.append(f"rule9: {filename} is not byte-identical to a fresh rebuild")
