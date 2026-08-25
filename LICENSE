@@ -1,0 +1,9 @@
+This repository uses two licenses.
+
+Code (pipeline/, tests/, Makefile, and all other source files):
+  MIT License - see LICENSE-CODE
+
+Data (everything under data/):
+  Creative Commons Attribution 4.0 International (CC BY 4.0) - see LICENSE-DATA
+
+The data is NOT MIT. Reusing the CSVs requires attribution under CC BY 4.0.

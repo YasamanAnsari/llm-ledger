@@ -1,0 +1,1989 @@
+model_id,namespace,identifier
+academic-ds-9b,huggingface,ByteDance-Seed/academic-ds-9B
+ahn-mamba2-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B
+ahn-mamba2-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-3B
+ahn-mamba2-for-qwen-2-5-instruct-7b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-7B
+ai21-jamba-large-1-5,huggingface,ai21labs/AI21-Jamba-Large-1.5
+ai21-jamba-large-1-6,huggingface,ai21labs/AI21-Jamba-Large-1.6
+ai21-jamba-mini-1-5,huggingface,ai21labs/AI21-Jamba-Mini-1.5
+ai21-jamba-mini-1-6,huggingface,ai21labs/AI21-Jamba-Mini-1.6
+ai21-jamba-reasoning-3b,huggingface,ai21labs/AI21-Jamba-Reasoning-3B
+ai21-jamba2-3b,huggingface,ai21labs/AI21-Jamba2-3B
+ai21-jamba2-mini,huggingface,ai21labs/AI21-Jamba2-Mini
+ai21-jamba2-mini-fp8,huggingface,ai21labs/AI21-Jamba2-Mini-FP8
+amazon-nova-lite,epoch,Amazon Nova Lite
+amazon-nova-lite,models_dev,sap-ai-core/amazon--nova-lite
+amazon-nova-micro,epoch,Amazon Nova Micro
+amazon-nova-micro,models_dev,sap-ai-core/amazon--nova-micro
+amazon-nova-pro,epoch,Amazon Nova Pro
+amazon-nova-pro,models_dev,sap-ai-core/amazon--nova-pro
+autoglm-phone-9b,huggingface,zai-org/AutoGLM-Phone-9B
+aya-23-35b,huggingface,CohereLabs/aya-23-35B
+aya-23-8b,huggingface,CohereLabs/aya-23-8B
+aya-expanse-32b,huggingface,CohereLabs/aya-expanse-32b
+aya-expanse-8b,huggingface,CohereLabs/aya-expanse-8b
+aya-vision-32b,huggingface,CohereLabs/aya-vision-32b
+aya-vision-8b,huggingface,CohereLabs/aya-vision-8b
+baichuan-13b-base,huggingface,baichuan-inc/Baichuan-13B-Base
+baichuan-13b-chat,huggingface,baichuan-inc/Baichuan-13B-Chat
+baichuan-7b,huggingface,baichuan-inc/Baichuan-7B
+baichuan-m2-32b,huggingface,baichuan-inc/Baichuan-M2-32B
+baichuan-m3-235b,huggingface,baichuan-inc/Baichuan-M3-235B
+baichuan-m3-235b-fp8,huggingface,baichuan-inc/Baichuan-M3-235B-FP8
+baichuan2-13b-base,huggingface,baichuan-inc/Baichuan2-13B-Base
+baichuan2-13b-chat,huggingface,baichuan-inc/Baichuan2-13B-Chat
+baichuan2-7b-base,huggingface,baichuan-inc/Baichuan2-7B-Base
+baichuan2-7b-chat,huggingface,baichuan-inc/Baichuan2-7B-Chat
+baichuanmed-ocr-72b,huggingface,baichuan-inc/BaichuanMed-OCR-72B
+baichuanmed-ocr-7b,huggingface,baichuan-inc/BaichuanMed-OCR-7B
+bfs-prover-v1-7b,huggingface,ByteDance-Seed/BFS-Prover-V1-7B
+bfs-prover-v2-32b,huggingface,ByteDance-Seed/BFS-Prover-V2-32B
+bfs-prover-v2-7b,huggingface,ByteDance-Seed/BFS-Prover-V2-7B
+bitcpm-cann-0-5b,huggingface,openbmb/BitCPM-CANN-0.5B
+bitcpm-cann-0-5b-unquantized,huggingface,openbmb/BitCPM-CANN-0.5B-unquantized
+bitcpm-cann-1b,huggingface,openbmb/BitCPM-CANN-1B
+bitcpm-cann-1b-unquantized,huggingface,openbmb/BitCPM-CANN-1B-unquantized
+bitcpm-cann-3b,huggingface,openbmb/BitCPM-CANN-3B
+bitcpm-cann-3b-unquantized,huggingface,openbmb/BitCPM-CANN-3B-unquantized
+bitcpm-cann-8b,huggingface,openbmb/BitCPM-CANN-8B
+bitcpm-cann-8b-unquantized,huggingface,openbmb/BitCPM-CANN-8B-unquantized
+c4ai-command-a-03-2025,huggingface,CohereLabs/c4ai-command-a-03-2025
+c4ai-command-r-08-2024,huggingface,CohereLabs/c4ai-command-r-08-2024
+c4ai-command-r-plus,huggingface,CohereLabs/c4ai-command-r-plus
+c4ai-command-r-plus-08-2024,huggingface,CohereLabs/c4ai-command-r-plus-08-2024
+c4ai-command-r-v01,huggingface,CohereLabs/c4ai-command-r-v01
+c4ai-command-r7b-12-2024,huggingface,CohereLabs/c4ai-command-r7b-12-2024
+c4ai-command-r7b-arabic-02-2025,huggingface,CohereLabs/c4ai-command-r7b-arabic-02-2025
+caprl-3b,huggingface,internlm/CapRL-3B
+caprl-internvl3-5-8b,huggingface,internlm/CapRL-InternVL3.5-8B
+caprl-qwen3vl-2b,huggingface,internlm/CapRL-Qwen3VL-2B
+caprl-qwen3vl-4b,huggingface,internlm/CapRL-Qwen3VL-4B
+circuit-sparsity,huggingface,openai/circuit-sparsity
+claude-2,anthropic_api,claude-2.0
+claude-2,text_surface_forms,Claude
+claude-2,text_surface_forms,Claude 2
+claude-2,text_surface_forms,claude ai
+claude-2,wikipedia,Claude (language model)
+claude-3-5-haiku,epoch,Claude 3.5 Haiku
+claude-3-5-haiku,models_dev,302ai/claude-3-5-haiku-20241022
+claude-3-5-sonnet,anthropic_api,claude-3-5-sonnet-20240620
+claude-3-5-sonnet,anthropic_api,claude-3-5-sonnet-20241022
+claude-3-5-sonnet,epoch,Claude 3.5 Sonnet
+claude-3-5-sonnet,models_dev,digitalocean/anthropic-claude-3.5-sonnet
+claude-3-5-sonnet,text_surface_forms,Claude 3.5
+claude-3-5-sonnet,text_surface_forms,Claude 3.5 Sonnet
+claude-3-5-sonnet,wikipedia,Claude (language model)
+claude-3-7-sonnet,epoch,Claude 3.7 Sonnet
+claude-3-7-sonnet,models_dev,abacus/claude-3-7-sonnet-20250219
+claude-3-haiku,anthropic_api,claude-3-haiku-20240307
+claude-3-haiku,epoch,Claude 3 Haiku
+claude-3-haiku,models_dev,helicone/claude-3-haiku-20240307
+claude-3-haiku,openrouter,anthropic/claude-3-haiku
+claude-3-haiku,wikipedia,Claude (language model)
+claude-3-opus,anthropic_api,claude-3-opus-20240229
+claude-3-opus,epoch,Claude 3 Opus
+claude-3-opus,models_dev,digitalocean/anthropic-claude-3-opus
+claude-3-opus,text_surface_forms,Claude 3
+claude-3-opus,text_surface_forms,Claude 3 Opus
+claude-3-opus,wikipedia,Claude (language model)
+claude-3-sonnet,anthropic_api,claude-3-sonnet-20240229
+claude-3-sonnet,epoch,Claude 3 Sonnet
+claude-3-sonnet,models_dev,sap-ai-core/anthropic--claude-3-sonnet
+claude-3-sonnet,wikipedia,Claude (language model)
+claude-fable-5,epoch,Claude Fable 5
+claude-fable-5,models_dev,anthropic/claude-fable-5
+claude-fable-5,openrouter,anthropic/claude-fable-5
+claude-fable-latest,models_dev,edenai/anthropic/claude-fable-latest
+claude-fable-latest,openrouter,~anthropic/claude-fable-latest
+claude-haiku-4-5,epoch,Claude Haiku 4.5
+claude-haiku-4-5,models_dev,helicone/claude-haiku-4-5-20251001
+claude-haiku-4-5,openrouter,anthropic/claude-haiku-4.5
+claude-haiku-latest,models_dev,nano-gpt/anthropic/claude-haiku-latest
+claude-haiku-latest,openrouter,~anthropic/claude-haiku-latest
+claude-mythos-5,epoch,Claude Mythos 5
+claude-mythos-5,models_dev,azure/claude-mythos-5
+claude-opus-4,epoch,Claude Opus 4
+claude-opus-4,models_dev,abacus/claude-opus-4-20250514
+claude-opus-4,openrouter,anthropic/claude-opus-4
+claude-opus-4-1,epoch,Claude Opus 4.1
+claude-opus-4-1,models_dev,302ai/claude-opus-4-1-20250805
+claude-opus-4-1,openrouter,anthropic/claude-opus-4.1
+claude-opus-4-5,epoch,Claude Opus 4.5
+claude-opus-4-5,models_dev,abacus/claude-opus-4-5-20251101
+claude-opus-4-5,openrouter,anthropic/claude-opus-4.5
+claude-opus-4-6,epoch,Claude Opus 4.6
+claude-opus-4-6,models_dev,kilo/stealth/claude-opus-4.6
+claude-opus-4-6,openrouter,anthropic/claude-opus-4.6
+claude-opus-4-7,epoch,Claude Opus 4.7
+claude-opus-4-7,models_dev,kilo/stealth/claude-opus-4.7
+claude-opus-4-7,openrouter,anthropic/claude-opus-4.7
+claude-opus-4-7-fast,models_dev,kilo/anthropic/claude-opus-4.7-fast
+claude-opus-4-7-fast,openrouter,anthropic/claude-opus-4.7-fast
+claude-opus-4-8,epoch,Claude Opus 4.8
+claude-opus-4-8,models_dev,kilo/stealth/claude-opus-4.8
+claude-opus-4-8,openrouter,anthropic/claude-opus-4.8
+claude-opus-4-8-fast,models_dev,kilo/anthropic/claude-opus-4.8-fast
+claude-opus-4-8-fast,openrouter,anthropic/claude-opus-4.8-fast
+claude-opus-5,anthropic_api,claude-opus-5
+claude-opus-5,epoch,Claude Opus 5
+claude-opus-5,models_dev,venice/claude-opus-5
+claude-opus-5,openrouter,anthropic/claude-opus-5
+claude-opus-5,wikipedia,Claude (language model)
+claude-opus-5-fast,models_dev,venice/claude-opus-5-fast
+claude-opus-5-fast,openrouter,anthropic/claude-opus-5-fast
+claude-opus-latest,models_dev,nano-gpt/anthropic/claude-opus-latest
+claude-opus-latest,openrouter,~anthropic/claude-opus-latest
+claude-sonnet-4,epoch,Claude Sonnet 4
+claude-sonnet-4,models_dev,abacus/claude-sonnet-4-20250514
+claude-sonnet-4,openrouter,anthropic/claude-sonnet-4
+claude-sonnet-4-5,anthropic_api,claude-sonnet-4-5
+claude-sonnet-4-5,anthropic_api,claude-sonnet-4-5-20250929
+claude-sonnet-4-5,epoch,Claude Sonnet 4.5
+claude-sonnet-4-5,models_dev,venice/claude-sonnet-4-5
+claude-sonnet-4-5,openrouter,anthropic/claude-sonnet-4.5
+claude-sonnet-4-5,wikipedia,Claude (language model)
+claude-sonnet-4-6,epoch,Claude Sonnet 4.6
+claude-sonnet-4-6,models_dev,kilo/stealth/claude-sonnet-4.6
+claude-sonnet-4-6,openrouter,anthropic/claude-sonnet-4.6
+claude-sonnet-5,anthropic_api,claude-sonnet-5
+claude-sonnet-5,epoch,Claude Sonnet 5
+claude-sonnet-5,models_dev,anthropic/claude-sonnet-5
+claude-sonnet-5,openrouter,anthropic/claude-sonnet-5
+claude-sonnet-5,wikipedia,Claude (language model)
+claude-sonnet-latest,models_dev,nano-gpt/anthropic/claude-sonnet-latest
+claude-sonnet-latest,openrouter,~anthropic/claude-sonnet-latest
+codegeex4-all-9b,huggingface,zai-org/codegeex4-all-9b
+codellama-7b-hf,huggingface,meta-llama/CodeLlama-7b-hf
+codellama-7b-instruct-hf,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
+codestral,epoch,Codestral
+codestral,models_dev,vercel/mistral/codestral
+codestral-2508,models_dev,cortecs/codestral-2508
+codestral-2508,openrouter,mistralai/codestral-2508
+codestral-embed,epoch,Codestral Embed
+codestral-embed,models_dev,vercel/mistral/codestral-embed
+codex-mini,epoch,codex-mini
+codex-mini,models_dev,azure/codex-mini
+cogagent-vqa-hf,huggingface,zai-org/cogagent-vqa-hf
+cogvlm2-llama3-chat-19b,huggingface,zai-org/cogvlm2-llama3-chat-19B
+cohere-command-a,epoch,Cohere Command A
+cohere-command-a,models_dev,azure/cohere-command-a
+cohere-command-a-reasoning,epoch,Cohere Command A Reasoning
+cohere-command-a-reasoning,models_dev,sap-ai-core/cohere--command-a-reasoning
+cola-dlm,huggingface,ByteDance-Seed/Cola-DLM
+command-a,models_dev,kilo/cohere/command-a
+command-a,openrouter,cohere/command-a
+command-a-plus-05-2026-bf16,huggingface,CohereLabs/command-a-plus-05-2026-bf16
+command-a-plus-05-2026-fp8,huggingface,CohereLabs/command-a-plus-05-2026-fp8
+command-a-plus-05-2026-w4a4,huggingface,CohereLabs/command-a-plus-05-2026-w4a4
+command-a-reasoning-08-2025,huggingface,CohereLabs/command-a-reasoning-08-2025
+command-a-translate-08-2025,huggingface,CohereLabs/command-a-translate-08-2025
+command-a-vision-07-2025,huggingface,CohereLabs/command-a-vision-07-2025
+command-r-08-2024,models_dev,cohere/command-r-08-2024
+command-r-08-2024,openrouter,cohere/command-r-08-2024
+command-r-plus,huggingface,CohereLabs/c4ai-command-r-plus
+command-r-plus-08-2024,models_dev,anyapi/cohere/command-r-plus-08-2024
+command-r-plus-08-2024,openrouter,cohere/command-r-plus-08-2024
+command-r7b-12-2024,models_dev,cohere/command-r7b-12-2024
+command-r7b-12-2024,openrouter,cohere/command-r7b-12-2024
+cosmo-1b,huggingface,HuggingFaceTB/cosmo-1b
+cosmos-reason2-2b,huggingface,nvidia/Cosmos-Reason2-2B
+cosmos-reason2-8b,huggingface,nvidia/Cosmos-Reason2-8B
+cpm-ant-10b,huggingface,openbmb/cpm-ant-10b
+cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
+deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B-Preview
+deephermes-3-llama-3-8b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-8B-Preview
+deepseek-chat,models_dev,302ai/deepseek-chat
+deepseek-chat,openrouter,deepseek/deepseek-chat
+deepseek-chat-v3,models_dev,kilo/deepseek/deepseek-chat-v3-0324
+deepseek-chat-v3,openrouter,deepseek/deepseek-chat-v3-0324
+deepseek-chat-v3-1,models_dev,kilo/deepseek/deepseek-chat-v3.1
+deepseek-chat-v3-1,openrouter,deepseek/deepseek-chat-v3.1
+deepseek-coder-1-3b-base,huggingface,deepseek-ai/deepseek-coder-1.3b-base
+deepseek-coder-1-3b-instruct,huggingface,deepseek-ai/deepseek-coder-1.3b-instruct
+deepseek-coder-6-7b-base,huggingface,deepseek-ai/deepseek-coder-6.7b-base
+deepseek-coder-6-7b-instruct,huggingface,deepseek-ai/deepseek-coder-6.7b-instruct
+deepseek-coder-7b-instruct-v1-5,huggingface,deepseek-ai/deepseek-coder-7b-instruct-v1.5
+deepseek-coder-v2-lite-base,huggingface,deepseek-ai/DeepSeek-Coder-V2-Lite-Base
+deepseek-coder-v2-lite-instruct,huggingface,deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
+deepseek-llm-7b-base,huggingface,deepseek-ai/deepseek-llm-7b-base
+deepseek-llm-7b-chat,huggingface,deepseek-ai/deepseek-llm-7b-chat
+deepseek-moe-16b-base,huggingface,deepseek-ai/deepseek-moe-16b-base
+deepseek-moe-16b-chat,huggingface,deepseek-ai/deepseek-moe-16b-chat
+deepseek-ocr,epoch,Deepseek OCR
+deepseek-ocr,huggingface,deepseek-ai/DeepSeek-OCR
+deepseek-ocr,models_dev,siliconflow-cn/deepseek-ai/DeepSeek-OCR
+deepseek-ocr-2,huggingface,deepseek-ai/DeepSeek-OCR-2
+deepseek-prover-v2-671b,epoch,DeepSeek-Prover-V2-671B
+deepseek-prover-v2-671b,models_dev,novita-ai/deepseek/deepseek-prover-v2-671b
+deepseek-r1,epoch,DeepSeek-R1
+deepseek-r1,huggingface,deepseek-ai/DeepSeek-R1
+deepseek-r1,huggingface,deepseek-ai/DeepSeek-R1-0528
+deepseek-r1,models_dev,alibaba-cn/deepseek-r1
+deepseek-r1,openrouter,deepseek/deepseek-r1
+deepseek-r1,text_surface_forms,DeepSeek
+deepseek-r1,text_surface_forms,DeepSeek R1
+deepseek-r1,text_surface_forms,DeepSeek-R1
+deepseek-r1,wikipedia,DeepSeek
+deepseek-r1-0528-qwen3-8b,huggingface,deepseek-ai/DeepSeek-R1-0528-Qwen3-8B
+deepseek-r1-distill-llama-70b,epoch,DeepSeek-R1-Distill-Llama-70B
+deepseek-r1-distill-llama-70b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+deepseek-r1-distill-llama-70b,models_dev,alibaba-cn/deepseek-r1-distill-llama-70b
+deepseek-r1-distill-llama-70b,openrouter,deepseek/deepseek-r1-distill-llama-70b
+deepseek-r1-distill-llama-8b,epoch,DeepSeek-R1-Distill-Llama-8B
+deepseek-r1-distill-llama-8b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+deepseek-r1-distill-llama-8b,models_dev,alibaba-cn/deepseek-r1-distill-llama-8b
+deepseek-r1-distill-qwen-1-5b,epoch,DeepSeek-R1-Distill-Qwen-1.5B
+deepseek-r1-distill-qwen-1-5b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+deepseek-r1-distill-qwen-1-5b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-1-5b
+deepseek-r1-distill-qwen-14b,epoch,DeepSeek-R1-Distill-Qwen-14B
+deepseek-r1-distill-qwen-14b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+deepseek-r1-distill-qwen-14b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-14b
+deepseek-r1-distill-qwen-32b,epoch,DeepSeek-R1-Distill-Qwen-32B
+deepseek-r1-distill-qwen-32b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
+deepseek-r1-distill-qwen-32b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-32b
+deepseek-r1-distill-qwen-7b,epoch,DeepSeek-R1-Distill-Qwen-7B
+deepseek-r1-distill-qwen-7b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+deepseek-r1-distill-qwen-7b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-7b
+deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2
+deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2-Chat
+deepseek-v2-lite,huggingface,deepseek-ai/DeepSeek-V2-Lite
+deepseek-v2-lite,huggingface,deepseek-ai/DeepSeek-V2-Lite-Chat
+deepseek-v3,epoch,DeepSeek-V3
+deepseek-v3,huggingface,deepseek-ai/DeepSeek-V3
+deepseek-v3,huggingface,deepseek-ai/DeepSeek-V3-0324
+deepseek-v3,models_dev,alibaba-cn/deepseek-v3
+deepseek-v3,text_surface_forms,DeepSeek V3
+deepseek-v3,text_surface_forms,DeepSeek-V3
+deepseek-v3,wikipedia,DeepSeek
+deepseek-v3-1,epoch,DeepSeek-V3.1
+deepseek-v3-1,huggingface,deepseek-ai/DeepSeek-V3.1
+deepseek-v3-1,models_dev,nano-gpt/deepseek-ai/DeepSeek-V3.1:thinking
+deepseek-v3-1-base,huggingface,deepseek-ai/DeepSeek-V3.1-Base
+deepseek-v3-1-terminus,epoch,DeepSeek-V3.1-Terminus
+deepseek-v3-1-terminus,huggingface,deepseek-ai/DeepSeek-V3.1-Terminus
+deepseek-v3-1-terminus,models_dev,nano-gpt/deepseek-ai/DeepSeek-V3.1-Terminus:thinking
+deepseek-v3-1-terminus,openrouter,deepseek/deepseek-v3.1-terminus
+deepseek-v3-1-terminus-w4afp8,huggingface,tencent/DeepSeek-V3.1-Terminus-W4AFP8
+deepseek-v3-2,epoch,DeepSeek-V3.2
+deepseek-v3-2,huggingface,deepseek-ai/DeepSeek-V3.2
+deepseek-v3-2,models_dev,iflowcn/deepseek-v3.2
+deepseek-v3-2,openrouter,deepseek/deepseek-v3.2
+deepseek-v3-2-exp,epoch,DeepSeek-V3.2-Exp
+deepseek-v3-2-exp,huggingface,deepseek-ai/DeepSeek-V3.2-Exp
+deepseek-v3-2-exp,models_dev,nano-gpt/deepseek-ai/deepseek-v3.2-exp
+deepseek-v3-2-exp,openrouter,deepseek/deepseek-v3.2-exp
+deepseek-v4-flash,epoch,DeepSeek V4 Flash 0731
+deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash
+deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731
+deepseek-v4-flash,models_dev,cline-pass/cline-pass/deepseek-v4-flash
+deepseek-v4-flash,openrouter,deepseek/deepseek-v4-flash
+deepseek-v4-flash-dspark,huggingface,deepseek-ai/DeepSeek-V4-Flash-DSpark
+deepseek-v4-flash-latest,models_dev,arcee/deepseek/deepseek-v4-flash-latest
+deepseek-v4-flash-latest,openrouter,~deepseek/deepseek-v4-flash-latest
+deepseek-v4-flash-vision-exp,models_dev,crossmodel/deepseek/deepseek-v4-flash-vision-exp
+deepseek-v4-flash-vision-exp,openrouter,deepseek/deepseek-v4-flash-vision-exp
+deepseek-v4-pro,epoch,DeepSeek-V4-Pro
+deepseek-v4-pro,huggingface,deepseek-ai/DeepSeek-V4-Pro
+deepseek-v4-pro,huggingface,deepseek-ai/DeepSeek-V4-Pro-0813
+deepseek-v4-pro,models_dev,cline-pass/cline-pass/deepseek-v4-pro
+deepseek-v4-pro,openrouter,deepseek/deepseek-v4-pro
+deepseek-v4-pro,wikipedia,DeepSeek
+deepseek-v4-pro-dspark,huggingface,deepseek-ai/DeepSeek-V4-Pro-DSpark
+deepseek-vl2-tiny,huggingface,deepseek-ai/deepseek-vl2-tiny
+devstral-2512,models_dev,anyapi/mistralai/devstral-2512
+devstral-2512,openrouter,mistralai/devstral-2512
+devstral-small-2,epoch,Devstral Small 2
+devstral-small-2,models_dev,vercel/mistral/devstral-small-2
+diffusiongemma-26b-a4b-it,huggingface,google/diffusiongemma-26B-A4B-it
+dolphin,huggingface,ByteDance/Dolphin
+dolphin-1-5,huggingface,ByteDance/Dolphin-1.5
+dolphin-v2,huggingface,ByteDance/Dolphin-v2
+doubao-seed-1-8,epoch,Doubao Seed 1.8
+doubao-seed-1-8,models_dev,zenmux/volcengine/doubao-seed-1.8
+doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
+doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
+doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
+doubao-seed-2-1-turbo,models_dev,nano-gpt/bytedance/doubao-seed-2.1-turbo
+ernie-4-5-0-3b-base-paddle,huggingface,baidu/ERNIE-4.5-0.3B-Base-Paddle
+ernie-4-5-0-3b-base-pt,huggingface,baidu/ERNIE-4.5-0.3B-Base-PT
+ernie-4-5-0-3b-paddle,huggingface,baidu/ERNIE-4.5-0.3B-Paddle
+ernie-4-5-0-3b-pt,huggingface,baidu/ERNIE-4.5-0.3B-PT
+ernie-4-5-21b-a3b,epoch,ERNIE-4.5-21B-A3B
+ernie-4-5-21b-a3b,models_dev,novita-ai/baidu/ernie-4.5-21B-a3b
+ernie-4-5-21b-a3b-base-paddle,huggingface,baidu/ERNIE-4.5-21B-A3B-Base-Paddle
+ernie-4-5-21b-a3b-base-pt,huggingface,baidu/ERNIE-4.5-21B-A3B-Base-PT
+ernie-4-5-21b-a3b-paddle,huggingface,baidu/ERNIE-4.5-21B-A3B-Paddle
+ernie-4-5-21b-a3b-pt,huggingface,baidu/ERNIE-4.5-21B-A3B-PT
+ernie-4-5-21b-a3b-thinking,huggingface,baidu/ERNIE-4.5-21B-A3B-Thinking
+ernie-4-5-300b-a47b,epoch,ERNIE-4.5-300B-A47B
+ernie-4-5-300b-a47b,models_dev,siliconflow/baidu/ERNIE-4.5-300B-A47B
+ernie-4-5-300b-a47b-2bits-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-Paddle
+ernie-4-5-300b-a47b-2bits-tp2-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP2-Paddle
+ernie-4-5-300b-a47b-2bits-tp4-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle
+ernie-4-5-300b-a47b-base-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-Paddle
+ernie-4-5-300b-a47b-base-pt,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-PT
+ernie-4-5-300b-a47b-fp8-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-FP8-Paddle
+ernie-4-5-300b-a47b-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-Paddle
+ernie-4-5-300b-a47b-pt,huggingface,baidu/ERNIE-4.5-300B-A47B-PT
+ernie-4-5-300b-a47b-w4a8c8-tp4-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-W4A8C8-TP4-Paddle
+ernie-4-5-vl-28b-a3b,epoch,ERNIE-4.5-VL-28B-A3B
+ernie-4-5-vl-28b-a3b,models_dev,novita-ai/baidu/ernie-4.5-vl-28b-a3b
+ernie-4-5-vl-28b-a3b-base-paddle,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Base-Paddle
+ernie-4-5-vl-28b-a3b-base-pt,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Base-PT
+ernie-4-5-vl-28b-a3b-paddle,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Paddle
+ernie-4-5-vl-28b-a3b-pt,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-PT
+ernie-4-5-vl-28b-a3b-thinking,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Thinking
+ernie-4-5-vl-424b-a47b,models_dev,kilo/baidu/ernie-4.5-vl-424b-a47b
+ernie-4-5-vl-424b-a47b,openrouter,baidu/ernie-4.5-vl-424b-a47b
+ernie-4-5-vl-424b-a47b-base-paddle,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-Paddle
+ernie-4-5-vl-424b-a47b-base-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-PT
+ernie-4-5-vl-424b-a47b-paddle,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Paddle
+ernie-4-5-vl-424b-a47b-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-PT
+ernie-5-1,epoch,ERNIE 5.1
+ernie-5-1,models_dev,nano-gpt/ernie-5.1
+esm2-650m,epoch,ESM2-650M
+esm2-650m,models_dev,nvidia/meta/esm2-650m
+evoquality,huggingface,ByteDance/EvoQuality
+falcon-11b,huggingface,tiiuae/falcon-11B
+falcon-40b,huggingface,tiiuae/falcon-40b
+falcon-40b,huggingface,tiiuae/falcon-40b-instruct
+falcon-7b,huggingface,tiiuae/falcon-7b
+falcon-7b,huggingface,tiiuae/falcon-7b-instruct
+falcon-e-3b-base,huggingface,tiiuae/Falcon-E-3B-Base
+falcon-h1-0-5b-base,huggingface,tiiuae/Falcon-H1-0.5B-Base
+falcon-h1-0-5b-instruct,huggingface,tiiuae/Falcon-H1-0.5B-Instruct
+falcon-h1-1-5b-base,huggingface,tiiuae/Falcon-H1-1.5B-Base
+falcon-h1-1-5b-deep-base,huggingface,tiiuae/Falcon-H1-1.5B-Deep-Base
+falcon-h1-1-5b-deep-instruct,huggingface,tiiuae/Falcon-H1-1.5B-Deep-Instruct
+falcon-h1-1-5b-instruct,huggingface,tiiuae/Falcon-H1-1.5B-Instruct
+falcon-h1-34b-base,huggingface,tiiuae/Falcon-H1-34B-Base
+falcon-h1-34b-instruct,huggingface,tiiuae/Falcon-H1-34B-Instruct
+falcon-h1-3b-base,huggingface,tiiuae/Falcon-H1-3B-Base
+falcon-h1-3b-instruct,huggingface,tiiuae/Falcon-H1-3B-Instruct
+falcon-h1-7b-base,huggingface,tiiuae/Falcon-H1-7B-Base
+falcon-h1-7b-instruct,huggingface,tiiuae/Falcon-H1-7B-Instruct
+falcon-h1-tiny-90m-base,huggingface,tiiuae/Falcon-H1-Tiny-90M-Base
+falcon-h1-tiny-90m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-90M-Instruct
+falcon-h1-tiny-multilingual-100m-base,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Base
+falcon-h1-tiny-multilingual-100m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Instruct
+falcon-h1-tiny-r-0-6b,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B
+falcon-h1r-7b,huggingface,tiiuae/Falcon-H1R-7B
+falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b
+falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b-instruct
+falcon-mamba-tiny-dev,huggingface,tiiuae/falcon-mamba-tiny-dev
+falcon-rw-1b,huggingface,tiiuae/falcon-rw-1b
+falcon3-10b-base,huggingface,tiiuae/Falcon3-10B-Base
+falcon3-10b-instruct,huggingface,tiiuae/Falcon3-10B-Instruct
+falcon3-1b-base,huggingface,tiiuae/Falcon3-1B-Base
+falcon3-1b-instruct,huggingface,tiiuae/Falcon3-1B-Instruct
+falcon3-3b-base,huggingface,tiiuae/Falcon3-3B-Base
+falcon3-3b-instruct,huggingface,tiiuae/Falcon3-3B-Instruct
+falcon3-3b-instruct-1-58bit,huggingface,tiiuae/Falcon3-3B-Instruct-1.58bit
+falcon3-7b-base,huggingface,tiiuae/Falcon3-7B-Base
+falcon3-7b-instruct,huggingface,tiiuae/Falcon3-7B-Instruct
+falcon3-7b-instruct-1-58bit,huggingface,tiiuae/Falcon3-7B-Instruct-1.58bit
+falcon3-mamba-7b-base,huggingface,tiiuae/Falcon3-Mamba-7B-Base
+falcon3-mamba-7b-instruct,huggingface,tiiuae/Falcon3-Mamba-7B-Instruct
+flex-reddit-2x7b-1t,huggingface,allenai/Flex-reddit-2x7B-1T
+flexolmo-7x7b-1t,huggingface,allenai/FlexOlmo-7x7B-1T
+florence-2-base,huggingface,microsoft/Florence-2-base
+florence-2-base-ft,huggingface,microsoft/Florence-2-base-ft
+florence-2-large,huggingface,microsoft/Florence-2-large
+gelab-zero-4b-preview,huggingface,stepfun-ai/GELab-Zero-4B-preview
+gemini-1-0-pro,google_api,gemini-1.0-pro
+gemini-1-0-pro,google_api,gemini-pro
+gemini-1-0-pro,text_surface_forms,Bard
+gemini-1-0-pro,text_surface_forms,Gemini
+gemini-1-0-pro,text_surface_forms,Google Bard
+gemini-1-0-pro,text_surface_forms,Google Gemini
+gemini-1-0-pro,wikipedia,Gemini (language model)
+gemini-1-5-flash,google_api,gemini-1.5-flash
+gemini-1-5-pro,google_api,gemini-1.5-pro
+gemini-1-5-pro,text_surface_forms,Gemini 1.5
+gemini-2-0-flash,epoch,Gemini 2.0 Flash
+gemini-2-0-flash,google_api,gemini-2.0-flash
+gemini-2-0-flash,models_dev,poe/google/gemini-2.0-flash
+gemini-2-0-flash-lite,epoch,Gemini 2.0 Flash-Lite
+gemini-2-0-flash-lite,models_dev,poe/google/gemini-2.0-flash-lite
+gemini-2-5-flash,epoch,Gemini 2.5 Flash
+gemini-2-5-flash,models_dev,aihubmix/gemini-2.5-flash
+gemini-2-5-flash,openrouter,google/gemini-2.5-flash
+gemini-2-5-flash-image,models_dev,abacus/gemini-2.5-flash-image
+gemini-2-5-flash-image,openrouter,google/gemini-2.5-flash-image
+gemini-2-5-flash-lite,epoch,Gemini 2.5 Flash-Lite
+gemini-2-5-flash-lite,models_dev,anyapi/google/gemini-2.5-flash-lite
+gemini-2-5-flash-lite,openrouter,google/gemini-2.5-flash-lite
+gemini-2-5-pro,google_api,gemini-2.5-pro
+gemini-2-5-pro,models_dev,poe/google/gemini-2.5-pro
+gemini-2-5-pro,openrouter,google/gemini-2.5-pro
+gemini-2-5-pro,text_surface_forms,Gemini 2.5
+gemini-2-5-pro-preview,models_dev,kilo/google/gemini-2.5-pro-preview
+gemini-2-5-pro-preview,openrouter,google/gemini-2.5-pro-preview
+gemini-2-5-pro-preview-05-06,models_dev,nano-gpt/gemini-2.5-pro-preview-05-06
+gemini-2-5-pro-preview-05-06,openrouter,google/gemini-2.5-pro-preview-05-06
+gemini-3-1-flash-image,models_dev,abacus/gemini-3.1-flash-image
+gemini-3-1-flash-image,openrouter,google/gemini-3.1-flash-image
+gemini-3-1-flash-image-preview,models_dev,abacus/gemini-3.1-flash-image-preview
+gemini-3-1-flash-image-preview,openrouter,google/gemini-3.1-flash-image-preview
+gemini-3-1-flash-lite,epoch,Gemini 3.1 Flash-Lite
+gemini-3-1-flash-lite,models_dev,poe/google/gemini-3.1-flash-lite
+gemini-3-1-flash-lite,openrouter,google/gemini-3.1-flash-lite
+gemini-3-1-flash-lite-image,models_dev,edenai/google/gemini-3.1-flash-lite-image
+gemini-3-1-flash-lite-image,openrouter,google/gemini-3.1-flash-lite-image
+gemini-3-1-flash-lite-preview,models_dev,zenmux/google/gemini-3.1-flash-lite-preview
+gemini-3-1-flash-lite-preview,openrouter,google/gemini-3.1-flash-lite-preview
+gemini-3-1-pro,epoch,Gemini 3.1 Pro
+gemini-3-1-pro,models_dev,neon/gemini-3-1-pro
+gemini-3-1-pro-preview,models_dev,frogbot/gemini-3-1-pro-preview
+gemini-3-1-pro-preview,openrouter,google/gemini-3.1-pro-preview
+gemini-3-1-pro-preview-customtools,models_dev,aihubmix/gemini-3.1-pro-preview-customtools
+gemini-3-1-pro-preview-customtools,openrouter,google/gemini-3.1-pro-preview-customtools
+gemini-3-5-flash,epoch,Gemini 3.5 Flash
+gemini-3-5-flash,models_dev,abacus/gemini-3.5-flash
+gemini-3-5-flash,openrouter,google/gemini-3.5-flash
+gemini-3-5-flash-lite,epoch,Gemini 3.5 Flash-Lite
+gemini-3-5-flash-lite,models_dev,venice/gemini-3-5-flash-lite
+gemini-3-5-flash-lite,openrouter,google/gemini-3.5-flash-lite
+gemini-3-6-flash,epoch,Gemini 3.6 Flash
+gemini-3-6-flash,models_dev,venice/gemini-3-6-flash
+gemini-3-6-flash,openrouter,google/gemini-3.6-flash
+gemini-3-7-flash,epoch,Gemini 3.7 Flash
+gemini-3-7-flash,models_dev,abacus/gemini-3.7-flash
+gemini-3-7-flash,openrouter,google/gemini-3.7-flash
+gemini-3-flash,epoch,Gemini 3 Flash
+gemini-3-flash,models_dev,poe/google/gemini-3-flash
+gemini-3-flash-preview,models_dev,abacus/gemini-3-flash-preview
+gemini-3-flash-preview,openrouter,google/gemini-3-flash-preview
+gemini-3-pro,epoch,Gemini 3 Pro
+gemini-3-pro,models_dev,poe/google/gemini-3-pro
+gemini-3-pro-image,models_dev,abacus/gemini-3-pro-image
+gemini-3-pro-image,openrouter,google/gemini-3-pro-image
+gemini-3-pro-image-preview,models_dev,302ai/gemini-3-pro-image-preview
+gemini-3-pro-image-preview,openrouter,google/gemini-3-pro-image-preview
+gemini-embedding,epoch,Gemini Embedding
+gemini-embedding,models_dev,sap-ai-core/gemini-embedding
+gemini-exp,epoch,Gemini-Exp-1114
+gemini-exp,models_dev,nano-gpt/gemini-exp-1206
+gemini-flash-latest,models_dev,kilo/~google/gemini-flash-latest
+gemini-flash-latest,openrouter,~google/gemini-flash-latest
+gemini-pro-latest,models_dev,edenai/google/gemini-pro-latest
+gemini-pro-latest,openrouter,~google/gemini-pro-latest
+gemma-2-27b-it,epoch,Gemma 2 27B
+gemma-2-27b-it,huggingface,google/gemma-2-27b-it
+gemma-2-27b-it,models_dev,kilo/google/gemma-2-27b-it
+gemma-2-27b-it,openrouter,google/gemma-2-27b-it
+gemma-2-27b-it,wikipedia,Gemma (language model)
+gemma-2-2b,huggingface,google/gemma-2-2b
+gemma-2-2b-it,epoch,Gemma 2 2B
+gemma-2-2b-it,huggingface,google/gemma-2-2b-it
+gemma-2-2b-it,models_dev,nvidia/google/gemma-2-2b-it
+gemma-2-9b-it,epoch,Gemma 2 9B
+gemma-2-9b-it,huggingface,google/gemma-2-9b-it
+gemma-2-9b-it,models_dev,helicone/gemma2-9b-it
+gemma-3-12b-it,epoch,Gemma 3 12B
+gemma-3-12b-it,huggingface,google/gemma-3-12b-it
+gemma-3-12b-it,models_dev,nano-gpt/unsloth/gemma-3-12b-it
+gemma-3-12b-it,openrouter,google/gemma-3-12b-it
+gemma-3-1b-it,huggingface,google/gemma-3-1b-it
+gemma-3-270m,huggingface,google/gemma-3-270m
+gemma-3-27b-it,epoch,Gemma 3 27B
+gemma-3-27b-it,huggingface,google/gemma-3-27b-it
+gemma-3-27b-it,models_dev,nano-gpt/TEE/gemma-3-27b-it
+gemma-3-27b-it,openrouter,google/gemma-3-27b-it
+gemma-3-4b-it,epoch,Gemma 3 4B
+gemma-3-4b-it,huggingface,google/gemma-3-4b-it
+gemma-3-4b-it,models_dev,nano-gpt/unsloth/gemma-3-4b-it
+gemma-3-4b-it,openrouter,google/gemma-3-4b-it
+gemma-3n-e2b-it,huggingface,google/gemma-3n-E2B-it
+gemma-3n-e4b-it,models_dev,kilo/google/gemma-3n-e4b-it
+gemma-3n-e4b-it,openrouter,google/gemma-3n-e4b-it
+gemma-4-12b-it,epoch,Gemma 4 12B
+gemma-4-12b-it,models_dev,pioneer/google/gemma-4-12B-it
+gemma-4-26b-a4b-it,epoch,Gemma 4 26B A4B
+gemma-4-26b-a4b-it,huggingface,google/gemma-4-26B-A4B-it
+gemma-4-26b-a4b-it,models_dev,scaleway/gemma-4-26b-a4b-it
+gemma-4-26b-a4b-it,openrouter,google/gemma-4-26b-a4b-it
+gemma-4-31b,huggingface,google/gemma-4-31B
+gemma-4-31b-it,epoch,Gemma 4 31B IT
+gemma-4-31b-it,huggingface,google/gemma-4-31B-it
+gemma-4-31b-it,models_dev,abacus/google/gemma-4-31b-it
+gemma-4-31b-it,openrouter,google/gemma-4-31b-it
+glm-4,epoch,GLM-4
+glm-4,models_dev,nano-gpt/glm-4
+glm-4-1v-9b-base,huggingface,zai-org/GLM-4.1V-9B-Base
+glm-4-1v-9b-thinking,huggingface,zai-org/GLM-4.1V-9B-Thinking
+glm-4-32b,epoch,GLM-4-32B-0414
+glm-4-32b,huggingface,zai-org/GLM-4-32B-0414
+glm-4-32b,models_dev,nano-gpt/THUDM/GLM-4-32B-0414
+glm-4-5,epoch,GLM-4.5
+glm-4-5,huggingface,zai-org/GLM-4.5
+glm-4-5,models_dev,zenmux/z-ai/glm-4.5
+glm-4-5,openrouter,z-ai/glm-4.5
+glm-4-5,text_surface_forms,GLM
+glm-4-5,text_surface_forms,GLM-4.5
+glm-4-5-air,epoch,GLM-4.5-Air
+glm-4-5-air,huggingface,zai-org/GLM-4.5-Air
+glm-4-5-air,models_dev,zenmux/z-ai/glm-4.5-air
+glm-4-5-air,openrouter,z-ai/glm-4.5-air
+glm-4-5-air-base,huggingface,zai-org/GLM-4.5-Air-Base
+glm-4-5-air-fp8,huggingface,zai-org/GLM-4.5-Air-FP8
+glm-4-5-fp8,huggingface,zai-org/GLM-4.5-FP8
+glm-4-5v,epoch,GLM-4.5V
+glm-4-5v,huggingface,zai-org/GLM-4.5V
+glm-4-5v,models_dev,huggingface/zai-org/GLM-4.5V
+glm-4-5v,openrouter,z-ai/glm-4.5v
+glm-4-5v-fp8,huggingface,zai-org/GLM-4.5V-FP8
+glm-4-6,epoch,GLM-4.6
+glm-4-6,huggingface,zai-org/GLM-4.6
+glm-4-6,models_dev,helicone/glm-4.6
+glm-4-6,openrouter,z-ai/glm-4.6
+glm-4-6-fp8,huggingface,zai-org/GLM-4.6-FP8
+glm-4-6v,huggingface,zai-org/GLM-4.6V
+glm-4-6v,models_dev,302ai/glm-4.6v
+glm-4-6v,openrouter,z-ai/glm-4.6v
+glm-4-6v-flash,huggingface,zai-org/GLM-4.6V-Flash
+glm-4-6v-fp8,huggingface,zai-org/GLM-4.6V-FP8
+glm-4-7,epoch,GLM-4.7
+glm-4-7,huggingface,zai-org/GLM-4.7
+glm-4-7,models_dev,302ai/glm-4.7
+glm-4-7,openrouter,z-ai/glm-4.7
+glm-4-7-flash,epoch,GLM 4.7 Flash
+glm-4-7-flash,huggingface,zai-org/GLM-4.7-Flash
+glm-4-7-flash,models_dev,huggingface/zai-org/GLM-4.7-Flash
+glm-4-7-flash,openrouter,z-ai/glm-4.7-flash
+glm-4-7-fp8,huggingface,zai-org/GLM-4.7-FP8
+glm-4-9b,epoch,GLM-4-9B-0414
+glm-4-9b,huggingface,zai-org/GLM-4-9B-0414
+glm-4-9b,huggingface,zai-org/glm-4-9b
+glm-4-9b,huggingface,zai-org/glm-4-9b-hf
+glm-4-9b,models_dev,nano-gpt/THUDM/GLM-4-9B-0414
+glm-4-9b-chat-1m-hf,huggingface,zai-org/glm-4-9b-chat-1m-hf
+glm-4-9b-chat-hf,huggingface,zai-org/glm-4-9b-chat-hf
+glm-4-plus,epoch,GLM-4-Plus
+glm-4-plus,models_dev,nano-gpt/glm-4-plus
+glm-5,epoch,GLM-5
+glm-5,huggingface,zai-org/GLM-5
+glm-5,models_dev,alibaba-cn/glm-5
+glm-5,openrouter,z-ai/glm-5
+glm-5-1,epoch,GLM-5.1
+glm-5-1,huggingface,zai-org/GLM-5.1
+glm-5-1,models_dev,novita-ai/zai-org/glm-5.1
+glm-5-1,openrouter,z-ai/glm-5.1
+glm-5-1-fp8,huggingface,zai-org/GLM-5.1-FP8
+glm-5-2,epoch,GLM-5.2
+glm-5-2,huggingface,zai-org/GLM-5.2
+glm-5-2,models_dev,cline-pass/cline-pass/glm-5.2
+glm-5-2,openrouter,z-ai/glm-5.2
+glm-5-2-fp8,huggingface,zai-org/GLM-5.2-FP8
+glm-5-3,epoch,GLM-5.3
+glm-5-3,models_dev,cline-pass/cline-pass/glm-5.3
+glm-5-3,openrouter,z-ai/glm-5.3
+glm-5-fp8,huggingface,zai-org/GLM-5-FP8
+glm-5-turbo,models_dev,venice/z-ai-glm-5-turbo
+glm-5-turbo,openrouter,z-ai/glm-5-turbo
+glm-5v-turbo,models_dev,cortecs/glm-5v-turbo
+glm-5v-turbo,openrouter,z-ai/glm-5v-turbo
+glm-edge-1-5b-chat,huggingface,zai-org/glm-edge-1.5b-chat
+glm-edge-4b-chat,huggingface,zai-org/glm-edge-4b-chat
+glm-edge-v-2b,huggingface,zai-org/glm-edge-v-2b
+glm-latest,models_dev,nano-gpt/zai-org/glm-latest
+glm-latest,openrouter,~z-ai/glm-latest
+glm-ocr,huggingface,zai-org/GLM-OCR
+glm-z1-32b,huggingface,zai-org/GLM-Z1-32B-0414
+glm-z1-9b,huggingface,zai-org/GLM-Z1-9B-0414
+got-ocr-2-0-hf,huggingface,stepfun-ai/GOT-OCR-2.0-hf
+got-ocr2-0,huggingface,stepfun-ai/GOT-OCR2_0
+gpt-3,openai_api,davinci
+gpt-3,text_surface_forms,GPT-3
+gpt-3,text_surface_forms,GPT3
+gpt-3,wikipedia,GPT-3
+gpt-3-5,openai_api,gpt-3.5-turbo
+gpt-3-5,text_surface_forms,Chat GPT
+gpt-3-5,text_surface_forms,Chat-GPT
+gpt-3-5,text_surface_forms,ChatGPT
+gpt-3-5,text_surface_forms,GPT-3.5
+gpt-3-5,text_surface_forms,GPT3.5
+gpt-3-5,text_surface_forms,chatgpt
+gpt-3-5-turbo,epoch,GPT-3.5 Turbo
+gpt-3-5-turbo,models_dev,edenai/openai/gpt-3.5-turbo
+gpt-3-5-turbo,openrouter,openai/gpt-3.5-turbo
+gpt-3-5-turbo-16k,models_dev,kilo/openai/gpt-3.5-turbo-16k
+gpt-3-5-turbo-16k,openrouter,openai/gpt-3.5-turbo-16k
+gpt-3-5-turbo-instruct,epoch,GPT-3.5 Turbo Instruct
+gpt-3-5-turbo-instruct,models_dev,poe/openai/gpt-3.5-turbo-instruct
+gpt-3-5-turbo-instruct,openrouter,openai/gpt-3.5-turbo-instruct
+gpt-4,models_dev,edenai/openai/gpt-4
+gpt-4,openai_api,gpt-4
+gpt-4,openrouter,openai/gpt-4
+gpt-4,text_surface_forms,GPT 4
+gpt-4,text_surface_forms,GPT-4
+gpt-4,text_surface_forms,GPT4
+gpt-4,wikipedia,GPT-4
+gpt-4-1,epoch,GPT-4.1
+gpt-4-1,models_dev,302ai/gpt-4.1
+gpt-4-1,openai_api,gpt-4.1
+gpt-4-1,openrouter,openai/gpt-4.1
+gpt-4-1,wikipedia,GPT-4.1
+gpt-4-1-mini,epoch,GPT-4.1 mini
+gpt-4-1-mini,models_dev,302ai/gpt-4.1-mini
+gpt-4-1-mini,openrouter,openai/gpt-4.1-mini
+gpt-4-1-nano,epoch,GPT-4.1 nano
+gpt-4-1-nano,models_dev,302ai/gpt-4.1-nano
+gpt-4-1-nano,openrouter,openai/gpt-4.1-nano
+gpt-4-5,openai_api,gpt-4.5-preview
+gpt-4-5,wikipedia,GPT-4.5
+gpt-4-turbo,models_dev,poe/openai/gpt-4-turbo
+gpt-4-turbo,openai_api,gpt-4-turbo
+gpt-4-turbo,openrouter,openai/gpt-4-turbo
+gpt-4-turbo,text_surface_forms,GPT-4 Turbo
+gpt-4-turbo-preview,models_dev,nano-gpt/openai/gpt-4-turbo-preview
+gpt-4-turbo-preview,openrouter,openai/gpt-4-turbo-preview
+gpt-4o,epoch,GPT-4o
+gpt-4o,models_dev,302ai/gpt-4o
+gpt-4o,openai_api,gpt-4o
+gpt-4o,openrouter,openai/gpt-4o
+gpt-4o,text_surface_forms,GPT-4o
+gpt-4o,text_surface_forms,GPT4o
+gpt-4o,wikipedia,GPT-4o
+gpt-4o-2024-05-13,openai_api,gpt-4o-2024-05-13
+gpt-4o-2024-08-06,openai_api,gpt-4o-2024-08-06
+gpt-4o-2024-11-20,openai_api,gpt-4o-2024-11-20
+gpt-4o-mini,epoch,GPT-4o mini
+gpt-4o-mini,models_dev,abacus/gpt-4o-mini
+gpt-4o-mini,openrouter,openai/gpt-4o-mini
+gpt-5,epoch,GPT-5
+gpt-5,models_dev,helicone/gpt-5
+gpt-5,openai_api,gpt-5
+gpt-5,openrouter,openai/gpt-5
+gpt-5,text_surface_forms,GPT-5
+gpt-5,text_surface_forms,GPT5
+gpt-5,wikipedia,GPT-5
+gpt-5-1,epoch,GPT-5.1
+gpt-5-1,models_dev,nano-gpt/openai/gpt-5.1-2025-11-13
+gpt-5-1,openai_api,gpt-5.1
+gpt-5-1,openrouter,openai/gpt-5.1
+gpt-5-1,wikipedia,GPT-5.1
+gpt-5-1-codex,epoch,GPT-5.1-Codex
+gpt-5-1-codex,models_dev,helicone/gpt-5.1-codex
+gpt-5-1-codex,openrouter,openai/gpt-5.1-codex
+gpt-5-1-codex-max,epoch,GPT-5.1-Codex-Max
+gpt-5-1-codex-max,models_dev,abacus/gpt-5.1-codex-max
+gpt-5-1-codex-max,openrouter,openai/gpt-5.1-codex-max
+gpt-5-1-codex-mini,epoch,GPT-5.1-Codex-mini
+gpt-5-1-codex-mini,models_dev,helicone/gpt-5.1-codex-mini
+gpt-5-1-codex-mini,openrouter,openai/gpt-5.1-codex-mini
+gpt-5-1-instant,epoch,GPT-5.1 Instant
+gpt-5-1-instant,models_dev,poe/openai/gpt-5.1-instant
+gpt-5-2,epoch,GPT-5.2
+gpt-5-2,models_dev,poe/openai/gpt-5.2
+gpt-5-2,openai_api,gpt-5.2
+gpt-5-2,openrouter,openai/gpt-5.2
+gpt-5-2,wikipedia,GPT-5.2
+gpt-5-2-chat,models_dev,kilo/openai/gpt-5.2-chat
+gpt-5-2-chat,openrouter,openai/gpt-5.2-chat
+gpt-5-2-codex,epoch,GPT-5.2 Codex
+gpt-5-2-codex,models_dev,abacus/gpt-5.2-codex
+gpt-5-2-codex,openrouter,openai/gpt-5.2-codex
+gpt-5-2-pro,epoch,GPT-5.2 Pro
+gpt-5-2-pro,models_dev,digitalocean/openai-gpt-5.2-pro
+gpt-5-2-pro,openrouter,openai/gpt-5.2-pro
+gpt-5-3-codex,epoch,GPT-5.3 Codex
+gpt-5-3-codex,models_dev,abacus/gpt-5.3-codex
+gpt-5-3-codex,openrouter,openai/gpt-5.3-codex
+gpt-5-4-image-2,models_dev,kilo/openai/gpt-5.4-image-2
+gpt-5-4-image-2,openrouter,openai/gpt-5.4-image-2
+gpt-5-4-mini,epoch,GPT-5.4 Mini
+gpt-5-4-mini,models_dev,poe/openai/gpt-5.4-mini
+gpt-5-4-mini,openrouter,openai/gpt-5.4-mini
+gpt-5-4-nano,epoch,GPT-5.4 Nano
+gpt-5-4-nano,models_dev,frogbot/gpt-5-4-nano
+gpt-5-4-nano,openrouter,openai/gpt-5.4-nano
+gpt-5-4-pro,epoch,GPT-5.4 Pro
+gpt-5-4-pro,models_dev,302ai/gpt-5.4-pro
+gpt-5-4-pro,openrouter,openai/gpt-5.4-pro
+gpt-5-5,epoch,GPT-5.5
+gpt-5-5,models_dev,frogbot/gpt-5-5
+gpt-5-5,openrouter,openai/gpt-5.5
+gpt-5-5-instant,epoch,GPT-5.5 Instant
+gpt-5-5-instant,models_dev,zenmux/openai/gpt-5.5-instant
+gpt-5-5-pro,epoch,GPT-5.5 Pro
+gpt-5-5-pro,models_dev,poe/openai/gpt-5.5-pro
+gpt-5-5-pro,openrouter,openai/gpt-5.5-pro
+gpt-5-6-luna,epoch,GPT-5.6 Luna
+gpt-5-6-luna,models_dev,abacus/gpt-5.6-luna
+gpt-5-6-luna,openrouter,openai/gpt-5.6-luna
+gpt-5-6-luna-pro,models_dev,kilo/openai/gpt-5.6-luna-pro
+gpt-5-6-luna-pro,openrouter,openai/gpt-5.6-luna-pro
+gpt-5-6-sol,epoch,GPT-5.6 Sol
+gpt-5-6-sol,models_dev,abacus/gpt-5.6-sol
+gpt-5-6-sol,openrouter,openai/gpt-5.6-sol
+gpt-5-6-sol-pro,models_dev,kilo/openai/gpt-5.6-sol-pro
+gpt-5-6-sol-pro,openrouter,openai/gpt-5.6-sol-pro
+gpt-5-6-terra,epoch,GPT-5.6 Terra
+gpt-5-6-terra,models_dev,abacus/gpt-5.6-terra
+gpt-5-6-terra,openrouter,openai/gpt-5.6-terra
+gpt-5-6-terra-pro,models_dev,kilo/openai/gpt-5.6-terra-pro
+gpt-5-6-terra-pro,openrouter,openai/gpt-5.6-terra-pro
+gpt-5-codex,epoch,GPT-5-Codex
+gpt-5-codex,models_dev,helicone/gpt-5-codex
+gpt-5-codex,openrouter,openai/gpt-5-codex:batch
+gpt-5-image,models_dev,kilo/openai/gpt-5-image
+gpt-5-image,openrouter,openai/gpt-5-image
+gpt-5-image-mini,models_dev,kilo/openai/gpt-5-image-mini
+gpt-5-image-mini,openrouter,openai/gpt-5-image-mini
+gpt-5-mini,epoch,GPT-5 mini
+gpt-5-mini,models_dev,helicone/gpt-5-mini
+gpt-5-mini,openrouter,openai/gpt-5-mini
+gpt-5-nano,epoch,GPT-5 nano
+gpt-5-nano,models_dev,helicone/gpt-5-nano
+gpt-5-nano,openrouter,openai/gpt-5-nano
+gpt-5-pro,epoch,GPT-5 Pro
+gpt-5-pro,models_dev,helicone/gpt-5-pro
+gpt-5-pro,openrouter,openai/gpt-5-pro
+gpt-audio,models_dev,kilo/openai/gpt-audio
+gpt-audio,openrouter,openai/gpt-audio
+gpt-audio-mini,models_dev,kilo/openai/gpt-audio-mini
+gpt-audio-mini,openrouter,openai/gpt-audio-mini
+gpt-chat-latest,models_dev,nano-gpt/openai/gpt-chat-latest
+gpt-chat-latest,openrouter,openai/gpt-chat-latest
+gpt-image-2,epoch,GPT Image 2
+gpt-image-2,models_dev,digitalocean/openai-gpt-image-2
+gpt-latest,models_dev,nano-gpt/openai/gpt-latest
+gpt-latest,openrouter,~openai/gpt-latest
+gpt-mini-latest,models_dev,edenai/openai/gpt-mini-latest
+gpt-mini-latest,openrouter,~openai/gpt-mini-latest
+gpt-neox-20b,huggingface,EleutherAI/gpt-neox-20b
+gpt-oss-120b,epoch,gpt-oss-120b
+gpt-oss-120b,huggingface,openai/gpt-oss-120b
+gpt-oss-120b,models_dev,frogbot/gpt-oss-120b
+gpt-oss-120b,openrouter,openai/gpt-oss-120b
+gpt-oss-20b,epoch,gpt-oss-20b
+gpt-oss-20b,huggingface,openai/gpt-oss-20b
+gpt-oss-20b,models_dev,frogbot/gpt-oss-20b
+gpt-oss-20b,openrouter,openai/gpt-oss-20b
+gpt-oss-safeguard-120b,huggingface,openai/gpt-oss-safeguard-120b
+gpt-oss-safeguard-20b,huggingface,openai/gpt-oss-safeguard-20b
+gpt-oss-safeguard-20b,models_dev,amazon-bedrock/openai.gpt-oss-safeguard-20b
+gpt-oss-safeguard-20b,openrouter,openai/gpt-oss-safeguard-20b
+granite-3-0-1b-a400m-base,huggingface,ibm-granite/granite-3.0-1b-a400m-base
+granite-3-0-1b-a400m-instruct,huggingface,ibm-granite/granite-3.0-1b-a400m-instruct
+granite-3-0-2b-instruct,huggingface,ibm-granite/granite-3.0-2b-instruct
+granite-3-0-8b-base,huggingface,ibm-granite/granite-3.0-8b-base
+granite-3-0-8b-instruct,huggingface,ibm-granite/granite-3.0-8b-instruct
+granite-3-1-2b-instruct,huggingface,ibm-granite/granite-3.1-2b-instruct
+granite-3-1-8b-instruct,huggingface,ibm-granite/granite-3.1-8b-instruct
+granite-3-2-2b-instruct,huggingface,ibm-granite/granite-3.2-2b-instruct
+granite-3-3-2b-instruct,huggingface,ibm-granite/granite-3.3-2b-instruct
+granite-3-3-8b-instruct,huggingface,ibm-granite/granite-3.3-8b-instruct
+granite-3b-code-base-2k,huggingface,ibm-granite/granite-3b-code-base-2k
+granite-3b-code-instruct-2k,huggingface,ibm-granite/granite-3b-code-instruct-2k
+granite-4-0-1b,huggingface,ibm-granite/granite-4.0-1b
+granite-4-0-1b-base,huggingface,ibm-granite/granite-4.0-1b-base
+granite-4-0-350m,huggingface,ibm-granite/granite-4.0-350m
+granite-4-0-350m-base,huggingface,ibm-granite/granite-4.0-350m-base
+granite-4-0-h-micro,epoch,Granite-4.0-H-Micro
+granite-4-0-h-micro,huggingface,ibm-granite/granite-4.0-h-micro
+granite-4-0-h-micro,models_dev,kilo/ibm-granite/granite-4.0-h-micro
+granite-4-0-h-micro,openrouter,ibm-granite/granite-4.0-h-micro
+granite-4-0-h-small,huggingface,ibm-granite/granite-4.0-h-small
+granite-4-0-h-tiny,huggingface,ibm-granite/granite-4.0-h-tiny
+granite-4-0-micro,huggingface,ibm-granite/granite-4.0-micro
+granite-4-0-tiny-preview,huggingface,ibm-granite/granite-4.0-tiny-preview
+granite-4-1-30b,huggingface,ibm-granite/granite-4.1-30b
+granite-4-1-3b,huggingface,ibm-granite/granite-4.1-3b
+granite-4-1-8b,epoch,Granite 4.1 8B
+granite-4-1-8b,huggingface,ibm-granite/granite-4.1-8b
+granite-4-1-8b,models_dev,nano-gpt/ibm-granite/granite-4.1-8b
+granite-4-1-8b,openrouter,ibm-granite/granite-4.1-8b
+granite-docling-258m,huggingface,ibm-granite/granite-docling-258M
+granite-guardian-3-3-8b,huggingface,ibm-granite/granite-guardian-3.3-8b
+granite-guardian-4-1-8b,huggingface,ibm-granite/granite-guardian-4.1-8b
+granite-swash-2b,huggingface,ibm-granite/granite-swash-2b
+granite-vision-4-1-4b,huggingface,ibm-granite/granite-vision-4.1-4b
+grok-1,huggingface,xai-org/grok-1
+grok-3,epoch,Grok 3
+grok-3,models_dev,helicone/grok-3
+grok-3,text_surface_forms,Grok 3
+grok-3,wikipedia,Grok (chatbot)
+grok-3-mini,epoch,Grok-3 mini
+grok-3-mini,models_dev,helicone/grok-3-mini
+grok-4,epoch,Grok 4
+grok-4,models_dev,helicone/grok-4
+grok-4-1,epoch,Grok 4.1
+grok-4-1,models_dev,302ai/grok-4.1
+grok-4-1,wikipedia,Grok (chatbot)
+grok-4-1-fast,epoch,Grok 4.1 Fast
+grok-4-1-fast,models_dev,ofox/x-ai/grok-4.1-fast
+grok-4-20,epoch,Grok 4.20
+grok-4-20,models_dev,ofox/x-ai/grok-4.20
+grok-4-20,openrouter,x-ai/grok-4.20
+grok-4-20-multi-agent,models_dev,xai/grok-4.20-multi-agent-0309
+grok-4-20-multi-agent,openrouter,x-ai/grok-4.20-multi-agent
+grok-4-3,models_dev,abacus/grok-4.3
+grok-4-3,openrouter,x-ai/grok-4.3
+grok-4-5,epoch,Grok 4.5
+grok-4-5,models_dev,venice/grok-4-5
+grok-4-5,openrouter,x-ai/grok-4.5
+grok-4-6,epoch,Grok 4.6
+grok-4-6,models_dev,venice/grok-4-6
+grok-4-6,openrouter,x-ai/grok-4.6
+grok-4-fast,epoch,Grok 4 Fast
+grok-4-fast,models_dev,zenmux/x-ai/grok-4-fast
+grok-build-0-1,epoch,Grok Build 0.1
+grok-build-0-1,models_dev,aihubmix/grok-build-0.1
+grok-build-0-1,openrouter,x-ai/grok-build-0.1
+grok-code-fast-1,epoch,Grok Code Fast 1
+grok-code-fast-1,models_dev,helicone/grok-code-fast-1
+grok-latest,models_dev,nano-gpt/x-ai/grok-latest
+grok-latest,openrouter,~x-ai/grok-latest
+grok-voice-think-fast-1-0,epoch,Grok Voice Think Fast 1.0
+grok-voice-think-fast-1-0,models_dev,vercel/spacexai/grok-voice-think-fast-1.0
+hermes-2-pro-llama-3-8b,huggingface,NousResearch/Hermes-2-Pro-Llama-3-8B
+hermes-2-pro-mistral-7b,huggingface,NousResearch/Hermes-2-Pro-Mistral-7B
+hermes-2-theta-llama-3-70b,huggingface,NousResearch/Hermes-2-Theta-Llama-3-70B
+hermes-2-theta-llama-3-8b,huggingface,NousResearch/Hermes-2-Theta-Llama-3-8B
+hermes-3-llama-3-1-405b,huggingface,NousResearch/Hermes-3-Llama-3.1-405B
+hermes-3-llama-3-1-405b,models_dev,kilo/nousresearch/hermes-3-llama-3.1-405b
+hermes-3-llama-3-1-405b,openrouter,nousresearch/hermes-3-llama-3.1-405b
+hermes-3-llama-3-1-70b,huggingface,NousResearch/Hermes-3-Llama-3.1-70B
+hermes-3-llama-3-1-70b,models_dev,kilo/nousresearch/hermes-3-llama-3.1-70b
+hermes-3-llama-3-1-70b,openrouter,nousresearch/hermes-3-llama-3.1-70b
+hermes-3-llama-3-1-8b,huggingface,NousResearch/Hermes-3-Llama-3.1-8B
+hermes-3-llama-3-2-3b,huggingface,NousResearch/Hermes-3-Llama-3.2-3B
+hermes-4-14b,huggingface,NousResearch/Hermes-4-14B
+hermes-4-14b-fp8,huggingface,NousResearch/Hermes-4-14B-FP8
+hermes-4-3-36b,huggingface,NousResearch/Hermes-4.3-36B
+hermes-4-405b,huggingface,NousResearch/Hermes-4-405B
+hermes-4-405b,models_dev,nano-gpt/NousResearch/hermes-4-405b:thinking
+hermes-4-405b,openrouter,nousresearch/hermes-4-405b
+hermes-4-70b,huggingface,NousResearch/Hermes-4-70B
+hermes-4-70b,models_dev,nano-gpt/NousResearch/hermes-4-70b
+hermes-4-70b,openrouter,nousresearch/hermes-4-70b
+hermes-4-70b-fp8,huggingface,NousResearch/Hermes-4-70B-FP8
+hils-attention-7b,huggingface,tencent/HiLS-Attention-7B
+hunyuan-0-5b-instruct,huggingface,tencent/Hunyuan-0.5B-Instruct
+hunyuan-1-8b-instruct,huggingface,tencent/Hunyuan-1.8B-Instruct
+hunyuan-7b-instruct,huggingface,tencent/Hunyuan-7B-Instruct
+hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct
+hunyuan-a13b-instruct,models_dev,siliconflow/tencent/Hunyuan-A13B-Instruct
+hunyuan-a13b-instruct,openrouter,tencent/hunyuan-a13b-instruct
+hunyuan-a13b-instruct-fp8,huggingface,tencent/Hunyuan-A13B-Instruct-FP8
+hunyuan-large,huggingface,tencent/Tencent-Hunyuan-Large
+hunyuan-turbos,epoch,Hunyuan-TurboS
+hunyuan-turbos,models_dev,nano-gpt/hunyuan-turbos-20250226
+hunyuanocr,huggingface,tencent/HunyuanOCR
+hy-embodied-0-5-x,huggingface,tencent/HY-Embodied-0.5-X
+hy-embodied-vlm-1-0,huggingface,tencent/Hy-Embodied-VLM-1.0
+hy-mt2-1-8b,models_dev,kilo/tencent/hy-mt2-1.8b
+hy-mt2-1-8b,openrouter,tencent/hy-mt2-1.8b
+hy-mt2-30b-a3b,models_dev,kilo/tencent/hy-mt2-30b-a3b
+hy-mt2-30b-a3b,openrouter,tencent/hy-mt2-30b-a3b
+hy-mt2-7b,models_dev,kilo/tencent/hy-mt2-7b
+hy-mt2-7b,openrouter,tencent/hy-mt2-7b
+hy3-fp8,huggingface,tencent/Hy3-FP8
+hy3-preview,huggingface,tencent/Hy3-preview
+hy3-preview,models_dev,aihubmix/hy3-preview
+hy3-preview,openrouter,tencent/hy3-preview
+intern-s1,huggingface,internlm/Intern-S1
+intern-s1-fp8,huggingface,internlm/Intern-S1-FP8
+intern-s1-mini,huggingface,internlm/Intern-S1-mini
+intern-s1-pro,huggingface,internlm/Intern-S1-Pro
+intern-s2-mobius,huggingface,internlm/Intern-S2-Mobius
+intern-s2-mobius-fp8,huggingface,internlm/Intern-S2-Mobius-FP8
+intern-s2-preview,huggingface,internlm/Intern-S2-Preview
+intern-s2-preview-397b,huggingface,internlm/Intern-S2-Preview-397B
+intern-s2-preview-fp8,huggingface,internlm/Intern-S2-Preview-FP8
+internlm-20b,huggingface,internlm/internlm-20b
+internlm-7b,huggingface,internlm/internlm-7b
+internlm-chat-20b,huggingface,internlm/internlm-chat-20b
+internlm-chat-7b,huggingface,internlm/internlm-chat-7b
+internlm-xcomposer-7b,huggingface,internlm/internlm-xcomposer-7b
+internlm-xcomposer2-7b,huggingface,internlm/internlm-xcomposer2-7b
+internlm2-1-8b,huggingface,internlm/internlm2-1_8b
+internlm2-20b,huggingface,internlm/internlm2-20b
+internlm2-5-1-8b,huggingface,internlm/internlm2_5-1_8b
+internlm2-5-1-8b,huggingface,internlm/internlm2_5-1_8b-chat
+internlm2-5-20b,huggingface,internlm/internlm2_5-20b
+internlm2-5-20b,huggingface,internlm/internlm2_5-20b-chat
+internlm2-5-7b,huggingface,internlm/internlm2_5-7b
+internlm2-5-7b,huggingface,internlm/internlm2_5-7b-chat
+internlm2-5-7b-chat-1m,huggingface,internlm/internlm2_5-7b-chat-1m
+internlm2-7b,huggingface,internlm/internlm2-7b
+internlm2-base-20b,huggingface,internlm/internlm2-base-20b
+internlm2-base-7b,huggingface,internlm/internlm2-base-7b
+internlm2-chat-1-8b,huggingface,internlm/internlm2-chat-1_8b
+internlm2-chat-20b,huggingface,internlm/internlm2-chat-20b
+internlm2-chat-7b,huggingface,internlm/internlm2-chat-7b
+internlm2-chat-7b-sft,huggingface,internlm/internlm2-chat-7b-sft
+internlm2-math-plus-1-8b,huggingface,internlm/internlm2-math-plus-1_8b
+internlm2-math-plus-7b,huggingface,internlm/internlm2-math-plus-7b
+internlm3-8b-instruct,huggingface,internlm/internlm3-8b-instruct
+jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
+jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
+januscoderv-7b,huggingface,internlm/JanusCoderV-7B
+japanese-stablelm-instruct-gamma-7b,huggingface,stabilityai/japanese-stablelm-instruct-gamma-7b
+kimi-dev-72b,huggingface,moonshotai/Kimi-Dev-72B
+kimi-k2,epoch,Kimi K2
+kimi-k2,huggingface,moonshotai/Kimi-K2-Instruct
+kimi-k2,huggingface,moonshotai/Kimi-K2-Instruct-0905
+kimi-k2,models_dev,iflowcn/kimi-k2
+kimi-k2,openrouter,moonshotai/kimi-k2
+kimi-k2,text_surface_forms,Kimi
+kimi-k2,text_surface_forms,Kimi K2
+kimi-k2,wikipedia,Kimi (AI)
+kimi-k2-5,epoch,Kimi K2.5
+kimi-k2-5,huggingface,moonshotai/Kimi-K2.5
+kimi-k2-5,models_dev,frogbot/kimi-k2.5
+kimi-k2-5,openrouter,moonshotai/kimi-k2.5
+kimi-k2-6,epoch,Kimi K2.6
+kimi-k2-6,huggingface,moonshotai/Kimi-K2.6
+kimi-k2-6,models_dev,cline-pass/cline-pass/kimi-k2.6
+kimi-k2-6,openrouter,moonshotai/kimi-k2.6
+kimi-k2-7-code,epoch,Kimi K2.7 Code
+kimi-k2-7-code,huggingface,moonshotai/Kimi-K2.7-Code
+kimi-k2-7-code,models_dev,cline-pass/cline-pass/kimi-k2.7-code
+kimi-k2-7-code,openrouter,moonshotai/kimi-k2.7-code
+kimi-k2-base,huggingface,moonshotai/Kimi-K2-Base
+kimi-k2-thinking,epoch,Kimi K2 Thinking
+kimi-k2-thinking,huggingface,moonshotai/Kimi-K2-Thinking
+kimi-k2-thinking,models_dev,io-net/moonshotai/Kimi-K2-Thinking
+kimi-k2-thinking,openrouter,moonshotai/kimi-k2-thinking
+kimi-k3,epoch,Kimi K3
+kimi-k3,huggingface,moonshotai/Kimi-K3
+kimi-k3,models_dev,cline-pass/cline-pass/kimi-k3
+kimi-k3,openrouter,moonshotai/kimi-k3
+kimi-k3,wikipedia,Kimi (AI)
+kimi-latest,models_dev,privatemode-ai/kimi-latest
+kimi-latest,openrouter,~moonshotai/kimi-latest
+kimi-linear-48b-a3b-base,huggingface,moonshotai/Kimi-Linear-48B-A3B-Base
+kimi-linear-48b-a3b-instruct,huggingface,moonshotai/Kimi-Linear-48B-A3B-Instruct
+kimi-vl-a3b-instruct,huggingface,moonshotai/Kimi-VL-A3B-Instruct
+kimi-vl-a3b-thinking,huggingface,moonshotai/Kimi-VL-A3B-Thinking
+kimi-vl-a3b-thinking-2506,huggingface,moonshotai/Kimi-VL-A3B-Thinking-2506
+lfm2-1-2b,huggingface,LiquidAI/LFM2-1.2B
+lfm2-2-6b,huggingface,LiquidAI/LFM2-2.6B
+lfm2-24b-a2b,huggingface,LiquidAI/LFM2-24B-A2B
+lfm2-350m,huggingface,LiquidAI/LFM2-350M
+lfm2-5-1-2b-base,huggingface,LiquidAI/LFM2.5-1.2B-Base
+lfm2-5-1-2b-instruct,huggingface,LiquidAI/LFM2.5-1.2B-Instruct
+lfm2-5-1-2b-jp,huggingface,LiquidAI/LFM2.5-1.2B-JP
+lfm2-5-1-2b-jp-202606,huggingface,LiquidAI/LFM2.5-1.2B-JP-202606
+lfm2-5-1-2b-thinking,huggingface,LiquidAI/LFM2.5-1.2B-Thinking
+lfm2-5-2-6b,huggingface,LiquidAI/LFM2.5-2.6B
+lfm2-5-2-6b,models_dev,kilo/liquid/lfm-2.5-2.6b:free
+lfm2-5-2-6b,openrouter,liquid/lfm-2.5-2.6b:free
+lfm2-5-2-6b-base,huggingface,LiquidAI/LFM2.5-2.6B-Base
+lfm2-5-230m,huggingface,LiquidAI/LFM2.5-230M
+lfm2-5-230m-base,huggingface,LiquidAI/LFM2.5-230M-Base
+lfm2-5-350m,huggingface,LiquidAI/LFM2.5-350M
+lfm2-5-350m-base,huggingface,LiquidAI/LFM2.5-350M-Base
+lfm2-5-8b-a1b,huggingface,LiquidAI/LFM2.5-8B-A1B
+lfm2-5-vl-1-6b,huggingface,LiquidAI/LFM2.5-VL-1.6B
+lfm2-5-vl-3b,huggingface,LiquidAI/LFM2.5-VL-3B
+lfm2-5-vl-450m,huggingface,LiquidAI/LFM2.5-VL-450M
+lfm2-700m,huggingface,LiquidAI/LFM2-700M
+lfm2-8b-a1b,huggingface,LiquidAI/LFM2-8B-A1B
+lfm2-vl-1-6b,huggingface,LiquidAI/LFM2-VL-1.6B
+lfm2-vl-3b,huggingface,LiquidAI/LFM2-VL-3B
+lfm2-vl-450m,huggingface,LiquidAI/LFM2-VL-450M
+ling-1t,epoch,Ling-1T
+ling-1t,huggingface,inclusionAI/Ling-1T
+ling-1t,models_dev,bailing/Ling-1T
+ling-2-5-1t,huggingface,inclusionAI/Ling-2.5-1T
+ling-2-6-1t,huggingface,inclusionAI/Ling-2.6-1T
+ling-2-6-flash,epoch,Ling-2.6-flash
+ling-2-6-flash,huggingface,inclusionAI/Ling-2.6-flash
+ling-2-6-flash,models_dev,requesty/ling-2.6-flash
+ling-2-6-flash-base,huggingface,inclusionAI/Ling-2.6-flash-base
+ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash
+ling-3-0-flash,models_dev,kilo/inclusionai/ling-3.0-flash
+ling-3-0-flash,openrouter,inclusionai/ling-3.0-flash
+ling-3-0-flash-base,huggingface,inclusionAI/Ling-3.0-flash-base
+ling-3-0-flash-base-30t,huggingface,inclusionAI/Ling-3.0-flash-base-30T
+ling-3-0-flash-base-midtrain,huggingface,inclusionAI/Ling-3.0-flash-base-midtrain
+ling-3-0-flash-dspark,huggingface,inclusionAI/Ling-3.0-flash-dspark
+ling-3-0-flash-fp8,huggingface,inclusionAI/Ling-3.0-flash-fp8
+ling-3-0-flash-int4,huggingface,inclusionAI/Ling-3.0-flash-int4
+ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
+ling-lite,huggingface,inclusionAI/Ling-lite
+ling-lite-1-5,huggingface,inclusionAI/Ling-lite-1.5
+ling-mini-2-0,huggingface,inclusionAI/Ling-mini-2.0
+ling-plus,huggingface,inclusionAI/Ling-plus
+llada-moe-7b-a1b-base,huggingface,inclusionAI/LLaDA-MoE-7B-A1B-Base
+llada2-0-flash,huggingface,inclusionAI/LLaDA2.0-flash
+llada2-0-mini,huggingface,inclusionAI/LLaDA2.0-mini
+llada2-0-mini-cap,huggingface,inclusionAI/LLaDA2.0-mini-CAP
+llada2-0-mini-preview,huggingface,inclusionAI/LLaDA2.0-mini-preview
+llada2-1-flash,huggingface,inclusionAI/LLaDA2.1-flash
+llada2-1-mini,huggingface,inclusionAI/LLaDA2.1-mini
+llada2-2-flash,huggingface,inclusionAI/LLaDA2.2-flash
+llama-2-13b-chat-hf,huggingface,NousResearch/Llama-2-13b-chat-hf
+llama-2-13b-chat-hf,huggingface,meta-llama/Llama-2-13b-chat-hf
+llama-2-13b-hf,huggingface,NousResearch/Llama-2-13b-hf
+llama-2-13b-hf,huggingface,meta-llama/Llama-2-13b-hf
+llama-2-70b,huggingface,meta-llama/Llama-2-70b
+llama-2-70b,text_surface_forms,LLaMA 2
+llama-2-70b,text_surface_forms,Llama 2
+llama-2-70b,text_surface_forms,Llama2
+llama-2-70b,wikipedia,Llama (language model)
+llama-2-70b-chat-hf,huggingface,NousResearch/Llama-2-70b-chat-hf
+llama-2-70b-chat-hf,huggingface,meta-llama/Llama-2-70b-chat-hf
+llama-2-70b-hf,huggingface,NousResearch/Llama-2-70b-hf
+llama-2-70b-hf,huggingface,meta-llama/Llama-2-70b-hf
+llama-2-7b-chat-hf,huggingface,NousResearch/Llama-2-7b-chat-hf
+llama-2-7b-chat-hf,huggingface,meta-llama/Llama-2-7b-chat-hf
+llama-2-7b-hf,huggingface,NousResearch/Llama-2-7b-hf
+llama-2-7b-hf,huggingface,meta-llama/Llama-2-7b-hf
+llama-3-1-405b,huggingface,meta-llama/Llama-3.1-405B
+llama-3-1-405b-fp8,huggingface,meta-llama/Llama-3.1-405B-FP8
+llama-3-1-405b-instruct,epoch,Llama 3.1-405B
+llama-3-1-405b-instruct,huggingface,meta-llama/Llama-3.1-405B-Instruct
+llama-3-1-405b-instruct,models_dev,cortecs/llama-3.1-405b-instruct
+llama-3-1-405b-instruct,text_surface_forms,Llama 3.1
+llama-3-1-405b-instruct,wikipedia,Llama (language model)
+llama-3-1-405b-instruct-fp8,huggingface,meta-llama/Llama-3.1-405B-Instruct-FP8
+llama-3-1-70b,huggingface,NousResearch/Meta-Llama-3.1-70B
+llama-3-1-70b,huggingface,meta-llama/Llama-3.1-70B
+llama-3-1-70b-instruct,epoch,Llama 3.1-70B
+llama-3-1-70b-instruct,huggingface,NousResearch/Meta-Llama-3.1-70B-Instruct
+llama-3-1-70b-instruct,huggingface,meta-llama/Llama-3.1-70B-Instruct
+llama-3-1-70b-instruct,models_dev,nvidia/meta/llama-3.1-70b-instruct
+llama-3-1-70b-instruct,openrouter,meta-llama/llama-3.1-70b-instruct
+llama-3-1-8b,huggingface,NousResearch/Meta-Llama-3.1-8B
+llama-3-1-8b,huggingface,meta-llama/Llama-3.1-8B
+llama-3-1-8b-instruct,epoch,Llama 3.1-8B
+llama-3-1-8b-instruct,huggingface,NousResearch/Meta-Llama-3.1-8B-Instruct
+llama-3-1-8b-instruct,huggingface,meta-llama/Llama-3.1-8B-Instruct
+llama-3-1-8b-instruct,models_dev,pioneer/meta-llama/Llama-3.1-8B-Instruct
+llama-3-1-8b-instruct,openrouter,meta-llama/llama-3.1-8b-instruct
+llama-3-1-nemotron-70b-instruct-hf,epoch,Llama-3.1-Nemotron-70B-Instruct
+llama-3-1-nemotron-70b-instruct-hf,models_dev,nano-gpt/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+llama-3-1-nemotron-nano-8b-v1,huggingface,nvidia/Llama-3.1-Nemotron-Nano-8B-v1
+llama-3-1-nemotron-nano-vl-8b-v1,huggingface,nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1
+llama-3-1-tulu-3-8b,huggingface,allenai/Llama-3.1-Tulu-3-8B
+llama-3-1-tulu-3-8b-dpo,huggingface,allenai/Llama-3.1-Tulu-3-8B-DPO
+llama-3-1-tulu-3-8b-sft,huggingface,allenai/Llama-3.1-Tulu-3-8B-SFT
+llama-3-2-11b-instruct,epoch,Llama 3.2 11B
+llama-3-2-11b-instruct,models_dev,llmgateway/llama-3.2-11b-instruct
+llama-3-2-11b-vision,huggingface,meta-llama/Llama-3.2-11B-Vision
+llama-3-2-11b-vision,huggingface,meta-llama/Llama-3.2-11B-Vision-Instruct
+llama-3-2-1b,huggingface,NousResearch/Llama-3.2-1B
+llama-3-2-1b,huggingface,meta-llama/Llama-3.2-1B
+llama-3-2-1b-instruct,epoch,Llama 3.2 1B
+llama-3-2-1b-instruct,huggingface,meta-llama/Llama-3.2-1B-Instruct
+llama-3-2-1b-instruct,models_dev,pioneer/meta-llama/Llama-3.2-1B-Instruct
+llama-3-2-1b-instruct,openrouter,meta-llama/llama-3.2-1b-instruct
+llama-3-2-3b,huggingface,meta-llama/Llama-3.2-3B
+llama-3-2-3b-instruct,epoch,Llama 3.2 3B
+llama-3-2-3b-instruct,huggingface,meta-llama/Llama-3.2-3B-Instruct
+llama-3-2-3b-instruct,models_dev,nano-gpt/meta-llama/llama-3.2-3b-instruct
+llama-3-2-3b-instruct,openrouter,meta-llama/llama-3.2-3b-instruct
+llama-3-2-90b-vision-instruct,huggingface,meta-llama/Llama-3.2-90B-Vision-Instruct
+llama-3-3-70b-instruct,epoch,Llama 3.3 70B
+llama-3-3-70b-instruct,huggingface,meta-llama/Llama-3.3-70B-Instruct
+llama-3-3-70b-instruct,models_dev,nvidia/meta/llama-3.3-70b-instruct
+llama-3-3-70b-instruct,openrouter,meta-llama/llama-3.3-70b-instruct
+llama-3-3-nemotron-super-49b-v1,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1
+llama-3-3-nemotron-super-49b-v1-5-fp8,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1_5-FP8
+llama-3-70b,huggingface,NousResearch/Meta-Llama-3-70B
+llama-3-70b,huggingface,meta-llama/Meta-Llama-3-70B
+llama-3-70b-instruct,epoch,Llama 3-70B
+llama-3-70b-instruct,huggingface,NousResearch/Meta-Llama-3-70B-Instruct
+llama-3-70b-instruct,huggingface,meta-llama/Meta-Llama-3-70B-Instruct
+llama-3-70b-instruct,models_dev,llmgateway/llama-3-70b-instruct
+llama-3-70b-instruct,text_surface_forms,Llama 3
+llama-3-70b-instruct,wikipedia,Llama (language model)
+llama-3-8b,huggingface,NousResearch/Meta-Llama-3-8B
+llama-3-8b,huggingface,meta-llama/Meta-Llama-3-8B
+llama-3-8b-instruct,epoch,Llama 3-8B
+llama-3-8b-instruct,huggingface,NousResearch/Meta-Llama-3-8B-Instruct
+llama-3-8b-instruct,huggingface,meta-llama/Meta-Llama-3-8B-Instruct
+llama-3-8b-instruct,models_dev,digitalocean/llama3-8b-instruct
+llama-3-8b-instruct,models_dev,novita-ai/meta-llama/llama-3-8b-instruct
+llama-4-maverick,epoch,Llama 4 Maverick
+llama-4-maverick,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct
+llama-4-maverick,models_dev,helicone/llama-4-maverick
+llama-4-maverick,openrouter,meta-llama/llama-4-maverick
+llama-4-maverick,wikipedia,Llama (language model)
+llama-4-maverick-17b-128e,huggingface,meta-llama/Llama-4-Maverick-17B-128E
+llama-4-maverick-17b-128e,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct
+llama-4-maverick-17b-128e-instruct-fp8,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+llama-4-scout,epoch,Llama 4 Scout
+llama-4-scout,models_dev,helicone/llama-4-scout
+llama-4-scout,openrouter,meta-llama/llama-4-scout
+llama-4-scout-17b-16e,huggingface,meta-llama/Llama-4-Scout-17B-16E
+llama-4-scout-17b-16e,huggingface,meta-llama/Llama-4-Scout-17B-16E-Instruct
+llama-guard-2-8b,huggingface,meta-llama/Meta-Llama-Guard-2-8B
+llama-guard-3-11b-vision,huggingface,meta-llama/Llama-Guard-3-11B-Vision
+llama-guard-3-1b,huggingface,meta-llama/Llama-Guard-3-1B
+llama-guard-3-8b,huggingface,meta-llama/Llama-Guard-3-8B
+llama-guard-3-8b-int8,huggingface,meta-llama/Llama-Guard-3-8B-INT8
+llama-guard-4-12b,huggingface,meta-llama/Llama-Guard-4-12B
+llama-guard-4-12b,models_dev,nvidia/meta/llama-guard-4-12b
+llama-guard-4-12b,openrouter,meta-llama/llama-guard-4-12b
+llamaguard-7b,huggingface,meta-llama/LlamaGuard-7b
+longcat-2-0,epoch,LongCat-2.0
+longcat-2-0,huggingface,meituan-longcat/LongCat-2.0
+longcat-2-0,models_dev,longcat/LongCat-2.0
+longcat-2-0,openrouter,meituan/longcat-2.0
+longcat-2-0-fp8,huggingface,meituan-longcat/LongCat-2.0-FP8
+longcat-2-0-int8,huggingface,meituan-longcat/LongCat-2.0-INT8
+longcat-flash-chat,epoch,LongCat-Flash
+longcat-flash-chat,huggingface,meituan-longcat/LongCat-Flash-Chat
+longcat-flash-chat,models_dev,qiniu-ai/meituan/longcat-flash-chat
+longcat-flash-chat-fp8,huggingface,meituan-longcat/LongCat-Flash-Chat-FP8
+longcat-flash-lite,huggingface,meituan-longcat/LongCat-Flash-Lite
+longcat-flash-lite-fp8,huggingface,meituan-longcat/LongCat-Flash-Lite-FP8
+longcat-flash-lite-sparse,huggingface,meituan-longcat/LongCat-Flash-Lite-Sparse
+longcat-flash-omni-fp8,huggingface,meituan-longcat/LongCat-Flash-Omni-FP8
+longcat-flash-prover,huggingface,meituan-longcat/LongCat-Flash-Prover
+longcat-flash-thinking,huggingface,meituan-longcat/LongCat-Flash-Thinking
+longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601
+longcat-flash-thinking-2601-fp8,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601-FP8
+longcat-flash-thinking-fp8,huggingface,meituan-longcat/LongCat-Flash-Thinking-FP8
+longcat-flash-thinking-zigzag,huggingface,meituan-longcat/LongCat-Flash-Thinking-ZigZag
+longcat-heavymode-summary,huggingface,meituan-longcat/LongCat-HeavyMode-Summary
+lyria-3-clip-preview,models_dev,edenai/google/lyria-3-clip-preview
+lyria-3-clip-preview,openrouter,google/lyria-3-clip-preview
+lyria-3-pro-preview,models_dev,google/lyria-3-pro-preview
+lyria-3-pro-preview,openrouter,google/lyria-3-pro-preview
+mage-vl,huggingface,microsoft/Mage-VL
+medgemma-1-5-4b-it,huggingface,google/medgemma-1.5-4b-it
+medgemma-27b-it,huggingface,google/medgemma-27b-it
+medgemma-4b-it,huggingface,google/medgemma-4b-it
+mimo-7b-base,huggingface,XiaomiMiMo/MiMo-7B-Base
+mimo-7b-rl,huggingface,XiaomiMiMo/MiMo-7B-RL
+mimo-7b-rl,huggingface,XiaomiMiMo/MiMo-7B-RL-0530
+mimo-7b-rl-zero,huggingface,XiaomiMiMo/MiMo-7B-RL-Zero
+mimo-7b-sft,huggingface,XiaomiMiMo/MiMo-7B-SFT
+mimo-embodied-7b,huggingface,XiaomiMiMo/MiMo-Embodied-7B
+mimo-v2-5,huggingface,XiaomiMiMo/MiMo-V2.5
+mimo-v2-5,models_dev,cline-pass/cline-pass/mimo-v2.5
+mimo-v2-5,openrouter,xiaomi/mimo-v2.5
+mimo-v2-5-base,huggingface,XiaomiMiMo/MiMo-V2.5-Base
+mimo-v2-5-pro,epoch,MiMo-V2.5-Pro
+mimo-v2-5-pro,huggingface,XiaomiMiMo/MiMo-V2.5-Pro
+mimo-v2-5-pro,models_dev,cline-pass/cline-pass/mimo-v2.5-pro
+mimo-v2-5-pro,openrouter,xiaomi/mimo-v2.5-pro
+mimo-v2-5-pro-base,huggingface,XiaomiMiMo/MiMo-V2.5-Pro-Base
+mimo-v2-flash,epoch,MiMo-V2-Flash
+mimo-v2-flash,huggingface,XiaomiMiMo/MiMo-V2-Flash
+mimo-v2-flash,models_dev,huggingface/XiaomiMiMo/MiMo-V2-Flash
+mimo-v2-flash-base,huggingface,XiaomiMiMo/MiMo-V2-Flash-Base
+mimo-v2-omni,epoch,MiMo-V2-Omni
+mimo-v2-omni,models_dev,opencode-go/mimo-v2-omni
+mimo-v2-pro,epoch,MiMo-V2-Pro
+mimo-v2-pro,models_dev,abacus/mimo-v2-pro
+mimo-vl-7b-rl,huggingface,XiaomiMiMo/MiMo-VL-7B-RL
+mimo-vl-7b-rl-2508,huggingface,XiaomiMiMo/MiMo-VL-7B-RL-2508
+mimo-vl-7b-sft,huggingface,XiaomiMiMo/MiMo-VL-7B-SFT
+mimo-vl-7b-sft-2508,huggingface,XiaomiMiMo/MiMo-VL-7B-SFT-2508
+mindlink-32b,huggingface,Skywork/MindLink-32B-0801
+minicpm-1b-sft-bf16,huggingface,openbmb/MiniCPM-1B-sft-bf16
+minicpm-2b-sft-bf16,huggingface,openbmb/MiniCPM-2B-sft-bf16
+minicpm-llama3-v-2-5,huggingface,openbmb/MiniCPM-Llama3-V-2_5
+minicpm-moe-8x2b,huggingface,openbmb/MiniCPM-MoE-8x2B
+minicpm-sala,huggingface,openbmb/MiniCPM-SALA
+minicpm-v-2-6,huggingface,openbmb/MiniCPM-V-2_6
+minicpm-v-2-6-int4,huggingface,openbmb/MiniCPM-V-2_6-int4
+minicpm-v-4,huggingface,openbmb/MiniCPM-V-4
+minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5
+minicpm-v-4-5-int4,huggingface,openbmb/MiniCPM-V-4_5-int4
+minicpm-v-4-6,huggingface,openbmb/MiniCPM-V-4.6
+minicpm-v-4-6-thinking,huggingface,openbmb/MiniCPM-V-4.6-Thinking
+minicpm3-4b,huggingface,openbmb/MiniCPM3-4B
+minicpm4-0-5b,huggingface,openbmb/MiniCPM4-0.5B
+minicpm4-1-8b,huggingface,openbmb/MiniCPM4.1-8B
+minicpm4-8b,huggingface,openbmb/MiniCPM4-8B
+minicpm4-mcp,huggingface,openbmb/MiniCPM4-MCP
+minicpm5-1b,huggingface,openbmb/MiniCPM5-1B
+minicpm5-1b-base,huggingface,openbmb/MiniCPM5-1B-Base
+minicpm5-1b-sft,huggingface,openbmb/MiniCPM5-1B-SFT
+minimax-01,models_dev,nano-gpt/minimax/minimax-01
+minimax-01,openrouter,minimax/minimax-01
+minimax-m1,models_dev,nano-gpt/MiniMax-M1
+minimax-m1,openrouter,minimax/minimax-m1
+minimax-m1-40k,huggingface,MiniMaxAI/MiniMax-M1-40k
+minimax-m1-40k,huggingface,MiniMaxAI/MiniMax-M1-40k-hf
+minimax-m1-80k,epoch,MiniMax-M1-80k
+minimax-m1-80k,huggingface,MiniMaxAI/MiniMax-M1-80k
+minimax-m1-80k,huggingface,MiniMaxAI/MiniMax-M1-80k-hf
+minimax-m1-80k,models_dev,nano-gpt/MiniMaxAI/MiniMax-M1-80k
+minimax-m2,epoch,MiniMax-M2
+minimax-m2,huggingface,MiniMaxAI/MiniMax-M2
+minimax-m2,models_dev,302ai/MiniMax-M2
+minimax-m2,openrouter,minimax/minimax-m2
+minimax-m2-1,epoch,MiniMax-M2.1
+minimax-m2-1,huggingface,MiniMaxAI/MiniMax-M2.1
+minimax-m2-1,models_dev,302ai/MiniMax-M2.1
+minimax-m2-1,openrouter,minimax/minimax-m2.1
+minimax-m2-5,epoch,MiniMax-M2.5
+minimax-m2-5,huggingface,MiniMaxAI/MiniMax-M2.5
+minimax-m2-5,models_dev,frogbot/minimax-m2-5
+minimax-m2-5,openrouter,minimax/minimax-m2.5
+minimax-m2-7,epoch,MiniMax-M2.7
+minimax-m2-7,huggingface,MiniMaxAI/MiniMax-M2.7
+minimax-m2-7,models_dev,abacus/MiniMaxAI/MiniMax-M2.7
+minimax-m2-7,openrouter,minimax/minimax-m2.7
+minimax-m2-her,models_dev,kilo/minimax/minimax-m2-her
+minimax-m2-her,openrouter,minimax/minimax-m2-her
+minimax-m3,epoch,MiniMax-M3
+minimax-m3,huggingface,MiniMaxAI/MiniMax-M3
+minimax-m3,models_dev,cline-pass/cline-pass/minimax-m3
+minimax-m3,openrouter,minimax/minimax-m3
+minimax-m3-mxfp8,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
+minimax-text-01,epoch,MiniMax-Text-01
+minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01
+minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01-hf
+minimax-text-01,models_dev,llmgateway/minimax-text-01
+minimax-vl-01,huggingface,MiniMaxAI/MiniMax-VL-01
+ministral-14b-2512,models_dev,kilo/mistralai/ministral-14b-2512
+ministral-14b-2512,openrouter,mistralai/ministral-14b-2512
+ministral-3b,epoch,Ministral 3B
+ministral-3b,models_dev,vercel/mistral/ministral-3b
+ministral-3b-2512,models_dev,kilo/mistralai/ministral-3b-2512
+ministral-3b-2512,openrouter,mistralai/ministral-3b-2512
+ministral-8b,epoch,Ministral 8B
+ministral-8b,models_dev,vercel/mistral/ministral-8b
+ministral-8b,openrouter,mistralai/ministral-8b
+ministral-8b-2512,models_dev,kilo/mistralai/ministral-8b-2512
+ministral-8b-2512,openrouter,mistralai/ministral-8b-2512
+mistral-7b,huggingface,mistralai/Mistral-7B-v0.1
+mistral-7b,text_surface_forms,Mistral
+mistral-7b,text_surface_forms,Mistral 7B
+mistral-7b,wikipedia,Mistral AI
+mistral-7b-instruct-v0-1,huggingface,mistralai/Mistral-7B-Instruct-v0.1
+mistral-7b-instruct-v0-2,huggingface,mistralai/Mistral-7B-Instruct-v0.2
+mistral-7b-v0-1,huggingface,mistralai/Mistral-7B-v0.1
+mistral-large,epoch,Mistral Large
+mistral-large,models_dev,nano-gpt/mistralai/mistral-large
+mistral-large,openrouter,mistralai/mistral-large
+mistral-large,wikipedia,Mistral AI
+mistral-large-2407,models_dev,kilo/mistralai/mistral-large-2407
+mistral-large-2407,openrouter,mistralai/mistral-large-2407
+mistral-large-2512,models_dev,anyapi/mistralai/mistral-large-2512
+mistral-large-2512,openrouter,mistralai/mistral-large-2512
+mistral-large-3,epoch,Mistral Large 3
+mistral-large-3,models_dev,pioneer/mistral-large-3
+mistral-medium,epoch,Mistral Medium
+mistral-medium,models_dev,vercel/mistral/mistral-medium
+mistral-medium-3,epoch,Mistral Medium 3
+mistral-medium-3,models_dev,empiriolabs/mistral-medium-3
+mistral-medium-3,openrouter,mistralai/mistral-medium-3
+mistral-medium-3-1,epoch,Mistral Medium 3.1
+mistral-medium-3-1,models_dev,kilo/mistralai/mistral-medium-3.1
+mistral-medium-3-1,openrouter,mistralai/mistral-medium-3.1
+mistral-medium-3-5,epoch,Mistral Medium 3.5
+mistral-medium-3-5,models_dev,nano-gpt/mistral/mistral-medium-3.5
+mistral-medium-3-5,openrouter,mistralai/mistral-medium-3-5
+mistral-nemo,epoch,Mistral NeMo
+mistral-nemo,models_dev,kilo/mistralai/mistral-nemo
+mistral-nemo,openrouter,mistralai/mistral-nemo
+mistral-saba,epoch,Mistral Saba
+mistral-saba,models_dev,nano-gpt/mistralai/mistral-saba
+mistral-saba,openrouter,mistralai/mistral-saba
+mistral-small-24b-instruct-2501,models_dev,kilo/mistralai/mistral-small-24b-instruct-2501
+mistral-small-24b-instruct-2501,openrouter,mistralai/mistral-small-24b-instruct-2501
+mistral-small-2603,models_dev,cortecs/mistral-small-2603
+mistral-small-2603,openrouter,mistralai/mistral-small-2603
+mistral-small-3-1-24b-instruct,models_dev,kilo/mistralai/mistral-small-3.1-24b-instruct
+mistral-small-3-1-24b-instruct,openrouter,mistralai/mistral-small-3.1-24b-instruct
+mistral-small-3-2-24b-instruct,models_dev,kilo/mistralai/mistral-small-3.2-24b-instruct
+mistral-small-3-2-24b-instruct,openrouter,mistralai/mistral-small-3.2-24b-instruct
+mistral-small-4,epoch,Mistral Small 4
+mistral-small-4,models_dev,empiriolabs/mistral-small-4
+mixtral-8x22b-instruct,epoch,Mixtral 8x22B
+mixtral-8x22b-instruct,models_dev,kilo/mistralai/mixtral-8x22b-instruct
+mixtral-8x22b-instruct,openrouter,mistralai/mixtral-8x22b-instruct
+mixtral-8x7b-instruct,epoch,Mixtral 8x7B
+mixtral-8x7b-instruct,huggingface,mistralai/Mixtral-8x7B-Instruct-v0.1
+mixtral-8x7b-instruct,models_dev,nvidia/mistralai/mixtral-8x7b-instruct
+mixtral-8x7b-instruct,text_surface_forms,Mixtral
+mixtral-8x7b-instruct,wikipedia,Mistral AI
+molmo-7b-d,huggingface,allenai/Molmo-7B-D-0924
+molmo2-4b,huggingface,allenai/Molmo2-4B
+molmo2-8b,huggingface,allenai/Molmo2-8B
+molmo2-o-7b,huggingface,allenai/Molmo2-O-7B
+moonlight-16b-a3b,huggingface,moonshotai/Moonlight-16B-A3B
+moonlight-16b-a3b,huggingface,moonshotai/Moonlight-16B-A3B-Instruct
+muse-glimmer-30b,models_dev,edenai/flexai/Muse-Glimmer-30B
+muse-glimmer-30b,openrouter,meta/muse-glimmer-30b
+muse-spark-1-1,epoch,Muse Spark 1.1
+muse-spark-1-1,models_dev,abacus/muse-spark-1.1
+muse-spark-1-1,openrouter,meta/muse-spark-1.1
+muse-spark-1-2,epoch,Muse Spark 1.2
+muse-spark-1-2,models_dev,abacus/muse-spark-1.2
+muse-spark-1-2,openrouter,meta/muse-spark-1.2
+muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
+muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
+nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
+nanowhale-100m-base,huggingface,HuggingFaceTB/nanowhale-100m-base
+nemotron-3-5-content-safety,models_dev,kilo/nvidia/nemotron-3.5-content-safety:free
+nemotron-3-5-content-safety,openrouter,nvidia/nemotron-3.5-content-safety:free
+nemotron-3-5-lightning,epoch,Nemotron 3.5 Lightning
+nemotron-3-5-lightning,models_dev,kilo/nvidia/nemotron-3.5-lightning
+nemotron-3-5-lightning,openrouter,nvidia/nemotron-3.5-lightning
+nemotron-3-nano-30b-a3b,epoch,Nemotron 3-Nano-30B-A3B
+nemotron-3-nano-30b-a3b,models_dev,nvidia/nvidia/nemotron-3-nano-30b-a3b
+nemotron-3-nano-30b-a3b,openrouter,nvidia/nemotron-3-nano-30b-a3b
+nemotron-3-nano-omni-30b-a3b-reasoning,models_dev,nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+nemotron-3-nano-omni-30b-a3b-reasoning,openrouter,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+nemotron-3-super,epoch,Nemotron 3 Super
+nemotron-3-super,models_dev,ollama-cloud/nemotron-3-super
+nemotron-3-super-120b-a12b,models_dev,nvidia/nvidia/nemotron-3-super-120b-a12b
+nemotron-3-super-120b-a12b,openrouter,nvidia/nemotron-3-super-120b-a12b
+nemotron-3-ultra,epoch,Nemotron 3 Ultra
+nemotron-3-ultra,models_dev,ollama-cloud/nemotron-3-ultra
+nemotron-3-ultra-550b-a55b,models_dev,nvidia/nvidia/nemotron-3-ultra-550b-a55b
+nemotron-3-ultra-550b-a55b,openrouter,nvidia/nemotron-3-ultra-550b-a55b
+nemotron-labs-diffusion-8b,huggingface,nvidia/Nemotron-Labs-Diffusion-8B
+nemotron-labs-diffusion-8b-base,huggingface,nvidia/Nemotron-Labs-Diffusion-8B-Base
+north-micro-vision-instruct,huggingface,CohereLabs/North-Micro-Vision-Instruct
+north-mini-code,epoch,North Mini Code
+north-mini-code,models_dev,nano-gpt/cohere/north-mini-code
+north-mini-code,openrouter,cohere/north-mini-code:free
+north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0
+north-mini-code-1-0-fp8,huggingface,CohereLabs/North-Mini-Code-1.0-fp8
+nous-hermes-2-mistral-7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mistral-7B-DPO
+nous-hermes-2-mixtral-8x7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
+nous-hermes-2-mixtral-8x7b-sft,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
+nous-hermes-2-solar-10-7b,huggingface,NousResearch/Nous-Hermes-2-SOLAR-10.7B
+nous-hermes-2-yi-34b,huggingface,NousResearch/Nous-Hermes-2-Yi-34B
+nous-hermes-llama-2-7b,huggingface,NousResearch/Nous-Hermes-llama-2-7b
+nous-hermes-llama2-13b,huggingface,NousResearch/Nous-Hermes-Llama2-13b
+nova-2-lite-v1,models_dev,nano-gpt/amazon/nova-2-lite-v1
+nova-2-lite-v1,openrouter,amazon/nova-2-lite-v1
+nova-lite-v1,models_dev,nano-gpt/amazon/nova-lite-v1
+nova-lite-v1,openrouter,amazon/nova-lite-v1
+nova-micro-v1,models_dev,kilo/amazon/nova-micro-v1
+nova-micro-v1,openrouter,amazon/nova-micro-v1
+nova-premier-v1,models_dev,kilo/amazon/nova-premier-v1
+nova-premier-v1,openrouter,amazon/nova-premier-v1
+nova-pro-v1,models_dev,cortecs/nova-pro-v1
+nova-pro-v1,openrouter,amazon/nova-pro-v1
+nv-embed-v1,epoch,NV-Embed-v1
+nv-embed-v1,models_dev,nvidia/nvidia/nv-embed-v1
+nvidia-nemotron-3-nano-30b-a3b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
+nvidia-nemotron-3-nano-30b-a3b-fp8,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
+nvidia-nemotron-3-nano-4b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+nvidia-nemotron-3-super-120b-a12b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16
+nvidia-nemotron-3-ultra-550b-a55b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+nvidia-nemotron-nano-12b-v2,epoch,NVIDIA-Nemotron-Nano-12B-v2
+nvidia-nemotron-nano-12b-v2,models_dev,amazon-bedrock/nvidia.nemotron-nano-12b-v2
+nvidia-nemotron-nano-9b-v2,epoch,NVIDIA-Nemotron-Nano-9B-v2
+nvidia-nemotron-nano-9b-v2,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2
+nvidia-nemotron-nano-9b-v2,models_dev,nvidia/nvidia/nvidia-nemotron-nano-9b-v2
+nvidia-nemotron-nano-9b-v2-fp8,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2-FP8
+nvidia-nemotron-parse-v1-1,huggingface,nvidia/NVIDIA-Nemotron-Parse-v1.1
+o1-preview,epoch,o1-preview
+o1-preview,models_dev,nano-gpt/openai/o1-preview
+o1-pro,epoch,o1-pro
+o1-pro,models_dev,edenai/openai/o1-pro
+o1-pro,openrouter,openai/o1-pro
+o3-mini,epoch,o3-mini
+o3-mini,models_dev,helicone/o3-mini
+o3-mini,openai_api,o3-mini
+o3-mini,openrouter,openai/o3-mini
+o3-mini-high,models_dev,nano-gpt/openai/o3-mini-high
+o3-mini-high,openrouter,openai/o3-mini-high
+o3-pro,epoch,o3-pro
+o3-pro,models_dev,nano-gpt/openai/o3-pro-2025-06-10
+o3-pro,openai_api,o3-pro
+o3-pro,openrouter,openai/o3-pro
+o4-mini,epoch,o4-mini
+o4-mini,models_dev,helicone/o4-mini
+o4-mini,openai_api,o4-mini
+o4-mini,openrouter,openai/o4-mini
+o4-mini,wikipedia,OpenAI o4-mini
+o4-mini-high,models_dev,kilo/openai/o4-mini-high
+o4-mini-high,openrouter,openai/o4-mini-high
+olmo-1b-hf,huggingface,allenai/OLMo-1B-hf
+olmo-2-0425-1b,huggingface,allenai/OLMo-2-0425-1B
+olmo-2-0425-1b,huggingface,allenai/OLMo-2-0425-1B-Instruct
+olmo-2-0425-1b-sft,huggingface,allenai/OLMo-2-0425-1B-SFT
+olmo-2-1124-13b-instruct,huggingface,allenai/OLMo-2-1124-13B-Instruct
+olmo-2-1124-7b-instruct,huggingface,allenai/OLMo-2-1124-7B-Instruct
+olmo-2-1124-7b-sft,huggingface,allenai/OLMo-2-1124-7B-SFT
+olmo-3-1-32b-instruct,huggingface,allenai/Olmo-3.1-32B-Instruct
+olmo-3-1025-7b,huggingface,allenai/Olmo-3-1025-7B
+olmo-3-1125-32b,huggingface,allenai/Olmo-3-1125-32B
+olmo-3-32b-think,huggingface,allenai/Olmo-3-32B-Think
+olmo-3-32b-think,models_dev,kilo/allenai/olmo-3-32b-think
+olmo-3-32b-think,openrouter,allenai/olmo-3-32b-think
+olmo-3-7b-instruct,huggingface,allenai/Olmo-3-7B-Instruct
+olmo-3-7b-instruct-dpo,huggingface,allenai/Olmo-3-7B-Instruct-DPO
+olmo-3-7b-instruct-sft,huggingface,allenai/Olmo-3-7B-Instruct-SFT
+olmo-3-7b-rl-zero-mix,huggingface,allenai/Olmo-3-7B-RL-Zero-Mix
+olmo-3-7b-think,huggingface,allenai/Olmo-3-7B-Think
+olmo-3-7b-think-sft,huggingface,allenai/Olmo-3-7B-Think-SFT
+olmo-7b-hf,huggingface,allenai/OLMo-7B-hf
+olmo-hybrid-7b,huggingface,allenai/Olmo-Hybrid-7B
+olmocr-2-7b,huggingface,allenai/olmOCR-2-7B-1025
+olmocr-2-7b-1025-fp8,huggingface,allenai/olmOCR-2-7B-1025-FP8
+olmocr-7b-0225-preview,huggingface,allenai/olmOCR-7B-0225-preview
+olmocr-7b-0825-fp8,huggingface,allenai/olmOCR-7B-0825-FP8
+olmoe-1b-7b,huggingface,allenai/OLMoE-1B-7B-0125
+olmoe-1b-7b,huggingface,allenai/OLMoE-1B-7B-0924
+olmoe-1b-7b-0125-instruct,huggingface,allenai/OLMoE-1B-7B-0125-Instruct
+olmoe-1b-7b-0924-instruct,huggingface,allenai/OLMoE-1B-7B-0924-Instruct
+openai-o1,epoch,o1
+openai-o1,models_dev,azure/o1
+openai-o1,openai_api,o1
+openai-o1,openrouter,openai/o1
+openai-o1,text_surface_forms,OpenAI o1
+openai-o1,text_surface_forms,o1
+openai-o1,wikipedia,OpenAI o1
+openai-o3,epoch,o3
+openai-o3,models_dev,helicone/o3
+openai-o3,openai_api,o3
+openai-o3,openrouter,openai/o3
+openai-o3,text_surface_forms,OpenAI o3
+openai-o3,text_surface_forms,o3
+openai-o3,wikipedia,OpenAI o3
+openreasoning-nemotron-32b,epoch,OpenReasoning-Nemotron-32B
+openreasoning-nemotron-32b,models_dev,nano-gpt/pamanseau/OpenReasoning-Nemotron-32B
+ouro-1-4b,huggingface,ByteDance/Ouro-1.4B
+ouro-1-4b-thinking,huggingface,ByteDance/Ouro-1.4B-Thinking
+ouro-2-6b,huggingface,ByteDance/Ouro-2.6B
+ouro-2-6b-thinking,huggingface,ByteDance/Ouro-2.6B-Thinking
+pacore-8b,huggingface,stepfun-ai/PaCoRe-8B
+paligemma,epoch,PaliGemma
+paligemma,models_dev,nvidia/google/google-paligemma
+paligemma-3b-ft-cococap-448,huggingface,google/paligemma-3b-ft-cococap-448
+phi-2,huggingface,microsoft/phi-2
+phi-3-5-mini-instruct,huggingface,microsoft/Phi-3.5-mini-instruct
+phi-3-5-moe-instruct,huggingface,microsoft/Phi-3.5-MoE-instruct
+phi-3-5-vision-instruct,huggingface,microsoft/Phi-3.5-vision-instruct
+phi-3-mini-128k-instruct,huggingface,microsoft/Phi-3-mini-128k-instruct
+phi-3-mini-4k-instruct,huggingface,microsoft/Phi-3-mini-4k-instruct
+phi-3-vision-128k-instruct,huggingface,microsoft/Phi-3-vision-128k-instruct
+phi-4,epoch,Phi-4
+phi-4,huggingface,microsoft/phi-4
+phi-4,models_dev,azure/phi-4
+phi-4,openrouter,microsoft/phi-4
+phi-4-mini,epoch,Phi-4 Mini
+phi-4-mini,huggingface,microsoft/Phi-4-mini-instruct
+phi-4-mini,models_dev,azure/phi-4-mini
+phi-4-multimodal,epoch,Phi-4-Multimodal
+phi-4-multimodal,models_dev,azure/phi-4-multimodal
+phi-4-reasoning,epoch,Phi-4-Reasoning
+phi-4-reasoning,models_dev,azure/phi-4-reasoning
+phi-4-reasoning-plus,epoch,Phi-4-Reasoning-plus
+phi-4-reasoning-plus,models_dev,azure/phi-4-reasoning-plus
+phi-mini-moe-instruct,huggingface,microsoft/Phi-mini-MoE-instruct
+phi-tiny-moe-instruct,huggingface,microsoft/Phi-tiny-MoE-instruct
+pixtral-12b,epoch,Pixtral 12B
+pixtral-12b,models_dev,mistral/pixtral-12b
+points-gui-g,huggingface,tencent/POINTS-GUI-G
+pythia-1-4b,huggingface,EleutherAI/pythia-1.4b
+pythia-1-4b-deduped,huggingface,EleutherAI/pythia-1.4b-deduped
+pythia-12b,huggingface,EleutherAI/pythia-12b
+pythia-14m,huggingface,EleutherAI/pythia-14m
+pythia-14m-deduped,huggingface,EleutherAI/pythia-14m-deduped
+pythia-160m,huggingface,EleutherAI/pythia-160m
+pythia-160m-data-seed1,huggingface,EleutherAI/pythia-160m-data-seed1
+pythia-160m-data-seed2,huggingface,EleutherAI/pythia-160m-data-seed2
+pythia-160m-data-seed3,huggingface,EleutherAI/pythia-160m-data-seed3
+pythia-160m-deduped,huggingface,EleutherAI/pythia-160m-deduped
+pythia-160m-seed1,huggingface,EleutherAI/pythia-160m-seed1
+pythia-160m-seed2,huggingface,EleutherAI/pythia-160m-seed2
+pythia-160m-seed3,huggingface,EleutherAI/pythia-160m-seed3
+pythia-160m-seed4,huggingface,EleutherAI/pythia-160m-seed4
+pythia-160m-seed5,huggingface,EleutherAI/pythia-160m-seed5
+pythia-160m-seed6,huggingface,EleutherAI/pythia-160m-seed6
+pythia-160m-seed7,huggingface,EleutherAI/pythia-160m-seed7
+pythia-160m-seed8,huggingface,EleutherAI/pythia-160m-seed8
+pythia-160m-seed9,huggingface,EleutherAI/pythia-160m-seed9
+pythia-160m-weight-seed1,huggingface,EleutherAI/pythia-160m-weight-seed1
+pythia-160m-weight-seed2,huggingface,EleutherAI/pythia-160m-weight-seed2
+pythia-160m-weight-seed3,huggingface,EleutherAI/pythia-160m-weight-seed3
+pythia-1b,huggingface,EleutherAI/pythia-1b
+pythia-1b-deduped,huggingface,EleutherAI/pythia-1b-deduped
+pythia-2-8b,huggingface,EleutherAI/pythia-2.8b
+pythia-31m,huggingface,EleutherAI/pythia-31m
+pythia-410m,huggingface,EleutherAI/pythia-410m
+pythia-410m-deduped,huggingface,EleutherAI/pythia-410m-deduped
+pythia-410m-seed1,huggingface,EleutherAI/pythia-410m-seed1
+pythia-410m-seed2,huggingface,EleutherAI/pythia-410m-seed2
+pythia-410m-seed9,huggingface,EleutherAI/pythia-410m-seed9
+pythia-6-9b,huggingface,EleutherAI/pythia-6.9b
+pythia-6-9b-deduped,huggingface,EleutherAI/pythia-6.9b-deduped
+pythia-70m-deduped,huggingface,EleutherAI/pythia-70m-deduped
+pythia-70m-seed2,huggingface,EleutherAI/pythia-70m-seed2
+qianfan-ocr,huggingface,baidu/Qianfan-OCR
+qianfan-vl-3b,huggingface,baidu/Qianfan-VL-3B
+qianfan-vl-70b,huggingface,baidu/Qianfan-VL-70B
+qianfan-vl-8b,huggingface,baidu/Qianfan-VL-8B
+qvq-max,epoch,QVQ-Max
+qvq-max,models_dev,alibaba/qvq-max
+qwen-72b,huggingface,Qwen/Qwen-72B
+qwen-plus,epoch,Qwen Plus
+qwen-plus,models_dev,alibaba/qwen-plus
+qwen-plus,openrouter,qwen/qwen-plus
+qwen-turbo,epoch,Qwen-Turbo
+qwen-turbo,models_dev,alibaba/qwen-turbo
+qwen-vl-max,epoch,Qwen-VL-Max
+qwen-vl-max,models_dev,alibaba/qwen-vl-max
+qwen2-5-0-5b,huggingface,Qwen/Qwen2.5-0.5B
+qwen2-5-0-5b,huggingface,Qwen/Qwen2.5-0.5B-Instruct
+qwen2-5-1-5b-instruct,huggingface,Qwen/Qwen2.5-1.5B-Instruct
+qwen2-5-14b-instruct,epoch,Qwen2.5-14B
+qwen2-5-14b-instruct,huggingface,Qwen/Qwen2.5-14B-Instruct
+qwen2-5-14b-instruct,models_dev,alibaba/qwen2-5-14b-instruct
+qwen2-5-32b-instruct,epoch,Qwen2.5-32B
+qwen2-5-32b-instruct,huggingface,Qwen/Qwen2.5-32B-Instruct
+qwen2-5-32b-instruct,models_dev,alibaba/qwen2-5-32b-instruct
+qwen2-5-3b-instruct,huggingface,Qwen/Qwen2.5-3B-Instruct
+qwen2-5-72b-instruct,epoch,Qwen2.5-72B
+qwen2-5-72b-instruct,huggingface,Qwen/Qwen2.5-72B-Instruct
+qwen2-5-72b-instruct,models_dev,alibaba/qwen2-5-72b-instruct
+qwen2-5-72b-instruct,models_dev,kilo/qwen/qwen-2.5-72b-instruct
+qwen2-5-72b-instruct,openrouter,qwen/qwen-2.5-72b-instruct
+qwen2-5-72b-instruct,text_surface_forms,Qwen
+qwen2-5-72b-instruct,text_surface_forms,Qwen 2.5
+qwen2-5-72b-instruct,text_surface_forms,Qwen2.5
+qwen2-5-72b-instruct,wikipedia,Qwen
+qwen2-5-7b-instruct,epoch,Qwen2.5-7B
+qwen2-5-7b-instruct,huggingface,Qwen/Qwen2.5-7B-Instruct
+qwen2-5-7b-instruct,models_dev,alibaba/qwen2-5-7b-instruct
+qwen2-5-7b-instruct,models_dev,kilo/qwen/qwen-2.5-7b-instruct
+qwen2-5-7b-instruct,openrouter,qwen/qwen-2.5-7b-instruct
+qwen2-5-coder-14b-instruct,huggingface,Qwen/Qwen2.5-Coder-14B-Instruct
+qwen2-5-coder-32b-instruct,epoch,Qwen2.5-Coder (32B)
+qwen2-5-coder-32b-instruct,models_dev,abacus/qwen-2.5-coder-32b
+qwen2-5-coder-32b-instruct,models_dev,alibaba-cn/qwen2-5-coder-32b-instruct
+qwen2-5-coder-32b-instruct,models_dev,kilo/qwen/qwen-2.5-coder-32b-instruct
+qwen2-5-coder-32b-instruct,openrouter,qwen/qwen-2.5-coder-32b-instruct
+qwen2-5-coder-7b-instruct,epoch,Qwen2.5-Coder (7B)
+qwen2-5-coder-7b-instruct,huggingface,Qwen/Qwen2.5-Coder-7B-Instruct
+qwen2-5-coder-7b-instruct,models_dev,alibaba-cn/qwen2-5-coder-7b-instruct
+qwen2-5-omni-7b,epoch,Qwen2.5-Omni 7B
+qwen2-5-omni-7b,huggingface,Qwen/Qwen2.5-Omni-7B
+qwen2-5-omni-7b,models_dev,alibaba/qwen2-5-omni-7b
+qwen2-5-vl-3b-instruct,huggingface,Qwen/Qwen2.5-VL-3B-Instruct
+qwen2-5-vl-72b-instruct,epoch,Qwen2.5-VL-72B
+qwen2-5-vl-72b-instruct,models_dev,nano-gpt/TEE/qwen2.5-vl-72b-instruct
+qwen2-5-vl-72b-instruct,openrouter,qwen/qwen2.5-vl-72b-instruct
+qwen2-5-vl-7b-instruct,epoch,Qwen2.5-VL-7B
+qwen2-5-vl-7b-instruct,huggingface,Qwen/Qwen2.5-VL-7B-Instruct
+qwen2-5-vl-7b-instruct,models_dev,alibaba/qwen2-5-vl-7b-instruct
+qwen2-vl-2b-instruct,huggingface,Qwen/Qwen2-VL-2B-Instruct
+qwen3-0-6b,huggingface,Qwen/Qwen3-0.6B
+qwen3-1-7b,huggingface,Qwen/Qwen3-1.7B
+qwen3-14b,epoch,Qwen3-14B
+qwen3-14b,huggingface,Qwen/Qwen3-14B
+qwen3-14b,models_dev,nano-gpt/qwen/qwen3-14b
+qwen3-14b,openrouter,qwen/qwen3-14b
+qwen3-235b-a22b,epoch,Qwen3-235B-A22B
+qwen3-235b-a22b,huggingface,Qwen/Qwen3-235B-A22B
+qwen3-235b-a22b,models_dev,alibaba/qwen3-235b-a22b
+qwen3-235b-a22b,openrouter,qwen/qwen3-235b-a22b
+qwen3-235b-a22b,text_surface_forms,Qwen3
+qwen3-235b-a22b,wikipedia,Qwen
+qwen3-235b-a22b-2507,models_dev,kilo/qwen/qwen3-235b-a22b-2507
+qwen3-235b-a22b-2507,openrouter,qwen/qwen3-235b-a22b-2507
+qwen3-235b-a22b-thinking-2507,models_dev,venice/qwen3-235b-a22b-thinking-2507
+qwen3-235b-a22b-thinking-2507,openrouter,qwen/qwen3-235b-a22b-thinking-2507
+qwen3-30b-a3b,epoch,Qwen3-30B-A3B
+qwen3-30b-a3b,huggingface,Qwen/Qwen3-30B-A3B
+qwen3-30b-a3b,models_dev,deepinfra/Qwen/Qwen3-30B-A3B
+qwen3-30b-a3b,openrouter,qwen/qwen3-30b-a3b
+qwen3-30b-a3b-instruct-2507,huggingface,Qwen/Qwen3-30B-A3B-Instruct-2507
+qwen3-30b-a3b-instruct-2507,models_dev,nano-gpt/qwen3-30b-a3b-instruct-2507
+qwen3-30b-a3b-instruct-2507,openrouter,qwen/qwen3-30b-a3b-instruct-2507
+qwen3-30b-a3b-thinking-2507,models_dev,modelscope/Qwen/Qwen3-30B-A3B-Thinking-2507
+qwen3-30b-a3b-thinking-2507,openrouter,qwen/qwen3-30b-a3b-thinking-2507
+qwen3-32b,epoch,Qwen3-32B
+qwen3-32b,huggingface,Qwen/Qwen3-32B
+qwen3-32b,models_dev,iflowcn/qwen3-32b
+qwen3-32b,openrouter,qwen/qwen3-32b
+qwen3-4b,huggingface,Qwen/Qwen3-4B
+qwen3-4b-instruct-2507,huggingface,Qwen/Qwen3-4B-Instruct-2507
+qwen3-5-0-8b,epoch,Qwen3.5-0.8B
+qwen3-5-0-8b,huggingface,Qwen/Qwen3.5-0.8B
+qwen3-5-0-8b,models_dev,qvac/qwen3.5-0.8b
+qwen3-5-122b-a10b,epoch,Qwen3.5-122B-A10B
+qwen3-5-122b-a10b,models_dev,alibaba/qwen3.5-122b-a10b
+qwen3-5-122b-a10b,openrouter,qwen/qwen3.5-122b-a10b
+qwen3-5-122b-a10b-fp8,huggingface,Qwen/Qwen3.5-122B-A10B-FP8
+qwen3-5-27b,epoch,Qwen3.5-27B
+qwen3-5-27b,huggingface,Qwen/Qwen3.5-27B
+qwen3-5-27b,models_dev,alibaba/qwen3.5-27b
+qwen3-5-27b,openrouter,qwen/qwen3.5-27b
+qwen3-5-2b,epoch,Qwen3.5-2B
+qwen3-5-2b,huggingface,Qwen/Qwen3.5-2B
+qwen3-5-2b,models_dev,qvac/qwen3.5-2b
+qwen3-5-35b-a3b,epoch,Qwen3.5-35B-A3B
+qwen3-5-35b-a3b,huggingface,Qwen/Qwen3.5-35B-A3B
+qwen3-5-35b-a3b,models_dev,deepinfra/Qwen/Qwen3.5-35B-A3B
+qwen3-5-35b-a3b,openrouter,qwen/qwen3.5-35b-a3b
+qwen3-5-397b-a17b,epoch,Qwen3.5 397B-A17B
+qwen3-5-397b-a17b,models_dev,nebius/Qwen/Qwen3.5-397B-A17B
+qwen3-5-397b-a17b,openrouter,qwen/qwen3.5-397b-a17b
+qwen3-5-4b,epoch,Qwen3.5-4B
+qwen3-5-4b,huggingface,Qwen/Qwen3.5-4B
+qwen3-5-4b,models_dev,qvac/qwen3.5-4b
+qwen3-5-9b,epoch,Qwen3.5-9B
+qwen3-5-9b,huggingface,Qwen/Qwen3.5-9B
+qwen3-5-9b,models_dev,regolo-ai/qwen3.5-9b
+qwen3-5-9b,openrouter,qwen/qwen3.5-9b
+qwen3-5-flash-02-23,models_dev,kilo/qwen/qwen3.5-flash-02-23
+qwen3-5-flash-02-23,openrouter,qwen/qwen3.5-flash-02-23
+qwen3-5-omni-flash,epoch,Qwen3.5-Omni-Flash
+qwen3-5-omni-flash,models_dev,nano-gpt/qwen3.5-omni-flash
+qwen3-5-omni-plus,epoch,Qwen3.5-Omni-Plus
+qwen3-5-omni-plus,models_dev,nano-gpt/qwen3.5-omni-plus
+qwen3-5-plus,models_dev,meganova/Qwen/Qwen3.5-Plus
+qwen3-5-plus,openrouter,qwen/qwen3.5-plus-20260420
+qwen3-5-plus-02-15,models_dev,kilo/qwen/qwen3.5-plus-02-15
+qwen3-5-plus-02-15,openrouter,qwen/qwen3.5-plus-02-15
+qwen3-6-27b,epoch,Qwen3.6 27B
+qwen3-6-27b,huggingface,Qwen/Qwen3.6-27B
+qwen3-6-27b,models_dev,abacus/Qwen/Qwen3.6-27B
+qwen3-6-27b,openrouter,qwen/qwen3.6-27b
+qwen3-6-27b-fp8,huggingface,Qwen/Qwen3.6-27B-FP8
+qwen3-6-35b-a3b,huggingface,Qwen/Qwen3.6-35B-A3B
+qwen3-6-35b-a3b,models_dev,deepinfra/Qwen/Qwen3.6-35B-A3B
+qwen3-6-35b-a3b,openrouter,qwen/qwen3.6-35b-a3b
+qwen3-6-35b-a3b-fp8,huggingface,Qwen/Qwen3.6-35B-A3B-FP8
+qwen3-6-flash,models_dev,aihubmix/qwen3.6-flash
+qwen3-6-flash,openrouter,qwen/qwen3.6-flash
+qwen3-6-max-preview,models_dev,alibaba/qwen3.6-max-preview
+qwen3-6-max-preview,openrouter,qwen/qwen3.6-max-preview
+qwen3-6-plus,epoch,Qwen 3.6 Plus
+qwen3-6-plus,models_dev,auriko/qwen-3.6-plus
+qwen3-6-plus,models_dev,kilo/stealth/qwen3.6-plus
+qwen3-6-plus,openrouter,qwen/qwen3.6-plus
+qwen3-7-flash,epoch,Qwen3.7 Flash
+qwen3-7-flash,models_dev,alibaba-cn/qwen3.7-flash
+qwen3-7-flash,openrouter,qwen/qwen3.7-flash
+qwen3-7-max,epoch,Qwen3.7-Max
+qwen3-7-max,models_dev,cline-pass/cline-pass/qwen3.7-max
+qwen3-7-max,openrouter,qwen/qwen3.7-max
+qwen3-7-plus,models_dev,cline-pass/cline-pass/qwen3.7-plus
+qwen3-7-plus,openrouter,qwen/qwen3.7-plus
+qwen3-8-2-4t-a95b,epoch,Qwen3.8-2.4T-A95B
+qwen3-8-2-4t-a95b,models_dev,cortecs/qwen3.8-2.4t-a95b
+qwen3-8-2-4t-a95b,openrouter,qwen/qwen3.8-2.4t-a95b
+qwen3-8-27b,epoch,Qwen 3.8 27B
+qwen3-8-27b,huggingface,Qwen/Qwen3.8-27B
+qwen3-8-27b,models_dev,iteracompute/iteracompute/qwen3.8-27b
+qwen3-8-27b,models_dev,venice/qwen-3-8-27b
+qwen3-8-27b,openrouter,qwen/qwen3.8-27b
+qwen3-8-27b-fp8,huggingface,Qwen/Qwen3.8-27B-FP8
+qwen3-8-max,epoch,Qwen 3.8 Max
+qwen3-8-max,models_dev,cline-pass/cline-pass/qwen3.8-max
+qwen3-8-max,models_dev,venice/qwen-3-8-max
+qwen3-8-max,openrouter,qwen/qwen3.8-max
+qwen3-8b,epoch,Qwen3-8B
+qwen3-8b,huggingface,Qwen/Qwen3-8B
+qwen3-8b,models_dev,nano-gpt/qwen/Qwen3-8B
+qwen3-8b,openrouter,qwen/qwen3-8b
+qwen3-8b-fp8,huggingface,nvidia/Qwen3-8B-FP8
+qwen3-coder,models_dev,vercel/alibaba/qwen3-coder
+qwen3-coder,openrouter,qwen/qwen3-coder
+qwen3-coder-30b-a3b-instruct,models_dev,alibaba/qwen3-coder-30b-a3b-instruct
+qwen3-coder-30b-a3b-instruct,openrouter,qwen/qwen3-coder-30b-a3b-instruct
+qwen3-coder-480b-a35b-instruct,epoch,Qwen3-Coder-480B-A35B
+qwen3-coder-480b-a35b-instruct,huggingface,Qwen/Qwen3-Coder-480B-A35B-Instruct
+qwen3-coder-480b-a35b-instruct,models_dev,abacus/Qwen/Qwen3-Coder-480B-A35B-Instruct
+qwen3-coder-flash,models_dev,alibaba/qwen3-coder-flash
+qwen3-coder-flash,openrouter,qwen/qwen3-coder-flash
+qwen3-coder-next,epoch,Qwen3-Coder-Next
+qwen3-coder-next,models_dev,llmgateway/qwen3-coder-next
+qwen3-coder-next,openrouter,qwen/qwen3-coder-next
+qwen3-coder-next-fp8,huggingface,Qwen/Qwen3-Coder-Next-FP8
+qwen3-coder-plus,models_dev,iflowcn/qwen3-coder-plus
+qwen3-coder-plus,openrouter,qwen/qwen3-coder-plus
+qwen3-max,epoch,Qwen3-Max
+qwen3-max,models_dev,iflowcn/qwen3-max
+qwen3-max,openrouter,qwen/qwen3-max
+qwen3-max-thinking,epoch,Qwen3-Max-Thinking
+qwen3-max-thinking,models_dev,vercel/alibaba/qwen3-max-thinking
+qwen3-max-thinking,openrouter,qwen/qwen3-max-thinking
+qwen3-next-80b-a3b-instruct,epoch,Qwen3-Next-80B-A3B
+qwen3-next-80b-a3b-instruct,models_dev,nvidia/qwen/qwen3-next-80b-a3b-instruct
+qwen3-next-80b-a3b-instruct,openrouter,qwen/qwen3-next-80b-a3b-instruct
+qwen3-next-80b-a3b-thinking,models_dev,alibaba/qwen3-next-80b-a3b-thinking
+qwen3-next-80b-a3b-thinking,openrouter,qwen/qwen3-next-80b-a3b-thinking
+qwen3-omni-30b-a3b-instruct,epoch,Qwen3-Omni-30B-A3B
+qwen3-omni-30b-a3b-instruct,models_dev,novita-ai/qwen/qwen3-omni-30b-a3b-instruct
+qwen3-omni-flash,epoch,Qwen3-Omni-Flash
+qwen3-omni-flash,models_dev,alibaba/qwen3-omni-flash
+qwen3-vl-235b-a22b-instruct,models_dev,llmgateway/qwen3-vl-235b-a22b-instruct
+qwen3-vl-235b-a22b-instruct,openrouter,qwen/qwen3-vl-235b-a22b-instruct
+qwen3-vl-235b-a22b-thinking,models_dev,llmgateway/qwen3-vl-235b-a22b-thinking
+qwen3-vl-235b-a22b-thinking,openrouter,qwen/qwen3-vl-235b-a22b-thinking
+qwen3-vl-2b-instruct,huggingface,Qwen/Qwen3-VL-2B-Instruct
+qwen3-vl-30b-a3b-instruct,models_dev,nearai/Qwen/Qwen3-VL-30B-A3B-Instruct
+qwen3-vl-30b-a3b-instruct,openrouter,qwen/qwen3-vl-30b-a3b-instruct
+qwen3-vl-30b-a3b-thinking,models_dev,kilo/qwen/qwen3-vl-30b-a3b-thinking
+qwen3-vl-30b-a3b-thinking,openrouter,qwen/qwen3-vl-30b-a3b-thinking
+qwen3-vl-32b-instruct,models_dev,siliconflow/Qwen/Qwen3-VL-32B-Instruct
+qwen3-vl-32b-instruct,openrouter,qwen/qwen3-vl-32b-instruct
+qwen3-vl-4b-instruct,huggingface,Qwen/Qwen3-VL-4B-Instruct
+qwen3-vl-8b-instruct,huggingface,Qwen/Qwen3-VL-8B-Instruct
+qwen3-vl-8b-instruct,models_dev,kilo/qwen/qwen3-vl-8b-instruct
+qwen3-vl-8b-instruct,openrouter,qwen/qwen3-vl-8b-instruct
+qwen3-vl-8b-instruct-fp8,huggingface,Qwen/Qwen3-VL-8B-Instruct-FP8
+qwen3-vl-8b-thinking,models_dev,kilo/qwen/qwen3-vl-8b-thinking
+qwen3-vl-8b-thinking,openrouter,qwen/qwen3-vl-8b-thinking
+qwq-32b,epoch,QwQ-32B
+qwq-32b,models_dev,abacus/Qwen/QwQ-32B
+qwq-plus,epoch,QWQ-Plus
+qwq-plus,models_dev,alibaba/qwq-plus
+reka-edge,epoch,Reka Edge
+reka-edge,models_dev,kilo/rekaai/reka-edge
+reka-edge,openrouter,rekaai/reka-edge
+reka-flash-3,epoch,Reka Flash 3
+reka-flash-3,models_dev,kilo/rekaai/reka-flash-3
+reka-flash-3,openrouter,rekaai/reka-flash-3
+ring-1t,epoch,Ring-1T
+ring-1t,huggingface,inclusionAI/Ring-1T
+ring-1t,models_dev,bailing/Ring-1T
+ring-2-5-1t,huggingface,inclusionAI/Ring-2.5-1T
+ring-2-6-1t,epoch,Ring-2.6-1T
+ring-2-6-1t,huggingface,inclusionAI/Ring-2.6-1T
+ring-2-6-1t,models_dev,zenmux/inclusionai/ring-2.6-1t
+ring-mini-linear-2-0,huggingface,inclusionAI/Ring-mini-linear-2.0
+rlvr-8b,huggingface,stepfun-ai/RLVR-8B-0926
+rwkv-3-pile-169m,huggingface,BlinkDL/rwkv-3-pile-169m
+rwkv-3-pile-1b5,huggingface,BlinkDL/rwkv-3-pile-1b5
+rwkv-4-169m-pile,huggingface,RWKV/rwkv-4-169m-pile
+rwkv-4-1b5-pile,huggingface,RWKV/rwkv-4-1b5-pile
+rwkv-4-430m-pile,huggingface,RWKV/rwkv-4-430m-pile
+rwkv-4-7b-pile,huggingface,RWKV/rwkv-4-7b-pile
+rwkv-4-novel,huggingface,BlinkDL/rwkv-4-novel
+rwkv-4-pile-14b,huggingface,BlinkDL/rwkv-4-pile-14b
+rwkv-4-pile-169m,huggingface,BlinkDL/rwkv-4-pile-169m
+rwkv-4-pile-1b5,huggingface,BlinkDL/rwkv-4-pile-1b5
+rwkv-4-pile-3b,huggingface,BlinkDL/rwkv-4-pile-3b
+rwkv-4-pile-430m,huggingface,BlinkDL/rwkv-4-pile-430m
+rwkv-4-pile-7b,huggingface,BlinkDL/rwkv-4-pile-7b
+rwkv-4-pileplus,huggingface,BlinkDL/rwkv-4-pileplus
+rwkv-4-raven,huggingface,BlinkDL/rwkv-4-raven
+rwkv-4-world,huggingface,BlinkDL/rwkv-4-world
+rwkv-5-world,huggingface,BlinkDL/rwkv-5-world
+rwkv-5-world-1b5,huggingface,RWKV/rwkv-5-world-1b5
+rwkv-5-world-3b,huggingface,RWKV/rwkv-5-world-3b
+rwkv-6-world,huggingface,BlinkDL/rwkv-6-world
+rwkv-6-world-1b6,huggingface,RWKV/rwkv-6-world-1b6
+rwkv-6-world-3b,huggingface,RWKV/rwkv-6-world-3b
+rwkv-6-world-7b,huggingface,RWKV/rwkv-6-world-7b
+rwkv-7-world,huggingface,BlinkDL/rwkv-7-world
+rwkv-raven-1b5,huggingface,RWKV/rwkv-raven-1b5
+rwkv-raven-7b,huggingface,RWKV/rwkv-raven-7b
+rwkv7-1-5b,huggingface,RWKV/RWKV7-1.5B-20260805
+rwkv7-13-3b,huggingface,RWKV/RWKV7-13.3B-20260805
+rwkv7-2-9b,huggingface,RWKV/RWKV7-2.9B-20260805
+rwkv7-7-2b,huggingface,RWKV/RWKV7-7.2B-20260805
+rwkv7-g1,huggingface,BlinkDL/rwkv7-g1
+rwkv7-goose-world-pth,huggingface,RWKV/RWKV7-Goose-World-PTH
+rwkv7-goose-world2-8-0-1b-hf,huggingface,RWKV/RWKV7-Goose-World2.8-0.1B-HF
+rwkv7-goose-world2-9-0-4b-hf,huggingface,RWKV/RWKV7-Goose-World2.9-0.4B-HF
+rwkv7-goose-world3-1-5b-hf,huggingface,RWKV/RWKV7-Goose-World3-1.5B-HF
+rwkv7-goose-world3-2-9b-hf,huggingface,RWKV/RWKV7-Goose-World3-2.9B-HF
+sa2va-1b,huggingface,ByteDance/Sa2VA-1B
+sa2va-26b,huggingface,ByteDance/Sa2VA-26B
+sa2va-4b,huggingface,ByteDance/Sa2VA-4B
+sa2va-8b,huggingface,ByteDance/Sa2VA-8B
+sa2va-internvl3-2b,huggingface,ByteDance/Sa2VA-InternVL3-2B
+sa2va-internvl3-8b,huggingface,ByteDance/Sa2VA-InternVL3-8B
+sa2va-qwen3-vl-4b,huggingface,ByteDance/Sa2VA-Qwen3-VL-4B
+sa2va-qwen3-vl-4b-sam3,huggingface,ByteDance/Sa2VA-Qwen3-VL-4B-SAM3
+seed-1-6,epoch,Seed 1.6
+seed-1-6,models_dev,vercel/bytedance/seed-1.6
+seed-1-6,openrouter,bytedance-seed/seed-1.6
+seed-1-6-flash,models_dev,kilo/bytedance-seed/seed-1.6-flash
+seed-1-6-flash,openrouter,bytedance-seed/seed-1.6-flash
+seed-2-0-code,models_dev,deepinfra/ByteDance/Seed-2.0-code
+seed-2-0-code,openrouter,bytedance-seed/seed-2.0-code
+seed-2-0-lite,models_dev,empiriolabs/seed-2-0-lite
+seed-2-0-lite,openrouter,bytedance-seed/seed-2.0-lite
+seed-2-0-mini,models_dev,deepinfra/ByteDance/Seed-2.0-mini
+seed-2-0-mini,openrouter,bytedance-seed/seed-2.0-mini
+seed-2-1-turbo,models_dev,empiriolabs/seed-2-1-turbo
+seed-2-1-turbo,openrouter,bytedance-seed/seed-2-1-turbo
+seed-coder-8b-base,huggingface,ByteDance-Seed/Seed-Coder-8B-Base
+seed-coder-8b-instruct,huggingface,ByteDance-Seed/Seed-Coder-8B-Instruct
+seed-coder-8b-reasoning,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning
+seed-coder-8b-reasoning-bf16,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning-bf16
+seed-oss-36b-base,huggingface,ByteDance-Seed/Seed-OSS-36B-Base
+seed-oss-36b-base-wosyn,huggingface,ByteDance-Seed/Seed-OSS-36B-Base-woSyn
+seed-oss-36b-instruct,huggingface,ByteDance-Seed/Seed-OSS-36B-Instruct
+singguard-2b,huggingface,inclusionAI/SingGuard-2b
+singguard-nsfa-0-8b,huggingface,inclusionAI/SingGuard-NSFA-0.8B
+skywork-13b-base,huggingface,Skywork/Skywork-13B-base
+skywork-13b-math,huggingface,Skywork/Skywork-13B-Math
+skywork-critic-llama-3-1-70b,huggingface,Skywork/Skywork-Critic-Llama-3.1-70B
+skywork-critic-llama-3-1-8b,huggingface,Skywork/Skywork-Critic-Llama-3.1-8B
+skywork-moe-base,huggingface,Skywork/Skywork-MoE-Base
+skywork-moe-base-fp8,huggingface,Skywork/Skywork-MoE-Base-FP8
+skywork-o1-open-llama-3-1-8b,huggingface,Skywork/Skywork-o1-Open-Llama-3.1-8B
+skywork-r1v-38b,huggingface,Skywork/Skywork-R1V-38B
+skywork-r1v2-38b,huggingface,Skywork/Skywork-R1V2-38B
+skywork-r1v3-38b,huggingface,Skywork/Skywork-R1V3-38B
+skywork-swe-32b,huggingface,Skywork/Skywork-SWE-32B
+skywork-vl-reward-7b,huggingface,Skywork/Skywork-VL-Reward-7B
+smollm2-1-7b,huggingface,HuggingFaceTB/SmolLM2-1.7B
+smollm2-1-7b-instruct-16k,huggingface,HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
+smollm2-135m,huggingface,HuggingFaceTB/SmolLM2-135M
+smollm2-360m,huggingface,HuggingFaceTB/SmolLM2-360M
+smollm3-3b,huggingface,HuggingFaceTB/SmolLM3-3B
+smollm3-3b-gsm8k-sft,huggingface,HuggingFaceTB/SmolLM3-3B-GSM8K-SFT
+smolvlm-256m-base,huggingface,HuggingFaceTB/SmolVLM-256M-Base
+smolvlm-500m-base,huggingface,HuggingFaceTB/SmolVLM-500M-Base
+smolvlm-base,huggingface,HuggingFaceTB/SmolVLM-Base
+smolvlm-synthetic,huggingface,HuggingFaceTB/SmolVLM-Synthetic
+smolvlm2-2-2b-base,huggingface,HuggingFaceTB/SmolVLM2-2.2B-Base
+smolvlm2-2-2b-instruct,huggingface,HuggingFaceTB/SmolVLM2-2.2B-Instruct
+snowflake-arctic-base,huggingface,Snowflake/snowflake-arctic-base
+snowflake-arctic-instruct,huggingface,Snowflake/snowflake-arctic-instruct
+snowflake-arctic-instruct-vllm,huggingface,Snowflake/snowflake-arctic-instruct-vllm
+sonar,epoch,Sonar
+sonar,models_dev,perplexity-agent/perplexity/sonar
+sonar,openrouter,perplexity/sonar
+sonar-deep-research,epoch,Sonar Deep Research
+sonar-deep-research,models_dev,helicone/sonar-deep-research
+sonar-deep-research,openrouter,perplexity/sonar-deep-research
+sonar-pro,epoch,Sonar Pro
+sonar-pro,models_dev,anyapi/perplexity/sonar-pro
+sonar-pro,openrouter,perplexity/sonar-pro
+sonar-pro-search,models_dev,kilo/perplexity/sonar-pro-search
+sonar-pro-search,openrouter,perplexity/sonar-pro-search
+sonar-reasoning,epoch,Sonar Reasoning
+sonar-reasoning,models_dev,helicone/sonar-reasoning
+sonar-reasoning-pro,epoch,Sonar Reasoning Pro
+sonar-reasoning-pro,models_dev,anyapi/perplexity/sonar-reasoning-pro
+sonar-reasoning-pro,openrouter,perplexity/sonar-reasoning-pro
+spatial-ssrl-3b,huggingface,internlm/Spatial-SSRL-3B
+stable-diffcoder-8b-base,huggingface,ByteDance-Seed/Stable-DiffCoder-8B-Base
+stable-diffcoder-8b-instruct,huggingface,ByteDance-Seed/Stable-DiffCoder-8B-Instruct
+stablebeluga-13b,huggingface,stabilityai/StableBeluga-13B
+stablebeluga-7b,huggingface,stabilityai/StableBeluga-7B
+stablebeluga1-delta,huggingface,stabilityai/StableBeluga1-Delta
+stablebeluga2,huggingface,stabilityai/StableBeluga2
+stablecode-completion-alpha-3b-4k,huggingface,stabilityai/stablecode-completion-alpha-3b-4k
+stablelm-2-1-6b,huggingface,stabilityai/stablelm-2-1_6b
+stablelm-2-1-6b,huggingface,stabilityai/stablelm-2-1_6b-chat
+stablelm-2-12b,huggingface,stabilityai/stablelm-2-12b
+stablelm-2-12b,huggingface,stabilityai/stablelm-2-12b-chat
+stablelm-3b-4e1t,huggingface,stabilityai/stablelm-3b-4e1t
+stablelm-base-alpha-3b,huggingface,stabilityai/stablelm-base-alpha-3b
+stablelm-base-alpha-7b,huggingface,stabilityai/stablelm-base-alpha-7b
+stablelm-base-alpha-7b-v2,huggingface,stabilityai/stablelm-base-alpha-7b-v2
+stablelm-tuned-alpha-3b,huggingface,stabilityai/stablelm-tuned-alpha-3b
+stablelm-tuned-alpha-7b,huggingface,stabilityai/stablelm-tuned-alpha-7b
+stablelm-zephyr-3b,huggingface,stabilityai/stablelm-zephyr-3b
+step-3-5-flash,epoch,Step 3.5 Flash
+step-3-5-flash,huggingface,stepfun-ai/Step-3.5-Flash
+step-3-5-flash,models_dev,empiriolabs/step-3-5-flash
+step-3-5-flash,openrouter,stepfun/step-3.5-flash
+step-3-5-flash-base,huggingface,stepfun-ai/Step-3.5-Flash-Base
+step-3-5-flash-base-midtrain,huggingface,stepfun-ai/Step-3.5-Flash-Base-Midtrain
+step-3-5-flash-fp8,huggingface,stepfun-ai/Step-3.5-Flash-FP8
+step-3-7-flash,epoch,Step 3.7 Flash
+step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash
+step-3-7-flash,models_dev,nvidia/stepfun-ai/step-3.7-flash
+step-3-7-flash,openrouter,stepfun/step-3.7-flash
+step-3-7-flash-fp8,huggingface,stepfun-ai/Step-3.7-Flash-FP8
+step3,huggingface,stepfun-ai/step3
+step3-fp8,huggingface,stepfun-ai/step3-fp8
+step3-vl-10b,huggingface,stepfun-ai/Step3-VL-10B
+step3-vl-10b-base,huggingface,stepfun-ai/Step3-VL-10B-Base
+step3-vl-10b-fp8,huggingface,stepfun-ai/Step3-VL-10B-FP8
+stepfun-formalizer-32b,huggingface,stepfun-ai/StepFun-Formalizer-32B
+stepfun-formalizer-7b,huggingface,stepfun-ai/StepFun-Formalizer-7B
+stepfun-prover-preview-32b,huggingface,stepfun-ai/StepFun-Prover-Preview-32B
+stepfun-prover-preview-7b,huggingface,stepfun-ai/StepFun-Prover-Preview-7B
+synlogic-32b,huggingface,MiniMaxAI/SynLogic-32B
+synlogic-7b,huggingface,MiniMaxAI/SynLogic-7B
+synlogic-mix-3-32b,huggingface,MiniMaxAI/SynLogic-Mix-3-32B
+t5gemma-s-s-prefixlm,huggingface,google/t5gemma-s-s-prefixlm
+tencent-hy3,huggingface,tencent/Hy3
+tencent-hy3,models_dev,crossmodel/tencent/hy3
+tencent-hy3,openrouter,tencent/hy3
+text-embedding-3-large,epoch,text-embedding-3-large
+text-embedding-3-large,models_dev,azure/text-embedding-3-large
+text-embedding-3-small,epoch,text-embedding-3-small
+text-embedding-3-small,models_dev,azure/text-embedding-3-small
+text-embedding-ada-002,epoch,text-embedding-ada-002
+text-embedding-ada-002,models_dev,azure/text-embedding-ada-002
+tiny-aya-base,huggingface,CohereLabs/tiny-aya-base
+tiny-aya-earth,huggingface,CohereLabs/tiny-aya-earth
+tiny-aya-fire,huggingface,CohereLabs/tiny-aya-fire
+tiny-aya-global,huggingface,CohereLabs/tiny-aya-global
+tiny-aya-water,huggingface,CohereLabs/tiny-aya-water
+tiny-random-stablelm-2,huggingface,stabilityai/tiny-random-stablelm-2
+truthfulqa-info-judge-llama2-7b,huggingface,allenai/truthfulqa-info-judge-llama2-7B
+truthfulqa-truth-judge-llama2-7b,huggingface,allenai/truthfulqa-truth-judge-llama2-7B
+tulu-2-7b,huggingface,allenai/tulu-2-7b
+ui-mate-27b,huggingface,tencent/UI-Mate-27B
+ui-mate-9b,huggingface,tencent/UI-Mate-9B
+ui-tars-1-5-7b,huggingface,ByteDance-Seed/UI-TARS-1.5-7B
+ui-tars-1-5-7b,models_dev,kilo/bytedance/ui-tars-1.5-7b
+ui-tars-1-5-7b,openrouter,bytedance/ui-tars-1.5-7b
+ui-tars-2b-sft,huggingface,ByteDance-Seed/UI-TARS-2B-SFT
+ui-tars-72b-dpo,huggingface,ByteDance-Seed/UI-TARS-72B-DPO
+ui-tars-72b-sft,huggingface,ByteDance-Seed/UI-TARS-72B-SFT
+ui-tars-7b-dpo,huggingface,ByteDance-Seed/UI-TARS-7B-DPO
+ui-tars-7b-sft,huggingface,ByteDance-Seed/UI-TARS-7B-SFT
+ui-venus-1-5-2b,huggingface,inclusionAI/UI-Venus-1.5-2B
+ui-venus-1-5-30b-a3b,huggingface,inclusionAI/UI-Venus-1.5-30B-A3B
+ui-venus-1-5-8b,huggingface,inclusionAI/UI-Venus-1.5-8B
+ui-venus-ground-7b,huggingface,inclusionAI/UI-Venus-Ground-7B
+unlimited-ocr,huggingface,baidu/Unlimited-OCR
+v5-eagle-7b-hf,huggingface,RWKV/v5-Eagle-7B-HF
+v6-finch-14b-hf,huggingface,RWKV/v6-Finch-14B-HF
+v6-finch-1b6-hf,huggingface,RWKV/v6-Finch-1B6-HF
+v6-finch-7b-hf,huggingface,RWKV/v6-Finch-7B-HF
+visionreward-video,huggingface,zai-org/VisionReward-Video
+vista-9b,huggingface,inclusionAI/VISTA-9B
+voxtral-small-24b-2507,models_dev,evroc/mistralai/Voxtral-Small-24B-2507
+voxtral-small-24b-2507,openrouter,mistralai/voxtral-small-24b-2507
+wildguard,huggingface,allenai/wildguard
+wizardlm-2-8x22b,epoch,WizardLM-2 8x22B
+wizardlm-2-8x22b,models_dev,kilo/microsoft/wizardlm-2-8x22b
+wizardlm-2-8x22b,openrouter,microsoft/wizardlm-2-8x22b
+yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
+yarn-mistral-7b-128k,huggingface,NousResearch/Yarn-Mistral-7b-128k
+yi-1-5-34b,huggingface,01-ai/Yi-1.5-34B
+yi-1-5-34b,huggingface,01-ai/Yi-1.5-34B-Chat
+yi-1-5-34b-32k,huggingface,01-ai/Yi-1.5-34B-32K
+yi-1-5-34b-chat-16k,huggingface,01-ai/Yi-1.5-34B-Chat-16K
+yi-1-5-6b,huggingface,01-ai/Yi-1.5-6B
+yi-1-5-6b,huggingface,01-ai/Yi-1.5-6B-Chat
+yi-1-5-9b,huggingface,01-ai/Yi-1.5-9B
+yi-1-5-9b,huggingface,01-ai/Yi-1.5-9B-Chat
+yi-1-5-9b-32k,huggingface,01-ai/Yi-1.5-9B-32K
+yi-1-5-9b-chat-16k,huggingface,01-ai/Yi-1.5-9B-Chat-16K
+yi-34b,huggingface,01-ai/Yi-34B
+yi-34b,huggingface,01-ai/Yi-34B-Chat
+yi-34b-200k,huggingface,01-ai/Yi-34B-200K
+yi-6b,huggingface,01-ai/Yi-6B
+yi-6b,huggingface,01-ai/Yi-6B-Chat
+yi-6b-200k,huggingface,01-ai/Yi-6B-200K
+yi-9b,huggingface,01-ai/Yi-9B
+yi-9b-200k,huggingface,01-ai/Yi-9B-200K
+yi-coder-1-5b-chat,huggingface,01-ai/Yi-Coder-1.5B-Chat
+yi-coder-9b,huggingface,01-ai/Yi-Coder-9B
+yi-coder-9b,huggingface,01-ai/Yi-Coder-9B-Chat
+yi-large,epoch,Yi-Large
+yi-large,models_dev,nano-gpt/yi-large
+yi-lightning,epoch,Yi-Lightning
+yi-lightning,models_dev,nano-gpt/yi-lightning
+yi-vl-34b,huggingface,01-ai/Yi-VL-34B
+yi-vl-6b,huggingface,01-ai/Yi-VL-6B
+youtu-llm-2b,huggingface,tencent/Youtu-LLM-2B
+youtu-llm-2b-base,huggingface,tencent/Youtu-LLM-2B-Base
+youtu-vl-4b-instruct,huggingface,tencent/Youtu-VL-4B-Instruct
+yuan2-102b-hf,huggingface,IEITYuan/Yuan2-102B-hf
+yuan2-2b-februa-hf,huggingface,IEITYuan/Yuan2-2B-Februa-hf
+yuan2-2b-hf,huggingface,IEITYuan/Yuan2-2B-hf
+yuan2-2b-janus-hf,huggingface,IEITYuan/Yuan2-2B-Janus-hf
+yuan2-2b-mars-hf,huggingface,IEITYuan/Yuan2-2B-Mars-hf
+yuan2-51b-hf,huggingface,IEITYuan/Yuan2-51B-hf
+yuan2-m32,huggingface,IEITYuan/Yuan2-M32
+yuan2-m32,huggingface,IEITYuan/Yuan2-M32-hf
+zwz-8b,huggingface,inclusionAI/ZwZ-8B

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "llm-ledger: a provenance-tracked dataset of dated events in the lifecycle of large language models"
+type: dataset
+authors:
+  - family-names: "Ansari"
+    given-names: "Yasaman"
+license: CC-BY-4.0
+repository-code: "https://github.com/YasamanAnsari/llm-ledger"
+version: "2026.08"
+date-released: "2026-08-25"
+keywords:
+  - large language models
+  - release dates
+  - event study
+  - difference-in-differences
+  - dataset

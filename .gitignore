@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+.env.*
+
+# Raw Tier-1 snapshots: payloads are third-party databases and are NOT
+# republished; only manifests (URL + sha256 + size) are committed.
+data/raw/**
+!data/raw/**/
+!data/raw/**/manifest.json
