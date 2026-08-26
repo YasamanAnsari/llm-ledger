@@ -611,7 +611,7 @@ gemma-3-27b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,te
 gemma-3-4b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,unsloth,nano-gpt,unsloth/gemma-3-4b-it,2025-03-13,5,true,text|pdf,text,128000,0.2006,0.2006,false,google/gemma-3-4b-it,2025-03-13,,Gemma 3 4B,Google DeepMind,2025-03-12,Confident
 gemma-3-4b-pt,models_dev,md:only,google,,google,pioneer,google/gemma-3-4b-pt,2025-02-28,1,false,text,text,32768,0.15,0.15,true,,,,,,,
 gemma-3n-e2b-it,models_dev,md:only,google,,google,nvidia,google/gemma-3n-e2b-it,2025-06-12,1,true,text|image,text,128000,0,0,false,,,,,,,
-gemma-3n-e4b-it,models_dev|openrouter,or:exact,google,google,google,kilo,google/gemma-3n-e4b-it,2025-05-20,4,false,text,text,32768,0.06,0.12,false,google/gemma-3n-e4b-it,2025-05-20,,,,,
+gemma-3n-e4b-it,models_dev,md:only,google,,google,togetherai,google/gemma-3n-E4B-it,2025-05-20,2,true,text,text,32768,0.06,0.12,false,,,,,,,
 gemma-4,models_dev,md:only,,,,llmtr,gemma-4,2026-04-02,1,true,text|image,text,131072,2,5,true,,,,,,,
 gemma-4-12b-it,models_dev|epoch,epoch:exact,google,,google,pioneer,google/gemma-4-12B-it,2026-05-31,2,false,text,text,32768,0.25,0.25,true,,,,Gemma 4 12B,Google DeepMind,2026-06-03,Confident
 gemma-4-26b-a4b,models_dev,md:only,,,,empiriolabs,gemma-4-26b-a4b,2026-04-02,1,true,text|image|video,text,262144,0.05,0.29,true,,,,,,,
@@ -654,7 +654,7 @@ glm-4-5-airx,models_dev,md:only,,,,llmgateway,glm-4.5-airx,2025-07-28,3,false,te
 glm-4-5-flash,models_dev,md:only,,,,empiriolabs,glm-4-5-flash,2025-07-28,4,false,text,text,200000,0,0,true,,,,,,,
 glm-4-5-fp8,models_dev,md:only,zai-org,,zai-org,submodel,zai-org/GLM-4.5-FP8,2025-07-28,1,true,text,text,131072,0.2,0.8,true,,,,,,,
 glm-4-5-x,models_dev,md:only,,,,llmgateway,glm-4.5-x,2025-07-28,3,false,text,text,128000,2.2,8.9,true,,,,,,,
-glm-4-5v,models_dev|openrouter|epoch,epoch:exact|or:exact,z-ai,z-ai,zai-org,huggingface,zai-org/GLM-4.5V,2025-08-11,13,true,text|image,text,65536,0.6,1.8,true,z-ai/glm-4.5v,2025-08-11,,GLM-4.5V,"Z.ai (Zhipu AI),Tsinghua University",2025-08-15,Confident
+glm-4-5v,models_dev|openrouter|epoch,epoch:exact|or:exact,z-ai,z-ai,zai-org,huggingface,zai-org/GLM-4.5V,2025-08-11,13,true,text|image,text,65536,0.6,1.8,true,z-ai/glm-4.5v,2025-08-11,2026-12-31,GLM-4.5V,"Z.ai (Zhipu AI),Tsinghua University",2025-08-15,Confident
 glm-4-6,models_dev|openrouter|epoch,epoch:exact|or:exact,z-ai,z-ai,,helicone,glm-4.6,2025-09-30,27,false,text,text,204800,0.44999999999999996,1.5,true,z-ai/glm-4.6,2025-09-30,,GLM-4.6,"Z.ai (Zhipu AI),Tsinghua University",2025-09-30,Likely
 glm-4-6-derestricted-v5,models_dev,md:only,,,,nano-gpt,GLM-4.6-Derestricted-v5,2025-12-23,1,true,text,text,131072,0.4,1.5,true,,,,,,,
 glm-4-6-original,models_dev,md:only,zai-org,,zai-org,nano-gpt,zai-org/glm-4.6-original,2025-12-11,1,true,text,text,256000,0.35,1.4,true,,,,,,,
@@ -745,7 +745,7 @@ gpt-3-5-turbo-raw,models_dev,md:only,openai,,openai,poe,openai/gpt-3.5-turbo-raw
 gpt-4,models_dev|openrouter,or:exact,openai,openai,openai,edenai,openai/gpt-4,2023-11-06,8,false,text,text,8191,30,60,false,openai/gpt-4,2023-05-28,,,,,
 gpt-4-1,models_dev|openrouter|epoch,epoch:exact|or:exact,openai,openai,,302ai,gpt-4.1,2025-04-14,29,false,text|image|pdf,text,1047576,2,8,false,openai/gpt-4.1,2025-04-14,,GPT-4.1,OpenAI,2025-04-14,Unknown
 gpt-4-1-fast,models_dev,md:only,openai,,openai,vercel,openai/gpt-4.1-fast,2025-04-14,1,false,text|image|pdf,text,1047576,3.5,14,false,,,,,,,
-gpt-4-1-mini,models_dev|openrouter|epoch,epoch:exact|or:exact,openai,openai,,302ai,gpt-4.1-mini,2025-04-14,25,false,text|image|pdf,text,1047576,0.4,1.6,false,openai/gpt-4.1-mini,2025-04-14,,GPT-4.1 mini,OpenAI,2025-04-14,Unknown
+gpt-4-1-mini,models_dev|openrouter|epoch,epoch:exact|or:exact,openai,openai,,302ai,gpt-4.1-mini,2025-04-14,26,false,text|image|pdf,text,1047576,0.4,1.6,false,openai/gpt-4.1-mini,2025-04-14,,GPT-4.1 mini,OpenAI,2025-04-14,Unknown
 gpt-4-1-mini-fast,models_dev,md:only,openai,,openai,vercel,openai/gpt-4.1-mini-fast,2025-04-14,1,false,text|image|pdf,text,1047576,0.7,2.8,false,,,,,,,
 gpt-4-1-mini@eu,models_dev,md:only,,,,requesty,gpt-4.1-mini@eu,2025-04-14,1,false,text|image|pdf,text,1047576,0.396,1.584,false,,,,,,,
 gpt-4-1-nano,models_dev|openrouter|epoch,epoch:exact|or:exact,openai,openai,,302ai,gpt-4.1-nano,2025-04-14,22,false,text|image,text,1047576,0.1,0.4,false,openai/gpt-4.1-nano,2025-04-14,,GPT-4.1 nano,OpenAI,2025-04-14,Unknown
@@ -1235,14 +1235,14 @@ minimax-m2-5-fast,models_dev,md:only,minimaxai,,minimaxai,nebius,MiniMaxAI/MiniM
 minimax-m2-5-free,models_dev,md:only,,,,opencode,minimax-m2.5-free,2026-02-12,1,true,text,text,204800,0,0,true,,,,,,,
 minimax-m2-5-highspeed,models_dev,md:only,minimax,,minimax,novita-ai,minimax/minimax-m2.5-highspeed,2026-02-13,11,false,text,text,204800,0.6,2.4,true,,,,,,,
 minimax-m2-5-lightning,models_dev,md:only,minimax,,minimax,ofox,minimax/minimax-m2.5-lightning,2026-02-13,2,true,text,text,204800,0.3,2.4,true,,,,,,,
-minimax-m2-7,models_dev|openrouter|epoch,epoch:exact|or:exact,minimax,minimax,minimaxai,abacus,MiniMaxAI/MiniMax-M2.7,2026-03-18,40,true,text,text,204800,0.3,1.2,true,minimax/minimax-m2.7,2026-03-18,,MiniMax-M2.7,MiniMax,2026-03-18,Confident
+minimax-m2-7,models_dev|openrouter|epoch,epoch:exact|or:exact,minimax,minimax,minimaxai,abacus,MiniMaxAI/MiniMax-M2.7,2026-03-18,41,true,text,text,204800,0.3,1.2,true,minimax/minimax-m2.7,2026-03-18,,MiniMax-M2.7,MiniMax,2026-03-18,Confident
 minimax-m2-7-free,models_dev,md:only,minimax,,minimax,vercel,minimax/minimax-m2.7-free,2026-03-18,1,true,text,text,196608,0,0,true,,,,,,,
 minimax-m2-7-highspeed,models_dev,md:only,,,,auriko,minimax-m2-7-highspeed,2026-03-18,17,true,text,text,204800,0.6,2.4,true,,,,,,,
 minimax-m2-7-turbo,models_dev,md:only,minimax,,minimax,nano-gpt,minimax/minimax-m2.7-turbo,2026-03-18,1,true,text,text,204800,0.6,2.4,true,,,,,,,
 minimax-m2-her,models_dev|openrouter,or:exact,minimax,minimax,minimax,kilo,minimax/minimax-m2-her,2026-01-23,3,false,text,text,65536,0.3,1.2,false,minimax/minimax-m2-her,2026-01-23,,,,,
 minimax-m25,models_dev,md:only,public,,public,drun,public/minimax-m25,2025-03-01,2,false,text,text,204800,0.29,1.16,true,,,,,,,
 minimax-m27,models_dev,md:only,,,,venice,minimax-m27,2026-03-18,1,true,text,text,198000,0.375,1.5,true,,,,,,,
-minimax-m3,models_dev|openrouter|epoch,epoch:exact|or:exact,minimax,minimax,cline-pass,cline-pass,cline-pass/minimax-m3,2026-06-01,38,true,text|image|video,text,512000,0.3,1.2,true,minimax/minimax-m3,2026-05-31,,MiniMax-M3,MiniMax,2026-06-01,Confident
+minimax-m3,models_dev|openrouter|epoch,epoch:exact|or:exact,minimax,minimax,cline-pass,cline-pass,cline-pass/minimax-m3,2026-06-01,39,true,text|image|video,text,512000,0.3,1.2,true,minimax/minimax-m3,2026-05-31,,MiniMax-M3,MiniMax,2026-06-01,Confident
 minimax-m3-free,models_dev,md:only,,,,opencode,minimax-m3-free,2026-05-31,2,true,text|image|video,text,200000,0,0,true,,,,,,,
 minimax-m3-preview,models_dev,md:only,,,,venice,minimax-m3-preview,2026-06-12,1,true,text|image|video,text,524288,0.3,1.2,true,,,,,,,
 minimax-m3@eu,models_dev,md:only,,,,requesty,minimax-m3@eu,2026-06-01,1,true,text|image|video,text,1048576,0.36,1.8,true,,,,,,,
@@ -1636,9 +1636,11 @@ qwen3-7-max,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,cline-pas
 qwen3-7-plus,models_dev|openrouter,or:exact,qwen,qwen,cline-pass,cline-pass,cline-pass/qwen3.7-plus,2026-06-02,28,false,text|image|video,text,1000000,0.4,1.6,true,qwen/qwen3.7-plus,2026-06-03,,,,,
 qwen3-8-2-4t-a95b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,cortecs,qwen3.8-2.4t-a95b,2026-08-12,9,true,text,text,262144,2.5,6,true,qwen/qwen3.8-2.4t-a95b,2026-08-12,,Qwen3.8-2.4T-A95B,Alibaba,2026-08-08,Confident
 qwen3-8-2-4t-a95b-nvfp4,models_dev,md:only,inferact,,inferact,runinfra,Inferact/Qwen3.8-2.4T-A95B-NVFP4,2026-08-12,1,true,text,text,262144,2,6,true,,,,,,,
-qwen3-8-27b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,iteracompute,iteracompute,iteracompute/qwen3.8-27b,2026-08-14,17,true,text|image|video,text,262144,0.35,3,true,qwen/qwen3.8-27b,2026-08-14,,Qwen 3.8 27B,Alibaba,2026-08-14,Confident
+qwen3-8-27b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,iteracompute,iteracompute,iteracompute/qwen3.8-27b,2026-08-14,18,true,text|image|video,text,262144,0.35,3,true,qwen/qwen3.8-27b,2026-08-14,,Qwen 3.8 27B,Alibaba,2026-08-14,Confident
+qwen3-8-27b-nvfp4,models_dev,md:only,unsloth,,unsloth,llmtech,unsloth/Qwen3.8-27B-NVFP4,2026-08-14,1,true,text,text,262144,0.25,2.09,true,,,,,,,
 qwen3-8-27b-obliterated,models_dev,md:only,qwen,,qwen,nano-gpt,qwen/qwen3.8-27b-obliterated,2026-08-24,1,true,text|image,text,262144,0.18,0.5,true,,,,,,,
 qwen3-8-27b-tee,models_dev,md:only,qwen,,qwen,chutes,Qwen/Qwen3.8-27B-TEE,2026-08-16,1,true,text|image,text,262144,0.35,2.75,true,,,,,,,
+qwen3-8-27b-uncensored,models_dev,md:only,qwen,,qwen,nano-gpt,qwen/qwen3.8-27b-uncensored,2026-08-21,1,true,text|image,text,262144,0.18,0.5,true,,,,,,,
 qwen3-8-max,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,cline-pass,cline-pass,cline-pass/qwen3.8-max,2026-08-03,26,false,text|image|video|pdf,text,1000000,2,6,true,qwen/qwen3.8-max,2026-08-03,,Qwen 3.8 Max,Alibaba,2026-07-19,Confident
 qwen3-8-max-preview,models_dev,md:only,,,,alibaba-token-plan,qwen3.8-max-preview,2026-07-19,3,false,text|image|video,text,1000000,0,0,true,,,,,,,
 qwen3-8b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,qwen,nano-gpt,qwen/Qwen3-8B,2025-04,8,true,text,text,41000,0.47,0.47,false,qwen/qwen3-8b,2025-04-28,,Qwen3-8B,Alibaba,2025-04-29,Confident
