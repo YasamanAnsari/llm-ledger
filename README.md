@@ -49,8 +49,10 @@ This snapshot: **1,171 models**, **1,955 events**, **41 orgs**, backed by
 2026-09-01. About 78% open-weight; Chinese labs are about half of those.
 
 Read the counts honestly: 55 models are `human_reviewed`, 291 are
-`machine_corroborated` (two independent sources agreed), and 825 are
-`unreviewed` catalog drafts. 632 of 1,955 events are `verified`.
+`machine_corroborated` (two independent sources agreed, or a platform
+reported its own listing), and 825 are `unreviewed` catalog drafts. 632
+of 1,955 events are `verified`, and 289 of those are OpenRouter's own
+listing timestamps. Roughly 200 events were checked by a person.
 [`coverage_report.md`](data/generated/coverage_report.md) has this per lab.
 
 ## How to use it

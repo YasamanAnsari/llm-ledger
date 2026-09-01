@@ -7,72 +7,68 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=204)
+- median 0d (IQR 0-2d, n=131)
+- range: 0d to 701d
+
+| gap | models |
+|---|---|
+| same day | 82 |
+| 1-7d | 19 |
+| 8-30d | 6 |
+| 31-90d | 9 |
+| 91-365d | 12 |
+| >365d | 3 |
+
+Per-organization medians (n>=3):
+
+- google: 2d (n=19)
+- alibaba: 2d (n=9)
+- amazon: 0d (n=3)
+- anthropic: 0d (n=18)
+- mistral: 0d (n=7)
+- microsoft: 0d (n=5)
+- deepseek: 0d (n=3)
+- bytedance: 0d (n=4)
+- zhipu: 0d (n=4)
+- openai: 0d (n=34)
+- xai: 0d (n=9)
+- meta: 0d (n=3)
+
+## announced -> weights_released
+
+- median 0d (IQR 0-1d, n=68)
 - range: 0d to 770d
 
 | gap | models |
 |---|---|
-| same day | 126 |
-| 1-7d | 38 |
-| 8-30d | 11 |
-| 31-90d | 13 |
-| 91-365d | 12 |
-| >365d | 4 |
+| same day | 45 |
+| 1-7d | 15 |
+| 8-30d | 4 |
+| 31-90d | 1 |
+| 91-365d | 2 |
+| >365d | 1 |
 
 Per-organization medians (n>=3):
 
-- perplexity: 34d (n=3)
-- alibaba: 2d (n=17)
-- baidu: 1d (n=4)
-- google: 1d (n=24)
-- amazon: 0d (n=3)
-- anthropic: 0d (n=20)
-- mistral: 0d (n=14)
-- microsoft: 0d (n=5)
-- cohere: 0d (n=4)
-- deepseek: 0d (n=9)
-- bytedance: 0d (n=4)
-- meta: 0d (n=12)
-- zhipu: 0d (n=9)
-- openai: 0d (n=37)
-- xai: 0d (n=9)
-- moonshot: 0d (n=5)
-- nvidia: 0d (n=7)
-- xiaomi: 0d (n=3)
-- minimax: 0d (n=6)
-
-## announced -> weights_released
-
-- median -1d (IQR -6-0d, n=65)
-- range: -24d to 22d
-
-| gap | models |
-|---|---|
-| same day | 13 |
-| 1-7d | 36 |
-| 8-30d | 16 |
-| 31-90d | 0 |
-| 91-365d | 0 |
-| >365d | 0 |
-
-Per-organization medians (n>=3):
-
-- deepseek: 0d (n=8)
-- zhipu: -1d (n=7)
-- moonshot: -1d (n=5)
-- minimax: -1d (n=6)
-- alibaba: -2d (n=8)
-- meta: -4d (n=9)
-- google: -11d (n=7)
+- nvidia: 6d (n=6)
+- alibaba: 1d (n=8)
+- mistral: 0d (n=6)
+- cohere: 0d (n=3)
+- deepseek: 0d (n=7)
+- meta: 0d (n=9)
+- google: 0d (n=7)
+- zhipu: 0d (n=5)
+- moonshot: 0d (n=4)
+- minimax: 0d (n=3)
 
 ## announced -> consumer_rollout
 
-- median 0d (IQR 0-30d, n=22)
+- median 0d (IQR 0-30d, n=23)
 - range: 0d to 117d
 
 | gap | models |
 |---|---|
-| same day | 14 |
+| same day | 15 |
 | 1-7d | 0 |
 | 8-30d | 2 |
 | 31-90d | 5 |
@@ -81,8 +77,8 @@ Per-organization medians (n>=3):
 
 Per-organization medians (n>=3):
 
-- openai: 15d (n=12)
 - anthropic: 0d (n=6)
+- openai: 0d (n=13)
 
 ## announced -> free_tier
 
@@ -151,5 +147,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1149
-- models with announced + an availability event: 217
+- models with an anchor event: 1168
+- models with announced + an availability event: 191
