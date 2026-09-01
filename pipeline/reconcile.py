@@ -1,26 +1,32 @@
 """Reconcile matched Tier-1 claims into core tables + disagreement report.
 
 For every model matched across >=2 sources with a resolvable organization
-and an in-scope model type, drafts (idempotently - existing rows are never
-touched, verified rows never overwritten):
+and an in-scope model type, drafts an organizations row (from the curated
+seed), a models row, crosswalk rows, an attributes row (models.dev serving
+metadata), and dated events. Every event date goes through
+`confidence.assess`, so the confidence column follows one policy:
 
-- an organizations row (from the curated seed),
-- a models row,
-- crosswalk rows (models_dev / openrouter / epoch identifiers),
-- an `api_ga` event from the models.dev release date, corroborated or
-  disputed by the OpenRouter listing date,
-- an `announced` event from the Epoch publication date (only when it does
-  not contradict the availability date - Epoch's "publication" is the
-  earliest of paper/announcement/release, which is not always an
-  announcement),
-- a scheduled `retired` event when OpenRouter carries a real expiration
-  date (far-future sentinel values are ignored).
+- models.dev `release_date` -> `weights_released` when models.dev marks the
+  model open-weights, else `api_ga`. A lone Jan-1 date is stored at
+  precision=year rather than pretending to be a day.
+- vendor `/models` APIs (OpenAI `created`, Anthropic `created_at`) ->
+  `api_ga` claims. These are registry timestamps that precede the public
+  launch by days, so they corroborate a catalog date but do not verify on
+  their own. OpenAI `shutdown_date` is a published schedule -> first-party
+  `retired` claim.
+- any machine availability claim dated before a curated `announced` event
+  is private pre-staging (repo or model object created ahead of launch):
+  not loaded, and a stale machine row is withdrawn.
+- OpenRouter `created` -> its own `platform_availability` (platform=
+  openrouter) row: the platform's own timestamp for its own event.
+- OpenRouter expiration -> `retired` claim (far-future sentinels ignored).
+- Epoch publication date -> `announced`, only when it does not fall after
+  any availability date (Epoch's "publication" is the earliest of
+  paper/announcement/release, which is not always an announcement).
 
-All drafted events carry confidence=inferred (or disputed), because these
-are aggregator claims, not primary-source verifications.
-
-Also writes data/generated/disagreement_report.md over the whole matched
-population, regardless of what was loaded.
+Machine-owned rows (source_type hf_hub / api_metadata) are re-assessed on
+every run so aggregator corrections propagate; curated rows are never
+touched. Also writes data/generated/disagreement_report.md.
 """
 
 from __future__ import annotations
@@ -28,7 +34,7 @@ from __future__ import annotations
 import csv
 import sys
 from collections import Counter
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -36,15 +42,24 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import match
 import orgs_seed
 import schema
-from schema import ATTRIBUTES, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
+from confidence import (
+    Claim, curated_announcement, earliest_availability, flatten_claims,
+    group_claims, upsert_machine_event, withdraw_machine_announced_after,
+)
+from schema import ATTRIBUTES, CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
 
 MODELS_DEV_URL = "https://models.dev/api.json"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/models"
 EPOCH_URL = "https://epoch.ai/data/all_ai_models.csv"
 
-# Days beyond which two same-precision availability claims are a dispute
-# rather than expected aggregator listing lag.
-DISPUTE_THRESHOLD_DAYS = 30
+# Vendor list APIs: source -> (org_id whose models they describe, URL).
+VENDOR_APIS = {
+    "openai_api": ("openai", "https://api.openai.com/v1/models"),
+    "anthropic_api": ("anthropic", "https://api.anthropic.com/v1/models"),
+    "google_api": ("google", "https://generativelanguage.googleapis.com/v1beta/models"),
+    "mistral_api": ("mistral", "https://api.mistral.ai/v1/models"),
+}
+
 # OpenRouter uses far-future expiration sentinels for "no planned shutdown".
 EXPIRATION_SENTINEL_HORIZON_DAYS = 3 * 365
 
@@ -59,6 +74,45 @@ def _read_matched() -> list:
         raise FileNotFoundError(f"run pipeline/match.py first: {path} missing")
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
+
+
+def load_vendor_apis() -> dict:
+    """match key -> {source, org_id, url, ids, created, shutdown}.
+
+    Snapshot ids (gpt-4o-2024-08-06) fold into their model key; the
+    model's API availability is the earliest `created` across its ids, and
+    it is retired only when every id carries a shutdown date (the latest).
+    Vendors without a snapshot on disk are simply absent.
+    """
+    by_key: dict = {}
+    for source, (org_id, url) in VENDOR_APIS.items():
+        try:
+            snap = schema.latest_snapshot_dir(source) / "normalized.csv"
+        except FileNotFoundError:
+            continue
+        if not snap.exists():
+            continue
+        with snap.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                key = match.normalize_name(row["id"])["key"]
+                if not key:
+                    continue
+                entry = by_key.setdefault(key, {
+                    "source": source, "org_id": org_id, "url": url,
+                    "ids": [], "created": [], "shutdown": [],
+                })
+                entry["ids"].append(row["id"])
+                entry["created"].append(row["created_date"])
+                entry["shutdown"].append(row["shutdown_date"])
+    return by_key
+
+
+def _vendor_index(vendor: dict) -> dict:
+    index = {}
+    for key in vendor:
+        for variant in match.key_variants(key):
+            index.setdefault(variant, key)
+    return index
 
 
 def _infer_model_type(modalities_in: str, modalities_out: str) -> str:
@@ -92,8 +146,36 @@ def _parse(d: str) -> date | None:
         return None
 
 
-def reconcile_cluster(row: dict, today: date) -> dict | None:
-    """Turn one matched cluster into draft core rows, or None if out of scope."""
+def _attributes_from_models_dev(model_id: str, row: dict) -> dict:
+    """Serving metadata models.dev publishes; reasoning *type* is not
+    inferable from its boolean, so only `reasoning_supported` is filled."""
+    reasoning = row["md_reasoning"]
+    return {
+        "model_id": model_id,
+        "reasoning_supported": reasoning if reasoning in ("true", "false") else "",
+        "reasoning_type": "none" if reasoning == "false" else "",
+        "context_length": row["md_context_length"],
+        "max_output_tokens": row["md_max_output_tokens"],
+        "modality_in": row["md_modalities_in"],
+        "modality_out": row["md_modalities_out"],
+        "knowledge_cutoff": row["md_knowledge_cutoff"],
+        "supports_tool_use": row["md_tool_call"] if row["md_tool_call"] in ("true", "false") else "",
+        "price_input": row["md_cost_input"],
+        "price_output": row["md_cost_output"],
+        "price_cached_input": row["md_cost_cache_read"],
+        "price_date": row["md_snapshot_date"],
+        "source_url": MODELS_DEV_URL,
+    }
+
+
+def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dict | None:
+    """Turn one matched cluster into draft core rows, or None if out of scope.
+
+    Returns {"org_id", "model", "crosswalk", "attributes", "events"} where each
+    event is {"event_type", "platform", "precision", "claims": [Claim]}; the
+    caller runs the claims through the confidence policy against existing
+    rows.
+    """
     sources = row["sources"].split("|")
     if len(sources) < 2:
         return None
@@ -114,6 +196,8 @@ def reconcile_cluster(row: dict, today: date) -> dict | None:
 
     model_id = match.slug_for(row["match_key"], org_id)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    open_weights = row["md_open_weights"] == "true"
+    derivative = schema.derivative_from_name(model_id)
 
     model = {
         "model_id": model_id,
@@ -121,8 +205,10 @@ def reconcile_cluster(row: dict, today: date) -> dict | None:
         "variant_role": _variant_role(row["match_key"]),
         "developer_org_id": org_id,
         "model_type": model_type,
-        "access_type": "open_weights" if row["md_open_weights"] == "true" else "api_only",
-        "is_derivative": "false",
+        "access_type": "open_weights" if open_weights else "api_only",
+        "is_derivative": "true" if derivative else "false",
+        "derivative_type": derivative,
+        "review_status": "unreviewed",
         "record_created": now,
         "record_updated": now,
         "notes": "from catalog metadata; identity and lineage unreviewed",
@@ -139,77 +225,83 @@ def reconcile_cluster(row: dict, today: date) -> dict | None:
         crosswalk.append({"model_id": model_id, "namespace": "epoch",
                           "identifier": row["epoch_model"]})
 
+    vendor_rec = (vendor or {}).get(row["match_key"])
+    if vendor_rec and vendor_rec["org_id"] != org_id:
+        vendor_rec = None  # a vendor API only speaks for its own models
+    if vendor_rec:
+        for ident in vendor_rec["ids"]:
+            crosswalk.append({"model_id": model_id, "namespace": vendor_rec["source"],
+                              "identifier": ident})
+
     events = []
+
+    # --- availability -------------------------------------------------------
     # models.dev serializes a missing release date as the unix epoch.
     md_date = None if row["md_release_date"] == "1970-01-01" else _parse(row["md_release_date"])
-    or_date = _parse(row["or_created"])
     if md_date and md_date > today:
         md_date = None  # future-dated aggregator claim: not loadable
-    if or_date and or_date > today:
-        or_date = None
+    if md_date:
+        # Jan-1 dates in models.dev are year placeholders.
+        precision = "year" if row["md_release_date"].endswith("-01-01") else "day"
+        events.append({
+            "event_type": "weights_released" if open_weights else "api_ga",
+            "platform": "",
+            "claims": [Claim(md_date, MODELS_DEV_URL, "api_metadata",
+                             precision=precision, label="models.dev")],
+        })
 
-    if md_date and or_date:
-        delta = abs((or_date - md_date).days)
-        md_is_placeholder = row["md_release_date"].endswith("-01-01") and delta > DISPUTE_THRESHOLD_DAYS
-        if delta > DISPUTE_THRESHOLD_DAYS:
-            best = or_date if (md_is_placeholder or or_date < md_date) else md_date
-            events.append({
-                "event_type": "api_ga", "date": best.isoformat(),
-                "source_url": MODELS_DEV_URL if best == md_date else OPENROUTER_URL,
-                "confidence": "disputed",
-                "notes": (
-                    f"conflicting aggregator claims: models.dev release_date "
-                    f"{row['md_release_date']} ({MODELS_DEV_URL}) vs OpenRouter "
-                    f"listing date {row['or_created']} ({OPENROUTER_URL}); "
-                    f"kept {best.isoformat()}"
-                    + (" because the models.dev value looks like a Jan-1 placeholder"
-                       if md_is_placeholder else
-                       " as the earlier evidenced availability" if best == or_date
-                       else " as the curated release-date claim")
-                ),
-            })
+    vendor_dates = sorted(filter(None, (_parse(d) for d in vendor_rec["created"]))) if vendor_rec else []
+    vendor_dates = [d for d in vendor_dates if d <= today]
+    if vendor_dates:
+        # Vendor registries stamp `created` when the model object is
+        # registered, which precedes the public launch by days (observed:
+        # 1-16d for OpenAI and Anthropic). A lower bound, so not first-party.
+        claim = Claim(vendor_dates[0], vendor_rec["url"], "api_metadata",
+                      bound=True, label=f"{vendor_rec['source']} created")
+        api_ga = next((e for e in events if e["event_type"] == "api_ga"), None)
+        if api_ga:
+            api_ga["claims"].append(claim)
         else:
-            events.append({
-                "event_type": "api_ga", "date": md_date.isoformat(),
-                "source_url": MODELS_DEV_URL, "confidence": "inferred",
-                "notes": f"models.dev release_date; OpenRouter listing followed "
-                         f"{row['or_created']} (lag {delta}d)",
-            })
-    elif md_date:
+            events.append({"event_type": "api_ga", "platform": "",
+                           "claims": [claim]})
+
+    or_date = _parse(row["or_created"])
+    if or_date and or_date <= today:
         events.append({
-            "event_type": "api_ga", "date": md_date.isoformat(),
-            "source_url": MODELS_DEV_URL, "confidence": "inferred",
-            "notes": "models.dev release_date; no second aggregator claim",
-        })
-    elif or_date:
-        events.append({
-            "event_type": "api_ga", "date": or_date.isoformat(),
-            "source_url": OPENROUTER_URL, "confidence": "inferred",
-            "notes": "OpenRouter listing date; lower bound on availability",
+            "event_type": "platform_availability", "platform": "openrouter",
+            "claims": [Claim(or_date, OPENROUTER_URL, "api_metadata",
+                             first_party=True, label="openrouter")],
         })
 
+    # --- announced ------------------------------------------------------------
     epoch_date = _parse(row["epoch_publication_date"])
-    availability = _parse(events[0]["date"]) if events else None
-    if epoch_date and epoch_date <= today and (availability is None or epoch_date <= availability):
+    availability = [c.date for e in events for c in e["claims"]]
+    if epoch_date and epoch_date <= today and all(epoch_date <= d for d in availability):
         events.append({
-            "event_type": "announced", "date": epoch_date.isoformat(),
-            "source_url": EPOCH_URL, "confidence": "inferred",
-            "notes": "Epoch AI publication date (earliest of paper/announcement/"
-                     "release per Epoch); verify against the vendor's own channel",
+            "event_type": "announced", "platform": "",
+            "claims": [Claim(epoch_date, EPOCH_URL, "api_metadata", label="epoch.ai")],
         })
 
+    # --- retirement -----------------------------------------------------------
+    retired_claims = []
     expiration = _parse(row["or_expiration"])
     if expiration and (expiration - today).days < EXPIRATION_SENTINEL_HORIZON_DAYS:
-        events.append({
-            "event_type": "retired", "date": expiration.isoformat(),
-            "source_url": OPENROUTER_URL, "confidence": "inferred",
-            "notes": "scheduled shutdown per OpenRouter expiration metadata; "
-                     "verify against the vendor deprecation page",
-        })
+        retired_claims.append(Claim(expiration, OPENROUTER_URL, "api_metadata",
+                                    label="openrouter expiration"))
+    if vendor_rec and vendor_rec["shutdown"] and all(vendor_rec["shutdown"]):
+        shutdown = max(filter(None, (_parse(d) for d in vendor_rec["shutdown"])), default=None)
+        if shutdown:
+            retired_claims.append(Claim(shutdown, vendor_rec["url"], "api_metadata",
+                                        first_party=True, label=f"{vendor_rec['source']} shutdown"))
+    if retired_claims:
+        events.append({"event_type": "retired", "platform": "",
+                       "claims": retired_claims})
 
     if not events:
         return None  # no dated claim -> no row (rule: no date, no event)
-    return {"org_id": org_id, "model": model, "crosswalk": crosswalk, "events": events}
+    attributes = _attributes_from_models_dev(model_id, row) if row["md_model_key"] else None
+    return {"org_id": org_id, "model": model, "crosswalk": crosswalk,
+            "attributes": attributes, "events": events}
 
 
 def write_disagreement_report(matched: list) -> Path:
@@ -283,6 +375,8 @@ def write_disagreement_report(matched: list) -> Path:
 def main() -> int:
     matched = _read_matched()
     today = date.today()
+    vendor = load_vendor_apis()
+    vendor_index = _vendor_index(vendor)
 
     tables = schema.load_core()
     orgs_by_id = {r["org_id"]: r for r in tables["organizations"]}
@@ -294,12 +388,18 @@ def main() -> int:
     identity = {(r["namespace"], r["identifier"]): r["model_id"]
                 for r in tables["crosswalk"]
                 if r["namespace"] in ("epoch", "openrouter")}
+    attributes_by_id = {r["model_id"]: r for r in tables["attributes"]}
     events = tables["events"]
-    event_type_present = {(e["model_id"], e["event_type"]) for e in events}
+    event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
+    claims_by_event = group_claims(tables["claims"])
 
-    added_models = added_events = 0
+    added_models = 0
+    outcomes = Counter()
     for row in matched:
-        draft = reconcile_cluster(row, today)
+        key_hit = next((vendor_index[v] for v in match.key_variants(row["match_key"])
+                        if v in vendor_index), None)
+        cluster_vendor = {row["match_key"]: vendor[key_hit]} if key_hit else None
+        draft = reconcile_cluster(row, today, cluster_vendor)
         if draft is None:
             continue
 
@@ -314,10 +414,9 @@ def main() -> int:
             # "qwen2-5-..." vs aggregator "qwen-2-5-..."). Only draft a new
             # row when neither resolves.
             existing = next(
-                (identity[(ns, xw["identifier"])]
+                (identity[(xw["namespace"], xw["identifier"])]
                  for xw in draft["crosswalk"]
-                 for ns in (xw["namespace"],)
-                 if (ns, xw["identifier"]) in identity), None)
+                 if (xw["namespace"], xw["identifier"]) in identity), None)
             if not existing:
                 existing = next((v for v in match.key_variants(model_id)
                                  if v in models_by_id), None)
@@ -336,42 +435,42 @@ def main() -> int:
             if xw["namespace"] in ("epoch", "openrouter"):
                 identity.setdefault((xw["namespace"], xw["identifier"]), model_id)
 
-        for ev in draft["events"]:
-            # Idempotency + append-only: if this model already has an event
-            # of this type (from any earlier run or a human), leave it alone.
-            if (model_id, ev["event_type"]) in event_type_present:
-                continue
-            # An aggregator api_ga claim is a lower bound on availability; it
-            # is only informative when the ledger has no availability-class
-            # event for the model yet. Otherwise it re-adds claims a verifier
-            # already resolved into a more precise event type.
-            if ev["event_type"] == "api_ga" and any(
-                (model_id, et) in event_type_present
-                for et in ("weights_released", "consumer_rollout",
-                           "platform_availability", "api_preview", "free_tier")):
-                continue
-            event_type_present.add((model_id, ev["event_type"]))
-            events.append({
-                "event_id": schema.next_event_id(events, model_id, ev["event_type"]),
-                "model_id": model_id,
-                "event_type": ev["event_type"],
-                "date": ev["date"],
-                "precision": "day",
-                "region": "global",
-                "source_type": "api_metadata",
-                "source_url": ev["source_url"],
-                "confidence": ev["confidence"],
-                "notes": ev["notes"],
-            })
-            added_events += 1
+        if draft["attributes"] and model_id not in attributes_by_id:
+            draft["attributes"]["model_id"] = model_id
+            attributes_by_id[model_id] = draft["attributes"]
+            outcomes["attributes"] += 1
+
+        floor = curated_announcement(event_index, model_id)
+        # Availability first, so the announced claim can be checked against
+        # every availability date on record (incl. the Hub census's).
+        for ev in sorted(draft["events"], key=lambda e: e["event_type"] == "announced"):
+            if ev["event_type"] == "announced":
+                ceiling = earliest_availability(event_index, model_id)
+                if ceiling is not None and ev["claims"][0].date > ceiling:
+                    outcomes["announced-after-availability"] += 1
+                    withdraw_machine_announced_after(
+                        events, event_index, claims_by_event, model_id, ceiling)
+                    continue
+            outcome = upsert_machine_event(
+                events, event_index, claims_by_event, model_id, ev["event_type"],
+                ev["claims"], today, platform=ev["platform"],
+                not_before=floor if ev["event_type"] in ("api_ga", "weights_released") else None,
+                next_id=schema.next_event_id)
+            outcomes[outcome] += 1
 
     schema.write_table(ORGANIZATIONS, list(orgs_by_id.values()))
     schema.write_table(MODELS, list(models_by_id.values()))
     schema.write_table(EVENTS, events)
+    schema.write_table(CLAIMS, flatten_claims(claims_by_event))
     schema.write_table(CROSSWALK, tables["crosswalk"])
+    schema.write_table(ATTRIBUTES, list(attributes_by_id.values()))
 
     report = write_disagreement_report(matched)
-    print(f"reconcile: +{added_models} models, +{added_events} events, "
+    print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
+          f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "
+          f"curated-skipped={outcomes['skipped']} precreated-dropped={outcomes['precreated']}; "
+          f"+{outcomes['attributes']} attributes; "
+          f"vendor APIs: {sorted({v['source'] for v in vendor.values()})}; "
           f"orgs={len(orgs_by_id)}; report -> {report}")
     return 0
 

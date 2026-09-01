@@ -127,6 +127,21 @@ def main() -> int:
     except Exception as exc:
         print(f"pull_hf: WARN global sweep failed: {exc}")
 
+    # Repos already in the ledger stay tracked even after they fall out of
+    # the download-ranked sweep; otherwise their weights date would vanish.
+    tracked = [r["identifier"] for r in schema.read_table(schema.CROSSWALK)
+               if r["namespace"] == "huggingface" and r["identifier"] not in all_rows]
+    fetched = 0
+    for repo_id in tracked:
+        try:
+            info = api.model_info(repo_id, expand=expand)
+        except Exception as exc:  # deleted/gated repo: report, keep going
+            print(f"pull_hf: WARN tracked repo {repo_id} failed: {exc}")
+            continue
+        all_rows[repo_id] = _rows_from([info])[0]
+        fetched += 1
+    print(f"pull_hf: tracked repos outside the sweep: {len(tracked)}, refetched {fetched}")
+
     if not all_rows:
         raise RuntimeError("pull_hf produced zero rows; Hub unreachable or API changed")
 

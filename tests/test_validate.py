@@ -35,7 +35,8 @@ def _model(**overrides):
         "derivative_type": "", "base_model_id": "", "parent_model_id": "",
         "snapshot_of": "", "predecessor_id": "", "successor_id": "",
         "first_public_availability_date": "", "first_availability_via": "",
-        "anticipation_days": "", "record_created": "2026-01-01T00:00:00+00:00",
+        "anticipation_days": "", "review_status": "unreviewed",
+        "record_created": "2026-01-01T00:00:00+00:00",
         "record_updated": "2026-01-01T00:00:00+00:00", "notes": "",
     }
     row.update(overrides)
@@ -55,11 +56,13 @@ def _event(**overrides):
     return row
 
 
-def _tables(orgs=None, models=None, events=None, crosswalk=None, attributes=None):
+def _tables(orgs=None, models=None, events=None, crosswalk=None, attributes=None,
+            claims=None):
     return {
         "organizations": orgs if orgs is not None else [_org()],
         "models": models if models is not None else [_model()],
         "events": events if events is not None else [_event()],
+        "claims": claims or [],
         "crosswalk": crosswalk or [],
         "attributes": attributes or [],
     }
@@ -149,8 +152,41 @@ def test_rule8_vocab_and_platform_contract():
         event_type="platform_availability")])
     assert any("requires platform" in e for e in _errors(missing_platform))
 
-    stray_platform = _tables(events=[_event(platform="aws_bedrock")])
-    assert any("platform set on" in e for e in _errors(stray_platform))
+    # A retirement scoped to one platform is legitimate.
+    scoped_retirement = _tables(events=[_event(
+        event_id="acme-1-retired-1", event_type="retired", platform="aws_bedrock",
+        date="2025-06-01")])
+    assert not any("rule8" in e for e in _errors(scoped_retirement))
+
+
+def test_rule4_availability_long_before_announcement_is_an_error() -> None:
+    def events(gap_days):
+        return [
+            _event(event_id="acme-1-announced-1", event_type="announced", date="2025-03-01"),
+            _event(event_id="acme-1-weights_released-1", event_type="weights_released",
+                   date=(date(2025, 3, 1) - __import__("datetime").timedelta(days=gap_days)).isoformat()),
+        ]
+    errors, warnings = validate.validate_tables(
+        _tables(events=events(45)), TODAY, check_determinism=False)
+    assert any("precedes announced" in e for e in errors)
+    errors, warnings = validate.validate_tables(
+        _tables(events=events(5)), TODAY, check_determinism=False)
+    assert not any("precedes announced" in e for e in errors)
+    assert any("precedes announced" in w for w in warnings)
+
+
+def test_rule1_and_rule8_claims_table() -> None:
+    orphan = {"event_id": "nope", "source_url": "https://models.dev/api.json",
+              "source_type": "api_metadata", "date": "2025-01-15", "precision": "day",
+              "label": "", "bound": "false", "first_party": "false"}
+    assert any("claims references unknown event_id" in e for e in _errors(_tables(claims=[orphan])))
+    bad = dict(orphan, event_id="acme-1-api_ga-1", bound="maybe", date="2025-1-1")
+    errs = _errors(_tables(claims=[bad]))
+    assert any("bound" in e for e in errs) and any("not ISO" in e for e in errs)
+
+
+def test_rule8_review_status_required() -> None:
+    assert any("review_status" in e for e in _errors(_tables(models=[_model(review_status="")])))
 
 
 def test_rule8_event_id_format():

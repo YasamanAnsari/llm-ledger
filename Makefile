@@ -32,4 +32,4 @@ build:
 test:
 	$(PY) tests/run_tests.py
 
-all: pull match reconcile build validate test
+all: pull match reconcile census build validate test

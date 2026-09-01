@@ -61,10 +61,23 @@ SOURCE_TYPES = {
 
 CONFIDENCES = {"verified", "inferred", "disputed"}
 
+# Derived per model by build.py from its events (see compute_derived):
+#   human_reviewed       a named person verified at least one event
+#   machine_corroborated at least one event is verified by llm-ledger
+#   unreviewed           machine claims only, none corroborated
+REVIEW_STATUSES = {"unreviewed", "machine_corroborated", "human_reviewed"}
+
 CROSSWALK_NAMESPACES = {
     "openrouter", "models_dev", "huggingface", "modelscope", "openai_api",
-    "anthropic_api", "google_api", "epoch", "wikipedia", "lmarena",
-    "text_surface_forms",
+    "anthropic_api", "google_api", "mistral_api", "epoch", "wikipedia",
+    "lmarena", "text_surface_forms",
+}
+
+# HF license tags that are OSI-approved; everything else with a tag is
+# open_weights_restricted.
+LICENSE_OSI = {
+    "apache-2.0", "mit", "bsd-3-clause", "bsd-2-clause", "cc0-1.0", "openrail",
+    "gpl-3.0", "agpl-3.0", "mpl-2.0",
 }
 
 REASONING_TYPES = {"none", "always_on", "toggleable", "effort_tiered"}
@@ -76,13 +89,13 @@ FEATURE_ADDED_DETAILS = {
     "file_upload", "structured_output",
 }
 
-MODALITIES = {"text", "image", "audio", "video"}
+MODALITIES = {"text", "image", "audio", "video", "pdf"}
 
 BOOL_VALUES = {"true", "false"}
 
 # Derived first_availability_via values.
 FIRST_AVAILABILITY_VIA = AVAILABILITY_EVENT_TYPES | {
-    "api_preview_fallback", "free_tier_fallback",
+    "api_preview_fallback", "free_tier_fallback", "platform_availability_fallback",
 }
 
 # Epoch-owned numeric concepts that must never appear as core columns
@@ -127,7 +140,8 @@ MODELS = Table(
         "is_derivative", "derivative_type", "base_model_id",
         "parent_model_id", "snapshot_of", "predecessor_id", "successor_id",
         "first_public_availability_date", "first_availability_via",
-        "anticipation_days", "record_created", "record_updated", "notes",
+        "anticipation_days", "review_status", "record_created",
+        "record_updated", "notes",
     ),
     pk=("model_id",),
 )
@@ -154,7 +168,7 @@ ATTRIBUTES = Table(
     name="attributes",
     filename="attributes.csv",
     columns=(
-        "model_id", "reasoning_type", "reasoning_effort_levels",
+        "model_id", "reasoning_supported", "reasoning_type", "reasoning_effort_levels",
         "reasoning_tokens_billed", "reasoning_tokens_visible",
         "reasoning_is_separate_checkpoint", "context_length",
         "max_output_tokens", "modality_in", "modality_out",
@@ -165,7 +179,19 @@ ATTRIBUTES = Table(
     pk=("model_id",),
 )
 
-CORE_TABLES = (ORGANIZATIONS, MODELS, EVENTS, CROSSWALK, ATTRIBUTES)
+# Evidence behind machine-assessed events: one row per (event, source).
+# events.csv holds the conclusion; this table holds every claim it rests
+# on, so loaders re-assess from the full set each run and researchers can
+# see exactly which sources said what.
+CLAIMS = Table(
+    name="claims",
+    filename="claims.csv",
+    columns=("event_id", "source_url", "source_type", "date", "precision",
+             "label", "bound", "first_party"),
+    pk=("event_id", "source_url"),
+)
+
+CORE_TABLES = (ORGANIZATIONS, MODELS, EVENTS, CLAIMS, CROSSWALK, ATTRIBUTES)
 TABLES_BY_NAME = {t.name: t for t in CORE_TABLES}
 
 # ---------------------------------------------------------------------------
@@ -209,7 +235,7 @@ def write_table(table: Table, rows: list, directory: Path = CORE_DIR) -> Path:
 
 
 def load_core() -> dict:
-    """Load all five core tables keyed by table name."""
+    """Load all core tables keyed by table name."""
     return {t.name: read_table(t) for t in CORE_TABLES}
 
 
@@ -284,6 +310,27 @@ def date_matches_precision(value: str, precision: str) -> bool:
     if precision == "year":
         return d.day == 1 and d.month == 1
     return False
+
+
+def derivative_from_name(model_id: str) -> str:
+    """Derivative type a model name states outright, else "".
+
+    Only markers that are unambiguous in lab naming are automated:
+    `distill` (DeepSeek-R1-Distill-*) and `merge`. Fine-tunes are a human
+    call: `-instruct` / `-sft` checkpoints are usually a lab's own release.
+    """
+    tokens = set(model_id.lower().split("-"))
+    if "distill" in tokens or "distilled" in tokens:
+        return "distill"
+    if "merge" in tokens or "merged" in tokens:
+        return "merge"
+    return ""
+
+
+def license_family(license_tag: str) -> str:
+    if not license_tag:
+        return ""
+    return "osi_approved" if license_tag.lower() in LICENSE_OSI else "open_weights_restricted"
 
 
 def next_event_id(existing_events: list, model_id: str, event_type: str) -> str:

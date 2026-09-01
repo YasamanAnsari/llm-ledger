@@ -24,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
+from confidence import is_machine_row
 from schema import (
     ATTRIBUTES, AVAILABILITY_EVENT_TYPES, EVENTS,
     FALLBACK_AVAILABILITY_EVENT_TYPES, GENERATED_DIR, MODELS,
@@ -31,7 +32,7 @@ from schema import (
 
 # Tie priority for first_availability_via.
 VIA_PRIORITY = ("weights_released", "api_ga", "consumer_rollout")
-FALLBACK_VIA_PRIORITY = ("api_preview", "free_tier")
+FALLBACK_VIA_PRIORITY = ("api_preview", "free_tier", "platform_availability")
 
 # Stable pivot order for the wide file.
 WIDE_EVENT_ORDER = (
@@ -84,7 +85,10 @@ def compute_derived(models: list, events: list) -> list:
             first_date, via = chosen["date"], chosen["event_type"]
             via_precision = chosen["precision"]
         else:
-            fallback = _earliest_global(events, mid, FALLBACK_AVAILABILITY_EVENT_TYPES)
+            # Third tier: a third-party platform listing is an upper bound on
+            # public availability, better than no date at all.
+            fallback = (_earliest_global(events, mid, FALLBACK_AVAILABILITY_EVENT_TYPES)
+                        or _earliest_global(events, mid, {"platform_availability"}))
             if fallback:
                 chosen = _pick_first(fallback, FALLBACK_VIA_PRIORITY)
                 first_date, via = chosen["date"], chosen["event_type"] + "_fallback"
@@ -103,8 +107,22 @@ def compute_derived(models: list, events: list) -> list:
                          - date.fromisoformat(ann["date"])).days
                 anticipation = str(delta)
         row["anticipation_days"] = anticipation
+        row["review_status"] = _review_status(events, mid)
         out.append(row)
     return out
+
+
+def _review_status(events: list, model_id: str) -> str:
+    """human_reviewed if a curated (non-machine-source) event is verified;
+    machine_corroborated if any machine event reached verified; else
+    unreviewed."""
+    verified = [e for e in events
+                if e["model_id"] == model_id and e.get("confidence") == "verified"]
+    if any(not is_machine_row(e) for e in verified):
+        return "human_reviewed"
+    if verified:
+        return "machine_corroborated"
+    return "unreviewed"
 
 
 def _wide_columns(attr_columns: tuple) -> list:

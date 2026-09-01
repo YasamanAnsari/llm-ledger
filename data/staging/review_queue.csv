@@ -27,7 +27,6 @@ fuzzy_match,epoch,grok-4-3-beta,ledger_cluster,grok-4-2-beta,92.3,92-97 band: co
 fuzzy_match,epoch,hermes-3-405b,ledger_cluster,hermes-4-405b,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hunyuan-turbo,ledger_cluster,hunyuan-turbos,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,imagen,ledger_cluster,imagen-3,92.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,llama-nemotron-ultra-253b,ledger_cluster,llama-3-1-nemotron-ultra-253b,94.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mai-code-1-flash,ledger_cluster,mai-code-1-1-flash,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mercury,ledger_cluster,mercury-2,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,minimax-m1-40k,ledger_cluster,minimax-m1-80k,92.9,92-97 band: confirm or reject before crosswalking
@@ -36,7 +35,6 @@ fuzzy_match,epoch,ministral-3-3b,ledger_cluster,ministral-3b,92.3,92-97 band: co
 fuzzy_match,epoch,ministral-3-8b,ledger_cluster,ministral-3b,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mistral-large-2,ledger_cluster,mistral-large2,96.6,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mistral-small-3,ledger_cluster,mistral-small-4,93.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,olmo-3-1-32b-think,ledger_cluster,olmo-3-32b-think,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen-14b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen-vl,ledger_cluster,qwen3-vl-instruct,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-5-3b,ledger_cluster,qwen2-5-32b-instruct,95.2,92-97 band: confirm or reject before crosswalking
@@ -280,3 +278,19 @@ nhlocal_lead,nhlocal_aitimeline,GPT-5.3 Instant@2026-03-01,,,,"month-precision c
 nhlocal_lead,nhlocal_aitimeline,GPT-5.4@2026-03-01,,,,"month-precision community-timeline lead: OpenAI launches GPT-5.4 alongside GPT-5.4 mini and GPT-5.4 nano, expanding the GPT-5.4 family across flagship and lightweight tiers."
 nhlocal_lead,nhlocal_aitimeline,Suno v5.5@2026-03-01,,,,"month-precision community-timeline lead: Suno launches Suno v5.5, adding Voices, Custom Models, and My Taste for more personalized music creation."
 vocab_gap,mistral_changelog,mistral-large fine-tuning availability 2024-07-24,,,,verified vendor-changelog event dropped: feature_added vocabulary has no fine_tuning value; consider a schema addition
+hf_precreated_repo,huggingface,moonshotai/Kimi-K3,ledger,kimi-k3,,"repo created 2026-06-13, announced 2026-07-16; weights date needs a primary source"
+hf_precreated_repo,huggingface,CohereLabs/c4ai-command-r-plus,ledger,command-r-plus,,"repo created 2024-04-03, announced 2024-04-04; weights date needs a primary source"
+hf_precreated_repo,huggingface,deepseek-ai/DeepSeek-V3,ledger,deepseek-v3,,"repo created 2024-12-25, announced 2024-12-26; weights date needs a primary source"
+hf_precreated_repo,huggingface,deepseek-ai/DeepSeek-V4-Pro,ledger,deepseek-v4-pro,,"repo created 2026-04-22, announced 2026-04-24; weights date needs a primary source"
+hf_precreated_repo,huggingface,google/gemma-2-27b-it,ledger,gemma-2-27b-it,,"repo created 2024-06-24, announced 2024-06-27; weights date needs a primary source"
+hf_precreated_repo,huggingface,google/gemma-4-31B-it,ledger,gemma-4-31b-it,,"repo created 2026-03-11, announced 2026-04-02; weights date needs a primary source"
+hf_precreated_repo,huggingface,zai-org/GLM-4.5,ledger,glm-4-5,,"repo created 2025-07-20, announced 2025-07-28; weights date needs a primary source"
+hf_precreated_repo,huggingface,zai-org/GLM-5,ledger,glm-5,,"repo created 2026-02-11, announced 2026-02-12; weights date needs a primary source"
+hf_precreated_repo,huggingface,tencent/Tencent-Hunyuan-Large,ledger,hunyuan-large,,"repo created 2024-10-22, announced 2024-11-05; weights date needs a primary source"
+hf_precreated_repo,huggingface,meta-llama/Llama-2-70b,ledger,llama-2-70b,,"repo created 2023-07-09, announced 2023-07-18; weights date needs a primary source"
+hf_precreated_repo,huggingface,meta-llama/Llama-3.1-405B-Instruct,ledger,llama-3-1-405b-instruct,,"repo created 2024-07-16, announced 2024-07-23; weights date needs a primary source"
+hf_precreated_repo,huggingface,meta-llama/Meta-Llama-3-70B-Instruct,ledger,llama-3-70b-instruct,,"repo created 2024-04-17, announced 2024-04-18; weights date needs a primary source"
+hf_precreated_repo,huggingface,MiniMaxAI/MiniMax-M2.1,ledger,minimax-m2-1,,"repo created 2025-12-20, announced 2025-12-23; weights date needs a primary source"
+hf_precreated_repo,huggingface,Qwen/Qwen2.5-72B-Instruct,ledger,qwen2-5-72b-instruct,,"repo created 2024-09-16, announced 2024-09-19; weights date needs a primary source"
+hf_precreated_repo,huggingface,Qwen/Qwen3-235B-A22B,ledger,qwen3-235b-a22b,,"repo created 2025-04-27, announced 2025-04-29; weights date needs a primary source"
+hf_precreated_repo,huggingface,01-ai/Yi-34B,ledger,yi-34b,,"repo created 2023-11-01, announced 2023-11-02; weights date needs a primary source"

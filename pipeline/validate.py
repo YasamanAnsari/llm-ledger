@@ -25,12 +25,15 @@ from schema import (
     FALLBACK_AVAILABILITY_EVENT_TYPES, FEATURE_ADDED_DETAILS,
     FIRST_AVAILABILITY_VIA, LICENSE_FAMILIES, MODALITIES, MODELS, MODEL_TYPES,
     ORGANIZATIONS, ORG_TYPES, PRECISIONS, REASONING_TYPES,
-    REASONING_VISIBILITY, SOURCE_TYPES, VARIANT_ROLES,
+    REASONING_VISIBILITY, REVIEW_STATUSES, SOURCE_TYPES, VARIANT_ROLES,
     date_matches_precision,
 )
 
 # Event chain that must be non-decreasing in time (rule 4).
 ORDER_CHAIN = ("announced", "preview", "api_preview", "api_ga")
+# Availability that precedes the announcement by more than this is bad data
+# (an aggregator date or a pre-created repo), not a quiet launch.
+ANNOUNCE_LAG_ERROR_DAYS = 30
 
 
 def _is_url(value: str) -> bool:
@@ -79,6 +82,11 @@ def check_rule1_keys(tables: dict) -> list:
         for row in tables[name]:
             if row["model_id"] not in model_ids:
                 errors.append(f"rule1: {name} references unknown model_id '{row['model_id']}'")
+
+    event_ids = {r["event_id"] for r in tables["events"]}
+    for row in tables.get("claims", []):
+        if row["event_id"] not in event_ids:
+            errors.append(f"rule1: claims references unknown event_id '{row['event_id']}'")
     return errors
 
 
@@ -149,6 +157,21 @@ def check_rule4_temporal_sanity(tables: dict, today: date) -> tuple:
                     f"rule4: model {model_id} ({region}): deprecation_announced "
                     f"{firsts['deprecation_announced']} after retired {firsts['retired']}"
                 )
+        if "announced" in firsts:
+            availability = [
+                (firsts[et], et) for et in
+                AVAILABILITY_EVENT_TYPES | FALLBACK_AVAILABILITY_EVENT_TYPES | {"platform_availability"}
+                if et in firsts
+            ]
+            if availability:
+                first_avail, via = min(availability)
+                lag = (firsts["announced"] - first_avail).days
+                msg = (f"rule4: model {model_id} ({region}): {via} {first_avail} "
+                       f"precedes announced {firsts['announced']} by {lag}d")
+                if lag > ANNOUNCE_LAG_ERROR_DAYS:
+                    errors.append(msg)
+                elif lag > 0:
+                    warnings.append(msg)
     return errors, warnings
 
 
@@ -172,7 +195,8 @@ def check_rule6_model_coverage(tables: dict) -> list:
     for row in tables["events"]:
         events_by_model.setdefault(row["model_id"], set()).add(row["event_type"])
     anchor_types = (
-        {"announced"} | AVAILABILITY_EVENT_TYPES | FALLBACK_AVAILABILITY_EVENT_TYPES
+        {"announced", "platform_availability"} | AVAILABILITY_EVENT_TYPES
+        | FALLBACK_AVAILABILITY_EVENT_TYPES
     )
     for row in tables["models"]:
         mid = row["model_id"]
@@ -237,6 +261,7 @@ def check_rule8_vocabularies(tables: dict) -> list:
         check(key, "is_derivative", row.get("is_derivative", ""), BOOL_VALUES, required=True)
         check(key, "derivative_type", row.get("derivative_type", ""), DERIVATIVE_TYPES)
         check(key, "first_availability_via", row.get("first_availability_via", ""), FIRST_AVAILABILITY_VIA)
+        check(key, "review_status", row.get("review_status", ""), REVIEW_STATUSES, required=True)
         for col in ("license_has_usage_thresholds", "license_requires_separate_agreement"):
             check(key, col, row.get(col, ""), BOOL_VALUES)
         if row.get("is_derivative") == "true" and not row.get("derivative_type"):
@@ -248,10 +273,10 @@ def check_rule8_vocabularies(tables: dict) -> list:
         check(key, "precision", row.get("precision", ""), PRECISIONS, required=True)
         check(key, "source_type", row.get("source_type", ""), SOURCE_TYPES, required=True)
         check(key, "confidence", row.get("confidence", ""), CONFIDENCES, required=True)
+        # `platform` is required for platform_availability and optional
+        # elsewhere (a retirement on Azure is not a retirement at OpenAI).
         if row.get("event_type") == "platform_availability" and not row.get("platform"):
             errors.append(f"rule8: {key} platform_availability requires platform")
-        if row.get("event_type") != "platform_availability" and row.get("platform"):
-            errors.append(f"rule8: {key} platform set on non-platform_availability event")
         if row.get("event_type") == "feature_added":
             check(key, "detail", row.get("detail", ""), FEATURE_ADDED_DETAILS, required=True)
         expected_prefix = f"{row.get('model_id', '')}-{row.get('event_type', '')}-"
@@ -263,12 +288,25 @@ def check_rule8_vocabularies(tables: dict) -> list:
         key = f"crosswalk {row['model_id']}/{row['namespace']}"
         check(key, "namespace", row.get("namespace", ""), CROSSWALK_NAMESPACES, required=True)
 
+    for row in tables.get("claims", []):
+        key = f"claim {row['event_id']}/{row['source_url']}"
+        check(key, "source_type", row.get("source_type", ""), SOURCE_TYPES, required=True)
+        for col in ("bound", "first_party"):
+            check(key, col, row.get(col, ""), BOOL_VALUES, required=True)
+        if not _is_url(row.get("source_url", "")):
+            errors.append(f"rule8: {key} source_url invalid")
+        if not date_matches_precision(row.get("date", ""), "day"):
+            errors.append(f"rule8: {key} date '{row.get('date', '')}' is not ISO")
+
     for row in tables["attributes"]:
         key = f"attributes {row['model_id']}"
-        check(key, "reasoning_type", row.get("reasoning_type", ""), REASONING_TYPES, required=True)
+        # reasoning_type is optional: catalogs say whether a model reasons,
+        # not how, and the ledger does not guess.
+        check(key, "reasoning_type", row.get("reasoning_type", ""), REASONING_TYPES)
         check(key, "reasoning_tokens_visible", row.get("reasoning_tokens_visible", ""), REASONING_VISIBILITY)
-        for col in ("reasoning_tokens_billed", "reasoning_is_separate_checkpoint",
-                    "supports_tool_use", "supports_structured_output", "supports_caching"):
+        for col in ("reasoning_supported", "reasoning_tokens_billed",
+                    "reasoning_is_separate_checkpoint", "supports_tool_use",
+                    "supports_structured_output", "supports_caching"):
             check(key, col, row.get(col, ""), BOOL_VALUES)
         for col in ("modality_in", "modality_out"):
             for modality in filter(None, row.get(col, "").split("|")):

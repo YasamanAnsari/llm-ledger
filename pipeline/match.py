@@ -33,7 +33,9 @@ MATCHED_COLUMNS = [
     "or_prefix", "md_prefix",
     "md_provider", "md_model_key", "md_release_date", "md_provider_count",
     "md_open_weights", "md_modalities_in", "md_modalities_out",
-    "md_context_length", "md_cost_input", "md_cost_output", "md_reasoning",
+    "md_context_length", "md_max_output_tokens", "md_cost_input",
+    "md_cost_output", "md_cost_cache_read", "md_reasoning", "md_tool_call",
+    "md_knowledge_cutoff", "md_snapshot_date",
     "or_id", "or_created", "or_expiration",
     "epoch_model", "epoch_organization", "epoch_publication_date",
     "epoch_confidence",
@@ -291,6 +293,7 @@ def match() -> tuple:
                 "note": "92-97 band: confirm or reject before crosswalking",
             })
 
+    md_snapshot = schema.latest_snapshot_dir("models_dev").name
     rows = []
     for key in sorted(clusters):
         c = clusters[key]
@@ -320,9 +323,14 @@ def match() -> tuple:
             "md_modalities_in": md_rec["row"]["modalities_in"] if md_rec else "",
             "md_modalities_out": md_rec["row"]["modalities_out"] if md_rec else "",
             "md_context_length": md_rec["row"]["context_length"] if md_rec else "",
+            "md_max_output_tokens": md_rec["row"]["max_output_tokens"] if md_rec else "",
             "md_cost_input": md_rec["row"]["cost_input"] if md_rec else "",
             "md_cost_output": md_rec["row"]["cost_output"] if md_rec else "",
+            "md_cost_cache_read": md_rec["row"]["cost_cache_read"] if md_rec else "",
             "md_reasoning": md_rec["row"]["reasoning"] if md_rec else "",
+            "md_tool_call": md_rec["row"]["tool_call"] if md_rec else "",
+            "md_knowledge_cutoff": md_rec["row"]["knowledge_cutoff"] if md_rec else "",
+            "md_snapshot_date": md_snapshot if md_rec else "",
             "or_id": or_rec["row"]["id"] if or_rec else "",
             "or_created": or_rec["row"]["created_date"] if or_rec else "",
             "or_expiration": or_rec["row"]["expiration_date"] if or_rec else "",
