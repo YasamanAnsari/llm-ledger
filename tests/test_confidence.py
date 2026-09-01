@@ -72,6 +72,16 @@ def test_bounds_use_the_tight_window() -> None:
     assert (a.confidence, a.date, a.source_type) == ("verified", "2024-07-16", "hf_hub")
 
 
+def test_late_crawl_is_not_a_dispute() -> None:
+    hub = _c("2023-08-30", HF, source_type="hf_hub", bound=True)
+    late = _c("2023-11-26", WB, source_type="wayback", bound=True)
+    a = assess([hub, late])
+    assert (a.confidence, a.date) == ("inferred", "2023-08-30")
+    # A bound far from a stated date does not dispute it either.
+    a = assess([_c("2025-01-01", OAI, bound=True), _c("2025-03-15", MD)])
+    assert (a.confidence, a.date) == ("inferred", "2025-03-15")
+
+
 def test_registry_timestamp_corroborates_but_does_not_set_the_date() -> None:
     # OpenAI registered gpt-4o-mini two days before launch; models.dev has
     # the launch day. The stated date wins, the bound only corroborates.

@@ -34,7 +34,7 @@ PROJECT_VERIFIER = "llm-ledger"
 # Rows with these source types are owned by the loaders and re-assessed on
 # every run. Any other source type means a person curated the row: never
 # touched by machine code.
-MACHINE_SOURCE_TYPES = {"hf_hub", "api_metadata"}
+MACHINE_SOURCE_TYPES = {"hf_hub", "api_metadata", "lifecycle_table"}
 
 
 @dataclass(frozen=True)
@@ -120,13 +120,18 @@ def assess(claims: list) -> Assessment:
         return result("inferred", f"single source: {_describe([best])}")
 
     # Day-precision claims are compared to the day; a year placeholder only
-    # disputes when it names a different year.
+    # disputes when it names a different year. Bounds (repo/registry
+    # creation, first crawl) corroborate when close and say nothing when
+    # far: a late crawl is lag, not disagreement. Only stated dates dispute.
     comparable = [c for c in independent if c.precision == "day"] or independent
     window = BOUND_AGREE_DAYS if any(c.bound for c in comparable) else AGREE_DAYS
     spread = (max(c.date for c in comparable) - min(c.date for c in comparable)).days
+    stated_day = [c for c in comparable if not c.bound]
+    stated_spread = ((max(c.date for c in stated_day) - min(c.date for c in stated_day)).days
+                     if len(stated_day) >= 2 else 0)
     year_conflict = any(c.precision == "year" and c.date.year != best.date.year
                         for c in independent)
-    if year_conflict or spread > DISPUTE_DAYS:
+    if year_conflict or stated_spread > DISPUTE_DAYS:
         return result("disputed", f"sources disagree; kept "
                                   f"{'first-party' if best.first_party else 'best-evidenced'} "
                                   f"claim: {_describe(independent)}")

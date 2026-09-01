@@ -56,7 +56,8 @@ PRECISIONS = {"day", "month", "quarter", "year"}
 SOURCE_TYPES = {
     "vendor_blog", "vendor_docs", "vendor_changelog", "deprecation_page",
     "system_card", "arxiv", "hf_hub", "github", "modelscope", "api_metadata",
-    "news", "wikipedia", "community_timeline", "published_paper", "wayback",
+    "lifecycle_table", "news", "wikipedia", "community_timeline",
+    "published_paper", "wayback",
 }
 
 CONFIDENCES = {"verified", "inferred", "disputed"}

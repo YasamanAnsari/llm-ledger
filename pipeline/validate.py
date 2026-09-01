@@ -122,6 +122,7 @@ def check_rule4_temporal_sanity(tables: dict, today: date) -> tuple:
     """Ordering constraints per model+region; future events fail except retired."""
     errors, warnings = [], []
     by_model_region: dict = {}
+    scheduled = 0
     for row in tables["events"]:
         try:
             d = date.fromisoformat(row.get("date", ""))
@@ -131,12 +132,12 @@ def check_rule4_temporal_sanity(tables: dict, today: date) -> tuple:
 
         if d > today:
             if row["event_type"] == "retired":
-                warnings.append(
-                    f"rule4: event {row['event_id']} retired date {d} is in the future "
-                    "(announced shutdown schedule)"
-                )
+                scheduled += 1
             else:
                 errors.append(f"rule4: event {row['event_id']} ({row['event_type']}) dated in the future: {d}")
+    if scheduled:
+        warnings.append(f"rule4: {scheduled} retired event(s) are scheduled in the future "
+                        "(published shutdown dates)")
 
     for (model_id, region), items in by_model_region.items():
         firsts = {}

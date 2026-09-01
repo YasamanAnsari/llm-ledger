@@ -27,15 +27,22 @@ aya-expanse-8b-weights_released-1,https://huggingface.co/CohereLabs/aya-expanse-
 aya-vision-32b-weights_released-1,https://huggingface.co/CohereLabs/aya-vision-32b,hf_hub,2025-03-02,day,hub repo created,true,false
 aya-vision-8b-weights_released-1,https://huggingface.co/CohereLabs/aya-vision-8b,hf_hub,2025-03-02,day,hub repo created,true,false
 baichuan-13b-base-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-13B-Base,hf_hub,2023-07-08,day,hub repo created,true,false
+baichuan-13b-base-weights_released-1,https://web.archive.org/web/20230828/https://huggingface.co/baichuan-inc/Baichuan-13B-Base,wayback,2023-08-28,day,first public capture,true,false
 baichuan-13b-chat-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-13B-Chat,hf_hub,2023-07-08,day,hub repo created,true,false
+baichuan-13b-chat-weights_released-1,https://web.archive.org/web/20230711/https://huggingface.co/baichuan-inc/Baichuan-13B-Chat,wayback,2023-07-11,day,first public capture,true,false
 baichuan-7b-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-7B,hf_hub,2023-06-13,day,hub repo created,true,false
+baichuan-7b-weights_released-1,https://web.archive.org/web/20230615/https://huggingface.co/baichuan-inc/Baichuan-7B,wayback,2023-06-15,day,first public capture,true,false
 baichuan-m2-32b-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-M2-32B,hf_hub,2025-08-10,day,hub repo created,true,false
 baichuan-m3-235b-fp8-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-M3-235B-FP8,hf_hub,2026-01-21,day,hub repo created,true,false
 baichuan-m3-235b-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan-M3-235B,hf_hub,2026-01-13,day,hub repo created,true,false
 baichuan2-13b-base-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan2-13B-Base,hf_hub,2023-08-30,day,hub repo created,true,false
+baichuan2-13b-base-weights_released-1,https://web.archive.org/web/20230926/https://huggingface.co/baichuan-inc/Baichuan2-13B-Base,wayback,2023-09-26,day,first public capture,true,false
 baichuan2-13b-chat-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat,hf_hub,2023-08-29,day,hub repo created,true,false
+baichuan2-13b-chat-weights_released-1,https://web.archive.org/web/20230907/https://huggingface.co/baichuan-inc/Baichuan2-13B-Chat,wayback,2023-09-07,day,first public capture,true,false
 baichuan2-7b-base-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan2-7B-Base,hf_hub,2023-08-30,day,hub repo created,true,false
+baichuan2-7b-base-weights_released-1,https://web.archive.org/web/20231010/https://huggingface.co/baichuan-inc/Baichuan2-7B-Base,wayback,2023-10-10,day,first public capture,true,false
 baichuan2-7b-chat-weights_released-1,https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat,hf_hub,2023-08-29,day,hub repo created,true,false
+baichuan2-7b-chat-weights_released-1,https://web.archive.org/web/20231115/https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat,wayback,2023-11-15,day,first public capture,true,false
 baichuanmed-ocr-72b-weights_released-1,https://huggingface.co/baichuan-inc/BaichuanMed-OCR-72B,hf_hub,2025-04-02,day,hub repo created,true,false
 baichuanmed-ocr-7b-weights_released-1,https://huggingface.co/baichuan-inc/BaichuanMed-OCR-7B,hf_hub,2025-04-07,day,hub repo created,true,false
 bfs-prover-v1-7b-weights_released-1,https://huggingface.co/ByteDance-Seed/BFS-Prover-V1-7B,hf_hub,2025-02-23,day,hub repo created,true,false
@@ -62,20 +69,33 @@ caprl-qwen3vl-4b-weights_released-1,https://huggingface.co/internlm/CapRL-Qwen3V
 circuit-sparsity-weights_released-1,https://huggingface.co/openai/circuit-sparsity,hf_hub,2025-12-11,day,hub repo created,true,false
 claude-3-5-haiku-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-10-22,day,epoch.ai,false,false
 claude-3-5-haiku-api_ga-1,https://models.dev/api.json,api_metadata,2024-10-22,day,models.dev,false,false
+claude-3-5-sonnet-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-30,day,"litellm (bedrock/us-gov-east-1/anthropic.claude-3-5-sonnet-20240620-v1:0, bedrock/us-gov-west-1/anthropic.claude-3-5-sonnet-20240620-v1:0)",false,false
 claude-3-7-sonnet-api_ga-1,https://models.dev/api.json,api_metadata,2025-02-19,day,models.dev,false,false
+claude-3-7-sonnet-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-02-19,day,litellm (claude-3-7-sonnet-20250219),false,false
+claude-3-7-sonnet-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-30,day,litellm (bedrock/us-gov-west-1/anthropic.claude-3-7-sonnet-20250219-v1:0),false,false
 claude-3-haiku-platform_availability-2,https://openrouter.ai/api/v1/models,api_metadata,2024-03-13,day,openrouter,false,true
+claude-3-haiku-retired-2,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html,lifecycle_table,2026-09-10,day,bedrock_lifecycle (anthropic.claude-3-haiku-20240307-v1:0),false,true
+claude-3-haiku-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-09-10,day,"litellm (anthropic.claude-3-haiku-20240307-v1:0, bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0, bedrock/us-gov-west-1/anthropic.claude-3-haiku-20240307-v1:0)",false,false
+claude-3-sonnet-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-30,day,litellm (anthropic.claude-3-sonnet-20240229-v1:0),false,false
 claude-fable-5-1-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-08-28,day,anthropic_api created,true,false
 claude-fable-5-1-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-01,day,models.dev,false,false
 claude-fable-5-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-01,day,openrouter,false,true
+claude-fable-5-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-01,day,litellm (claude-fable-5-1),false,false
 claude-fable-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-06-07,day,anthropic_api created,true,false
 claude-fable-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-09,day,models.dev,false,false
 claude-fable-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-09,day,openrouter,false,true
+claude-fable-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-06-09,day,litellm (claude-fable-5),false,false
+claude-fable-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-05,day,azure_lifecycle (claude-fable-5),false,true
+claude-fable-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5),false,false
 claude-fable-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-09,day,models.dev,false,false
 claude-fable-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-09,day,openrouter,false,true
 claude-haiku-4-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-10-15,day,epoch.ai,false,false
 claude-haiku-4-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2025-10-15,day,anthropic_api created,true,false
 claude-haiku-4-5-api_ga-1,https://models.dev/api.json,api_metadata,2025-10-15,day,models.dev,false,false
 claude-haiku-4-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-10-15,day,openrouter,false,true
+claude-haiku-4-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-15,day,"litellm (claude-haiku-4-5, claude-haiku-4-5-20251001)",false,false
+claude-haiku-4-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-19,day,"azure_lifecycle (claude-haiku-4-5, claude-haiku-4-5)",false,true
+claude-haiku-4-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-19,day,litellm (azure_ai/claude-haiku-4-5),false,false
 claude-haiku-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-27,day,models.dev,false,false
 claude-haiku-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-27,day,openrouter,false,true
 claude-mythos-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-06-09,day,epoch.ai,false,false
@@ -83,34 +103,67 @@ claude-mythos-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-09,day
 claude-opus-4-1-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-08-05,day,epoch.ai,false,false
 claude-opus-4-1-api_ga-1,https://models.dev/api.json,api_metadata,2025-08-05,day,models.dev,false,false
 claude-opus-4-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-05,day,openrouter,false,true
+claude-opus-4-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-05,day,"litellm (claude-opus-4-1, claude-opus-4-1-20250805)",false,false
+claude-opus-4-1-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-08-05,day,azure_lifecycle (claude-opus-4-1),false,true
+claude-opus-4-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-05,day,litellm (azure_ai/claude-opus-4-1),false,false
+claude-opus-4-1-retired-3,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html,lifecycle_table,2027-01-08,day,bedrock_lifecycle (anthropic.claude-opus-4-1-20250805-v1:0),false,true
+claude-opus-4-1-retired-3,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-08,day,litellm (anthropic.claude-opus-4-1-20250805-v1:0),false,false
 claude-opus-4-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-11-24,day,epoch.ai,false,false
 claude-opus-4-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2025-11-24,day,anthropic_api created,true,false
 claude-opus-4-5-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-24,day,models.dev,false,false
 claude-opus-4-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-24,day,openrouter,false,true
+claude-opus-4-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-24,day,"litellm (claude-opus-4-5, claude-opus-4-5-20251101)",false,false
+claude-opus-4-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-19,day,azure_lifecycle (claude-opus-4-5),false,true
+claude-opus-4-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-19,day,litellm (azure_ai/claude-opus-4-5),false,false
 claude-opus-4-6-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-02-04,day,anthropic_api created,true,false
 claude-opus-4-6-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-05,day,models.dev,false,false
 claude-opus-4-6-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-02-04,day,openrouter,false,true
+claude-opus-4-6-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-05,day,"litellm (claude-opus-4-6, claude-opus-4-6-20260205)",false,false
+claude-opus-4-6-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-02-02,day,azure_lifecycle (claude-opus-4-6),false,true
+claude-opus-4-6-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-02,day,litellm (azure_ai/claude-opus-4-6),false,false
 claude-opus-4-7-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-04-14,day,anthropic_api created,true,false
 claude-opus-4-7-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-16,day,models.dev,false,false
 claude-opus-4-7-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-16,day,openrouter,false,true
+claude-opus-4-7-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-16,day,"litellm (claude-opus-4-7, claude-opus-4-7-20260416)",false,false
+claude-opus-4-7-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-06,day,azure_lifecycle (claude-opus-4-7),false,true
+claude-opus-4-7-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-06,day,litellm (azure_ai/claude-opus-4-7),false,false
 claude-opus-4-8-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-05-28,day,anthropic_api created,true,false
 claude-opus-4-8-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-28,day,models.dev,false,false
 claude-opus-4-8-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-27,day,openrouter,false,true
+claude-opus-4-8-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-28,day,litellm (claude-opus-4-8),false,false
+claude-opus-4-8-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-09-01,day,"azure_lifecycle (claude-opus-4-8, claude-opus-4-8)",false,true
+claude-opus-4-8-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-01,day,litellm (azure_ai/claude-opus-4-8),false,false
 claude-opus-4-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-05-22,day,epoch.ai,false,false
 claude-opus-4-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-22,day,models.dev,false,false
 claude-opus-4-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-05-22,day,openrouter,false,true
+claude-opus-4-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-15,day,litellm (claude-opus-4-20250514),false,false
 claude-opus-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-24,day,openrouter,false,true
+claude-opus-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-07-24,day,litellm (claude-opus-5),false,false
+claude-opus-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-07-08,day,"azure_lifecycle (claude-opus-5, claude-opus-5)",false,true
+claude-opus-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-07-08,day,litellm (azure_ai/claude-opus-5),false,false
 claude-opus-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-21,day,models.dev,false,false
 claude-opus-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-21,day,openrouter,false,true
 claude-sonnet-4-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-09-29,day,openrouter,false,true
+claude-sonnet-4-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-09-29,day,"litellm (claude-sonnet-4-5, claude-sonnet-4-5-20250929)",false,false
+claude-sonnet-4-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-19,day,azure_lifecycle (claude-sonnet-4-5),false,true
+claude-sonnet-4-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-19,day,litellm (azure_ai/claude-sonnet-4-5),false,false
 claude-sonnet-4-6-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-02-17,day,epoch.ai,false,false
 claude-sonnet-4-6-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-02-17,day,anthropic_api created,true,false
 claude-sonnet-4-6-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-17,day,models.dev,false,false
 claude-sonnet-4-6-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-02-17,day,openrouter,false,true
+claude-sonnet-4-6-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-17,day,litellm (claude-sonnet-4-6),false,false
+claude-sonnet-4-6-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-02-10,day,azure_lifecycle (claude-sonnet-4-6),false,true
+claude-sonnet-4-6-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-10,day,litellm (azure_ai/claude-sonnet-4-6),false,false
 claude-sonnet-4-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-05-22,day,epoch.ai,false,false
 claude-sonnet-4-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-22,day,models.dev,false,false
 claude-sonnet-4-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-05-22,day,openrouter,false,true
+claude-sonnet-4-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-15,day,litellm (claude-sonnet-4-20250514),false,false
+claude-sonnet-4-retired-2,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html,lifecycle_table,2026-10-14,day,bedrock_lifecycle (anthropic.claude-sonnet-4-20250514-v1:0),false,true
+claude-sonnet-4-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-14,day,litellm (anthropic.claude-sonnet-4-20250514-v1:0),false,false
 claude-sonnet-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-30,day,openrouter,false,true
+claude-sonnet-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-06-30,day,litellm (claude-sonnet-5),false,false
+claude-sonnet-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-06-30,day,"azure_lifecycle (claude-sonnet-5, claude-sonnet-5)",false,true
+claude-sonnet-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-06-30,day,litellm (azure_ai/claude-sonnet-5),false,false
 claude-sonnet-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-27,day,models.dev,false,false
 claude-sonnet-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-27,day,openrouter,false,true
 codegeex4-all-9b-weights_released-1,https://huggingface.co/zai-org/codegeex4-all-9b,hf_hub,2024-07-05,day,hub repo created,true,false
@@ -125,7 +178,10 @@ codestral-embed-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-28,day
 codestral-weights_released-1,https://models.dev/api.json,api_metadata,2024-05-29,day,models.dev,false,false
 codex-mini-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-05-16,day,epoch.ai,false,false
 codex-mini-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-16,day,models.dev,false,false
+codex-mini-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-11-15,day,azure_lifecycle (codex-mini-2025-05-16),false,true
+codex-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-15,day,litellm (azure/codex-mini),false,false
 cogagent-vqa-hf-weights_released-1,https://huggingface.co/zai-org/cogagent-vqa-hf,hf_hub,2023-12-16,day,hub repo created,true,false
+cogagent-vqa-hf-weights_released-1,https://web.archive.org/web/20251118/https://huggingface.co/zai-org/cogagent-vqa-hf,wayback,2025-11-18,day,first public capture,true,false
 cogvlm2-llama3-chat-19b-weights_released-1,https://huggingface.co/zai-org/cogvlm2-llama3-chat-19B,hf_hub,2024-05-16,day,hub repo created,true,false
 cohere-command-a-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-03-13,day,epoch.ai,false,false
 cohere-command-a-reasoning-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-08-21,day,epoch.ai,false,false
@@ -144,12 +200,14 @@ command-r-08-2024-platform_availability-1,https://openrouter.ai/api/v1/models,ap
 command-r-08-2024-weights_released-1,https://models.dev/api.json,api_metadata,2024-08-30,day,models.dev,false,false
 command-r-plus-08-2024-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-08-30,day,openrouter,false,true
 command-r-plus-08-2024-weights_released-1,https://models.dev/api.json,api_metadata,2024-08-30,day,models.dev,false,false
+command-r-plus-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2025-09-15,day,litellm (command-r-plus),false,false
 command-r7b-12-2024-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-12-14,day,openrouter,false,true
 command-r7b-12-2024-weights_released-1,https://models.dev/api.json,api_metadata,2024-12-02,day,models.dev,false,false
 cosmo-1b-weights_released-1,https://huggingface.co/HuggingFaceTB/cosmo-1b,hf_hub,2024-02-19,day,hub repo created,true,false
 cosmos-reason2-2b-weights_released-1,https://huggingface.co/nvidia/Cosmos-Reason2-2B,hf_hub,2025-12-12,day,hub repo created,true,false
 cosmos-reason2-8b-weights_released-1,https://huggingface.co/nvidia/Cosmos-Reason2-8B,hf_hub,2025-12-12,day,hub repo created,true,false
 cpm-ant-10b-weights_released-1,https://huggingface.co/openbmb/cpm-ant-10b,hf_hub,2023-01-15,day,hub repo created,true,false
+cpm-ant-10b-weights_released-1,https://web.archive.org/web/20230623/https://huggingface.co/openbmb/cpm-ant-10b,wayback,2023-06-23,day,first public capture,true,false
 cudallm-8b-weights_released-1,https://huggingface.co/ByteDance-Seed/cudaLLM-8B,hf_hub,2025-08-03,day,hub repo created,true,false
 deephermes-3-llama-3-3b-preview-weights_released-1,https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-3B-Preview,hf_hub,2025-02-16,day,hub repo created,true,false
 deephermes-3-llama-3-8b-preview-weights_released-1,https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview,hf_hub,2025-02-12,day,hub repo created,true,false
@@ -161,17 +219,24 @@ deepseek-chat-v3-1-platform_availability-1,https://openrouter.ai/api/v1/models,a
 deepseek-chat-v3-api_ga-1,https://models.dev/api.json,api_metadata,2025-03-24,day,models.dev,false,false
 deepseek-chat-v3-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-03-24,day,openrouter,false,true
 deepseek-coder-1-3b-base-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base,hf_hub,2023-10-28,day,hub repo created,true,false
+deepseek-coder-1-3b-base-weights_released-1,https://web.archive.org/web/20231123/https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base,wayback,2023-11-23,day,first public capture,true,false
 deepseek-coder-1-3b-instruct-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct,hf_hub,2023-10-29,day,hub repo created,true,false
+deepseek-coder-1-3b-instruct-weights_released-1,https://web.archive.org/web/20231106/https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct,wayback,2023-11-06,day,first public capture,true,false
 deepseek-coder-6-7b-base-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base,hf_hub,2023-10-23,day,hub repo created,true,false
+deepseek-coder-6-7b-base-weights_released-1,https://web.archive.org/web/20231127/https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base,wayback,2023-11-27,day,first public capture,true,false
 deepseek-coder-6-7b-instruct-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct,hf_hub,2023-10-29,day,hub repo created,true,false
+deepseek-coder-6-7b-instruct-weights_released-1,https://web.archive.org/web/20231114/https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct,wayback,2023-11-14,day,first public capture,true,false
 deepseek-coder-7b-instruct-v1-5-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-coder-7b-instruct-v1.5,hf_hub,2024-01-25,day,hub repo created,true,false
 deepseek-coder-v2-instruct-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct,hf_hub,2024-06-14,day,hub repo created,true,false
 deepseek-coder-v2-lite-base-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Base,hf_hub,2024-06-14,day,hub repo created,true,false
 deepseek-coder-v2-lite-instruct-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct,hf_hub,2024-06-14,day,hub repo created,true,false
 deepseek-llm-7b-base-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-llm-7b-base,hf_hub,2023-11-29,day,hub repo created,true,false
 deepseek-llm-7b-chat-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat,hf_hub,2023-11-29,day,hub repo created,true,false
+deepseek-llm-7b-chat-weights_released-1,https://web.archive.org/web/20231208/https://huggingface.co/deepseek-ai/deepseek-llm-7b-chat,wayback,2023-12-08,day,first public capture,true,false
 deepseek-moe-16b-base-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-moe-16b-base,hf_hub,2024-01-08,day,hub repo created,true,false
+deepseek-moe-16b-base-weights_released-1,https://web.archive.org/web/20240111/https://huggingface.co/deepseek-ai/deepseek-moe-16b-base,wayback,2024-01-11,day,first public capture,true,false
 deepseek-moe-16b-chat-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat,hf_hub,2024-01-09,day,hub repo created,true,false
+deepseek-moe-16b-chat-weights_released-1,https://web.archive.org/web/20240111/https://huggingface.co/deepseek-ai/deepseek-moe-16b-chat,wayback,2024-01-11,day,first public capture,true,false
 deepseek-ocr-2-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-OCR-2,hf_hub,2026-01-27,day,hub repo created,true,false
 deepseek-ocr-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-OCR,hf_hub,2025-10-17,day,hub repo created,true,false
 deepseek-ocr-weights_released-1,https://models.dev/api.json,api_metadata,2025-10-20,day,models.dev,false,false
@@ -192,11 +257,17 @@ deepseek-r1-distill-qwen-32b-weights_released-1,https://huggingface.co/deepseek-
 deepseek-r1-distill-qwen-7b-api_ga-1,https://models.dev/api.json,api_metadata,2025-01-01,year,models.dev,false,false
 deepseek-r1-distill-qwen-7b-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B,hf_hub,2025-01-20,day,hub repo created,true,false
 deepseek-r1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-01-20,day,openrouter,false,true
+deepseek-r1-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-08-13,day,"azure_lifecycle (DeepSeek-R1-0528, DeepSeek-R1)",false,true
+deepseek-r1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-13,day,litellm (azure_ai/deepseek-r1),false,false
+deepseek-r1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-14,day,litellm (together_ai/deepseek-ai/DeepSeek-R1),false,false
 deepseek-r1-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-R1,hf_hub,2025-01-20,day,hub repo created,true,false
 deepseek-v2-lite-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite,hf_hub,2024-05-15,day,hub repo created,true,false
 deepseek-v2-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V2,hf_hub,2024-04-22,day,hub repo created,true,false
 deepseek-v3-1-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-08-21,day,epoch.ai,false,false
 deepseek-v3-1-base-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Base,hf_hub,2025-08-19,day,hub repo created,true,false
+deepseek-v3-1-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-07-13,day,azure_lifecycle (DeepSeek-V3.1),false,true
+deepseek-v3-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-13,day,litellm (azure_ai/deepseek-v3.1),false,false
+deepseek-v3-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-14,day,litellm (together_ai/deepseek-ai/DeepSeek-V3.1),false,false
 deepseek-v3-1-terminus-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-09-22,day,epoch.ai,false,false
 deepseek-v3-1-terminus-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-09-22,day,openrouter,false,true
 deepseek-v3-1-terminus-w4afp8-weights_released-1,https://huggingface.co/tencent/DeepSeek-V3.1-Terminus-W4AFP8,hf_hub,2025-10-28,day,hub repo created,true,false
@@ -212,10 +283,14 @@ deepseek-v3-2-exp-weights_released-1,https://models.dev/api.json,api_metadata,20
 deepseek-v3-2-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-01,day,openrouter,false,true
 deepseek-v3-2-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V3.2,hf_hub,2025-12-01,day,hub repo created,true,false
 deepseek-v3-2-weights_released-1,https://models.dev/api.json,api_metadata,2025-12-01,day,models.dev,false,false
+deepseek-v3-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-07-13,day,azure_lifecycle (DeepSeek-V3-0324),false,true
+deepseek-v3-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-13,day,litellm (azure_ai/deepseek-v3-0324),false,false
 deepseek-v4-flash-dspark-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-DSpark,hf_hub,2026-06-27,day,hub repo created,true,false
 deepseek-v4-flash-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-08-01,day,openrouter,false,true
 deepseek-v4-flash-latest-weights_released-1,https://models.dev/api.json,api_metadata,2026-08-01,day,models.dev,false,false
 deepseek-v4-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-24,day,openrouter,false,true
+deepseek-v4-flash-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-20,day,azure_lifecycle (DeepSeek-V4-Flash-2026-04-23),false,true
+deepseek-v4-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-20,day,"litellm (azure_ai/deepseek-v4-flash-0731, azure_ai/deepseek-v4-flash)",false,false
 deepseek-v4-flash-vision-exp-api_ga-1,https://models.dev/api.json,api_metadata,2026-08-21,day,models.dev,false,false
 deepseek-v4-flash-vision-exp-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-08-21,day,openrouter,false,true
 deepseek-v4-flash-vision-exp-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp,hf_hub,2026-08-31,day,hub repo created,true,false
@@ -223,9 +298,13 @@ deepseek-v4-flash-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek
 deepseek-v4-flash-weights_released-1,https://models.dev/api.json,api_metadata,2026-04-24,day,models.dev,false,false
 deepseek-v4-pro-dspark-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark,hf_hub,2026-06-27,day,hub repo created,true,false
 deepseek-v4-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-24,day,openrouter,false,true
+deepseek-v4-pro-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-20,day,azure_lifecycle (DeepSeek-V4-Pro-2026-04-23),false,true
+deepseek-v4-pro-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-20,day,litellm (azure_ai/deepseek-v4-pro),false,false
+deepseek-v4-pro-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-27,day,litellm (together_ai/deepseek-ai/DeepSeek-V4-Pro),false,false
 deepseek-v4-pro-weights_released-1,https://models.dev/api.json,api_metadata,2026-04-24,day,models.dev,false,false
 deepseek-vl2-tiny-weights_released-1,https://huggingface.co/deepseek-ai/deepseek-vl2-tiny,hf_hub,2024-12-13,day,hub repo created,true,false
 devstral-2512-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-09,day,openrouter,false,true
+devstral-2512-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-31,day,litellm (mistral/devstral-2512),false,false
 devstral-2512-weights_released-1,https://models.dev/api.json,api_metadata,2025-12-09,day,models.dev,false,false
 devstral-small-2-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-12-09,day,epoch.ai,false,false
 devstral-small-2-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-09,day,models.dev,false,false
@@ -282,6 +361,7 @@ esm2-650m-weights_released-1,https://models.dev/api.json,api_metadata,2024-08-29
 evoquality-weights_released-1,https://huggingface.co/ByteDance/EvoQuality,hf_hub,2026-06-10,day,hub repo created,true,false
 falcon-11b-weights_released-1,https://huggingface.co/tiiuae/falcon-11B,hf_hub,2024-05-09,day,hub repo created,true,false
 falcon-40b-weights_released-1,https://huggingface.co/tiiuae/falcon-40b,hf_hub,2023-05-24,day,hub repo created,true,false
+falcon-40b-weights_released-1,https://web.archive.org/web/20230526/https://huggingface.co/tiiuae/falcon-40b,wayback,2023-05-26,day,first public capture,true,false
 falcon-7b-weights_released-1,https://huggingface.co/tiiuae/falcon-7b,hf_hub,2023-04-24,day,hub repo created,true,false
 falcon-e-1b-base-weights_released-1,https://huggingface.co/tiiuae/Falcon-E-1B-Base,hf_hub,2025-04-10,day,hub repo created,true,false
 falcon-e-1b-instruct-weights_released-1,https://huggingface.co/tiiuae/Falcon-E-1B-Instruct,hf_hub,2025-04-16,day,hub repo created,true,false
@@ -307,6 +387,7 @@ falcon-h1r-7b-weights_released-1,https://huggingface.co/tiiuae/Falcon-H1R-7B,hf_
 falcon-mamba-7b-weights_released-1,https://huggingface.co/tiiuae/falcon-mamba-7b,hf_hub,2024-07-17,day,hub repo created,true,false
 falcon-mamba-tiny-dev-weights_released-1,https://huggingface.co/tiiuae/falcon-mamba-tiny-dev,hf_hub,2024-10-13,day,hub repo created,true,false
 falcon-rw-1b-weights_released-1,https://huggingface.co/tiiuae/falcon-rw-1b,hf_hub,2023-04-26,day,hub repo created,true,false
+falcon-rw-1b-weights_released-1,https://web.archive.org/web/20230531/https://huggingface.co/tiiuae/falcon-rw-1b,wayback,2023-05-31,day,first public capture,true,false
 falcon3-10b-base-weights_released-1,https://huggingface.co/tiiuae/Falcon3-10B-Base,hf_hub,2024-12-03,day,hub repo created,true,false
 falcon3-10b-instruct-weights_released-1,https://huggingface.co/tiiuae/Falcon3-10B-Instruct,hf_hub,2024-12-14,day,hub repo created,true,false
 falcon3-1b-base-weights_released-1,https://huggingface.co/tiiuae/Falcon3-1B-Base,hf_hub,2024-12-13,day,hub repo created,true,false
@@ -328,23 +409,33 @@ florence-2-large-weights_released-1,https://huggingface.co/microsoft/Florence-2-
 gelab-zero-4b-preview-weights_released-1,https://huggingface.co/stepfun-ai/GELab-Zero-4B-preview,hf_hub,2025-11-28,day,hub repo created,true,false
 gemini-2-0-flash-lite-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-02-05,day,epoch.ai,false,false
 gemini-2-0-flash-lite-api_ga-1,https://models.dev/api.json,api_metadata,2025-02-05,day,models.dev,false,false
+gemini-2-0-flash-lite-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-01,day,litellm (gemini/gemini-2.0-flash-lite),false,false
+gemini-2-0-flash-lite-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-01,day,litellm (gemini-2.0-flash-lite),false,false
+gemini-2-0-flash-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-01,day,litellm (gemini-2.0-flash),false,false
 gemini-2-5-flash-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-04-17,day,epoch.ai,false,false
 gemini-2-5-flash-api_ga-1,https://models.dev/api.json,api_metadata,2025-06-17,day,models.dev,false,false
 gemini-2-5-flash-image-api_ga-1,https://models.dev/api.json,api_metadata,2025-08-26,day,models.dev,false,false
 gemini-2-5-flash-image-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-10-07,day,openrouter,false,true
+gemini-2-5-flash-image-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-02,day,litellm (gemini/gemini-2.5-flash-image),false,false
+gemini-2-5-flash-image-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-02,day,"litellm (gemini-2.5-flash-image, vertex_ai/gemini-2.5-flash-image)",false,false
 gemini-2-5-flash-lite-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-06-15,day,epoch.ai,false,false
 gemini-2-5-flash-lite-api_ga-1,https://models.dev/api.json,api_metadata,2025-06-17,day,models.dev,false,false
 gemini-2-5-flash-lite-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-22,day,openrouter,false,true
+gemini-2-5-flash-lite-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-20,day,litellm (gemini-2.5-flash-lite),false,false
 gemini-2-5-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-06-17,day,openrouter,false,true
+gemini-2-5-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-20,day,litellm (gemini-2.5-flash),false,false
 gemini-2-5-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-06-17,day,openrouter,false,true
 gemini-2-5-pro-preview-05-06-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-07,day,models.dev,false,false
 gemini-2-5-pro-preview-05-06-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-05-07,day,openrouter,false,true
 gemini-2-5-pro-preview-api_ga-1,https://models.dev/api.json,api_metadata,2025-06-05,day,models.dev,false,false
 gemini-2-5-pro-preview-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-06-05,day,openrouter,false,true
+gemini-2-5-pro-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-20,day,litellm (gemini-2.5-pro),false,false
 gemini-3-1-flash-image-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-28,day,models.dev,false,false
 gemini-3-1-flash-image-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-18,day,openrouter,false,true
 gemini-3-1-flash-image-preview-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-26,day,models.dev,false,false
 gemini-3-1-flash-image-preview-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-02-26,day,openrouter,false,true
+gemini-3-1-flash-image-preview-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-25,day,litellm (gemini/gemini-3.1-flash-image-preview),false,false
+gemini-3-1-flash-image-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-28,day,"litellm (gemini-3.1-flash-image, vertex_ai/gemini-3.1-flash-image)",false,false
 gemini-3-1-flash-lite-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-03-03,day,epoch.ai,false,false
 gemini-3-1-flash-lite-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-07,day,models.dev,false,false
 gemini-3-1-flash-lite-image-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-30,day,models.dev,false,false
@@ -352,6 +443,9 @@ gemini-3-1-flash-lite-image-platform_availability-1,https://openrouter.ai/api/v1
 gemini-3-1-flash-lite-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-07,day,openrouter,false,true
 gemini-3-1-flash-lite-preview-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-03,day,models.dev,false,false
 gemini-3-1-flash-lite-preview-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-03-03,day,openrouter,false,true
+gemini-3-1-flash-lite-preview-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-25,day,litellm (gemini/gemini-3.1-flash-lite-preview),false,false
+gemini-3-1-flash-lite-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-07,day,litellm (gemini/gemini-3.1-flash-lite),false,false
+gemini-3-1-flash-lite-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-07,day,"litellm (gemini-3.1-flash-lite, vertex_ai/gemini-3.1-flash-lite)",false,false
 gemini-3-1-pro-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-02-19,day,epoch.ai,false,false
 gemini-3-1-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-19,day,models.dev,false,false
 gemini-3-1-pro-preview-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-19,day,models.dev,false,false
@@ -363,7 +457,9 @@ gemini-3-5-flash-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-19,da
 gemini-3-5-flash-lite-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-21,day,epoch.ai,false,false
 gemini-3-5-flash-lite-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-21,day,models.dev,false,false
 gemini-3-5-flash-lite-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-21,day,openrouter,false,true
+gemini-3-5-flash-lite-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-07-21,day,"litellm (gemini-3.5-flash-lite, vertex_ai/gemini-3.5-flash-lite)",false,false
 gemini-3-5-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-19,day,openrouter,false,true
+gemini-3-5-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-19,day,"litellm (gemini-3.5-flash, vertex_ai/gemini-3.5-flash)",false,false
 gemini-3-6-flash-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-21,day,epoch.ai,false,false
 gemini-3-6-flash-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-21,day,models.dev,false,false
 gemini-3-6-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-21,day,openrouter,false,true
@@ -380,6 +476,8 @@ gemini-3-pro-image-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-28,
 gemini-3-pro-image-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-18,day,openrouter,false,true
 gemini-3-pro-image-preview-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-20,day,models.dev,false,false
 gemini-3-pro-image-preview-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-20,day,openrouter,false,true
+gemini-3-pro-image-preview-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-25,day,litellm (gemini/gemini-3-pro-image-preview),false,false
+gemini-3-pro-image-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-28,day,"litellm (gemini-3-pro-image, vertex_ai/gemini-3-pro-image)",false,false
 gemini-embedding-api_ga-1,https://models.dev/api.json,api_metadata,2025-05-20,day,models.dev,false,false
 gemini-exp-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-11-15,day,epoch.ai,false,false
 gemini-exp-api_ga-1,https://models.dev/api.json,api_metadata,2024-12-06,day,models.dev,false,false
@@ -418,6 +516,7 @@ gemma-4-26b-a4b-it-qat-q4-0-unquantized-weights_released-1,https://huggingface.c
 gemma-4-26b-a4b-it-weights_released-1,https://huggingface.co/google/gemma-4-26B-A4B-it,hf_hub,2026-03-11,day,hub repo created,true,false
 gemma-4-26b-a4b-it-weights_released-1,https://models.dev/api.json,api_metadata,2026-04-02,day,models.dev,false,false
 gemma-4-31b-it-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-02,day,openrouter,false,true
+gemma-4-31b-it-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-27,day,litellm (together_ai/pearl-ai/gemma-4-31b-it),false,false
 gemma-4-31b-it-weights_released-1,https://models.dev/api.json,api_metadata,2026-04-02,day,models.dev,false,false
 gemma-4-31b-weights_released-1,https://huggingface.co/google/gemma-4-31B,hf_hub,2026-03-12,day,hub repo created,true,false
 glm-4-1v-9b-base-weights_released-1,https://huggingface.co/zai-org/GLM-4.1V-9B-Base,hf_hub,2025-06-28,day,hub repo created,true,false
@@ -426,6 +525,7 @@ glm-4-32b-weights_released-1,https://huggingface.co/zai-org/GLM-4-32B-0414,hf_hu
 glm-4-32b-weights_released-1,https://models.dev/api.json,api_metadata,2024-01-01,year,models.dev,false,false
 glm-4-5-air-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-28,day,models.dev,false,false
 glm-4-5-air-base-weights_released-1,https://huggingface.co/zai-org/GLM-4.5-Air-Base,hf_hub,2025-07-20,day,hub repo created,true,false
+glm-4-5-air-fp8-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-02,day,litellm (together_ai/zai-org/GLM-4.5-Air-FP8),false,false
 glm-4-5-air-fp8-weights_released-1,https://huggingface.co/zai-org/GLM-4.5-Air-FP8,hf_hub,2025-07-20,day,hub repo created,true,false
 glm-4-5-air-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-25,day,openrouter,false,true
 glm-4-5-air-weights_released-1,https://huggingface.co/zai-org/GLM-4.5-Air,hf_hub,2025-07-20,day,hub repo created,true,false
@@ -452,6 +552,7 @@ glm-4-7-flash-weights_released-1,https://huggingface.co/zai-org/GLM-4.7-Flash,hf
 glm-4-7-flash-weights_released-1,https://models.dev/api.json,api_metadata,2026-01-19,day,models.dev,false,false
 glm-4-7-fp8-weights_released-1,https://huggingface.co/zai-org/GLM-4.7-FP8,hf_hub,2025-12-22,day,hub repo created,true,false
 glm-4-7-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-22,day,openrouter,false,true
+glm-4-7-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-02,day,litellm (together_ai/zai-org/GLM-4.7),false,false
 glm-4-7-weights_released-1,https://huggingface.co/zai-org/GLM-4.7,hf_hub,2025-12-22,day,hub repo created,true,false
 glm-4-7-weights_released-1,https://models.dev/api.json,api_metadata,2025-12-22,day,models.dev,false,false
 glm-4-9b-chat-1m-hf-weights_released-1,https://huggingface.co/zai-org/glm-4-9b-chat-1m-hf,hf_hub,2024-10-24,day,hub repo created,true,false
@@ -496,6 +597,7 @@ got-ocr2-0-weights_released-1,https://huggingface.co/stepfun-ai/GOT-OCR2_0,hf_hu
 gpt-3-5-turbo-16k-api_ga-1,https://api.openai.com/v1/models,api_metadata,2023-05-10,day,openai_api created,true,false
 gpt-3-5-turbo-16k-api_ga-1,https://models.dev/api.json,api_metadata,2023-08-28,day,models.dev,false,false
 gpt-3-5-turbo-16k-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2023-08-28,day,openrouter,false,true
+gpt-3-5-turbo-16k-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,litellm (gpt-3.5-turbo-16k),false,false
 gpt-3-5-turbo-api_ga-1,https://api.openai.com/v1/models,api_metadata,2023-02-28,day,openai_api created,true,false
 gpt-3-5-turbo-api_ga-1,https://models.dev/api.json,api_metadata,2023-03-01,day,models.dev,false,false
 gpt-3-5-turbo-instruct-api_ga-1,https://api.openai.com/v1/models,api_metadata,2023-08-24,day,openai_api created,true,false
@@ -503,24 +605,41 @@ gpt-3-5-turbo-instruct-api_ga-1,https://models.dev/api.json,api_metadata,2023-09
 gpt-3-5-turbo-instruct-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2023-09-28,day,openrouter,false,true
 gpt-3-5-turbo-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2023-05-28,day,openrouter,false,true
 gpt-3-5-turbo-retired-1,https://api.openai.com/v1/models,api_metadata,2026-10-23,day,openai_api shutdown,false,true
+gpt-3-5-turbo-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,"litellm (gpt-3.5-turbo-1106, gpt-3.5-turbo, gpt-3.5-turbo-0125)",false,false
+gpt-3-5-turbo-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2025-03-31,day,litellm (azure/gpt-3.5-turbo-0125),false,false
 gpt-4-1-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-04-10,day,openai_api created,true,false
 gpt-4-1-mini-api_ga-1,https://models.dev/api.json,api_metadata,2025-04-14,day,models.dev,false,false
 gpt-4-1-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-14,day,openrouter,false,true
+gpt-4-1-mini-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-14,day,azure_lifecycle (gpt-4.1-mini-2025-04-14),false,true
+gpt-4-1-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-14,day,"litellm (azure/gpt-4.1-mini, azure/gpt-4.1-mini-2025-04-14, azure/us/gpt-4.1-mini-2025-04-14)",false,false
 gpt-4-1-nano-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-04-10,day,openai_api created,true,false
 gpt-4-1-nano-api_ga-1,https://models.dev/api.json,api_metadata,2025-04-14,day,models.dev,false,false
 gpt-4-1-nano-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-14,day,openrouter,false,true
 gpt-4-1-nano-retired-1,https://api.openai.com/v1/models,api_metadata,2026-10-23,day,openai_api shutdown,false,true
+gpt-4-1-nano-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,"litellm (gpt-4.1-nano, gpt-4.1-nano-2025-04-14)",false,false
+gpt-4-1-nano-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-14,day,azure_lifecycle (gpt-4.1-nano-2025-04-14),false,true
+gpt-4-1-nano-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-14,day,"litellm (azure/us/gpt-4.1-nano-2025-04-14, azure/gpt-4.1-nano, azure/gpt-4.1-nano-2025-04-14)",false,false
 gpt-4-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-14,day,openrouter,false,true
+gpt-4-1-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-14,day,azure_lifecycle (gpt-4.1-2025-04-14),false,true
+gpt-4-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-14,day,"litellm (azure/gpt-4.1, azure/gpt-4.1-2025-04-14, azure/us/gpt-4.1-2025-04-14)",false,false
 gpt-4-platform_availability-2,https://openrouter.ai/api/v1/models,api_metadata,2023-05-28,day,openrouter,false,true
 gpt-4-retired-1,https://api.openai.com/v1/models,api_metadata,2026-10-23,day,openai_api shutdown,false,true
+gpt-4-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,"litellm (gpt-4-0314, gpt-4, gpt-4-0613)",false,false
 gpt-4-turbo-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-04-09,day,openrouter,false,true
 gpt-4-turbo-preview-api_ga-1,https://models.dev/api.json,api_metadata,2024-01-25,day,models.dev,false,false
 gpt-4-turbo-preview-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-01-25,day,openrouter,false,true
+gpt-4-turbo-preview-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-03-26,day,litellm (gpt-4-turbo-preview),false,false
 gpt-4-turbo-retired-1,https://api.openai.com/v1/models,api_metadata,2026-10-23,day,openai_api shutdown,false,true
+gpt-4-turbo-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,"litellm (gpt-4-turbo, gpt-4-turbo-2024-04-09)",false,false
 gpt-4o-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2024-07-16,day,openai_api created,true,false
 gpt-4o-mini-api_ga-1,https://models.dev/api.json,api_metadata,2024-07-18,day,models.dev,false,false
 gpt-4o-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-07-18,day,openrouter,false,true
+gpt-4o-mini-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-14,day,azure_lifecycle (gpt-4o-mini-2024-07-18),false,true
+gpt-4o-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-14,day,"litellm (azure/eu/gpt-4o-mini-2024-07-18, azure/global-standard/gpt-4o-mini, azure/gpt-4o-mini, azure/gpt-4o-mini-2024-07-18, azure/us/gpt-4o-mini-2024-07-18)",false,false
 gpt-4o-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-05-13,day,openrouter,false,true
+gpt-4o-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,litellm (gpt-4o-2024-05-13),false,false
+gpt-4o-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-14,day,"azure_lifecycle (gpt-4o-2024-05-13, gpt-4o-2024-08-06, gpt-4o-2024-11-20)",false,true
+gpt-4o-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-14,day,"litellm (azure/gpt-4o-2024-05-13, azure/eu/gpt-4o-2024-08-06, azure/eu/gpt-4o-2024-11-20, azure/global-standard/gpt-4o-2024-08-06, azure/global-standard/gpt-4o-2024-11-20, azure/global/gpt-4o-2024-08-06, azure/global/gpt-4o-2024-11-20, azure/gpt-4o-2024-08-06, azure/gpt-4o-2024-11-20, azure/us/gpt-4o-2024-08-06, azure/us/gpt-4o-2024-11-20)",false,false
 gpt-5-1-codex-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-11-12,day,epoch.ai,false,false
 gpt-5-1-codex-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-11-12,day,openai_api created,true,false
 gpt-5-1-codex-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-13,day,models.dev,false,false
@@ -528,41 +647,67 @@ gpt-5-1-codex-max-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-11
 gpt-5-1-codex-max-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-13,day,models.dev,false,false
 gpt-5-1-codex-max-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-04,day,openrouter,false,true
 gpt-5-1-codex-max-retired-1,https://api.openai.com/v1/models,api_metadata,2026-07-23,day,openai_api shutdown,false,true
+gpt-5-1-codex-max-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-23,day,litellm (gpt-5.1-codex-max),false,false
+gpt-5-1-codex-max-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-05-18,day,azure_lifecycle (gpt-5.1-codex-max-2025-12-04),false,true
+gpt-5-1-codex-max-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-18,day,litellm (azure/gpt-5.1-codex-max),false,false
 gpt-5-1-codex-mini-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-11-12,day,epoch.ai,false,false
 gpt-5-1-codex-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-11-13,day,openai_api created,true,false
 gpt-5-1-codex-mini-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-13,day,models.dev,false,false
 gpt-5-1-codex-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-13,day,openrouter,false,true
 gpt-5-1-codex-mini-retired-1,https://api.openai.com/v1/models,api_metadata,2026-07-23,day,openai_api shutdown,false,true
+gpt-5-1-codex-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-23,day,litellm (gpt-5.1-codex-mini),false,false
+gpt-5-1-codex-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-05-15,day,azure_lifecycle (gpt-5.1-codex-mini-2025-11-13),false,true
+gpt-5-1-codex-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-15,day,"litellm (azure/eu/gpt-5.1-codex-mini, azure/global/gpt-5.1-codex-mini, azure/gpt-5.1-codex-mini, azure/gpt-5.1-codex-mini-2025-11-13, azure/us/gpt-5.1-codex-mini)",false,false
 gpt-5-1-codex-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-13,day,openrouter,false,true
 gpt-5-1-codex-retired-1,https://api.openai.com/v1/models,api_metadata,2026-07-23,day,openai_api shutdown,false,true
+gpt-5-1-codex-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-23,day,litellm (gpt-5.1-codex),false,false
+gpt-5-1-codex-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-05-15,day,azure_lifecycle (gpt-5.1-codex-2025-11-13),false,true
+gpt-5-1-codex-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-15,day,"litellm (azure/eu/gpt-5.1-codex, azure/global/gpt-5.1-codex, azure/gpt-5.1-codex, azure/gpt-5.1-codex-2025-11-13, azure/us/gpt-5.1-codex)",false,false
 gpt-5-1-instant-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-12,day,models.dev,false,false
 gpt-5-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-13,day,openrouter,false,true
+gpt-5-1-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-05-15,day,"azure_lifecycle (gpt-5.1-chat-2025-11-13, gpt-5.1-2025-11-13)",false,true
+gpt-5-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-15,day,"litellm (azure/eu/gpt-5.1-chat, azure/global/gpt-5.1-chat, azure/gpt-5.1-chat, azure/gpt-5.1-chat-2025-11-13, azure/us/gpt-5.1-chat, azure/eu/gpt-5.1, azure/global/gpt-5.1, azure/gpt-5.1, azure/gpt-5.1-2025-11-13, azure/us/gpt-5.1)",false,false
 gpt-5-2-chat-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-12-09,day,openai_api created,true,false
 gpt-5-2-chat-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-10,day,models.dev,false,false
 gpt-5-2-chat-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-10,day,openrouter,false,true
+gpt-5-2-chat-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-29,day,"azure_lifecycle (gpt-5.2-chat-2025-12-11, gpt-5.2-chat-2026-02-10)",false,true
+gpt-5-2-chat-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-29,day,"litellm (azure/gpt-5.2-chat-2025-12-11, azure/gpt-5.2-chat)",false,false
 gpt-5-2-codex-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-12-19,day,openai_api created,true,false
 gpt-5-2-codex-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-11,day,models.dev,false,false
 gpt-5-2-codex-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-01-14,day,openrouter,false,true
 gpt-5-2-codex-retired-1,https://api.openai.com/v1/models,api_metadata,2026-07-23,day,openai_api shutdown,false,true
+gpt-5-2-codex-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-23,day,litellm (gpt-5.2-codex),false,false
+gpt-5-2-codex-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-07-13,day,azure_lifecycle (gpt-5.2-codex-2026-01-14),false,true
+gpt-5-2-codex-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-07-13,day,litellm (azure/gpt-5.2-codex),false,false
 gpt-5-2-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-10,day,openrouter,false,true
 gpt-5-2-pro-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-12-10,day,openai_api created,true,false
 gpt-5-2-pro-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-11,day,models.dev,false,false
 gpt-5-2-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-10,day,openrouter,false,true
+gpt-5-2-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-06-08,day,azure_lifecycle (gpt-5.2-2025-12-11),false,true
+gpt-5-2-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-06-08,day,"litellm (azure/gpt-5.2, azure/gpt-5.2-2025-12-11)",false,false
 gpt-5-3-codex-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-02-05,day,epoch.ai,false,false
 gpt-5-3-codex-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-02-08,day,openai_api created,true,false
 gpt-5-3-codex-api_ga-1,https://models.dev/api.json,api_metadata,2026-02-05,day,models.dev,false,false
 gpt-5-3-codex-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-02-24,day,openrouter,false,true
+gpt-5-3-codex-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-08-24,day,azure_lifecycle (gpt-5.3-codex-2026-02-24),false,true
+gpt-5-3-codex-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-08-24,day,litellm (azure/gpt-5.3-codex),false,false
 gpt-5-4-image-2-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-21,day,models.dev,false,false
 gpt-5-4-image-2-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-21,day,openrouter,false,true
 gpt-5-4-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-03-14,day,openai_api created,true,false
 gpt-5-4-mini-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-17,day,models.dev,false,false
 gpt-5-4-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-03-17,day,openrouter,false,true
+gpt-5-4-mini-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-09-21,day,azure_lifecycle (gpt-5.4-mini-2026-03-17),false,true
+gpt-5-4-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-21,day,"litellm (azure/gpt-5.4-mini, azure/gpt-5.4-mini-2026-03-17, azure_ai/gpt-5.4-mini, azure_ai/gpt-5.4-mini-2026-03-17)",false,false
 gpt-5-4-nano-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-03-14,day,openai_api created,true,false
 gpt-5-4-nano-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-17,day,models.dev,false,false
 gpt-5-4-nano-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-03-17,day,openrouter,false,true
+gpt-5-4-nano-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-09-21,day,azure_lifecycle (gpt-5.4-nano-2026-03-17),false,true
+gpt-5-4-nano-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-21,day,"litellm (azure/gpt-5.4-nano, azure/gpt-5.4-nano-2026-03-17, azure_ai/gpt-5.4-nano, azure_ai/gpt-5.4-nano-2026-03-17)",false,false
 gpt-5-4-pro-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-03-04,day,openai_api created,true,false
 gpt-5-4-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-05,day,models.dev,false,false
 gpt-5-4-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-03-05,day,openrouter,false,true
+gpt-5-4-pro-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-09-07,day,azure_lifecycle (gpt-5.4-pro-2026-03-05),false,true
+gpt-5-4-pro-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-07,day,"litellm (azure/gpt-5.4-pro, azure/gpt-5.4-pro-2026-03-05, azure_ai/gpt-5.4-pro, azure_ai/gpt-5.4-pro-2026-03-05)",false,false
 gpt-5-5-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-04-22,day,openai_api created,true,false
 gpt-5-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-23,day,models.dev,false,false
 gpt-5-5-instant-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-05-05,day,epoch.ai,false,false
@@ -571,24 +716,35 @@ gpt-5-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata
 gpt-5-5-pro-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-04-22,day,openai_api created,true,false
 gpt-5-5-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-23,day,models.dev,false,false
 gpt-5-5-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-24,day,openrouter,false,true
+gpt-5-5-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-10-26,day,azure_lifecycle (gpt-5.5-2026-04-24),false,true
+gpt-5-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-10-26,day,"litellm (azure/eu/gpt-5.5, azure/gpt-5.5, azure/us/gpt-5.5, azure_ai/gpt-5.5)",false,false
 gpt-5-6-luna-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-06-23,day,openai_api created,true,false
 gpt-5-6-luna-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-luna-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
 gpt-5-6-luna-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-luna-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
+gpt-5-6-luna-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-luna-2026-07-09),false,true
+gpt-5-6-luna-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-luna, azure/gpt-5.6-luna, azure/us/gpt-5.6-luna)",false,false
 gpt-5-6-sol-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-06-23,day,openai_api created,true,false
 gpt-5-6-sol-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-sol-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
 gpt-5-6-sol-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-sol-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
+gpt-5-6-sol-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-sol-2026-07-09),false,true
+gpt-5-6-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-sol, azure/gpt-5.6-sol, azure/us/gpt-5.6-sol)",false,false
 gpt-5-6-terra-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-06-23,day,openai_api created,true,false
 gpt-5-6-terra-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-terra-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
 gpt-5-6-terra-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev,false,false
 gpt-5-6-terra-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true
+gpt-5-6-terra-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-terra-2026-07-09),false,true
+gpt-5-6-terra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-terra, azure/gpt-5.6-terra, azure/us/gpt-5.6-terra)",false,false
 gpt-5-codex-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-09-10,day,openai_api created,true,false
 gpt-5-codex-api_ga-1,https://models.dev/api.json,api_metadata,2025-09-15,day,models.dev,false,false
 gpt-5-codex-retired-1,https://api.openai.com/v1/models,api_metadata,2026-07-23,day,openai_api shutdown,false,true
+gpt-5-codex-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-23,day,litellm (gpt-5-codex),false,false
+gpt-5-codex-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-03-17,day,azure_lifecycle (gpt-5-codex-2025-09-15),false,true
+gpt-5-codex-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-03-17,day,litellm (azure/gpt-5-codex),false,false
 gpt-5-image-api_ga-1,https://models.dev/api.json,api_metadata,2025-10-14,day,models.dev,false,false
 gpt-5-image-mini-api_ga-1,https://models.dev/api.json,api_metadata,2025-10-16,day,models.dev,false,false
 gpt-5-image-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-10-16,day,openrouter,false,true
@@ -596,28 +752,49 @@ gpt-5-image-platform_availability-1,https://openrouter.ai/api/v1/models,api_meta
 gpt-5-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-08-05,day,openai_api created,true,false
 gpt-5-mini-api_ga-1,https://models.dev/api.json,api_metadata,2025-08-07,day,models.dev,false,false
 gpt-5-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-07,day,openrouter,false,true
+gpt-5-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-12-11,day,litellm (gpt-5-mini-2025-08-07),false,false
+gpt-5-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-02-09,day,azure_lifecycle (gpt-5-mini-2025-08-07),false,true
+gpt-5-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-09,day,"litellm (azure/eu/gpt-5-mini-2025-08-07, azure/gpt-5-mini, azure/gpt-5-mini-2025-08-07, azure/us/gpt-5-mini-2025-08-07)",false,false
 gpt-5-nano-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-08-05,day,openai_api created,true,false
 gpt-5-nano-api_ga-1,https://models.dev/api.json,api_metadata,2025-08-07,day,models.dev,false,false
 gpt-5-nano-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-07,day,openrouter,false,true
+gpt-5-nano-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-12-11,day,litellm (gpt-5-nano-2025-08-07),false,false
+gpt-5-nano-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-02-09,day,azure_lifecycle (gpt-5-nano-2025-08-07),false,true
+gpt-5-nano-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-09,day,"litellm (azure/eu/gpt-5-nano-2025-08-07, azure/gpt-5-nano, azure/gpt-5-nano-2025-08-07, azure/us/gpt-5-nano-2025-08-07)",false,false
 gpt-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-07,day,openrouter,false,true
 gpt-5-pro-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-10-03,day,openai_api created,true,false
 gpt-5-pro-api_ga-1,https://models.dev/api.json,api_metadata,2025-10-06,day,models.dev,false,false
 gpt-5-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-10-06,day,openrouter,false,true
+gpt-5-pro-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-12-11,day,litellm (gpt-5-pro-2025-10-06),false,false
+gpt-5-pro-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-07,day,azure_lifecycle (gpt-5-pro-2025-10-06),false,true
+gpt-5-pro-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-07,day,litellm (azure/gpt-5-pro),false,false
+gpt-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-02-09,day,"azure_lifecycle (gpt-5-chat-2025-10-03, gpt-5-chat-2025-08-07, gpt-5-2025-08-07)",false,true
+gpt-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-02-09,day,"litellm (azure/gpt-5-chat, azure/eu/gpt-5-2025-08-07, azure/gpt-5, azure/gpt-5-2025-08-07, azure/us/gpt-5-2025-08-07)",false,false
 gpt-audio-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-08-27,day,openai_api created,true,false
 gpt-audio-api_ga-1,https://models.dev/api.json,api_metadata,2026-01-19,day,models.dev,false,false
 gpt-audio-mini-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-10-03,day,openai_api created,true,false
 gpt-audio-mini-api_ga-1,https://models.dev/api.json,api_metadata,2026-01-19,day,models.dev,false,false
 gpt-audio-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-01-19,day,openrouter,false,true
+gpt-audio-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-20,day,"litellm (gpt-audio-mini-2025-10-06, gpt-audio-mini, gpt-audio-mini-2025-12-15)",false,false
+gpt-audio-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-06-15,day,"azure_lifecycle (gpt-audio-mini-2025-10-06, gpt-audio-mini-2025-12-15)",false,true
+gpt-audio-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-06,day,"litellm (azure/gpt-audio-mini, azure/gpt-audio-mini-2025-10-06)",false,false
 gpt-audio-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-01-19,day,openrouter,false,true
+gpt-audio-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-20,day,"litellm (gpt-audio, gpt-audio-2025-08-28)",false,false
+gpt-audio-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-03-02,day,azure_lifecycle (gpt-audio-2025-08-28),false,true
+gpt-audio-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-03-02,day,litellm (azure/gpt-audio-2025-08-28),false,false
 gpt-chat-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-05-05,day,models.dev,false,false
 gpt-chat-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-05,day,openrouter,false,true
+gpt-chat-latest-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-12-02,day,"azure_lifecycle (gpt-chat-latest-2026-05-05, gpt-chat-latest-2026-05-28, gpt-chat-latest-2026-06-24, gpt-chat-latest-2026-08-06)",false,true
 gpt-image-2-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-04-17,day,openai_api created,true,false
 gpt-image-2-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-21,day,models.dev,false,false
+gpt-image-2-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-10-21,day,azure_lifecycle (gpt-image-2-2026-04-21),false,true
+gpt-image-2-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-10-21,day,"litellm (azure/gpt-image-2, azure/gpt-image-2-2026-04-21)",false,false
 gpt-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-27,day,models.dev,false,false
 gpt-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-27,day,openrouter,false,true
 gpt-mini-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-27,day,models.dev,false,false
 gpt-mini-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-27,day,openrouter,false,true
 gpt-neox-20b-weights_released-1,https://huggingface.co/EleutherAI/gpt-neox-20b,hf_hub,2022-04-07,day,hub repo created,true,false
+gpt-neox-20b-weights_released-1,https://web.archive.org/web/20220524/https://huggingface.co/EleutherAI/gpt-neox-20b,wayback,2022-05-24,day,first public capture,true,false
 gpt-oss-120b-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-08-05,day,epoch.ai,false,false
 gpt-oss-120b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-05,day,openrouter,false,true
 gpt-oss-120b-weights_released-1,https://huggingface.co/openai/gpt-oss-120b,hf_hub,2025-08-04,day,hub repo created,true,false
@@ -670,8 +847,15 @@ granite-swash-2b-weights_released-1,https://huggingface.co/ibm-granite/granite-s
 granite-vision-4-1-4b-weights_released-1,https://huggingface.co/ibm-granite/granite-vision-4.1-4b,hf_hub,2026-04-16,day,hub repo created,true,false
 grok-1-weights_released-1,https://huggingface.co/xai-org/grok-1,hf_hub,2024-03-17,day,hub repo created,true,false
 grok-3-mini-api_ga-1,https://models.dev/api.json,api_metadata,2024-06-01,day,models.dev,false,false
+grok-3-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-02-28,day,litellm (xai/grok-3-mini),false,false
+grok-3-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-05-01,day,azure_lifecycle (grok-3-mini),false,true
+grok-3-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-01,day,"litellm (azure_ai/global/grok-3-mini, azure_ai/grok-3-mini)",false,false
+grok-3-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-15,day,litellm (xai/grok-3),false,false
+grok-3-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-05-01,day,azure_lifecycle (grok-3),false,true
+grok-3-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-01,day,"litellm (azure_ai/global/grok-3, azure_ai/grok-3)",false,false
 grok-4-1-fast-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-11-19,day,epoch.ai,false,false
 grok-4-1-fast-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-20,day,models.dev,false,false
+grok-4-1-fast-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-15,day,litellm (xai/grok-4-1-fast),false,false
 grok-4-20-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-02-17,day,epoch.ai,false,false
 grok-4-20-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-31,day,models.dev,false,false
 grok-4-20-multi-agent-api_ga-1,https://models.dev/api.json,api_metadata,2026-03-31,day,models.dev,false,false
@@ -689,9 +873,11 @@ grok-4-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-07-
 grok-4-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-09,day,models.dev,false,false
 grok-4-fast-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-09-19,day,epoch.ai,false,false
 grok-4-fast-api_ga-1,https://models.dev/api.json,api_metadata,2025-09-19,day,models.dev,false,false
+grok-4-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-15,day,"litellm (xai/grok-4, xai/grok-4-0709)",false,false
 grok-build-0-1-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-16,day,models.dev,false,false
 grok-build-0-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-20,day,openrouter,false,true
 grok-code-fast-1-api_ga-1,https://models.dev/api.json,api_metadata,2024-08-25,day,models.dev,false,false
+grok-code-fast-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-15,day,"litellm (xai/grok-code-fast-1, xai/grok-code-fast-1-0825)",false,false
 grok-latest-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-08,day,models.dev,false,false
 grok-latest-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-08,day,openrouter,false,true
 grok-voice-think-fast-1-0-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-04-23,day,epoch.ai,false,false
@@ -756,24 +942,34 @@ intern-s2-preview-397b-weights_released-1,https://huggingface.co/internlm/Intern
 intern-s2-preview-fp8-weights_released-1,https://huggingface.co/internlm/Intern-S2-Preview-FP8,hf_hub,2026-05-15,day,hub repo created,true,false
 intern-s2-preview-weights_released-1,https://huggingface.co/internlm/Intern-S2-Preview,hf_hub,2026-05-15,day,hub repo created,true,false
 internlm-20b-weights_released-1,https://huggingface.co/internlm/internlm-20b,hf_hub,2023-09-18,day,hub repo created,true,false
+internlm-20b-weights_released-1,https://web.archive.org/web/20240106/https://huggingface.co/internlm/internlm-20b,wayback,2024-01-06,day,first public capture,true,false
 internlm-7b-weights_released-1,https://huggingface.co/internlm/internlm-7b,hf_hub,2023-07-06,day,hub repo created,true,false
+internlm-7b-weights_released-1,https://web.archive.org/web/20230706/https://huggingface.co/internlm/internlm-7b,wayback,2023-07-06,day,first public capture,true,false
 internlm-chat-20b-weights_released-1,https://huggingface.co/internlm/internlm-chat-20b,hf_hub,2023-09-18,day,hub repo created,true,false
+internlm-chat-20b-weights_released-1,https://web.archive.org/web/20231030/https://huggingface.co/internlm/internlm-chat-20b,wayback,2023-10-30,day,first public capture,true,false
 internlm-chat-7b-weights_released-1,https://huggingface.co/internlm/internlm-chat-7b,hf_hub,2023-07-06,day,hub repo created,true,false
+internlm-chat-7b-weights_released-1,https://web.archive.org/web/20230706/https://huggingface.co/internlm/internlm-chat-7b,wayback,2023-07-06,day,first public capture,true,false
 internlm-xcomposer-7b-weights_released-1,https://huggingface.co/internlm/internlm-xcomposer-7b,hf_hub,2023-09-26,day,hub repo created,true,false
+internlm-xcomposer-7b-weights_released-1,https://web.archive.org/web/20240424/https://huggingface.co/internlm/internlm-xcomposer-7b,wayback,2024-04-24,day,first public capture,true,false
 internlm-xcomposer2-7b-weights_released-1,https://huggingface.co/internlm/internlm-xcomposer2-7b,hf_hub,2024-01-25,day,hub repo created,true,false
 internlm2-1-8b-weights_released-1,https://huggingface.co/internlm/internlm2-1_8b,hf_hub,2024-01-30,day,hub repo created,true,false
 internlm2-20b-weights_released-1,https://huggingface.co/internlm/internlm2-20b,hf_hub,2024-01-12,day,hub repo created,true,false
+internlm2-20b-weights_released-1,https://web.archive.org/web/20240129/https://huggingface.co/internlm/internlm2-20b,wayback,2024-01-29,day,first public capture,true,false
 internlm2-5-1-8b-weights_released-1,https://huggingface.co/internlm/internlm2_5-1_8b-chat,hf_hub,2024-07-30,day,hub repo created,true,false
 internlm2-5-20b-weights_released-1,https://huggingface.co/internlm/internlm2_5-20b-chat,hf_hub,2024-07-30,day,hub repo created,true,false
 internlm2-5-7b-chat-1m-weights_released-1,https://huggingface.co/internlm/internlm2_5-7b-chat-1m,hf_hub,2024-06-28,day,hub repo created,true,false
 internlm2-5-7b-weights_released-1,https://huggingface.co/internlm/internlm2_5-7b-chat,hf_hub,2024-06-27,day,hub repo created,true,false
 internlm2-7b-weights_released-1,https://huggingface.co/internlm/internlm2-7b,hf_hub,2024-01-12,day,hub repo created,true,false
+internlm2-7b-weights_released-1,https://web.archive.org/web/20240228/https://huggingface.co/internlm/internlm2-7b,wayback,2024-02-28,day,first public capture,true,false
 internlm2-base-20b-weights_released-1,https://huggingface.co/internlm/internlm2-base-20b,hf_hub,2024-01-12,day,hub repo created,true,false
 internlm2-base-7b-weights_released-1,https://huggingface.co/internlm/internlm2-base-7b,hf_hub,2024-01-12,day,hub repo created,true,false
 internlm2-chat-1-8b-weights_released-1,https://huggingface.co/internlm/internlm2-chat-1_8b,hf_hub,2024-01-30,day,hub repo created,true,false
 internlm2-chat-20b-weights_released-1,https://huggingface.co/internlm/internlm2-chat-20b,hf_hub,2024-01-10,day,hub repo created,true,false
+internlm2-chat-20b-weights_released-1,https://web.archive.org/web/20240225/https://huggingface.co/internlm/internlm2-chat-20b,wayback,2024-02-25,day,first public capture,true,false
 internlm2-chat-7b-sft-weights_released-1,https://huggingface.co/internlm/internlm2-chat-7b-sft,hf_hub,2024-01-11,day,hub repo created,true,false
+internlm2-chat-7b-sft-weights_released-1,https://web.archive.org/web/20240227/https://huggingface.co/internlm/internlm2-chat-7b-sft,wayback,2024-02-27,day,first public capture,true,false
 internlm2-chat-7b-weights_released-1,https://huggingface.co/internlm/internlm2-chat-7b,hf_hub,2024-01-10,day,hub repo created,true,false
+internlm2-chat-7b-weights_released-1,https://web.archive.org/web/20240225/https://huggingface.co/internlm/internlm2-chat-7b,wayback,2024-02-25,day,first public capture,true,false
 internlm2-math-plus-1-8b-weights_released-1,https://huggingface.co/internlm/internlm2-math-plus-1_8b,hf_hub,2024-05-24,day,hub repo created,true,false
 internlm2-math-plus-20b-weights_released-1,https://huggingface.co/internlm/internlm2-math-plus-20b,hf_hub,2024-05-24,day,hub repo created,true,false
 internlm2-math-plus-7b-weights_released-1,https://huggingface.co/internlm/internlm2-math-plus-7b,hf_hub,2024-05-24,day,hub repo created,true,false
@@ -782,20 +978,30 @@ jamba-tiny-random-weights_released-1,https://huggingface.co/ai21labs/Jamba-tiny-
 jamba-v0-1-weights_released-1,https://huggingface.co/ai21labs/Jamba-v0.1,hf_hub,2024-03-28,day,hub repo created,true,false
 januscoderv-7b-weights_released-1,https://huggingface.co/internlm/JanusCoderV-7B,hf_hub,2025-10-27,day,hub repo created,true,false
 japanese-stablelm-instruct-gamma-7b-weights_released-1,https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b,hf_hub,2023-10-16,day,hub repo created,true,false
+japanese-stablelm-instruct-gamma-7b-weights_released-1,https://web.archive.org/web/20231224/https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b,wayback,2023-12-24,day,first public capture,true,false
 kimi-dev-72b-weights_released-1,https://huggingface.co/moonshotai/Kimi-Dev-72B,hf_hub,2025-06-16,day,hub repo created,true,false
 kimi-k2-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-01-27,day,openrouter,false,true
+kimi-k2-5-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-01-26,day,azure_lifecycle (Kimi-K2.5),false,true
+kimi-k2-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-26,day,litellm (azure_ai/kimi-k2.5),false,false
+kimi-k2-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-21,day,litellm (together_ai/moonshotai/Kimi-K2.5),false,false
 kimi-k2-5-weights_released-1,https://huggingface.co/moonshotai/Kimi-K2.5,hf_hub,2026-01-01,day,hub repo created,true,false
 kimi-k2-6-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-04-20,day,epoch.ai,false,false
 kimi-k2-6-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-20,day,openrouter,false,true
+kimi-k2-6-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-04-16,day,azure_lifecycle (Kimi-K2.6-2026-04-20),false,true
+kimi-k2-6-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-16,day,litellm (azure_ai/kimi-k2.6),false,false
 kimi-k2-6-weights_released-1,https://huggingface.co/moonshotai/Kimi-K2.6,hf_hub,2026-04-14,day,hub repo created,true,false
 kimi-k2-6-weights_released-1,https://models.dev/api.json,api_metadata,2026-04-21,day,models.dev,false,false
 kimi-k2-7-code-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-06-12,day,epoch.ai,false,false
 kimi-k2-7-code-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-12,day,openrouter,false,true
+kimi-k2-7-code-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-03,day,azure_lifecycle (Kimi-K2.7-Code-2026-06-12),false,true
+kimi-k2-7-code-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-27,day,litellm (together_ai/moonshotai/Kimi-K2.7-Code),false,false
 kimi-k2-7-code-weights_released-1,https://huggingface.co/moonshotai/Kimi-K2.7-Code,hf_hub,2026-06-11,day,hub repo created,true,false
 kimi-k2-7-code-weights_released-1,https://models.dev/api.json,api_metadata,2026-06-12,day,models.dev,false,false
 kimi-k2-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-11,day,models.dev,false,false
 kimi-k2-base-weights_released-1,https://huggingface.co/moonshotai/Kimi-K2-Base,hf_hub,2025-07-03,day,hub repo created,true,false
 kimi-k2-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-11,day,openrouter,false,true
+kimi-k2-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-15,day,litellm (groq/moonshotai/kimi-k2-instruct-0905),false,false
+kimi-k2-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-03-06,day,litellm (together_ai/moonshotai/Kimi-K2-Instruct-0905),false,false
 kimi-k2-thinking-api_ga-1,https://models.dev/api.json,api_metadata,2025-11-06,day,models.dev,false,false
 kimi-k2-thinking-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-11-06,day,openrouter,false,true
 kimi-k2-thinking-weights_released-1,https://huggingface.co/moonshotai/Kimi-K2-Thinking,hf_hub,2025-11-04,day,hub repo created,true,false
@@ -868,13 +1074,21 @@ llada2-1-flash-weights_released-1,https://huggingface.co/inclusionAI/LLaDA2.1-fl
 llada2-1-mini-weights_released-1,https://huggingface.co/inclusionAI/LLaDA2.1-mini,hf_hub,2026-02-09,day,hub repo created,true,false
 llada2-2-flash-weights_released-1,https://huggingface.co/inclusionAI/LLaDA2.2-flash,hf_hub,2026-07-16,day,hub repo created,true,false
 llama-2-13b-chat-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-13b-chat-hf,hf_hub,2023-07-13,day,hub repo created,true,false
+llama-2-13b-chat-hf-weights_released-1,https://web.archive.org/web/20230719/https://huggingface.co/meta-llama/Llama-2-13b-chat-hf,wayback,2023-07-19,day,first public capture,true,false
 llama-2-13b-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-13b-hf,hf_hub,2023-07-13,day,hub repo created,true,false
+llama-2-13b-hf-weights_released-1,https://web.archive.org/web/20230718/https://huggingface.co/meta-llama/Llama-2-13b-hf,wayback,2023-07-18,day,first public capture,true,false
 llama-2-70b-chat-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-70b-chat-hf,hf_hub,2023-07-14,day,hub repo created,true,false
+llama-2-70b-chat-hf-weights_released-1,https://web.archive.org/web/20230718/https://huggingface.co/meta-llama/Llama-2-70b-chat-hf,wayback,2023-07-18,day,first public capture,true,false
 llama-2-70b-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-70b-hf,hf_hub,2023-07-11,day,hub repo created,true,false
+llama-2-70b-hf-weights_released-1,https://web.archive.org/web/20230718/https://huggingface.co/meta-llama/Llama-2-70b-hf,wayback,2023-07-18,day,first public capture,true,false
 llama-2-7b-chat-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-7b-chat-hf,hf_hub,2023-07-13,day,hub repo created,true,false
+llama-2-7b-chat-hf-weights_released-1,https://web.archive.org/web/20230718/https://huggingface.co/meta-llama/Llama-2-7b-chat-hf,wayback,2023-07-18,day,first public capture,true,false
 llama-2-7b-hf-weights_released-1,https://huggingface.co/meta-llama/Llama-2-7b-hf,hf_hub,2023-07-13,day,hub repo created,true,false
+llama-2-7b-hf-weights_released-1,https://web.archive.org/web/20230718/https://huggingface.co/meta-llama/Llama-2-7b-hf,wayback,2023-07-18,day,first public capture,true,false
 llama-3-1-405b-fp8-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-405B-FP8,hf_hub,2024-07-20,day,hub repo created,true,false
 llama-3-1-405b-instruct-fp8-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-405B-Instruct-FP8,hf_hub,2024-07-20,day,hub repo created,true,false
+llama-3-1-405b-instruct-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-13,day,azure_lifecycle (Meta-Llama-3.1-405B-Instruct),false,true
+llama-3-1-405b-instruct-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-13,day,litellm (azure_ai/Meta-Llama-3.1-405B-Instruct),false,false
 llama-3-1-405b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2024-07-23,day,models.dev,false,false
 llama-3-1-405b-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-405B,hf_hub,2024-07-16,day,hub repo created,true,false
 llama-3-1-70b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-07-23,day,epoch.ai,false,false
@@ -884,8 +1098,11 @@ llama-3-1-70b-instruct-weights_released-1,https://models.dev/api.json,api_metada
 llama-3-1-70b-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-70B,hf_hub,2024-07-14,day,hub repo created,true,false
 llama-3-1-8b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-07-23,day,epoch.ai,false,false
 llama-3-1-8b-instruct-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-07-23,day,openrouter,false,true
+llama-3-1-8b-instruct-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-13,day,azure_lifecycle (Meta-Llama-3.1-8B-Instruct),false,true
+llama-3-1-8b-instruct-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-13,day,litellm (azure_ai/Meta-Llama-3.1-8B-Instruct),false,false
 llama-3-1-8b-instruct-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct,hf_hub,2024-07-18,day,hub repo created,true,false
 llama-3-1-8b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2024-07-23,day,models.dev,false,false
+llama-3-1-8b-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-13,day,azure_lifecycle (Meta-Llama-3.1-8B),false,true
 llama-3-1-8b-weights_released-1,https://huggingface.co/meta-llama/Llama-3.1-8B,hf_hub,2024-07-14,day,hub repo created,true,false
 llama-3-1-nemotron-70b-instruct-hf-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-10-12,day,epoch.ai,false,false
 llama-3-1-nemotron-70b-instruct-hf-weights_released-1,https://models.dev/api.json,api_metadata,2025-04-15,day,models.dev,false,false
@@ -896,6 +1113,8 @@ llama-3-1-tulu-3-8b-sft-weights_released-1,https://huggingface.co/allenai/Llama-
 llama-3-1-tulu-3-8b-weights_released-1,https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B,hf_hub,2024-11-20,day,hub repo created,true,false
 llama-3-2-11b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-09-24,day,epoch.ai,false,false
 llama-3-2-11b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2024-09-25,day,models.dev,false,false
+llama-3-2-11b-vision-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-13,day,azure_lifecycle (Llama-3.2-11B-Vision-Instruct),false,true
+llama-3-2-11b-vision-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-13,day,litellm (azure_ai/Llama-3.2-11B-Vision-Instruct),false,false
 llama-3-2-11b-vision-weights_released-1,https://huggingface.co/meta-llama/Llama-3.2-11B-Vision,hf_hub,2024-09-18,day,hub repo created,true,false
 llama-3-2-1b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-09-24,day,epoch.ai,false,false
 llama-3-2-1b-instruct-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-09-25,day,openrouter,false,true
@@ -906,6 +1125,8 @@ llama-3-2-3b-instruct-platform_availability-1,https://openrouter.ai/api/v1/model
 llama-3-2-3b-instruct-weights_released-1,https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct,hf_hub,2024-09-18,day,hub repo created,true,false
 llama-3-2-3b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2024-09-18,day,models.dev,false,false
 llama-3-2-3b-weights_released-1,https://huggingface.co/meta-llama/Llama-3.2-3B,hf_hub,2024-09-18,day,hub repo created,true,false
+llama-3-2-90b-vision-instruct-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-06-13,day,azure_lifecycle (Llama-3.2-90B-Vision-Instruct),false,true
+llama-3-2-90b-vision-instruct-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-13,day,litellm (azure_ai/Llama-3.2-90B-Vision-Instruct),false,false
 llama-3-2-90b-vision-instruct-weights_released-1,https://huggingface.co/meta-llama/Llama-3.2-90B-Vision-Instruct,hf_hub,2024-09-19,day,hub repo created,true,false
 llama-3-3-70b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-12-06,day,epoch.ai,false,false
 llama-3-3-70b-instruct-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-12-06,day,openrouter,false,true
@@ -919,10 +1140,14 @@ llama-3-8b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_meta
 llama-3-8b-instruct-weights_released-1,https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct,hf_hub,2024-04-17,day,hub repo created,true,false
 llama-3-8b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2024-07-23,day,models.dev,false,false
 llama-3-8b-weights_released-1,https://huggingface.co/meta-llama/Meta-Llama-3-8B,hf_hub,2024-04-17,day,hub repo created,true,false
+llama-4-maverick-17b-128e-instruct-fp8-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-03-31,day,litellm (together_ai/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8),false,false
 llama-4-maverick-17b-128e-instruct-fp8-weights_released-1,https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8,hf_hub,2025-04-01,day,hub repo created,true,false
+llama-4-maverick-17b-128e-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-03-09,day,litellm (groq/meta-llama/llama-4-maverick-17b-128e-instruct),false,false
 llama-4-maverick-17b-128e-weights_released-1,https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct,hf_hub,2025-04-01,day,hub repo created,true,false
 llama-4-maverick-api_ga-1,https://models.dev/api.json,api_metadata,2025-04-05,day,models.dev,false,false
 llama-4-maverick-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-05,day,openrouter,false,true
+llama-4-scout-17b-16e-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-17,day,litellm (groq/meta-llama/llama-4-scout-17b-16e-instruct),false,false
+llama-4-scout-17b-16e-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-02-06,day,litellm (together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct),false,false
 llama-4-scout-17b-16e-weights_released-1,https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E,hf_hub,2025-04-02,day,hub repo created,true,false
 llama-4-scout-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-04-05,day,epoch.ai,false,false
 llama-4-scout-api_ga-1,https://models.dev/api.json,api_metadata,2025-04-05,day,models.dev,false,false
@@ -933,9 +1158,12 @@ llama-guard-3-1b-weights_released-1,https://huggingface.co/meta-llama/Llama-Guar
 llama-guard-3-8b-int8-weights_released-1,https://huggingface.co/meta-llama/Llama-Guard-3-8B-INT8,hf_hub,2024-07-21,day,hub repo created,true,false
 llama-guard-3-8b-weights_released-1,https://huggingface.co/meta-llama/Llama-Guard-3-8B,hf_hub,2024-07-22,day,hub repo created,true,false
 llama-guard-4-12b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-30,day,openrouter,false,true
+llama-guard-4-12b-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-03-05,day,litellm (groq/meta-llama/llama-guard-4-12b),false,false
+llama-guard-4-12b-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-25,day,litellm (together_ai/meta-llama/Llama-Guard-4-12B),false,false
 llama-guard-4-12b-weights_released-1,https://huggingface.co/meta-llama/Llama-Guard-4-12B,hf_hub,2025-04-23,day,hub repo created,true,false
 llama-guard-4-12b-weights_released-1,https://models.dev/api.json,api_metadata,2025-04-30,day,models.dev,false,false
 llamaguard-7b-weights_released-1,https://huggingface.co/meta-llama/LlamaGuard-7b,hf_hub,2023-12-05,day,hub repo created,true,false
+llamaguard-7b-weights_released-1,https://web.archive.org/web/20231210/https://huggingface.co/meta-llama/LlamaGuard-7b,wayback,2023-12-10,day,first public capture,true,false
 longcat-2-0-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-06-29,day,epoch.ai,false,false
 longcat-2-0-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-30,day,models.dev,false,false
 longcat-2-0-fp8-weights_released-1,https://huggingface.co/meituan-longcat/LongCat-2.0-FP8,hf_hub,2026-07-03,day,hub repo created,true,false
@@ -1048,11 +1276,16 @@ ministral-3b-weights_released-1,https://models.dev/api.json,api_metadata,2024-10
 ministral-8b-2512-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-02,day,models.dev,false,false
 ministral-8b-2512-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-02,day,openrouter,false,true
 ministral-8b-weights_released-1,https://models.dev/api.json,api_metadata,2024-10-01,day,models.dev,false,false
+mistral-7b-instruct-v0-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2025-11-13,day,litellm (together_ai/mistralai/Mistral-7B-Instruct-v0.1),false,false
 mistral-7b-instruct-v0-1-weights_released-1,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1,hf_hub,2023-09-27,day,hub repo created,true,false
+mistral-7b-instruct-v0-1-weights_released-1,https://web.archive.org/web/20230927/https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1,wayback,2023-09-27,day,first public capture,true,false
 mistral-7b-instruct-v0-2-weights_released-1,https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2,hf_hub,2023-12-11,day,hub repo created,true,false
+mistral-7b-instruct-v0-2-weights_released-1,https://web.archive.org/web/20231211/https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2,wayback,2023-12-11,day,first public capture,true,false
 mistral-7b-v0-1-weights_released-1,https://huggingface.co/mistralai/Mistral-7B-v0.1,hf_hub,2023-09-20,day,hub repo created,true,false
+mistral-7b-v0-1-weights_released-1,https://web.archive.org/web/20230927/https://huggingface.co/mistralai/Mistral-7B-v0.1,wayback,2023-09-27,day,first public capture,true,false
 mistral-large-2407-api_ga-1,https://models.dev/api.json,api_metadata,2024-11-19,day,models.dev,false,false
 mistral-large-2407-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-11-19,day,openrouter,false,true
+mistral-large-2407-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2025-03-30,day,litellm (mistral/mistral-large-2407),false,false
 mistral-large-2512-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-01,day,openrouter,false,true
 mistral-large-2512-weights_released-1,https://models.dev/api.json,api_metadata,2024-11-01,day,models.dev,false,false
 mistral-large-3-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-12-02,day,epoch.ai,false,false
@@ -1076,6 +1309,7 @@ mistral-saba-platform_availability-1,https://openrouter.ai/api/v1/models,api_met
 mistral-saba-weights_released-1,https://models.dev/api.json,api_metadata,2025-02-17,day,models.dev,false,false
 mistral-small-24b-instruct-2501-api_ga-1,https://models.dev/api.json,api_metadata,2025-01-30,day,models.dev,false,false
 mistral-small-24b-instruct-2501-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-01-30,day,openrouter,false,true
+mistral-small-24b-instruct-2501-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-02,day,litellm (together_ai/mistralai/Mistral-Small-24B-Instruct-2501),false,false
 mistral-small-2603-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-03-16,day,openrouter,false,true
 mistral-small-2603-weights_released-1,https://models.dev/api.json,api_metadata,2026-03-16,day,models.dev,false,false
 mistral-small-3-1-24b-instruct-api_ga-1,https://models.dev/api.json,api_metadata,2025-03-17,day,models.dev,false,false
@@ -1117,6 +1351,7 @@ nemotron-3-super-120b-a12b-weights_released-1,https://models.dev/api.json,api_me
 nemotron-3-super-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-03-11,day,epoch.ai,false,false
 nemotron-3-super-weights_released-1,https://models.dev/api.json,api_metadata,2026-03-11,day,models.dev,false,false
 nemotron-3-ultra-550b-a55b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-04,day,openrouter,false,true
+nemotron-3-ultra-550b-a55b-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-08-27,day,litellm (together_ai/nvidia/nemotron-3-ultra-550b-a55b),false,false
 nemotron-3-ultra-550b-a55b-weights_released-1,https://models.dev/api.json,api_metadata,2026-06-04,day,models.dev,false,false
 nemotron-3-ultra-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-06-04,day,epoch.ai,false,false
 nemotron-3-ultra-weights_released-1,https://models.dev/api.json,api_metadata,2026-06-04,day,models.dev,false,false
@@ -1130,9 +1365,13 @@ north-mini-code-platform_availability-1,https://openrouter.ai/api/v1/models,api_
 north-mini-code-weights_released-1,https://models.dev/api.json,api_metadata,2026-06-17,day,models.dev,false,false
 nous-hermes-2-mistral-7b-dpo-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-2-Mistral-7B-DPO,hf_hub,2024-02-18,day,hub repo created,true,false
 nous-hermes-2-mixtral-8x7b-dpo-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,hf_hub,2024-01-11,day,hub repo created,true,false
+nous-hermes-2-mixtral-8x7b-dpo-weights_released-1,https://web.archive.org/web/20240116/https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO,wayback,2024-01-16,day,first public capture,true,false
 nous-hermes-2-mixtral-8x7b-sft-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT,hf_hub,2023-12-26,day,hub repo created,true,false
+nous-hermes-2-mixtral-8x7b-sft-weights_released-1,https://web.archive.org/web/20240119/https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT,wayback,2024-01-19,day,first public capture,true,false
 nous-hermes-2-solar-10-7b-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-2-SOLAR-10.7B,hf_hub,2024-01-01,day,hub repo created,true,false
+nous-hermes-2-solar-10-7b-weights_released-1,https://web.archive.org/web/20240107/https://huggingface.co/NousResearch/Nous-Hermes-2-SOLAR-10.7B,wayback,2024-01-07,day,first public capture,true,false
 nous-hermes-2-yi-34b-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-2-Yi-34B,hf_hub,2023-12-23,day,hub repo created,true,false
+nous-hermes-2-yi-34b-weights_released-1,https://web.archive.org/web/20231226/https://huggingface.co/NousResearch/Nous-Hermes-2-Yi-34B,wayback,2023-12-26,day,first public capture,true,false
 nous-hermes-llama-2-7b-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-llama-2-7b,hf_hub,2023-07-25,day,hub repo created,true,false
 nous-hermes-llama2-13b-weights_released-1,https://huggingface.co/NousResearch/Nous-Hermes-Llama2-13b,hf_hub,2023-07-20,day,hub repo created,true,false
 nova-2-lite-v1-api_ga-1,https://models.dev/api.json,api_metadata,2025-12-02,day,models.dev,false,false
@@ -1163,13 +1402,21 @@ o1-pro-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-03-17,day,ope
 o1-pro-api_ga-1,https://models.dev/api.json,api_metadata,2025-03-19,day,models.dev,false,false
 o1-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-03-19,day,openrouter,false,true
 o1-pro-retired-1,https://api.openai.com/v1/models,api_metadata,2026-10-23,day,openai_api shutdown,false,true
+o1-pro-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-23,day,"litellm (o1-pro, o1-pro-2025-03-19)",false,false
+o1-pro-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-21,day,azure_lifecycle (o1-pro-2025-03-19),false,true
 o3-mini-high-api_ga-1,https://models.dev/api.json,api_metadata,2025-02-12,day,models.dev,false,false
 o3-mini-high-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-02-12,day,openrouter,false,true
 o3-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-01-31,day,openrouter,false,true
+o3-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-01,day,azure_lifecycle (o3-mini-2025-01-31),false,true
+o3-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-01,day,"litellm (azure/eu/o3-mini-2025-01-31, azure/o3-mini, azure/o3-mini-2025-01-31, azure/us/o3-mini-2025-01-31)",false,false
 o3-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-06-10,day,openrouter,false,true
+o3-pro-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-12-17,day,azure_lifecycle (o3-pro-2025-06-10),false,true
+o3-pro-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-12-17,day,"litellm (azure/o3-pro, azure/o3-pro-2025-06-10)",false,false
 o4-mini-high-api_ga-1,https://models.dev/api.json,api_metadata,2025-04-16,day,models.dev,false,false
 o4-mini-high-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-16,day,openrouter,false,true
 o4-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-16,day,openrouter,false,true
+o4-mini-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-10-16,day,azure_lifecycle (o4-mini-2025-04-16),false,true
+o4-mini-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-16,day,"litellm (azure/o4-mini, azure/o4-mini-2025-04-16, azure/us/o4-mini-2025-04-16)",false,false
 olmo-1b-hf-weights_released-1,https://huggingface.co/allenai/OLMo-1B-hf,hf_hub,2024-04-12,day,hub repo created,true,false
 olmo-2-0325-32b-weights_released-1,https://huggingface.co/allenai/OLMo-2-0325-32B,hf_hub,2025-02-23,day,hub repo created,true,false
 olmo-2-0425-1b-dpo-weights_released-1,https://huggingface.co/allenai/OLMo-2-0425-1B-DPO,hf_hub,2025-04-28,day,hub repo created,true,false
@@ -1209,6 +1456,7 @@ pacore-8b-weights_released-1,https://huggingface.co/stepfun-ai/PaCoRe-8B,hf_hub,
 paligemma-3b-ft-cococap-448-weights_released-1,https://huggingface.co/google/paligemma-3b-ft-cococap-448,hf_hub,2024-05-13,day,hub repo created,true,false
 paligemma-weights_released-1,https://models.dev/api.json,api_metadata,2024-05-14,day,models.dev,false,false
 phi-2-weights_released-1,https://huggingface.co/microsoft/phi-2,hf_hub,2023-12-13,day,hub repo created,true,false
+phi-2-weights_released-1,https://web.archive.org/web/20231214/https://huggingface.co/microsoft/phi-2,wayback,2023-12-14,day,first public capture,true,false
 phi-3-5-mini-instruct-weights_released-1,https://huggingface.co/microsoft/Phi-3.5-mini-instruct,hf_hub,2024-08-16,day,hub repo created,true,false
 phi-3-5-moe-instruct-weights_released-1,https://huggingface.co/microsoft/Phi-3.5-MoE-instruct,hf_hub,2024-08-17,day,hub repo created,true,false
 phi-3-5-vision-instruct-weights_released-1,https://huggingface.co/microsoft/Phi-3.5-vision-instruct,hf_hub,2024-08-16,day,hub repo created,true,false
@@ -1228,19 +1476,28 @@ phi-tiny-moe-instruct-weights_released-1,https://huggingface.co/microsoft/Phi-ti
 pixtral-12b-weights_released-1,https://models.dev/api.json,api_metadata,2024-09-01,day,models.dev,false,false
 points-gui-g-weights_released-1,https://huggingface.co/tencent/POINTS-GUI-G,hf_hub,2026-02-03,day,hub repo created,true,false
 pythia-1-4b-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-1.4b-deduped,hf_hub,2023-02-09,day,hub repo created,true,false
+pythia-1-4b-deduped-weights_released-1,https://web.archive.org/web/20230126/https://huggingface.co/EleutherAI/pythia-1.4b-deduped,wayback,2023-01-26,day,first public capture,true,false
 pythia-1-4b-weights_released-1,https://huggingface.co/EleutherAI/pythia-1.4b,hf_hub,2023-02-09,day,hub repo created,true,false
 pythia-12b-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-12b-deduped,hf_hub,2023-02-27,day,hub repo created,true,false
+pythia-12b-deduped-weights_released-1,https://web.archive.org/web/20230126/https://huggingface.co/EleutherAI/pythia-12b-deduped,wayback,2023-01-26,day,first public capture,true,false
 pythia-12b-weights_released-1,https://huggingface.co/EleutherAI/pythia-12b,hf_hub,2023-02-28,day,hub repo created,true,false
+pythia-12b-weights_released-1,https://web.archive.org/web/20230203/https://huggingface.co/EleutherAI/pythia-12b,wayback,2023-02-03,day,first public capture,true,false
 pythia-14m-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-14m-deduped,hf_hub,2023-07-19,day,hub repo created,true,false
+pythia-14m-deduped-weights_released-1,https://web.archive.org/web/20260420/https://huggingface.co/EleutherAI/pythia-14m-deduped,wayback,2026-04-20,day,first public capture,true,false
 pythia-14m-weights_released-1,https://huggingface.co/EleutherAI/pythia-14m,hf_hub,2026-02-24,day,hub repo created,true,false
 pythia-160m-data-seed1-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-data-seed1,hf_hub,2024-01-22,day,hub repo created,true,false
 pythia-160m-data-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-data-seed2,hf_hub,2024-01-22,day,hub repo created,true,false
 pythia-160m-data-seed3-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-data-seed3,hf_hub,2024-01-24,day,hub repo created,true,false
 pythia-160m-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-deduped,hf_hub,2023-02-08,day,hub repo created,true,false
+pythia-160m-deduped-weights_released-1,https://web.archive.org/web/20230201/https://huggingface.co/EleutherAI/pythia-160m-deduped,wayback,2023-02-01,day,first public capture,true,false
 pythia-160m-seed1-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed1,hf_hub,2023-02-15,day,hub repo created,true,false
+pythia-160m-seed1-weights_released-1,https://web.archive.org/web/20230227/https://huggingface.co/EleutherAI/pythia-160m-seed1,wayback,2023-02-27,day,first public capture,true,false
 pythia-160m-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed2,hf_hub,2023-02-15,day,hub repo created,true,false
+pythia-160m-seed2-weights_released-1,https://web.archive.org/web/20230227/https://huggingface.co/EleutherAI/pythia-160m-seed2,wayback,2023-02-27,day,first public capture,true,false
 pythia-160m-seed3-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed3,hf_hub,2023-02-15,day,hub repo created,true,false
+pythia-160m-seed3-weights_released-1,https://web.archive.org/web/20230227/https://huggingface.co/EleutherAI/pythia-160m-seed3,wayback,2023-02-27,day,first public capture,true,false
 pythia-160m-seed4-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed4,hf_hub,2023-11-08,day,hub repo created,true,false
+pythia-160m-seed4-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-160m-seed4,wayback,2025-03-13,day,first public capture,true,false
 pythia-160m-seed5-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed5,hf_hub,2024-01-14,day,hub repo created,true,false
 pythia-160m-seed6-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed6,hf_hub,2024-01-14,day,hub repo created,true,false
 pythia-160m-seed7-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-seed7,hf_hub,2024-01-15,day,hub repo created,true,false
@@ -1250,20 +1507,30 @@ pythia-160m-weight-seed1-weights_released-1,https://huggingface.co/EleutherAI/py
 pythia-160m-weight-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-weight-seed2,hf_hub,2024-01-17,day,hub repo created,true,false
 pythia-160m-weight-seed3-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m-weight-seed3,hf_hub,2024-01-17,day,hub repo created,true,false
 pythia-160m-weights_released-1,https://huggingface.co/EleutherAI/pythia-160m,hf_hub,2023-02-08,day,hub repo created,true,false
+pythia-160m-weights_released-1,https://web.archive.org/web/20230219/https://huggingface.co/EleutherAI/pythia-160m,wayback,2023-02-19,day,first public capture,true,false
 pythia-1b-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-1b-deduped,hf_hub,2023-02-14,day,hub repo created,true,false
+pythia-1b-deduped-weights_released-1,https://web.archive.org/web/20230126/https://huggingface.co/EleutherAI/pythia-1b-deduped,wayback,2023-01-26,day,first public capture,true,false
 pythia-1b-weights_released-1,https://huggingface.co/EleutherAI/pythia-1b,hf_hub,2023-03-10,day,hub repo created,true,false
+pythia-1b-weights_released-1,https://web.archive.org/web/20230227/https://huggingface.co/EleutherAI/pythia-1b,wayback,2023-02-27,day,first public capture,true,false
 pythia-2-8b-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-2.8b-deduped,hf_hub,2023-02-10,day,hub repo created,true,false
+pythia-2-8b-deduped-weights_released-1,https://web.archive.org/web/20230227/https://huggingface.co/EleutherAI/pythia-2.8b-deduped,wayback,2023-02-27,day,first public capture,true,false
 pythia-2-8b-weights_released-1,https://huggingface.co/EleutherAI/pythia-2.8b,hf_hub,2023-02-13,day,hub repo created,true,false
+pythia-2-8b-weights_released-1,https://web.archive.org/web/20230201/https://huggingface.co/EleutherAI/pythia-2.8b,wayback,2023-02-01,day,first public capture,true,false
 pythia-31m-weights_released-1,https://huggingface.co/EleutherAI/pythia-31m,hf_hub,2026-02-24,day,hub repo created,true,false
 pythia-410m-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-deduped,hf_hub,2023-02-13,day,hub repo created,true,false
+pythia-410m-deduped-weights_released-1,https://web.archive.org/web/20230126/https://huggingface.co/EleutherAI/pythia-410m-deduped,wayback,2023-01-26,day,first public capture,true,false
 pythia-410m-seed1-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed1,hf_hub,2023-11-28,day,hub repo created,true,false
+pythia-410m-seed1-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-410m-seed1,wayback,2025-03-13,day,first public capture,true,false
 pythia-410m-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed2,hf_hub,2023-11-29,day,hub repo created,true,false
+pythia-410m-seed2-weights_released-1,https://web.archive.org/web/20250316/https://huggingface.co/EleutherAI/pythia-410m-seed2,wayback,2025-03-16,day,first public capture,true,false
 pythia-410m-seed7-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed7,hf_hub,2024-02-04,day,hub repo created,true,false
 pythia-410m-seed8-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed8,hf_hub,2024-02-04,day,hub repo created,true,false
 pythia-410m-seed9-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed9,hf_hub,2024-02-04,day,hub repo created,true,false
 pythia-410m-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m,hf_hub,2023-02-13,day,hub repo created,true,false
+pythia-410m-weights_released-1,https://web.archive.org/web/20230214/https://huggingface.co/EleutherAI/pythia-410m,wayback,2023-02-14,day,first public capture,true,false
 pythia-6-9b-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-6.9b-deduped,hf_hub,2023-02-25,day,hub repo created,true,false
 pythia-6-9b-weights_released-1,https://huggingface.co/EleutherAI/pythia-6.9b,hf_hub,2023-02-14,day,hub repo created,true,false
+pythia-6-9b-weights_released-1,https://web.archive.org/web/20230201/https://huggingface.co/EleutherAI/pythia-6.9b,wayback,2023-02-01,day,first public capture,true,false
 pythia-70m-deduped-weights_released-1,https://huggingface.co/EleutherAI/pythia-70m-deduped,hf_hub,2023-02-13,day,hub repo created,true,false
 pythia-70m-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-70m-seed2,hf_hub,2023-11-13,day,hub repo created,true,false
 qianfan-ocr-weights_released-1,https://huggingface.co/baidu/Qianfan-OCR,hf_hub,2026-03-18,day,hub repo created,true,false
@@ -1272,6 +1539,7 @@ qianfan-vl-70b-weights_released-1,https://huggingface.co/baidu/Qianfan-VL-70B,hf
 qianfan-vl-8b-weights_released-1,https://huggingface.co/baidu/Qianfan-VL-8B,hf_hub,2025-09-16,day,hub repo created,true,false
 qvq-max-api_ga-1,https://models.dev/api.json,api_metadata,2025-03-25,day,models.dev,false,false
 qwen-72b-weights_released-1,https://huggingface.co/Qwen/Qwen-72B,hf_hub,2023-11-26,day,hub repo created,true,false
+qwen-72b-weights_released-1,https://web.archive.org/web/20231130/https://huggingface.co/Qwen/Qwen-72B,wayback,2023-11-30,day,first public capture,true,false
 qwen-plus-api_ga-1,https://models.dev/api.json,api_metadata,2024-01-25,day,models.dev,false,false
 qwen-plus-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-02-01,day,openrouter,false,true
 qwen-turbo-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-02-06,day,epoch.ai,false,false
@@ -1305,6 +1573,7 @@ qwen3-235b-a22b-2507-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-2
 qwen3-235b-a22b-2507-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-21,day,openrouter,false,true
 qwen3-235b-a22b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-28,day,openrouter,false,true
 qwen3-235b-a22b-thinking-2507-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-25,day,openrouter,false,true
+qwen3-235b-a22b-thinking-2507-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-16,day,litellm (together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507),false,false
 qwen3-235b-a22b-thinking-2507-weights_released-1,https://models.dev/api.json,api_metadata,2025-07-25,day,models.dev,false,false
 qwen3-30b-a3b-instruct-2507-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-07-29,day,openrouter,false,true
 qwen3-30b-a3b-instruct-2507-weights_released-1,https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507,hf_hub,2025-07-28,day,hub repo created,true,false
@@ -1315,6 +1584,7 @@ qwen3-30b-a3b-thinking-2507-weights_released-1,https://models.dev/api.json,api_m
 qwen3-30b-a3b-weights_released-1,https://huggingface.co/Qwen/Qwen3-30B-A3B,hf_hub,2025-04-27,day,hub repo created,true,false
 qwen3-30b-a3b-weights_released-1,https://models.dev/api.json,api_metadata,2025-04-28,day,models.dev,false,false
 qwen3-32b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-04-28,day,openrouter,false,true
+qwen3-32b-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-07-17,day,litellm (groq/qwen/qwen3-32b),false,false
 qwen3-32b-weights_released-1,https://huggingface.co/Qwen/Qwen3-32B,hf_hub,2025-04-27,day,hub repo created,true,false
 qwen3-4b-base-weights_released-1,https://huggingface.co/Qwen/Qwen3-4B-Base,hf_hub,2025-04-28,day,hub repo created,true,false
 qwen3-4b-instruct-2507-weights_released-1,https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507,hf_hub,2025-08-05,day,hub repo created,true,false
@@ -1334,6 +1604,7 @@ qwen3-5-35b-a3b-weights_released-1,https://huggingface.co/Qwen/Qwen3.5-35B-A3B,h
 qwen3-5-35b-a3b-weights_released-1,https://models.dev/api.json,api_metadata,2026-02-23,day,models.dev,false,false
 qwen3-5-397b-a17b-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-02-13,day,epoch.ai,false,false
 qwen3-5-397b-a17b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-02-16,day,openrouter,false,true
+qwen3-5-397b-a17b-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-06-29,day,litellm (together_ai/Qwen/Qwen3.5-397B-A17B),false,false
 qwen3-5-397b-a17b-weights_released-1,https://models.dev/api.json,api_metadata,2026-02-15,day,models.dev,false,false
 qwen3-5-4b-weights_released-1,https://huggingface.co/Qwen/Qwen3.5-4B,hf_hub,2026-02-27,day,hub repo created,true,false
 qwen3-5-4b-weights_released-1,https://models.dev/api.json,api_metadata,2025-11-01,day,models.dev,false,false
@@ -1410,7 +1681,9 @@ qwen3-max-thinking-platform_availability-1,https://openrouter.ai/api/v1/models,a
 qwen3-max-thinking-weights_released-1,https://models.dev/api.json,api_metadata,2026-02-09,day,models.dev,false,false
 qwen3-next-80b-a3b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-09-10,day,epoch.ai,false,false
 qwen3-next-80b-a3b-instruct-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-09-11,day,openrouter,false,true
+qwen3-next-80b-a3b-instruct-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-04-02,day,litellm (together_ai/Qwen/Qwen3-Next-80B-A3B-Instruct),false,false
 qwen3-next-80b-a3b-thinking-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-09-11,day,openrouter,false,true
+qwen3-next-80b-a3b-thinking-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-02-25,day,litellm (together_ai/Qwen/Qwen3-Next-80B-A3B-Thinking),false,false
 qwen3-omni-30b-a3b-instruct-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-09-22,day,epoch.ai,false,false
 qwen3-omni-30b-a3b-instruct-weights_released-1,https://models.dev/api.json,api_metadata,2025-09-24,day,models.dev,false,false
 qwen3-omni-flash-api_ga-1,https://models.dev/api.json,api_metadata,2025-09-15,day,models.dev,false,false
@@ -1449,30 +1722,49 @@ ring-mini-linear-2-0-weights_released-1,https://huggingface.co/inclusionAI/Ring-
 rlvr-8b-weights_released-1,https://huggingface.co/stepfun-ai/RLVR-8B-0926,hf_hub,2025-12-09,day,hub repo created,true,false
 rwkv-3-pile-169m-weights_released-1,https://huggingface.co/BlinkDL/rwkv-3-pile-169m,hf_hub,2022-07-06,day,hub repo created,true,false
 rwkv-3-pile-1b5-weights_released-1,https://huggingface.co/BlinkDL/rwkv-3-pile-1b5,hf_hub,2022-06-23,day,hub repo created,true,false
+rwkv-3-pile-1b5-weights_released-1,https://web.archive.org/web/20220715/https://huggingface.co/BlinkDL/rwkv-3-pile-1b5,wayback,2022-07-15,day,first public capture,true,false
 rwkv-4-169m-pile-weights_released-1,https://huggingface.co/RWKV/rwkv-4-169m-pile,hf_hub,2023-05-04,day,hub repo created,true,false
+rwkv-4-169m-pile-weights_released-1,https://web.archive.org/web/20230929/https://huggingface.co/RWKV/rwkv-4-169m-pile,wayback,2023-09-29,day,first public capture,true,false
 rwkv-4-1b5-pile-weights_released-1,https://huggingface.co/RWKV/rwkv-4-1b5-pile,hf_hub,2023-05-04,day,hub repo created,true,false
+rwkv-4-1b5-pile-weights_released-1,https://web.archive.org/web/20230712/https://huggingface.co/RWKV/rwkv-4-1b5-pile,wayback,2023-07-12,day,first public capture,true,false
 rwkv-4-430m-pile-weights_released-1,https://huggingface.co/RWKV/rwkv-4-430m-pile,hf_hub,2023-05-04,day,hub repo created,true,false
+rwkv-4-430m-pile-weights_released-1,https://web.archive.org/web/20230716/https://huggingface.co/RWKV/rwkv-4-430m-pile,wayback,2023-07-16,day,first public capture,true,false
 rwkv-4-7b-pile-weights_released-1,https://huggingface.co/RWKV/rwkv-4-7b-pile,hf_hub,2023-05-05,day,hub repo created,true,false
+rwkv-4-7b-pile-weights_released-1,https://web.archive.org/web/20231225/https://huggingface.co/RWKV/rwkv-4-7b-pile,wayback,2023-12-25,day,first public capture,true,false
 rwkv-4-novel-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-novel,hf_hub,2023-04-09,day,hub repo created,true,false
+rwkv-4-novel-weights_released-1,https://web.archive.org/web/20230510/https://huggingface.co/BlinkDL/rwkv-4-novel,wayback,2023-05-10,day,first public capture,true,false
 rwkv-4-pile-14b-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-14b,hf_hub,2022-10-20,day,hub repo created,true,false
+rwkv-4-pile-14b-weights_released-1,https://web.archive.org/web/20221225/https://huggingface.co/BlinkDL/rwkv-4-pile-14b,wayback,2022-12-25,day,first public capture,true,false
 rwkv-4-pile-169m-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-169m,hf_hub,2022-07-28,day,hub repo created,true,false
+rwkv-4-pile-169m-weights_released-1,https://web.archive.org/web/20230103/https://huggingface.co/BlinkDL/rwkv-4-pile-169m,wayback,2023-01-03,day,first public capture,true,false
 rwkv-4-pile-1b5-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-1b5,hf_hub,2022-08-20,day,hub repo created,true,false
+rwkv-4-pile-1b5-weights_released-1,https://web.archive.org/web/20230710/https://huggingface.co/BlinkDL/rwkv-4-pile-1b5,wayback,2023-07-10,day,first public capture,true,false
 rwkv-4-pile-3b-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-3b,hf_hub,2022-09-14,day,hub repo created,true,false
+rwkv-4-pile-3b-weights_released-1,https://web.archive.org/web/20220928/https://huggingface.co/BlinkDL/rwkv-4-pile-3b,wayback,2022-09-28,day,first public capture,true,false
 rwkv-4-pile-430m-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-430m,hf_hub,2022-08-17,day,hub repo created,true,false
+rwkv-4-pile-430m-weights_released-1,https://web.archive.org/web/20230330/https://huggingface.co/BlinkDL/rwkv-4-pile-430m,wayback,2023-03-30,day,first public capture,true,false
 rwkv-4-pile-7b-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pile-7b,hf_hub,2022-09-14,day,hub repo created,true,false
+rwkv-4-pile-7b-weights_released-1,https://web.archive.org/web/20221117/https://huggingface.co/BlinkDL/rwkv-4-pile-7b,wayback,2022-11-17,day,first public capture,true,false
 rwkv-4-pileplus-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-pileplus,hf_hub,2023-05-04,day,hub repo created,true,false
+rwkv-4-pileplus-weights_released-1,https://web.archive.org/web/20230506/https://huggingface.co/BlinkDL/rwkv-4-pileplus,wayback,2023-05-06,day,first public capture,true,false
 rwkv-4-raven-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-raven,hf_hub,2023-04-01,day,hub repo created,true,false
+rwkv-4-raven-weights_released-1,https://web.archive.org/web/20230402/https://huggingface.co/BlinkDL/rwkv-4-raven,wayback,2023-04-02,day,first public capture,true,false
 rwkv-4-world-weights_released-1,https://huggingface.co/BlinkDL/rwkv-4-world,hf_hub,2023-05-07,day,hub repo created,true,false
 rwkv-5-world-1b5-weights_released-1,https://huggingface.co/RWKV/rwkv-5-world-1b5,hf_hub,2023-10-31,day,hub repo created,true,false
+rwkv-5-world-1b5-weights_released-1,https://web.archive.org/web/20231224/https://huggingface.co/RWKV/rwkv-5-world-1b5,wayback,2023-12-24,day,first public capture,true,false
 rwkv-5-world-3b-weights_released-1,https://huggingface.co/RWKV/rwkv-5-world-3b,hf_hub,2023-11-15,day,hub repo created,true,false
+rwkv-5-world-3b-weights_released-1,https://web.archive.org/web/20240530/https://huggingface.co/RWKV/rwkv-5-world-3b,wayback,2024-05-30,day,first public capture,true,false
 rwkv-5-world-weights_released-1,https://huggingface.co/BlinkDL/rwkv-5-world,hf_hub,2023-07-24,day,hub repo created,true,false
+rwkv-5-world-weights_released-1,https://web.archive.org/web/20230831/https://huggingface.co/BlinkDL/rwkv-5-world,wayback,2023-08-31,day,first public capture,true,false
 rwkv-6-world-1b6-weights_released-1,https://huggingface.co/RWKV/rwkv-6-world-1b6,hf_hub,2024-03-21,day,hub repo created,true,false
 rwkv-6-world-3b-weights_released-1,https://huggingface.co/RWKV/rwkv-6-world-3b,hf_hub,2024-04-06,day,hub repo created,true,false
 rwkv-6-world-7b-weights_released-1,https://huggingface.co/RWKV/rwkv-6-world-7b,hf_hub,2024-05-08,day,hub repo created,true,false
 rwkv-6-world-weights_released-1,https://huggingface.co/BlinkDL/rwkv-6-world,hf_hub,2024-02-08,day,hub repo created,true,false
 rwkv-7-world-weights_released-1,https://huggingface.co/BlinkDL/rwkv-7-world,hf_hub,2024-12-10,day,hub repo created,true,false
 rwkv-raven-1b5-weights_released-1,https://huggingface.co/RWKV/rwkv-raven-1b5,hf_hub,2023-05-04,day,hub repo created,true,false
+rwkv-raven-1b5-weights_released-1,https://web.archive.org/web/20230712/https://huggingface.co/RWKV/rwkv-raven-1b5,wayback,2023-07-12,day,first public capture,true,false
 rwkv-raven-7b-weights_released-1,https://huggingface.co/RWKV/rwkv-raven-7b,hf_hub,2023-05-05,day,hub repo created,true,false
+rwkv-raven-7b-weights_released-1,https://web.archive.org/web/20230628/https://huggingface.co/RWKV/rwkv-raven-7b,wayback,2023-06-28,day,first public capture,true,false
 rwkv7-1-5b-weights_released-1,https://huggingface.co/RWKV/RWKV7-1.5B-20260805,hf_hub,2026-08-06,day,hub repo created,true,false
 rwkv7-13-3b-weights_released-1,https://huggingface.co/RWKV/RWKV7-13.3B-20260805,hf_hub,2026-08-06,day,hub repo created,true,false
 rwkv7-2-9b-weights_released-1,https://huggingface.co/RWKV/RWKV7-2.9B-20260805,hf_hub,2026-08-06,day,hub repo created,true,false
@@ -1517,7 +1809,9 @@ singguard-2b-weights_released-1,https://huggingface.co/inclusionAI/SingGuard-2b,
 singguard-nsfa-0-8b-weights_released-1,https://huggingface.co/inclusionAI/SingGuard-NSFA-0.8B,hf_hub,2026-07-10,day,hub repo created,true,false
 singguard-nsfa-4b-weights_released-1,https://huggingface.co/inclusionAI/SingGuard-NSFA-4B,hf_hub,2026-07-10,day,hub repo created,true,false
 skywork-13b-base-weights_released-1,https://huggingface.co/Skywork/Skywork-13B-base,hf_hub,2023-10-22,day,hub repo created,true,false
+skywork-13b-base-weights_released-1,https://web.archive.org/web/20240417/https://huggingface.co/Skywork/Skywork-13B-base,wayback,2024-04-17,day,first public capture,true,false
 skywork-13b-math-weights_released-1,https://huggingface.co/Skywork/Skywork-13B-Math,hf_hub,2023-10-24,day,hub repo created,true,false
+skywork-13b-math-weights_released-1,https://web.archive.org/web/20240418/https://huggingface.co/Skywork/Skywork-13B-Math,wayback,2024-04-18,day,first public capture,true,false
 skywork-critic-llama-3-1-70b-weights_released-1,https://huggingface.co/Skywork/Skywork-Critic-Llama-3.1-70B,hf_hub,2024-09-19,day,hub repo created,true,false
 skywork-critic-llama-3-1-8b-weights_released-1,https://huggingface.co/Skywork/Skywork-Critic-Llama-3.1-8B,hf_hub,2024-09-12,day,hub repo created,true,false
 skywork-moe-base-fp8-weights_released-1,https://huggingface.co/Skywork/Skywork-MoE-Base-FP8,hf_hub,2024-06-02,day,hub repo created,true,false
@@ -1560,19 +1854,30 @@ spatial-ssrl-7b-weights_released-1,https://huggingface.co/internlm/Spatial-SSRL-
 stable-diffcoder-8b-base-weights_released-1,https://huggingface.co/ByteDance-Seed/Stable-DiffCoder-8B-Base,hf_hub,2026-01-15,day,hub repo created,true,false
 stable-diffcoder-8b-instruct-weights_released-1,https://huggingface.co/ByteDance-Seed/Stable-DiffCoder-8B-Instruct,hf_hub,2026-01-15,day,hub repo created,true,false
 stablebeluga-13b-weights_released-1,https://huggingface.co/stabilityai/StableBeluga-13B,hf_hub,2023-07-27,day,hub repo created,true,false
+stablebeluga-13b-weights_released-1,https://web.archive.org/web/20230729/https://huggingface.co/stabilityai/StableBeluga-13B,wayback,2023-07-29,day,first public capture,true,false
 stablebeluga-7b-weights_released-1,https://huggingface.co/stabilityai/StableBeluga-7B,hf_hub,2023-07-27,day,hub repo created,true,false
+stablebeluga-7b-weights_released-1,https://web.archive.org/web/20230729/https://huggingface.co/stabilityai/StableBeluga-7B,wayback,2023-07-29,day,first public capture,true,false
 stablebeluga1-delta-weights_released-1,https://huggingface.co/stabilityai/StableBeluga1-Delta,hf_hub,2023-07-20,day,hub repo created,true,false
+stablebeluga1-delta-weights_released-1,https://web.archive.org/web/20230912/https://huggingface.co/stabilityai/StableBeluga1-Delta,wayback,2023-09-12,day,first public capture,true,false
 stablebeluga2-weights_released-1,https://huggingface.co/stabilityai/StableBeluga2,hf_hub,2023-07-20,day,hub repo created,true,false
+stablebeluga2-weights_released-1,https://web.archive.org/web/20230728/https://huggingface.co/stabilityai/StableBeluga2,wayback,2023-07-28,day,first public capture,true,false
 stablecode-completion-alpha-3b-4k-weights_released-1,https://huggingface.co/stabilityai/stablecode-completion-alpha-3b-4k,hf_hub,2023-08-07,day,hub repo created,true,false
+stablecode-completion-alpha-3b-4k-weights_released-1,https://web.archive.org/web/20230808/https://huggingface.co/stabilityai/stablecode-completion-alpha-3b-4k,wayback,2023-08-08,day,first public capture,true,false
 stablelm-2-1-6b-weights_released-1,https://huggingface.co/stabilityai/stablelm-2-1_6b,hf_hub,2024-01-18,day,hub repo created,true,false
 stablelm-2-12b-weights_released-1,https://huggingface.co/stabilityai/stablelm-2-12b,hf_hub,2024-03-21,day,hub repo created,true,false
 stablelm-3b-4e1t-weights_released-1,https://huggingface.co/stabilityai/stablelm-3b-4e1t,hf_hub,2023-09-29,day,hub repo created,true,false
+stablelm-3b-4e1t-weights_released-1,https://web.archive.org/web/20230930/https://huggingface.co/stabilityai/stablelm-3b-4e1t,wayback,2023-09-30,day,first public capture,true,false
 stablelm-base-alpha-3b-weights_released-1,https://huggingface.co/stabilityai/stablelm-base-alpha-3b,hf_hub,2023-04-17,day,hub repo created,true,false
+stablelm-base-alpha-3b-weights_released-1,https://web.archive.org/web/20230419/https://huggingface.co/stabilityai/stablelm-base-alpha-3b,wayback,2023-04-19,day,first public capture,true,false
 stablelm-base-alpha-7b-v2-weights_released-1,https://huggingface.co/stabilityai/stablelm-base-alpha-7b-v2,hf_hub,2023-08-04,day,hub repo created,true,false
+stablelm-base-alpha-7b-v2-weights_released-1,https://web.archive.org/web/20230809/https://huggingface.co/stabilityai/stablelm-base-alpha-7b-v2,wayback,2023-08-09,day,first public capture,true,false
 stablelm-base-alpha-7b-weights_released-1,https://huggingface.co/stabilityai/stablelm-base-alpha-7b,hf_hub,2023-04-11,day,hub repo created,true,false
 stablelm-tuned-alpha-3b-weights_released-1,https://huggingface.co/stabilityai/stablelm-tuned-alpha-3b,hf_hub,2023-04-19,day,hub repo created,true,false
+stablelm-tuned-alpha-3b-weights_released-1,https://web.archive.org/web/20230419/https://huggingface.co/stabilityai/stablelm-tuned-alpha-3b,wayback,2023-04-19,day,first public capture,true,false
 stablelm-tuned-alpha-7b-weights_released-1,https://huggingface.co/stabilityai/stablelm-tuned-alpha-7b,hf_hub,2023-04-19,day,hub repo created,true,false
+stablelm-tuned-alpha-7b-weights_released-1,https://web.archive.org/web/20230419/https://huggingface.co/stabilityai/stablelm-tuned-alpha-7b,wayback,2023-04-19,day,first public capture,true,false
 stablelm-zephyr-3b-weights_released-1,https://huggingface.co/stabilityai/stablelm-zephyr-3b,hf_hub,2023-11-21,day,hub repo created,true,false
+stablelm-zephyr-3b-weights_released-1,https://web.archive.org/web/20231207/https://huggingface.co/stabilityai/stablelm-zephyr-3b,wayback,2023-12-07,day,first public capture,true,false
 step-3-5-flash-base-midtrain-weights_released-1,https://huggingface.co/stepfun-ai/Step-3.5-Flash-Base-Midtrain,hf_hub,2026-03-02,day,hub repo created,true,false
 step-3-5-flash-base-weights_released-1,https://huggingface.co/stepfun-ai/Step-3.5-Flash-Base,hf_hub,2026-03-02,day,hub repo created,true,false
 step-3-5-flash-fp8-weights_released-1,https://huggingface.co/stepfun-ai/Step-3.5-Flash-FP8,hf_hub,2026-02-01,day,hub repo created,true,false
@@ -1601,10 +1906,16 @@ tencent-hy3-weights_released-1,https://huggingface.co/tencent/Hy3,hf_hub,2026-07
 tencent-hy3-weights_released-1,https://models.dev/api.json,api_metadata,2026-07-06,day,models.dev,false,false
 text-embedding-3-large-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-01-25,day,epoch.ai,false,false
 text-embedding-3-large-api_ga-1,https://models.dev/api.json,api_metadata,2024-01-25,day,models.dev,false,false
+text-embedding-3-large-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-09,day,azure_lifecycle (text-embedding-3-large),false,true
+text-embedding-3-large-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-09,day,litellm (azure/text-embedding-3-large),false,false
 text-embedding-3-small-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-01-25,day,epoch.ai,false,false
 text-embedding-3-small-api_ga-1,https://models.dev/api.json,api_metadata,2024-01-25,day,models.dev,false,false
+text-embedding-3-small-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-09,day,azure_lifecycle (text-embedding-3-small),false,true
+text-embedding-3-small-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-09,day,litellm (azure/text-embedding-3-small),false,false
 text-embedding-ada-002-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2022-12-15,day,epoch.ai,false,false
 text-embedding-ada-002-api_ga-1,https://models.dev/api.json,api_metadata,2022-12-15,day,models.dev,false,false
+text-embedding-ada-002-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-09,day,"azure_lifecycle (text-embedding-ada-002, text-embedding-ada-002)",false,true
+text-embedding-ada-002-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-09,day,litellm (azure/text-embedding-ada-002),false,false
 tiny-aya-base-weights_released-1,https://huggingface.co/CohereLabs/tiny-aya-base,hf_hub,2026-02-13,day,hub repo created,true,false
 tiny-aya-earth-weights_released-1,https://huggingface.co/CohereLabs/tiny-aya-earth,hf_hub,2026-02-13,day,hub repo created,true,false
 tiny-aya-fire-weights_released-1,https://huggingface.co/CohereLabs/tiny-aya-fire,hf_hub,2026-02-13,day,hub repo created,true,false
@@ -1614,6 +1925,7 @@ tiny-random-stablelm-2-weights_released-1,https://huggingface.co/stabilityai/tin
 truthfulqa-info-judge-llama2-7b-weights_released-1,https://huggingface.co/allenai/truthfulqa-info-judge-llama2-7B,hf_hub,2024-02-07,day,hub repo created,true,false
 truthfulqa-truth-judge-llama2-7b-weights_released-1,https://huggingface.co/allenai/truthfulqa-truth-judge-llama2-7B,hf_hub,2024-02-07,day,hub repo created,true,false
 tulu-2-7b-weights_released-1,https://huggingface.co/allenai/tulu-2-7b,hf_hub,2023-11-13,day,hub repo created,true,false
+tulu-2-7b-weights_released-1,https://web.archive.org/web/20240222/https://huggingface.co/allenai/tulu-2-7b,wayback,2024-02-22,day,first public capture,true,false
 ui-mate-27b-weights_released-1,https://huggingface.co/tencent/UI-Mate-27B,hf_hub,2026-08-14,day,hub repo created,true,false
 ui-mate-9b-weights_released-1,https://huggingface.co/tencent/UI-Mate-9B,hf_hub,2026-08-14,day,hub repo created,true,false
 ui-tars-1-5-7b-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-22,day,models.dev,false,false
@@ -1643,7 +1955,9 @@ wizardlm-2-8x22b-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadat
 wizardlm-2-8x22b-api_ga-1,https://models.dev/api.json,api_metadata,2024-04-16,day,models.dev,false,false
 wizardlm-2-8x22b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2024-04-16,day,openrouter,false,true
 yarn-llama-2-7b-128k-weights_released-1,https://huggingface.co/NousResearch/Yarn-Llama-2-7b-128k,hf_hub,2023-08-31,day,hub repo created,true,false
+yarn-llama-2-7b-128k-weights_released-1,https://web.archive.org/web/20231010/https://huggingface.co/NousResearch/Yarn-Llama-2-7b-128k,wayback,2023-10-10,day,first public capture,true,false
 yarn-mistral-7b-128k-weights_released-1,https://huggingface.co/NousResearch/Yarn-Mistral-7b-128k,hf_hub,2023-10-31,day,hub repo created,true,false
+yarn-mistral-7b-128k-weights_released-1,https://web.archive.org/web/20231103/https://huggingface.co/NousResearch/Yarn-Mistral-7b-128k,wayback,2023-11-03,day,first public capture,true,false
 yi-1-5-34b-32k-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-34B-32K,hf_hub,2024-05-15,day,hub repo created,true,false
 yi-1-5-34b-chat-16k-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-34B-Chat-16K,hf_hub,2024-05-15,day,hub repo created,true,false
 yi-1-5-34b-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-34B-Chat,hf_hub,2024-05-10,day,hub repo created,true,false
@@ -1652,24 +1966,33 @@ yi-1-5-9b-32k-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-9B-32K,hf_h
 yi-1-5-9b-chat-16k-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K,hf_hub,2024-05-15,day,hub repo created,true,false
 yi-1-5-9b-weights_released-1,https://huggingface.co/01-ai/Yi-1.5-9B-Chat,hf_hub,2024-05-10,day,hub repo created,true,false
 yi-34b-200k-weights_released-1,https://huggingface.co/01-ai/Yi-34B-200K,hf_hub,2023-11-06,day,hub repo created,true,false
+yi-34b-200k-weights_released-1,https://web.archive.org/web/20231106/https://huggingface.co/01-ai/Yi-34B-200K,wayback,2023-11-06,day,first public capture,true,false
 yi-6b-200k-weights_released-1,https://huggingface.co/01-ai/Yi-6B-200K,hf_hub,2023-11-06,day,hub repo created,true,false
+yi-6b-200k-weights_released-1,https://web.archive.org/web/20231107/https://huggingface.co/01-ai/Yi-6B-200K,wayback,2023-11-07,day,first public capture,true,false
 yi-6b-weights_released-1,https://huggingface.co/01-ai/Yi-6B,hf_hub,2023-11-01,day,hub repo created,true,false
+yi-6b-weights_released-1,https://web.archive.org/web/20231108/https://huggingface.co/01-ai/Yi-6B,wayback,2023-11-08,day,first public capture,true,false
 yi-9b-200k-weights_released-1,https://huggingface.co/01-ai/Yi-9B-200K,hf_hub,2024-03-15,day,hub repo created,true,false
 yi-9b-weights_released-1,https://huggingface.co/01-ai/Yi-9B,hf_hub,2024-03-01,day,hub repo created,true,false
 yi-coder-1-5b-chat-weights_released-1,https://huggingface.co/01-ai/Yi-Coder-1.5B-Chat,hf_hub,2024-08-21,day,hub repo created,true,false
 yi-coder-9b-weights_released-1,https://huggingface.co/01-ai/Yi-Coder-9B,hf_hub,2024-08-15,day,hub repo created,true,false
 yi-large-api_ga-1,https://models.dev/api.json,api_metadata,2024-01-01,year,models.dev,false,false
 yi-vl-34b-weights_released-1,https://huggingface.co/01-ai/Yi-VL-34B,hf_hub,2023-12-25,day,hub repo created,true,false
+yi-vl-34b-weights_released-1,https://web.archive.org/web/20240123/https://huggingface.co/01-ai/Yi-VL-34B,wayback,2024-01-23,day,first public capture,true,false
 yi-vl-6b-weights_released-1,https://huggingface.co/01-ai/Yi-VL-6B,hf_hub,2023-12-25,day,hub repo created,true,false
+yi-vl-6b-weights_released-1,https://web.archive.org/web/20240123/https://huggingface.co/01-ai/Yi-VL-6B,wayback,2024-01-23,day,first public capture,true,false
 youtu-llm-2b-base-weights_released-1,https://huggingface.co/tencent/Youtu-LLM-2B-Base,hf_hub,2025-12-31,day,hub repo created,true,false
 youtu-llm-2b-weights_released-1,https://huggingface.co/tencent/Youtu-LLM-2B,hf_hub,2025-12-31,day,hub repo created,true,false
 youtu-vl-4b-instruct-weights_released-1,https://huggingface.co/tencent/Youtu-VL-4B-Instruct,hf_hub,2026-01-23,day,hub repo created,true,false
 yuan2-102b-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-102B-hf,hf_hub,2023-12-21,day,hub repo created,true,false
+yuan2-102b-hf-weights_released-1,https://web.archive.org/web/20240718/https://huggingface.co/IEITYuan/Yuan2-102B-hf,wayback,2024-07-18,day,first public capture,true,false
 yuan2-2b-februa-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-2B-Februa-hf,hf_hub,2024-03-01,day,hub repo created,true,false
 yuan2-2b-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-2B-hf,hf_hub,2023-12-21,day,hub repo created,true,false
+yuan2-2b-hf-weights_released-1,https://web.archive.org/web/20240424/https://huggingface.co/IEITYuan/Yuan2-2B-hf,wayback,2024-04-24,day,first public capture,true,false
 yuan2-2b-janus-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-2B-Janus-hf,hf_hub,2024-01-12,day,hub repo created,true,false
+yuan2-2b-janus-hf-weights_released-1,https://web.archive.org/web/20240717/https://huggingface.co/IEITYuan/Yuan2-2B-Janus-hf,wayback,2024-07-17,day,first public capture,true,false
 yuan2-2b-mars-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-2B-Mars-hf,hf_hub,2024-04-23,day,hub repo created,true,false
 yuan2-51b-hf-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-51B-hf,hf_hub,2023-12-21,day,hub repo created,true,false
+yuan2-51b-hf-weights_released-1,https://web.archive.org/web/20240729/https://huggingface.co/IEITYuan/Yuan2-51B-hf,wayback,2024-07-29,day,first public capture,true,false
 yuan2-m32-weights_released-1,https://huggingface.co/IEITYuan/Yuan2-M32,hf_hub,2024-05-27,day,hub repo created,true,false
 zwz-4b-weights_released-1,https://huggingface.co/inclusionAI/ZwZ-4B,hf_hub,2026-02-12,day,hub repo created,true,false
 zwz-8b-weights_released-1,https://huggingface.co/inclusionAI/ZwZ-8B,hf_hub,2026-02-12,day,hub repo created,true,false
