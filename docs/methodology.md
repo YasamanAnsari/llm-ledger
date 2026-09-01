@@ -27,34 +27,54 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
 2. If the page looks undated or edited later, check Wayback.
 3. Save the URL we actually opened.
 4. Papers: arXiv **v1** date, not a later revision.
-5. Weights: prefer Hugging Face `createdAt`. If the blog differs by
-   more than two days, keep the Hub date and put the blog date in
-   `announced` or `notes`.
+5. Weights: the vendor's announcement wins. Hugging Face `createdAt` is
+   when the repo was *created*, and labs create repos private and flip
+   them public at launch. Across the models where we have both, the repo
+   predates the launch in 16 of 20 cases, by up to three weeks. So a Hub
+   timestamp alone is `inferred`; it becomes `verified` only when the
+   first public Wayback capture of the repo lands within two days of it.
+6. The same holds for vendor model registries: OpenAI's and Anthropic's
+   `created` timestamps run 1-16 days ahead of the public launch. They
+   corroborate a catalog date; they do not set it.
 
 If the source only gives a month, we store the first of that month and
-`precision=month`. We do not invent a day.
+`precision=month`. We do not invent a day. A catalog that says
+"January 1" for a model with no known day is stored at `precision=year`.
 
 ## How sure we are
 
-- `verified`: we opened a primary source (or a Hub / API timestamp).
-  `verified_by` and `verified_date` are required.
-  `verified_by=llm-ledger` means a project-level check; any other value
-  is a named person.
-- `inferred`: catalog or secondary source only.
-- `disputed`: sources disagree. Best-evidenced date stays in `date`;
-  every other value and URL goes in `notes`.
+One policy in `pipeline/confidence.py` decides every machine-dated row;
+every claim it weighed is kept in `data/core/claims.csv`.
 
-See also `data/generated/disagreement_report.md`.
+- `verified`: a person opened a primary source (`verified_by` is their
+  name), or `verified_by=llm-ledger`: two independent machine sources
+  agree within 7 days (2 days when one is a bracketing timestamp), or a
+  platform reported its own event (OpenRouter's listing date, Azure's
+  retirement schedule).
+- `inferred`: one machine source, or sources that differ by 8-30 days.
+- `disputed`: two stated dates disagree by more than 30 days. The
+  best-evidenced date stays in `date`; everything else is in `notes`.
+- A machine date that falls *before* a human-verified announcement is
+  pre-staging (a repo or model object created ahead of launch) and is
+  not loaded at all.
+
+Per model, `review_status` summarizes this: `human_reviewed`,
+`machine_corroborated`, or `unreviewed`. Most rows are `unreviewed`
+catalog drafts. See `data/generated/coverage_report.md` for the honest
+per-lab picture and `disagreement_report.md` for where catalogs differ.
 
 ## How we update
 
-The file is updated regularly.
+Every day: `make all`. The pullers refresh every snapshot; the loaders
+(`reconcile`, `hf_census`, `lifecycle`) re-assess machine-owned rows from
+the current claims and never touch a curated row; `build` recomputes
+derived columns; `validate` must be green before anything is committed.
 
-Weekly: `make pull`, then `make match reconcile`. Look at
-`data/staging/review_queue.csv`. Then `make build validate`.
+Weekly: read `data/staging/review_queue.csv` and
+`data/generated/coverage_report.md`; verify the labs with the lowest
+verified share first.
 
-Monthly: check Chinese collections and deprecation pages, rebuild,
-append `CHANGELOG.md`, tag `vYYYY.MM`.
+Monthly: rebuild, append `CHANGELOG.md`, tag `vYYYY.MM`.
 
 Fixes edit the row. `record_created` / `record_updated` and the
 changelog keep history.
@@ -69,5 +89,10 @@ match. We keep that bar high on purpose.
 
 - Hugging Face `createdAt` before March 2022 is a fake backfill. Do
   not treat 2022-03-02 as a weights date.
+- Hugging Face `createdAt` in general is a lower bound, not a release
+  date (see above). Coverage skews toward open-weight models because the
+  Hub is sweepable and vendor blogs are not.
+- Wayback first captures lag by months for small repos, so many Hub
+  dates stay `inferred` even when they are right.
 - No ModelScope token: we use Hugging Face instead of inventing rows.
 - `region=global` unless a source says otherwise.

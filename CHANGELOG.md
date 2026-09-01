@@ -3,6 +3,46 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-09-01 (v2026.09)
+
+Schema and confidence overhaul. Column layouts changed; event ids for
+re-typed rows changed. v2026.08 remains available as a tagged release.
+
+- New table `claims.csv`: every machine claim behind an event (source URL,
+  date, precision, bound/first-party flags). Loaders re-assess events
+  from the full claim set each run, so aggregator corrections propagate.
+- One confidence policy (`pipeline/confidence.py`). Hugging Face
+  `createdAt` alone is now `inferred` (it predates the public launch in
+  16 of 20 checkable cases); it verifies only when the first Wayback
+  capture agrees within two days. Vendor model-registry `created`
+  timestamps are treated the same way. Machine dates earlier than a
+  curated announcement are withdrawn as pre-staging.
+- models.dev release dates on open-weights models are now
+  `weights_released`, not `api_ga` (141 rows re-typed). OpenRouter
+  listing dates are their own `platform_availability` rows
+  (`platform=openrouter`) instead of masquerading as `api_ga`. Epoch
+  publication dates later than an availability event are dropped (28
+  rows). Catalog Jan-1 dates carry `precision=year`.
+- New sources: OpenAI/Anthropic/Gemini `/models` (registry timestamps,
+  OpenAI `shutdown_date`), Azure Foundry retirement schedule, Amazon
+  Bedrock model lifecycle, LiteLLM deprecation dates, Internet Archive
+  first captures. `retired` rows: 19 -> 170, platform-scoped where the
+  schedule is a host's, not the vendor's.
+- `attributes.csv` filled from models.dev for matched models (50 -> 415
+  rows); new `reasoning_supported` column; `reasoning_type` optional;
+  `pdf` added to modalities.
+- `models.review_status` (derived): `human_reviewed` /
+  `machine_corroborated` / `unreviewed`. New
+  `data/generated/coverage_report.md`.
+- Validation: availability more than 30 days before `announced` is an
+  error; `platform` allowed on any event; claims table checked.
+- Withdrawn: 1,373 machine-owned rows regenerated under the policy;
+  7 undated catalog-drafted models removed; 6 unreviewed models gained
+  `derivative_type=distill` from their names.
+- Verified events 1,044 -> 632, of which 289 are platform-own listing
+  timestamps and ~200 are curated. The old count was inflated by repo
+  creation dates.
+
 ## 2026-08-25
 
 - Initial repository scaffold: schema, validation rules, empty core tables.

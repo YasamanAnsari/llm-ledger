@@ -30,10 +30,12 @@ so you can choose the date that matches your question.
 | one row per model, dates as columns | [`data/generated/llm_ledger_wide.csv`](data/generated/llm_ledger_wide.csv) |
 | that plus Epoch scale columns | [`data/generated/llm_ledger_enriched.csv`](data/generated/llm_ledger_enriched.csv) |
 | every dated fact with a source | [`data/core/events.csv`](data/core/events.csv) |
+| every source behind a machine-dated fact | [`data/core/claims.csv`](data/core/claims.csv) |
 | who made the model | [`data/core/models.csv`](data/core/models.csv), [`organizations.csv`](data/core/organizations.csv) |
 | other names for the same model | [`data/core/crosswalk.csv`](data/core/crosswalk.csv) |
-| context / current prices (flagships) | [`data/core/attributes.csv`](data/core/attributes.csv) |
+| context / prices / modalities | [`data/core/attributes.csv`](data/core/attributes.csv) |
 | lab icons | [`assets/orgs/`](assets/orgs/) (`{org_id}.svg`) |
+| how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |
 | where catalogs disagree | [`data/generated/disagreement_report.md`](data/generated/disagreement_report.md) |
 | how much "the date" moves | [`data/generated/sensitivity_report.md`](data/generated/sensitivity_report.md) |
 
@@ -42,9 +44,14 @@ wide. An empty cell means that event never happened. Dates like
 `first_public_availability_date` on `models.csv` are computed; do not
 edit them by hand.
 
-This snapshot: **1,141 models**, **1,593 events**, **41 orgs**. First
-availability: 2021-11-18 (GPT-3 API) to 2026-08-21. About 77%
-open-weight; Chinese labs are about half of those.
+This snapshot: **1,171 models**, **1,955 events**, **41 orgs**, backed by
+1,997 recorded claims. First availability: 2021-11-18 (GPT-3 API) to
+2026-09-01. About 78% open-weight; Chinese labs are about half of those.
+
+Read the counts honestly: 55 models are `human_reviewed`, 291 are
+`machine_corroborated` (two independent sources agreed), and 825 are
+`unreviewed` catalog drafts. 632 of 1,955 events are `verified`.
+[`coverage_report.md`](data/generated/coverage_report.md) has this per lab.
 
 ## How to use it
 
@@ -59,10 +66,27 @@ gap = (pd.to_datetime(wide["api_ga_date"]) -
 print(gap.describe())
 ```
 
-For a paper, prefer `confidence=verified` and keep `source_url`. If a
-row is `disputed`, read `notes` before you pick a date.
+### Using it for research
 
-Columns and allowed values: [`docs/schema.md`](docs/schema.md).
+- **Filter first.** `models.review_status in {human_reviewed,
+  machine_corroborated}` and `events.confidence == "verified"` is the
+  defensible sample. The rest is a good lead list, not a fact list.
+- **Pick the event that answers your question.** Adoption shocks:
+  `api_ga` for developers, `weights_released` for the open ecosystem,
+  `consumer_rollout` / `free_tier` for the public. `announced` is when
+  people first heard. `platform_availability` (with `platform`) is when
+  a cloud started serving it; `retired` with a `platform` is that host's
+  shutdown, not the vendor's.
+- **Know the biases.** Hugging Face repo creation runs ahead of the
+  public launch (16 of 20 checkable cases; up to three weeks), so
+  Hub-only weights dates are `inferred` on purpose. Coverage is deepest
+  for OpenAI and open-weight labs, thinnest for closed labs without an
+  API listing. Every machine date's evidence is in `claims.csv`; every
+  `disputed` row lists all values in `notes`.
+- **Keep `source_url`.** It is the page a reader can open.
+
+Columns and allowed values: [`docs/schema.md`](docs/schema.md). How dates
+and confidence are decided: [`docs/methodology.md`](docs/methodology.md).
 
 ## What is in and what is out
 
@@ -88,12 +112,15 @@ arXiv v1 backs it.
 
 - One event, one date, one URL. If the source only says "March 2024",
   we store `2024-03-01` and `precision=month`. We do not guess the day.
-- `verified`: a primary source backs the date. `verified_by=llm-ledger`
-  means a project-level check; a human check carries that person's name.
-  `inferred`: catalog only.
-  `disputed`: sources disagree; all values stay in `notes`.
+- One confidence policy for every machine date
+  (`pipeline/confidence.py`): one source is `inferred`; two independent
+  sources agreeing are `verified` by `llm-ledger`; stated dates that
+  clash are `disputed` with everything in `notes`. A human check carries
+  that person's name. Repo and registry creation timestamps corroborate
+  a date but never set one on their own.
 - Hugging Face sweep keeps the **top 40 repos per lab** by downloads
-  (`PER_ORG_CAP` in `pipeline/hf_census.py`). Raise it to pull more.
+  (`PER_ORG_CAP` in `pipeline/hf_census.py`); repos already in the
+  ledger stay tracked when they fall out of the top 40.
 - Hugging Face `createdAt` of 2022-03-02 is a backfill. We do not use
   it as a weights date.
 - Names: exact match first. Fuzzy score >= 97 joins; 92-97 waits for
@@ -107,7 +134,7 @@ arXiv v1 backs it.
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-make pull match reconcile census build validate test
+make all   # pull match reconcile census lifecycle build validate test
 ```
 
 Generated files rebuild the same way every time. We do not commit raw

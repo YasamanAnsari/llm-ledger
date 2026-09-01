@@ -1,6 +1,6 @@
 # llm-ledger schema
 
-Five core tables plus two generated files. CSVs are UTF-8, LF, sorted by
+Six core tables plus generated files. CSVs are UTF-8, LF, sorted by
 primary key, ISO dates. The code of record is `pipeline/schema.py`.
 
 ## Rules
@@ -63,11 +63,13 @@ we set `is_derivative`, `derivative_type`, and `base_model_id`.
 | `first_public_availability_date` | date DERIVED | see derived-field rules |
 | `first_availability_via` | enum DERIVED | which event won |
 | `anticipation_days` | int DERIVED | first availability minus announced |
+| `review_status` | enum DERIVED | `human_reviewed` (a person verified at least one event), `machine_corroborated` (a machine event reached `verified`), `unreviewed` (single-source machine claims only) |
 | `record_created` / `record_updated` | ISO datetime | |
 | `notes` | string | |
 
 Derived columns are recomputed by `pipeline/build.py` on every run and must
-never be hand-edited.
+never be hand-edited. Filter on `review_status` before treating a model's
+dates as settled; most rows are `unreviewed` catalog drafts.
 
 ## events.csv (the heart of the dataset)
 
@@ -79,14 +81,19 @@ never be hand-edited.
 | `date` | ISO date | first day of period when precision is coarser than day |
 | `precision` | enum | `day, month, quarter, year` |
 | `region` | string | default `global`; else ISO country or `EU`/`US`/`CN` |
-| `platform` | string | required for, and only allowed on, `platform_availability` |
+| `platform` | string | required on `platform_availability`; optional elsewhere to scope an event to one host (a `retired` on `azure` is not a retirement at OpenAI). Empty means the vendor's own channel. |
 | `detail` | string nullable | event-type-specific, see below |
-| `source_url` | URL | REQUIRED; the page actually consulted |
-| `source_type` | enum | `vendor_blog, vendor_docs, vendor_changelog, deprecation_page, system_card, arxiv, hf_hub, github, modelscope, api_metadata, news, wikipedia, community_timeline, published_paper, wayback` |
-| `confidence` | enum | `verified, inferred, disputed` |
-| `verified_by` | string | required when `confidence=verified` |
+| `source_url` | URL | REQUIRED; the page actually consulted, or the chosen source when several claims back the row (see `claims.csv`) |
+| `source_type` | enum | `vendor_blog, vendor_docs, vendor_changelog, deprecation_page, system_card, arxiv, hf_hub, github, modelscope, api_metadata, lifecycle_table, news, wikipedia, community_timeline, published_paper, wayback` |
+| `confidence` | enum | `verified, inferred, disputed` (see confidence semantics) |
+| `verified_by` | string | required when `confidence=verified`; a person's name, or `llm-ledger` for a machine corroboration |
 | `verified_date` | date | required when `confidence=verified` |
-| `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources |
+| `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
+
+Rows with `source_type` in `{hf_hub, api_metadata, lifecycle_table}` are
+**machine-owned**: the loaders re-assess them on every run from the claims
+in `claims.csv`. Any other `source_type` marks a curated row that no script
+will ever modify.
 
 `detail` conventions:
 
@@ -123,12 +130,29 @@ December 20, 2024, released in the API April 16, 2025, and o3-pro followed
 June 10, 2025. Collapsing these into one undocumented date is how existing
 datasets disagree with each other.
 
+## claims.csv (evidence behind machine-assessed events)
+
+| Column | Type | Rules |
+|---|---|---|
+| `event_id` | FK to events | |
+| `source_url` | URL | one row per (event, source host) |
+| `source_type` | enum | same vocabulary as events |
+| `date` | ISO date | what this source says |
+| `precision` | `day` or `year` | `year` for catalog Jan-1 placeholders |
+| `label` | string | short source name, e.g. `models.dev`, `hub repo created` |
+| `bound` | bool | the timestamp brackets the event (repo or model-registry creation, first crawl) rather than stating it |
+| `first_party` | bool | the source reports its own event (OpenRouter listing on OpenRouter, Azure retirement on Azure) |
+
+`events.csv` holds the conclusion; this table holds every claim it rests on,
+so a loader can re-assess from the full set and a reader can see exactly
+which sources said what. Curated events have no rows here.
+
 ## crosswalk.csv
 
 | Column | Type | Rules |
 |---|---|---|
 | `model_id` | FK | |
-| `namespace` | enum | `openrouter, models_dev, huggingface, modelscope, openai_api, anthropic_api, google_api, epoch, wikipedia, lmarena, text_surface_forms` |
+| `namespace` | enum | `openrouter, models_dev, huggingface, modelscope, openai_api, anthropic_api, google_api, mistral_api, epoch, wikipedia, lmarena, text_surface_forms` |
 | `identifier` | string | the ID/name in that namespace; for `text_surface_forms`, one row per observed human spelling |
 
 Primary key is the full triple, so a model may carry several identifiers per
@@ -139,14 +163,15 @@ namespace (e.g. many surface forms).
 | Column | Type |
 |---|---|
 | `model_id` | FK |
-| `reasoning_type` | `none, always_on, toggleable, effort_tiered` |
+| `reasoning_supported` | bool nullable (catalogs say whether a model reasons) |
+| `reasoning_type` | `none, always_on, toggleable, effort_tiered`, nullable (how it reasons is a human call) |
 | `reasoning_effort_levels` | pipe-list nullable |
 | `reasoning_tokens_billed` | bool nullable |
 | `reasoning_tokens_visible` | `hidden, summarized, full` nullable |
 | `reasoning_is_separate_checkpoint` | bool nullable |
 | `context_length` | int |
 | `max_output_tokens` | int nullable |
-| `modality_in` / `modality_out` | pipe-lists of `text, image, audio, video` |
+| `modality_in` / `modality_out` | pipe-lists of `text, image, audio, video, pdf` |
 | `knowledge_cutoff` | ISO date nullable |
 | `supports_tool_use` / `supports_structured_output` / `supports_caching` | bool nullable |
 | `price_input` / `price_output` / `price_cached_input` | USD per 1M tokens, nullable |
@@ -154,28 +179,41 @@ namespace (e.g. many surface forms).
 | `source_url` | URL |
 
 Price *history* lives in `events.csv` as `price_changed` rows; this table
-holds only the latest observed snapshot.
+holds only the latest observed snapshot. Rows with `source_url` =
+models.dev were filled from that catalog by `reconcile.py` and are only
+added for models without a hand-written row.
 
 ## Derived-field computation rules
 
 - `first_public_availability_date` = MIN over global-region events of type
   `{api_ga, weights_released, consumer_rollout}`. If none exist, fall back to
-  MIN of `{api_preview, free_tier}` and suffix `first_availability_via` with
-  `_fallback`.
+  MIN of `{api_preview, free_tier}`, then to `platform_availability` (a
+  third-party listing is an upper bound on public availability), and suffix
+  `first_availability_via` with `_fallback`.
 - `first_availability_via` = the event type that achieved the minimum; ties
   broken by priority `weights_released > api_ga > consumer_rollout`
-  (fallback ties: `api_preview > free_tier`).
+  (fallback ties: `api_preview > free_tier > platform_availability`).
 - `anticipation_days` = `first_public_availability_date - announced.date`;
   null if either is missing or either precision is coarser than `month`.
+- `review_status` from the model's events (see models.csv).
 - All derived fields are recomputed by `pipeline/build.py` every run.
 
 ## Confidence semantics
 
+One policy, `pipeline/confidence.py`, decides every machine-dated row:
+
 | `confidence` | Meaning |
 |---|---|
-| `verified` | The primary source was opened and the date confirmed. `verified_by` and `verified_date` required. |
-| `inferred` | Taken from a secondary/aggregator source without primary confirmation. |
-| `disputed` | Two or more sources conflict beyond precision differences. All values recorded in `notes`; `date` keeps the best-evidenced value. |
+| `verified` | Either a person opened a primary source (`verified_by` = their name), or `verified_by=llm-ledger`: two independent machine sources agreed on the date within 7 days (2 days when one of them is a bracketing timestamp), or a platform reported its own event. |
+| `inferred` | One machine source, or several that differ by 8-30 days. The row carries the best-evidenced date and lists the others in `notes`. |
+| `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. |
+
+Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,
+vendor model-registry `created`, first Wayback capture) never set the date
+when a stated date exists, never count as verified alone, and never
+dispute: a repo created early or crawled late is lag, not disagreement.
+Any machine claim dated before a curated `announced` event is private
+pre-staging and is withdrawn.
 
 ## Generated artifacts (never hand-edited)
 
@@ -187,25 +225,32 @@ holds only the latest observed snapshot.
   Epoch AI snapshot via the crosswalk, carrying Epoch's scale columns and
   confidence labels plus a constant `epoch_snapshot_date` column. Epoch data
   is CC BY 4.0 and credited in LICENSE-DATA and the README.
+- `data/generated/coverage_report.md` - per-organization model and event
+  counts with review status and verified share; read this before quoting
+  the headline row counts.
 
 ## Validation rules
 
 `pipeline/validate.py` enforces, and exits nonzero on failure:
 
-1. PK uniqueness on all tables; all FKs resolve.
+1. PK uniqueness on all tables; all FKs resolve (including
+   `claims.event_id`).
 2. Every event has a valid `source_url`, plus `precision` and `confidence`.
 3. `date` is consistent with `precision` (month precision means day == 01,
    quarter means the first day of Jan/Apr/Jul/Oct, year means Jan 1).
 4. Temporal sanity per model and region:
    `announced <= preview <= api_preview <= api_ga` where present;
-   `deprecation_announced <= retired`; no event after today except `retired`
-   rows from announced shutdown schedules (flagged as warnings, not failures).
+   `deprecation_announced <= retired`; availability more than 30 days before
+   `announced` is an error (1-30 days a warning); no event after today
+   except `retired` rows from published shutdown schedules (one summary
+   warning).
 5. `disputed` implies non-empty `notes`; `verified` implies `verified_by`
    and `verified_date`.
 6. Every model has at least one event; every non-derivative model has an
-   `announced` or an availability event.
+   `announced`, availability, or `platform_availability` event.
 7. `snapshot_of` / `base_model_id` / `parent_model_id` links are acyclic.
-8. Controlled-vocabulary columns contain only allowed values.
+8. Controlled-vocabulary columns contain only allowed values; `platform` is
+   present on every `platform_availability` row; `review_status` is set.
 9. Wide/enriched artifacts regenerate byte-identically from core tables.
 10. No Epoch-domain numeric columns (parameters, compute, dataset size,
     training cost) exist in any core table.
