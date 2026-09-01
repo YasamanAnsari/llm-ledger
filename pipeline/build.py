@@ -277,7 +277,7 @@ def build_coverage_report(models: list, events: list, organizations: list) -> st
     lines += ["", "## By event type", "", "| event_type | rows | verified | inferred | disputed |",
               "|---|---|---|---|---|"]
     types = sorted({e["event_type"] for e in events},
-                   key=lambda t: -sum(1 for e in events if e["event_type"] == t))
+                   key=lambda t: (-sum(1 for e in events if e["event_type"] == t), t))
     for t in types:
         rows = [e for e in events if e["event_type"] == t]
         lines.append(f"| {t} | {len(rows)} | "
