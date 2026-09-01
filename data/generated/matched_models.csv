@@ -9,6 +9,7 @@ match_key,sources,match_method,vendor_prefix,or_prefix,md_prefix,md_provider,md_
 @cf/zai-org/glm-4-7-flash,models_dev,md:only,cloudflare,,cloudflare,edenai,cloudflare/@cf/zai-org/glm-4.7-flash,2026-01-19,1,true,text,text,131072,0.0605,0.4,true,,,,,,,
 abliterated-model,models_dev,md:only,,,,abliteration-ai,abliterated-model,2026-01-06,2,true,text|image,text,150000,3,3,true,,,,,,,
 abliterated-model-large,models_dev,md:only,,,,abliteration-ai,abliterated-model-large,2026-07-25,2,false,text,text,1000000,5,5,true,,,,,,,
+abliterated-model-large-v2,models_dev,md:only,,,,abliteration-ai,abliterated-model-large-v2,2026-08-29,2,false,text,text,1000000,5,5,true,,,,,,,
 accounts/fireworks/models/deepseek-v4-flash,models_dev,md:only,fireworks_ai,,fireworks_ai,edenai,fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731,2026-07-31,1,true,text,text,1048576,0.22,0.66,true,,,,,,,
 accounts/fireworks/models/deepseek-v4-pro,models_dev,md:only,fireworks_ai,,fireworks_ai,edenai,fireworks_ai/accounts/fireworks/models/deepseek-v4-pro-0813,2026-08-12,1,true,text,text,1048576,1.32,3.96,true,,,,,,,
 accounts/fireworks/models/gpt-oss-120b,models_dev,md:only,fireworks_ai,,fireworks_ai,edenai,fireworks_ai/accounts/fireworks/models/gpt-oss-120b,2025-08-05,1,true,text,text,131072,0.15,0.6,true,,,,,,,
@@ -252,7 +253,7 @@ cosmos-predict1-5b,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/cosmos-predic
 cosmos-reason2-8b,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/cosmos-reason2-8b,2025-12-01,1,true,text|image|video,text,131072,0,0,true,,,,,,,
 cosmos-transfer1-7b,models_dev|epoch,epoch:exact,nvidia,,nvidia,nvidia,nvidia/cosmos-transfer1-7b,2025-06-13,1,true,text|image|video,video,0,0,0,false,,,,Cosmos-Transfer1-7B,NVIDIA,2025-03-18,Likely
 cosmos-transfer2-5-2b,models_dev|epoch,epoch:exact,nvidia,,nvidia,nvidia,nvidia/cosmos-transfer2_5-2b,2026-02-26,1,true,text|image|video,video,0,0,0,false,,,,Cosmos-Transfer2.5-2B,NVIDIA,2025-09-29,Confident
-cosmos3-super-reasoner,models_dev,md:only,,,,llmgateway,cosmos3-super-reasoner,2026-06-01,3,false,text|image,text,262144,0.1,0.3,true,,,,,,,
+cosmos3-super-reasoner,models_dev,md:only,,,,cortecs,cosmos3-super-reasoner,2026-06-02,1,false,text,text,256000,0.099,0.296,true,,,,,,,
 custom,models_dev,md:only,,,,llmgateway,custom,2024-01-01,1,false,text|image,text,128000,0,0,false,,,,,,,
 cydonia-24b-v2,models_dev,md:only,thedrummer,,thedrummer,nano-gpt,TheDrummer/Cydonia-24B-v2,2025-02-17,1,true,text,text,16384,0.1003,0.1207,false,,,,,,,
 cydonia-24b-v4,models_dev,md:only,thedrummer,,thedrummer,nano-gpt,TheDrummer/Cydonia-24B-v4,2025-07-22,1,true,text,text,16384,0.2006,0.2414,false,,,,,,,
@@ -307,7 +308,7 @@ deepseek-ai/deepseek-v4-flash,models_dev,md:only,@cf,,@cf,cloudflare-workers-ai,
 deepseek-ai/deepseek-v4-pro,models_dev,md:only,@cf,,@cf,cloudflare-workers-ai,@cf/deepseek-ai/deepseek-v4-pro-0813,2026-08-12,2,true,text,text,1048576,1.32,3.96,true,,,,,,,
 deepseek-chat,models_dev|openrouter,or:exact,deepseek,deepseek,,302ai,deepseek-chat,2025-12-01,8,false,text,text,128000,0.29,0.43,false,deepseek/deepseek-chat,2024-12-26,,,,,
 deepseek-chat-cheaper,models_dev,md:only,,,,nano-gpt,deepseek-chat-cheaper,2025-04-15,1,true,text|pdf,text,128000,0.1,0.425,false,,,,,,,
-deepseek-chat-v3,models_dev|openrouter,or:exact,deepseek,deepseek,deepseek,kilo,deepseek/deepseek-chat-v3-0324,2025-03-24,2,false,text,text,163840,0.27,1.12,false,deepseek/deepseek-chat-v3-0324,2025-03-24,,,,,
+deepseek-chat-v3,models_dev|openrouter,or:exact,deepseek,deepseek,deepseek,kilo,deepseek/deepseek-chat-v3-0324,2025-03-24,2,false,text,text,163840,0.25,1,false,deepseek/deepseek-chat-v3-0324,2025-03-24,,,,,
 deepseek-chat-v3-1,models_dev|openrouter,or:exact,deepseek,deepseek,deepseek,kilo,deepseek/deepseek-chat-v3.1,2025-08-21,3,false,text,text,161000,0.27,1,true,deepseek/deepseek-chat-v3.1,2025-08-21,,,,,
 deepseek-latest,models_dev,md:only,deepseek,,deepseek,nano-gpt,deepseek/deepseek-latest,2026-05-03,1,true,text,text,1048576,1.1,2.5,true,,,,,,,
 deepseek-math-v2,models_dev,md:only,deepseek,,deepseek,qiniu-ai,deepseek/deepseek-math-v2,2025-12-04,1,false,text,text,160000,,,true,,,,,,,
@@ -348,9 +349,9 @@ deepseek-v3-2-tee,models_dev,md:only,deepseek-ai,,deepseek-ai,chutes,deepseek-ai
 deepseek-v3-2-thinking,models_dev,md:only,,,,302ai,deepseek-v3.2-thinking,2025-12-01,2,false,text,text,128000,0.29,0.43,true,,,,,,,
 deepseek-v3-turbo,models_dev,md:only,deepseek,,deepseek,novita-ai,deepseek/deepseek-v3-turbo,2025-03-05,1,true,text,text,64000,0.4,1.3,false,,,,,,,
 deepseek-v3-v1,models_dev,md:only,,,,amazon-bedrock,deepseek.v3-v1:0,2025-09-18,1,true,text,text,163840,0.58,1.68,true,,,,,,,
-deepseek-v4-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,deepseek,deepseek,cline-pass,cline-pass,cline-pass/deepseek-v4-flash,2026-04-24,74,true,text,text,1000000,0.14,0.28,true,deepseek/deepseek-v4-flash,2026-04-24,,DeepSeek V4 Flash 0731,DeepSeek,2026-07-31,Likely
+deepseek-v4-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,deepseek,deepseek,cline-pass,cline-pass,cline-pass/deepseek-v4-flash,2026-04-24,75,true,text,text,1000000,0.14,0.28,true,deepseek/deepseek-v4-flash,2026-04-24,,DeepSeek V4 Flash 0731,DeepSeek,2026-07-31,Likely
 deepseek-v4-flash-0731-284b,models_dev,md:only,,,,aki-io,deepseek-v4-flash-0731-284b,2026-07-31,1,true,text,text,1048576,0.2,0.5,true,,,,,,,
-deepseek-v4-flash-0731-fast,models_dev,md:only,,,,venice,deepseek-v4-flash-0731-fast,2026-08-09,1,true,text,text,1000000,0.35,0.7,true,,,,,,,
+deepseek-v4-flash-0731-fast,models_dev,md:only,deepseek,,deepseek,merge-gateway,deepseek/deepseek-v4-flash-0731-fast,2026-07-31,2,true,text,text,1000000,0.28,0.56,true,,,,,,,
 deepseek-v4-flash-0731-tee,models_dev,md:only,deepseek-ai,,deepseek-ai,chutes,deepseek-ai/DeepSeek-V4-Flash-0731-TEE,2026-07-31,1,true,text,text,1048576,0.44,1.32,true,,,,,,,
 deepseek-v4-flash-0731@eu,models_dev,md:only,,,,requesty,deepseek-v4-flash-0731@eu,2026-07-31,1,true,text,text,1048576,0.14,0.28,true,,,,,,,
 deepseek-v4-flash-el,models_dev,md:only,empiriolabs,,empiriolabs,poe,empiriolabs/deepseek-v4-flash-el,2026-04-24,1,true,text,text,1000000,0.14,0.28,true,,,,,,,
@@ -358,8 +359,8 @@ deepseek-v4-flash-flex,models_dev,md:only,,,,neuralwatt,deepseek-v4-flash-flex,2
 deepseek-v4-flash-free,models_dev,md:only,deepseek,,deepseek,orcarouter,deepseek/deepseek-v4-flash-free,2026-04-24,2,true,text,text,1000000,0,0,true,,,,,,,
 deepseek-v4-flash-ga-260731,models_dev,md:only,,,,volcengine,deepseek-v4-flash-ga-260731,2026-07-31,1,true,text,text,1000000,0.4453,1.3359,true,,,,,,,
 deepseek-v4-flash-latest,models_dev|openrouter,or:exact,~deepseek,~deepseek,deepseek,arcee,deepseek/deepseek-v4-flash-latest,2026-08-01,4,true,text,text,1048576,0.14,0.28,true,~deepseek/deepseek-v4-flash-latest,2026-08-01,,,,,
-deepseek-v4-flash-vision-exp,models_dev|openrouter,or:exact,deepseek,deepseek,,above,deepseek-v4-flash-vision-exp,2026-08-21,13,false,text|image,text,1000000,0.242,0.726,true,deepseek/deepseek-v4-flash-vision-exp,2026-08-21,,,,,
-deepseek-v4-pro,models_dev|openrouter|epoch,epoch:exact|or:exact,deepseek,deepseek,cline-pass,cline-pass,cline-pass/deepseek-v4-pro,2026-04-24,66,true,text,text,1000000,1.74,3.48,true,deepseek/deepseek-v4-pro,2026-04-24,,DeepSeek-V4-Pro,DeepSeek,2026-04-24,Likely
+deepseek-v4-flash-vision-exp,models_dev|openrouter,or:exact,deepseek,deepseek,,above,deepseek-v4-flash-vision-exp,2026-08-21,14,false,text|image,text,1000000,0.242,0.726,true,deepseek/deepseek-v4-flash-vision-exp,2026-08-21,,,,,
+deepseek-v4-pro,models_dev|openrouter|epoch,epoch:exact|or:exact,deepseek,deepseek,cline-pass,cline-pass,cline-pass/deepseek-v4-pro,2026-04-24,67,true,text,text,1000000,1.74,3.48,true,deepseek/deepseek-v4-pro,2026-04-24,,DeepSeek-V4-Pro,DeepSeek,2026-04-24,Likely
 deepseek-v4-pro-el,models_dev,md:only,empiriolabs,,empiriolabs,poe,empiriolabs/deepseek-v4-pro-el,2026-04-24,1,true,text,text,1000000,1.67,3.33,true,,,,,,,
 deepseek-v4-pro-ga-260813,models_dev,md:only,,,,volcengine,deepseek-v4-pro-ga-260813,2026-08-12,1,true,text,text,1000000,1.3359,4.00771,true,,,,,,,
 deepseek-v4-pro@eu,models_dev,md:only,,,,requesty,deepseek-v4-pro@eu,2026-04-24,1,true,text,text,1048576,1.75,3.5,true,,,,,,,
@@ -376,7 +377,7 @@ devstral-medium-latest,models_dev,md:only,mistral,,mistral,edenai,mistral/devstr
 devstral-small-2,models_dev|epoch,epoch:exact,mistral,,mistral,vercel,mistral/devstral-small-2,2025-12-09,1,false,text|image,text,256000,0.1,0.3,false,,,,Devstral Small 2,Mistral AI,2025-12-09,Confident
 devstral-small-2505,models_dev,md:only,mistralai,,mistralai,io-net,mistralai/Devstral-Small-2505,2025-05-01,3,false,text,text,128000,0.05,0.22,false,,,,,,,
 devstral-small-2507,models_dev,md:only,mistral,,mistral,merge-gateway,mistral/devstral-small-2507,2025-07-10,2,true,text,text,128000,0.1,0.3,false,,,,,,,
-diffusiongemma-26b-a4b-it,models_dev,md:only,google,,google,pioneer,google/diffusiongemma-26B-A4B-it,2026-05-31,1,false,text,text,262144,0.5,0.5,true,,,,,,,
+diffusiongemma-26b-a4b-it,models_dev|epoch,epoch:exact,google,,google,pioneer,google/diffusiongemma-26B-A4B-it,2026-05-31,1,false,text,text,262144,0.5,0.5,true,,,,DiffusionGemma 26B-A4B,DeepMind,2026-06-10,Confident
 dola-seed-2-0-code,models_dev,md:only,bytedance,,bytedance,merge-gateway,bytedance/dola-seed-2.0-code,2026-02-14,1,false,text|image,text,256000,0.4,2.4,false,,,,,,,
 dola-seed-2-0-code-preview,models_dev,md:only,bytedance,,bytedance,merge-gateway,bytedance/dola-seed-2.0-code-preview,2026-03-28,1,false,text,text,131072,0.5,3,false,,,,,,,
 dola-seed-2-0-lite,models_dev,md:only,bytedance,,bytedance,merge-gateway,bytedance/dola-seed-2.0-lite,2026-02-28,1,false,text,text,131072,0.25,2,false,,,,,,,
@@ -611,13 +612,12 @@ gemini-flash-latest,models_dev|openrouter,or:exact,~google,~google,~google,kilo,
 gemini-flash-lite-latest,models_dev,md:only,,,,google,gemini-flash-lite-latest,2026-07-21,5,false,text|image|video|audio|pdf,text,1048576,0.3,2.5,true,,,,,,,
 gemini-omni-flash-preview,models_dev,md:only,,,,google,gemini-omni-flash-preview,2026-06-30,2,false,text|image|video,video,131072,1.5,17.5,true,,,,,,,
 gemini-pro-latest,models_dev|openrouter,or:exact,~google,~google,google,edenai,google/gemini-pro-latest,2026-02-19,6,false,text|image|video|audio|pdf,text,1048576,2,12,true,~google/gemini-pro-latest,2026-04-27,,,,,
-gemini-robotics-er-1-6-preview,models_dev,md:only,,,,google,gemini-robotics-er-1.6-preview,2026-04-14,2,false,text|image|video|audio,text,131072,1,5,true,,,,,,,
+gemini-robotics-er-1-6-preview,models_dev,md:only,google,,google,orcarouter,google/gemini-robotics-er-1.6-preview,2026-04-14,1,false,text|image|video|audio,text,131072,1,5,true,,,,,,,
 gemma-2-27b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,google,kilo,google/gemma-2-27b-it,2024-07-13,2,false,text,text,8192,0.65,0.65,false,google/gemma-2-27b-it,2024-07-13,,Gemma 2 27B,Google DeepMind,2024-06-24,Confident
 gemma-2-2b-it,models_dev|epoch,epoch:exact,google,,google,nvidia,google/gemma-2-2b-it,2024-07-16,1,true,text,text,128000,0,0,false,,,,Gemma 2 2B,Google DeepMind,2024-06-24,Confident
 gemma-3,models_dev,md:only,google,,google,inference,google/gemma-3,2025-01-01,1,true,text|image,text,125000,0.15,0.3,false,,,,,,,
 gemma-3-12b,models_dev,md:only,,,,neon,gemma-3-12b,2025-03-13,1,true,text|image,text,131072,0.15,0.5,false,,,,,,,
 gemma-3-12b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,unsloth,nano-gpt,unsloth/gemma-3-12b-it,2025-03-13,7,true,text|pdf,text,128000,0.272,0.272,false,google/gemma-3-12b-it,2025-03-13,,Gemma 3 12B,Google DeepMind,2025-03-12,Confident
-gemma-3-27b,models_dev,md:only,,,,llmgateway,gemma-3-27b,2025-03-12,2,false,text|image,text,110000,0.1,0.3,false,,,,,,,
 gemma-3-27b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,unsloth,nano-gpt,unsloth/gemma-3-27b-it,2025-03-12,10,true,text|pdf,text,128000,0.2992,0.2992,false,google/gemma-3-27b-it,2025-03-12,,Gemma 3 27B,Google DeepMind,2025-03-12,Confident
 gemma-3-4b-it,models_dev|openrouter|epoch,epoch:exact|or:exact,google,google,unsloth,nano-gpt,unsloth/gemma-3-4b-it,2025-03-13,5,true,text|pdf,text,128000,0.2006,0.2006,false,google/gemma-3-4b-it,2025-03-13,,Gemma 3 4B,Google DeepMind,2025-03-12,Confident
 gemma-3-4b-pt,models_dev,md:only,google,,google,pioneer,google/gemma-3-4b-pt,2025-02-28,1,false,text,text,32768,0.15,0.15,true,,,,,,,
@@ -716,7 +716,6 @@ glm-5-2-caveman-lite,models_dev,md:only,,,,greenpt,glm-5.2-caveman-lite,2026-06-
 glm-5-2-caveman-ultra,models_dev,md:only,,,,greenpt,glm-5.2-caveman-ultra,2026-06-13,1,true,text,text,1000000,1.254,5.016,true,,,,,,,
 glm-5-2-fast,models_dev,md:only,,,,above,glm-5.2-fast,2026-06-13,7,true,text,text,1000000,2.31,7.26,true,,,,,,,
 glm-5-2-flex,models_dev,md:only,,,,neuralwatt,glm-5.2-flex,2026-06-17,1,true,text,text,1048560,0.9425,2.925,true,,,,,,,
-glm-5-2-fp4,models_dev,md:only,,,,coralbricks,glm-5.2-fp4,2026-06-13,1,true,text,text,1048576,1.12,4.4,true,,,,,,,
 glm-5-2-fp8,models_dev,md:only,zai-org,,zai-org,ambient,zai-org/GLM-5.2-FP8,2026-06-13,3,true,text,text,202752,1.2,4.2,true,,,,,,,
 glm-5-2-free,models_dev,md:only,z-ai,,z-ai,zenmux,z-ai/glm-5.2-free,2026-06-13,1,true,text,text,1000000,0,0,true,,,,,,,
 glm-5-2-highspeed,models_dev,md:only,,,,zai-coding-plan,glm-5.2-highspeed,2026-06-13,2,true,text,text,1000000,0,0,true,,,,,,,
@@ -733,12 +732,13 @@ glm-5-2-short-fast-flex,models_dev,md:only,,,,neuralwatt,glm-5.2-short-fast-flex
 glm-5-2-short-flex,models_dev,md:only,,,,neuralwatt,glm-5.2-short-flex,2026-06-17,1,true,text,text,199984,0.9425,2.925,true,,,,,,,
 glm-5-2-tee,models_dev,md:only,zai-org,,zai-org,chutes,zai-org/GLM-5.2-TEE,2026-06-13,1,true,text,text,1048576,1.25,3.95,true,,,,,,,
 glm-5-2@eu,models_dev,md:only,,,,requesty,glm-5.2@eu,2026-06-13,1,true,text,text,1048576,1.2,4.2,true,,,,,,,
-glm-5-3,models_dev|openrouter|epoch,epoch:exact|or:exact,z-ai,z-ai,cline-pass,cline-pass,cline-pass/glm-5.3,2026-08-14,38,true,text,text,1000000,1.4,4.4,true,z-ai/glm-5.3,2026-08-18,2098-12-31,GLM-5.3,Z.ai (Zhipu AI),2026-08-14,Confident
-glm-5-3-flash,models_dev|openrouter,or:exact,z-ai,z-ai,,venice,z-ai-glm-5-3-flash,2026-08-26,37,true,text|image|video,text,1048576,0.15,0.5,true,z-ai/glm-5.3-flash,2026-08-26,2098-12-31,,,,
+glm-5-3,models_dev|openrouter|epoch,epoch:exact|or:exact,z-ai,z-ai,cline-pass,cline-pass,cline-pass/glm-5.3,2026-08-14,39,true,text,text,1000000,1.4,4.4,true,z-ai/glm-5.3,2026-08-18,2098-12-31,GLM-5.3,Z.ai (Zhipu AI),2026-08-14,Confident
+glm-5-3-flash,models_dev|openrouter,or:exact,z-ai,z-ai,,venice,z-ai-glm-5-3-flash,2026-08-26,38,true,text|image|video,text,1048576,0.15,0.5,true,z-ai/glm-5.3-flash,2026-08-26,2098-12-31,,,,
 glm-5-3-flash-uncensored,models_dev,md:only,z-ai,,z-ai,nano-gpt,z-ai/glm-5.3-flash-uncensored,2026-07-29,1,true,text|image,text,262144,0.35,1.4,true,,,,,,,
+glm-5-3-fp4,models_dev,md:only,,,,coralbricks,glm-5.3-fp4,2026-08-14,1,true,text,text,1048576,1.12,4.4,true,,,,,,,
 glm-5-3-free,models_dev,md:only,z-ai,,z-ai,tokenrouter,z-ai/glm-5.3-free,2026-08-14,1,true,text,text,1000000,0,0,true,,,,,,,
 glm-5-3-highspeed,models_dev,md:only,,,,zai-coding-plan,glm-5.3-highspeed,2026-08-14,2,true,text,text,1000000,0,0,true,,,,,,,
-glm-5-3@eu,models_dev,md:only,,,,requesty,glm-5.3@eu,2026-08-14,1,true,text,text,1048576,1.75,4.5,true,,,,,,,
+glm-5-3@eu,models_dev,md:only,,,,requesty,glm-5.3@eu,2026-08-14,1,true,text,text,1048576,1.2,4.2,true,,,,,,,
 glm-5-fp8,models_dev,md:only,zai-org,,zai-org,gmicloud,zai-org/GLM-5-FP8,2026-02-12,1,true,text,text,202752,0.6,1.92,true,,,,,,,
 glm-5-free,models_dev,md:only,,,,opencode,glm-5-free,2026-02-11,1,true,text,text,204800,0,0,true,,,,,,,
 glm-5-maas,models_dev,md:only,zai-org,,zai-org,google-vertex,zai-org/glm-5-maas,2026-02-11,1,true,text,text,202752,1,3.2,true,,,,,,,
@@ -746,7 +746,7 @@ glm-5-original,models_dev,md:only,z-ai,,z-ai,nano-gpt,z-ai/glm-5-original,2026-0
 glm-5-turbo,models_dev|openrouter,or:exact,z-ai,z-ai,,venice,z-ai-glm-5-turbo,2026-03-16,17,true,text,text,200000,1.2,4,true,z-ai/glm-5-turbo,2026-03-15,2098-12-31,,,,
 glm-5v-turbo,models_dev|openrouter,or:exact,z-ai,z-ai,,cortecs,glm-5v-turbo,2026-04-01,16,false,text|image,text,202752,1.186,3.955,true,z-ai/glm-5v-turbo,2026-04-01,2098-12-31,,,,
 glm-for-coding,models_dev,md:only,,,,302ai,glm-for-coding,2025-09-30,1,false,text,text,200000,0.086,0.343,true,,,,,,,
-glm-latest,models_dev|openrouter,or:exact,~z-ai,~z-ai,z-ai,nano-gpt,z-ai/glm-latest,2026-08-19,3,true,text,text,1048576,0.42,1.32,true,~z-ai/glm-latest,2026-08-19,,,,,
+glm-latest,models_dev|openrouter,or:exact,~z-ai,~z-ai,z-ai,nano-gpt,z-ai/glm-latest,2026-08-19,3,true,text,text,1048576,1,3.2,true,~z-ai/glm-latest,2026-08-19,,,,,
 glm-z1-9b,models_dev,md:only,thudm,,thudm,nano-gpt,THUDM/GLM-Z1-9B-0414,2024-01-01,1,true,text,text,32000,0.2,0.2,false,,,,,,,
 glm-z1-air,models_dev,md:only,,,,nano-gpt,glm-z1-air,2025-04-15,1,false,text,text,32000,0.07,0.07,false,,,,,,,
 glm-z1-airx,models_dev,md:only,,,,nano-gpt,glm-z1-airx,2025-04-15,1,false,text,text,32000,0.7,0.7,false,,,,,,,
@@ -904,7 +904,7 @@ gpt-realtime-mini,models_dev,md:only,openai,,openai,vercel,openai/gpt-realtime-m
 gpt-realtime-whisper,models_dev,md:only,openai,,openai,vercel,openai/gpt-realtime-whisper,2026-05-07,1,false,audio,text,0,,,false,,,,,,,
 granite-4-0-h-micro,models_dev|openrouter|epoch,epoch:exact|or:exact,ibm-granite,ibm-granite,ibm-granite,kilo,ibm-granite/granite-4.0-h-micro,2025-10-20,2,false,text,text,131000,0.017,0.112,false,ibm-granite/granite-4.0-h-micro,2025-10-20,,Granite-4.0-H-Micro,IBM,2025-10-02,Confident
 granite-4-1-8b,models_dev|openrouter|epoch,epoch:exact|or:exact,ibm-granite,ibm-granite,ibm-granite,nano-gpt,ibm-granite/granite-4.1-8b,2026-04-29,4,true,text,text,131072,0.05,0.1,false,ibm-granite/granite-4.1-8b,2026-04-30,,Granite 4.1 8B,IBM,2026-04-29,Likely
-granite-4-2-8b,models_dev,md:only,ibm-granite,,ibm-granite,wandb,ibm-granite/granite-4.2-8b,2026-08-24,1,true,text,text,131072,0.1,0.15,true,,,,,,,
+granite-4-2-8b,models_dev|openrouter,or:exact,ibm-granite,ibm-granite,ibm-granite,wandb,ibm-granite/granite-4.2-8b,2026-08-31,4,true,text,text,131072,0.1,0.15,true,ibm-granite/granite-4.2-8b,2026-08-31,,,,,
 granite-4-h-small,models_dev,md:only,ibm,,ibm,watsonx,ibm/granite-4-h-small,2025-10-02,1,true,text,text,131072,0.0636,0.265,false,,,,,,,
 grayline-qwen3-8b,models_dev,md:only,soob3123,,soob3123,nano-gpt,soob3123/GrayLine-Qwen3-8B,2025-09-25,1,true,text,text,16384,0.3,0.3,false,,,,,,,
 green-l,models_dev,md:only,,,,greenpt,green-l,2025-06-20,1,true,text|image,text,128000,0.285,0.912,false,,,,,,,
@@ -940,7 +940,7 @@ grok-4-20-reasoning,models_dev,md:only,,,,llmgateway,grok-4-20-reasoning,2026-03
 grok-4-20-reasoning-beta,models_dev,md:only,spacexai,,spacexai,vercel,spacexai/grok-4.20-reasoning-beta,2026-03-11,1,false,text|image|pdf,text,2000000,1.25,2.5,true,,,,,,,
 grok-4-3,models_dev|openrouter,or:exact,x-ai,x-ai,,abacus,grok-4.3,2026-04-17,26,false,text|image,text,1000000,1.25,2.5,true,x-ai/grok-4.3,2026-04-30,,,,,
 grok-4-5,models_dev|openrouter|epoch,epoch:exact|or:exact,x-ai,x-ai,,venice,grok-4-5,2026-07-08,26,false,text|image,text,500000,2.27,6.8,true,x-ai/grok-4.5,2026-07-08,,Grok 4.5,xAI,2026-07-08,Likely
-grok-4-6,models_dev|openrouter|epoch,epoch:exact|or:exact,x-ai,x-ai,,venice,grok-4-6,2026-08-12,23,false,text|image,text,500000,2.27,6.8,true,x-ai/grok-4.6,2026-08-12,,Grok 4.6,xAI,2026-08-12,Confident
+grok-4-6,models_dev|openrouter|epoch,epoch:exact|or:exact,x-ai,x-ai,,venice,grok-4-6,2026-08-12,24,false,text|image,text,500000,2.27,6.8,true,x-ai/grok-4.6,2026-08-12,,Grok 4.6,xAI,2026-08-12,Confident
 grok-4-fast,models_dev|epoch,epoch:exact,x-ai,,x-ai,zenmux,x-ai/grok-4-fast,2025-09-19,2,false,text|image,text,2000000,0.2,0.5,true,,,,Grok 4 Fast,xAI,2025-09-19,Unknown
 grok-4-fast-non-reasoning,models_dev,md:only,,,,abacus,grok-4-fast-non-reasoning,2025-07-09,6,false,text|image,text,2000000,0.2,0.5,false,,,,,,,
 grok-4-fast-reasoning,models_dev,md:only,,,,helicone,grok-4-fast-reasoning,2025-09-01,5,false,text|image,text,2000000,0.19999999999999998,0.5,true,,,,,,,
@@ -966,8 +966,8 @@ happyhorse-1-1-t2v,models_dev,md:only,,,,alibaba-token-plan,happyhorse-1.1-t2v,2
 hermes-2-pro-llama-3-8b,models_dev,md:only,,,,helicone,hermes-2-pro-llama-3-8b,2024-05-27,2,false,text,text,131072,0.14,0.14,false,,,,,,,
 hermes-3-llama-3-1-405b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,kilo,nousresearch/hermes-3-llama-3.1-405b,2024-08-16,3,false,text,text,131072,1,1,false,nousresearch/hermes-3-llama-3.1-405b,2024-08-16,,,,,
 hermes-3-llama-3-1-70b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,kilo,nousresearch/hermes-3-llama-3.1-70b,2024-08-18,3,false,text,text,131072,0.7,0.7,false,nousresearch/hermes-3-llama-3.1-70b,2024-08-18,,,,,
-hermes-4-405b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,nano-gpt,NousResearch/hermes-4-405b:thinking,2025-08-26,7,true,text,text,128000,0.3,1.2,false,nousresearch/hermes-4-405b,2025-08-26,,,,,
-hermes-4-70b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,nano-gpt,NousResearch/hermes-4-70b,2025-08-26,7,true,text,text,128000,0.2006,0.3995,false,nousresearch/hermes-4-70b,2025-08-26,,,,,
+hermes-4-405b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,nano-gpt,NousResearch/hermes-4-405b:thinking,2025-08-26,5,true,text,text,128000,0.3,1.2,false,nousresearch/hermes-4-405b,2025-08-26,,,,,
+hermes-4-70b,models_dev|openrouter,or:exact,nousresearch,nousresearch,nousresearch,nano-gpt,NousResearch/hermes-4-70b,2025-08-26,5,true,text,text,128000,0.2006,0.3995,false,nousresearch/hermes-4-70b,2025-08-26,,,,,
 hermes-high,models_dev,md:only,,,,nano-gpt,hermes-high,2026-05-11,1,false,text,text,1048576,1,3.2,true,,,,,,,
 hermes-low,models_dev,md:only,,,,nano-gpt,hermes-low,2026-05-11,1,false,text,text,1048576,1,3.2,true,,,,,,,
 hermes-medium,models_dev,md:only,,,,nano-gpt,hermes-medium,2026-05-11,1,false,text,text,1048576,1,3.2,true,,,,,,,
@@ -989,7 +989,7 @@ hy3,models_dev|openrouter,or:exact,tencent,tencent,tencent,crossmodel,tencent/hy
 hy3-free,models_dev,md:only,,,,opencode,hy3-free,2026-07-06,2,true,text,text,190000,0,0,true,,,,,,,
 hy3-preview,models_dev|openrouter,or:exact,tencent,tencent,,aihubmix,hy3-preview,2026-04-20,6,true,text,text,256000,0.17,0.566661,true,tencent/hy3-preview,2026-04-22,,,,,
 hy3-preview-free,models_dev,md:only,,,,opencode,hy3-preview-free,2026-04-20,1,true,text,text,256000,0,0,true,,,,,,,
-hy4-preview,models_dev|openrouter,or:exact,tencent,tencent,tencent,crossmodel,tencent/hy4-preview,2026-08-28,8,true,text,text,1048576,0.96,2.88,true,tencent/hy4-preview,2026-08-28,,,,,
+hy4-preview,models_dev|openrouter,or:exact,tencent,tencent,tencent,crossmodel,tencent/hy4-preview,2026-08-28,9,true,text,text,1048576,0.96,2.88,true,tencent/hy4-preview,2026-08-28,,,,,
 ibm-granite/granite-4-0-h-micro,models_dev,md:only,@cf,,@cf,cloudflare-workers-ai,@cf/ibm-granite/granite-4.0-h-micro,2025-10-07,1,true,text,text,131000,0.017,0.112,false,,,,,,,
 ideogram,models_dev,md:only,ideogramai,,ideogramai,poe,ideogramai/ideogram,2024-04-03,1,false,text|image,image,150,,,false,,,,,,,
 ideogram-v2,models_dev|epoch,epoch:exact,ideogramai,,ideogramai,poe,ideogramai/ideogram-v2,2024-08-21,1,false,text|image,image,150,,,false,,,,Ideogram v2,Ideogram,2024-08-21,Unknown
@@ -1018,11 +1018,11 @@ jp-anthropic-claude-sonnet-5,models_dev,md:only,,,,amazon-bedrock,jp.anthropic.c
 k2-think,models_dev|epoch,epoch:exact,llm360,,llm360,nano-gpt,LLM360/K2-Think,2025-07-26,1,true,text,text,128000,0.17,0.68,false,,,,K2 Think,"Mohamed bin Zayed University of Artificial Intelligence (MBZUAI),G42",2025-09-09,Confident
 k3,models_dev,md:only,,,,kimi-for-coding,k3,2026-07-16,1,true,text|image|video,text,1048576,0,0,true,,,,,,,
 k3-256k,models_dev,md:only,,,,kimi-for-coding,k3-256k,2026-07-16,1,true,text|image,text,262144,0,0,true,,,,,,,
-kat-coder-air-v2-5,models_dev|openrouter,or:exact,kwaipilot,kwaipilot,kwaipilot,kilo,kwaipilot/kat-coder-air-v2.5,2026-07-10,4,false,text,text,256000,0.15,0.6,false,kwaipilot/kat-coder-air-v2.5,2026-07-10,,,,,
+kat-coder-air-v2-5,models_dev,md:only,kwaipilot,,kwaipilot,vercel,kwaipilot/kat-coder-air-v2.5,2026-07-10,2,false,text|image,text,256000,0.15,0.6,true,,,,,,,
 kat-coder-pro,models_dev,md:only,kwaipilot,,kwaipilot,novita-ai,kwaipilot/kat-coder-pro,2026-01-05,2,true,text,text,256000,0.3,1.2,false,,,,,,,
 kat-coder-pro-v1,models_dev,md:only,kwaipilot,,kwaipilot,vercel,kwaipilot/kat-coder-pro-v1,2025-11-09,1,false,text,text,256000,0.3,1.2,true,,,,,,,
 kat-coder-pro-v2,models_dev|openrouter,or:exact,kwaipilot,kwaipilot,kwaipilot,kilo,kwaipilot/kat-coder-pro-v2,2026-03-27,5,false,text,text,262144,0.3,1.2,false,kwaipilot/kat-coder-pro-v2,2026-03-27,,,,,
-kat-coder-pro-v2-5,models_dev|openrouter,or:exact,kwaipilot,kwaipilot,kwaipilot,kilo,kwaipilot/kat-coder-pro-v2.5,2026-07-10,4,false,text,text,256000,0.74,2.96,false,kwaipilot/kat-coder-pro-v2.5,2026-07-10,,,,,
+kat-coder-pro-v2-5,models_dev|openrouter,or:exact,kwaipilot,kwaipilot,kwaipilot,kilo,kwaipilot/kat-coder-pro-v2.5,2026-07-10,4,false,text,text,262144,0.74,2.96,false,kwaipilot/kat-coder-pro-v2.5,2026-07-10,,,,,
 kb-whisper-large,models_dev,md:only,kblab,,kblab,evroc,KBLab/kb-whisper-large,2024-10-01,1,true,audio,text,448,0.0023,0.0023,false,,,,,,,
 kimi-for-coding,models_dev,md:only,,,,kimi-for-coding,kimi-for-coding,2026-06-12,1,true,text|image|video,text,262144,0,0,true,,,,,,,
 kimi-for-coding-highspeed,models_dev,md:only,,,,kimi-for-coding,kimi-for-coding-highspeed,2026-06-12,1,true,text|image|video,text,262144,0,0,true,,,,,,,
@@ -1043,7 +1043,7 @@ kimi-k2-7-code-1100b,models_dev,md:only,,,,aki-io,kimi-k2.7-code-1100b,2026-06-1
 kimi-k2-7-code-fast,models_dev,md:only,,,,neuralwatt,kimi-k2.7-code-fast,2026-06-12,1,true,text|image,text,262128,0.95,4,true,,,,,,,
 kimi-k2-7-code-flex,models_dev,md:only,,,,neuralwatt,kimi-k2.7-code-flex,2026-06-12,1,true,text|image,text,262128,0.6175,2.6,true,,,,,,,
 kimi-k2-7-code-free,models_dev,md:only,moonshotai,,moonshotai,zenmux,moonshotai/kimi-k2.7-code-free,2026-06-12,1,true,text|image|video,text,262144,0,0,true,,,,,,,
-kimi-k2-7-code-highspeed,models_dev,md:only,,,,aihubmix,kimi-k2.7-code-highspeed,2026-06-12,11,true,text|image|video,text,262144,1.9,7.999,true,,,,,,,
+kimi-k2-7-code-highspeed,models_dev,md:only,,,,aihubmix,kimi-k2.7-code-highspeed,2026-06-12,12,true,text|image|video,text,262144,1.9,7.999,true,,,,,,,
 kimi-k2-7-code-nitro,models_dev,md:only,,,,routing-run,kimi-k2.7-code-nitro,2026-06-12,1,true,text|image|video,text,200000,0.275,1.1,true,,,,,,,
 kimi-k2-7-code@eu,models_dev,md:only,,,,requesty,kimi-k2.7-code@eu,2026-06-12,1,true,text|image|video,text,262144,1.25,4.5,true,,,,,,,
 kimi-k2-instruct,models_dev,md:only,moonshotai,,moonshotai,nano-gpt,moonshotai/kimi-k2-instruct,2024-01-01,6,true,text,text,256000,0.4,1.8,false,,,,,,,
@@ -1131,7 +1131,6 @@ llama-3-1-nemotron-70b-instruct-hf,models_dev|epoch,epoch:exact,nvidia,,nvidia,n
 llama-3-1-nemotron-nano-8b-v1,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/llama-3.1-nemotron-nano-8b-v1,2025-03-18,1,true,text,text,131072,0,0,true,,,,,,,
 llama-3-1-nemotron-nano-vl-8b-v1,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/llama-3.1-nemotron-nano-vl-8b-v1,2025-04-10,1,true,text|image,text,32768,0,0,true,,,,,,,
 llama-3-1-nemotron-safety-guard-8b-v3,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/llama-3.1-nemotron-safety-guard-8b-v3,2025-10-28,1,true,text,text,128000,0,0,false,,,,,,,
-llama-3-1-nemotron-ultra-253b,models_dev,md:only,,,,llmgateway,llama-3.1-nemotron-ultra-253b,2025-04-07,2,true,text,text,128000,0.6,1.8,false,,,,,,,
 llama-3-1-nemotron-ultra-253b-v1,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/llama-3.1-nemotron-ultra-253b-v1,2025-04-07,3,true,text,text,128000,0,0,true,,,,,,,
 llama-3-2-11b-instruct,models_dev|epoch,epoch:exact,,,,llmgateway,llama-3.2-11b-instruct,2024-09-25,2,true,text,text,128000,0.07,0.33,false,,,,Llama 3.2 11B,Meta AI,2024-09-24,Confident
 llama-3-2-11b-vision-instruct,models_dev,md:only,meta,,meta,nvidia,meta/llama-3.2-11b-vision-instruct,2024-09-18,2,true,text|image,text,128000,0,0,false,,,,,,,
@@ -1233,7 +1232,7 @@ mimo-v2-5,models_dev|openrouter,or:exact,xiaomi,xiaomi,cline-pass,cline-pass,cli
 mimo-v2-5-free,models_dev,md:only,,,,opencode,mimo-v2.5-free,2026-04-24,1,true,text|image|audio|video,text,200000,0,0,true,,,,,,,
 mimo-v2-5-pro,models_dev|openrouter|epoch,epoch:exact|or:exact,xiaomi,xiaomi,cline-pass,cline-pass,cline-pass/mimo-v2.5-pro,2026-04-22,27,true,text,text,1048576,1.74,3.48,true,xiaomi/mimo-v2.5-pro,2026-04-22,,MiMo-V2.5-Pro,Xiaomi Corp,2026-04-23,Likely
 mimo-v2-5-pro-crof,models_dev,md:only,xiaomi,,xiaomi,nano-gpt,xiaomi/mimo-v2.5-pro-crof,2026-07-23,1,true,text,text,1000000,0.4,0.8,true,,,,,,,
-mimo-v2-5-pro-ultraspeed,models_dev,md:only,,,,above,mimo-v2.5-pro-ultraspeed,2026-06-08,2,true,text,text,1048576,1.5231,3.0462,true,,,,,,,
+mimo-v2-5-pro-ultraspeed,models_dev,md:only,,,,above,mimo-v2.5-pro-ultraspeed,2026-06-08,3,true,text,text,1048576,1.5231,3.0462,true,,,,,,,
 mimo-v2-5-tts,models_dev,md:only,,,,xiaomi-token-plan-ams,mimo-v2.5-tts,2026-04-22,3,true,text,audio,8192,0,0,false,,,,,,,
 mimo-v2-5-tts-voiceclone,models_dev,md:only,,,,xiaomi-token-plan-ams,mimo-v2.5-tts-voiceclone,2026-04-22,3,true,text,audio,8192,0,0,false,,,,,,,
 mimo-v2-5-tts-voicedesign,models_dev,md:only,,,,xiaomi-token-plan-ams,mimo-v2.5-tts-voicedesign,2026-04-22,3,true,text,audio,8192,0,0,false,,,,,,,
@@ -1246,7 +1245,7 @@ mimo-v2-pro-free,models_dev,md:only,,,,opencode,mimo-v2-pro-free,2026-03-18,1,tr
 mimo-v2-tts,models_dev,md:only,,,,xiaomi-token-plan-ams,mimo-v2-tts,2026-03-18,3,true,text,audio,8192,0,0,false,,,,,,,
 mimo-v25,models_dev,md:only,,,,inferx,mimo-v25,2026-04-22,1,true,text|image|audio|video,text,1000000,0,0,true,,,,,,,
 mini-lm-l12-v2,models_dev,md:only,,,,infomaniak,mini_lm_l12_v2,2021-08-30,1,true,text,text,128,0,0,false,,,,,,,
-minicpm-v-4-5,models_dev,md:only,,,,llmgateway,minicpm-v-4.5,2025-08-26,3,false,text|image,text,32000,0.658,1.11,false,,,,,,,
+minicpm-v-4-5,models_dev,md:only,,,,cortecs,minicpm-v-4.5,2026-06-02,1,false,text,text,32000,0.651,1.097,false,,,,,,,
 minimax-01,models_dev|openrouter,or:exact,minimax,minimax,minimax,nano-gpt,minimax/minimax-01,2025-01-15,3,false,text|pdf,text,1000192,0.1394,1.122,false,minimax/minimax-01,2025-01-15,,,,,
 minimax-h3,models_dev,md:only,minimax,,minimax,vercel,minimax/minimax-h3,2026-07-30,1,false,text|image,video,0,,,false,,,,,,,
 minimax-h3-max,models_dev,md:only,minimax,,minimax,vercel,minimax/minimax-h3-max,2026-08-27,1,false,text|image,video,0,,,false,,,,,,,
@@ -1310,7 +1309,7 @@ mistral-large2,models_dev,md:only,,,,snowflake-cortex,mistral-large2,2024-11-01,
 mistral-magistral-small-2509,models_dev,md:only,,,,amazon-bedrock,mistral.magistral-small-2509,2025-12-02,1,true,text|image,text,128000,0.5,1.5,true,,,,,,,
 mistral-medium,models_dev|epoch,epoch:exact,mistral,,mistral,vercel,mistral/mistral-medium,2025-05-07,2,false,text|image,text,128000,0.4,2,false,,,,Mistral Medium,Mistral AI,2023-12-11,Unknown
 mistral-medium-2505,models_dev,md:only,,,,azure,mistral-medium-2505,2025-05-07,5,false,text|image,text,128000,0.4,2,false,,,,,,,
-mistral-medium-2508,models_dev,md:only,,,,cortecs,mistral-medium-2508,2024-08-07,2,false,text|image,text,128000,0.446,2.228,true,,,,,,,
+mistral-medium-2508,models_dev,md:only,,,,mistral,mistral-medium-2508,2025-08-12,1,false,text|image,text,262144,0.4,2,false,,,,,,,
 mistral-medium-2604,models_dev,md:only,mistral,,mistral,edenai,mistral/mistral-medium-2604,2026-04-29,2,true,text|image,text,262144,1.5,7.5,true,,,,,,,
 mistral-medium-3,models_dev|openrouter|epoch,epoch:exact|or:exact,mistralai,mistralai,mistralai,kilo,mistralai/mistral-medium-3,2025-05-07,3,false,text|image|pdf,text,131072,0.4,2,false,mistralai/mistral-medium-3,2025-05-07,,Mistral Medium 3,Mistral AI,2025-05-07,Unknown
 mistral-medium-3-1,models_dev|openrouter|epoch,epoch:exact|or:exact,mistralai,mistralai,mistralai,kilo,mistralai/mistral-medium-3.1,2025-08-13,3,false,text|image|pdf,text,131072,0.4,2,false,mistralai/mistral-medium-3.1,2025-08-13,,Mistral Medium 3.1,Mistral AI,2025-08-12,Confident
@@ -1390,20 +1389,19 @@ nemotron-3-5-lightning-30b-a3b,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/n
 nemotron-3-5-lightning-free,models_dev,md:only,,,,opencode,nemotron-3.5-lightning-free,2026-08-11,1,true,text,text,262144,0,0,true,,,,,,,
 nemotron-3-content-safety,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/nemotron-3-content-safety,2026-04-16,1,true,text,text,128000,0,0,false,,,,,,,
 nemotron-3-nano,models_dev,md:only,,,,ollama-cloud,nemotron-3-nano:30b,2025-12-15,1,true,text,text,1048576,,,true,,,,,,,
-nemotron-3-nano-30b,models_dev,md:only,,,,digitalocean,nemotron-3-nano-30b,2025-12-15,3,true,text,text,262144,,,true,,,,,,,
+nemotron-3-nano-30b,models_dev,md:only,,,,digitalocean,nemotron-3-nano-30b,2025-04-14,1,true,text,text,262144,,,true,,,,,,,
 nemotron-3-nano-30b-a3b,models_dev|openrouter|epoch,epoch:exact|or:exact,nvidia,nvidia,nvidia,nvidia,nvidia/nemotron-3-nano-30b-a3b,2025-12-15,7,true,text,text,131072,0,0,true,nvidia/nemotron-3-nano-30b-a3b,2025-12-14,,Nemotron 3-Nano-30B-A3B,NVIDIA,2025-12-15,Likely
-nemotron-3-nano-omni,models_dev,md:only,nvidia,,nvidia,nebius,nvidia/Nemotron-3-Nano-Omni,2026-04-28,5,true,text,text,65536,0.06,0.24,true,,,,,,,
+nemotron-3-nano-omni,models_dev,md:only,nvidia,,nvidia,nebius,nvidia/Nemotron-3-Nano-Omni,2025-01-20,3,true,text,text,65536,0.06,0.24,true,,,,,,,
 nemotron-3-nano-omni-30b-a3b-reasoning,models_dev|openrouter,or:exact,nvidia,nvidia,nvidia,nvidia,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning,2026-04-28,6,true,text|image|video|audio,text,256000,0,0,true,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,2026-04-28,,,,,
 nemotron-3-nano-omni-30b-a3b-reasoning-bf16,models_dev,md:only,nvidia,,nvidia,vultr,nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16,2026-04-28,1,true,text,text,262144,0.13,0.38,true,,,,,,,
 nemotron-3-nano-omni-30b-tee,models_dev,md:only,,,,chutes,Nemotron-3-Nano-Omni-30B-TEE,2026-07-23,1,true,text,text,131072,0.0245,0.0978,false,,,,,,,
 nemotron-3-nano-omni-reasoning-30b-a3b,models_dev,md:only,nvidia,,nvidia,crusoe,nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B,2026-04-28,1,true,text|image|video|audio,text,256000,0.3,1.83,true,,,,,,,
 nemotron-3-nano-omni@eu,models_dev,md:only,,,,requesty,nemotron-3-nano-omni@eu,2026-05-20,1,false,text,text,300000,0.06,0.24,true,,,,,,,
 nemotron-3-super,models_dev|epoch,epoch:exact,,,,ollama-cloud,nemotron-3-super,2026-03-11,1,true,text,text,262144,,,true,,,,Nemotron 3 Super,NVIDIA,2026-03-11,Likely
-nemotron-3-super-120b,models_dev,md:only,,,,llmgateway,nemotron-3-super-120b,2026-03-11,2,false,text,text,262144,0.3,0.9,true,,,,,,,
 nemotron-3-super-120b-a12b,models_dev|openrouter,or:exact,nvidia,nvidia,nvidia,nvidia,nvidia/nemotron-3-super-120b-a12b,2026-03-11,11,true,text,text,262144,0.2,0.8,true,nvidia/nemotron-3-super-120b-a12b,2026-03-11,,,,,
 nemotron-3-super-free,models_dev,md:only,,,,opencode,nemotron-3-super-free,2026-03-11,1,true,text,text,204800,0,0,true,,,,,,,
 nemotron-3-ultra,models_dev|epoch,epoch:exact,,,,ollama-cloud,nemotron-3-ultra,2026-06-04,2,true,text,text,262144,,,true,,,,Nemotron 3 Ultra,NVIDIA,2026-06-04,Likely
-nemotron-3-ultra-550b,models_dev,md:only,deepinfra,,deepinfra,llmgateway-providers,deepinfra/nemotron-3-ultra-550b,2026-06-01,3,false,text|image,text,262144,0.5,2.2,false,,,,,,,
+nemotron-3-ultra-550b,models_dev,md:only,deepinfra,,deepinfra,llmgateway-providers,deepinfra/nemotron-3-ultra-550b,2026-06-04,3,false,text|image,text,262144,0.5,2.2,false,,,,,,,
 nemotron-3-ultra-550b-a55b,models_dev|openrouter,or:exact,nvidia,nvidia,nvidia,nvidia,nvidia/nemotron-3-ultra-550b-a55b,2026-06-04,11,true,text,text,1000000,0.5,2.5,true,nvidia/nemotron-3-ultra-550b-a55b,2026-06-04,,,,,
 nemotron-3-ultra-free,models_dev,md:only,,,,opencode,nemotron-3-ultra-free,2026-06-04,1,true,text,text,1000000,0,0,true,,,,,,,
 nemotron-3-ultra-nvfp4,models_dev,md:only,,,,requesty,nemotron-3-ultra-nvfp4,2026-06-13,1,false,text,text,262144,0.6,2.4,true,,,,,,,
@@ -1420,8 +1418,8 @@ neosmith-intelligent-maestro,models_dev,md:only,,,,neosmith,neosmith.intelligent
 neosmith-intelligent-pro,models_dev,md:only,,,,neosmith,neosmith.intelligent-pro,2026-04-26,1,false,text|image,text,1000000,1.81,8.39,true,,,,,,,
 neosmith-neolite,models_dev,md:only,,,,neosmith,neosmith.neolite,2026-06-20,1,false,text|image,text,512000,0.6,2.4,true,,,,,,,
 neuraldaredevil-8b-abliterated,models_dev,md:only,mlabonne,,mlabonne,nano-gpt,mlabonne/NeuralDaredevil-8B-abliterated,2024-01-01,1,true,text,text,8192,0.44,0.44,false,,,,,,,
-nex-n2-mini,models_dev|openrouter,or:exact,nex-agi,nex-agi,nex-agi,kilo,nex-agi/nex-n2-mini,2026-06-24,3,false,text|image,text,262144,0.025,0.1,true,nex-agi/nex-n2-mini,2026-06-24,,,,,
-nex-n2-pro,models_dev|openrouter,or:exact,nex-agi,nex-agi,nex-agi,nano-gpt,nex-agi/nex-n2-pro,2026-06-08,3,true,text|image,text,262144,0.5,2.5,true,nex-agi/nex-n2-pro,2026-06-08,,,,,
+nex-n2-mini,models_dev|openrouter,or:exact,nex-agi,nex-agi,nex-agi,kilo,nex-agi/nex-n2-mini,2026-06-24,3,false,text|image,text,262144,0.025,0.1,true,nex-agi/nex-n2-mini,2026-06-24,2026-09-08,,,,
+nex-n2-pro,models_dev|openrouter,or:exact,nex-agi,nex-agi,nex-agi,nano-gpt,nex-agi/nex-n2-pro,2026-06-08,3,true,text|image,text,262144,0.5,2.5,true,nex-agi/nex-n2-pro,2026-06-08,2026-09-08,,,,
 nomic-embed-text,models_dev,md:only,,,,tinfoil,nomic-embed-text,2024-02,1,true,text,text,8192,0.05,0,false,,,,,,,
 north-mini-code,models_dev|openrouter|epoch,epoch:exact|or:exact,cohere,cohere,cohere,nano-gpt,cohere/north-mini-code,2026-06-17,3,true,text,text,256000,0.2,0.8,true,cohere/north-mini-code:free,2026-06-17,,North Mini Code,Cohere,2026-06-09,Confident
 north-mini-code-1-0,models_dev,md:only,,,,cohere,north-mini-code-1-0,2026-06-09,1,true,text,text,256000,0,0,true,,,,,,,
@@ -1486,7 +1484,7 @@ openai/gpt-oss-120b,models_dev,md:only,@cf,,@cf,cloudflare-workers-ai,@cf/openai
 openai/gpt-oss-20b,models_dev,md:only,@cf,,@cf,cloudflare-workers-ai,@cf/openai/gpt-oss-20b,2025-08-05,2,true,text,text,128000,0.2,0.3,true,,,,,,,
 openreasoning-nemotron-32b,models_dev|epoch,epoch:exact,pamanseau,,pamanseau,nano-gpt,pamanseau/OpenReasoning-Nemotron-32B,2025-08-21,1,true,text,text,32768,0.1,0.4,true,,,,OpenReasoning-Nemotron-32B,NVIDIA,2025-07-16,Confident
 ornith-1-0-35b-fp8,models_dev,md:only,,,,inferx,Ornith-1.0-35B-FP8,2026-06-25,1,true,text|image,text,262000,0,0,true,,,,,,,
-ornith-1-5-35b-a3b,models_dev,md:only,ornith-ai,,ornith-ai,nano-gpt,ornith-ai/ornith-1.5-35b-a3b,2026-07-29,2,true,text|image,text,262144,0.1,0.4,true,,,,,,,
+ornith-1-5-35b-a3b,models_dev,md:only,iteracompute,,iteracompute,iteracompute,iteracompute/ornith-1.5-35b-a3b,2026-07-29,3,true,text,text,327680,0.3,3,true,,,,,,,
 ornith-1-5-9b,models_dev,md:only,ornith-ai,,ornith-ai,nano-gpt,ornith-ai/ornith-1.5-9b,2026-07-29,1,true,text|image,text,262144,0.1,0.2,true,,,,,,,
 orpheus-arabic-saudi,models_dev,md:only,canopylabs,,canopylabs,groq,canopylabs/orpheus-arabic-saudi,2025-12-16,1,false,text,audio,4000,,,false,,,,,,,
 orpheus-v1-english,models_dev,md:only,canopylabs,,canopylabs,groq,canopylabs/orpheus-v1-english,2025-12-19,1,false,text,audio,4000,,,false,,,,,,,
@@ -1583,7 +1581,7 @@ qwen2-5-math-72b-instruct,models_dev,md:only,,,,alibaba-cn,qwen2-5-math-72b-inst
 qwen2-5-math-7b-instruct,models_dev,md:only,,,,alibaba-cn,qwen2-5-math-7b-instruct,2024-09,1,true,text,text,4096,0.144,0.287,false,,,,,,,
 qwen2-5-omni-7b,models_dev|epoch,epoch:exact,,,,alibaba,qwen2-5-omni-7b,2024-12,2,true,text|image|audio|video,text|audio,32768,0.1,0.4,false,,,,Qwen2.5-Omni 7B,Alibaba,2025-03-26,Confident
 qwen2-5-vl-32b-instruct,models_dev,md:only,qwen,,qwen,io-net,Qwen/Qwen2.5-VL-32B-Instruct,2024-11-01,2,true,text|image,text,32000,0.05,0.22,false,,,,,,,
-qwen2-5-vl-72b-instruct,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,tee,nano-gpt,TEE/qwen2.5-vl-72b-instruct,2024-09,12,true,text|image,text,65536,0.7,0.7,false,qwen/qwen2.5-vl-72b-instruct,2025-02-01,,Qwen2.5-VL-72B,Alibaba,2025-02-19,Confident
+qwen2-5-vl-72b-instruct,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,tee,nano-gpt,TEE/qwen2.5-vl-72b-instruct,2024-09,10,true,text|image,text,65536,0.7,0.7,false,qwen/qwen2.5-vl-72b-instruct,2025-02-01,,Qwen2.5-VL-72B,Alibaba,2025-02-19,Confident
 qwen2-5-vl-7b-instruct,models_dev|epoch,epoch:exact,,,,alibaba,qwen2-5-vl-7b-instruct,2024-09,3,true,text|image,text,131072,0.35,1.05,false,,,,Qwen2.5-VL-7B,Alibaba,2025-02-19,Confident
 qwen25-vl-72b-instruct,models_dev,md:only,,,,nano-gpt,qwen25-vl-72b-instruct,2025-05-10,1,true,text|image,text,32000,0.69989,0.69989,false,,,,,,,
 qwen3-1-7b-base,models_dev,md:only,qwen,,qwen,pioneer,Qwen/Qwen3-1.7B-Base,2025-03-31,1,false,text,text,32768,0.1,0.1,true,,,,,,,
@@ -1605,7 +1603,7 @@ qwen3-235b-a22b-thinking-2507-tee,models_dev,md:only,qwen,,qwen,chutes,Qwen/Qwen
 qwen3-30b-a3b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,qwen,deepinfra,Qwen/Qwen3-30B-A3B,2025-04-28,9,true,text,text,40960,0.12,0.5,true,qwen/qwen3-30b-a3b,2025-04-28,,Qwen3-30B-A3B,Alibaba,2025-04-29,Likely
 qwen3-30b-a3b-2507,models_dev,md:only,qwen,,qwen,lmstudio,qwen/qwen3-30b-a3b-2507,2025-07-30,1,true,text,text,262144,0,0,false,,,,,,,
 qwen3-30b-a3b-fp8,models_dev,md:only,qwen,,qwen,novita-ai,qwen/qwen3-30b-a3b-fp8,2025-04-29,2,true,text,text,40960,0.09,0.45,true,,,,,,,
-qwen3-30b-a3b-instruct-2507,models_dev|openrouter,or:exact,qwen,qwen,,nano-gpt,qwen3-30b-a3b-instruct-2507,2025-07-29,13,true,text,text,256000,0.2,0.5,false,qwen/qwen3-30b-a3b-instruct-2507,2025-07-29,,,,,
+qwen3-30b-a3b-instruct-2507,models_dev|openrouter,or:exact,qwen,qwen,,nano-gpt,qwen3-30b-a3b-instruct-2507,2025-07-29,11,true,text,text,256000,0.2,0.5,false,qwen/qwen3-30b-a3b-instruct-2507,2025-07-29,,,,,
 qwen3-30b-a3b-thinking-2507,models_dev|openrouter,or:exact,qwen,qwen,qwen,modelscope,Qwen/Qwen3-30B-A3B-Thinking-2507,2025-08-28,4,true,text,text,262144,0,0,true,qwen/qwen3-30b-a3b-thinking-2507,2025-08-28,,,,,
 qwen3-32b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,iflowcn,qwen3-32b,2025-04,20,true,text,text,128000,0,0,false,qwen/qwen3-32b,2025-04-28,,Qwen3-32B,Alibaba,2025-04-29,Confident
 qwen3-32b-cs,models_dev,md:only,cerebras,,cerebras,poe,cerebras/qwen3-32b-cs,2025-05-15,1,false,text,text,0,,,true,,,,,,,
@@ -1655,20 +1653,20 @@ qwen3-6-max,models_dev,md:only,,,,hyper,qwen3.6-max,2026-05-20,1,false,text,text
 qwen3-6-max-preview,models_dev|openrouter,or:exact,qwen,qwen,,alibaba,qwen3.6-max-preview,2026-04-20,12,false,text,text,262144,1.3,7.8,true,qwen/qwen3.6-max-preview,2026-04-27,,,,,
 qwen3-6-plus,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,stealth,kilo,stealth/qwen3.6-plus,2026-04-02,25,false,text|image,text,1000000,0.25,1.5,true,qwen/qwen3.6-plus,2026-04-02,,Qwen 3.6 Plus,Alibaba,2026-04-01,Confident
 qwen3-6-plus-free,models_dev,md:only,,,,opencode,qwen3.6-plus-free,2026-04-02,1,false,text|image|video,text,262144,0,0,true,,,,,,,
-qwen3-7-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,alibaba-cn,qwen3.7-flash,2026-07-15,11,false,text|image|video,text,1000000,0.02962,0.1185,true,qwen/qwen3.7-flash,2026-07-27,,Qwen3.7 Flash,Alibaba,2026-07-27,Confident
+qwen3-7-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,aihubmix,qwen3.7-flash,2026-07-15,12,false,text,text,991000,0.0282,0.1128,true,qwen/qwen3.7-flash,2026-07-27,,Qwen3.7 Flash,Alibaba,2026-07-27,Confident
 qwen3-7-max,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,cline-pass,cline-pass,cline-pass/qwen3.7-max,2026-05-21,32,false,text,text,1000000,2.5,7.5,true,qwen/qwen3.7-max,2026-05-21,,Qwen3.7-Max,Alibaba,2026-05-19,Confident
 qwen3-7-plus,models_dev|openrouter,or:exact,qwen,qwen,cline-pass,cline-pass,cline-pass/qwen3.7-plus,2026-06-02,29,false,text|image|video,text,1000000,0.4,1.6,true,qwen/qwen3.7-plus,2026-06-03,,,,,
-qwen3-8-2-4t-a95b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,cortecs,qwen3.8-2.4t-a95b,2026-08-12,12,true,text,text,262144,2.5,6,true,qwen/qwen3.8-2.4t-a95b,2026-08-12,,Qwen3.8-2.4T-A95B,Alibaba,2026-08-08,Confident
+qwen3-8-2-4t-a95b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,,aihubmix,qwen3.8-2.4t-a95b,2026-08-12,13,true,text|image,text,262000,2,6,true,qwen/qwen3.8-2.4t-a95b,2026-08-12,,Qwen3.8-2.4T-A95B,Alibaba,2026-08-08,Confident
 qwen3-8-2-4t-a95b-nvfp4,models_dev,md:only,inferact,,inferact,runinfra,Inferact/Qwen3.8-2.4T-A95B-NVFP4,2026-08-12,1,true,text,text,262144,2,6,true,,,,,,,
-qwen3-8-27b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,iteracompute,iteracompute,iteracompute/qwen3.8-27b,2026-08-14,24,true,text|image|video,text,262144,0.35,3,true,qwen/qwen3.8-27b,2026-08-14,,Qwen 3.8 27B,Alibaba,2026-08-14,Confident
+qwen3-8-27b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,iteracompute,iteracompute,iteracompute/qwen3.8-27b,2026-08-14,25,true,text|image,text,327680,0.3,2.5,true,qwen/qwen3.8-27b,2026-08-14,,Qwen 3.8 27B,Alibaba,2026-08-14,Confident
 qwen3-8-27b-fable,models_dev,md:only,qwen,,qwen,nano-gpt,qwen/qwen3.8-27b-fable,2026-07-29,1,true,text|image,text,262144,0.25,1.5,true,,,,,,,
 qwen3-8-27b-free,models_dev,md:only,qwen,,qwen,orcarouter,qwen/qwen3.8-27b-free,2026-08-14,1,true,text|image|video,text,65536,0,0,true,,,,,,,
-qwen3-8-27b-nvfp4,models_dev,md:only,unsloth,,unsloth,llmtech,unsloth/Qwen3.8-27B-NVFP4,2026-08-14,1,true,text,text,262144,0.25,2.09,true,,,,,,,
+qwen3-8-27b-nvfp4,models_dev,md:only,unsloth,,unsloth,llmtech,unsloth/Qwen3.8-27B-NVFP4,2026-08-14,1,true,text|image,text,262144,0.25,2.09,true,,,,,,,
 qwen3-8-27b-obliterated,models_dev,md:only,qwen,,qwen,nano-gpt,qwen/qwen3.8-27b-obliterated,2026-07-29,1,true,text|image,text,262144,0.25,1.5,true,,,,,,,
-qwen3-8-27b-tee,models_dev,md:only,qwen,,qwen,chutes,Qwen/Qwen3.8-27B-TEE,2026-08-16,1,true,text|image,text,262144,0.35,2.75,true,,,,,,,
+qwen3-8-27b-tee,models_dev,md:only,qwen,,qwen,chutes,Qwen/Qwen3.8-27B-TEE,2026-08-16,1,true,text|image,text,262144,0.32,2.5,true,,,,,,,
 qwen3-8-27b-uncensored,models_dev,md:only,qwen,,qwen,nano-gpt,qwen/qwen3.8-27b-uncensored,2026-07-29,1,true,text|image,text,262144,0.25,1.5,true,,,,,,,
 qwen3-8-flash,models_dev|openrouter,or:exact,qwen,qwen,,alibaba,qwen3.8-flash,2026-08-26,16,false,text|image|video,text,1000000,0.15,0.47,true,qwen/qwen3.8-flash,2026-08-26,,,,,
-qwen3-8-flash-next,models_dev,md:only,,,,amd,Qwen3.8-Flash-Next,2026-08-27,2,true,text,text,262144,0.15,0.47,true,,,,,,,
+qwen3-8-flash-next,models_dev,md:only,,,,amd,Qwen3.8-Flash-Next,2026-08-27,3,true,text,text,262144,0.15,0.47,true,,,,,,,
 qwen3-8-max,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,cline-pass,cline-pass,cline-pass/qwen3.8-max,2026-08-03,30,false,text|image|video|pdf,text,1000000,2,6,true,qwen/qwen3.8-max,2026-08-03,,Qwen 3.8 Max,Alibaba,2026-07-19,Confident
 qwen3-8-max-preview,models_dev,md:only,,,,alibaba-token-plan,qwen3.8-max-preview,2026-07-19,3,false,text|image|video,text,1000000,0,0,true,,,,,,,
 qwen3-8b,models_dev|openrouter|epoch,epoch:exact|or:exact,qwen,qwen,qwen,nano-gpt,qwen/Qwen3-8B,2025-04,8,true,text,text,41000,0.47,0.47,false,qwen/qwen3-8b,2025-04-28,,Qwen3-8B,Alibaba,2025-04-29,Confident
@@ -1748,7 +1746,7 @@ reka-edge,models_dev|openrouter|epoch,epoch:exact|or:exact,rekaai,rekaai,rekaai,
 reka-flash-3,models_dev|openrouter|epoch,epoch:exact|or:exact,rekaai,rekaai,rekaai,kilo,rekaai/reka-flash-3,2025-03-12,2,false,text,text,65536,0.1,0.2,true,rekaai/reka-flash-3,2025-03-12,,Reka Flash 3,Reka AI,2025-03-10,Confident
 relace-apply-3,models_dev|openrouter,or:exact,relace,relace,relace,kilo,relace/relace-apply-3,2025-09-26,2,false,text,text,256000,0.85,1.25,false,relace/relace-apply-3,2025-09-26,,,,,
 relace-search,models_dev|openrouter,or:exact,relace,relace,relace,kilo,relace/relace-search,2025-12-08,2,false,text,text,256000,1,3,false,relace/relace-search,2025-12-08,,,,,
-remm-slerp-l2-13b,models_dev|openrouter,or:exact,undi95,undi95,undi95,kilo,undi95/remm-slerp-l2-13b,2023-07-22,3,false,text,text,6144,0.45,0.65,false,undi95/remm-slerp-l2-13b,2023-07-22,,,,,
+remm-slerp-l2-13b,models_dev|openrouter,or:exact,undi95,undi95,undi95,kilo,undi95/remm-slerp-l2-13b,2023-07-22,3,false,text,text,6144,0.35,0.65,false,undi95/remm-slerp-l2-13b,2023-07-22,,,,,
 rerank-2-5,models_dev,md:only,voyage,,voyage,vercel,voyage/rerank-2.5,2025-08-11,1,false,text,text,32000,,,false,,,,,,,
 rerank-2-5-lite,models_dev,md:only,voyage,,voyage,vercel,voyage/rerank-2.5-lite,2025-08-11,1,false,text,text,32000,,,false,,,,,,,
 rerank-qa-mistral-4b,models_dev,md:only,nvidia,,nvidia,nvidia,nvidia/rerank-qa-mistral-4b,2024-03-17,1,true,text,text,128000,0,0,false,,,,,,,
@@ -1833,7 +1831,7 @@ step-2-16k,models_dev,md:only,,,,stepfun,step-2-16k,2025-01-01,2,false,text,text
 step-3,models_dev,md:only,stepfun,,stepfun,zenmux,stepfun/step-3,2025-07-31,1,false,image|text,text,65536,0.21,0.57,true,,,,,,,
 step-3-5-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,stepfun,stepfun,,empiriolabs,step-3-5-flash,2026-01-29,15,true,text,text,256000,0.1,0.3,true,stepfun/step-3.5-flash,2026-01-29,,Step 3.5 Flash,StepFun,2026-02-02,Likely
 step-3-5-flash-2603,models_dev,md:only,,,,empiriolabs,step-3-5-flash-2603,2026-04-02,6,true,text,text,256000,0.1,0.3,true,,,,,,,
-step-3-7-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,stepfun,stepfun,stepfun-ai,nvidia,stepfun-ai/step-3.7-flash,2026-05-29,17,true,text|image,text,256000,0,0,true,stepfun/step-3.7-flash,2026-05-28,,Step 3.7 Flash,StepFun,2026-05-29,Confident
+step-3-7-flash,models_dev|openrouter|epoch,epoch:exact|or:exact,stepfun,stepfun,stepfun-ai,nvidia,stepfun-ai/step-3.7-flash,2026-05-29,18,true,text|image,text,256000,0,0,true,stepfun/step-3.7-flash,2026-05-28,,Step 3.7 Flash,StepFun,2026-05-29,Confident
 step-3-7-flash-free,models_dev,md:only,stepfun,,stepfun,zenmux,stepfun/step-3.7-flash-free,2026-05-29,1,true,text|image|video,text,256000,0,0,true,,,,,,,
 step-router-v1,models_dev,md:only,,,,stepfun-step-plan,step-router-v1,2026-05-29,1,false,text,text,256000,,,false,,,,,,,
 step-tts-2,models_dev,md:only,,,,stepfun,step-tts-2,2026-03-01,2,false,text,audio,0,,,false,,,,,,,
@@ -1954,7 +1952,7 @@ wan2-2-t2v-a14b,models_dev,md:only,,,,digitalocean,wan2-2-t2v-a14b,2025-07-28,1,
 wan2-7-image,models_dev,md:only,,,,alibaba-token-plan,wan2.7-image,2026-05-29,2,false,text,image,8192,0,0,false,,,,,,,
 wan2-7-image-pro,models_dev,md:only,,,,alibaba-token-plan,wan2.7-image-pro,2026-05-29,2,false,text,image,8192,0,0,false,,,,,,,
 wayfarer-large-70b-llama-3-3,models_dev,md:only,latitudegames,,latitudegames,nano-gpt,LatitudeGames/Wayfarer-Large-70B-Llama-3.3,2025-02-20,1,true,text,text,16384,0.7,0.7,false,,,,,,,
-weaver,models_dev|openrouter,or:exact,mancer,mancer,mancer,kilo,mancer/weaver,2023-08-02,2,false,text,text,8000,0.5,0.75,false,mancer/weaver,2023-08-02,,,,,
+weaver,models_dev|openrouter,or:exact,mancer,mancer,mancer,kilo,mancer/weaver,2023-08-02,2,false,text,text,8000,0.4,0.75,false,mancer/weaver,2023-08-02,,,,,
 whisper-1,models_dev,md:only,openai,,openai,vercel,openai/whisper-1,2022-09-21,1,false,audio,text,0,,,false,,,,,,,
 whisper-large-v3,models_dev,md:only,,,,groq,whisper-large-v3,2023-09-01,6,true,audio,text,0,,,false,,,,,,,
 whisper-large-v3-turbo,models_dev,md:only,openai,,openai,evroc,openai/whisper-large-v3-turbo,2024-10-01,3,true,audio,text,448,0.0023,0.0023,false,,,,,,,
