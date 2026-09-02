@@ -99,6 +99,7 @@ claude-fable-5-1,anthropic_api,claude-fable-5-1
 claude-fable-5-1,models_dev,venice/claude-fable-5-1
 claude-fable-5-1,openrouter,anthropic/claude-fable-5.1
 claude-fable-latest,models_dev,edenai/anthropic/claude-fable-latest
+claude-fable-latest,models_dev,kilo/~anthropic/claude-fable-latest
 claude-fable-latest,openrouter,~anthropic/claude-fable-latest
 claude-haiku-4-5,anthropic_api,claude-haiku-4-5-20251001
 claude-haiku-4-5,epoch,Claude Haiku 4.5
@@ -252,6 +253,7 @@ deepseek-r1-distill-qwen-32b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-32b
 deepseek-r1-distill-qwen-7b,epoch,DeepSeek-R1-Distill-Qwen-7B
 deepseek-r1-distill-qwen-7b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
 deepseek-r1-distill-qwen-7b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-7b
+deepseek-r1-zero,huggingface,deepseek-ai/DeepSeek-R1-Zero
 deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2
 deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2-Chat
 deepseek-v2-lite,huggingface,deepseek-ai/DeepSeek-V2-Lite
@@ -628,6 +630,8 @@ glm-5v-turbo,openrouter,z-ai/glm-5v-turbo
 glm-edge-1-5b-chat,huggingface,zai-org/glm-edge-1.5b-chat
 glm-edge-4b-chat,huggingface,zai-org/glm-edge-4b-chat
 glm-edge-v-2b,huggingface,zai-org/glm-edge-v-2b
+glm-flash-latest,models_dev,kilo/~z-ai/glm-flash-latest
+glm-flash-latest,openrouter,~z-ai/glm-flash-latest
 glm-latest,models_dev,nano-gpt/z-ai/glm-latest
 glm-latest,models_dev,nano-gpt/zai-org/glm-latest
 glm-latest,openrouter,~z-ai/glm-latest
@@ -1604,6 +1608,7 @@ phi-tiny-moe-instruct,huggingface,microsoft/Phi-tiny-MoE-instruct
 pixtral-12b,epoch,Pixtral 12B
 pixtral-12b,models_dev,mistral/pixtral-12b
 points-gui-g,huggingface,tencent/POINTS-GUI-G
+polyglot-ko-1-3b,huggingface,EleutherAI/polyglot-ko-1.3b
 pythia-1-4b,huggingface,EleutherAI/pythia-1.4b
 pythia-1-4b-deduped,huggingface,EleutherAI/pythia-1.4b-deduped
 pythia-12b,huggingface,EleutherAI/pythia-12b
@@ -1642,6 +1647,7 @@ pythia-410m-seed9,huggingface,EleutherAI/pythia-410m-seed9
 pythia-6-9b,huggingface,EleutherAI/pythia-6.9b
 pythia-6-9b-deduped,huggingface,EleutherAI/pythia-6.9b-deduped
 pythia-70m-deduped,huggingface,EleutherAI/pythia-70m-deduped
+pythia-70m-seed1,huggingface,EleutherAI/pythia-70m-seed1
 pythia-70m-seed2,huggingface,EleutherAI/pythia-70m-seed2
 qianfan-ocr,huggingface,baidu/Qianfan-OCR
 qianfan-vl-3b,huggingface,baidu/Qianfan-VL-3B
