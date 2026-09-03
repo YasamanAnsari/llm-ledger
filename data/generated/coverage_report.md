@@ -6,49 +6,49 @@ event, `machine_corroborated` when two independent machine sources agreed
 or a platform reported its own event, else `unreviewed` (a single
 aggregator claim). Filter on it before treating a date as settled.
 
-- Models: 1175; events: 1961
-- Review status: human_reviewed 55, machine_corroborated 318, unreviewed 802
-- Event confidence: verified 661, inferred 1292, disputed 8
+- Models: 1185; events: 1977
+- Review status: human_reviewed 55, machine_corroborated 354, unreviewed 776
+- Event confidence: verified 703, inferred 1266, disputed 8
 
 ## By organization
 
 | org | models | events | human_reviewed | machine_corroborated | unreviewed | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 89 | 161 | 2 | 53 | 34 | 41% |
+| Alibaba | 89 | 161 | 2 | 58 | 29 | 46% |
 | OpenAI | 67 | 270 | 19 | 43 | 5 | 73% |
-| Google | 56 | 147 | 7 | 28 | 21 | 40% |
-| ByteDance | 50 | 62 | 0 | 7 | 43 | 11% |
+| Google | 57 | 150 | 7 | 30 | 20 | 41% |
+| ByteDance | 50 | 62 | 0 | 8 | 42 | 15% |
 | Zhipu | 47 | 79 | 3 | 13 | 31 | 35% |
+| RWKV | 45 | 45 | 0 | 4 | 41 | 9% |
 | Ant Group | 43 | 49 | 0 | 2 | 41 | 4% |
-| DeepSeek | 42 | 82 | 3 | 13 | 26 | 40% |
+| DeepSeek | 42 | 82 | 3 | 20 | 19 | 50% |
 | EleutherAI | 42 | 42 | 0 | 1 | 41 | 2% |
-| RWKV | 42 | 42 | 0 | 2 | 40 | 5% |
-| AI2 | 40 | 40 | 0 | 0 | 40 | 0% |
-| TII | 40 | 40 | 0 | 1 | 39 | 2% |
-| Shanghai AI Lab | 39 | 39 | 0 | 2 | 37 | 5% |
+| AI2 | 40 | 40 | 0 | 2 | 38 | 5% |
+| TII | 40 | 40 | 0 | 2 | 38 | 5% |
+| Shanghai AI Lab | 39 | 39 | 0 | 3 | 36 | 8% |
+| Meta | 38 | 78 | 4 | 18 | 16 | 38% |
 | Baidu | 37 | 42 | 0 | 1 | 36 | 2% |
 | Nous | 37 | 44 | 0 | 9 | 28 | 23% |
-| Meta | 36 | 74 | 4 | 16 | 16 | 38% |
-| Cohere | 34 | 44 | 1 | 5 | 28 | 14% |
+| Cohere | 34 | 45 | 1 | 5 | 28 | 13% |
 | Mistral | 33 | 75 | 3 | 20 | 10 | 41% |
 | IBM | 31 | 36 | 0 | 3 | 28 | 8% |
-| NVIDIA | 30 | 43 | 0 | 6 | 24 | 14% |
-| OpenBMB | 29 | 29 | 0 | 1 | 28 | 3% |
-| Tencent | 27 | 37 | 1 | 7 | 19 | 27% |
-| Anthropic | 26 | 124 | 8 | 15 | 3 | 65% |
-| Liquid AI | 24 | 26 | 0 | 1 | 23 | 4% |
-| Microsoft | 23 | 34 | 0 | 10 | 13 | 32% |
+| NVIDIA | 30 | 43 | 0 | 8 | 22 | 19% |
+| OpenBMB | 29 | 29 | 0 | 2 | 27 | 7% |
+| Tencent | 28 | 38 | 1 | 7 | 20 | 26% |
+| Anthropic | 26 | 125 | 8 | 15 | 3 | 65% |
+| Liquid AI | 25 | 27 | 0 | 1 | 24 | 4% |
+| Microsoft | 24 | 35 | 0 | 10 | 14 | 31% |
 | StepFun | 20 | 22 | 0 | 2 | 18 | 9% |
 | 01.AI | 18 | 18 | 1 | 5 | 12 | 33% |
+| Stability | 17 | 17 | 0 | 8 | 9 | 47% |
 | Xiaomi | 17 | 22 | 0 | 3 | 14 | 14% |
 | Meituan | 16 | 20 | 0 | 1 | 15 | 5% |
-| MiniMax | 16 | 31 | 1 | 7 | 8 | 35% |
-| Stability | 16 | 16 | 0 | 8 | 8 | 50% |
+| MiniMax | 16 | 31 | 1 | 8 | 7 | 39% |
 | xAI | 16 | 41 | 2 | 9 | 5 | 37% |
-| Hugging Face | 15 | 15 | 0 | 1 | 14 | 7% |
-| Moonshot | 15 | 36 | 0 | 7 | 8 | 31% |
-| Skywork | 14 | 14 | 0 | 1 | 13 | 7% |
-| Baichuan | 12 | 12 | 0 | 1 | 11 | 8% |
+| Hugging Face | 15 | 15 | 0 | 2 | 13 | 13% |
+| Moonshot | 15 | 36 | 0 | 10 | 5 | 39% |
+| Skywork | 14 | 14 | 0 | 4 | 10 | 29% |
+| Baichuan | 12 | 12 | 0 | 3 | 9 | 25% |
 | AI21 | 10 | 10 | 0 | 1 | 9 | 10% |
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | IEIT | 7 | 7 | 0 | 0 | 7 | 0% |
@@ -60,11 +60,11 @@ aggregator claim). Filter on it before treating a date as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 924 | 73 | 849 | 2 |
-| platform_availability | 297 | 295 | 0 | 2 |
-| api_ga | 269 | 55 | 213 | 1 |
-| announced | 200 | 48 | 151 | 1 |
-| retired | 171 | 92 | 78 | 1 |
+| weights_released | 931 | 111 | 818 | 2 |
+| platform_availability | 300 | 298 | 0 | 2 |
+| api_ga | 273 | 55 | 217 | 1 |
+| announced | 201 | 48 | 152 | 1 |
+| retired | 172 | 93 | 78 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |

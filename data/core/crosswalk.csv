@@ -41,6 +41,7 @@ baichuanmed-ocr-7b,huggingface,baichuan-inc/BaichuanMed-OCR-7B
 bfs-prover-v1-7b,huggingface,ByteDance-Seed/BFS-Prover-V1-7B
 bfs-prover-v2-32b,huggingface,ByteDance-Seed/BFS-Prover-V2-32B
 bfs-prover-v2-7b,huggingface,ByteDance-Seed/BFS-Prover-V2-7B
+biogpt,huggingface,microsoft/biogpt
 bitcpm-cann-0-5b,huggingface,openbmb/BitCPM-CANN-0.5B
 bitcpm-cann-0-5b-unquantized,huggingface,openbmb/BitCPM-CANN-0.5B-unquantized
 bitcpm-cann-1b,huggingface,openbmb/BitCPM-CANN-1B
@@ -96,6 +97,7 @@ claude-fable-5,epoch,Claude Fable 5
 claude-fable-5,models_dev,anthropic/claude-fable-5
 claude-fable-5,openrouter,anthropic/claude-fable-5
 claude-fable-5-1,anthropic_api,claude-fable-5-1
+claude-fable-5-1,epoch,Claude Fable 5.1
 claude-fable-5-1,models_dev,venice/claude-fable-5-1
 claude-fable-5-1,openrouter,anthropic/claude-fable-5.1
 claude-fable-latest,models_dev,edenai/anthropic/claude-fable-latest
@@ -192,6 +194,7 @@ command-r-plus-08-2024,models_dev,anyapi/cohere/command-r-plus-08-2024
 command-r-plus-08-2024,openrouter,cohere/command-r-plus-08-2024
 command-r7b-12-2024,models_dev,cohere/command-r7b-12-2024
 command-r7b-12-2024,openrouter,cohere/command-r7b-12-2024
+contextpilot-e4b,huggingface,tencent/ContextPilot-E4B
 cosmo-1b,huggingface,HuggingFaceTB/cosmo-1b
 cosmos-reason2-2b,huggingface,nvidia/Cosmos-Reason2-2B
 cosmos-reason2-8b,huggingface,nvidia/Cosmos-Reason2-8B
@@ -482,6 +485,10 @@ gemini-3-7-flash,epoch,Gemini 3.7 Flash
 gemini-3-7-flash,google_api,gemini-3.7-flash
 gemini-3-7-flash,models_dev,abacus/gemini-3.7-flash
 gemini-3-7-flash,openrouter,google/gemini-3.7-flash
+gemini-3-8-flash,epoch,Gemini 3.8 Flash
+gemini-3-8-flash,google_api,gemini-3.8-flash
+gemini-3-8-flash,models_dev,google/gemini-3.8-flash
+gemini-3-8-flash,openrouter,google/gemini-3.8-flash
 gemini-3-flash,epoch,Gemini 3 Flash
 gemini-3-flash,models_dev,poe/google/gemini-3-flash
 gemini-3-flash-preview,google_api,gemini-3-flash-preview
@@ -696,6 +703,7 @@ gpt-4-turbo,openai_api,gpt-4-turbo
 gpt-4-turbo,openai_api,gpt-4-turbo-2024-04-09
 gpt-4-turbo,openrouter,openai/gpt-4-turbo
 gpt-4-turbo,text_surface_forms,GPT-4 Turbo
+gpt-4-turbo-preview,models_dev,kilo/openai/gpt-4-turbo-preview
 gpt-4-turbo-preview,models_dev,nano-gpt/openai/gpt-4-turbo-preview
 gpt-4-turbo-preview,openrouter,openai/gpt-4-turbo-preview
 gpt-4o,epoch,GPT-4o
@@ -1036,6 +1044,7 @@ internlm3-8b-instruct,huggingface,internlm/internlm3-8b-instruct
 jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
 januscoderv-7b,huggingface,internlm/JanusCoderV-7B
+japanese-stablelm-base-gamma-7b,huggingface,stabilityai/japanese-stablelm-base-gamma-7b
 japanese-stablelm-instruct-gamma-7b,huggingface,stabilityai/japanese-stablelm-instruct-gamma-7b
 kimi-dev-72b,huggingface,moonshotai/Kimi-Dev-72B
 kimi-k2,epoch,Kimi K2
@@ -1093,6 +1102,7 @@ lfm2-5-230m-base,huggingface,LiquidAI/LFM2.5-230M-Base
 lfm2-5-350m,huggingface,LiquidAI/LFM2.5-350M
 lfm2-5-350m-base,huggingface,LiquidAI/LFM2.5-350M-Base
 lfm2-5-8b-a1b,huggingface,LiquidAI/LFM2.5-8B-A1B
+lfm2-5-8b-a1b-dspark,huggingface,LiquidAI/LFM2.5-8B-A1B-DSpark
 lfm2-5-vl-1-6b,huggingface,LiquidAI/LFM2.5-VL-1.6B
 lfm2-5-vl-3b,huggingface,LiquidAI/LFM2.5-VL-3B
 lfm2-5-vl-450m,huggingface,LiquidAI/LFM2.5-VL-450M
@@ -1439,6 +1449,10 @@ muse-spark-1-2,models_dev,abacus/muse-spark-1.2
 muse-spark-1-2,openrouter,meta/muse-spark-1.2
 muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
+muse-spark-1-3,models_dev,kilo/meta/muse-spark-1.3
+muse-spark-1-3,openrouter,meta/muse-spark-1.3
+muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
+muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
 nanowhale-100m-base,huggingface,HuggingFaceTB/nanowhale-100m-base
 nemotron-3-5-content-safety,models_dev,kilo/nvidia/nemotron-3.5-content-safety:free
@@ -1463,6 +1477,7 @@ nemotron-labs-diffusion-8b,huggingface,nvidia/Nemotron-Labs-Diffusion-8B
 nemotron-labs-diffusion-8b-base,huggingface,nvidia/Nemotron-Labs-Diffusion-8B-Base
 north-micro-vision-instruct,huggingface,CohereLabs/North-Micro-Vision-Instruct
 north-mini-code,epoch,North Mini Code
+north-mini-code,models_dev,kilo/cohere/north-mini-code:free
 north-mini-code,models_dev,nano-gpt/cohere/north-mini-code
 north-mini-code,openrouter,cohere/north-mini-code:free
 north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0
@@ -1689,6 +1704,7 @@ qwen2-5-7b-instruct,models_dev,kilo/qwen/qwen-2.5-7b-instruct
 qwen2-5-7b-instruct,openrouter,qwen/qwen-2.5-7b-instruct
 qwen2-5-coder-14b-instruct,huggingface,Qwen/Qwen2.5-Coder-14B-Instruct
 qwen2-5-coder-32b-instruct,epoch,Qwen2.5-Coder (32B)
+qwen2-5-coder-32b-instruct,huggingface,Qwen/Qwen2.5-Coder-32B-Instruct
 qwen2-5-coder-32b-instruct,models_dev,abacus/qwen-2.5-coder-32b
 qwen2-5-coder-32b-instruct,models_dev,alibaba-cn/qwen2-5-coder-32b-instruct
 qwen2-5-coder-32b-instruct,models_dev,kilo/qwen/qwen-2.5-coder-32b-instruct
@@ -1924,6 +1940,9 @@ rwkv7-13-3b,huggingface,RWKV/RWKV7-13.3B-20260805
 rwkv7-2-9b,huggingface,RWKV/RWKV7-2.9B-20260805
 rwkv7-7-2b,huggingface,RWKV/RWKV7-7.2B-20260805
 rwkv7-g1,huggingface,BlinkDL/rwkv7-g1
+rwkv7-g1j-1-5b,huggingface,RWKV/RWKV7-G1j-1.5B-20260831
+rwkv7-g1j-2-9b,huggingface,RWKV/RWKV7-G1j-2.9B-20260831
+rwkv7-g1j-7-2b,huggingface,RWKV/RWKV7-G1j-7.2B-20260831
 rwkv7-goose-pile-1-47b-hf,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
 rwkv7-goose-pile-421m-hf,huggingface,RWKV/RWKV7-Goose-Pile-421M-HF
 rwkv7-goose-world-pth,huggingface,RWKV/RWKV7-Goose-World-PTH
