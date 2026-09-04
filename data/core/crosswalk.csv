@@ -1,5 +1,6 @@
 model_id,namespace,identifier
 academic-ds-9b,huggingface,ByteDance-Seed/academic-ds-9B
+ahn-gdn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B
 ahn-mamba2-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B
 ahn-mamba2-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-3B
@@ -194,6 +195,7 @@ command-r-plus-08-2024,models_dev,anyapi/cohere/command-r-plus-08-2024
 command-r-plus-08-2024,openrouter,cohere/command-r-plus-08-2024
 command-r7b-12-2024,models_dev,cohere/command-r7b-12-2024
 command-r7b-12-2024,openrouter,cohere/command-r7b-12-2024
+contextpilot-14b,huggingface,tencent/ContextPilot-14B
 contextpilot-e4b,huggingface,tencent/ContextPilot-E4B
 cosmo-1b,huggingface,HuggingFaceTB/cosmo-1b
 cosmos-reason2-2b,huggingface,nvidia/Cosmos-Reason2-2B
@@ -487,6 +489,7 @@ gemini-3-7-flash,models_dev,abacus/gemini-3.7-flash
 gemini-3-7-flash,openrouter,google/gemini-3.7-flash
 gemini-3-8-flash,epoch,Gemini 3.8 Flash
 gemini-3-8-flash,google_api,gemini-3.8-flash
+gemini-3-8-flash,models_dev,crossmodel/gemini/gemini-3.8-flash
 gemini-3-8-flash,models_dev,google/gemini-3.8-flash
 gemini-3-8-flash,openrouter,google/gemini-3.8-flash
 gemini-3-flash,epoch,Gemini 3 Flash
@@ -903,6 +906,7 @@ granite-4-0-micro,huggingface,ibm-granite/granite-4.0-micro
 granite-4-0-tiny-preview,huggingface,ibm-granite/granite-4.0-tiny-preview
 granite-4-1-30b,huggingface,ibm-granite/granite-4.1-30b
 granite-4-1-3b,huggingface,ibm-granite/granite-4.1-3b
+granite-4-1-3b-base,huggingface,ibm-granite/granite-4.1-3b-base
 granite-4-1-8b,epoch,Granite 4.1 8B
 granite-4-1-8b,huggingface,ibm-granite/granite-4.1-8b
 granite-4-1-8b,models_dev,nano-gpt/ibm-granite/granite-4.1-8b
@@ -973,6 +977,7 @@ hermes-4-405b,huggingface,NousResearch/Hermes-4-405B
 hermes-4-405b,models_dev,nano-gpt/NousResearch/hermes-4-405b:thinking
 hermes-4-405b,openrouter,nousresearch/hermes-4-405b
 hermes-4-70b,huggingface,NousResearch/Hermes-4-70B
+hermes-4-70b,models_dev,kilo/nousresearch/hermes-4-70b
 hermes-4-70b,models_dev,nano-gpt/NousResearch/hermes-4-70b
 hermes-4-70b,openrouter,nousresearch/hermes-4-70b
 hermes-4-70b-fp8,huggingface,NousResearch/Hermes-4-70B-FP8
@@ -1127,7 +1132,9 @@ ling-3-0-flash-base,huggingface,inclusionAI/Ling-3.0-flash-base
 ling-3-0-flash-base-30t,huggingface,inclusionAI/Ling-3.0-flash-base-30T
 ling-3-0-flash-base-midtrain,huggingface,inclusionAI/Ling-3.0-flash-base-midtrain
 ling-3-0-flash-dspark,huggingface,inclusionAI/Ling-3.0-flash-dspark
+ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin:free
+ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fp8,huggingface,inclusionAI/Ling-3.0-flash-fp8
 ling-3-0-flash-int4,huggingface,inclusionAI/Ling-3.0-flash-int4
@@ -1449,13 +1456,16 @@ muse-spark-1-2,models_dev,abacus/muse-spark-1.2
 muse-spark-1-2,openrouter,meta/muse-spark-1.2
 muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
+muse-spark-1-3,models_dev,empiriolabs/muse-spark-1-3
 muse-spark-1-3,models_dev,kilo/meta/muse-spark-1.3
 muse-spark-1-3,openrouter,meta/muse-spark-1.3
 muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
 nanowhale-100m-base,huggingface,HuggingFaceTB/nanowhale-100m-base
+nemotron-3-5-content-safety,models_dev,kilo/nvidia/nemotron-3.5-content-safety
 nemotron-3-5-content-safety,models_dev,kilo/nvidia/nemotron-3.5-content-safety:free
+nemotron-3-5-content-safety,openrouter,nvidia/nemotron-3.5-content-safety
 nemotron-3-5-content-safety,openrouter,nvidia/nemotron-3.5-content-safety:free
 nemotron-3-5-lightning,epoch,Nemotron 3.5 Lightning
 nemotron-3-5-lightning,models_dev,kilo/nvidia/nemotron-3.5-lightning
@@ -1501,6 +1511,7 @@ nova-pro-v1,models_dev,cortecs/nova-pro-v1
 nova-pro-v1,openrouter,amazon/nova-pro-v1
 nv-embed-v1,epoch,NV-Embed-v1
 nv-embed-v1,models_dev,nvidia/nvidia/nv-embed-v1
+nvidia-nemotron-3-5-lightning-30b-a3b-base-bf16,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
 nvidia-nemotron-3-5-lightning-30b-a3b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
 nvidia-nemotron-3-nano-30b-a3b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
 nvidia-nemotron-3-nano-30b-a3b-fp8,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
@@ -1649,6 +1660,7 @@ pythia-160m-weight-seed2,huggingface,EleutherAI/pythia-160m-weight-seed2
 pythia-160m-weight-seed3,huggingface,EleutherAI/pythia-160m-weight-seed3
 pythia-1b,huggingface,EleutherAI/pythia-1b
 pythia-1b-deduped,huggingface,EleutherAI/pythia-1b-deduped
+pythia-1b-v0,huggingface,EleutherAI/pythia-1b-v0
 pythia-2-8b,huggingface,EleutherAI/pythia-2.8b
 pythia-2-8b-deduped,huggingface,EleutherAI/pythia-2.8b-deduped
 pythia-31m,huggingface,EleutherAI/pythia-31m
@@ -1941,6 +1953,7 @@ rwkv7-2-9b,huggingface,RWKV/RWKV7-2.9B-20260805
 rwkv7-7-2b,huggingface,RWKV/RWKV7-7.2B-20260805
 rwkv7-g1,huggingface,BlinkDL/rwkv7-g1
 rwkv7-g1j-1-5b,huggingface,RWKV/RWKV7-G1j-1.5B-20260831
+rwkv7-g1j-13-3b,huggingface,RWKV/RWKV7-G1j-13.3B-20260831
 rwkv7-g1j-2-9b,huggingface,RWKV/RWKV7-G1j-2.9B-20260831
 rwkv7-g1j-7-2b,huggingface,RWKV/RWKV7-G1j-7.2B-20260831
 rwkv7-goose-pile-1-47b-hf,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
