@@ -3,6 +3,18 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-09-03
+
+- New generated view `data/generated/models_latest.csv`: `models.csv`
+  with `first_public_availability_date` as the first column, newest
+  releases first, undated models last. Same values as `models.csv`;
+  covered by validation rule 9.
+- `docs/erd.svg`: entity-relationship diagram of the six core tables,
+  embedded in the README and `docs/schema.md`.
+- README reorganised to read front to back: the o3 example, the shape of
+  the data, how a date is decided, then usage. Headline counts are now
+  approximate with a pointer to `coverage_report.md` for exact numbers.
+
 ## 2026-09-01 (v2026.09)
 
 Schema and confidence overhaul. Column layouts changed; event ids for

@@ -1,32 +1,47 @@
 # llm-ledger
 
-Dated events in the life of large language models. Each row has a date,
-how precise it is, a source URL, and how sure we are.
-
-Epoch AI tracks how big a model is. We track **when** things happened.
-You can join the two.
-
-## Why
-
-"When was this model released?" has no single answer.
-
-OpenAI's o3 in this file:
+Ask "when was OpenAI's o3 released?" and you get four honest answers:
 
 | event | date |
 |---|---|
 | announced | 2024-12-20 |
-| in the API (`api_ga`) | 2025-04-16 |
 | o3-mini shipped | 2025-01-31 |
+| in the API (`api_ga`) | 2025-04-16 |
 | o3-pro shipped | 2025-06-10 |
 
-Other catalogs usually smash that into one "release date." Papers on
-ChatGPT already pick different days. We keep each moment as its own row
-so you can choose the date that matches your question.
+Most catalogs collapse that into one "release date", and papers on the
+same model end up using different days. This dataset keeps each moment
+as its own row, with a date, how precise it is, the page it came from,
+and how sure we are. Epoch AI tracks how big a model is; we track
+**when** things happened. The two join on a shared key.
 
-## Files
+**Newest releases first:**
+[`data/generated/models_latest.csv`](data/generated/models_latest.csv)
+is `models.csv` re-sorted with the first public availability date in the
+first column and the most recent releases at the top. It is rebuilt on
+every update.
+
+## How the data is shaped
+
+![Entity-relationship diagram of the six core tables](docs/erd.svg)
+
+Read it left to right. **Organizations** build **models**. A model does
+not have a date; it has a life, and each moment of that life is a row in
+**events**: announced, previewed, opened in the API, weights published,
+retired. Every machine-dated event keeps its receipts in **claims**, one
+row per source that had an opinion, so the verdict can be re-judged from
+the evidence. **Crosswalk** maps a model's names across catalogs (the
+same model is `gpt-4o` to OpenAI and `openai/gpt-4o` on OpenRouter), and
+**attributes** is the spec sheet: context, modalities, prices.
+
+`events.csv` is the real data. Everything under `data/generated/` is that
+table re-arranged for convenience. Dates on `models.csv` such as
+`first_public_availability_date` are computed from events; do not edit
+them by hand.
 
 | I want | Open this |
 |---|---|
+| newest releases at the top | [`data/generated/models_latest.csv`](data/generated/models_latest.csv) |
 | one row per model, dates as columns | [`data/generated/llm_ledger_wide.csv`](data/generated/llm_ledger_wide.csv) |
 | that plus Epoch scale columns | [`data/generated/llm_ledger_enriched.csv`](data/generated/llm_ledger_enriched.csv) |
 | every dated fact with a source | [`data/core/events.csv`](data/core/events.csv) |
@@ -39,23 +54,48 @@ so you can choose the date that matches your question.
 | where catalogs disagree | [`data/generated/disagreement_report.md`](data/generated/disagreement_report.md) |
 | how much "the date" moves | [`data/generated/sensitivity_report.md`](data/generated/sensitivity_report.md) |
 
-`events.csv` is the real data. The wide file is just that table flipped
-wide. An empty cell means that event never happened. Dates like
-`first_public_availability_date` on `models.csv` are computed; do not
-edit them by hand.
+Columns and allowed values: [`docs/schema.md`](docs/schema.md).
 
-This snapshot: **1,171 models**, **1,955 events**, **41 orgs**, backed by
-1,997 recorded claims. First availability: 2021-11-18 (GPT-3 API) to
-2026-09-01. About 78% open-weight; Chinese labs are about half of those.
+## How a date gets decided
 
-Read the counts honestly: 55 models are `human_reviewed`, 291 are
-`machine_corroborated` (two independent sources agreed, or a platform
-reported its own listing), and 825 are `unreviewed` catalog drafts. 632
-of 1,955 events are `verified`, and 289 of those are OpenRouter's own
-listing timestamps. Roughly 200 events were checked by a person.
-[`coverage_report.md`](data/generated/coverage_report.md) has this per lab.
+A date enters the ledger one of two ways.
 
-## How to use it
+A person opens the primary page, a vendor blog post or a deprecation
+table, reads the date, and writes the row with their own name in
+`verified_by`. Scripts never touch those rows.
+
+Or a script pulls it from a catalog: Hugging Face, models.dev,
+OpenRouter, the vendors' own model lists, Azure and Bedrock lifecycle
+tables, the Wayback Machine. Every catalog date becomes a claim, and one
+policy (`pipeline/confidence.py`) turns claims into a verdict:
+
+- one source alone is `inferred`;
+- two independent sources that agree are `verified`, signed `llm-ledger`;
+- stated dates that clash are `disputed`, with every value kept in `notes`.
+
+Repo and registry creation timestamps can corroborate a date but never
+set one on their own, because a Hugging Face repo is usually created
+before the public launch (16 of 20 checkable cases; up to three weeks).
+The full reasoning is in [`docs/methodology.md`](docs/methodology.md);
+where the dates come from is in [`docs/sources.md`](docs/sources.md).
+
+Operating rules that fall out of this:
+
+- One event, one date, one URL. If the source only says "March 2024",
+  we store `2024-03-01` and `precision=month`. We do not guess the day.
+- Hugging Face `createdAt` of 2022-03-02 is a backfill, never a weights
+  date. The Hub sweep keeps the top 40 repos per lab by downloads
+  (`PER_ORG_CAP` in `pipeline/hf_census.py`); repos already in the ledger
+  stay tracked when they fall out of the top 40.
+- Names: exact match first. Fuzzy score >= 97 joins; 92-97 waits for a
+  person; below 92 is no match.
+- We looked for Chinese labs on purpose. ModelScope needs a login; we
+  skip it rather than invent rows. Vendor APIs skip if there is no key.
+- A name on Wikipedia or a community timeline is a lead, not a fact. It
+  sits in `data/staging/review_queue.csv` until a vendor page, Hub
+  timestamp, or arXiv v1 backs it.
+
+## Using it
 
 ```python
 import pandas as pd
@@ -68,7 +108,7 @@ gap = (pd.to_datetime(wide["api_ga_date"]) -
 print(gap.describe())
 ```
 
-### Using it for research
+For research:
 
 - **Filter first.** `models.review_status in {human_reviewed,
   machine_corroborated}` and `events.confidence == "verified"` is the
@@ -79,16 +119,28 @@ print(gap.describe())
   people first heard. `platform_availability` (with `platform`) is when
   a cloud started serving it; `retired` with a `platform` is that host's
   shutdown, not the vendor's.
-- **Know the biases.** Hugging Face repo creation runs ahead of the
-  public launch (16 of 20 checkable cases; up to three weeks), so
-  Hub-only weights dates are `inferred` on purpose. Coverage is deepest
-  for OpenAI and open-weight labs, thinnest for closed labs without an
-  API listing. Every machine date's evidence is in `claims.csv`; every
-  `disputed` row lists all values in `notes`.
+- **Know the biases.** Hub-only weights dates are `inferred` on purpose.
+  Coverage is deepest for OpenAI and open-weight labs, thinnest for
+  closed labs without an API listing. Every machine date's evidence is
+  in `claims.csv`; every `disputed` row lists all values in `notes`.
 - **Keep `source_url`.** It is the page a reader can open.
 
-Columns and allowed values: [`docs/schema.md`](docs/schema.md). How dates
-and confidence are decided: [`docs/methodology.md`](docs/methodology.md).
+## How much is in it
+
+As of September 2026: about 1,200 models from 41 organizations, about
+2,000 dated events, backed by about 2,000 recorded claims. First
+availability runs from 2021-11-18 (GPT-3 API) to the present. Roughly
+three quarters of the models are open-weight; Chinese labs are about
+half of those.
+
+Read the counts honestly. Only about one model in twenty is
+`human_reviewed`; a quarter are `machine_corroborated` (two independent
+sources agreed, or a platform reported its own listing); the rest are
+`unreviewed` catalog drafts. About a third of events are `verified`, and
+nearly half of those are OpenRouter's own listing timestamps. A couple
+of hundred events were checked by a person. Exact, current numbers are
+in [`coverage_report.md`](data/generated/coverage_report.md), rebuilt
+with the data.
 
 ## What is in and what is out
 
@@ -106,31 +158,8 @@ Count every GGUF and we would have fifty Qwen2.5-72Bs. We want one.
 Also out: scores, parameter counts, training cost (use
 [Epoch](https://epoch.ai/data/ai-models)), laws, usage stats.
 
-A name on Wikipedia or a community timeline is a **lead**. It sits in
-`data/staging/review_queue.csv` until a vendor page, Hub timestamp, or
-arXiv v1 backs it.
-
-## Rules we actually follow
-
-- One event, one date, one URL. If the source only says "March 2024",
-  we store `2024-03-01` and `precision=month`. We do not guess the day.
-- One confidence policy for every machine date
-  (`pipeline/confidence.py`): one source is `inferred`; two independent
-  sources agreeing are `verified` by `llm-ledger`; stated dates that
-  clash are `disputed` with everything in `notes`. A human check carries
-  that person's name. Repo and registry creation timestamps corroborate
-  a date but never set one on their own.
-- Hugging Face sweep keeps the **top 40 repos per lab** by downloads
-  (`PER_ORG_CAP` in `pipeline/hf_census.py`); repos already in the
-  ledger stay tracked when they fall out of the top 40.
-- Hugging Face `createdAt` of 2022-03-02 is a backfill. We do not use
-  it as a weights date.
-- Names: exact match first. Fuzzy score >= 97 joins; 92-97 waits for
-  a person; below 92 is no match.
-- We looked for Chinese labs on purpose. ModelScope needs a login; we
-  skip it rather than invent rows. Vendor APIs skip if there is no key.
-- This is a first cut, not everything. More models can go in. GGUFs
-  still will not.
+This is a first cut, not everything. More models can go in. GGUFs
+still will not.
 
 ## Rebuild
 

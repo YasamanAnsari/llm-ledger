@@ -3,6 +3,12 @@
 Six core tables plus generated files. CSVs are UTF-8, LF, sorted by
 primary key, ISO dates. The code of record is `pipeline/schema.py`.
 
+![Entity-relationship diagram of the six core tables](erd.svg)
+
+`erd.svg` is a hand-maintained drawing (one `<text>` element per column);
+update it in the same change as any column added to or removed from
+`pipeline/schema.py`.
+
 ## Rules
 
 1. Epoch's size and compute numbers stay out of core. We join them in
@@ -225,6 +231,10 @@ pre-staging and is withdrawn.
   Epoch AI snapshot via the crosswalk, carrying Epoch's scale columns and
   confidence labels plus a constant `epoch_snapshot_date` column. Epoch data
   is CC BY 4.0 and credited in LICENSE-DATA and the README.
+- `data/generated/models_latest.csv` - `models.csv` with
+  `first_public_availability_date` as the first column, sorted newest
+  first (ties by `model_id`, undated models last). A reading view; the
+  columns and values are identical to `models.csv`.
 - `data/generated/coverage_report.md` - per-organization model and event
   counts with review status and verified share; read this before quoting
   the headline row counts.

@@ -6,6 +6,9 @@
   region only, joined with models + attributes).
 - Generates data/generated/llm_ledger_enriched.csv (wide LEFT JOINed to the
   latest Epoch snapshot via the crosswalk; Epoch is CC-BY and credited).
+- Generates data/generated/models_latest.csv (models.csv columns with
+  first_public_availability_date moved first, newest releases at the top,
+  undated models last) for readers who want "what came out recently".
 
 Everything here is deterministic: fixed column orders, PK-sorted rows, no
 run timestamps in output. `validate.py` rule 9 rebuilds these artifacts
@@ -174,6 +177,26 @@ def build_wide_bytes() -> bytes:
     return _csv_bytes(columns, rows)
 
 
+LATEST_DATE_COLUMN = "first_public_availability_date"
+LATEST_COLUMNS = (LATEST_DATE_COLUMN,) + tuple(
+    c for c in MODELS.columns if c != LATEST_DATE_COLUMN)
+
+
+def latest_first(models: list) -> list:
+    """models rows newest-first by availability date; undated rows last;
+    model_id (ascending) breaks ties. Rows are returned unchanged."""
+    rows = sorted(models, key=lambda r: r["model_id"])
+    # Stable reverse sort keeps the model_id order within a date; "" (undated)
+    # is the smallest ISO string so it lands at the bottom.
+    rows.sort(key=lambda r: r[LATEST_DATE_COLUMN], reverse=True)
+    return rows
+
+
+def build_latest_bytes() -> bytes:
+    models = compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS))
+    return _csv_bytes(list(LATEST_COLUMNS), latest_first(models))
+
+
 # ---------------------------------------------------------------------------
 # Enriched artifact (Epoch LEFT JOIN, CC-BY with credit)
 # ---------------------------------------------------------------------------
@@ -296,6 +319,8 @@ def main() -> int:
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     (GENERATED_DIR / "llm_ledger_wide.csv").write_bytes(build_wide_bytes())
     print("build: wrote data/generated/llm_ledger_wide.csv")
+    (GENERATED_DIR / "models_latest.csv").write_bytes(build_latest_bytes())
+    print("build: wrote data/generated/models_latest.csv")
     (GENERATED_DIR / "coverage_report.md").write_text(
         build_coverage_report(models, events, schema.read_table(schema.ORGANIZATIONS)),
         encoding="utf-8")

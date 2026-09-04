@@ -316,13 +316,14 @@ def check_rule8_vocabularies(tables: dict) -> list:
 
 
 def check_rule9_determinism(core_dir: Path) -> list:
-    """Wide/enriched artifacts regenerate byte-identically from core tables."""
+    """Generated CSV artifacts regenerate byte-identically from core tables."""
     import build  # local import: build depends on schema only
 
     errors = []
     for filename, regenerate in (
         ("llm_ledger_wide.csv", build.build_wide_bytes),
         ("llm_ledger_enriched.csv", build.build_enriched_bytes),
+        ("models_latest.csv", build.build_latest_bytes),
     ):
         path = schema.GENERATED_DIR / filename
         if not path.exists():
