@@ -629,6 +629,7 @@ glm-5-3,models_dev,cline-pass/cline-pass/glm-5.3
 glm-5-3,openrouter,z-ai/glm-5.3
 glm-5-3-bf16,huggingface,zai-org/GLM-5.3-BF16
 glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash
+glm-5-3-flash,models_dev,cline-pass/cline-pass/glm-5.3-flash
 glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
 glm-5-3-flash,openrouter,z-ai/glm-5.3-flash
 glm-5-3-flash-bf16,huggingface,zai-org/GLM-5.3-Flash-BF16
@@ -848,6 +849,12 @@ gpt-5-pro,models_dev,helicone/gpt-5-pro
 gpt-5-pro,openai_api,gpt-5-pro
 gpt-5-pro,openai_api,gpt-5-pro-2025-10-06
 gpt-5-pro,openrouter,openai/gpt-5-pro
+gpt-6-astra,epoch,GPT-6 Astra
+gpt-6-astra,models_dev,llmgateway/gpt-6-astra
+gpt-6-astra,openai_api,gpt-6-astra
+gpt-6-astra,openrouter,openai/gpt-6-astra
+gpt-6-astra-pro,models_dev,kilo/openai/gpt-6-astra-pro
+gpt-6-astra-pro,openrouter,openai/gpt-6-astra-pro
 gpt-audio,models_dev,kilo/openai/gpt-audio
 gpt-audio,openai_api,gpt-audio
 gpt-audio,openai_api,gpt-audio-2025-08-28
@@ -910,6 +917,7 @@ granite-4-1-3b-base,huggingface,ibm-granite/granite-4.1-3b-base
 granite-4-1-8b,epoch,Granite 4.1 8B
 granite-4-1-8b,huggingface,ibm-granite/granite-4.1-8b
 granite-4-1-8b,models_dev,nano-gpt/ibm-granite/granite-4.1-8b
+granite-4-1-8b,models_dev,wandb/ibm-granite/granite-4.1-8b
 granite-4-1-8b,openrouter,ibm-granite/granite-4.1-8b
 granite-4-2-3b,huggingface,ibm-granite/granite-4.2-3b
 granite-4-2-8b,huggingface,ibm-granite/granite-4.2-8b
@@ -1138,6 +1146,8 @@ ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fp8,huggingface,inclusionAI/Ling-3.0-flash-fp8
 ling-3-0-flash-int4,huggingface,inclusionAI/Ling-3.0-flash-int4
+ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante:free
+ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
 ling-lite,huggingface,inclusionAI/Ling-lite
@@ -1609,6 +1619,7 @@ pacore-8b,huggingface,stepfun-ai/PaCoRe-8B
 paligemma,epoch,PaliGemma
 paligemma,models_dev,nvidia/google/google-paligemma
 paligemma-3b-ft-cococap-448,huggingface,google/paligemma-3b-ft-cococap-448
+paligemma-3b-pt-224,huggingface,google/paligemma-3b-pt-224
 phi-2,huggingface,microsoft/phi-2
 phi-3-5-mini-instruct,huggingface,microsoft/Phi-3.5-mini-instruct
 phi-3-5-moe-instruct,huggingface,microsoft/Phi-3.5-MoE-instruct
@@ -1848,6 +1859,7 @@ qwen3-8-max,epoch,Qwen 3.8 Max
 qwen3-8-max,models_dev,cline-pass/cline-pass/qwen3.8-max
 qwen3-8-max,models_dev,venice/qwen-3-8-max
 qwen3-8-max,openrouter,qwen/qwen3.8-max
+qwen3-8-max,openrouter,qwen/qwen3.8-max-0902
 qwen3-8b,epoch,Qwen3-8B
 qwen3-8b,huggingface,Qwen/Qwen3-8B
 qwen3-8b,models_dev,nano-gpt/qwen/Qwen3-8B
@@ -1969,6 +1981,7 @@ sa2va-4b,huggingface,ByteDance/Sa2VA-4B
 sa2va-8b,huggingface,ByteDance/Sa2VA-8B
 sa2va-internvl3-2b,huggingface,ByteDance/Sa2VA-InternVL3-2B
 sa2va-internvl3-8b,huggingface,ByteDance/Sa2VA-InternVL3-8B
+sa2va-qwen3-vl-2b,huggingface,ByteDance/Sa2VA-Qwen3-VL-2B
 sa2va-qwen3-vl-4b,huggingface,ByteDance/Sa2VA-Qwen3-VL-4B
 sa2va-qwen3-vl-4b-sam3,huggingface,ByteDance/Sa2VA-Qwen3-VL-4B-SAM3
 seed-1-6,epoch,Seed 1.6

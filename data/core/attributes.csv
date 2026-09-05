@@ -176,6 +176,8 @@ gpt-5-image-mini,true,,,,,,400000,128000,pdf|image|text,image|text,,false,,,2.5,
 gpt-5-mini,false,none,,,,,400000,128000,text|image,text,2025-01,true,,,0.25,2,0.024999999999999998,2026-09-01,https://models.dev/api.json
 gpt-5-nano,false,none,,,,,400000,128000,text|image,text,2025-01,true,,,0.049999999999999996,0.39999999999999997,0.005,2026-09-01,https://models.dev/api.json
 gpt-5-pro,false,none,,,,,128000,32768,text,text,2025-01,false,,,15,120,,2026-09-01,https://models.dev/api.json
+gpt-6-astra,true,,,,,,1050000,1050000,text|image,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
+gpt-6-astra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-audio,false,none,,,,,128000,16384,text|audio|pdf,text|audio,,true,,,2.5,10,,2026-09-01,https://models.dev/api.json
 gpt-audio-mini,false,none,,,,,128000,16384,text|audio|pdf,text|audio,,true,,,0.6,2.4,,2026-09-01,https://models.dev/api.json
 gpt-chat-latest,true,,,,,,1050000,128000,text|image|pdf,text,,true,,,2,10,0.2,2026-09-01,https://models.dev/api.json
@@ -227,6 +229,7 @@ ling-1t,false,none,,,,,128000,32000,text,text,2024-06,true,,,0.57,2.29,,2026-09-
 ling-2-6-flash,false,none,,,,,262144,262144,text,text,,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
 ling-3-0-flash,true,,,,,,262144,32768,text,text,,true,,,0.06,0.18,0.012,2026-09-01,https://models.dev/api.json
 ling-3-0-flash-fin,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
+ling-3-0-flash-sante,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-09-05,https://models.dev/api.json
 llama-2-70b,,none,,,,,4096,,text,text,2022-09-01,,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md
 llama-3-1-405b-instruct,,none,,,,,131072,,text,text,2023-12-01,true,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
 llama-3-1-70b-instruct,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
