@@ -162,6 +162,7 @@ claude-sonnet-5,wikipedia,Claude (language model)
 claude-sonnet-latest,models_dev,nano-gpt/anthropic/claude-sonnet-latest
 claude-sonnet-latest,openrouter,~anthropic/claude-sonnet-latest
 codegeex4-all-9b,huggingface,zai-org/codegeex4-all-9b
+codellama-13b-instruct-hf,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
 codellama-34b-instruct-hf,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
 codellama-7b-hf,huggingface,meta-llama/CodeLlama-7b-hf
 codellama-7b-instruct-hf,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
@@ -919,6 +920,7 @@ granite-4-1-8b,huggingface,ibm-granite/granite-4.1-8b
 granite-4-1-8b,models_dev,nano-gpt/ibm-granite/granite-4.1-8b
 granite-4-1-8b,models_dev,wandb/ibm-granite/granite-4.1-8b
 granite-4-1-8b,openrouter,ibm-granite/granite-4.1-8b
+granite-4-2-30b,huggingface,ibm-granite/granite-4.2-30b
 granite-4-2-3b,huggingface,ibm-granite/granite-4.2-3b
 granite-4-2-8b,huggingface,ibm-granite/granite-4.2-8b
 granite-4-2-8b,models_dev,wandb/ibm-granite/granite-4.2-8b
@@ -1099,6 +1101,7 @@ kimi-vl-a3b-thinking,huggingface,moonshotai/Kimi-VL-A3B-Thinking
 kimi-vl-a3b-thinking-2506,huggingface,moonshotai/Kimi-VL-A3B-Thinking-2506
 lfm2-1-2b,huggingface,LiquidAI/LFM2-1.2B
 lfm2-2-6b,huggingface,LiquidAI/LFM2-2.6B
+lfm2-2-6b-longevity,huggingface,LiquidAI/LFM2-2.6B-Longevity
 lfm2-24b-a2b,huggingface,LiquidAI/LFM2-24B-A2B
 lfm2-350m,huggingface,LiquidAI/LFM2-350M
 lfm2-5-1-2b-base,huggingface,LiquidAI/LFM2.5-1.2B-Base
@@ -1140,6 +1143,7 @@ ling-3-0-flash-base,huggingface,inclusionAI/Ling-3.0-flash-base
 ling-3-0-flash-base-30t,huggingface,inclusionAI/Ling-3.0-flash-base-30T
 ling-3-0-flash-base-midtrain,huggingface,inclusionAI/Ling-3.0-flash-base-midtrain
 ling-3-0-flash-dspark,huggingface,inclusionAI/Ling-3.0-flash-dspark
+ling-3-0-flash-fin,huggingface,inclusionAI/Ling-3.0-flash-Fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
@@ -1561,6 +1565,7 @@ o4-mini,openrouter,openai/o4-mini
 o4-mini,wikipedia,OpenAI o4-mini
 o4-mini-high,models_dev,kilo/openai/o4-mini-high
 o4-mini-high,openrouter,openai/o4-mini-high
+olmo-1b-0724-hf,huggingface,allenai/OLMo-1B-0724-hf
 olmo-1b-hf,huggingface,allenai/OLMo-1B-hf
 olmo-2-0325-32b,huggingface,allenai/OLMo-2-0325-32B
 olmo-2-0325-32b,huggingface,allenai/OLMo-2-0325-32B-Instruct
@@ -1572,6 +1577,7 @@ olmo-2-1124-13b-instruct,huggingface,allenai/OLMo-2-1124-13B-Instruct
 olmo-2-1124-7b-instruct,huggingface,allenai/OLMo-2-1124-7B-Instruct
 olmo-2-1124-7b-sft,huggingface,allenai/OLMo-2-1124-7B-SFT
 olmo-3-1-32b-instruct,huggingface,allenai/Olmo-3.1-32B-Instruct
+olmo-3-1-32b-think,huggingface,allenai/Olmo-3.1-32B-Think
 olmo-3-1025-7b,huggingface,allenai/Olmo-3-1025-7B
 olmo-3-1125-32b,huggingface,allenai/Olmo-3-1125-32B
 olmo-3-32b-think,huggingface,allenai/Olmo-3-32B-Think
