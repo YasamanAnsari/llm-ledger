@@ -197,6 +197,7 @@ command-r-plus-08-2024,openrouter,cohere/command-r-plus-08-2024
 command-r7b-12-2024,models_dev,cohere/command-r7b-12-2024
 command-r7b-12-2024,openrouter,cohere/command-r7b-12-2024
 contextpilot-14b,huggingface,tencent/ContextPilot-14B
+contextpilot-8b,huggingface,tencent/ContextPilot-8B
 contextpilot-e4b,huggingface,tencent/ContextPilot-E4B
 cosmo-1b,huggingface,HuggingFaceTB/cosmo-1b
 cosmos-reason2-2b,huggingface,nvidia/Cosmos-Reason2-2B
@@ -629,6 +630,7 @@ glm-5-3,huggingface,zai-org/GLM-5.3
 glm-5-3,models_dev,cline-pass/cline-pass/glm-5.3
 glm-5-3,openrouter,z-ai/glm-5.3
 glm-5-3-bf16,huggingface,zai-org/GLM-5.3-BF16
+glm-5-3-flash,epoch,GLM-5.3-Flash
 glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash
 glm-5-3-flash,models_dev,cline-pass/cline-pass/glm-5.3-flash
 glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
@@ -1470,6 +1472,7 @@ muse-spark-1-2,models_dev,abacus/muse-spark-1.2
 muse-spark-1-2,openrouter,meta/muse-spark-1.2
 muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
+muse-spark-1-3,epoch,Muse Spark 1.3
 muse-spark-1-3,models_dev,empiriolabs/muse-spark-1-3
 muse-spark-1-3,models_dev,kilo/meta/muse-spark-1.3
 muse-spark-1-3,openrouter,meta/muse-spark-1.3

@@ -6,9 +6,9 @@ event, `machine_corroborated` when two independent machine sources agreed
 or a platform reported its own event, else `unreviewed` (a single
 aggregator claim). Filter on it before treating a date as settled.
 
-- Models: 1201; events: 2000
-- Review status: human_reviewed 55, machine_corroborated 541, unreviewed 605
-- Event confidence: verified 899, inferred 1093, disputed 8
+- Models: 1202; events: 2003
+- Review status: human_reviewed 55, machine_corroborated 545, unreviewed 602
+- Event confidence: verified 904, inferred 1091, disputed 8
 
 ## By organization
 
@@ -18,14 +18,14 @@ aggregator claim). Filter on it before treating a date as settled.
 | OpenAI | 69 | 274 | 19 | 46 | 4 | 73% |
 | Google | 58 | 151 | 7 | 34 | 17 | 43% |
 | ByteDance | 52 | 64 | 0 | 23 | 29 | 38% |
-| Zhipu | 47 | 81 | 3 | 19 | 25 | 44% |
+| Zhipu | 47 | 82 | 3 | 21 | 23 | 46% |
 | RWKV | 46 | 46 | 0 | 4 | 42 | 9% |
-| Ant Group | 44 | 52 | 0 | 22 | 22 | 44% |
+| Ant Group | 44 | 52 | 0 | 23 | 21 | 48% |
 | EleutherAI | 43 | 43 | 0 | 1 | 42 | 2% |
 | AI2 | 42 | 42 | 0 | 9 | 33 | 21% |
 | DeepSeek | 42 | 82 | 3 | 25 | 14 | 59% |
 | TII | 40 | 40 | 0 | 2 | 38 | 5% |
-| Meta | 39 | 79 | 4 | 18 | 17 | 38% |
+| Meta | 39 | 80 | 4 | 18 | 17 | 38% |
 | Shanghai AI Lab | 39 | 39 | 0 | 12 | 27 | 31% |
 | Baidu | 37 | 42 | 0 | 28 | 9 | 67% |
 | Nous | 37 | 45 | 0 | 9 | 28 | 22% |
@@ -33,8 +33,8 @@ aggregator claim). Filter on it before treating a date as settled.
 | IBM | 33 | 38 | 0 | 4 | 29 | 11% |
 | Mistral | 33 | 75 | 3 | 20 | 10 | 41% |
 | NVIDIA | 31 | 44 | 0 | 12 | 19 | 27% |
+| Tencent | 30 | 40 | 1 | 12 | 17 | 40% |
 | OpenBMB | 29 | 29 | 0 | 5 | 24 | 17% |
-| Tencent | 29 | 39 | 1 | 12 | 16 | 41% |
 | Anthropic | 26 | 125 | 8 | 15 | 3 | 65% |
 | Liquid AI | 26 | 28 | 0 | 21 | 5 | 75% |
 | Microsoft | 24 | 35 | 0 | 13 | 11 | 40% |
@@ -42,7 +42,7 @@ aggregator claim). Filter on it before treating a date as settled.
 | 01.AI | 18 | 18 | 1 | 5 | 12 | 33% |
 | Stability | 17 | 17 | 0 | 8 | 9 | 47% |
 | Xiaomi | 17 | 22 | 0 | 14 | 3 | 64% |
-| Meituan | 16 | 20 | 0 | 11 | 5 | 55% |
+| Meituan | 16 | 20 | 0 | 12 | 4 | 60% |
 | MiniMax | 16 | 31 | 1 | 9 | 6 | 45% |
 | xAI | 16 | 41 | 2 | 9 | 5 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
@@ -60,10 +60,10 @@ aggregator claim). Filter on it before treating a date as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 945 | 304 | 639 | 2 |
+| weights_released | 946 | 309 | 635 | 2 |
 | platform_availability | 303 | 301 | 0 | 2 |
 | api_ga | 278 | 55 | 222 | 1 |
-| announced | 201 | 48 | 152 | 1 |
+| announced | 203 | 48 | 154 | 1 |
 | retired | 173 | 93 | 79 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
