@@ -931,6 +931,7 @@ granite-docling-258m,huggingface,ibm-granite/granite-docling-258M
 granite-guardian-3-3-8b,huggingface,ibm-granite/granite-guardian-3.3-8b
 granite-guardian-4-1-8b,huggingface,ibm-granite/granite-guardian-4.1-8b
 granite-swash-2b,huggingface,ibm-granite/granite-swash-2b
+granite-swash-3b-a600m,huggingface,ibm-granite/granite-swash-3b-a600m
 granite-vision-4-1-4b,huggingface,ibm-granite/granite-vision-4.1-4b
 grok-1,huggingface,xai-org/grok-1
 grok-3,epoch,Grok 3
@@ -1353,6 +1354,7 @@ minicpm4-mcp,huggingface,openbmb/MiniCPM4-MCP
 minicpm5-1b,huggingface,openbmb/MiniCPM5-1B
 minicpm5-1b-base,huggingface,openbmb/MiniCPM5-1B-Base
 minicpm5-1b-sft,huggingface,openbmb/MiniCPM5-1B-SFT
+minicpm5-2b,huggingface,openbmb/MiniCPM5-2B
 minimax-01,models_dev,nano-gpt/minimax/minimax-01
 minimax-01,openrouter,minimax/minimax-01
 minimax-m1,models_dev,nano-gpt/MiniMax-M1
@@ -1688,6 +1690,7 @@ pythia-410m,huggingface,EleutherAI/pythia-410m
 pythia-410m-deduped,huggingface,EleutherAI/pythia-410m-deduped
 pythia-410m-seed1,huggingface,EleutherAI/pythia-410m-seed1
 pythia-410m-seed2,huggingface,EleutherAI/pythia-410m-seed2
+pythia-410m-seed3,huggingface,EleutherAI/pythia-410m-seed3
 pythia-410m-seed7,huggingface,EleutherAI/pythia-410m-seed7
 pythia-410m-seed8,huggingface,EleutherAI/pythia-410m-seed8
 pythia-410m-seed9,huggingface,EleutherAI/pythia-410m-seed9

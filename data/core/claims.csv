@@ -1099,6 +1099,7 @@ granite-guardian-4-1-8b-weights_released-1,https://huggingface.co/ibm-granite/gr
 granite-guardian-4-1-8b-weights_released-1,https://web.archive.org/web/20260429/https://huggingface.co/ibm-granite/granite-guardian-4.1-8b,wayback,2026-04-29,day,first public capture,true,false
 granite-swash-2b-weights_released-1,https://huggingface.co/ibm-granite/granite-swash-2b,hf_hub,2026-07-01,day,hub repo created,true,false
 granite-swash-2b-weights_released-1,https://web.archive.org/web/20260824/https://huggingface.co/ibm-granite/granite-swash-2b,wayback,2026-08-24,day,first public capture,true,false
+granite-swash-3b-a600m-weights_released-1,https://huggingface.co/ibm-granite/granite-swash-3b-a600m,hf_hub,2026-07-01,day,hub repo created,true,false
 granite-vision-4-1-4b-weights_released-1,https://huggingface.co/ibm-granite/granite-vision-4.1-4b,hf_hub,2026-04-16,day,hub repo created,true,false
 granite-vision-4-1-4b-weights_released-1,https://web.archive.org/web/20260501/https://huggingface.co/ibm-granite/granite-vision-4.1-4b,wayback,2026-05-01,day,first public capture,true,false
 grok-1-weights_released-1,https://huggingface.co/xai-org/grok-1,hf_hub,2024-03-17,day,hub repo created,true,false
@@ -1695,6 +1696,7 @@ minicpm5-1b-sft-weights_released-1,https://huggingface.co/openbmb/MiniCPM5-1B-SF
 minicpm5-1b-sft-weights_released-1,https://web.archive.org/web/20260526/https://huggingface.co/openbmb/MiniCPM5-1B-SFT,wayback,2026-05-26,day,first public capture,true,false
 minicpm5-1b-weights_released-1,https://huggingface.co/openbmb/MiniCPM5-1B,hf_hub,2026-05-21,day,hub repo created,true,false
 minicpm5-1b-weights_released-1,https://web.archive.org/web/20260526/https://huggingface.co/openbmb/MiniCPM5-1B,wayback,2026-05-26,day,first public capture,true,false
+minicpm5-2b-weights_released-1,https://huggingface.co/openbmb/MiniCPM5-2B,hf_hub,2026-09-06,day,hub repo created,true,false
 minimax-01-api_ga-1,https://models.dev/api.json,api_metadata,2025-01-15,day,models.dev,false,false
 minimax-01-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-01-15,day,openrouter,false,true
 minimax-m1-40k-weights_released-1,https://huggingface.co/MiniMaxAI/MiniMax-M1-40k,hf_hub,2025-06-05,day,hub repo created,true,false
@@ -2081,6 +2083,7 @@ pythia-410m-seed1-weights_released-1,https://huggingface.co/EleutherAI/pythia-41
 pythia-410m-seed1-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-410m-seed1,wayback,2025-03-13,day,first public capture,true,false
 pythia-410m-seed2-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed2,hf_hub,2023-11-29,day,hub repo created,true,false
 pythia-410m-seed2-weights_released-1,https://web.archive.org/web/20250316/https://huggingface.co/EleutherAI/pythia-410m-seed2,wayback,2025-03-16,day,first public capture,true,false
+pythia-410m-seed3-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed3,hf_hub,2024-01-24,day,hub repo created,true,false
 pythia-410m-seed7-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed7,hf_hub,2024-02-04,day,hub repo created,true,false
 pythia-410m-seed7-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-410m-seed7,wayback,2025-03-13,day,first public capture,true,false
 pythia-410m-seed8-weights_released-1,https://huggingface.co/EleutherAI/pythia-410m-seed8,hf_hub,2024-02-04,day,hub repo created,true,false
