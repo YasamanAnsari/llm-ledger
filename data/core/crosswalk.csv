@@ -69,6 +69,7 @@ claude-2,text_surface_forms,claude ai
 claude-2,wikipedia,Claude (language model)
 claude-3-5-haiku,epoch,Claude 3.5 Haiku
 claude-3-5-haiku,models_dev,302ai/claude-3-5-haiku-20241022
+claude-3-5-haiku,models_dev,helicone/claude-3.5-haiku
 claude-3-5-sonnet,anthropic_api,claude-3-5-sonnet-20240620
 claude-3-5-sonnet,anthropic_api,claude-3-5-sonnet-20241022
 claude-3-5-sonnet,epoch,Claude 3.5 Sonnet
@@ -208,6 +209,7 @@ deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B
 deephermes-3-llama-3-8b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-8B-Preview
 deephermes-3-mistral-24b-preview,huggingface,NousResearch/DeepHermes-3-Mistral-24B-Preview
 deepseek-chat,models_dev,302ai/deepseek-chat
+deepseek-chat,models_dev,anyapi/deepseek/deepseek-chat
 deepseek-chat,openrouter,deepseek/deepseek-chat
 deepseek-chat-v3,models_dev,kilo/deepseek/deepseek-chat-v3-0324
 deepseek-chat-v3,openrouter,deepseek/deepseek-chat-v3-0324
@@ -475,6 +477,7 @@ gemini-3-1-pro-preview-customtools,models_dev,aihubmix/gemini-3.1-pro-preview-cu
 gemini-3-1-pro-preview-customtools,openrouter,google/gemini-3.1-pro-preview-customtools
 gemini-3-5-flash,epoch,Gemini 3.5 Flash
 gemini-3-5-flash,google_api,gemini-3.5-flash
+gemini-3-5-flash,models_dev,302ai/gemini-3.5-flash
 gemini-3-5-flash,models_dev,abacus/gemini-3.5-flash
 gemini-3-5-flash,openrouter,google/gemini-3.5-flash
 gemini-3-5-flash-lite,epoch,Gemini 3.5 Flash-Lite
@@ -487,10 +490,12 @@ gemini-3-6-flash,models_dev,venice/gemini-3-6-flash
 gemini-3-6-flash,openrouter,google/gemini-3.6-flash
 gemini-3-7-flash,epoch,Gemini 3.7 Flash
 gemini-3-7-flash,google_api,gemini-3.7-flash
+gemini-3-7-flash,models_dev,302ai/gemini-3.7-flash
 gemini-3-7-flash,models_dev,abacus/gemini-3.7-flash
 gemini-3-7-flash,openrouter,google/gemini-3.7-flash
 gemini-3-8-flash,epoch,Gemini 3.8 Flash
 gemini-3-8-flash,google_api,gemini-3.8-flash
+gemini-3-8-flash,models_dev,302ai/gemini-3.8-flash
 gemini-3-8-flash,models_dev,crossmodel/gemini/gemini-3.8-flash
 gemini-3-8-flash,models_dev,google/gemini-3.8-flash
 gemini-3-8-flash,openrouter,google/gemini-3.8-flash
@@ -796,6 +801,7 @@ gpt-5-4-nano,openai_api,gpt-5.4-nano-2026-03-17
 gpt-5-4-nano,openrouter,openai/gpt-5.4-nano
 gpt-5-4-pro,epoch,GPT-5.4 Pro
 gpt-5-4-pro,models_dev,302ai/gpt-5.4-pro
+gpt-5-4-pro,models_dev,azure/gpt-5.4-pro
 gpt-5-4-pro,openai_api,gpt-5.4-pro
 gpt-5-4-pro,openai_api,gpt-5.4-pro-2026-03-05
 gpt-5-4-pro,openrouter,openai/gpt-5.4-pro
@@ -812,21 +818,27 @@ gpt-5-5-pro,openai_api,gpt-5.5-pro
 gpt-5-5-pro,openai_api,gpt-5.5-pro-2026-04-23
 gpt-5-5-pro,openrouter,openai/gpt-5.5-pro
 gpt-5-6-luna,epoch,GPT-5.6 Luna
+gpt-5-6-luna,models_dev,302ai/gpt-5.6-luna
 gpt-5-6-luna,models_dev,abacus/gpt-5.6-luna
 gpt-5-6-luna,openai_api,gpt-5.6-luna
 gpt-5-6-luna,openrouter,openai/gpt-5.6-luna
+gpt-5-6-luna-pro,models_dev,302ai/gpt-5.6-luna-pro
 gpt-5-6-luna-pro,models_dev,kilo/openai/gpt-5.6-luna-pro
 gpt-5-6-luna-pro,openrouter,openai/gpt-5.6-luna-pro
 gpt-5-6-sol,epoch,GPT-5.6 Sol
+gpt-5-6-sol,models_dev,302ai/gpt-5.6-sol
 gpt-5-6-sol,models_dev,abacus/gpt-5.6-sol
 gpt-5-6-sol,openai_api,gpt-5.6-sol
 gpt-5-6-sol,openrouter,openai/gpt-5.6-sol
+gpt-5-6-sol-pro,models_dev,302ai/gpt-5.6-sol-pro
 gpt-5-6-sol-pro,models_dev,kilo/openai/gpt-5.6-sol-pro
 gpt-5-6-sol-pro,openrouter,openai/gpt-5.6-sol-pro
 gpt-5-6-terra,epoch,GPT-5.6 Terra
+gpt-5-6-terra,models_dev,302ai/gpt-5.6-terra
 gpt-5-6-terra,models_dev,abacus/gpt-5.6-terra
 gpt-5-6-terra,openai_api,gpt-5.6-terra
 gpt-5-6-terra,openrouter,openai/gpt-5.6-terra
+gpt-5-6-terra-pro,models_dev,302ai/gpt-5.6-terra-pro
 gpt-5-6-terra-pro,models_dev,kilo/openai/gpt-5.6-terra-pro
 gpt-5-6-terra-pro,openrouter,openai/gpt-5.6-terra-pro
 gpt-5-codex,epoch,GPT-5-Codex
@@ -952,6 +964,7 @@ grok-4-20,models_dev,ofox/x-ai/grok-4.20
 grok-4-20,openrouter,x-ai/grok-4.20
 grok-4-20-multi-agent,models_dev,xai/grok-4.20-multi-agent-0309
 grok-4-20-multi-agent,openrouter,x-ai/grok-4.20-multi-agent
+grok-4-3,models_dev,302ai/grok-4.3
 grok-4-3,models_dev,abacus/grok-4.3
 grok-4-3,openrouter,x-ai/grok-4.3
 grok-4-5,epoch,Grok 4.5
@@ -1372,6 +1385,7 @@ minimax-m2,openrouter,minimax/minimax-m2
 minimax-m2-1,epoch,MiniMax-M2.1
 minimax-m2-1,huggingface,MiniMaxAI/MiniMax-M2.1
 minimax-m2-1,models_dev,302ai/MiniMax-M2.1
+minimax-m2-1,models_dev,zenmux/minimax/minimax-m2.1
 minimax-m2-1,openrouter,minimax/minimax-m2.1
 minimax-m2-5,epoch,MiniMax-M2.5
 minimax-m2-5,huggingface,MiniMaxAI/MiniMax-M2.5
@@ -1379,6 +1393,7 @@ minimax-m2-5,models_dev,frogbot/minimax-m2-5
 minimax-m2-5,openrouter,minimax/minimax-m2.5
 minimax-m2-7,epoch,MiniMax-M2.7
 minimax-m2-7,huggingface,MiniMaxAI/MiniMax-M2.7
+minimax-m2-7,models_dev,302ai/MiniMax-M2.7
 minimax-m2-7,models_dev,abacus/MiniMaxAI/MiniMax-M2.7
 minimax-m2-7,openrouter,minimax/minimax-m2.7
 minimax-m2-her,models_dev,kilo/minimax/minimax-m2-her
@@ -1853,6 +1868,7 @@ qwen3-7-flash,openrouter,qwen/qwen3.7-flash
 qwen3-7-max,epoch,Qwen3.7-Max
 qwen3-7-max,models_dev,cline-pass/cline-pass/qwen3.7-max
 qwen3-7-max,openrouter,qwen/qwen3.7-max
+qwen3-7-plus,epoch,Qwen3.7-Plus
 qwen3-7-plus,models_dev,cline-pass/cline-pass/qwen3.7-plus
 qwen3-7-plus,openrouter,qwen/qwen3.7-plus
 qwen3-8-2-4t-a95b,epoch,Qwen3.8-2.4T-A95B
@@ -1865,6 +1881,7 @@ qwen3-8-27b,models_dev,iteracompute/iteracompute/qwen3.8-27b
 qwen3-8-27b,models_dev,venice/qwen-3-8-27b
 qwen3-8-27b,openrouter,qwen/qwen3.8-27b
 qwen3-8-27b-fp8,huggingface,Qwen/Qwen3.8-27B-FP8
+qwen3-8-flash,models_dev,302ai/qwen3.8-flash
 qwen3-8-flash,models_dev,alibaba/qwen3.8-flash
 qwen3-8-flash,openrouter,qwen/qwen3.8-flash
 qwen3-8-max,epoch,Qwen 3.8 Max
