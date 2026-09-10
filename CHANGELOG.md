@@ -17,6 +17,10 @@ Data corrections update rows in place; this file preserves the history.
 - `models_latest.csv` is now an 11-column reading view (dates, identity,
   developer, family, role, type, access, license family, review status);
   the sparse curated columns stay in `models.csv`.
+- Bedrock lifecycle puller follows AWS's 2026-09-07 page split: the dated
+  EOL table now lives on `model-lifecycle-legacy.html`. Models launched
+  after that date publish EOL only on model cards and via the
+  authenticated `ListFoundationModels` API, which we do not call yet.
 - models.dev release dates: when resellers disagree with no majority, the
   later date is kept (`match.consensus_date`). A lone reseller's earlier
   outlier had moved `gemini-3-pro` availability before its announcement

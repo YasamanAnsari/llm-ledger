@@ -10,7 +10,11 @@ and normalized to one shape under data/raw/<source>/<date>/normalized.csv:
                      header Model/Version/Lifecycle/Retirement date/...; the
                      Version is the vendor snapshot date. platform=azure.
 - bedrock_lifecycle: AWS Bedrock model lifecycle table; EOL date is the
-                     retirement. platform=bedrock.
+                     retirement. platform=bedrock. Since 2026-09-07 AWS
+                     keeps the dated table on the "legacy" page (models
+                     launched before that date); newer models publish
+                     EOL only on model cards and in the ListFoundationModels
+                     API's modelLifecycle field, which needs AWS credentials.
 - litellm:           model_prices_and_context_window.json entries carrying
                      `deprecation_date`, sourced by LiteLLM from provider
                      lifecycle pages. platform = litellm_provider (empty when
@@ -36,7 +40,7 @@ import fetch
 import schema
 
 AZURE_URL = "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
-BEDROCK_URL = "https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html"
+BEDROCK_URL = "https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html"
 LITELLM_URL = "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
 
 COLUMNS = ["source", "model_ref", "platform", "retire_date", "detail", "url"]
@@ -151,7 +155,7 @@ def parse_litellm(payload: bytes) -> list:
 
 SOURCES = (
     ("azure_lifecycle", AZURE_URL, "retirement-schedule.html", parse_azure),
-    ("bedrock_lifecycle", BEDROCK_URL, "model-lifecycle.html", parse_bedrock),
+    ("bedrock_lifecycle", BEDROCK_URL, "model-lifecycle-legacy.html", parse_bedrock),
     ("litellm", LITELLM_URL, "model_prices_and_context_window.json", parse_litellm),
 )
 
