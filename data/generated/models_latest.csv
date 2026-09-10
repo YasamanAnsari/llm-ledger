@@ -3,7 +3,7 @@ first_public_availability_date,first_availability_via,model_id,canonical_name,de
 2026-09-10,weights_released,ling-3-0-flash-vl,ling-3.0-flash-vl,ant-group,Ling-3.0,vision,vlm,open_weights,,machine_corroborated
 2026-09-08,weights_released,tiny-aya-base-32k,tiny-aya-base-32K,cohere,aya,base,llm,open_weights,open_weights_restricted,unreviewed
 2026-09-06,weights_released,minicpm5-2b,MiniCPM5-2B,openbmb,MiniCPM5,,llm,open_weights,osi_approved,machine_corroborated
-2026-09-06,weights_released,minicpm5-2b-dspark,MiniCPM5-2B-DSpark,openbmb,MiniCPM5-DSpark,,llm,open_weights,osi_approved,unreviewed
+2026-09-06,weights_released,minicpm5-2b-dspark,MiniCPM5-2B-DSpark,openbmb,MiniCPM5-DSpark,,llm,open_weights,osi_approved,machine_corroborated
 2026-09-04,api_ga,gpt-6-astra,GPT-6 Astra,openai,GPT-6 Astra,,vlm,api_only,,machine_corroborated
 2026-09-04,api_ga,gpt-6-astra-pro,gpt-6-astra-pro,openai,gpt-6-astra,pro,vlm,api_only,,machine_corroborated
 2026-09-04,api_ga,ling-3-0-flash-sante,ling-3.0-flash-sante:free,ant-group,ling-3.0-sante:free,mini,llm,api_only,,machine_corroborated
@@ -402,7 +402,7 @@ first_public_availability_date,first_availability_via,model_id,canonical_name,de
 2025-11-18,api_ga,gemini-3-pro,Gemini 3 Pro,google,Gemini 3,pro,vlm,api_only,,unreviewed
 2025-11-18,weights_released,hunyuanocr,HunyuanOCR,tencent,HunyuanOCR,,vlm,open_weights,open_weights_restricted,unreviewed
 2025-11-18,weights_released,olmo-3-7b-think,Olmo-3-7B-Think,allenai,Olmo-3,thinking,llm,open_weights,osi_approved,machine_corroborated
-2025-11-18,weights_released,olmo-3-7b-think-dpo,Olmo-3-7B-Think-DPO,allenai,Olmo-3-DPO,thinking,llm,open_weights,osi_approved,unreviewed
+2025-11-18,weights_released,olmo-3-7b-think-dpo,Olmo-3-7B-Think-DPO,allenai,Olmo-3-DPO,thinking,llm,open_weights,osi_approved,machine_corroborated
 2025-11-17,consumer_rollout,grok-4-1,Grok 4.1,xai,Grok 4,base,llm,api_only,proprietary,human_reviewed
 2025-11-17,weights_released,hermes-4-3-36b,Hermes-4.3-36B,nous-research,Hermes-4.3,,llm,open_weights,osi_approved,unreviewed
 2025-11-17,weights_released,olmo-3-7b-instruct-sft,Olmo-3-7B-Instruct-SFT,allenai,Olmo-3,instruct,llm,open_weights,osi_approved,unreviewed

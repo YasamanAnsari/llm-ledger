@@ -7,8 +7,8 @@ or a platform reported its own event, else `unreviewed` (a single
 aggregator claim). Filter on it before treating a date as settled.
 
 - Models: 1215; events: 2029
-- Review status: human_reviewed 55, machine_corroborated 548, unreviewed 612
-- Event confidence: verified 904, inferred 1117, disputed 8
+- Review status: human_reviewed 55, machine_corroborated 550, unreviewed 610
+- Event confidence: verified 906, inferred 1115, disputed 8
 
 ## By organization
 
@@ -21,7 +21,7 @@ aggregator claim). Filter on it before treating a date as settled.
 | Zhipu | 47 | 82 | 3 | 21 | 23 | 46% |
 | RWKV | 46 | 46 | 0 | 4 | 42 | 9% |
 | Ant Group | 45 | 54 | 0 | 24 | 21 | 48% |
-| AI2 | 44 | 44 | 0 | 9 | 35 | 20% |
+| AI2 | 44 | 44 | 0 | 10 | 34 | 23% |
 | EleutherAI | 44 | 44 | 0 | 1 | 43 | 2% |
 | DeepSeek | 43 | 86 | 3 | 26 | 14 | 57% |
 | TII | 40 | 40 | 0 | 2 | 38 | 5% |
@@ -33,7 +33,7 @@ aggregator claim). Filter on it before treating a date as settled.
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
 | Mistral | 33 | 75 | 3 | 20 | 10 | 41% |
 | NVIDIA | 31 | 45 | 0 | 12 | 19 | 27% |
-| OpenBMB | 31 | 31 | 0 | 6 | 25 | 19% |
+| OpenBMB | 31 | 31 | 0 | 7 | 24 | 23% |
 | Tencent | 30 | 40 | 1 | 12 | 17 | 40% |
 | Liquid AI | 27 | 29 | 0 | 21 | 6 | 72% |
 | Anthropic | 26 | 126 | 8 | 15 | 3 | 64% |
@@ -60,7 +60,7 @@ aggregator claim). Filter on it before treating a date as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 961 | 307 | 652 | 2 |
+| weights_released | 961 | 309 | 650 | 2 |
 | platform_availability | 305 | 303 | 0 | 2 |
 | api_ga | 278 | 55 | 222 | 1 |
 | announced | 212 | 48 | 163 | 1 |
