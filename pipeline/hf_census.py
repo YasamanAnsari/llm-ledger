@@ -140,7 +140,7 @@ def main() -> int:
             models_by_id[model_id] = {
                 "model_id": model_id,
                 "canonical_name": name,
-                "variant_role": "other",
+                "variant_role": "",  # build.py fills from the name
                 "developer_org_id": row["org_id"],
                 "model_type": "vlm" if row["pipeline_tag"] == "image-text-to-text" else "llm",
                 "access_type": "open_weights",

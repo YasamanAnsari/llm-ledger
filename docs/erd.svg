@@ -15,13 +15,13 @@
 <text x="1268" y="490" fill="#8b949e" font-size="12" text-anchor="middle">event_id</text>
 <text x="1205.0" y="446.56" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">1</text>
 <text x="1205.0" y="513.44" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">N</text>
-<line x1="600" y1="702" x2="600" y2="780" stroke="#c9d1d9" stroke-width="1.6" marker-end="url(#arr)"/>
-<text x="655" y="745" fill="#8b949e" font-size="12" text-anchor="middle">model_id</text>
-<text x="600.0" y="705.36" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+<line x1="600" y1="662" x2="600" y2="780" stroke="#c9d1d9" stroke-width="1.6" marker-end="url(#arr)"/>
+<text x="655" y="705" fill="#8b949e" font-size="12" text-anchor="middle">model_id</text>
+<text x="600.0" y="665.36" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">1</text>
 <text x="600.0" y="764.64" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">0..1</text>
-<line x1="870" y1="702" x2="1010" y2="780" stroke="#c9d1d9" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="870" y1="662" x2="1010" y2="780" stroke="#c9d1d9" stroke-width="1.6" marker-end="url(#arr)"/>
 <text x="955" y="730" fill="#8b949e" font-size="12" text-anchor="middle">model_id</text>
-<text x="886.8" y="705.36" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+<text x="886.8" y="665.36" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">1</text>
 <text x="993.2" y="764.64" fill="#e6edf3" font-size="12" font-weight="bold" text-anchor="middle">N</text>
 <path d="M 490,575 C 425,575 425,645 490,645" fill="none" stroke="#c9d1d9" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#arr)"/>
 <text x="415" y="585" fill="#8b949e" font-size="12" text-anchor="end">self-references ↺</text>
@@ -48,8 +48,8 @@
 <text x="64" y="432" fill="#e6edf3" font-size="12.5">is_active</text>
 <text x="64" y="452" fill="#e6edf3" font-size="12.5">epoch_org_name</text>
 <text x="64" y="472" fill="#e6edf3" font-size="12.5">notes</text>
-<rect x="490" y="110" width="440" height="592" rx="10" fill="none" stroke="#3fb950" stroke-width="7" stroke-opacity="0.18"/>
-<rect x="490" y="110" width="440" height="592" rx="10" fill="#111827" stroke="#3fb950" stroke-width="1.6"/>
+<rect x="490" y="110" width="440" height="552" rx="10" fill="none" stroke="#3fb950" stroke-width="7" stroke-opacity="0.18"/>
+<rect x="490" y="110" width="440" height="552" rx="10" fill="#111827" stroke="#3fb950" stroke-width="1.6"/>
 <path d="M 490,144 h 440" stroke="#3fb950" stroke-width="1" stroke-opacity="0.6"/>
 <text x="504" y="133" fill="#3fb950" font-size="15" font-weight="bold">models</text>
 <text x="916" y="133" fill="#8b949e" font-size="12" text-anchor="end">models.csv</text>
@@ -60,42 +60,40 @@
 <text x="504" y="222" fill="#e6edf3" font-size="12.5">variant_role</text>
 <text x="504" y="242" fill="#e6edf3" font-size="12.5">developer_org_id</text>
 <text x="916" y="242" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="262" fill="#e6edf3" font-size="12.5">developing_lab</text>
-<text x="504" y="282" fill="#e6edf3" font-size="12.5">co_developer_org_ids</text>
-<text x="504" y="302" fill="#e6edf3" font-size="12.5">model_type</text>
-<text x="504" y="322" fill="#e6edf3" font-size="12.5">access_type</text>
-<text x="504" y="342" fill="#e6edf3" font-size="12.5">license</text>
-<text x="504" y="362" fill="#e6edf3" font-size="12.5">license_family</text>
-<text x="504" y="382" fill="#e6edf3" font-size="12.5">license_has_usage_thresholds</text>
-<text x="504" y="402" fill="#e6edf3" font-size="12.5">license_requires_separate_agreement</text>
-<text x="504" y="422" fill="#e6edf3" font-size="12.5">is_derivative</text>
-<text x="504" y="442" fill="#e6edf3" font-size="12.5">derivative_type</text>
-<text x="504" y="462" fill="#e6edf3" font-size="12.5">base_model_id</text>
+<text x="504" y="262" fill="#e6edf3" font-size="12.5">model_type</text>
+<text x="504" y="282" fill="#e6edf3" font-size="12.5">access_type</text>
+<text x="504" y="302" fill="#e6edf3" font-size="12.5">license</text>
+<text x="504" y="322" fill="#e6edf3" font-size="12.5">license_family</text>
+<text x="504" y="342" fill="#e6edf3" font-size="12.5">license_has_usage_thresholds</text>
+<text x="504" y="362" fill="#e6edf3" font-size="12.5">license_requires_separate_agreement</text>
+<text x="504" y="382" fill="#e6edf3" font-size="12.5">is_derivative</text>
+<text x="504" y="402" fill="#e6edf3" font-size="12.5">derivative_type</text>
+<text x="504" y="422" fill="#e6edf3" font-size="12.5">base_model_id</text>
+<text x="916" y="422" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
+<text x="905" y="422" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
+<text x="504" y="442" fill="#e6edf3" font-size="12.5">parent_model_id</text>
+<text x="916" y="442" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
+<text x="905" y="442" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
+<text x="504" y="462" fill="#e6edf3" font-size="12.5">snapshot_of</text>
 <text x="916" y="462" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
 <text x="905" y="462" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="482" fill="#e6edf3" font-size="12.5">parent_model_id</text>
+<text x="504" y="482" fill="#e6edf3" font-size="12.5">predecessor_id</text>
 <text x="916" y="482" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
 <text x="905" y="482" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="502" fill="#e6edf3" font-size="12.5">snapshot_of</text>
+<text x="504" y="502" fill="#e6edf3" font-size="12.5">successor_id</text>
 <text x="916" y="502" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
 <text x="905" y="502" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="522" fill="#e6edf3" font-size="12.5">predecessor_id</text>
-<text x="916" y="522" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
-<text x="905" y="522" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="542" fill="#e6edf3" font-size="12.5">successor_id</text>
-<text x="916" y="542" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">↺</text>
-<text x="905" y="542" fill="#39c5cf" font-size="11" font-weight="bold" text-anchor="end">FK</text>
-<text x="504" y="562" fill="#e6edf3" font-size="12.5">first_public_availability_date</text>
+<text x="504" y="522" fill="#e6edf3" font-size="12.5">first_public_availability_date</text>
+<text x="916" y="522" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
+<text x="504" y="542" fill="#e6edf3" font-size="12.5">first_availability_via</text>
+<text x="916" y="542" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
+<text x="504" y="562" fill="#e6edf3" font-size="12.5">anticipation_days</text>
 <text x="916" y="562" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
-<text x="504" y="582" fill="#e6edf3" font-size="12.5">first_availability_via</text>
+<text x="504" y="582" fill="#e6edf3" font-size="12.5">review_status</text>
 <text x="916" y="582" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
-<text x="504" y="602" fill="#e6edf3" font-size="12.5">anticipation_days</text>
-<text x="916" y="602" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
-<text x="504" y="622" fill="#e6edf3" font-size="12.5">review_status</text>
-<text x="916" y="622" fill="#8b949e" font-size="11" font-weight="bold" text-anchor="end">drv</text>
-<text x="504" y="642" fill="#e6edf3" font-size="12.5">record_created</text>
-<text x="504" y="662" fill="#e6edf3" font-size="12.5">record_updated</text>
-<text x="504" y="682" fill="#e6edf3" font-size="12.5">notes</text>
+<text x="504" y="602" fill="#e6edf3" font-size="12.5">record_created</text>
+<text x="504" y="622" fill="#e6edf3" font-size="12.5">record_updated</text>
+<text x="504" y="642" fill="#e6edf3" font-size="12.5">notes</text>
 <rect x="1020" y="110" width="370" height="332" rx="10" fill="none" stroke="#d29922" stroke-width="7" stroke-opacity="0.18"/>
 <rect x="1020" y="110" width="370" height="332" rx="10" fill="#111827" stroke="#d29922" stroke-width="1.6"/>
 <path d="M 1020,144 h 370" stroke="#d29922" stroke-width="1" stroke-opacity="0.6"/>

@@ -17,9 +17,9 @@ and how sure we are. Epoch AI tracks how big a model is; we track
 
 **Newest releases first:**
 [`data/generated/models_latest.csv`](data/generated/models_latest.csv)
-is `models.csv` re-sorted with the first public availability date in the
-first column and the most recent releases at the top. It is rebuilt on
-every update.
+is a reading view of `models.csv`: the identifying columns, first public
+availability date first, most recent releases at the top. It is rebuilt
+on every update.
 
 ## How the data is shaped
 

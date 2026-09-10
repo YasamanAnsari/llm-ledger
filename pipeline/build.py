@@ -6,9 +6,11 @@
   region only, joined with models + attributes).
 - Generates data/generated/llm_ledger_enriched.csv (wide LEFT JOINed to the
   latest Epoch snapshot via the crosswalk; Epoch is CC-BY and credited).
-- Generates data/generated/models_latest.csv (models.csv columns with
-  first_public_availability_date moved first, newest releases at the top,
-  undated models last) for readers who want "what came out recently".
+- Generates data/generated/models_latest.csv, a reading view of models.csv:
+  the identifying columns with first_public_availability_date first, newest
+  releases at the top, undated models last.
+- Fills `family` and `variant_role` from the model name where no curator
+  has set them (schema.family_and_role).
 
 Everything here is deterministic: fixed column orders, PK-sorted rows, no
 run timestamps in output. `validate.py` rule 9 rebuilds these artifacts
@@ -21,6 +23,7 @@ import csv
 import io
 import re
 import sys
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -76,7 +79,7 @@ def _pick_first(rows: list, priority: tuple) -> dict:
 
 def compute_derived(models: list, events: list) -> list:
     """Return models rows with spec-section-5 derived columns recomputed."""
-    out = []
+    out, derived_family = [], []
     for row in models:
         row = dict(row)
         mid = row["model_id"]
@@ -111,7 +114,32 @@ def compute_derived(models: list, events: list) -> list:
                 anticipation = str(delta)
         row["anticipation_days"] = anticipation
         row["review_status"] = _review_status(events, mid)
+
+        # family / variant_role come from the name unless a person reviewed
+        # the model, in which case the curated values stand and only blanks
+        # are filled. Recomputing (rather than filling once) means a better
+        # parser reaches every machine row on the next build.
+        family, role = schema.family_and_role(row.get("canonical_name") or mid)
+        curated = row["review_status"] == "human_reviewed"
+        if not (curated and row.get("family")):
+            row["family"] = family
+            derived_family.append(row)
+        if not (curated and row.get("variant_role")):
+            row["variant_role"] = role
         out.append(row)
+
+    # Catalogs spell the same family differently ("Qwen3" / "qwen3"); the
+    # most common spelling wins for name-derived values, and a curated
+    # spelling beats any number of catalog ones.
+    derived_ids = {id(r) for r in derived_family}
+    spellings: dict = {}
+    for row in out:
+        if row["family"]:
+            weight = 1 if id(row) in derived_ids else len(out)
+            spellings.setdefault(row["family"].lower(), Counter())[row["family"]] += weight
+    for row in derived_family:
+        if row["family"]:
+            row["family"] = spellings[row["family"].lower()].most_common(1)[0][0]
     return out
 
 
@@ -178,8 +206,13 @@ def build_wide_bytes() -> bytes:
 
 
 LATEST_DATE_COLUMN = "first_public_availability_date"
-LATEST_COLUMNS = (LATEST_DATE_COLUMN,) + tuple(
-    c for c in MODELS.columns if c != LATEST_DATE_COLUMN)
+# A reading view: what someone scanning "what came out" wants to see. The
+# sparse curated columns (license flags, lineage) stay in models.csv.
+LATEST_COLUMNS = (
+    LATEST_DATE_COLUMN, "first_availability_via", "model_id", "canonical_name",
+    "developer_org_id", "family", "variant_role", "model_type", "access_type",
+    "license_family", "review_status",
+)
 
 
 def latest_first(models: list) -> list:

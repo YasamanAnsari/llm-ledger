@@ -65,7 +65,6 @@ EXPIRATION_SENTINEL_HORIZON_DAYS = 3 * 365
 
 IN_SCOPE_TYPES = {"llm", "vlm", "multimodal"}
 
-VARIANT_TOKENS = ("mini", "nano", "pro", "thinking", "instruct", "chat", "coder", "vision")
 
 
 def _read_matched() -> list:
@@ -131,14 +130,6 @@ def _infer_model_type(modalities_in: str, modalities_out: str) -> str:
     return "llm"
 
 
-def _variant_role(match_key: str) -> str:
-    tokens = match_key.split("-")
-    for token in VARIANT_TOKENS:
-        if token in tokens:
-            return token
-    return "other"
-
-
 def _parse(d: str) -> date | None:
     try:
         return date.fromisoformat(d)
@@ -202,7 +193,7 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     model = {
         "model_id": model_id,
         "canonical_name": row["epoch_model"] or row["md_model_key"].split("/")[-1] or row["or_id"],
-        "variant_role": _variant_role(row["match_key"]),
+        "variant_role": "",  # build.py fills from the name
         "developer_org_id": org_id,
         "model_type": model_type,
         "access_type": "open_weights" if open_weights else "api_only",

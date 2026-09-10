@@ -70,9 +70,6 @@ def check_rule1_keys(tables: dict) -> list:
         dev = row.get("developer_org_id", "")
         if dev not in org_ids:
             errors.append(f"rule1: model {row['model_id']} developer_org_id '{dev}' unresolved")
-        for co_dev in filter(None, row.get("co_developer_org_ids", "").split("|")):
-            if co_dev not in org_ids:
-                errors.append(f"rule1: model {row['model_id']} co-developer '{co_dev}' unresolved")
         for col in model_fk_cols:
             ref = row.get(col, "")
             if ref and ref not in model_ids:
@@ -255,7 +252,7 @@ def check_rule8_vocabularies(tables: dict) -> list:
 
     for row in tables["models"]:
         key = f"model {row['model_id']}"
-        check(key, "variant_role", row.get("variant_role", ""), VARIANT_ROLES, required=True)
+        check(key, "variant_role", row.get("variant_role", ""), VARIANT_ROLES)
         check(key, "model_type", row.get("model_type", ""), MODEL_TYPES, required=True)
         check(key, "access_type", row.get("access_type", ""), ACCESS_TYPES, required=True)
         check(key, "license_family", row.get("license_family", ""), LICENSE_FAMILIES)

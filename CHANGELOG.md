@@ -5,6 +5,18 @@ Data corrections update rows in place; this file preserves the history.
 
 ## 2026-09-10
 
+- `models.family` and `models.variant_role` are now read off the model
+  name for every model a person has not reviewed
+  (`schema.family_and_role`; 45 of 55 curated families reproduced, the
+  rest are version-collapsing conventions). `family` coverage 5% -> 100%.
+  `variant_role` loses the `other` placeholder and becomes optional: empty
+  means the name does not say (54% of rows); the rest carry one of nine
+  classes. Curated values on `human_reviewed` models stand.
+- Dropped `models.co_developer_org_ids` (never used) and
+  `models.developing_lab` (23 rows, all repeating the developer's name).
+- `models_latest.csv` is now an 11-column reading view (dates, identity,
+  developer, family, role, type, access, license family, review status);
+  the sparse curated columns stay in `models.csv`.
 - models.dev release dates: when resellers disagree with no majority, the
   later date is kept (`match.consensus_date`). A lone reseller's earlier
   outlier had moved `gemini-3-pro` availability before its announcement

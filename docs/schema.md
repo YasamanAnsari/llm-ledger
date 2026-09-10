@@ -49,11 +49,9 @@ we set `is_derivative`, `derivative_type`, and `base_model_id`.
 |---|---|---|
 | `model_id` | string PK | slug, stable, never reused (e.g. `openai-o3`) |
 | `canonical_name` | string | display name |
-| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3` |
-| `variant_role` | enum | `base, mini, nano, pro, thinking, instruct, chat, coder, vision, other` |
+| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3`. Read off the name (`schema.family_and_role`: size, role, tier, format and date tokens removed) unless the model is `human_reviewed`, whose curated value stands |
+| `variant_role` | enum nullable | `base, mini, nano, pro, thinking, instruct, chat, coder, vision`; same derivation as `family`; empty when the name does not say |
 | `developer_org_id` | FK to organizations | |
-| `developing_lab` | string nullable | sub-org team, e.g. "FAIR" |
-| `co_developer_org_ids` | pipe-list of FKs, nullable | |
 | `model_type` | enum | `llm, vlm, multimodal, image_gen, video_gen, audio, embedding` |
 | `access_type` | enum | `open_weights, api_only, consumer_only, internal, never_released` |
 | `license` | string | exact SPDX identifier or license name |
@@ -231,10 +229,13 @@ pre-staging and is withdrawn.
   Epoch AI snapshot via the crosswalk, carrying Epoch's scale columns and
   confidence labels plus a constant `epoch_snapshot_date` column. Epoch data
   is CC BY 4.0 and credited in LICENSE-DATA and the README.
-- `data/generated/models_latest.csv` - `models.csv` with
-  `first_public_availability_date` as the first column, sorted newest
-  first (ties by `model_id`, undated models last). A reading view; the
-  columns and values are identical to `models.csv`.
+- `data/generated/models_latest.csv` - a reading view of `models.csv`:
+  the identifying columns (`first_public_availability_date`,
+  `first_availability_via`, `model_id`, `canonical_name`,
+  `developer_org_id`, `family`, `variant_role`, `model_type`,
+  `access_type`, `license_family`, `review_status`), sorted newest first
+  (ties by `model_id`, undated models last). Values are identical to
+  `models.csv`; the sparse curated columns stay there.
 - `data/generated/coverage_report.md` - per-organization model and event
   counts with review status and verified share; read this before quoting
   the headline row counts.

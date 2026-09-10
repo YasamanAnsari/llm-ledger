@@ -28,7 +28,7 @@ def _model(**overrides):
     row = {
         "model_id": "acme-1", "canonical_name": "Acme 1", "family": "Acme",
         "variant_role": "base", "developer_org_id": "acme",
-        "developing_lab": "", "co_developer_org_ids": "", "model_type": "llm",
+        "model_type": "llm",
         "access_type": "api_only", "license": "proprietary",
         "license_family": "proprietary", "license_has_usage_thresholds": "false",
         "license_requires_separate_agreement": "false", "is_derivative": "false",

@@ -12,6 +12,7 @@ import csv
 import hashlib
 import json
 import io
+import re
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -30,9 +31,10 @@ ORG_TYPES = {"big_tech", "ai_lab", "startup", "academic", "government", "nonprof
 
 MODEL_TYPES = {"llm", "vlm", "multimodal", "image_gen", "video_gen", "audio", "embedding"}
 
+# Empty variant_role means the name does not say; there is no "other".
 VARIANT_ROLES = {
     "base", "mini", "nano", "pro", "thinking", "instruct", "chat", "coder",
-    "vision", "other",
+    "vision",
 }
 
 ACCESS_TYPES = {"open_weights", "api_only", "consumer_only", "internal", "never_released"}
@@ -135,7 +137,7 @@ MODELS = Table(
     filename="models.csv",
     columns=(
         "model_id", "canonical_name", "family", "variant_role",
-        "developer_org_id", "developing_lab", "co_developer_org_ids",
+        "developer_org_id",
         "model_type", "access_type", "license", "license_family",
         "license_has_usage_thresholds", "license_requires_separate_agreement",
         "is_derivative", "derivative_type", "base_model_id",
@@ -326,6 +328,51 @@ def derivative_from_name(model_id: str) -> str:
     if "merge" in tokens or "merged" in tokens:
         return "merge"
     return ""
+
+
+# Name tokens that classify a checkpoint's role, in priority order (a
+# "Phi-3-mini-instruct" is an instruct model of the mini size class).
+ROLE_TOKENS = (
+    ("instruct", {"instruct", "instruction", "it", "sft"}),
+    ("chat", {"chat"}),
+    ("coder", {"coder", "code"}),
+    ("thinking", {"thinking", "think", "reasoning", "reasoner"}),
+    ("vision", {"vision", "vl", "visual", "ocr"}),
+    ("base", {"base"}),
+    ("mini", {"mini", "flash", "haiku", "small", "tiny", "lite"}),
+    ("nano", {"nano", "pico"}),
+    ("pro", {"pro"}),
+)
+# Words that name a tier inside a family, not the family itself.
+_TIER_WORDS = {"opus", "sonnet", "large", "medium", "max", "ultra", "plus", "turbo",
+               "maverick", "scout", "behemoth"}
+_STRIP_WORDS = {w for _, words in ROLE_TOKENS for w in words} | _TIER_WORDS
+# Tokens that describe a build, not a family: sizes (72B, 8x7B, A22B,
+# 1.5B, 1T), context (128k), serving formats, release channels, dates.
+_BUILD_TOKEN = re.compile(
+    r"^(\d+(\.\d+)?[bmt]|\d+x\d+[bmt]|a\d+[bmt]|\d+k|fp\d+|int\d+|bf16|gguf|awq|gptq|hf|pth|"
+    r"preview|exp|latest|beta|\d{4}|\d{4}-?\d{2}-?\d{2}|\d{8})$", re.IGNORECASE)
+
+
+def family_and_role(name: str) -> tuple:
+    """(family, variant_role) read off a model name; either may be "".
+
+    Family is the name with size, role, format and date tokens removed,
+    keeping the original separators ("Qwen2.5-72B-Instruct" -> "Qwen2.5",
+    "Llama 3.1 405B Instruct" -> "Llama 3.1", "o3-mini" -> "o3"). Role is
+    the first ROLE_TOKENS class whose word appears; "" when none does.
+    """
+    name = re.sub(r"\s*\(.*?\)", "", name)  # "(2024-05-13 snapshot)"
+    parts = re.split(r"([\s_\-/]+)", name.strip())
+    tokens = parts[::2]
+    lowered = [t.lower() for t in tokens]
+    role = next((r for r, words in ROLE_TOKENS if words & set(lowered)), "")
+    kept = []
+    for i, (tok, low) in enumerate(zip(tokens, lowered)):
+        if low in _STRIP_WORDS or _BUILD_TOKEN.match(low):
+            continue
+        kept.append((parts[i * 2 - 1] if i and kept else "") + tok)
+    return "".join(kept).strip(" -_/+"), role
 
 
 def license_family(license_tag: str) -> str:
