@@ -291,6 +291,8 @@ deepseek-v3-2-exp,epoch,DeepSeek-V3.2-Exp
 deepseek-v3-2-exp,huggingface,deepseek-ai/DeepSeek-V3.2-Exp
 deepseek-v3-2-exp,models_dev,nano-gpt/deepseek-ai/deepseek-v3.2-exp
 deepseek-v3-2-exp,openrouter,deepseek/deepseek-v3.2-exp
+deepseek-v4-1-flash,models_dev,crossmodel/deepseek/deepseek-v4.1-flash
+deepseek-v4-1-flash,openrouter,deepseek/deepseek-v4.1-flash
 deepseek-v4-flash,epoch,DeepSeek V4 Flash 0731
 deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash
 deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731
@@ -910,6 +912,7 @@ granite-3-0-8b-instruct,huggingface,ibm-granite/granite-3.0-8b-instruct
 granite-3-1-2b-instruct,huggingface,ibm-granite/granite-3.1-2b-instruct
 granite-3-1-8b-instruct,huggingface,ibm-granite/granite-3.1-8b-instruct
 granite-3-2-2b-instruct,huggingface,ibm-granite/granite-3.2-2b-instruct
+granite-3-2-8b-instruct,huggingface,ibm-granite/granite-3.2-8b-instruct
 granite-3-3-2b-instruct,huggingface,ibm-granite/granite-3.3-2b-instruct
 granite-3-3-8b-instruct,huggingface,ibm-granite/granite-3.3-8b-instruct
 granite-3b-code-base-2k,huggingface,ibm-granite/granite-3b-code-base-2k
@@ -1129,6 +1132,7 @@ lfm2-5-2-6b,huggingface,LiquidAI/LFM2.5-2.6B
 lfm2-5-2-6b,models_dev,kilo/liquid/lfm-2.5-2.6b:free
 lfm2-5-2-6b,openrouter,liquid/lfm-2.5-2.6b:free
 lfm2-5-2-6b-base,huggingface,LiquidAI/LFM2.5-2.6B-Base
+lfm2-5-2-6b-dspark,huggingface,LiquidAI/LFM2.5-2.6B-DSpark
 lfm2-5-230m,huggingface,LiquidAI/LFM2.5-230M
 lfm2-5-230m-base,huggingface,LiquidAI/LFM2.5-230M-Base
 lfm2-5-350m,huggingface,LiquidAI/LFM2.5-350M
@@ -1168,6 +1172,9 @@ ling-3-0-flash-fp8,huggingface,inclusionAI/Ling-3.0-flash-fp8
 ling-3-0-flash-int4,huggingface,inclusionAI/Ling-3.0-flash-int4
 ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante:free
+ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL
+ling-3-0-flash-vl,models_dev,nano-gpt/inclusionai/ling-3.0-flash-vl
+ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
 ling-lite,huggingface,inclusionAI/Ling-lite
@@ -1368,6 +1375,7 @@ minicpm5-1b,huggingface,openbmb/MiniCPM5-1B
 minicpm5-1b-base,huggingface,openbmb/MiniCPM5-1B-Base
 minicpm5-1b-sft,huggingface,openbmb/MiniCPM5-1B-SFT
 minicpm5-2b,huggingface,openbmb/MiniCPM5-2B
+minicpm5-2b-dspark,huggingface,openbmb/MiniCPM5-2B-DSpark
 minimax-01,models_dev,nano-gpt/minimax/minimax-01
 minimax-01,openrouter,minimax/minimax-01
 minimax-m1,models_dev,nano-gpt/MiniMax-M1
@@ -1608,9 +1616,11 @@ olmo-3-7b-instruct-dpo,huggingface,allenai/Olmo-3-7B-Instruct-DPO
 olmo-3-7b-instruct-sft,huggingface,allenai/Olmo-3-7B-Instruct-SFT
 olmo-3-7b-rl-zero-mix,huggingface,allenai/Olmo-3-7B-RL-Zero-Mix
 olmo-3-7b-think,huggingface,allenai/Olmo-3-7B-Think
+olmo-3-7b-think-dpo,huggingface,allenai/Olmo-3-7B-Think-DPO
 olmo-3-7b-think-sft,huggingface,allenai/Olmo-3-7B-Think-SFT
 olmo-7b-hf,huggingface,allenai/OLMo-7B-hf
 olmo-hybrid-7b,huggingface,allenai/Olmo-Hybrid-7B
+olmo-hybrid-instruct-sft-7b,huggingface,allenai/Olmo-Hybrid-Instruct-SFT-7B
 olmocr-2-7b,huggingface,allenai/olmOCR-2-7B-1025
 olmocr-2-7b-1025-fp8,huggingface,allenai/olmOCR-2-7B-1025-FP8
 olmocr-7b-0225-preview,huggingface,allenai/olmOCR-7B-0225-preview
@@ -2135,9 +2145,12 @@ text-embedding-3-small,models_dev,azure/text-embedding-3-small
 text-embedding-ada-002,epoch,text-embedding-ada-002
 text-embedding-ada-002,models_dev,azure/text-embedding-ada-002
 tiny-aya-base,huggingface,CohereLabs/tiny-aya-base
+tiny-aya-base-32k,huggingface,CohereLabs/tiny-aya-base-32K
 tiny-aya-earth,huggingface,CohereLabs/tiny-aya-earth
+tiny-aya-en-thinker,huggingface,CohereLabs/tiny-aya-en-thinker
 tiny-aya-fire,huggingface,CohereLabs/tiny-aya-fire
 tiny-aya-global,huggingface,CohereLabs/tiny-aya-global
+tiny-aya-l2-thinker,huggingface,CohereLabs/tiny-aya-l2-thinker
 tiny-aya-water,huggingface,CohereLabs/tiny-aya-water
 tiny-random-stablelm-2,huggingface,stabilityai/tiny-random-stablelm-2
 truthfulqa-info-judge-llama2-7b,huggingface,allenai/truthfulqa-info-judge-llama2-7B
