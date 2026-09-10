@@ -134,15 +134,29 @@ def _read_normalized(source: str) -> list:
         return list(csv.DictReader(fh))
 
 
+def consensus_date(dates: list) -> str:
+    """Most common release date among providers; ties go to the LATER date.
+
+    A lone reseller's earlier outlier (a private-preview or copy-paste
+    date) would put availability before the announcement, which validation
+    rejects; a later outlier is at worst slightly late and still consistent.
+    """
+    counts = Counter(d for d in dates if d)
+    if not counts:
+        return ""
+    top = max(counts.values())
+    return max(d for d, n in counts.items() if n == top)
+
+
 def load_models_dev() -> dict:
     """Normalized key -> aggregated models.dev record.
 
     models.dev lists the same model under many reseller providers, all
-    claiming the model's release date. We keep the most common claimed date
-    (resellers occasionally carry Jan-1 placeholders; the mode across
-    providers is the curated value), count distinct providers, and prefer
-    the record whose provider matches the vendor prefix embedded in the
-    model key (first-party metadata).
+    claiming the model's release date. We keep the consensus date
+    (resellers occasionally carry Jan-1 placeholders or outliers; see
+    consensus_date), count distinct providers, and prefer the record whose
+    provider matches the vendor prefix embedded in the model key
+    (first-party metadata).
     """
     grouped: dict = {}
     for row in _read_normalized("models_dev"):
@@ -162,16 +176,10 @@ def load_models_dev() -> dict:
             if n["prefix"] and n["prefix"] in r["provider"]
         ] or pool
         norm, best = min(first_party, key=lambda item: item[1]["release_date"] or "9999")
-        date_counts = Counter(r["release_date"] for _, r in dated)
-        # Most common claim wins; ties break toward the earlier date.
-        mode_date = min(
-            (d for d, n in date_counts.items() if n == max(date_counts.values())),
-            default="",
-        )
         result[key] = {
             "norm": norm,
             "row": best,
-            "release_date": mode_date,
+            "release_date": consensus_date([r["release_date"] for _, r in dated]),
             "provider_count": len(entry["providers"]),
         }
     return result

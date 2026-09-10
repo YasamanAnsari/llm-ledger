@@ -3,6 +3,16 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-09-10
+
+- models.dev release dates: when resellers disagree with no majority, the
+  later date is kept (`match.consensus_date`). A lone reseller's earlier
+  outlier had moved `gemini-3-pro` availability before its announcement
+  and blocked the daily update.
+- reconcile withdraws a stale machine `announced` row whenever a catalog
+  moves availability in front of it, not only on runs that re-draft the
+  announcement.
+
 ## 2026-09-03
 
 - New generated view `data/generated/models_latest.csv`: `models.csv`

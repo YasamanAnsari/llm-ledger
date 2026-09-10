@@ -7,7 +7,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
-from match import key_variants, normalize_name
+from match import consensus_date, key_variants, normalize_name
+
+
+def test_consensus_date_majority_then_later_on_ties():
+    assert consensus_date(["2025-11-18", "2025-11-18", "2025-10-22"]) == "2025-11-18"
+    # Two resellers, one date each: the earlier outlier must not win.
+    assert consensus_date(["2025-10-22", "2025-11-18"]) == "2025-11-18"
+    assert consensus_date(["", "2025-11-18", ""]) == "2025-11-18"
+    assert consensus_date(["", ""]) == ""
 
 
 def test_prefix_and_separators():

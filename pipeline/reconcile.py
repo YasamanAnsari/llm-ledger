@@ -457,6 +457,12 @@ def main() -> int:
                 not_before=floor if ev["event_type"] in ("api_ga", "weights_released") else None,
                 next_id=schema.next_event_id)
             outcomes[outcome] += 1
+        # A catalog may move availability in front of an `announced` row
+        # drafted on an earlier run; the same rule applies to the stored row.
+        ceiling = earliest_availability(event_index, model_id)
+        if ceiling is not None and withdraw_machine_announced_after(
+                events, event_index, claims_by_event, model_id, ceiling):
+            outcomes["announced-after-availability"] += 1
 
     schema.write_table(ORGANIZATIONS, list(orgs_by_id.values()))
     schema.write_table(MODELS, list(models_by_id.values()))
