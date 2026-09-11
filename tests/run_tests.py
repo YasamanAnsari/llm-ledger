@@ -13,11 +13,12 @@ import test_confidence
 import test_match
 import test_nhlocal
 import test_reconcile
+import test_repair
 import test_schema
 import test_validate
 
 MODULES = (test_match, test_confidence, test_reconcile, test_validate, test_build,
-           test_nhlocal, test_schema)
+           test_nhlocal, test_schema, test_repair)
 
 
 def main() -> int:
