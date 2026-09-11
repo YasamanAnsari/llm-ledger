@@ -183,6 +183,22 @@ def _remove_event(events: list, index: dict, claims_by_event: dict, row: dict) -
     claims_by_event.pop(row["event_id"], None)
 
 
+def withdraw_machine_event(events: list, index: dict, claims_by_event: dict, model_id: str,
+                           event_type: str, platform: str = "", only_hosts=None) -> bool:
+    """Remove the machine row for (model, type, platform). With `only_hosts`,
+    remove it only when every claim label starts with one of those names,
+    so a row another source also supports is left alone."""
+    row = index.get((model_id, event_type, platform))
+    if row is None or not is_machine_row(row):
+        return False
+    if only_hosts is not None:
+        labels = [c["label"].split(" (")[0] for c in claims_by_event.get(row["event_id"], [])]
+        if not labels or any(label not in only_hosts for label in labels):
+            return False
+    _remove_event(events, index, claims_by_event, row)
+    return True
+
+
 def curated_announcement(index: dict, model_id: str):
     """Date of the human-curated `announced` event for a model, else None.
 

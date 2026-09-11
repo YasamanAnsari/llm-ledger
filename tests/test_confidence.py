@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import date
 
-from confidence import Claim, assess, upsert_machine_event
+from confidence import Claim, assess, upsert_machine_event, withdraw_machine_event
 
 MD = "https://models.dev/api.json"
 OR = "https://openrouter.ai/api/v1/models"
@@ -155,3 +155,15 @@ def test_hub_creation_outranks_an_archive_capture() -> None:
     early_capture = _c("2023-01-26", WB, source_type="wayback", bound=True)
     a = assess([hub, early_capture])
     assert (a.source_type, a.date, a.confidence) == ("hf_hub", "2023-02-09", "inferred")
+
+
+def test_withdraw_machine_event_only_when_every_claim_is_from_the_named_hosts() -> None:
+    events, index, claims = [], {}, {}
+    upsert_machine_event(events, index, claims, "m", "api_ga", [_c("2025-01-01", MD, label="models.dev")],
+                         TODAY, next_id=lambda *_: "m-api_ga-1")
+    assert withdraw_machine_event(events, index, claims, "m", "api_ga", only_hosts={"models.dev"})
+    assert not events and not claims
+    upsert_machine_event(events, index, claims, "m", "api_ga",
+                         [_c("2025-01-01", MD, label="models.dev"), _c("2025-01-02", OR, label="openrouter")],
+                         TODAY, next_id=lambda *_: "m-api_ga-1")
+    assert not withdraw_machine_event(events, index, claims, "m", "api_ga", only_hosts={"models.dev"})

@@ -20,6 +20,7 @@ def _cluster(**overrides) -> dict:
         "match_key": "acme-1", "sources": "models_dev|openrouter",
         "or_prefix": "openai", "md_provider": "openai", "md_model_key": "acme-1",
         "md_release_date": "2025-01-15", "md_open_weights": "false",
+        "md_release_dates": "openai:2025-01-15", "md_open_weights_votes": "openai:false",
         "md_modalities_in": "text", "md_modalities_out": "text",
         "or_id": "openai/acme-1", "or_created": "2025-01-16",
         "md_snapshot_date": "2026-09-01",
@@ -41,12 +42,12 @@ def test_closed_model_gets_api_ga_and_openrouter_platform_row() -> None:
 
 
 def test_open_weights_model_gets_weights_released_not_api_ga() -> None:
-    ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_open_weights="true"), TODAY))
+    ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_open_weights_votes="openai:true"), TODAY))
     assert "weights_released" in ev and "api_ga" not in ev
 
 
 def test_jan_first_is_a_year_precision_claim() -> None:
-    ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_release_date="2024-01-01"), TODAY))
+    ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_release_dates="openai:2024-01-01"), TODAY))
     assert ev["api_ga"]["claims"][0].precision == "year"
 
 
@@ -124,3 +125,14 @@ def test_image_generators_and_aliases_are_not_drafted() -> None:
         _cluster(match_key="gpt-audio", md_model_key="gpt-audio", or_id="openai/gpt-audio",
                  md_modalities_in="text|audio", md_modalities_out="text|audio"), TODAY)
     assert draft["model"]["model_type"] == "multimodal"
+
+
+def test_no_consensus_yields_no_stated_claim_and_a_review_row() -> None:
+    reconcile.pending_review.clear()
+    row = _cluster(md_release_dates="poe:2024-06-20|venice:2025-09-09|x:2024-10-22", or_created="")
+    draft = reconcile.reconcile_cluster(row, TODAY)
+    assert draft is None or not any(e["event_type"] == "api_ga" for e in draft["events"])
+    assert reconcile.pending_review and reconcile.pending_review[-1]["kind"] == "md_no_consensus"
+    # a single reseller still yields an inferred claim, labelled as such
+    ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_release_dates="poe:2025-01-15"), TODAY))
+    assert ev["api_ga"]["claims"][0].label == "models.dev (single)"

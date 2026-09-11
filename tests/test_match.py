@@ -7,15 +7,20 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
-from match import consensus_date, key_variants, normalize_name
+from match import key_variants, normalize_name
 
 
-def test_consensus_date_majority_then_later_on_ties():
-    assert consensus_date(["2025-11-18", "2025-11-18", "2025-10-22"]) == "2025-11-18"
-    # Two resellers, one date each: the earlier outlier must not win.
-    assert consensus_date(["2025-10-22", "2025-11-18"]) == "2025-11-18"
-    assert consensus_date(["", "2025-11-18", ""]) == "2025-11-18"
-    assert consensus_date(["", ""]) == ""
+def test_stated_release_prefers_vendor_then_majority_then_refuses_to_guess():
+    from match import open_weights_vote, stated_release
+    assert stated_release([("openai", "2025-04-16"), ("poe", "2025-04-20")], "openai") == ("2025-04-16", "first_party")
+    assert stated_release([("poe", "2025-11-18"), ("venice", "2025-11-18"), ("x", "2025-10-22")], "anthropic") == ("2025-11-18", "majority")
+    assert stated_release([("poe", "2024-06-20"), ("venice", "2025-09-09"), ("x", "2024-10-22")], "anthropic") == ("", "")
+    assert stated_release([("poe", "2025-10-22"), ("venice", "2025-11-18")], "google") == ("", "")
+    assert stated_release([("sap-ai-core", "2025-12-02")], "amazon") == ("2025-12-02", "single")
+    assert stated_release([("poe", ""), ("venice", "1970-01-01")], "x") == ("", "")
+    assert open_weights_vote([("deepseek", "false"), ("a", "true"), ("b", "true")], "deepseek") is False
+    assert open_weights_vote([("a", "true"), ("b", "true"), ("c", "false")], "zhipu") is True
+    assert open_weights_vote([("a", "true"), ("b", "false")], "mistral") is False
 
 
 def test_prefix_and_separators():

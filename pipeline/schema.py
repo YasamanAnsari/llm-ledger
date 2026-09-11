@@ -260,6 +260,32 @@ def load_core() -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Review queue (data/staging/review_queue.csv), shared by every producer
+# ---------------------------------------------------------------------------
+
+REVIEW_QUEUE_COLUMNS = ("kind", "left_source", "left_key", "right_source",
+                        "right_key", "score", "note")
+
+
+def merge_review_queue(rows: list, replace_kinds: tuple = ()) -> Path:
+    """Append rows to the review queue, deduplicating on (kind, left_key,
+    right_key); rows of `replace_kinds` are rewritten by this producer."""
+    STAGING_DIR.mkdir(parents=True, exist_ok=True)
+    path = STAGING_DIR / "review_queue.csv"
+    existing = []
+    if path.exists():
+        with path.open(newline="", encoding="utf-8") as fh:
+            existing = [r for r in csv.DictReader(fh) if r["kind"] not in replace_kinds]
+    seen = {(r["kind"], r["left_key"], r["right_key"]) for r in existing}
+    merged = existing + [r for r in rows if (r["kind"], r["left_key"], r["right_key"]) not in seen]
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(fh, fieldnames=REVIEW_QUEUE_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(sorted(merged, key=lambda r: (r["kind"], r["left_source"], r["left_key"])))
+    return path
+
+
+# ---------------------------------------------------------------------------
 # Raw snapshot helpers (Tier-1 pulls)
 # ---------------------------------------------------------------------------
 

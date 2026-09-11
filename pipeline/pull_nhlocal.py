@@ -68,22 +68,16 @@ def main() -> int:
     known_keys |= {matchmod.normalize_name(r["identifier"])["key"]
                    for r in tables["crosswalk"] if r["namespace"] == "text_surface_forms"}
 
-    queue = schema.STAGING_DIR / "review_queue.csv"
-    existing = []
-    if queue.exists():
-        with queue.open(newline="", encoding="utf-8") as fh:
-            existing = list(csv.DictReader(fh))
-    seen = {(r["kind"], r["left_key"]) for r in existing}
-
     new_rows = []
+    seen: set = set()
     for lead in leads:
         key = matchmod.normalize_name(lead["name"])["key"]
         if not key or key in known_keys:
             continue
         row_key = f"{lead['name']}@{lead['date']}"
-        if ("nhlocal_lead", row_key) in seen:
+        if row_key in seen:
             continue
-        seen.add(("nhlocal_lead", row_key))
+        seen.add(row_key)
         new_rows.append({
             "kind": "nhlocal_lead", "left_source": "nhlocal_aitimeline",
             "left_key": row_key, "right_source": "", "right_key": "",
@@ -93,10 +87,7 @@ def main() -> int:
         })
 
     if new_rows:
-        with queue.open("w", newline="", encoding="utf-8") as fh:
-            writer = csv.DictWriter(fh, fieldnames=QUEUE_COLUMNS, lineterminator="\n")
-            writer.writeheader()
-            writer.writerows(existing + new_rows)
+        schema.merge_review_queue(new_rows)
 
     print(f"pull_nhlocal: {len(leads)} timeline mentions, "
           f"{len(new_rows)} new lead(s) queued for review")

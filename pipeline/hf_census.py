@@ -276,19 +276,7 @@ def main() -> int:
     schema.write_table(CROSSWALK, tables["crosswalk"])
 
     if review_rows:
-        queue = schema.STAGING_DIR / "review_queue.csv"
-        columns = ["kind", "left_source", "left_key", "right_source",
-                   "right_key", "score", "note"]
-        existing = []
-        if queue.exists():
-            with queue.open(newline="", encoding="utf-8") as fh:
-                existing = list(csv.DictReader(fh))
-        seen = {tuple(sorted(r.items())) for r in existing}
-        merged = existing + [r for r in review_rows if tuple(sorted(r.items())) not in seen]
-        with queue.open("w", newline="", encoding="utf-8") as fh:
-            writer = csv.DictWriter(fh, fieldnames=columns, lineterminator="\n")
-            writer.writeheader()
-            writer.writerows(merged)
+        schema.merge_review_queue(review_rows)
 
     print(f"hf_census: swept {len(repos)} repos, {len(included)} pass inclusion, "
           f"{len(capped)} after per-org cap; +{added_models} models, "

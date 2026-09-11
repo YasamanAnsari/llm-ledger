@@ -7,8 +7,10 @@ metadata), and dated events. Every event date goes through
 `confidence.assess`, so the confidence column follows one policy:
 
 - models.dev `release_date` -> `weights_released` when models.dev marks the
-  model open-weights, else `api_ga`. A lone Jan-1 date is stored at
-  precision=year rather than pretending to be a day.
+  model open-weights, else `api_ga`. The date must come from the vendor's
+  own provider entry or a strict majority of resellers; disagreement with
+  no majority yields no claim and a review-queue row. A lone Jan-1 date is
+  stored at precision=year rather than pretending to be a day.
 - vendor `/models` APIs (OpenAI `created`, Anthropic `created_at`) ->
   `api_ga` claims. These are registry timestamps that precede the public
   launch by days, so they corroborate a catalog date but do not verify on
@@ -46,6 +48,7 @@ import schema
 from confidence import (
     Claim, curated_announcement, earliest_availability, flatten_claims,
     group_claims, upsert_machine_event, withdraw_machine_announced_after,
+    withdraw_machine_event,
 )
 from schema import ATTRIBUTES, CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
 
@@ -65,6 +68,15 @@ VENDOR_APIS = {
 EXPIRATION_SENTINEL_HORIZON_DAYS = 3 * 365
 
 IN_SCOPE_TYPES = {"llm", "vlm", "multimodal"}
+
+# Review rows collected during a run; main() writes them to the shared queue.
+pending_review: list = []
+
+
+def _queue(kind: str, left_key: str, note: str, right_key: str = "") -> None:
+    pending_review.append({"kind": kind, "left_source": "models_dev", "left_key": left_key,
+                           "right_source": "ledger", "right_key": right_key, "score": "",
+                           "note": note})
 
 
 
@@ -194,7 +206,9 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
 
     model_id = match.slug_for(row["match_key"], org_id)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    open_weights = row["md_open_weights"] == "true"
+    md_dates = match.parse_votes(row["md_release_dates"])
+    stated, basis = match.stated_release(md_dates, org_id)
+    open_weights = match.open_weights_vote(match.parse_votes(row["md_open_weights_votes"]), org_id)
     derivative = schema.derivative_from_name(model_id, org_id)
 
     model = {
@@ -236,18 +250,23 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     events = []
 
     # --- availability -------------------------------------------------------
-    # models.dev serializes a missing release date as the unix epoch.
-    md_date = None if row["md_release_date"] == "1970-01-01" else _parse(row["md_release_date"])
+    # The models.dev date needs the vendor's own entry or a reseller
+    # majority; when resellers disagree with no majority, no date is claimed
+    # and the case goes to review rather than into the ledger.
+    md_date = _parse(stated) if stated else None
+    if md_dates and not stated:
+        _queue("md_no_consensus", row["md_model_key"],
+               f"resellers disagree: {match.serialize_votes(match._votes(md_dates))}", model_id)
     if md_date and md_date > today:
         md_date = None  # future-dated aggregator claim: not loadable
     if md_date:
         # Jan-1 dates in models.dev are year placeholders.
-        precision = "year" if row["md_release_date"].endswith("-01-01") else "day"
+        precision = "year" if stated.endswith("-01-01") else "day"
         events.append({
             "event_type": "weights_released" if open_weights else "api_ga",
             "platform": "",
             "claims": [Claim(md_date, MODELS_DEV_URL, "api_metadata",
-                             precision=precision, label="models.dev")],
+                             precision=precision, label=f"models.dev ({basis})")],
         })
 
     vendor_dates = sorted(filter(None, (_parse(d) for d in vendor_rec["created"]))) if vendor_rec else []
@@ -462,6 +481,15 @@ def main() -> int:
         if ceiling is not None and withdraw_machine_announced_after(
                 events, event_index, claims_by_event, model_id, ceiling):
             outcomes["announced-after-availability"] += 1
+        # models.dev's open-weights verdict decides whether its date is a
+        # weights or an API event; a row of the other type that rests on
+        # models.dev alone is stale and goes.
+        md_types = {e["event_type"] for e in draft["events"]
+                    if any(c.label.startswith("models.dev") for c in e["claims"])}
+        for stale in {"api_ga", "weights_released"} - md_types:
+            if withdraw_machine_event(events, event_index, claims_by_event, model_id, stale,
+                                      only_hosts={"models.dev"}):
+                outcomes["stale-type-withdrawn"] += 1
 
     schema.write_table(ORGANIZATIONS, list(orgs_by_id.values()))
     schema.write_table(MODELS, list(models_by_id.values()))
@@ -470,6 +498,7 @@ def main() -> int:
     schema.write_table(CROSSWALK, tables["crosswalk"])
     schema.write_table(ATTRIBUTES, list(attributes_by_id.values()))
 
+    schema.merge_review_queue(pending_review, replace_kinds=("md_no_consensus",))
     report = write_disagreement_report(matched)
     print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
           f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "

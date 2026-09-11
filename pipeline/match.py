@@ -23,6 +23,7 @@ from rapidfuzz import fuzz, process
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import orgs_seed
 import schema
 
 AUTO_ACCEPT = 97.0
@@ -32,7 +33,8 @@ MATCHED_COLUMNS = [
     "match_key", "sources", "match_method", "vendor_prefix",
     "or_prefix", "md_prefix",
     "md_provider", "md_model_key", "md_release_date", "md_provider_count",
-    "md_open_weights", "md_modalities_in", "md_modalities_out",
+    "md_open_weights", "md_release_dates", "md_open_weights_votes",
+    "md_modalities_in", "md_modalities_out",
     "md_context_length", "md_max_output_tokens", "md_cost_input",
     "md_cost_output", "md_cost_cache_read", "md_reasoning", "md_tool_call",
     "md_knowledge_cutoff", "md_snapshot_date",
@@ -178,29 +180,70 @@ def _read_normalized(source: str) -> list:
         return list(csv.DictReader(fh))
 
 
-def consensus_date(dates: list) -> str:
-    """Most common release date among providers; ties go to the LATER date.
+def _votes(pairs: list) -> list:
+    """(provider, value) pairs that carry a value; the unix epoch is
+    models.dev's serialization of a missing date."""
+    return [(p, v) for p, v in pairs if v and v != "1970-01-01"]
 
-    A lone reseller's earlier outlier (a private-preview or copy-paste
-    date) would put availability before the announcement, which validation
-    rejects; a later outlier is at worst slightly late and still consistent.
+
+def stated_release(dates: list, org_id: str) -> tuple:
+    """(date, basis) for a model's release date across models.dev providers.
+
+    The vendor's own provider entry wins (`first_party`); else a strict
+    majority of resellers (`majority`); a lone reseller counts (`single`);
+    genuine disagreement yields no date at all ("", "") rather than a guess.
     """
-    counts = Counter(d for d in dates if d)
-    if not counts:
+    dated = _votes(dates)
+    if not dated:
+        return "", ""
+    own = [d for p, d in dated if orgs_seed.resolve_org(p) == org_id]
+    if own:
+        return Counter(own).most_common(1)[0][0], "first_party"
+    if len(dated) == 1:
+        return dated[0][1], "single"
+    counts = Counter(d for _, d in dated)
+    date, n = counts.most_common(1)[0]
+    if n * 2 > len(dated):
+        return date, "majority"
+    return "", ""
+
+
+def majority_date(dates: list) -> str:
+    """Strict-majority release date, else "" (for the disagreement report)."""
+    dated = _votes(dates)
+    if not dated:
         return ""
-    top = max(counts.values())
-    return max(d for d, n in counts.items() if n == top)
+    date, n = Counter(d for _, d in dated).most_common(1)[0]
+    return date if n * 2 > len(dated) else ""
+
+
+def open_weights_vote(votes: list, org_id: str) -> bool:
+    """Whether the weights are open: the vendor's own entry decides, else a
+    strict majority of resellers; a tie is not evidence of open weights."""
+    cast = [(p, v) for p, v in votes if v in ("true", "false")]
+    own = [v for p, v in cast if orgs_seed.resolve_org(p) == org_id]
+    if own:
+        return Counter(own).most_common(1)[0][0] == "true"
+    return sum(v == "true" for _, v in cast) * 2 > len(cast)
+
+
+def serialize_votes(pairs: list) -> str:
+    return "|".join(f"{p}:{v}" for p, v in sorted(pairs))
+
+
+def parse_votes(text: str) -> list:
+    return [tuple(item.rsplit(":", 1)) for item in text.split("|") if ":" in item]
 
 
 def load_models_dev() -> dict:
     """Normalized key -> aggregated models.dev record.
 
-    models.dev lists the same model under many reseller providers, all
-    claiming the model's release date. We keep the consensus date
-    (resellers occasionally carry Jan-1 placeholders or outliers; see
-    consensus_date), count distinct providers, and prefer the record whose
-    provider matches the vendor prefix embedded in the model key
-    (first-party metadata).
+    models.dev lists the same model under many reseller providers, each
+    claiming a release date and an open-weights flag. Every vote is kept
+    (`dates`, `ow_votes`) so reconcile can weigh them knowing the model's
+    vendor; `release_date` is the strict majority for the disagreement
+    report. The record whose provider matches the vendor prefix embedded in
+    the model key supplies the serving metadata.
     """
     grouped: dict = {}
     for row in _read_normalized("models_dev"):
@@ -223,8 +266,10 @@ def load_models_dev() -> dict:
         result[key] = {
             "norm": norm,
             "row": best,
-            "release_date": consensus_date([r["release_date"] for _, r in dated]),
+            "release_date": majority_date([(r["provider"], r["release_date"]) for _, r in dated]),
             "provider_count": len(entry["providers"]),
+            "dates": [(r["provider"], r["release_date"]) for _, r in entry["rows"]],
+            "ow_votes": [(r["provider"], r["open_weights"]) for _, r in entry["rows"]],
         }
     return result
 
@@ -372,6 +417,8 @@ def match() -> tuple:
             "md_release_date": md_rec["release_date"] if md_rec else "",
             "md_provider_count": md_rec["provider_count"] if md_rec else "",
             "md_open_weights": md_rec["row"]["open_weights"] if md_rec else "",
+            "md_release_dates": serialize_votes(md_rec["dates"]) if md_rec else "",
+            "md_open_weights_votes": serialize_votes(md_rec["ow_votes"]) if md_rec else "",
             "md_modalities_in": md_rec["row"]["modalities_in"] if md_rec else "",
             "md_modalities_out": md_rec["row"]["modalities_out"] if md_rec else "",
             "md_context_length": md_rec["row"]["context_length"] if md_rec else "",
@@ -404,21 +451,8 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(rows)
 
-    schema.STAGING_DIR.mkdir(parents=True, exist_ok=True)
-    queue_path = schema.STAGING_DIR / "review_queue.csv"
-    queue_columns = ["kind", "left_source", "left_key", "right_source",
-                     "right_key", "score", "note"]
-    # The queue is shared: this script owns only kind=fuzzy_match rows and
-    # must preserve rows appended by other pullers (hf_census, pull_nhlocal).
-    foreign_rows = []
-    if queue_path.exists():
-        with queue_path.open(newline="", encoding="utf-8") as fh:
-            foreign_rows = [r for r in csv.DictReader(fh) if r["kind"] != "fuzzy_match"]
-    with queue_path.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=queue_columns, lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(sorted(review_queue, key=lambda r: (r["left_source"], r["left_key"])))
-        writer.writerows(foreign_rows)
+    # The queue is shared: this script owns only kind=fuzzy_match rows.
+    schema.merge_review_queue(review_queue, replace_kinds=("fuzzy_match",))
 
     multi = sum(1 for r in rows if "|" in r["sources"])
     print(f"match: {len(rows)} clusters, {multi} matched across >=2 sources, "
