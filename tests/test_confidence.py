@@ -176,3 +176,15 @@ def test_a_capture_alone_cannot_date_a_pre_staged_repo() -> None:
     outcome = upsert_machine_event(events, index, claims, "m", "weights_released", [hub, capture],
                                    TODAY, not_before=date(2026, 2, 12), next_id=lambda *_: "x")
     assert outcome == "precreated" and not events and not claims
+
+
+def test_withdrawing_an_existing_row_is_reported_distinctly() -> None:
+    events, index, claims = [], {}, {}
+    hub = [_c("2026-06-13", HF, source_type="hf_hub", bound=True)]
+    assert upsert_machine_event(events, index, claims, "m", "weights_released", hub, TODAY,
+                                next_id=lambda *_: "m-weights_released-1") == "added"
+    assert upsert_machine_event(events, index, claims, "m", "weights_released", hub, TODAY,
+                                not_before=date(2026, 7, 16)) == "withdrawn"
+    assert not events
+    assert upsert_machine_event(events, index, claims, "m", "weights_released", hub, TODAY,
+                                not_before=date(2026, 7, 16), next_id=lambda *_: "x") == "precreated"

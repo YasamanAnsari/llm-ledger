@@ -246,9 +246,10 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
     New claims replace stored claims from the same host; claims from other
     hosts (contributed by other loaders) are kept, and the event is
     re-assessed from the full set. `verifier` names who signs a machine
-    corroboration (the project, or its agent). Returns "added", "updated", "unchanged",
-    "skipped" (curated row) or "precreated" (every claim predates
-    `not_before`; any stale machine row is withdrawn). `index` maps
+    corroboration (the project, or its agent). Returns "added", "updated",
+    "unchanged", "skipped" (curated row), "precreated" (every claim predates
+    `not_before` or only a crawl remains; nothing was on record) or
+    "withdrawn" (same, and the stale machine row was removed). `index` maps
     (model_id, event_type, platform) -> row; both it and `claims_by_event`
     are kept in sync.
     """
@@ -269,6 +270,7 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
         # above and cannot date it on its own. The repo was pre-staged.
         if existing is not None:
             _remove_event(events, index, claims_by_event, existing)
+            return "withdrawn"
         return "precreated"
     a = assess(merged)
     verified_by = verifier if a.verified_by == PROJECT_VERIFIER else a.verified_by
