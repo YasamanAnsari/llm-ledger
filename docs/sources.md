@@ -72,7 +72,12 @@ Appendix calendars. `source_type=published_paper`.
   about the OpenRouter listing, so it is a verified
   `platform_availability`, and nothing more.
 - models.dev `release_date` ending in `-01-01` is a year placeholder;
-  stored at `precision=year`.
+  stored at `precision=year` and never the headline date.
+- models.dev lists one model under many resellers with different dates.
+  The vendor's own provider entry wins; else a strict majority; else no
+  date is claimed (`md_no_consensus` in the review queue).
+- Catalog ids ending in `-latest`, and `deepseek-chat`-style aliases,
+  are pointers, not models, and are never loaded.
 - Wayback first captures lag by months for small repos.
 - Vendor blogs sometimes get a new date later. Check Wayback if it
   looks wrong.

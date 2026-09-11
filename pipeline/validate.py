@@ -325,8 +325,9 @@ def check_rule9_determinism(core_dir: Path) -> list:
         ("llm_ledger_wide.csv", build.build_wide_bytes),
         ("llm_ledger_enriched.csv", build.build_enriched_bytes),
         ("models_latest.csv", build.build_latest_bytes),
+        ("README.md", build.build_readme_bytes),
     ):
-        path = schema.GENERATED_DIR / filename
+        path = (schema.REPO_ROOT if filename == "README.md" else schema.GENERATED_DIR) / filename
         if not path.exists():
             continue  # artifact not built yet; nothing to compare
         try:
@@ -370,6 +371,16 @@ def check_rule12_identifier_uniqueness(tables: dict) -> list:
     return errors
 
 
+def check_rule13_access_type_events(tables: dict) -> list:
+    """An api_only model cannot have a weights_released event."""
+    errors = []
+    with_weights = {e["model_id"] for e in tables["events"] if e["event_type"] == "weights_released"}
+    for m in tables["models"]:
+        if m.get("access_type") == "api_only" and m["model_id"] in with_weights:
+            errors.append(f"rule13: model {m['model_id']} is api_only but has a weights_released event")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -400,6 +411,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     errors += check_rule10_no_epoch_columns(tables)
     errors += check_rule11_claims_coverage(tables)
     errors += check_rule12_identifier_uniqueness(tables)
+    errors += check_rule13_access_type_events(tables)
     return errors, warnings
 
 

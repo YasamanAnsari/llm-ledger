@@ -157,3 +157,21 @@ def test_headline_confidence_follows_the_winning_event():
     (row,) = compute_derived([_model()], events)
     assert row["first_availability_confidence"] == "verified"
     assert LATEST_COLUMNS.index("first_availability_confidence") == 2
+
+
+def test_readme_stats_block_is_replaced_in_place():
+    from build import README_STATS_END, README_STATS_START, render_readme
+    text = f"before\n{README_STATS_START}\nold\n{README_STATS_END}\nafter\n"
+    out = render_readme(text, "new stats")
+    assert out == f"before\n{README_STATS_START}\nnew stats\n{README_STATS_END}\nafter\n"
+
+
+def test_machine_row_with_weights_event_becomes_open_weights():
+    machine = {"model_id": "m1", "access_type": "api_only", "canonical_name": "M1"}
+    curated = {"model_id": "m2", "access_type": "api_only", "canonical_name": "M2"}
+    events = [_event("m1", "weights_released", "2025-01-01"),
+              _event("m2", "weights_released", "2025-01-01"),
+              _event("m2", "announced", "2025-01-01", confidence="verified") | {"source_type": "vendor_blog", "verified_by": "llm-ledger"}]
+    a, b = compute_derived([machine, curated], events)
+    assert a["access_type"] == "open_weights"
+    assert b["access_type"] == "api_only"          # curated rows are a human call

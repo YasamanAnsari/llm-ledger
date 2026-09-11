@@ -33,9 +33,24 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    predates the launch in 16 of 20 cases, by up to three weeks. So a Hub
    timestamp alone is `inferred`; it becomes `verified` only when the
    first public Wayback capture of the repo lands within two days of it.
+   A capture alone never dates anything, and a capture that predates the
+   repo's creation means the repo was deleted and recreated or renamed:
+   the capture is discarded and the case queued (`hf_recreated_repo`).
+   Only the publisher's own repo dates a release; a copy re-hosted under
+   another namespace is a lead (`hf_mirror_repo`).
 6. The same holds for vendor model registries: OpenAI's and Anthropic's
    `created` timestamps run 1-16 days ahead of the public launch. They
-   corroborate a catalog date; they do not set it.
+   corroborate a catalog date; they do not set it. Mistral's `created` is
+   the response time and is ignored entirely.
+7. Catalogs: a models.dev date is used when the vendor's own provider
+   entry states it, or a strict majority of resellers agree. A lone
+   reseller yields an `inferred` claim; resellers that disagree with no
+   majority yield no date and a `md_no_consensus` review row. A Jan-1
+   date is a year placeholder and never becomes the headline date.
+8. Time zones: dates derived from timestamps are UTC calendar dates;
+   dates read from a page are as printed. A launch late in the US day or
+   early in the Beijing day can land a day apart across sources; the
+   two-day bound window absorbs this.
 
 If the source only gives a month, we store the first of that month and
 `precision=month`. We do not invent a day. A catalog that says
@@ -46,11 +61,12 @@ If the source only gives a month, we store the first of that month and
 One policy in `pipeline/confidence.py` decides every machine-dated row;
 every claim it weighed is kept in `data/core/claims.csv`.
 
-- `verified`: a person opened a primary source (`verified_by` is their
-  name), or `verified_by=llm-ledger`: two independent machine sources
-  agree within 7 days (2 days when one is a bracketing timestamp), or a
-  platform reported its own event (OpenRouter's listing date, Azure's
-  retirement schedule).
+- `verified`: a curator read a primary source (`verified_by` is a
+  person's name, or `llm-ledger` / `llm-ledger-agent` when the project's
+  LLM-assisted curation did the reading), or `verified_by=llm-ledger`
+  on a machine row: two independent machine sources agree within 7 days
+  (2 days when one is a bracketing timestamp), or a platform reported its
+  own event (OpenRouter's listing date, Azure's retirement schedule).
 - `inferred`: one machine source, or sources that differ by 8-30 days.
 - `disputed`: two stated dates disagree by more than 30 days. The
   best-evidenced date stays in `date`; everything else is in `notes`.
@@ -58,9 +74,10 @@ every claim it weighed is kept in `data/core/claims.csv`.
   pre-staging (a repo or model object created ahead of launch) and is
   not loaded at all.
 
-Per model, `review_status` summarizes this: `human_reviewed`,
-`machine_corroborated`, or `unreviewed`. Most rows are `unreviewed`
-catalog drafts. See `data/generated/coverage_report.md` for the honest
+Per model, `review_status` summarizes this: `human_reviewed` (a named
+person), `curated` (the project read a primary page), `machine_corroborated`,
+or `unreviewed`. Most rows are `unreviewed` catalog drafts; no row is
+`human_reviewed` until a person signs one. See `data/generated/coverage_report.md` for the honest
 per-lab picture and `disagreement_report.md` for where catalogs differ.
 
 ## How we update

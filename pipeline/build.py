@@ -125,6 +125,12 @@ def compute_derived(models: list, events: list) -> list:
                 anticipation = str(delta)
         row["anticipation_days"] = anticipation
         row["review_status"] = _review_status(events, mid)
+        # A machine-drafted row whose weights turned up on the Hub is open
+        # weight whatever a reseller flag said; curated rows are a human call.
+        if (row["review_status"] in ("unreviewed", "machine_corroborated")
+                and row.get("access_type") == "api_only"
+                and _earliest_global(events, mid, {"weights_released"})):
+            row["access_type"] = "open_weights"
 
         # family / variant_role come from the name unless a person reviewed
         # the model, in which case the curated values stand and only blanks
@@ -299,6 +305,63 @@ def build_enriched_bytes() -> bytes:
     return _csv_bytes(columns, rows)
 
 
+README_STATS_START = "<!-- stats:start -->"
+README_STATS_END = "<!-- stats:end -->"
+
+
+def build_readme_stats(models: list, events: list, claims: list, organizations: list) -> str:
+    """The README's headline paragraph, computed so it can never go stale."""
+    n = len(models)
+    status = Counter(m["review_status"] for m in models)
+    conf = Counter(e["confidence"] for e in events)
+    verified = [e for e in events if e["confidence"] == "verified"]
+    platform_own = sum(1 for e in verified if e["event_type"] == "platform_availability")
+    by_person = sum(1 for e in verified
+                    if e["verified_by"] not in PROJECT_VERIFIERS and not is_machine_row(e))
+    cn = {o["org_id"] for o in organizations if o["country"] == "CN"}
+    open_w = [m for m in models if m["access_type"] == "open_weights"]
+    dated = sorted(m["first_public_availability_date"] for m in models
+                   if m["first_public_availability_date"])
+
+    def pct(part: int, whole: int) -> str:
+        return f"{100 * part / whole:.0f}%" if whole else "0%"
+
+    return "\n".join([
+        f"Exact counts as of the last rebuild: {n} models from "
+        f"{len({m['developer_org_id'] for m in models})} organizations, {len(events)} dated "
+        f"events, backed by {len(claims)} recorded claims. First availability runs from "
+        f"{dated[0]} to {dated[-1]}. {pct(len(open_w), n)} of the models are open-weight; "
+        f"Chinese labs make up {pct(sum(m['developer_org_id'] in cn for m in open_w), len(open_w))} "
+        f"of those.",
+        "",
+        f"Read the counts honestly. {status['human_reviewed']} models are `human_reviewed` (a "
+        f"named person checked a primary page); {pct(status['curated'], n)} are `curated` (the "
+        f"project read a primary page such as a vendor blog or deprecation table); "
+        f"{pct(status['machine_corroborated'], n)} are `machine_corroborated` (two independent "
+        f"sources agreed, or a platform reported its own listing); the remaining "
+        f"{pct(status['unreviewed'], n)} are `unreviewed` catalog drafts. "
+        f"{pct(conf['verified'], len(events))} of events are `verified`, and "
+        f"{pct(platform_own, len(verified))} of those are a platform's own listing timestamp; "
+        f"{by_person} were checked by a named person.",
+    ])
+
+
+def render_readme(text: str, stats: str) -> str:
+    """Replace whatever sits between the README stats markers."""
+    start = text.index(README_STATS_START) + len(README_STATS_START)
+    end = text.index(README_STATS_END)
+    return text[:start] + "\n" + stats + "\n" + text[end:]
+
+
+def build_readme_bytes() -> bytes:
+    readme = schema.REPO_ROOT / "README.md"
+    stats = build_readme_stats(
+        compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS)),
+        schema.read_table(EVENTS), schema.read_table(schema.CLAIMS),
+        schema.read_table(schema.ORGANIZATIONS))
+    return render_readme(readme.read_text(encoding="utf-8"), stats).encode("utf-8")
+
+
 def build_coverage_report(models: list, events: list, organizations: list) -> str:
     """Per-organization coverage and confidence, so nobody reads the row
     count as the number of checked dates."""
@@ -375,6 +438,8 @@ def main() -> int:
         build_coverage_report(models, events, schema.read_table(schema.ORGANIZATIONS)),
         encoding="utf-8")
     print("build: wrote data/generated/coverage_report.md")
+    (schema.REPO_ROOT / "README.md").write_bytes(build_readme_bytes())
+    print("build: refreshed the README stats block")
 
     try:
         payload = build_enriched_bytes()

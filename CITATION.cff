@@ -7,8 +7,8 @@ authors:
     given-names: "Yasaman"
 license: CC-BY-4.0
 repository-code: "https://github.com/YasamanAnsari/llm-ledger"
-version: "2026.09"
-date-released: "2026-09-01"
+version: "2026.10"
+date-released: "2026-09-11"
 keywords:
   - large language models
   - release dates

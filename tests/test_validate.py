@@ -232,3 +232,11 @@ def test_rule12_one_model_per_machine_identifier():
     wiki = [{"model_id": "acme-1", "namespace": "wikipedia", "identifier": "Acme"},
             {"model_id": "acme-2", "namespace": "wikipedia", "identifier": "Acme"}]
     assert not any("rule12" in e for e in _errors(_tables(models=models, events=events, crosswalk=wiki)))
+
+
+def test_rule13_api_only_cannot_have_weights():
+    bad = _tables(events=[_event(event_id="acme-1-weights_released-1", event_type="weights_released")])
+    assert any("rule13" in e for e in _errors(bad))
+    ok = _tables(models=[_model(access_type="open_weights")],
+                 events=[_event(event_id="acme-1-weights_released-1", event_type="weights_released")])
+    assert not any("rule13" in e for e in _errors(ok))

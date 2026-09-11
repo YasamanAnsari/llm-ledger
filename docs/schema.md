@@ -28,6 +28,22 @@ A named trained checkpoint from a lab. GGUF, LoRA, and merges stay
 out unless the thing is famous on its own. If we keep a derivative,
 we set `is_derivative`, `derivative_type`, and `base_model_id`.
 
+Also out, enforced by the loaders (`match.is_alias_key`,
+`match.is_out_of_scope_key`, `hf_census.classify`):
+
+- packaging of the same weights: FP8, BF16, INT4/INT8, `-hf` and
+  `-paddle` conversions collapse onto the base id (`match.FORMAT_TOKENS`);
+- API aliases such as `-latest` or `deepseek-chat`, which point at
+  whatever the vendor serves today;
+- image, video and music generators, embeddings, rerankers, speech
+  utilities, moderation and reward models, named as such;
+- another lab's weights re-hosted under a different namespace: a lead in
+  the review queue, never a release by the re-hoster. A name that carries
+  another lab's family token under the publisher's own name is a
+  `finetune` derivative.
+
+A base checkpoint and its instruct or chat checkpoint are two models.
+
 ## organizations.csv
 
 | Column | Type | Rules |
@@ -49,7 +65,7 @@ we set `is_derivative`, `derivative_type`, and `base_model_id`.
 |---|---|---|
 | `model_id` | string PK | slug, stable, never reused (e.g. `openai-o3`) |
 | `canonical_name` | string | display name |
-| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3`. Read off the name (`schema.family_and_role`: size, role, tier, format and date tokens removed) unless the model is `human_reviewed`, whose curated value stands |
+| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3`. Read off the name (`schema.family_and_role`: size, role, tier, format and date tokens removed) unless the model is `curated` or `human_reviewed`, whose curated value stands |
 | `variant_role` | enum nullable | `base, mini, nano, pro, thinking, instruct, chat, coder, vision`; same derivation as `family`; empty when the name does not say |
 | `developer_org_id` | FK to organizations | |
 | `model_type` | enum | `llm, vlm, multimodal, image_gen, video_gen, audio, embedding` |
@@ -68,7 +84,7 @@ we set `is_derivative`, `derivative_type`, and `base_model_id`.
 | `first_availability_via` | enum DERIVED | which event won |
 | `first_availability_confidence` | enum DERIVED | `confidence` of the event that set the date; empty when undated |
 | `anticipation_days` | int DERIVED | first availability minus announced |
-| `review_status` | enum DERIVED | `human_reviewed` (a person verified at least one event), `machine_corroborated` (a machine event reached `verified`), `unreviewed` (single-source machine claims only) |
+| `review_status` | enum DERIVED | `human_reviewed` (a named person verified a curated event), `curated` (the project or its LLM agent verified an event read from a primary page), `machine_corroborated` (a machine event reached `verified`), `unreviewed` (single-source machine claims only) |
 | `record_created` / `record_updated` | ISO datetime | |
 | `notes` | string | |
 
@@ -86,12 +102,12 @@ dates as settled; most rows are `unreviewed` catalog drafts.
 | `date` | ISO date | first day of period when precision is coarser than day |
 | `precision` | enum | `day, month, quarter, year` |
 | `region` | string | default `global`; else ISO country or `EU`/`US`/`CN` |
-| `platform` | string | required on `platform_availability`; optional elsewhere to scope an event to one host (a `retired` on `azure` is not a retirement at OpenAI). Empty means the vendor's own channel. |
+| `platform` | enum nullable | one of `schema.PLATFORMS` (`openrouter, azure, bedrock, vertex, together, groq, fireworks, deepinfra, sagemaker, github_models, huggingface`); required on `platform_availability`; optional elsewhere to scope an event to one host (a `retired` on `azure` is not a retirement at OpenAI). Empty means the vendor's own channel. |
 | `detail` | string nullable | event-type-specific, see below |
 | `source_url` | URL | REQUIRED; the page actually consulted, or the chosen source when several claims back the row (see `claims.csv`) |
 | `source_type` | enum | `vendor_blog, vendor_docs, vendor_changelog, deprecation_page, system_card, arxiv, hf_hub, github, modelscope, api_metadata, lifecycle_table, news, wikipedia, community_timeline, published_paper, wayback` |
 | `confidence` | enum | `verified, inferred, disputed` (see confidence semantics) |
-| `verified_by` | string | required when `confidence=verified`; a person's name, or `llm-ledger` for a machine corroboration |
+| `verified_by` | string | required when `confidence=verified`; a person's name, `llm-ledger` for a machine corroboration or a project-curated row, or `llm-ledger-agent` when the project's LLM agent read the page |
 | `verified_date` | date | required when `confidence=verified` |
 | `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
 
@@ -223,8 +239,17 @@ Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,
 vendor model-registry `created`, first Wayback capture) never set the date
 when a stated date exists, never count as verified alone, and never
 dispute: a repo created early or crawled late is lag, not disagreement.
-Any machine claim dated before a curated `announced` event is private
+Among bounds, the artifact's own timestamp outranks a crawl of it, and a
+capture alone never dates a release. A capture that predates the repo's
+creation belongs to a recreated or renamed repo and is discarded. Any
+machine claim dated before a curated `announced` event is private
 pre-staging and is withdrawn.
+
+models.dev lists one model under many resellers. Its date is used only
+when the vendor's own provider entry states it, or a strict majority of
+resellers agree; a lone reseller yields an `inferred` claim labelled
+`single`; disagreement with no majority yields no claim and a
+`md_no_consensus` review-queue row.
 
 ## Generated artifacts (never hand-edited)
 
@@ -269,6 +294,17 @@ pre-staging and is withdrawn.
 7. `snapshot_of` / `base_model_id` / `parent_model_id` links are acyclic.
 8. Controlled-vocabulary columns contain only allowed values; `platform` is
    present on every `platform_availability` row; `review_status` is set.
-9. Wide/enriched artifacts regenerate byte-identically from core tables.
+9. Wide/enriched artifacts, `models_latest.csv`, the coverage and
+   sensitivity reports and the README stats block regenerate
+   byte-identically from core tables.
 10. No Epoch-domain numeric columns (parameters, compute, dataset size,
     training cost) exist in any core table.
+11. Every event whose `source_type` is machine-owned (`hf_hub`,
+    `api_metadata`, `lifecycle_table`) has at least one row in
+    `claims.csv`; no other event has any.
+12. A `(namespace, identifier)` in a machine namespace (everything but
+    `wikipedia`, `text_surface_forms`, `lmarena`) maps to one model, or to
+    a model and models whose `snapshot_of` or `parent_model_id` is that
+    model.
+13. `access_type=api_only` is incompatible with a `weights_released`
+    event; `build.py` sets `open_weights` on machine rows that gain one.

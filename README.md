@@ -60,9 +60,12 @@ Columns and allowed values: [`docs/schema.md`](docs/schema.md).
 
 A date enters the ledger one of two ways.
 
-A person opens the primary page, a vendor blog post or a deprecation
-table, reads the date, and writes the row with their own name in
-`verified_by`. Scripts never touch those rows.
+A curator opens the primary page, a vendor blog post or a deprecation
+table, reads the date, and writes the row. `verified_by` records who:
+a person's name, or `llm-ledger` / `llm-ledger-agent` when the
+project's LLM-assisted curation did the reading. Scripts never touch
+those rows. Today no row carries a person's name; the `curated` status
+below says exactly that.
 
 Or a script pulls it from a catalog: Hugging Face, models.dev,
 OpenRouter, the vendors' own model lists, Azure and Bedrock lifecycle
@@ -94,6 +97,19 @@ Operating rules that fall out of this:
 - A name on Wikipedia or a community timeline is a lead, not a fact. It
   sits in `data/staging/review_queue.csv` until a vendor page, Hub
   timestamp, or arXiv v1 backs it.
+- A repo re-hosted under another lab's namespace is a lead, not a
+  release. Packaging suffixes (FP8, BF16, INT4, an `-hf` conversion)
+  never create a second model. API aliases (`-latest`, `deepseek-chat`)
+  are not models. Image, video and music generators, embeddings and
+  rerankers are out of scope by name.
+- A models.dev date needs the vendor's own provider entry or a majority
+  of resellers. When resellers disagree with no majority, no date is
+  claimed and the case goes to the review queue.
+- Dates read from timestamps (Hub `createdAt`, OpenRouter `created`,
+  vendor registries) are UTC calendar dates; dates read from a page are
+  as the page prints them. Expect one-day offsets for launches late in
+  the US day or early in the Beijing day; the confidence policy allows
+  two days for exactly this reason.
 
 ## Using it
 
@@ -110,9 +126,11 @@ print(gap.describe())
 
 For research:
 
-- **Filter first.** `models.review_status in {human_reviewed,
+- **Filter first.** `models.review_status in {human_reviewed, curated,
   machine_corroborated}` and `events.confidence == "verified"` is the
-  defensible sample. The rest is a good lead list, not a fact list.
+  defensible sample; `first_availability_confidence` says how the
+  headline date was reached. Only `human_reviewed` means a named person
+  checked a page. The rest is a good lead list, not a fact list.
 - **Pick the event that answers your question.** Adoption shocks:
   `api_ga` for developers, `weights_released` for the open ecosystem,
   `consumer_rollout` / `free_tier` for the public. `announced` is when
@@ -127,20 +145,16 @@ For research:
 
 ## How much is in it
 
-As of September 2026: about 1,200 models from 41 organizations, about
-2,000 dated events, backed by about 2,000 recorded claims. First
-availability runs from 2021-11-18 (GPT-3 API) to the present. Roughly
-three quarters of the models are open-weight; Chinese labs are about
-half of those.
+<!-- stats:start -->
+Exact counts as of the last rebuild: 1135 models from 41 organizations, 1872 dated events, backed by 2558 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 82% of the models are open-weight; Chinese labs make up 49% of those.
 
-Read the counts honestly. Only about one model in twenty is
-`human_reviewed`; a quarter are `machine_corroborated` (two independent
-sources agreed, or a platform reported its own listing); the rest are
-`unreviewed` catalog drafts. About a third of events are `verified`, and
-nearly half of those are OpenRouter's own listing timestamps. A couple
-of hundred events were checked by a person. Exact, current numbers are
-in [`coverage_report.md`](data/generated/coverage_report.md), rebuilt
-with the data.
+Read the counts honestly. 0 models are `human_reviewed` (a named person checked a primary page); 5% are `curated` (the project read a primary page such as a vendor blog or deprecation table); 43% are `machine_corroborated` (two independent sources agreed, or a platform reported its own listing); the remaining 53% are `unreviewed` catalog drafts. 45% of events are `verified`, and 33% of those are a platform's own listing timestamp; 0 were checked by a named person.
+<!-- stats:end -->
+
+Per-lab detail is in [`coverage_report.md`](data/generated/coverage_report.md),
+rebuilt with the data. The paragraph above is written by `pipeline/build.py`
+on every rebuild and checked by validation, so it cannot drift from the
+tables.
 
 ## What is in and what is out
 
@@ -169,7 +183,10 @@ make all   # pull match reconcile census lifecycle build validate test
 ```
 
 Generated files rebuild the same way every time. We do not commit raw
-third-party dumps, only their URL and hash.
+third-party dumps, only their URL and hash, so a fresh clone must run
+`make pull` before the loaders; loaders refuse a snapshot older than
+three days unless `LEDGER_ALLOW_STALE=1` is set. A failed puller fails
+the run: nothing is committed on a day a source could not be read.
 
 ## More
 
