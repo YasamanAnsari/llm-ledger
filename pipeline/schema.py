@@ -10,8 +10,9 @@ from __future__ import annotations
 
 import csv
 import hashlib
-import json
 import io
+import json
+import os
 import re
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
@@ -307,15 +308,37 @@ def snapshot_dir(source: str, day: str = "") -> Path:
     return d
 
 
-def latest_snapshot_dir(source: str) -> Path:
-    """Most recent dated snapshot directory for a source; raises if none."""
+MAX_SNAPSHOT_AGE_DAYS = 3
+
+
+class StaleSnapshotError(RuntimeError):
+    """The newest usable snapshot is older than the loader accepts."""
+
+
+def snapshot_file(source: str, filename: str, max_age_days=MAX_SNAPSHOT_AGE_DAYS,
+                  today=None) -> Path:
+    """Newest dated snapshot of `source` that actually contains `filename`.
+
+    A day whose pull failed leaves a manifest and no payload; it is skipped.
+    A snapshot older than `max_age_days` raises StaleSnapshotError unless
+    LEDGER_ALLOW_STALE is set; pass max_age_days=None for sources whose
+    facts do not age (first Archive captures).
+    """
     base = RAW_DIR / source
     if not base.exists():
         raise FileNotFoundError(f"no snapshots for source '{source}' under {base}")
-    dirs = sorted(p for p in base.iterdir() if p.is_dir())
-    if not dirs:
-        raise FileNotFoundError(f"no dated snapshot directories under {base}")
-    return dirs[-1]
+    for d in sorted((p for p in base.iterdir() if p.is_dir()), reverse=True):
+        path = d / filename
+        if not path.exists():
+            continue
+        if max_age_days is not None and not os.environ.get("LEDGER_ALLOW_STALE"):
+            age = ((today or datetime.now(timezone.utc).date()) - date.fromisoformat(d.name)).days
+            if age > max_age_days:
+                raise StaleSnapshotError(
+                    f"{source}/{d.name}/{filename} is {age} days old; run the puller "
+                    f"or set LEDGER_ALLOW_STALE=1")
+        return path
+    raise FileNotFoundError(f"no snapshot of {source} contains {filename}; run its puller")
 
 
 def write_snapshot(source: str, filename: str, payload: bytes, url: str) -> Path:

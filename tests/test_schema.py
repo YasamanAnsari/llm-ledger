@@ -48,3 +48,30 @@ def test_mark_updated_touches_only_named_models():
     rows = {"a": {"record_updated": "old"}, "b": {"record_updated": "old"}}
     mark_updated(rows, {"a"}, "2026-10-01T00:00:00+00:00")
     assert rows["a"]["record_updated"] == "2026-10-01T00:00:00+00:00" and rows["b"]["record_updated"] == "old"
+
+
+def test_snapshot_file_skips_empty_days_and_refuses_stale():
+    import os
+    import tempfile
+    from datetime import date
+    import schema
+    from schema import StaleSnapshotError, snapshot_file
+    root = Path(tempfile.mkdtemp())
+    old_raw = schema.RAW_DIR
+    schema.RAW_DIR = root
+    try:
+        (root / "s" / "2026-09-01").mkdir(parents=True)
+        (root / "s" / "2026-09-01" / "n.csv").write_text("x")
+        (root / "s" / "2026-09-10").mkdir()
+        (root / "s" / "2026-09-10" / "manifest.json").write_text("{}")
+        assert snapshot_file("s", "n.csv", today=date(2026, 9, 3)).parent.name == "2026-09-01"
+        try:
+            snapshot_file("s", "n.csv", today=date(2026, 9, 10))
+            assert False, "stale snapshot accepted"
+        except StaleSnapshotError:
+            pass
+        os.environ["LEDGER_ALLOW_STALE"] = "1"
+        assert snapshot_file("s", "n.csv", today=date(2026, 9, 10)).exists()
+    finally:
+        schema.RAW_DIR = old_raw
+        os.environ.pop("LEDGER_ALLOW_STALE", None)

@@ -262,10 +262,8 @@ def _slug(text: str) -> str:
 
 def _load_epoch_snapshot() -> tuple:
     """(snapshot_date, header, rows_by_model_name) from the latest raw pull."""
-    snap_dir = schema.latest_snapshot_dir("epoch")
-    csv_path = snap_dir / "all_ai_models.csv"
-    if not csv_path.exists():
-        raise FileNotFoundError(f"Epoch snapshot CSV missing: {csv_path}")
+    csv_path = schema.snapshot_file("epoch", "all_ai_models.csv")
+    snap_dir = csv_path.parent
     with csv_path.open(newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         header = list(reader.fieldnames or [])

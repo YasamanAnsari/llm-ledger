@@ -69,11 +69,9 @@ def _resolve(model_ref: str, models_by_id: dict) -> str:
 
 def _read(source: str) -> list:
     try:
-        path = schema.latest_snapshot_dir(source) / "normalized.csv"
+        path = schema.snapshot_file(source, "normalized.csv")
     except FileNotFoundError:
-        return []
-    if not path.exists():
-        return []
+        return []  # a source never pulled contributes nothing; a stale one raises
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
 

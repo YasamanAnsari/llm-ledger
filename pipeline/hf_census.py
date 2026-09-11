@@ -54,10 +54,9 @@ def load_wayback_captures() -> dict:
     """repo_id -> first public Wayback capture date, from the latest
     pull_wayback snapshot; empty when none has been pulled."""
     try:
-        path = schema.latest_snapshot_dir("wayback") / "normalized.csv"
+        # A first capture is a historical fact: the snapshot does not age.
+        path = schema.snapshot_file("wayback", "normalized.csv", max_age_days=None)
     except FileNotFoundError:
-        return {}
-    if not path.exists():
         return {}
     with path.open(newline="", encoding="utf-8") as fh:
         return {r["repo_id"]: r["first_capture_date"]
@@ -94,9 +93,7 @@ def include(row: dict) -> bool:
 
 
 def main() -> int:
-    snap = schema.latest_snapshot_dir("hf") / "normalized.csv"
-    if not snap.exists():
-        raise FileNotFoundError(f"run pipeline/pull_hf.py first: {snap} missing")
+    snap = schema.snapshot_file("hf", "normalized.csv")
     with snap.open(newline="", encoding="utf-8") as fh:
         repos = list(csv.DictReader(fh))
 
@@ -252,7 +249,7 @@ def main() -> int:
             events, event_index, claims_by_event, model_id, "weights_released", claims,
             today, not_before=floor, next_id=schema.next_event_id)
         outcomes[outcome] = outcomes.get(outcome, 0) + 1
-        if outcome in ("added", "updated", "precreated"):
+        if outcome in ("added", "updated", "withdrawn"):
             touched.add(model_id)
         if outcome in ("added", "updated", "unchanged"):
             assessed = event_index[(model_id, "weights_released", "")]["date"]
@@ -261,7 +258,7 @@ def main() -> int:
                 touched.add(model_id)
         if outcome == "added":
             added_events += 1
-        elif outcome == "precreated":
+        elif outcome in ("precreated", "withdrawn"):
             # Repo existed before the curated announcement: created private.
             review_rows.append({
                 "kind": "hf_precreated_repo", "left_source": "huggingface",

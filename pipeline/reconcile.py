@@ -100,10 +100,9 @@ def load_vendor_apis() -> dict:
     by_key: dict = {}
     for source, (org_id, url) in VENDOR_APIS.items():
         try:
-            snap = schema.latest_snapshot_dir(source) / "normalized.csv"
-        except FileNotFoundError:
-            continue
-        if not snap.exists():
+            snap = schema.snapshot_file(source, "normalized.csv")
+        except (FileNotFoundError, schema.StaleSnapshotError) as exc:
+            print(f"reconcile: WARN {source} skipped: {exc}")
             continue
         with snap.open(newline="", encoding="utf-8") as fh:
             for row in csv.DictReader(fh):
@@ -512,7 +511,7 @@ def main() -> int:
                 not_before=floor if ev["event_type"] in ("api_ga", "weights_released") else None,
                 next_id=schema.next_event_id)
             outcomes[outcome] += 1
-            if outcome in ("added", "updated", "precreated"):
+            if outcome in ("added", "updated", "withdrawn"):
                 touched.add(model_id)
         # A catalog may move availability in front of an `announced` row
         # drafted on an earlier run; the same rule applies to the stored row.
@@ -556,7 +555,8 @@ def main() -> int:
     report = write_disagreement_report(matched)
     print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
           f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "
-          f"curated-skipped={outcomes['skipped']} precreated-dropped={outcomes['precreated']} "
+          f"curated-skipped={outcomes['skipped']} "
+          f"precreated-dropped={outcomes['precreated'] + outcomes['withdrawn']} "
           f"undatable-withdrawn={outcomes['undatable-withdrawn']} "
           f"descoped-withdrawn={outcomes['descoped-withdrawn']}; "
           f"+{outcomes['attributes']} attributes; "

@@ -177,9 +177,7 @@ def key_variants(key: str, identity: bool = False) -> list:
 
 
 def _read_normalized(source: str) -> list:
-    path = schema.latest_snapshot_dir(source) / "normalized.csv"
-    if not path.exists():
-        raise FileNotFoundError(f"run the {source} puller first: {path} missing")
+    path = schema.snapshot_file(source, "normalized.csv")
     with path.open(newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
 
@@ -394,7 +392,7 @@ def match() -> tuple:
                 "note": "92-97 band: confirm or reject before crosswalking",
             })
 
-    md_snapshot = schema.latest_snapshot_dir("models_dev").name
+    md_snapshot = schema.snapshot_file("models_dev", "normalized.csv").parent.name
     rows = []
     for key in sorted(clusters):
         c = clusters[key]
