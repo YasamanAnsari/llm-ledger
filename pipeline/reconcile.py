@@ -116,15 +116,19 @@ def _vendor_index(vendor: dict) -> dict:
 
 
 def _infer_model_type(modalities_in: str, modalities_out: str) -> str:
+    """Model type from catalog modalities; "" when the product is out of
+    scope (image or video generation, even with a text channel)."""
     mod_in = set(filter(None, modalities_in.split("|")))
     mod_out = set(filter(None, modalities_out.split("|")))
-    if not mod_in or "text" not in mod_out and mod_out:
-        return ""  # image/audio/video generators are out of scope
+    if not mod_in:
+        return ""
+    if mod_out & {"image", "video"}:
+        return ""  # image/video generation is out of scope even with a text channel
     if mod_out - {"text"}:
-        return "multimodal"
-    if mod_in == {"text"} or not mod_in:
+        return "multimodal"  # speech-native LLMs
+    if mod_in == {"text"}:
         return "llm"
-    if "image" in mod_in or "video" in mod_in:
+    if mod_in & {"image", "video"}:
         return "vlm"
     if "audio" in mod_in:
         return "multimodal"
@@ -171,6 +175,8 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     sources = row["sources"].split("|")
     if len(sources) < 2:
         return None
+    if match.is_alias_key(row["match_key"]) or match.is_out_of_scope_key(row["match_key"]):
+        return None  # a moving alias or a product the ledger does not track
     # Attribution priority: OpenRouter's curated vendor namespace, then the
     # model-family token from the name itself (nemotron beats llama), then
     # the models.dev key prefix / provider (may be a reseller).

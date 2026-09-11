@@ -72,6 +72,25 @@ FORMAT_TOKENS = {
 DATE_SUFFIX_RE = re.compile(r"-(20\d{2}-?\d{2}-?\d{2}|20\d{6})$")
 MMDD_SUFFIX_RE = re.compile(r"-(0[1-9]|1[0-2])([0-2]\d|3[01])$")
 
+# Catalog ids that are moving pointers, not checkpoints.
+ALIAS_TOKENS = {"latest"}
+ALIAS_KEYS = {"deepseek-chat", "deepseek-reasoner", "gemini-exp", "chatgpt-4o-latest"}
+# Products this ledger does not track: embeddings, rerankers, speech
+# utilities, moderation and reward models, protein models.
+OUT_OF_SCOPE_RE = re.compile(
+    r"(^|-)(embed|embedding|embeddings|rerank|tts|transcribe|transcription|"
+    r"moderation|reward|esm\d*|visionreward)(-|$)")
+
+
+def is_alias_key(key: str) -> bool:
+    """True for ids that point at whatever the vendor currently serves."""
+    return key in ALIAS_KEYS or bool(ALIAS_TOKENS & set(key.split("-")))
+
+
+def is_out_of_scope_key(key: str) -> bool:
+    """True for names of products the ledger does not track."""
+    return bool(OUT_OF_SCOPE_RE.search(key))
+
 
 def normalize_name(raw: str) -> dict:
     """Normalize a model identifier to a match key.

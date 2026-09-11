@@ -72,6 +72,9 @@ def include(row: dict) -> bool:
     name = row["repo_id"].split("/")[-1]
     if EXCLUDE_NAME_RE.search(name):
         return False
+    key = matchmod.normalize_name(row["repo_id"])["key"]
+    if matchmod.is_alias_key(key) or matchmod.is_out_of_scope_key(key):
+        return False
     tags = set(row["tags"].lower().split("|"))
     if tags & EXCLUDE_TAGS:
         return False

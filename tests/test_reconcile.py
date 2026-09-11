@@ -110,3 +110,17 @@ def test_openrouter_expiration_is_scoped_to_openrouter() -> None:
     retired = [e for e in ev if e["event_type"] == "retired"]
     assert [e["platform"] for e in retired] == ["openrouter"]
     assert retired[0]["claims"][0].first_party
+
+
+def test_image_generators_and_aliases_are_not_drafted() -> None:
+    assert reconcile.reconcile_cluster(
+        _cluster(match_key="gpt-image-2", md_model_key="gpt-image-2", or_id="openai/gpt-image-2",
+                 md_modalities_in="text|image", md_modalities_out="text|image"), TODAY) is None
+    assert reconcile.reconcile_cluster(
+        _cluster(match_key="gpt-chat-latest", md_model_key="gpt-chat-latest",
+                 or_id="openai/gpt-chat-latest"), TODAY) is None
+    # audio in/out is a multimodal LLM and stays
+    draft = reconcile.reconcile_cluster(
+        _cluster(match_key="gpt-audio", md_model_key="gpt-audio", or_id="openai/gpt-audio",
+                 md_modalities_in="text|audio", md_modalities_out="text|audio"), TODAY)
+    assert draft["model"]["model_type"] == "multimodal"

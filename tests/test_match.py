@@ -96,3 +96,16 @@ def test_format_suffix_is_stripped_and_recorded():
     ):
         n = normalize_name(raw)
         assert (n["key"], n["format_suffix"]) == (key, fmt), (raw, n)
+
+
+def test_alias_and_out_of_scope_keys():
+    from match import is_alias_key, is_out_of_scope_key
+    for alias in ("claude-sonnet-latest", "gpt-chat-latest", "deepseek-chat", "gemini-exp", "kimi-latest"):
+        assert is_alias_key(alias), alias
+    for real in ("deepseek-v3-2-exp", "hy4-preview", "gemini-2-5-pro-preview", "baichuan-13b-chat"):
+        assert not is_alias_key(real), real
+    for out in ("text-embedding-3-large", "codestral-embed", "gemini-embedding", "esm2-650m",
+                "visionreward-video", "gpt-4o-transcribe", "rerank-v3-5", "omni-moderation"):
+        assert is_out_of_scope_key(out), out
+    for kept in ("llama-3-2-11b-vision", "voxtral-small", "gpt-audio", "qwen2-5-vl-72b", "llama-guard-3-8b"):
+        assert not is_out_of_scope_key(kept), kept
