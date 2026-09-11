@@ -197,6 +197,8 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
         "developer_org_id": org_id,
         "model_type": model_type,
         "access_type": "open_weights" if open_weights else "api_only",
+        "license": "" if open_weights else "proprietary",
+        "license_family": "" if open_weights else "proprietary",
         "is_derivative": "true" if derivative else "false",
         "derivative_type": derivative,
         "review_status": "unreviewed",
