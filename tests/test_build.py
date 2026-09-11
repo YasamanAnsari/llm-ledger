@@ -15,10 +15,10 @@ def _model(model_id="m1"):
     return {"model_id": model_id}
 
 
-def _event(model_id, event_type, date, precision="day", region="global"):
+def _event(model_id, event_type, date, precision="day", region="global", confidence="inferred"):
     return {
         "model_id": model_id, "event_type": event_type, "date": date,
-        "precision": precision, "region": region,
+        "precision": precision, "region": region, "confidence": confidence,
     }
 
 
@@ -141,3 +141,19 @@ def test_derived_family_adopts_the_common_spelling():
             for i, n in enumerate(["Qwen3-8B", "Qwen3-32B", "qwen3-coder", "Nameless 7B"])]
     out = compute_derived(rows, [])
     assert [r["family"] for r in out] == ["Qwen3", "Qwen3", "Qwen3", "Nameless"]
+
+
+def test_year_placeholder_never_sets_the_headline_date():
+    events = [_event("m1", "api_ga", "2024-01-01", precision="year")]
+    (row,) = compute_derived([_model()], events)
+    assert row["first_public_availability_date"] == ""
+    assert row["first_availability_via"] == ""
+    assert row["first_availability_confidence"] == ""
+
+
+def test_headline_confidence_follows_the_winning_event():
+    events = [_event("m1", "api_ga", "2025-03-01", confidence="verified"),
+              _event("m1", "weights_released", "2025-04-01", confidence="inferred")]
+    (row,) = compute_derived([_model()], events)
+    assert row["first_availability_confidence"] == "verified"
+    assert LATEST_COLUMNS.index("first_availability_confidence") == 2

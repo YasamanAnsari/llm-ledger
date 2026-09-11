@@ -57,14 +57,22 @@ EPOCH_CARRY_TOKENS = (
 )
 
 
-def _earliest_global(events: list, model_id: str, event_types: set) -> list:
-    """Global-region events of the given types for one model, date-sorted."""
+# Only dates precise to the day or month may become "the" availability date.
+# A catalog's Jan-1 placeholder is a year, not a launch day.
+HEADLINE_PRECISIONS = {"day", "month"}
+
+
+def _earliest_global(events: list, model_id: str, event_types: set,
+                     precisions: set | None = None) -> list:
+    """Global-region events of the given types for one model, date-sorted;
+    optionally restricted to the given precisions."""
     rows = [
         e for e in events
         if e["model_id"] == model_id
         and e.get("region", "global") == "global"
         and e["event_type"] in event_types
         and e.get("date")
+        and (precisions is None or e.get("precision") in precisions)
     ]
     return sorted(rows, key=lambda e: e["date"])
 
@@ -83,25 +91,28 @@ def compute_derived(models: list, events: list) -> list:
     for row in models:
         row = dict(row)
         mid = row["model_id"]
-        first_date, via, via_precision = "", "", ""
+        first_date, via, via_precision, via_confidence = "", "", "", ""
 
-        primary = _earliest_global(events, mid, AVAILABILITY_EVENT_TYPES)
+        primary = _earliest_global(events, mid, AVAILABILITY_EVENT_TYPES, HEADLINE_PRECISIONS)
         if primary:
             chosen = _pick_first(primary, VIA_PRIORITY)
             first_date, via = chosen["date"], chosen["event_type"]
-            via_precision = chosen["precision"]
+            via_precision, via_confidence = chosen["precision"], chosen.get("confidence", "")
         else:
             # Third tier: a third-party platform listing is an upper bound on
             # public availability, better than no date at all.
-            fallback = (_earliest_global(events, mid, FALLBACK_AVAILABILITY_EVENT_TYPES)
-                        or _earliest_global(events, mid, {"platform_availability"}))
+            fallback = (_earliest_global(events, mid, FALLBACK_AVAILABILITY_EVENT_TYPES,
+                                         HEADLINE_PRECISIONS)
+                        or _earliest_global(events, mid, {"platform_availability"},
+                                            HEADLINE_PRECISIONS))
             if fallback:
                 chosen = _pick_first(fallback, FALLBACK_VIA_PRIORITY)
                 first_date, via = chosen["date"], chosen["event_type"] + "_fallback"
-                via_precision = chosen["precision"]
+                via_precision, via_confidence = chosen["precision"], chosen.get("confidence", "")
 
         row["first_public_availability_date"] = first_date
         row["first_availability_via"] = via
+        row["first_availability_confidence"] = via_confidence
 
         anticipation = ""
         announced = _earliest_global(events, mid, {"announced"})
@@ -212,7 +223,8 @@ LATEST_DATE_COLUMN = "first_public_availability_date"
 # A reading view: what someone scanning "what came out" wants to see. The
 # sparse curated columns (license flags, lineage) stay in models.csv.
 LATEST_COLUMNS = (
-    LATEST_DATE_COLUMN, "first_availability_via", "model_id", "canonical_name",
+    LATEST_DATE_COLUMN, "first_availability_via", "first_availability_confidence",
+    "model_id", "canonical_name",
     "developer_org_id", "family", "variant_role", "model_type", "access_type",
     "license_family", "review_status",
 )

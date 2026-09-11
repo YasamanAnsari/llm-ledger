@@ -154,6 +154,7 @@ MODELS = Table(
         "is_derivative", "derivative_type", "base_model_id",
         "parent_model_id", "snapshot_of", "predecessor_id", "successor_id",
         "first_public_availability_date", "first_availability_via",
+        "first_availability_confidence",
         "anticipation_days", "review_status", "record_created",
         "record_updated", "notes",
     ),

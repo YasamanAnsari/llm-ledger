@@ -66,6 +66,7 @@ we set `is_derivative`, `derivative_type`, and `base_model_id`.
 | `predecessor_id` / `successor_id` | FK nullable | lineage |
 | `first_public_availability_date` | date DERIVED | see derived-field rules |
 | `first_availability_via` | enum DERIVED | which event won |
+| `first_availability_confidence` | enum DERIVED | `confidence` of the event that set the date; empty when undated |
 | `anticipation_days` | int DERIVED | first availability minus announced |
 | `review_status` | enum DERIVED | `human_reviewed` (a person verified at least one event), `machine_corroborated` (a machine event reached `verified`), `unreviewed` (single-source machine claims only) |
 | `record_created` / `record_updated` | ISO datetime | |
@@ -194,9 +195,15 @@ added for models without a hand-written row.
   MIN of `{api_preview, free_tier}`, then to `platform_availability` (a
   third-party listing is an upper bound on public availability), and suffix
   `first_availability_via` with `_fallback`.
+- Events at `quarter` or `year` precision never set
+  `first_public_availability_date`; a model whose only availability claim
+  is a catalog placeholder stays undated until a day- or month-precision
+  event exists.
 - `first_availability_via` = the event type that achieved the minimum; ties
   broken by priority `weights_released > api_ga > consumer_rollout`
   (fallback ties: `api_preview > free_tier > platform_availability`).
+- `first_availability_confidence` = the `confidence` of the event that set
+  the date (`verified`, `inferred`, or `disputed`); empty when undated.
 - `anticipation_days` = `first_public_availability_date - announced.date`;
   null if either is missing or either precision is coarser than `month`.
 - `review_status` from the model's events (see models.csv).

@@ -259,6 +259,7 @@ def check_rule8_vocabularies(tables: dict) -> list:
         check(key, "is_derivative", row.get("is_derivative", ""), BOOL_VALUES, required=True)
         check(key, "derivative_type", row.get("derivative_type", ""), DERIVATIVE_TYPES)
         check(key, "first_availability_via", row.get("first_availability_via", ""), FIRST_AVAILABILITY_VIA)
+        check(key, "first_availability_confidence", row.get("first_availability_confidence", ""), CONFIDENCES)
         check(key, "review_status", row.get("review_status", ""), REVIEW_STATUSES, required=True)
         for col in ("license_has_usage_thresholds", "license_requires_separate_agreement"):
             check(key, col, row.get(col, ""), BOOL_VALUES)
