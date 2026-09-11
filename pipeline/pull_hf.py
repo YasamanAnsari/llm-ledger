@@ -13,6 +13,7 @@ is flagged, never used.
 from __future__ import annotations
 
 import csv
+import io
 import sys
 from pathlib import Path
 
@@ -145,21 +146,16 @@ def main() -> int:
     if not all_rows:
         raise RuntimeError("pull_hf produced zero rows; Hub unreachable or API changed")
 
-    out = schema.snapshot_dir("hf") / "normalized.csv"
-    with out.open("w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
-        writer.writeheader()
-        for repo_id in sorted(all_rows):
-            writer.writerow(all_rows[repo_id])
-
-    manifest = schema.snapshot_dir("hf") / "manifest.json"
-    if not manifest.exists():
-        import json
-        manifest.write_text(json.dumps({
-            "normalized.csv": {
-                "url": "https://huggingface.co/api/models (org sweep + top downloads)",
-                "rows": len(all_rows),
-            }}, indent=2) + "\n", encoding="utf-8")
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=COLUMNS, lineterminator="\n")
+    writer.writeheader()
+    for repo_id in sorted(all_rows):
+        writer.writerow(all_rows[repo_id])
+    # The normalized sweep is the payload here (there is no single upstream
+    # document); the manifest records its URL family, sha256 and size like
+    # every other source.
+    out = schema.write_snapshot("hf", "normalized.csv", buf.getvalue().encode("utf-8"),
+                                "https://huggingface.co/api/models (org sweep + top downloads)")
     print(f"pull_hf: {len(all_rows)} repos -> {out}")
     return 0
 

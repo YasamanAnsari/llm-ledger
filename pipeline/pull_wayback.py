@@ -89,6 +89,11 @@ def main() -> int:
             "first_capture_date": f"{stamp[:4]}-{stamp[4:6]}-{stamp[6:8]}" if len(stamp) >= 8 else "",
             "first_capture_timestamp": stamp,
         })
+    if repos and not rows:
+        # archive.org refused every query: leave the previous snapshot in
+        # place rather than shadow it with an empty one.
+        print(f"pull_wayback: {len(repos)} repos queried, all {failures} failed; no snapshot written")
+        return 1
     out = schema.snapshot_dir("wayback") / "normalized.csv"
     with out.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
@@ -97,7 +102,7 @@ def main() -> int:
     captured = sum(1 for r in rows if r["first_capture_date"])
     print(f"pull_wayback: {len(repos)} repos queried, {captured} captured, "
           f"{len(rows) - captured} never archived, {failures} failed -> {out}")
-    return 0
+    return 1 if failures and failures * 2 > len(repos) else 0
 
 
 if __name__ == "__main__":

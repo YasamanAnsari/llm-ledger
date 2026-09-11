@@ -21,7 +21,8 @@ and normalized to one shape under data/raw/<source>/<date>/normalized.csv:
                      the provider is the model's own vendor; lifecycle.py
                      resolves that).
 
-A changed page or JSON shape raises: no fallback, no partial silent load.
+A changed page or JSON shape fails that source (exit status 1 for the run):
+no fallback, no partial silent load; the other sources are still pulled.
 """
 
 from __future__ import annotations
@@ -161,16 +162,25 @@ SOURCES = (
 
 
 def main() -> int:
+    failed = []
     for source, url, filename, parse in SOURCES:
-        payload = fetch.get_bytes(url)
-        schema.write_snapshot(source, filename, payload, url)
-        rows = sorted(parse(payload), key=lambda r: (r["model_ref"], r["retire_date"]))
+        try:
+            payload = fetch.get_bytes(url)
+            schema.write_snapshot(source, filename, payload, url)
+            rows = sorted(parse(payload), key=lambda r: (r["model_ref"], r["retire_date"]))
+        except Exception as exc:  # one broken page must not hide the other sources
+            failed.append(source)
+            print(f"pull_lifecycle: FAILED {source}: {exc}")
+            continue
         out = schema.snapshot_dir(source) / "normalized.csv"
         with out.open("w", newline="", encoding="utf-8") as fh:
             writer = csv.DictWriter(fh, fieldnames=COLUMNS, lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
         print(f"pull_lifecycle: {source}: {len(rows)} dated rows -> {out}")
+    if failed:
+        print(f"pull_lifecycle: {len(failed)} source(s) failed: {failed}")
+        return 1
     return 0
 
 
