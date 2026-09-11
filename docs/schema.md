@@ -236,10 +236,12 @@ One policy, `pipeline/confidence.py`, decides every machine-dated row:
 | `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. |
 
 Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,
-vendor model-registry `created`, first Wayback capture) never set the date
-when a stated date exists, never count as verified alone, and never
-dispute: a repo created early or crawled late is lag, not disagreement.
-Among bounds, the artifact's own timestamp outranks a crawl of it, and a
+ModelScope twin-repo creation, vendor model-registry `created`, first
+Wayback capture) never set the date when a stated date exists, never count
+as verified alone, and never dispute. A bound that trails the chosen date
+by more than two days is lag (a late crawl, a mirror created later) and is
+only noted; one that leads it keeps the row `inferred`. Among bounds, the
+artifact's own timestamp outranks a twin repo or a crawl of it, and a
 capture alone never dates a release. A capture that predates the repo's
 creation belongs to a recreated or renamed repo and is discarded. Any
 machine claim dated before a curated `announced` event is private
@@ -271,6 +273,30 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
 - `data/generated/coverage_report.md` - per-organization model and event
   counts with review status and verified share; read this before quoting
   the headline row counts.
+- `data/generated/sensitivity_report.md` - how far apart the candidate
+  "release dates" of one model sit (announced vs api_ga vs
+  weights_released ...), for researchers choosing a treatment date.
+- `data/generated/matched_models.csv` and `disagreement_report.md` -
+  the cross-catalog clusters `match.py` built and where the catalogs
+  disagree; inputs to `reconcile.py`, not derived from the core tables.
+
+Snapshot dates carried into artifacts (`epoch_snapshot_date`,
+`attributes.price_date`) are the day the current payload first appeared,
+not the day it was last pulled, so an unchanged upstream file does not
+rewrite the dataset.
+
+## Staging files (the review loop)
+
+- `data/staging/review_queue.csv` - rows the loaders could not settle:
+  `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
+  `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
+  `hf_unmapped_namespace`, `vendor_alias_group`, `nhlocal_lead`, ...),
+  the two keys involved, a score and a note. Rewritten by every run.
+- `data/staging/review_decisions.csv` - append-only, hand-edited:
+  `kind,left_key,right_key,decision,decided_by,decided_on,note` with
+  `decision` in `accept` / `reject` / `dismiss`. A decided item is never
+  queued again; an accepted `fuzzy_match` joins its cluster with method
+  `reviewed`.
 
 ## Validation rules
 
@@ -300,7 +326,7 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
 10. No Epoch-domain numeric columns (parameters, compute, dataset size,
     training cost) exist in any core table.
 11. Every event whose `source_type` is machine-owned (`hf_hub`,
-    `api_metadata`, `lifecycle_table`) has at least one row in
+    `modelscope`, `api_metadata`, `lifecycle_table`) has at least one row in
     `claims.csv`; no other event has any.
 12. A `(namespace, identifier)` in a machine namespace (everything but
     `wikipedia`, `text_surface_forms`, `lmarena`) maps to one model, or to

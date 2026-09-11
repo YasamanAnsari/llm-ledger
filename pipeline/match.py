@@ -366,7 +366,6 @@ def match(md: dict, orr: dict, epoch: dict, decisions: dict | None = None,
     """
     decisions = decisions or {}
     md_index = _variant_index(md)
-    epoch_index = _variant_index(epoch)
 
     # cluster key (models.dev key when present) -> {"md":, "or":, "epoch":, "method":}
     clusters: dict = {}
