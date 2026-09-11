@@ -178,6 +178,12 @@ def claim_from_row(row: dict) -> Claim:
     )
 
 
+def index_events(events: list) -> dict:
+    """(model_id, event_type, platform) -> event row; the lookup every
+    loader hands to upsert_machine_event and keeps in sync through it."""
+    return {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
+
+
 def group_claims(rows: list) -> dict:
     """event_id -> [claim rows]; the in-memory form loaders work with."""
     grouped: dict = {}

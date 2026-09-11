@@ -53,6 +53,7 @@ them by hand.
 | how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |
 | where catalogs disagree | [`data/generated/disagreement_report.md`](data/generated/disagreement_report.md) |
 | how much "the date" moves | [`data/generated/sensitivity_report.md`](data/generated/sensitivity_report.md) |
+| what still needs a person, and how to settle it | [`data/staging/review_queue.csv`](data/staging/review_queue.csv), [`review_decisions.csv`](data/staging/review_decisions.csv) |
 
 Columns and allowed values: [`docs/schema.md`](docs/schema.md).
 

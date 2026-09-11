@@ -29,7 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import match
 import orgs_seed
 import schema
-from confidence import Claim, flatten_claims, group_claims, upsert_machine_event
+from confidence import Claim, flatten_claims, group_claims, index_events, upsert_machine_event
 from schema import CLAIMS, EVENTS, MODELS
 
 # LiteLLM provider slugs that are hosting platforms, not model vendors.
@@ -96,7 +96,7 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
     for rows naming no ledger model."""
     models_by_id = {m["model_id"]: m for m in tables["models"]}
     events = tables["events"]
-    event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
+    event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
 
     # (model_id, platform) -> {source: [(date, model_ref, row)]}

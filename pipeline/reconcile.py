@@ -49,7 +49,7 @@ import repair
 import schema
 from confidence import (
     Claim, curated_announcement, earliest_availability, flatten_claims,
-    group_claims, upsert_machine_event, withdraw_machine_announced_after,
+    group_claims, index_events, upsert_machine_event, withdraw_machine_announced_after,
     withdraw_machine_event,
 )
 from schema import ATTRIBUTES, CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
@@ -454,7 +454,7 @@ def main() -> int:
                 if r["namespace"] in schema.IDENTITY_NAMESPACES}
     attributes_by_id = {r["model_id"]: r for r in tables["attributes"]}
     events = tables["events"]
-    event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
+    event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
 
     added_models = 0

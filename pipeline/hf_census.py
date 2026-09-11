@@ -36,7 +36,7 @@ import match as matchmod
 import orgs_seed
 import schema
 from confidence import (
-    Claim, curated_announcement, flatten_claims, group_claims,
+    Claim, curated_announcement, flatten_claims, group_claims, index_events,
     upsert_machine_event, withdraw_machine_announced_after,
 )
 from schema import CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
@@ -140,7 +140,7 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
     with_hub_repo = set(hf_xw.values())
     xw_keys = {(r["model_id"], r["namespace"], r["identifier"]) for r in tables["crosswalk"]}
     events = tables["events"]
-    event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
+    event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
 
     review_rows = unmapped_namespace_leads(repos)
