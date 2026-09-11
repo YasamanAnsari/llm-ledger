@@ -181,7 +181,7 @@ def test_rule1_and_rule8_claims_table() -> None:
               "label": "", "bound": "false", "first_party": "false"}
     assert any("claims references unknown event_id" in e for e in _errors(_tables(claims=[orphan])))
     bad = dict(orphan, event_id="acme-1-api_ga-1", bound="maybe", date="2025-1-1")
-    errs = _errors(_tables(claims=[bad]))
+    errs = _errors(_tables(events=[_event(source_type="api_metadata")], claims=[bad]))
     assert any("bound" in e for e in errs) and any("not ISO" in e for e in errs)
 
 
@@ -206,3 +206,14 @@ def test_rule8_platform_vocabulary():
     ok = _tables(events=[_event(event_id="acme-1-retired-1", event_type="retired",
                                 platform="bedrock", date="2025-06-01")])
     assert not any("rule8" in e and "platform" in e for e in _errors(ok))
+
+
+def test_rule11_machine_rows_have_claims_and_curated_rows_have_none():
+    machine = _event(source_type="api_metadata", source_url="https://models.dev/api.json")
+    assert any("rule11" in e and "no claims" in e for e in _errors(_tables(events=[machine])))
+    claim = {"event_id": "acme-1-api_ga-1", "source_url": "https://models.dev/api.json",
+             "source_type": "api_metadata", "date": "2025-01-15", "precision": "day",
+             "label": "models.dev", "bound": "false", "first_party": "false"}
+    assert not any("rule11" in e for e in _errors(_tables(events=[machine], claims=[claim])))
+    curated_with_claim = _tables(claims=[claim])   # default event is vendor_blog
+    assert any("rule11" in e and "carries claims" in e for e in _errors(curated_with_claim))

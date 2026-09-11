@@ -1,6 +1,6 @@
 """Validation for llm-ledger core tables and generated artifacts.
 
-Implements the ten rules in this module. Exits nonzero when any rule
+Implements the rules listed in docs/schema.md. Exits nonzero when any rule
 fails. Warnings (rule 4's scheduled-future `retired` events) are printed but
 do not fail the run.
 
@@ -18,6 +18,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
+from confidence import MACHINE_SOURCE_TYPES
 from schema import (
     ACCESS_TYPES, ATTRIBUTES, AVAILABILITY_EVENT_TYPES, BOOL_VALUES,
     CONFIDENCES, CORE_TABLES, CROSSWALK, CROSSWALK_NAMESPACES,
@@ -338,6 +339,19 @@ def check_rule9_determinism(core_dir: Path) -> list:
     return errors
 
 
+def check_rule11_claims_coverage(tables: dict) -> list:
+    """Machine-owned events rest on claims; curated events carry none."""
+    errors = []
+    claimed = {c["event_id"] for c in tables.get("claims", [])}
+    for row in tables["events"]:
+        machine = row.get("source_type") in MACHINE_SOURCE_TYPES
+        if machine and row["event_id"] not in claimed:
+            errors.append(f"rule11: machine event {row['event_id']} has no claims")
+        elif not machine and row["event_id"] in claimed:
+            errors.append(f"rule11: curated event {row['event_id']} carries claims")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -366,6 +380,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     if check_determinism:
         errors += check_rule9_determinism(core_dir)
     errors += check_rule10_no_epoch_columns(tables)
+    errors += check_rule11_claims_coverage(tables)
     return errors, warnings
 
 

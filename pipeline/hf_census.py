@@ -193,7 +193,18 @@ def main() -> int:
         repo_url = f"https://huggingface.co/{repo_id}"
         claims = [Claim(date.fromisoformat(created_at), repo_url, "hf_hub",
                         bound=True, label="hub repo created")]
-        if repo_id in captures:
+        if repo_id in captures and captures[repo_id] < created_at:
+            # The archive saw this URL before the current repo object existed:
+            # the repo was deleted and recreated, or renamed. The capture
+            # describes a different artifact and is not used.
+            review_rows.append({
+                "kind": "hf_recreated_repo", "left_source": "huggingface",
+                "left_key": repo_id, "right_source": "ledger", "right_key": model_id,
+                "score": "",
+                "note": f"first archive capture {captures[repo_id]} predates repo "
+                        f"creation {created_at}; weights date needs a primary source",
+            })
+        elif repo_id in captures:
             claims.append(Claim(
                 date.fromisoformat(captures[repo_id]),
                 f"https://web.archive.org/web/{captures[repo_id].replace('-', '')}/{repo_url}",

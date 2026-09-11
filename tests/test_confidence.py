@@ -148,3 +148,10 @@ def test_upsert_records_the_agent_as_verifier_when_asked() -> None:
                          platform="openrouter", next_id=lambda *_: "m-platform_availability-1",
                          verifier="llm-ledger-agent")
     assert events[0]["verified_by"] == "llm-ledger-agent"
+
+
+def test_hub_creation_outranks_an_archive_capture() -> None:
+    hub = _c("2023-02-09", HF, source_type="hf_hub", bound=True)
+    early_capture = _c("2023-01-26", WB, source_type="wayback", bound=True)
+    a = assess([hub, early_capture])
+    assert (a.source_type, a.date, a.confidence) == ("hf_hub", "2023-02-09", "inferred")

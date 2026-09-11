@@ -85,8 +85,10 @@ def _describe(claims: list) -> str:
 
 def _rank(c: Claim) -> tuple:
     """Preference for the row's date: stated day > bracketing day > year
-    placeholder; first-party first; then earliest."""
-    return (c.precision != "day", c.bound, not c.first_party, c.date)
+    placeholder; among bounds the artifact's own timestamp beats a crawl of
+    it; first-party first; then earliest."""
+    return (c.precision != "day", c.bound, c.source_type == "wayback",
+            not c.first_party, c.date)
 
 
 def assess(claims: list) -> Assessment:
