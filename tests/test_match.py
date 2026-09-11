@@ -81,3 +81,18 @@ def test_slug_for_prefixes_short_keys():
     assert slug_for("hy3", "tencent") == "tencent-hy3"
     assert slug_for("gpt-4o", "openai") == "gpt-4o"
     assert slug_for("r1", "deepseek") == "deepseek-r1"
+
+
+def test_format_suffix_is_stripped_and_recorded():
+    for raw, key, fmt in (
+        ("zai-org/GLM-5.3-BF16", "glm-5-3", "bf16"),
+        ("tencent/Hy4-preview-FP8", "hy4-preview", "fp8"),
+        ("baidu/ERNIE-4.5-300B-A47B-FP8-Paddle", "ernie-4-5-300b-a47b", "fp8-paddle"),
+        ("meta-llama/Llama-3.1-405B-Instruct-FP8", "llama-3-1-405b-instruct", "fp8"),
+        ("meta-llama/Llama-2-70b-chat-hf", "llama-2-70b-chat", "hf"),
+        ("inclusionAI/Ling-3.0-flash-int4", "ling-3-0-flash", "int4"),
+        ("01-ai/Yi-34B", "yi-34b", ""),
+        ("Qwen/Qwen3-235B-A22B", "qwen3-235b-a22b", ""),
+    ):
+        n = normalize_name(raw)
+        assert (n["key"], n["format_suffix"]) == (key, fmt), (raw, n)

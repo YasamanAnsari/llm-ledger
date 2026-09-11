@@ -57,7 +57,16 @@ PREFIX_REWRITES = (
 )
 
 # Trailing tokens that distinguish serving format, not checkpoint identity.
-STRIP_SUFFIXES = ("-instruct", "-chat", "-it", "-hf")
+STRIP_SUFFIXES = ("-instruct", "-chat", "-it")
+
+# Trailing tokens that name a packaging of the same weights, not a model:
+# quantizations, dtypes, framework conversions. Stripped from the identity
+# key and recorded as `format_suffix`.
+FORMAT_TOKENS = {
+    "fp8", "fp16", "bf16", "fp4", "nvfp4", "mxfp4", "mxfp8", "int4", "int8",
+    "w4a16", "w8a8", "w4afp8", "4bit", "8bit", "hf", "pth", "paddle",
+    "safetensors",
+}
 
 # Date-like suffixes marking a dated snapshot of an alias.
 DATE_SUFFIX_RE = re.compile(r"-(20\d{2}-?\d{2}-?\d{2}|20\d{6})$")
@@ -67,9 +76,11 @@ MMDD_SUFFIX_RE = re.compile(r"-(0[1-9]|1[0-2])([0-2]\d|3[01])$")
 def normalize_name(raw: str) -> dict:
     """Normalize a model identifier to a match key.
 
-    Returns {key, prefix, snapshot_suffix}: the vendor prefix (before '/')
-    and any date suffix are preserved as metadata, since a date suffix marks
-    a dated snapshot candidate rather than a distinct model family member.
+    Returns {key, prefix, snapshot_suffix, format_suffix}: the vendor prefix
+    (before '/'), any date suffix and any packaging suffix are preserved as
+    metadata. A date suffix marks a dated snapshot candidate; a packaging
+    suffix (FP8, BF16, INT4, HF conversion) marks the same weights in
+    another container, never a distinct model.
     """
     text = raw.strip().lower()
     prefix = ""
@@ -85,11 +96,18 @@ def normalize_name(raw: str) -> dict:
         snapshot_suffix = m.group(0).lstrip("-")
         text = text[: m.start()]
 
+    format_parts: list = []
+    parts = text.split("-")
+    while len(parts) > 1 and parts[-1] in FORMAT_TOKENS:
+        format_parts.insert(0, parts.pop())
+    text = "-".join(parts)
+
     for old, new in PREFIX_REWRITES:
         if text.startswith(old):
             text = new + text[len(old):]
             break
-    return {"key": text, "prefix": prefix, "snapshot_suffix": snapshot_suffix}
+    return {"key": text, "prefix": prefix, "snapshot_suffix": snapshot_suffix,
+            "format_suffix": "-".join(format_parts)}
 
 
 def slug_for(key: str, org_id: str) -> str:
