@@ -109,3 +109,9 @@ def test_alias_and_out_of_scope_keys():
         assert is_out_of_scope_key(out), out
     for kept in ("llama-3-2-11b-vision", "voxtral-small", "gpt-audio", "qwen2-5-vl-72b", "llama-guard-3-8b"):
         assert not is_out_of_scope_key(kept), kept
+
+
+def test_identity_variants_keep_the_role():
+    assert "qwen2-5-72b" not in key_variants("qwen2-5-72b-instruct", identity=True)
+    assert "qwen-2-5-72b-instruct" in key_variants("qwen2-5-72b-instruct", identity=True)
+    assert "qwen2-5-72b" in key_variants("qwen2-5-72b-instruct")   # cross-catalog matching only

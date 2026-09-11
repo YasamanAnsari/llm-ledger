@@ -217,3 +217,18 @@ def test_rule11_machine_rows_have_claims_and_curated_rows_have_none():
     assert not any("rule11" in e for e in _errors(_tables(events=[machine], claims=[claim])))
     curated_with_claim = _tables(claims=[claim])   # default event is vendor_blog
     assert any("rule11" in e and "carries claims" in e for e in _errors(curated_with_claim))
+
+
+def test_rule12_one_model_per_machine_identifier():
+    models = [_model(), _model(model_id="acme-2"), _model(model_id="acme-1-snap", snapshot_of="acme-1")]
+    events = [_event(), _event(event_id="acme-2-api_ga-1", model_id="acme-2"),
+              _event(event_id="acme-1-snap-api_ga-1", model_id="acme-1-snap")]
+    xw = [{"model_id": "acme-1", "namespace": "huggingface", "identifier": "acme/one"},
+          {"model_id": "acme-2", "namespace": "huggingface", "identifier": "acme/one"}]
+    assert any("rule12" in e for e in _errors(_tables(models=models, events=events, crosswalk=xw)))
+    snap = [{"model_id": "acme-1", "namespace": "openai_api", "identifier": "one-2025"},
+            {"model_id": "acme-1-snap", "namespace": "openai_api", "identifier": "one-2025"}]
+    assert not any("rule12" in e for e in _errors(_tables(models=models, events=events, crosswalk=snap)))
+    wiki = [{"model_id": "acme-1", "namespace": "wikipedia", "identifier": "Acme"},
+            {"model_id": "acme-2", "namespace": "wikipedia", "identifier": "Acme"}]
+    assert not any("rule12" in e for e in _errors(_tables(models=models, events=events, crosswalk=wiki)))

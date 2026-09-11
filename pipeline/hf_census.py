@@ -127,10 +127,10 @@ def main() -> int:
         slug = matchmod.slug_for(norm["key"], row["org_id"])
         model_id = hf_xw.get(repo_id) or (
             slug if slug in models_by_id else "")
-        # try serving-format variants against existing ids (Qwen3-235B-A22B
-        # repo should reuse the qwen3-235b-a22b row, not duplicate it)
+        # try spelling variants against existing ids (Qwen3-235B-A22B and
+        # qwen-3-235b-a22b are one row); the role suffix is identity and stays
         if not model_id:
-            for variant in matchmod.key_variants(norm["key"]):
+            for variant in matchmod.key_variants(norm["key"], identity=True):
                 if variant in models_by_id:
                     model_id = variant
                     break

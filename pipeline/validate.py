@@ -24,7 +24,8 @@ from schema import (
     CONFIDENCES, CORE_TABLES, CROSSWALK, CROSSWALK_NAMESPACES,
     DERIVATIVE_TYPES, EPOCH_FORBIDDEN_COLUMN_TOKENS, EVENTS, EVENT_TYPES,
     FALLBACK_AVAILABILITY_EVENT_TYPES, FEATURE_ADDED_DETAILS,
-    FIRST_AVAILABILITY_VIA, LICENSE_FAMILIES, MODALITIES, MODELS, MODEL_TYPES,
+    FIRST_AVAILABILITY_VIA, IDENTITY_NAMESPACES, LICENSE_FAMILIES, MODALITIES, MODELS,
+    MODEL_TYPES,
     ORGANIZATIONS, ORG_TYPES, PLATFORMS, PRECISIONS, REASONING_TYPES,
     REASONING_VISIBILITY, REVIEW_STATUSES, SOURCE_TYPES, VARIANT_ROLES,
     date_matches_precision,
@@ -352,6 +353,23 @@ def check_rule11_claims_coverage(tables: dict) -> list:
     return errors
 
 
+def check_rule12_identifier_uniqueness(tables: dict) -> list:
+    """A machine identifier names one model (that model's snapshots and
+    children excepted)."""
+    errors = []
+    parent = {m["model_id"]: {m.get("snapshot_of", ""), m.get("parent_model_id", "")} - {""}
+              for m in tables["models"]}
+    owners: dict = {}
+    for row in tables["crosswalk"]:
+        if row["namespace"] in IDENTITY_NAMESPACES:
+            owners.setdefault((row["namespace"], row["identifier"]), set()).add(row["model_id"])
+    for (ns, ident), mids in sorted(owners.items()):
+        roots = {m for m in mids if not (parent.get(m, set()) & mids)}
+        if len(roots) > 1:
+            errors.append(f"rule12: {ns}:{ident} maps to several models {sorted(roots)}")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -381,6 +399,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
         errors += check_rule9_determinism(core_dir)
     errors += check_rule10_no_epoch_columns(tables)
     errors += check_rule11_claims_coverage(tables)
+    errors += check_rule12_identifier_uniqueness(tables)
     return errors, warnings
 
 

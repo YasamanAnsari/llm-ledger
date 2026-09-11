@@ -59,7 +59,7 @@ def _resolve(model_ref: str, models_by_id: dict) -> str:
     key = _model_key(model_ref)
     if not key:
         return ""
-    for variant in match.key_variants(key):
+    for variant in match.key_variants(key, identity=True):
         if variant in models_by_id:
             return variant
     org = orgs_seed.resolve_org(key.split("-")[0])

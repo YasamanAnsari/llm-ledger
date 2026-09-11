@@ -110,7 +110,7 @@ def load_vendor_apis() -> dict:
 def _vendor_index(vendor: dict) -> dict:
     index = {}
     for key in vendor:
-        for variant in match.key_variants(key):
+        for variant in match.key_variants(key, identity=True):
             index.setdefault(variant, key)
     return index
 
@@ -382,11 +382,11 @@ def main() -> int:
     models_by_id = {r["model_id"]: r for r in tables["models"]}
     crosswalk_keys = {(r["model_id"], r["namespace"], r["identifier"])
                       for r in tables["crosswalk"]}
-    # Identity lookup: an epoch/openrouter identifier already crosswalked to
-    # a model pins the cluster to that model - never draft a second row.
+    # Identity lookup: a machine identifier already crosswalked to a model
+    # pins the cluster to that model - never draft a second row.
     identity = {(r["namespace"], r["identifier"]): r["model_id"]
                 for r in tables["crosswalk"]
-                if r["namespace"] in ("epoch", "openrouter")}
+                if r["namespace"] in schema.IDENTITY_NAMESPACES}
     attributes_by_id = {r["model_id"]: r for r in tables["attributes"]}
     events = tables["events"]
     event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
@@ -395,7 +395,7 @@ def main() -> int:
     added_models = 0
     outcomes = Counter()
     for row in matched:
-        key_hit = next((vendor_index[v] for v in match.key_variants(row["match_key"])
+        key_hit = next((vendor_index[v] for v in match.key_variants(row["match_key"], identity=True)
                         if v in vendor_index), None)
         cluster_vendor = {row["match_key"]: vendor[key_hit]} if key_hit else None
         draft = reconcile_cluster(row, today, cluster_vendor)
@@ -417,7 +417,7 @@ def main() -> int:
                  for xw in draft["crosswalk"]
                  if (xw["namespace"], xw["identifier"]) in identity), None)
             if not existing:
-                existing = next((v for v in match.key_variants(model_id)
+                existing = next((v for v in match.key_variants(model_id, identity=True)
                                  if v in models_by_id), None)
             if existing:
                 model_id = existing
@@ -431,7 +431,7 @@ def main() -> int:
             if key not in crosswalk_keys:
                 crosswalk_keys.add(key)
                 tables["crosswalk"].append(xw)
-            if xw["namespace"] in ("epoch", "openrouter"):
+            if xw["namespace"] in schema.IDENTITY_NAMESPACES:
                 identity.setdefault((xw["namespace"], xw["identifier"]), model_id)
 
         if draft["attributes"] and model_id not in attributes_by_id:

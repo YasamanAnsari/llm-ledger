@@ -56,8 +56,10 @@ PREFIX_REWRITES = (
     ("xai-", ""),
 )
 
-# Trailing tokens that distinguish serving format, not checkpoint identity.
-STRIP_SUFFIXES = ("-instruct", "-chat", "-it")
+# Role suffixes distinguish checkpoints (base vs instruct) and are kept for
+# identity; they are stripped only when matching against catalogs that name
+# a family without a role (Epoch).
+ROLE_SUFFIXES = ("-instruct", "-chat", "-it")
 
 # Trailing tokens that name a packaging of the same weights, not a model:
 # quantizations, dtypes, framework conversions. Stripped from the identity
@@ -141,12 +143,15 @@ def slug_for(key: str, org_id: str) -> str:
     return key
 
 
-def key_variants(key: str) -> list:
-    """Match key plus serving-format-stripped variants, most specific first.
+def key_variants(key: str, identity: bool = False) -> list:
+    """Spellings of one key, most specific first.
 
-    Also bridges the letter-digit boundary spelling split: vendors write
+    Bridges the letter-digit boundary spelling split: vendors write
     "Qwen2.5-72B" (fused) while aggregators write "qwen-2.5-72b" (split),
     which normalize to different keys (qwen2-5-... vs qwen-2-5-...).
+    With `identity=True` the role suffix stays: a base and its instruct
+    checkpoint are different models. Without it, role-stripped variants are
+    added for matching catalogs that name only the family (Epoch).
     """
     variants = [key]
     fused = re.sub(r"^([a-z]+)-(\d)", r"\1\2", key)
@@ -154,7 +159,9 @@ def key_variants(key: str) -> list:
     for alt in (fused, split):
         if alt != key:
             variants.append(alt)
-    for suffix in STRIP_SUFFIXES:
+    if identity:
+        return variants
+    for suffix in ROLE_SUFFIXES:
         if key.endswith(suffix):
             variants.append(key[: -len(suffix)])
             for alt in (fused, split):

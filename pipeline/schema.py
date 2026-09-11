@@ -78,6 +78,11 @@ CROSSWALK_NAMESPACES = {
     "lmarena", "text_surface_forms",
 }
 
+# Namespaces whose identifiers name exactly one checkpoint. A collision in
+# these is a duplicate model (validation rule 12); encyclopedia articles and
+# free-text spellings legitimately cover several.
+IDENTITY_NAMESPACES = CROSSWALK_NAMESPACES - {"wikipedia", "text_surface_forms", "lmarena"}
+
 # Hosting platforms an event may be scoped to. One spelling per host; the
 # loaders and curators both use these.
 PLATFORMS = {
