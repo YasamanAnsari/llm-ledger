@@ -161,6 +161,14 @@ def is_machine_row(row: dict) -> bool:
     return row.get("source_type", "") in MACHINE_SOURCE_TYPES
 
 
+def curated_model_ids(events: list) -> set:
+    """Models with a verified event that was read from a primary page rather
+    than produced by a loader. Loaders never rewrite these models' curated
+    fields; everything else is machine-owned and re-derived on every run."""
+    return {e["model_id"] for e in events
+            if e.get("confidence") == "verified" and not is_machine_row(e)}
+
+
 def claim_to_row(event_id: str, c: Claim) -> dict:
     return {
         "event_id": event_id, "source_url": c.source_url,

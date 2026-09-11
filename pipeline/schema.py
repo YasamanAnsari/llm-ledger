@@ -65,14 +65,6 @@ SOURCE_TYPES = {
 
 CONFIDENCES = {"verified", "inferred", "disputed"}
 
-# Derived per model by build.py from its events (see compute_derived):
-#   human_reviewed       a named person verified a curated event
-#   curated              the project (or its LLM agent) verified a curated
-#                        event read from a primary page
-#   machine_corroborated at least one machine event reached verified
-#   unreviewed           machine claims only, none corroborated
-REVIEW_STATUSES = {"unreviewed", "machine_corroborated", "curated", "human_reviewed"}
-
 CROSSWALK_NAMESPACES = {
     "openrouter", "models_dev", "huggingface", "modelscope", "openai_api",
     "anthropic_api", "google_api", "mistral_api", "epoch", "wikipedia",
@@ -161,7 +153,7 @@ MODELS = Table(
         "parent_model_id", "snapshot_of", "predecessor_id", "successor_id",
         "first_public_availability_date", "first_availability_via",
         "first_availability_confidence",
-        "anticipation_days", "review_status", "record_created",
+        "anticipation_days", "record_created",
         "record_updated", "notes",
     ),
     pk=("model_id",),

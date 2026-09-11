@@ -15,7 +15,7 @@ def _tables():
     def m(mid, **o):
         return {c: "" for c in schema.MODELS.columns} | {
             "model_id": mid, "developer_org_id": "acme", "model_type": "llm",
-            "access_type": "open_weights", "is_derivative": "false", "review_status": "unreviewed"} | o
+            "access_type": "open_weights", "is_derivative": "false"} | o
 
     def e(eid, mid, et, d, st="hf_hub", **o):
         return {c: "" for c in schema.EVENTS.columns} | {

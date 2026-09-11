@@ -11,11 +11,14 @@ ids for packaging variants changed; v2026.09 remains available as a tag.
 
 Policy (every rule below is enforced by a validation rule or a test):
 
-- `review_status` gains `curated`: the project (or its LLM agent, signed
-  `llm-ledger-agent`) read a primary page. `human_reviewed` now requires
-  a named person in `verified_by`; no row qualifies yet, and the docs
-  say so. Before this release every curated row was reported as
-  human-reviewed.
+- `models.review_status` is removed. Its levels were a roll-up of
+  `events.confidence`, `source_type` and `verified_by`, and its top
+  level (`human_reviewed`) never applied: no event has been signed by a
+  named person. The one thing it did internally, telling loaders which
+  models are curated so their `family`, `variant_role` and `access_type`
+  are left alone, is now `confidence.curated_model_ids`, computed from
+  the events on every run. The coverage report counts models as
+  curated / corroborated / single-source instead.
 - `first_public_availability_date` ignores `quarter`/`year` placeholders
   (8 models lose a Jan-1 headline date); new derived column
   `first_availability_confidence`.
@@ -82,8 +85,9 @@ Policy (every rule below is enforced by a validation rule or a test):
   three days and skip days whose pull left no payload.
 
 Table sizes: models 1215 -> 1135, events 2029 -> 1874, claims 2777 -> 2884,
-crosswalk 2225 -> 2133, attributes 424 -> 390. Migration:
-`pipeline/migrate_v2026_10.py` (idempotent; dry-run and verbose flags).
+crosswalk 2225 -> 2133, attributes 424 -> 390. The v2026.09 tables were
+repaired by a one-time script (since deleted); every rule it applied is
+enforced by the loaders and validation from this release on.
 
 ## 2026-09-10
 

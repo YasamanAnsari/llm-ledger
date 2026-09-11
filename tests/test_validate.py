@@ -35,7 +35,7 @@ def _model(**overrides):
         "derivative_type": "", "base_model_id": "", "parent_model_id": "",
         "snapshot_of": "", "predecessor_id": "", "successor_id": "",
         "first_public_availability_date": "", "first_availability_via": "",
-        "anticipation_days": "", "review_status": "unreviewed",
+        "anticipation_days": "",
         "record_created": "2026-01-01T00:00:00+00:00",
         "record_updated": "2026-01-01T00:00:00+00:00", "notes": "",
     }
@@ -183,10 +183,6 @@ def test_rule1_and_rule8_claims_table() -> None:
     bad = dict(orphan, event_id="acme-1-api_ga-1", bound="maybe", date="2025-1-1")
     errs = _errors(_tables(events=[_event(source_type="api_metadata")], claims=[bad]))
     assert any("bound" in e for e in errs) and any("not ISO" in e for e in errs)
-
-
-def test_rule8_review_status_required() -> None:
-    assert any("review_status" in e for e in _errors(_tables(models=[_model(review_status="")])))
 
 
 def test_rule8_event_id_format():

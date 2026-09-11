@@ -17,7 +17,7 @@ TODAY, NOW = date(2026, 10, 1), "2026-10-01T00:00:00+00:00"
 def _tables():
     m = {c: "" for c in schema.MODELS.columns} | {
         "model_id": "gpt-4o", "developer_org_id": "openai", "model_type": "llm",
-        "access_type": "api_only", "is_derivative": "false", "review_status": "unreviewed"}
+        "access_type": "api_only", "is_derivative": "false"}
     return {"organizations": [], "models": [m], "events": [], "claims": [],
             "crosswalk": [], "attributes": []}
 

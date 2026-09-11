@@ -80,11 +80,11 @@ every claim it weighed is kept in `data/core/claims.csv`.
   pre-staging (a repo or model object created ahead of launch) and is
   not loaded at all.
 
-Per model, `review_status` summarizes this: `human_reviewed` (a named
-person), `curated` (the project read a primary page), `machine_corroborated`,
-or `unreviewed`. Most rows are `unreviewed` catalog drafts; no row is
-`human_reviewed` until a person signs one. See `data/generated/coverage_report.md` for the honest
-per-lab picture and `disagreement_report.md` for where catalogs differ.
+There is no per-model review grade: the event rows carry everything
+(`confidence`, `source_type`, `verified_by`), and no event has been signed
+by a named person yet. Most models rest on a single source. See
+`data/generated/coverage_report.md` for the honest per-lab picture and
+`disagreement_report.md` for where catalogs differ.
 
 ## How we update
 

@@ -129,11 +129,11 @@ print(gap.describe())
 
 For research:
 
-- **Filter first.** `models.review_status in {human_reviewed, curated,
-  machine_corroborated}` and `events.confidence == "verified"` is the
-  defensible sample; `first_availability_confidence` says how the
-  headline date was reached. Only `human_reviewed` means a named person
-  checked a page. The rest is a good lead list, not a fact list.
+- **Filter first.** `events.confidence == "verified"` is the defensible
+  sample; `models.first_availability_confidence` says how the headline
+  date was reached, and `events.verified_by` says who signed it (so far
+  only the project and its agent, never a named person). The rest is a
+  good lead list, not a fact list.
 - **Pick the event that answers your question.** Adoption shocks:
   `api_ga` for developers, `weights_released` for the open ecosystem,
   `consumer_rollout` / `free_tier` for the public. `announced` is when
@@ -151,7 +151,7 @@ For research:
 <!-- stats:start -->
 Exact counts as of the last rebuild: 1135 models from 41 organizations, 1874 dated events, backed by 2884 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 82% of the models are open-weight; Chinese labs make up 49% of those.
 
-Read the counts honestly. 0 models are `human_reviewed` (a named person checked a primary page); 5% are `curated` (the project read a primary page such as a vendor blog or deprecation table); 50% are `machine_corroborated` (two independent sources agreed, or a platform reported its own listing); the remaining 45% are `unreviewed` catalog drafts. 50% of events are `verified`, and 30% of those are a platform's own listing timestamp; 0 were checked by a named person.
+Read the counts honestly. 50% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 30% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 5% have a verified event read from a primary page such as a vendor blog or deprecation table, 50% have only machine-corroborated events, and the remaining 45% rest on a single source. Filter on `events.confidence` before treating a date as settled.
 <!-- stats:end -->
 
 Per-lab detail is in [`coverage_report.md`](data/generated/coverage_report.md),

@@ -48,7 +48,7 @@ import orgs_seed
 import repair
 import schema
 from confidence import (
-    Claim, curated_announcement, earliest_availability, flatten_claims,
+    Claim, curated_announcement, curated_model_ids, earliest_availability, flatten_claims,
     group_claims, index_events, upsert_machine_event, withdraw_machine_announced_after,
     withdraw_machine_event,
 )
@@ -268,7 +268,6 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
         "license_family": "" if open_weights else "proprietary",
         "is_derivative": "true" if derivative else "false",
         "derivative_type": derivative,
-        "review_status": "unreviewed",
         "record_created": now,
         "record_updated": now,
         "notes": "from catalog metadata; identity and lineage unreviewed",
@@ -456,6 +455,7 @@ def main() -> int:
     events = tables["events"]
     event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
+    curated_ids = curated_model_ids(events)
 
     added_models = 0
     outcomes = Counter()
@@ -476,7 +476,7 @@ def main() -> int:
                     mid = identity.get((ns, ident)) if ident else None
                     if mid and models_by_id.get(mid, {}).get("notes") == \
                             "from catalog metadata; identity and lineage unreviewed" \
-                            and models_by_id[mid]["review_status"] in ("unreviewed", "machine_corroborated"):
+                            and mid not in curated_ids:
                         descoped.add(mid)
             continue
 
@@ -564,7 +564,7 @@ def main() -> int:
                "consumer_rollout", "api_preview", "free_tier"}
     anchored = {e["model_id"] for e in events if e["event_type"] in anchors}
     orphans = {m["model_id"] for m in models_by_id.values()
-               if m["model_id"] not in anchored and m["review_status"] in ("unreviewed", "machine_corroborated")
+               if m["model_id"] not in anchored and m["model_id"] not in curated_ids
                and m["notes"] == "from catalog metadata; identity and lineage unreviewed"}
     outcomes["descoped-withdrawn"] += len(descoped - orphans)
     orphans |= descoped

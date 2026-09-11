@@ -65,7 +65,7 @@ A base checkpoint and its instruct or chat checkpoint are two models.
 |---|---|---|
 | `model_id` | string PK | slug, stable, never reused (e.g. `openai-o3`) |
 | `canonical_name` | string | display name |
-| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3`. Read off the name (`schema.family_and_role`: size, role, tier, format and date tokens removed) unless the model is `curated` or `human_reviewed`, whose curated value stands |
+| `family` | string | e.g. `GPT-5`, `Claude 4`, `Qwen3`. Read off the name (`schema.family_and_role`: size, role, tier, format and date tokens removed) unless the model is curated (see below), whose value stands |
 | `variant_role` | enum nullable | `base, mini, nano, pro, thinking, instruct, chat, coder, vision`; same derivation as `family`; empty when the name does not say |
 | `developer_org_id` | FK to organizations | |
 | `model_type` | enum | `llm, vlm, multimodal, image_gen, video_gen, audio, embedding` |
@@ -84,13 +84,16 @@ A base checkpoint and its instruct or chat checkpoint are two models.
 | `first_availability_via` | enum DERIVED | which event won |
 | `first_availability_confidence` | enum DERIVED | `confidence` of the event that set the date; empty when undated |
 | `anticipation_days` | int DERIVED | first availability minus announced |
-| `review_status` | enum DERIVED | `human_reviewed` (a named person verified a curated event), `curated` (the project or its LLM agent verified an event read from a primary page), `machine_corroborated` (a machine event reached `verified`), `unreviewed` (single-source machine claims only) |
 | `record_created` / `record_updated` | ISO datetime | |
 | `notes` | string | |
 
 Derived columns are recomputed by `pipeline/build.py` on every run and must
-never be hand-edited. Filter on `review_status` before treating a model's
-dates as settled; most rows are `unreviewed` catalog drafts.
+never be hand-edited. Filter on `events.confidence` (or
+`first_availability_confidence`) before treating a model's dates as settled;
+most rows are single-source catalog drafts. A model whose verified event was
+read from a primary page (any non-machine `source_type`) is curated: loaders
+never rewrite its `family`, `variant_role` or `access_type`
+(`confidence.curated_model_ids`).
 
 ## events.csv (the heart of the dataset)
 
@@ -222,7 +225,6 @@ added for models without a hand-written row.
   the date (`verified`, `inferred`, or `disputed`); empty when undated.
 - `anticipation_days` = `first_public_availability_date - announced.date`;
   null if either is missing or either precision is coarser than `month`.
-- `review_status` from the model's events (see models.csv).
 - All derived fields are recomputed by `pipeline/build.py` every run.
 
 ## Confidence semantics
@@ -267,7 +269,7 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   the identifying columns (`first_public_availability_date`,
   `first_availability_via`, `model_id`, `canonical_name`,
   `developer_org_id`, `family`, `variant_role`, `model_type`,
-  `access_type`, `license_family`, `review_status`), sorted newest first
+  `access_type`, `license_family`), sorted newest first
   (ties by `model_id`, undated models last). Values are identical to
   `models.csv`; the sparse curated columns stay there.
 - `data/generated/coverage_report.md` - per-organization model and event
@@ -319,7 +321,7 @@ rewrite the dataset.
    `announced`, availability, or `platform_availability` event.
 7. `snapshot_of` / `base_model_id` / `parent_model_id` links are acyclic.
 8. Controlled-vocabulary columns contain only allowed values; `platform` is
-   present on every `platform_availability` row; `review_status` is set.
+   present on every `platform_availability` row.
 9. Wide/enriched artifacts, `models_latest.csv`, the coverage and
    sensitivity reports and the README stats block regenerate
    byte-identically from core tables.

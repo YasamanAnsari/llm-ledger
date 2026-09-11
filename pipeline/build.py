@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
 import sensitivity
-from confidence import PROJECT_VERIFIERS, is_machine_row
+from confidence import PROJECT_VERIFIERS, curated_model_ids, is_machine_row
 from schema import (
     ATTRIBUTES, AVAILABILITY_EVENT_TYPES, EVENTS,
     FALLBACK_AVAILABILITY_EVENT_TYPES, GENERATED_DIR, MODELS,
@@ -93,6 +93,7 @@ def _pick_first(rows: list, priority: tuple) -> dict:
 def compute_derived(models: list, events: list) -> list:
     """Return models rows with spec-section-5 derived columns recomputed."""
     out, derived_family = [], []
+    curated_ids = curated_model_ids(events)
     for row in models:
         row = dict(row)
         mid = row["model_id"]
@@ -129,11 +130,10 @@ def compute_derived(models: list, events: list) -> list:
                          - date.fromisoformat(ann["date"])).days
                 anticipation = str(delta)
         row["anticipation_days"] = anticipation
-        row["review_status"] = _review_status(events, mid)
+        curated = mid in curated_ids
         # A machine-drafted row whose weights turned up on the Hub is open
         # weight whatever a reseller flag said; curated rows are a human call.
-        if (row["review_status"] in ("unreviewed", "machine_corroborated")
-                and row.get("access_type") == "api_only"
+        if (not curated and row.get("access_type") == "api_only"
                 and _earliest_global(events, mid, {"weights_released"})):
             row["access_type"] = "open_weights"
 
@@ -142,7 +142,6 @@ def compute_derived(models: list, events: list) -> list:
         # are filled. Recomputing (rather than filling once) means a better
         # parser reaches every machine row on the next build.
         family, role = schema.family_and_role(row.get("canonical_name") or mid)
-        curated = row["review_status"] in ("human_reviewed", "curated")
         if not (curated and row.get("family")):
             row["family"] = family
             derived_family.append(row)
@@ -163,22 +162,6 @@ def compute_derived(models: list, events: list) -> list:
         if row["family"]:
             row["family"] = spellings[row["family"].lower()].most_common(1)[0][0]
     return out
-
-
-def _review_status(events: list, model_id: str) -> str:
-    """human_reviewed: a named person verified a curated event; curated: the
-    project (or its agent) verified a curated event; machine_corroborated: a
-    machine event reached verified; else unreviewed."""
-    verified = [e for e in events
-                if e["model_id"] == model_id and e.get("confidence") == "verified"]
-    curated = [e for e in verified if not is_machine_row(e)]
-    if any(e.get("verified_by", "") not in PROJECT_VERIFIERS for e in curated):
-        return "human_reviewed"
-    if curated:
-        return "curated"
-    if verified:
-        return "machine_corroborated"
-    return "unreviewed"
 
 
 def _wide_columns(attr_columns: tuple) -> list:
@@ -237,7 +220,7 @@ LATEST_COLUMNS = (
     LATEST_DATE_COLUMN, "first_availability_via", "first_availability_confidence",
     "model_id", "canonical_name",
     "developer_org_id", "family", "variant_role", "model_type", "access_type",
-    "license_family", "review_status",
+    "license_family",
 )
 
 
@@ -317,12 +300,13 @@ README_STATS_END = "<!-- stats:end -->"
 def build_readme_stats(models: list, events: list, claims: list, organizations: list) -> str:
     """The README's headline paragraph, computed so it can never go stale."""
     n = len(models)
-    status = Counter(m["review_status"] for m in models)
     conf = Counter(e["confidence"] for e in events)
     verified = [e for e in events if e["confidence"] == "verified"]
     platform_own = sum(1 for e in verified if e["event_type"] == "platform_availability")
     by_person = sum(1 for e in verified
                     if e["verified_by"] not in PROJECT_VERIFIERS and not is_machine_row(e))
+    curated = len(curated_model_ids(events))
+    corroborated = len({e["model_id"] for e in verified}) - curated
     cn = {o["org_id"] for o in organizations if o["country"] == "CN"}
     open_w = [m for m in models if m["access_type"] == "open_weights"]
     dated = sorted(m["first_public_availability_date"] for m in models
@@ -339,15 +323,14 @@ def build_readme_stats(models: list, events: list, claims: list, organizations: 
         f"Chinese labs make up {pct(sum(m['developer_org_id'] in cn for m in open_w), len(open_w))} "
         f"of those.",
         "",
-        f"Read the counts honestly. {status['human_reviewed']} models are `human_reviewed` (a "
-        f"named person checked a primary page); {pct(status['curated'], n)} are `curated` (the "
-        f"project read a primary page such as a vendor blog or deprecation table); "
-        f"{pct(status['machine_corroborated'], n)} are `machine_corroborated` (two independent "
-        f"sources agreed, or a platform reported its own listing); the remaining "
-        f"{pct(status['unreviewed'], n)} are `unreviewed` catalog drafts. "
-        f"{pct(conf['verified'], len(events))} of events are `verified`, and "
-        f"{pct(platform_own, len(verified))} of those are a platform's own listing timestamp; "
-        f"{by_person} were checked by a named person.",
+        f"Read the counts honestly. {pct(conf['verified'], len(events))} of events are "
+        f"`verified` (two independent sources agreed within two days, or a platform reported "
+        f"its own listing); {pct(platform_own, len(verified))} of those are a platform's own "
+        f"listing timestamp, and {by_person} were checked by a named person. Per model: "
+        f"{pct(curated, n)} have a verified event read from a primary page such as a vendor "
+        f"blog or deprecation table, {pct(corroborated, n)} have only machine-corroborated "
+        f"events, and the remaining {pct(n - curated - corroborated, n)} rest on a single "
+        f"source. Filter on `events.confidence` before treating a date as settled.",
     ])
 
 
@@ -381,39 +364,40 @@ def build_coverage_report(models: list, events: list, organizations: list) -> st
     def pct(part: int, whole: int) -> str:
         return f"{100 * part / whole:.0f}%" if whole else "-"
 
-    statuses = ("human_reviewed", "curated", "machine_corroborated", "unreviewed")
+    curated = curated_model_ids(events)
+    corroborated = {e["model_id"] for e in events if e["confidence"] == "verified"} - curated
     lines = [
         "# Coverage report",
         "",
-        "Generated by `pipeline/build.py` from the core tables. `review_status` is",
-        "derived per model: `human_reviewed` when a named person verified an event,",
-        "`curated` when the project read a primary page (vendor blog, deprecation",
-        "table, arXiv) for at least one event, `machine_corroborated` when two",
-        "independent machine sources agreed or a platform reported its own event,",
-        "else `unreviewed` (a single aggregator claim). Filter on it before",
-        "treating a date as settled.",
+        "Generated by `pipeline/build.py` from the core tables. A model is",
+        "`curated` when at least one of its verified events was read from a",
+        "primary page (vendor blog, deprecation table, arXiv), `corroborated` when",
+        "its only verified events are machine rows (two independent sources agreed",
+        "or a platform reported its own event), and `single-source` when no event",
+        "reached `verified`. Filter on `events.confidence` before treating a date",
+        "as settled.",
         "",
         f"- Models: {len(models)}; events: {len(events)}",
-        "- Review status: " + ", ".join(
-            f"{status} {sum(1 for m in models if m['review_status'] == status)}"
-            for status in statuses),
+        f"- Models: curated {len(curated)}, corroborated {len(corroborated)}, "
+        f"single-source {len(models) - len(curated) - len(corroborated)}",
         "- Event confidence: " + ", ".join(
             f"{c} {sum(1 for e in events if e['confidence'] == c)}"
             for c in ("verified", "inferred", "disputed")),
         "",
         "## By organization",
         "",
-        "| org | models | events | human_reviewed | curated | machine_corroborated | unreviewed | events verified |",
-        "|---|---|---|---|---|---|---|---|",
+        "| org | models | events | curated | corroborated | single-source | events verified |",
+        "|---|---|---|---|---|---|---|",
     ]
     for org_id, rows in sorted(by_org.items(), key=lambda kv: (-len(kv[1]), kv[0])):
         evs = [e for m in rows for e in events_by_model.get(m["model_id"], [])]
-        counts = {s: sum(1 for m in rows if m["review_status"] == s) for s in statuses}
+        ids = {m["model_id"] for m in rows}
+        n_curated, n_corroborated = len(ids & curated), len(ids & corroborated)
         verified = sum(1 for e in evs if e["confidence"] == "verified")
         lines.append(
             f"| {org_name.get(org_id, org_id)} | {len(rows)} | {len(evs)} | "
-            f"{counts['human_reviewed']} | {counts['curated']} | {counts['machine_corroborated']} | "
-            f"{counts['unreviewed']} | {pct(verified, len(evs))} |")
+            f"{n_curated} | {n_corroborated} | {len(rows) - n_curated - n_corroborated} | "
+            f"{pct(verified, len(evs))} |")
 
     lines += ["", "## By event type", "", "| event_type | rows | verified | inferred | disputed |",
               "|---|---|---|---|---|"]
