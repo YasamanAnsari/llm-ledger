@@ -103,3 +103,10 @@ def test_attributes_come_from_models_dev_without_guessing_reasoning_type() -> No
     assert (a["context_length"], a["price_input"], a["price_date"]) == ("128000", "1.5", "2026-09-01")
     a = reconcile.reconcile_cluster(_cluster(md_reasoning="false"), TODAY)["attributes"]
     assert a["reasoning_type"] == "none"
+
+
+def test_openrouter_expiration_is_scoped_to_openrouter() -> None:
+    ev = reconcile.reconcile_cluster(_cluster(or_expiration="2027-01-01"), TODAY)["events"]
+    retired = [e for e in ev if e["event_type"] == "retired"]
+    assert [e["platform"] for e in retired] == ["openrouter"]
+    assert retired[0]["claims"][0].first_party

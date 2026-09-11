@@ -19,7 +19,8 @@ metadata), and dated events. Every event date goes through
   not loaded, and a stale machine row is withdrawn.
 - OpenRouter `created` -> its own `platform_availability` (platform=
   openrouter) row: the platform's own timestamp for its own event.
-- OpenRouter expiration -> `retired` claim (far-future sentinels ignored).
+- OpenRouter expiration -> first-party `retired` on platform=openrouter
+  (far-future sentinels ignored).
 - Epoch publication date -> `announced`, only when it does not fall after
   any availability date (Epoch's "publication" is the earliest of
   paper/announcement/release, which is not always an announcement).
@@ -276,19 +277,18 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
         })
 
     # --- retirement -----------------------------------------------------------
-    retired_claims = []
     expiration = _parse(row["or_expiration"])
     if expiration and (expiration - today).days < EXPIRATION_SENTINEL_HORIZON_DAYS:
-        retired_claims.append(Claim(expiration, OPENROUTER_URL, "api_metadata",
-                                    label="openrouter expiration"))
+        # OpenRouter's expiry is the truth about OpenRouter's listing, nothing more.
+        events.append({"event_type": "retired", "platform": "openrouter",
+                       "claims": [Claim(expiration, OPENROUTER_URL, "api_metadata",
+                                        first_party=True, label="openrouter expiration")]})
     if vendor_rec and vendor_rec["shutdown"] and all(vendor_rec["shutdown"]):
         shutdown = max(filter(None, (_parse(d) for d in vendor_rec["shutdown"])), default=None)
         if shutdown:
-            retired_claims.append(Claim(shutdown, vendor_rec["url"], "api_metadata",
-                                        first_party=True, label=f"{vendor_rec['source']} shutdown"))
-    if retired_claims:
-        events.append({"event_type": "retired", "platform": "",
-                       "claims": retired_claims})
+            events.append({"event_type": "retired", "platform": "",
+                           "claims": [Claim(shutdown, vendor_rec["url"], "api_metadata",
+                                            first_party=True, label=f"{vendor_rec['source']} shutdown")]})
 
     if not events:
         return None  # no dated claim -> no row (rule: no date, no event)
