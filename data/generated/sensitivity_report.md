@@ -35,12 +35,12 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=76)
+- median 0d (IQR 0-1d, n=78)
 - range: 0d to 185d
 
 | gap | models |
 |---|---|
-| same day | 52 |
+| same day | 54 |
 | 1-7d | 16 |
 | 8-30d | 1 |
 | 31-90d | 1 |
@@ -146,4 +146,4 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 ## Coverage
 
 - models with an anchor event: 1120
-- models with announced + an availability event: 184
+- models with announced + an availability event: 186

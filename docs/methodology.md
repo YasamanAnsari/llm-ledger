@@ -17,8 +17,8 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    Baidu, Tencent, MiniMax, ByteDance, Meituan, Xiaomi, 01.AI, Baichuan,
    iFlytek, StepFun, Shanghai AI Lab, OpenBMB, IEIT, Skywork, RWKV,
    Ant Group
-3. Other open-weight models (Hugging Face; ModelScope if we have a
-   login)
+3. Other open-weight models (Hugging Face; ModelScope for the Chinese
+   labs)
 4. Older models (GPT-1/2/3, BERT era), usually as leads first
 
 ## How we date a row
@@ -31,8 +31,14 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    when the repo was *created*, and labs create repos private and flip
    them public at launch. Across the models where we have both, the repo
    predates the launch in 16 of 20 cases, by up to three weeks. So a Hub
-   timestamp alone is `inferred`; it becomes `verified` only when the
-   first public Wayback capture of the repo lands within two days of it.
+   timestamp alone is `inferred`; it becomes `verified` only when an
+   independent bound lands within two days of it: the first public
+   Wayback capture of the repo, or the lab's twin repo on ModelScope
+   (swept through its public search; its creation time is a bound like
+   the Hub's). A bound that trails the Hub date by more than two days is
+   lag (a late crawl, a mirror made months later) and is only noted; one
+   that leads it keeps the row `inferred`, because the weights may have
+   been public there first. The Hub row keeps the date either way.
    A capture alone never dates anything, and a capture that predates the
    repo's creation means the repo was deleted and recreated or renamed:
    the capture is discarded and the case queued (`hf_recreated_repo`).
@@ -115,5 +121,7 @@ match. We keep that bar high on purpose.
   Hub is sweepable and vendor blogs are not.
 - Wayback first captures lag by months for small repos, so many Hub
   dates stay `inferred` even when they are right.
-- No ModelScope token: we use Hugging Face instead of inventing rows.
+- ModelScope is swept for the Chinese labs' namespaces only; a Hub
+  model whose lab has no ModelScope presence gets no twin and stays
+  `inferred` until a capture or a curated source dates it.
 - `region=global` unless a source says otherwise.

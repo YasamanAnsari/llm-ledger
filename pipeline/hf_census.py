@@ -13,9 +13,12 @@ For each included repo:
   creation is a LOWER BOUND on public release (labs create repos private
   and flip them later), so on its own the claim is `inferred`. When
   pull_wayback.py has recorded the first public Wayback capture of the
-  repo page and it agrees within confidence.BOUND_AGREE_DAYS, the row
-  becomes `verified` by llm-ledger. The 2022-03-02 HF backfill artifact is
-  queued for review, never used.
+  repo page, or pull_modelscope.py the lab's twin repo on ModelScope, and
+  it agrees within confidence.BOUND_AGREE_DAYS, the row becomes `verified`
+  by llm-ledger. The 2022-03-02 HF backfill artifact is queued for review,
+  never used.
+- queues one lead per Hub namespace that has in-scope repos but no org
+  mapping, so a new lab is noticed rather than skipped.
 """
 
 from __future__ import annotations
@@ -64,6 +67,19 @@ def load_wayback_captures() -> dict:
                 for r in csv.DictReader(fh) if r["first_capture_date"]}
 
 
+def load_modelscope_twins() -> dict:
+    """(org_id, repo name lowercased) -> (created date, url) from the latest
+    pull_modelscope snapshot; empty when none has been pulled."""
+    try:
+        path = schema.snapshot_file("modelscope", "normalized.csv")
+    except FileNotFoundError:
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        return {(r["org_id"], r["repo_id"].split("/")[-1].lower()):
+                (r["created_at"], f"https://modelscope.cn/models/{r['repo_id']}")
+                for r in csv.DictReader(fh) if r["created_at"]}
+
+
 def classify(key: str, org_id: str) -> str:
     """own: the publisher's model. mirror: another lab's model re-hosted
     (family opens the name, publisher never named). derivative: a build on
@@ -106,14 +122,17 @@ def unmapped_namespace_leads(repos: list) -> list:
     } for ns, n in sorted(counts.items())]
 
 
-def census(repos: list, tables: dict, captures: dict, today: date, now: str) -> tuple:
+def census(repos: list, tables: dict, captures: dict, today: date, now: str,
+           modelscope: dict | None = None) -> tuple:
     """Load the Hub sweep into `tables` (mutated in place).
 
     `repos` are pull_hf rows, `captures` repo_id -> first Wayback capture
-    date. Returns (outcomes, review_rows): outcome counts from the
-    confidence policy plus the census's own counters, and the rows that
-    need a person.
+    date, `modelscope` (org_id, repo name) -> (created, url) for the same
+    lab's repos there. Returns (outcomes, review_rows): outcome counts
+    from the confidence policy plus the census's own counters, and the
+    rows that need a person.
     """
+    modelscope = modelscope or {}
     models_by_id = {m["model_id"]: m for m in tables["models"]}
     org_ids = {o["org_id"] for o in tables["organizations"]}
     hf_xw = {r["identifier"]: r["model_id"] for r in tables["crosswalk"]
@@ -256,6 +275,13 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str) -> 
                 date.fromisoformat(captures[repo_id]),
                 f"https://web.archive.org/web/{captures[repo_id].replace('-', '')}/{repo_url}",
                 "wayback", bound=True, label="first public capture"))
+        # The same lab's twin repo on ModelScope: an independent creation
+        # timestamp. Two creations within BOUND_AGREE_DAYS corroborate.
+        twin = modelscope.get((models_by_id[model_id]["developer_org_id"],
+                               repo_id.split("/")[-1].lower()))
+        if twin:
+            claims.append(Claim(date.fromisoformat(twin[0]), twin[1], "modelscope",
+                                bound=True, label="modelscope repo created"))
         floor = curated_announcement(event_index, model_id)
         outcome = upsert_machine_event(
             events, event_index, claims_by_event, model_id, "weights_released", claims,
@@ -305,10 +331,11 @@ def main() -> int:
         repos = list(csv.DictReader(fh))
     tables = schema.load_core()
     captures = load_wayback_captures()
+    twins = load_modelscope_twins()
 
     outcomes, review_rows = census(
         repos, tables, captures, date.today(),
-        datetime.now(timezone.utc).isoformat(timespec="seconds"))
+        datetime.now(timezone.utc).isoformat(timespec="seconds"), modelscope=twins)
 
     for table in (ORGANIZATIONS, MODELS, EVENTS, CLAIMS, CROSSWALK):
         schema.write_table(table, tables[table.name])
@@ -318,7 +345,8 @@ def main() -> int:
           f"{outcomes['capped']} after per-org cap; +{outcomes['models']} models, "
           f"+{outcomes['added']} weights events ({outcomes['updated']} refreshed, "
           f"{outcomes['skipped']} curated left alone), +{outcomes['crosswalk']} crosswalk rows, "
-          f"{len(captures)} Wayback captures available, {len(review_rows)} queued for review")
+          f"{len(captures)} Wayback captures and {len(twins)} ModelScope twins available, "
+          f"{len(review_rows)} queued for review")
     return 0
 
 

@@ -92,8 +92,10 @@ Operating rules that fall out of this:
   stay tracked when they fall out of the top 40.
 - Names: exact match first. Fuzzy score >= 97 joins; 92-97 waits for a
   person; below 92 is no match.
-- We looked for Chinese labs on purpose. ModelScope needs a login; we
-  skip it rather than invent rows. Vendor APIs skip if there is no key.
+- We looked for Chinese labs on purpose: their Hugging Face namespaces
+  are swept, and ModelScope's public search is swept for the same labs
+  so a twin repo can corroborate a Hub date. Vendor APIs skip if there
+  is no key.
 - A name on Wikipedia or a community timeline is a lead, not a fact. It
   sits in `data/staging/review_queue.csv` until a vendor page, Hub
   timestamp, or arXiv v1 backs it.
@@ -146,9 +148,9 @@ For research:
 ## How much is in it
 
 <!-- stats:start -->
-Exact counts as of the last rebuild: 1135 models from 41 organizations, 1872 dated events, backed by 2558 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 82% of the models are open-weight; Chinese labs make up 49% of those.
+Exact counts as of the last rebuild: 1135 models from 41 organizations, 1874 dated events, backed by 2884 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 82% of the models are open-weight; Chinese labs make up 49% of those.
 
-Read the counts honestly. 0 models are `human_reviewed` (a named person checked a primary page); 5% are `curated` (the project read a primary page such as a vendor blog or deprecation table); 43% are `machine_corroborated` (two independent sources agreed, or a platform reported its own listing); the remaining 53% are `unreviewed` catalog drafts. 45% of events are `verified`, and 33% of those are a platform's own listing timestamp; 0 were checked by a named person.
+Read the counts honestly. 0 models are `human_reviewed` (a named person checked a primary page); 5% are `curated` (the project read a primary page such as a vendor blog or deprecation table); 50% are `machine_corroborated` (two independent sources agreed, or a platform reported its own listing); the remaining 45% are `unreviewed` catalog drafts. 50% of events are `verified`, and 30% of those are a platform's own listing timestamp; 0 were checked by a named person.
 <!-- stats:end -->
 
 Per-lab detail is in [`coverage_report.md`](data/generated/coverage_report.md),

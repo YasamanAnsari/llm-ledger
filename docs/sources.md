@@ -20,7 +20,7 @@ Snapshots go under `data/raw/{source}/{date}/`. We commit a manifest
 | Amazon Bedrock | model lifecycle page | EOL dates | first-party `retired` on `bedrock` |
 | LiteLLM | `model_prices_and_context_window.json` | `deprecation_date` | corroborates retirements |
 | Epoch AI | `https://epoch.ai/data/all_ai_models.csv` | publication date; scale columns | `announced` claim; enrichment join |
-| ModelScope | OpenAPI | Chinese Hub metadata (needs OAuth) | |
+| ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | bound that corroborates the Hub `createdAt` (no token) |
 | arXiv | export API | paper v1 date | lookup tool for `paper_published` |
 
 Pullers with no key just skip. No fake rows. Every machine claim a row

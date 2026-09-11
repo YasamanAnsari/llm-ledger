@@ -157,6 +157,25 @@ def test_hub_creation_outranks_an_archive_capture() -> None:
     assert (a.source_type, a.date, a.confidence) == ("hf_hub", "2023-02-09", "inferred")
 
 
+def test_trailing_bound_is_lag_and_leading_bound_is_not() -> None:
+    MS = "https://modelscope.cn/models/org/repo"
+    hub = _c("2023-05-04", HF, source_type="hf_hub", bound=True)
+    capture = _c("2023-05-06", WB, source_type="wayback", bound=True)
+    # A mirror created 19 months later says nothing about the Hub release.
+    late_twin = _c("2024-12-12", MS, source_type="modelscope", bound=True)
+    a = assess([hub, capture, late_twin])
+    assert (a.confidence, a.date, a.source_type) == ("verified", "2023-05-04", "hf_hub")
+    assert "modelscope repo" not in a.notes or "2024-12-12" in a.notes
+    # A twin created 11 days EARLIER may have been public first: not verified.
+    early_twin = _c("2023-04-23", MS, source_type="modelscope", bound=True)
+    a = assess([hub, capture, early_twin])
+    assert (a.confidence, a.date) == ("inferred", "2023-05-04")
+    # A twin within the window corroborates and the Hub keeps the date.
+    near_twin = _c("2023-05-05", MS, source_type="modelscope", bound=True)
+    a = assess([hub, near_twin])
+    assert (a.confidence, a.date, a.source_type) == ("verified", "2023-05-04", "hf_hub")
+
+
 def test_withdraw_machine_event_only_when_every_claim_is_from_the_named_hosts() -> None:
     events, index, claims = [], {}, {}
     upsert_machine_event(events, index, claims, "m", "api_ga", [_c("2025-01-01", MD, label="models.dev")],

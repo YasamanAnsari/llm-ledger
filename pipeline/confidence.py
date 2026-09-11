@@ -36,7 +36,7 @@ PROJECT_VERIFIERS = {PROJECT_VERIFIER, AGENT_VERIFIER}
 # Rows with these source types are owned by the loaders and re-assessed on
 # every run. Any other source type means a person curated the row: never
 # touched by machine code.
-MACHINE_SOURCE_TYPES = {"hf_hub", "api_metadata", "lifecycle_table"}
+MACHINE_SOURCE_TYPES = {"hf_hub", "modelscope", "api_metadata", "lifecycle_table"}
 
 
 @dataclass(frozen=True)
@@ -83,11 +83,17 @@ def _describe(claims: list) -> str:
     return "; ".join(parts)
 
 
+# Among bounds, the artifact's own timestamp is the row's date; a twin repo
+# elsewhere or a crawl of the page corroborates it (or widens the spread)
+# but does not replace it.
+SECONDARY_BOUND_SOURCES = {"modelscope", "wayback"}
+
+
 def _rank(c: Claim) -> tuple:
     """Preference for the row's date: stated day > bracketing day > year
-    placeholder; among bounds the artifact's own timestamp beats a crawl of
-    it; first-party first; then earliest."""
-    return (c.precision != "day", c.bound, c.source_type == "wayback",
+    placeholder; among bounds the artifact's own timestamp beats a twin
+    repo or a crawl of it; first-party first; then earliest."""
+    return (c.precision != "day", c.bound, c.source_type in SECONDARY_BOUND_SOURCES,
             not c.first_party, c.date)
 
 
@@ -125,9 +131,14 @@ def assess(claims: list) -> Assessment:
 
     # Day-precision claims are compared to the day; a year placeholder only
     # disputes when it names a different year. Bounds (repo/registry
-    # creation, first crawl) corroborate when close and say nothing when
-    # far: a late crawl is lag, not disagreement. Only stated dates dispute.
+    # creation, first crawl) corroborate when close; one that trails the
+    # chosen date by more than the window is lag (a late crawl, a mirror
+    # created months later) and says nothing. A bound that LEADS the chosen
+    # date stays in: the artifact may have been public there first. Only
+    # stated dates dispute.
     comparable = [c for c in independent if c.precision == "day"] or independent
+    comparable = [c for c in comparable
+                  if not c.bound or (c.date - best.date).days <= BOUND_AGREE_DAYS]
     window = BOUND_AGREE_DAYS if any(c.bound for c in comparable) else AGREE_DAYS
     spread = (max(c.date for c in comparable) - min(c.date for c in comparable)).days
     stated_day = [c for c in comparable if not c.bound]
@@ -141,6 +152,8 @@ def assess(claims: list) -> Assessment:
                                   f"claim: {_describe(independent)}")
     if len(comparable) >= 2 and spread <= window:
         return result("verified", f"corroborated within {spread}d: {_describe(independent)}")
+    if len(comparable) < 2:
+        return result("inferred", f"single source, later bounds are lag: {_describe(independent)}")
     return result("inferred", f"claims differ by {spread}d: {_describe(independent)}")
 
 
