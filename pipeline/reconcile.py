@@ -456,6 +456,7 @@ def main() -> int:
     event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
     curated_ids = curated_model_ids(events)
+    events_at_start = {e["event_id"]: dict(e) for e in events}
 
     added_models = 0
     outcomes = Counter()
@@ -530,7 +531,6 @@ def main() -> int:
             if withdraw_machine_event(events, event_index, claims_by_event, model_id, stale,
                                       only_hosts={"models.dev"}):
                 outcomes["stale-type-withdrawn"] += 1
-                touched.add(model_id)
         # Availability first, so the announced claim can be checked against
         # every availability date on record (incl. the Hub census's).
         for ev in sorted(draft["events"], key=lambda e: e["event_type"] == "announced"):
@@ -538,9 +538,8 @@ def main() -> int:
                 ceiling = earliest_availability(event_index, model_id)
                 if ceiling is not None and ev["claims"][0].date > ceiling:
                     outcomes["announced-after-availability"] += 1
-                    if withdraw_machine_announced_after(
-                            events, event_index, claims_by_event, model_id, ceiling):
-                        touched.add(model_id)
+                    withdraw_machine_announced_after(
+                        events, event_index, claims_by_event, model_id, ceiling)
                     continue
             outcome = upsert_machine_event(
                 events, event_index, claims_by_event, model_id, ev["event_type"],
@@ -548,15 +547,19 @@ def main() -> int:
                 not_before=floor if ev["event_type"] in ("api_ga", "weights_released") else None,
                 next_id=schema.next_event_id)
             outcomes[outcome] += 1
-            if outcome in ("added", "updated", "withdrawn"):
-                touched.add(model_id)
         # A catalog may move availability in front of an `announced` row
         # drafted on an earlier run; the same rule applies to the stored row.
         ceiling = earliest_availability(event_index, model_id)
         if ceiling is not None and withdraw_machine_announced_after(
                 events, event_index, claims_by_event, model_id, ceiling):
             outcomes["announced-after-availability"] += 1
-            touched.add(model_id)
+
+    # Several catalog clusters can resolve to one model and take turns
+    # rewriting its machine event within a run; only a net change to the
+    # event rows marks the model updated.
+    events_now = {e["event_id"]: e for e in events}
+    touched |= {e["model_id"] for eid, e in events_at_start.items() if events_now.get(eid) != e}
+    touched |= {e["model_id"] for eid, e in events_now.items() if eid not in events_at_start}
 
     # A catalog that stops supporting a date leaves a machine-drafted row
     # with no availability or announcement: no date, no row (rule 6).
