@@ -154,7 +154,7 @@ def test_rule8_vocab_and_platform_contract():
 
     # A retirement scoped to one platform is legitimate.
     scoped_retirement = _tables(events=[_event(
-        event_id="acme-1-retired-1", event_type="retired", platform="aws_bedrock",
+        event_id="acme-1-retired-1", event_type="retired", platform="bedrock",
         date="2025-06-01")])
     assert not any("rule8" in e for e in _errors(scoped_retirement))
 
@@ -197,3 +197,12 @@ def test_rule8_event_id_format():
 def test_rule10_epoch_columns_blocked():
     errors = validate.check_rule10_no_epoch_columns({})
     assert errors == []  # real schema carries no Epoch-domain columns
+
+
+def test_rule8_platform_vocabulary():
+    bad = _tables(events=[_event(event_id="acme-1-retired-1", event_type="retired",
+                                 platform="aws_bedrock", date="2025-06-01")])
+    assert any("rule8" in e and "platform" in e for e in _errors(bad))
+    ok = _tables(events=[_event(event_id="acme-1-retired-1", event_type="retired",
+                                platform="bedrock", date="2025-06-01")])
+    assert not any("rule8" in e and "platform" in e for e in _errors(ok))

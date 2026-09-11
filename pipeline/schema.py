@@ -76,6 +76,13 @@ CROSSWALK_NAMESPACES = {
     "lmarena", "text_surface_forms",
 }
 
+# Hosting platforms an event may be scoped to. One spelling per host; the
+# loaders and curators both use these.
+PLATFORMS = {
+    "openrouter", "azure", "bedrock", "vertex", "together", "groq",
+    "fireworks", "deepinfra", "sagemaker", "github_models", "huggingface",
+}
+
 # HF license tags that are OSI-approved; everything else with a tag is
 # open_weights_restricted.
 LICENSE_OSI = {

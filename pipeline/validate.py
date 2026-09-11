@@ -24,7 +24,7 @@ from schema import (
     DERIVATIVE_TYPES, EPOCH_FORBIDDEN_COLUMN_TOKENS, EVENTS, EVENT_TYPES,
     FALLBACK_AVAILABILITY_EVENT_TYPES, FEATURE_ADDED_DETAILS,
     FIRST_AVAILABILITY_VIA, LICENSE_FAMILIES, MODALITIES, MODELS, MODEL_TYPES,
-    ORGANIZATIONS, ORG_TYPES, PRECISIONS, REASONING_TYPES,
+    ORGANIZATIONS, ORG_TYPES, PLATFORMS, PRECISIONS, REASONING_TYPES,
     REASONING_VISIBILITY, REVIEW_STATUSES, SOURCE_TYPES, VARIANT_ROLES,
     date_matches_precision,
 )
@@ -275,6 +275,7 @@ def check_rule8_vocabularies(tables: dict) -> list:
         # elsewhere (a retirement on Azure is not a retirement at OpenAI).
         if row.get("event_type") == "platform_availability" and not row.get("platform"):
             errors.append(f"rule8: {key} platform_availability requires platform")
+        check(key, "platform", row.get("platform", ""), PLATFORMS)
         if row.get("event_type") == "feature_added":
             check(key, "detail", row.get("detail", ""), FEATURE_ADDED_DETAILS, required=True)
         expected_prefix = f"{row.get('model_id', '')}-{row.get('event_type', '')}-"
