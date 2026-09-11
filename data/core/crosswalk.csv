@@ -12,7 +12,7 @@ ai21-jamba-mini-1-6,huggingface,ai21labs/AI21-Jamba-Mini-1.6
 ai21-jamba-reasoning-3b,huggingface,ai21labs/AI21-Jamba-Reasoning-3B
 ai21-jamba2-3b,huggingface,ai21labs/AI21-Jamba2-3B
 ai21-jamba2-mini,huggingface,ai21labs/AI21-Jamba2-Mini
-ai21-jamba2-mini-fp8,huggingface,ai21labs/AI21-Jamba2-Mini-FP8
+ai21-jamba2-mini,huggingface,ai21labs/AI21-Jamba2-Mini-FP8
 amazon-nova-lite,epoch,Amazon Nova Lite
 amazon-nova-lite,models_dev,sap-ai-core/amazon--nova-lite
 amazon-nova-micro,epoch,Amazon Nova Micro
@@ -32,7 +32,7 @@ baichuan-13b-chat,huggingface,baichuan-inc/Baichuan-13B-Chat
 baichuan-7b,huggingface,baichuan-inc/Baichuan-7B
 baichuan-m2-32b,huggingface,baichuan-inc/Baichuan-M2-32B
 baichuan-m3-235b,huggingface,baichuan-inc/Baichuan-M3-235B
-baichuan-m3-235b-fp8,huggingface,baichuan-inc/Baichuan-M3-235B-FP8
+baichuan-m3-235b,huggingface,baichuan-inc/Baichuan-M3-235B-FP8
 baichuan2-13b-base,huggingface,baichuan-inc/Baichuan2-13B-Base
 baichuan2-13b-chat,huggingface,baichuan-inc/Baichuan2-13B-Chat
 baichuan2-7b-base,huggingface,baichuan-inc/Baichuan2-7B-Base
@@ -102,15 +102,10 @@ claude-fable-5-1,anthropic_api,claude-fable-5-1
 claude-fable-5-1,epoch,Claude Fable 5.1
 claude-fable-5-1,models_dev,venice/claude-fable-5-1
 claude-fable-5-1,openrouter,anthropic/claude-fable-5.1
-claude-fable-latest,models_dev,edenai/anthropic/claude-fable-latest
-claude-fable-latest,models_dev,kilo/~anthropic/claude-fable-latest
-claude-fable-latest,openrouter,~anthropic/claude-fable-latest
 claude-haiku-4-5,anthropic_api,claude-haiku-4-5-20251001
 claude-haiku-4-5,epoch,Claude Haiku 4.5
 claude-haiku-4-5,models_dev,helicone/claude-haiku-4-5-20251001
 claude-haiku-4-5,openrouter,anthropic/claude-haiku-4.5
-claude-haiku-latest,models_dev,nano-gpt/anthropic/claude-haiku-latest
-claude-haiku-latest,openrouter,~anthropic/claude-haiku-latest
 claude-mythos-5,epoch,Claude Mythos 5
 claude-mythos-5,models_dev,azure/claude-mythos-5
 claude-opus-4,epoch,Claude Opus 4
@@ -140,8 +135,6 @@ claude-opus-5,epoch,Claude Opus 5
 claude-opus-5,models_dev,venice/claude-opus-5
 claude-opus-5,openrouter,anthropic/claude-opus-5
 claude-opus-5,wikipedia,Claude (language model)
-claude-opus-latest,models_dev,nano-gpt/anthropic/claude-opus-latest
-claude-opus-latest,openrouter,~anthropic/claude-opus-latest
 claude-sonnet-4,epoch,Claude Sonnet 4
 claude-sonnet-4,models_dev,abacus/claude-sonnet-4-20250514
 claude-sonnet-4,openrouter,anthropic/claude-sonnet-4
@@ -160,22 +153,18 @@ claude-sonnet-5,epoch,Claude Sonnet 5
 claude-sonnet-5,models_dev,anthropic/claude-sonnet-5
 claude-sonnet-5,openrouter,anthropic/claude-sonnet-5
 claude-sonnet-5,wikipedia,Claude (language model)
-claude-sonnet-latest,models_dev,nano-gpt/anthropic/claude-sonnet-latest
-claude-sonnet-latest,openrouter,~anthropic/claude-sonnet-latest
 codegeex4-all-9b,huggingface,zai-org/codegeex4-all-9b
-codellama-13b-instruct-hf,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
-codellama-34b-instruct-hf,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
-codellama-7b-hf,huggingface,meta-llama/CodeLlama-7b-hf
-codellama-7b-instruct-hf,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
+codellama-13b-instruct,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
+codellama-34b-instruct,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
+codellama-7b,huggingface,meta-llama/CodeLlama-7b-hf
+codellama-7b-instruct,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
 codestral,epoch,Codestral
 codestral,models_dev,vercel/mistral/codestral
 codestral-2508,models_dev,cortecs/codestral-2508
 codestral-2508,openrouter,mistralai/codestral-2508
-codestral-embed,epoch,Codestral Embed
-codestral-embed,models_dev,vercel/mistral/codestral-embed
 codex-mini,epoch,codex-mini
 codex-mini,models_dev,azure/codex-mini
-cogagent-vqa-hf,huggingface,zai-org/cogagent-vqa-hf
+cogagent-vqa,huggingface,zai-org/cogagent-vqa-hf
 cogvlm2-llama3-chat-19b,huggingface,zai-org/cogvlm2-llama3-chat-19B
 cohere-command-a,epoch,Cohere Command A
 cohere-command-a,models_dev,azure/cohere-command-a
@@ -184,8 +173,8 @@ cohere-command-a-reasoning,models_dev,sap-ai-core/cohere--command-a-reasoning
 cola-dlm,huggingface,ByteDance-Seed/Cola-DLM
 command-a,models_dev,kilo/cohere/command-a
 command-a,openrouter,cohere/command-a
-command-a-plus-05-2026-bf16,huggingface,CohereLabs/command-a-plus-05-2026-bf16
-command-a-plus-05-2026-fp8,huggingface,CohereLabs/command-a-plus-05-2026-fp8
+command-a-plus-05-2026,huggingface,CohereLabs/command-a-plus-05-2026-bf16
+command-a-plus-05-2026,huggingface,CohereLabs/command-a-plus-05-2026-fp8
 command-a-plus-05-2026-w4a4,huggingface,CohereLabs/command-a-plus-05-2026-w4a4
 command-a-reasoning-08-2025,huggingface,CohereLabs/command-a-reasoning-08-2025
 command-a-translate-08-2025,huggingface,CohereLabs/command-a-translate-08-2025
@@ -208,9 +197,6 @@ cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
 deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B-Preview
 deephermes-3-llama-3-8b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-8B-Preview
 deephermes-3-mistral-24b-preview,huggingface,NousResearch/DeepHermes-3-Mistral-24B-Preview
-deepseek-chat,models_dev,302ai/deepseek-chat
-deepseek-chat,models_dev,anyapi/deepseek/deepseek-chat
-deepseek-chat,openrouter,deepseek/deepseek-chat
 deepseek-chat-v3,models_dev,kilo/deepseek/deepseek-chat-v3-0324
 deepseek-chat-v3,openrouter,deepseek/deepseek-chat-v3-0324
 deepseek-chat-v3-1,models_dev,kilo/deepseek/deepseek-chat-v3.1
@@ -264,9 +250,9 @@ deepseek-r1-distill-qwen-7b,huggingface,deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
 deepseek-r1-distill-qwen-7b,models_dev,alibaba-cn/deepseek-r1-distill-qwen-7b
 deepseek-r1-zero,huggingface,deepseek-ai/DeepSeek-R1-Zero
 deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2
-deepseek-v2,huggingface,deepseek-ai/DeepSeek-V2-Chat
+deepseek-v2-chat,huggingface,deepseek-ai/DeepSeek-V2-Chat
 deepseek-v2-lite,huggingface,deepseek-ai/DeepSeek-V2-Lite
-deepseek-v2-lite,huggingface,deepseek-ai/DeepSeek-V2-Lite-Chat
+deepseek-v2-lite-chat,huggingface,deepseek-ai/DeepSeek-V2-Lite-Chat
 deepseek-v3,epoch,DeepSeek-V3
 deepseek-v3,huggingface,deepseek-ai/DeepSeek-V3
 deepseek-v3,huggingface,deepseek-ai/DeepSeek-V3-0324
@@ -282,7 +268,6 @@ deepseek-v3-1-terminus,epoch,DeepSeek-V3.1-Terminus
 deepseek-v3-1-terminus,huggingface,deepseek-ai/DeepSeek-V3.1-Terminus
 deepseek-v3-1-terminus,models_dev,nano-gpt/deepseek-ai/DeepSeek-V3.1-Terminus:thinking
 deepseek-v3-1-terminus,openrouter,deepseek/deepseek-v3.1-terminus
-deepseek-v3-1-terminus-w4afp8,huggingface,tencent/DeepSeek-V3.1-Terminus-W4AFP8
 deepseek-v3-2,epoch,DeepSeek-V3.2
 deepseek-v3-2,huggingface,deepseek-ai/DeepSeek-V3.2
 deepseek-v3-2,models_dev,iflowcn/deepseek-v3.2
@@ -299,8 +284,6 @@ deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731
 deepseek-v4-flash,models_dev,cline-pass/cline-pass/deepseek-v4-flash
 deepseek-v4-flash,openrouter,deepseek/deepseek-v4-flash
 deepseek-v4-flash-dspark,huggingface,deepseek-ai/DeepSeek-V4-Flash-DSpark
-deepseek-v4-flash-latest,models_dev,arcee/deepseek/deepseek-v4-flash-latest
-deepseek-v4-flash-latest,openrouter,~deepseek/deepseek-v4-flash-latest
 deepseek-v4-flash-vision-exp,huggingface,deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
 deepseek-v4-flash-vision-exp,models_dev,above/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,models_dev,crossmodel/deepseek/deepseek-v4-flash-vision-exp
@@ -329,51 +312,50 @@ doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
 doubao-seed-2-1-turbo,models_dev,nano-gpt/bytedance/doubao-seed-2.1-turbo
-ernie-4-5-0-3b-base-paddle,huggingface,baidu/ERNIE-4.5-0.3B-Base-Paddle
+ernie-4-5-0-3b,huggingface,baidu/ERNIE-4.5-0.3B-Paddle
+ernie-4-5-0-3b-base,huggingface,baidu/ERNIE-4.5-0.3B-Base-Paddle
 ernie-4-5-0-3b-base-pt,huggingface,baidu/ERNIE-4.5-0.3B-Base-PT
-ernie-4-5-0-3b-paddle,huggingface,baidu/ERNIE-4.5-0.3B-Paddle
 ernie-4-5-0-3b-pt,huggingface,baidu/ERNIE-4.5-0.3B-PT
 ernie-4-5-21b-a3b,epoch,ERNIE-4.5-21B-A3B
+ernie-4-5-21b-a3b,huggingface,baidu/ERNIE-4.5-21B-A3B-Paddle
 ernie-4-5-21b-a3b,models_dev,novita-ai/baidu/ernie-4.5-21B-a3b
-ernie-4-5-21b-a3b-base-paddle,huggingface,baidu/ERNIE-4.5-21B-A3B-Base-Paddle
+ernie-4-5-21b-a3b-base,huggingface,baidu/ERNIE-4.5-21B-A3B-Base-Paddle
 ernie-4-5-21b-a3b-base-pt,huggingface,baidu/ERNIE-4.5-21B-A3B-Base-PT
-ernie-4-5-21b-a3b-paddle,huggingface,baidu/ERNIE-4.5-21B-A3B-Paddle
 ernie-4-5-21b-a3b-pt,huggingface,baidu/ERNIE-4.5-21B-A3B-PT
 ernie-4-5-21b-a3b-thinking,huggingface,baidu/ERNIE-4.5-21B-A3B-Thinking
 ernie-4-5-300b-a47b,epoch,ERNIE-4.5-300B-A47B
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-Paddle
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP2-Paddle
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-FP8-Paddle
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-Paddle
+ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-W4A8C8-TP4-Paddle
+ernie-4-5-300b-a47b,models_dev,novita-ai/baidu/ernie-4.5-300b-a47b-paddle
 ernie-4-5-300b-a47b,models_dev,siliconflow/baidu/ERNIE-4.5-300B-A47B
-ernie-4-5-300b-a47b-2bits-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-Paddle
-ernie-4-5-300b-a47b-2bits-tp2-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP2-Paddle
-ernie-4-5-300b-a47b-2bits-tp4-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle
-ernie-4-5-300b-a47b-base-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-Paddle
+ernie-4-5-300b-a47b-base,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-Paddle
 ernie-4-5-300b-a47b-base-pt,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-PT
-ernie-4-5-300b-a47b-fp8-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-FP8-Paddle
-ernie-4-5-300b-a47b-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-Paddle
 ernie-4-5-300b-a47b-pt,huggingface,baidu/ERNIE-4.5-300B-A47B-PT
-ernie-4-5-300b-a47b-w4a8c8-tp4-paddle,huggingface,baidu/ERNIE-4.5-300B-A47B-W4A8C8-TP4-Paddle
 ernie-4-5-vl-28b-a3b,epoch,ERNIE-4.5-VL-28B-A3B
+ernie-4-5-vl-28b-a3b,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Paddle
 ernie-4-5-vl-28b-a3b,models_dev,novita-ai/baidu/ernie-4.5-vl-28b-a3b
-ernie-4-5-vl-28b-a3b-base-paddle,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Base-Paddle
+ernie-4-5-vl-28b-a3b-base,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Base-Paddle
 ernie-4-5-vl-28b-a3b-base-pt,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Base-PT
-ernie-4-5-vl-28b-a3b-paddle,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Paddle
 ernie-4-5-vl-28b-a3b-pt,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-PT
 ernie-4-5-vl-28b-a3b-thinking,huggingface,baidu/ERNIE-4.5-VL-28B-A3B-Thinking
+ernie-4-5-vl-424b-a47b,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Paddle
 ernie-4-5-vl-424b-a47b,models_dev,kilo/baidu/ernie-4.5-vl-424b-a47b
 ernie-4-5-vl-424b-a47b,openrouter,baidu/ernie-4.5-vl-424b-a47b
-ernie-4-5-vl-424b-a47b-base-paddle,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-Paddle
+ernie-4-5-vl-424b-a47b-base,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-Paddle
 ernie-4-5-vl-424b-a47b-base-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-PT
-ernie-4-5-vl-424b-a47b-paddle,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Paddle
 ernie-4-5-vl-424b-a47b-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-PT
 ernie-5-1,epoch,ERNIE 5.1
 ernie-5-1,models_dev,nano-gpt/ernie-5.1
-esm2-650m,epoch,ESM2-650M
-esm2-650m,models_dev,nvidia/meta/esm2-650m
 evoquality,huggingface,ByteDance/EvoQuality
 falcon-11b,huggingface,tiiuae/falcon-11B
 falcon-40b,huggingface,tiiuae/falcon-40b
-falcon-40b,huggingface,tiiuae/falcon-40b-instruct
+falcon-40b-instruct,huggingface,tiiuae/falcon-40b-instruct
 falcon-7b,huggingface,tiiuae/falcon-7b
-falcon-7b,huggingface,tiiuae/falcon-7b-instruct
+falcon-7b-instruct,huggingface,tiiuae/falcon-7b-instruct
 falcon-e-1b-base,huggingface,tiiuae/Falcon-E-1B-Base
 falcon-e-1b-instruct,huggingface,tiiuae/Falcon-E-1B-Instruct
 falcon-e-3b-base,huggingface,tiiuae/Falcon-E-3B-Base
@@ -396,7 +378,7 @@ falcon-h1-tiny-multilingual-100m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-Mult
 falcon-h1-tiny-r-0-6b,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B
 falcon-h1r-7b,huggingface,tiiuae/Falcon-H1R-7B
 falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b
-falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b-instruct
+falcon-mamba-7b-instruct,huggingface,tiiuae/falcon-mamba-7b-instruct
 falcon-mamba-tiny-dev,huggingface,tiiuae/falcon-mamba-tiny-dev
 falcon-rw-1b,huggingface,tiiuae/falcon-rw-1b
 falcon3-10b-base,huggingface,tiiuae/Falcon3-10B-Base
@@ -437,9 +419,6 @@ gemini-2-5-flash,epoch,Gemini 2.5 Flash
 gemini-2-5-flash,google_api,gemini-2.5-flash
 gemini-2-5-flash,models_dev,aihubmix/gemini-2.5-flash
 gemini-2-5-flash,openrouter,google/gemini-2.5-flash
-gemini-2-5-flash-image,google_api,gemini-2.5-flash-image
-gemini-2-5-flash-image,models_dev,abacus/gemini-2.5-flash-image
-gemini-2-5-flash-image,openrouter,google/gemini-2.5-flash-image
 gemini-2-5-flash-lite,epoch,Gemini 2.5 Flash-Lite
 gemini-2-5-flash-lite,google_api,gemini-2.5-flash-lite
 gemini-2-5-flash-lite,models_dev,anyapi/google/gemini-2.5-flash-lite
@@ -452,19 +431,10 @@ gemini-2-5-pro-preview,models_dev,kilo/google/gemini-2.5-pro-preview
 gemini-2-5-pro-preview,openrouter,google/gemini-2.5-pro-preview
 gemini-2-5-pro-preview-05-06,models_dev,nano-gpt/gemini-2.5-pro-preview-05-06
 gemini-2-5-pro-preview-05-06,openrouter,google/gemini-2.5-pro-preview-05-06
-gemini-3-1-flash-image,google_api,gemini-3.1-flash-image
-gemini-3-1-flash-image,models_dev,abacus/gemini-3.1-flash-image
-gemini-3-1-flash-image,openrouter,google/gemini-3.1-flash-image
-gemini-3-1-flash-image-preview,google_api,gemini-3.1-flash-image-preview
-gemini-3-1-flash-image-preview,models_dev,abacus/gemini-3.1-flash-image-preview
-gemini-3-1-flash-image-preview,openrouter,google/gemini-3.1-flash-image-preview
 gemini-3-1-flash-lite,epoch,Gemini 3.1 Flash-Lite
 gemini-3-1-flash-lite,google_api,gemini-3.1-flash-lite
 gemini-3-1-flash-lite,models_dev,poe/google/gemini-3.1-flash-lite
 gemini-3-1-flash-lite,openrouter,google/gemini-3.1-flash-lite
-gemini-3-1-flash-lite-image,google_api,gemini-3.1-flash-lite-image
-gemini-3-1-flash-lite-image,models_dev,edenai/google/gemini-3.1-flash-lite-image
-gemini-3-1-flash-lite-image,openrouter,google/gemini-3.1-flash-lite-image
 gemini-3-1-flash-lite-preview,google_api,gemini-3.1-flash-lite-preview
 gemini-3-1-flash-lite-preview,models_dev,zenmux/google/gemini-3.1-flash-lite-preview
 gemini-3-1-flash-lite-preview,openrouter,google/gemini-3.1-flash-lite-preview
@@ -508,22 +478,6 @@ gemini-3-flash-preview,models_dev,abacus/gemini-3-flash-preview
 gemini-3-flash-preview,openrouter,google/gemini-3-flash-preview
 gemini-3-pro,epoch,Gemini 3 Pro
 gemini-3-pro,models_dev,poe/google/gemini-3-pro
-gemini-3-pro-image,google_api,gemini-3-pro-image
-gemini-3-pro-image,models_dev,abacus/gemini-3-pro-image
-gemini-3-pro-image,openrouter,google/gemini-3-pro-image
-gemini-3-pro-image-preview,google_api,gemini-3-pro-image-preview
-gemini-3-pro-image-preview,models_dev,302ai/gemini-3-pro-image-preview
-gemini-3-pro-image-preview,openrouter,google/gemini-3-pro-image-preview
-gemini-embedding,epoch,Gemini Embedding
-gemini-embedding,models_dev,sap-ai-core/gemini-embedding
-gemini-exp,epoch,Gemini-Exp-1114
-gemini-exp,models_dev,nano-gpt/gemini-exp-1206
-gemini-flash-latest,google_api,gemini-flash-latest
-gemini-flash-latest,models_dev,kilo/~google/gemini-flash-latest
-gemini-flash-latest,openrouter,~google/gemini-flash-latest
-gemini-pro-latest,google_api,gemini-pro-latest
-gemini-pro-latest,models_dev,edenai/google/gemini-pro-latest
-gemini-pro-latest,openrouter,~google/gemini-pro-latest
 gemma-2-27b-it,epoch,Gemma 2 27B
 gemma-2-27b-it,huggingface,google/gemma-2-27b-it
 gemma-2-27b-it,models_dev,kilo/google/gemma-2-27b-it
@@ -573,77 +527,78 @@ glm-4-32b,huggingface,zai-org/GLM-4-32B-0414
 glm-4-32b,models_dev,nano-gpt/THUDM/GLM-4-32B-0414
 glm-4-5,epoch,GLM-4.5
 glm-4-5,huggingface,zai-org/GLM-4.5
+glm-4-5,huggingface,zai-org/GLM-4.5-FP8
 glm-4-5,models_dev,zenmux/z-ai/glm-4.5
 glm-4-5,openrouter,z-ai/glm-4.5
 glm-4-5,text_surface_forms,GLM
 glm-4-5,text_surface_forms,GLM-4.5
 glm-4-5-air,epoch,GLM-4.5-Air
 glm-4-5-air,huggingface,zai-org/GLM-4.5-Air
+glm-4-5-air,huggingface,zai-org/GLM-4.5-Air-FP8
 glm-4-5-air,models_dev,zenmux/z-ai/glm-4.5-air
 glm-4-5-air,openrouter,z-ai/glm-4.5-air
 glm-4-5-air-base,huggingface,zai-org/GLM-4.5-Air-Base
-glm-4-5-air-fp8,huggingface,zai-org/GLM-4.5-Air-FP8
-glm-4-5-fp8,huggingface,zai-org/GLM-4.5-FP8
 glm-4-5v,epoch,GLM-4.5V
 glm-4-5v,huggingface,zai-org/GLM-4.5V
+glm-4-5v,huggingface,zai-org/GLM-4.5V-FP8
 glm-4-5v,models_dev,huggingface/zai-org/GLM-4.5V
 glm-4-5v,openrouter,z-ai/glm-4.5v
-glm-4-5v-fp8,huggingface,zai-org/GLM-4.5V-FP8
 glm-4-6,epoch,GLM-4.6
 glm-4-6,huggingface,zai-org/GLM-4.6
+glm-4-6,huggingface,zai-org/GLM-4.6-FP8
 glm-4-6,models_dev,helicone/glm-4.6
 glm-4-6,openrouter,z-ai/glm-4.6
-glm-4-6-fp8,huggingface,zai-org/GLM-4.6-FP8
 glm-4-6v,huggingface,zai-org/GLM-4.6V
+glm-4-6v,huggingface,zai-org/GLM-4.6V-FP8
 glm-4-6v,models_dev,302ai/glm-4.6v
 glm-4-6v,openrouter,z-ai/glm-4.6v
 glm-4-6v-flash,huggingface,zai-org/GLM-4.6V-Flash
-glm-4-6v-fp8,huggingface,zai-org/GLM-4.6V-FP8
 glm-4-7,epoch,GLM-4.7
 glm-4-7,huggingface,zai-org/GLM-4.7
+glm-4-7,huggingface,zai-org/GLM-4.7-FP8
 glm-4-7,models_dev,302ai/glm-4.7
 glm-4-7,openrouter,z-ai/glm-4.7
 glm-4-7-flash,epoch,GLM 4.7 Flash
 glm-4-7-flash,huggingface,zai-org/GLM-4.7-Flash
 glm-4-7-flash,models_dev,huggingface/zai-org/GLM-4.7-Flash
 glm-4-7-flash,openrouter,z-ai/glm-4.7-flash
-glm-4-7-fp8,huggingface,zai-org/GLM-4.7-FP8
 glm-4-9b,epoch,GLM-4-9B-0414
 glm-4-9b,huggingface,zai-org/GLM-4-9B-0414
 glm-4-9b,huggingface,zai-org/glm-4-9b
 glm-4-9b,huggingface,zai-org/glm-4-9b-hf
 glm-4-9b,models_dev,nano-gpt/THUDM/GLM-4-9B-0414
-glm-4-9b-chat-1m-hf,huggingface,zai-org/glm-4-9b-chat-1m-hf
-glm-4-9b-chat-hf,huggingface,zai-org/glm-4-9b-chat-hf
+glm-4-9b-chat,huggingface,zai-org/glm-4-9b-chat-hf
+glm-4-9b-chat-1m,huggingface,zai-org/glm-4-9b-chat-1m-hf
 glm-4-plus,epoch,GLM-4-Plus
 glm-4-plus,models_dev,nano-gpt/glm-4-plus
 glm-4-plus,models_dev,nano-gpt/glm-4-plus-0111
 glm-5,epoch,GLM-5
 glm-5,huggingface,zai-org/GLM-5
+glm-5,huggingface,zai-org/GLM-5-FP8
 glm-5,models_dev,alibaba-cn/glm-5
 glm-5,openrouter,z-ai/glm-5
 glm-5-1,epoch,GLM-5.1
 glm-5-1,huggingface,zai-org/GLM-5.1
+glm-5-1,huggingface,zai-org/GLM-5.1-FP8
+glm-5-1,models_dev,nearai/zai-org/GLM-5.1-FP8
 glm-5-1,models_dev,novita-ai/zai-org/glm-5.1
 glm-5-1,openrouter,z-ai/glm-5.1
-glm-5-1-fp8,huggingface,zai-org/GLM-5.1-FP8
 glm-5-2,epoch,GLM-5.2
 glm-5-2,huggingface,zai-org/GLM-5.2
+glm-5-2,huggingface,zai-org/GLM-5.2-FP8
 glm-5-2,models_dev,cline-pass/cline-pass/glm-5.2
 glm-5-2,openrouter,z-ai/glm-5.2
-glm-5-2-fp8,huggingface,zai-org/GLM-5.2-FP8
 glm-5-3,epoch,GLM-5.3
 glm-5-3,huggingface,zai-org/GLM-5.3
+glm-5-3,huggingface,zai-org/GLM-5.3-BF16
 glm-5-3,models_dev,cline-pass/cline-pass/glm-5.3
 glm-5-3,openrouter,z-ai/glm-5.3
-glm-5-3-bf16,huggingface,zai-org/GLM-5.3-BF16
 glm-5-3-flash,epoch,GLM-5.3-Flash
 glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash
+glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash-BF16
 glm-5-3-flash,models_dev,cline-pass/cline-pass/glm-5.3-flash
 glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
 glm-5-3-flash,openrouter,z-ai/glm-5.3-flash
-glm-5-3-flash-bf16,huggingface,zai-org/GLM-5.3-Flash-BF16
-glm-5-fp8,huggingface,zai-org/GLM-5-FP8
 glm-5-turbo,models_dev,venice/z-ai-glm-5-turbo
 glm-5-turbo,openrouter,z-ai/glm-5-turbo
 glm-5v-turbo,models_dev,cortecs/glm-5v-turbo
@@ -651,15 +606,10 @@ glm-5v-turbo,openrouter,z-ai/glm-5v-turbo
 glm-edge-1-5b-chat,huggingface,zai-org/glm-edge-1.5b-chat
 glm-edge-4b-chat,huggingface,zai-org/glm-edge-4b-chat
 glm-edge-v-2b,huggingface,zai-org/glm-edge-v-2b
-glm-flash-latest,models_dev,kilo/~z-ai/glm-flash-latest
-glm-flash-latest,openrouter,~z-ai/glm-flash-latest
-glm-latest,models_dev,nano-gpt/z-ai/glm-latest
-glm-latest,models_dev,nano-gpt/zai-org/glm-latest
-glm-latest,openrouter,~z-ai/glm-latest
 glm-ocr,huggingface,zai-org/GLM-OCR
 glm-z1-32b,huggingface,zai-org/GLM-Z1-32B-0414
 glm-z1-9b,huggingface,zai-org/GLM-Z1-9B-0414
-got-ocr-2-0-hf,huggingface,stepfun-ai/GOT-OCR-2.0-hf
+got-ocr-2-0,huggingface,stepfun-ai/GOT-OCR-2.0-hf
 got-ocr2-0,huggingface,stepfun-ai/GOT-OCR2_0
 gpt-3,openai_api,davinci
 gpt-3,text_surface_forms,GPT-3
@@ -773,8 +723,6 @@ gpt-5-2,openai_api,gpt-5.2-2025-12-11
 gpt-5-2,openrouter,openai/gpt-5.2
 gpt-5-2,wikipedia,GPT-5.2
 gpt-5-2-chat,models_dev,kilo/openai/gpt-5.2-chat
-gpt-5-2-chat,openai_api,gpt-5.2
-gpt-5-2-chat,openai_api,gpt-5.2-2025-12-11
 gpt-5-2-chat,openrouter,openai/gpt-5.2-chat
 gpt-5-2-codex,epoch,GPT-5.2 Codex
 gpt-5-2-codex,models_dev,abacus/gpt-5.2-codex
@@ -789,8 +737,6 @@ gpt-5-3-codex,epoch,GPT-5.3 Codex
 gpt-5-3-codex,models_dev,abacus/gpt-5.3-codex
 gpt-5-3-codex,openai_api,gpt-5.3-codex
 gpt-5-3-codex,openrouter,openai/gpt-5.3-codex
-gpt-5-4-image-2,models_dev,kilo/openai/gpt-5.4-image-2
-gpt-5-4-image-2,openrouter,openai/gpt-5.4-image-2
 gpt-5-4-mini,epoch,GPT-5.4 Mini
 gpt-5-4-mini,models_dev,poe/openai/gpt-5.4-mini
 gpt-5-4-mini,openai_api,gpt-5.4-mini
@@ -847,10 +793,6 @@ gpt-5-codex,epoch,GPT-5-Codex
 gpt-5-codex,models_dev,helicone/gpt-5-codex
 gpt-5-codex,openai_api,gpt-5-codex
 gpt-5-codex,openrouter,openai/gpt-5-codex:batch
-gpt-5-image,models_dev,kilo/openai/gpt-5-image
-gpt-5-image,openrouter,openai/gpt-5-image
-gpt-5-image-mini,models_dev,kilo/openai/gpt-5-image-mini
-gpt-5-image-mini,openrouter,openai/gpt-5-image-mini
 gpt-5-mini,epoch,GPT-5 mini
 gpt-5-mini,models_dev,helicone/gpt-5-mini
 gpt-5-mini,openai_api,gpt-5-mini
@@ -881,16 +823,6 @@ gpt-audio-mini,openai_api,gpt-audio-mini
 gpt-audio-mini,openai_api,gpt-audio-mini-2025-10-06
 gpt-audio-mini,openai_api,gpt-audio-mini-2025-12-15
 gpt-audio-mini,openrouter,openai/gpt-audio-mini
-gpt-chat-latest,models_dev,nano-gpt/openai/gpt-chat-latest
-gpt-chat-latest,openrouter,openai/gpt-chat-latest
-gpt-image-2,epoch,GPT Image 2
-gpt-image-2,models_dev,digitalocean/openai-gpt-image-2
-gpt-image-2,openai_api,gpt-image-2
-gpt-image-2,openai_api,gpt-image-2-2026-04-21
-gpt-latest,models_dev,nano-gpt/openai/gpt-latest
-gpt-latest,openrouter,~openai/gpt-latest
-gpt-mini-latest,models_dev,edenai/openai/gpt-mini-latest
-gpt-mini-latest,openrouter,~openai/gpt-mini-latest
 gpt-neox-20b,huggingface,EleutherAI/gpt-neox-20b
 gpt-oss-120b,epoch,gpt-oss-120b
 gpt-oss-120b,huggingface,openai/gpt-oss-120b
@@ -983,8 +915,6 @@ grok-build-0-1,models_dev,aihubmix/grok-build-0.1
 grok-build-0-1,openrouter,x-ai/grok-build-0.1
 grok-code-fast-1,epoch,Grok Code Fast 1
 grok-code-fast-1,models_dev,helicone/grok-code-fast-1
-grok-latest,models_dev,nano-gpt/x-ai/grok-latest
-grok-latest,openrouter,~x-ai/grok-latest
 grok-voice-think-fast-1-0,epoch,Grok Voice Think Fast 1.0
 grok-voice-think-fast-1-0,models_dev,vercel/spacexai/grok-voice-think-fast-1.0
 hermes-2-pro-llama-3-8b,huggingface,NousResearch/Hermes-2-Pro-Llama-3-8B
@@ -1000,24 +930,24 @@ hermes-3-llama-3-1-70b,openrouter,nousresearch/hermes-3-llama-3.1-70b
 hermes-3-llama-3-1-8b,huggingface,NousResearch/Hermes-3-Llama-3.1-8B
 hermes-3-llama-3-2-3b,huggingface,NousResearch/Hermes-3-Llama-3.2-3B
 hermes-4-14b,huggingface,NousResearch/Hermes-4-14B
-hermes-4-14b-fp8,huggingface,NousResearch/Hermes-4-14B-FP8
+hermes-4-14b,huggingface,NousResearch/Hermes-4-14B-FP8
 hermes-4-3-36b,huggingface,NousResearch/Hermes-4.3-36B
 hermes-4-405b,huggingface,NousResearch/Hermes-4-405B
 hermes-4-405b,models_dev,nano-gpt/NousResearch/hermes-4-405b:thinking
 hermes-4-405b,openrouter,nousresearch/hermes-4-405b
 hermes-4-70b,huggingface,NousResearch/Hermes-4-70B
+hermes-4-70b,huggingface,NousResearch/Hermes-4-70B-FP8
 hermes-4-70b,models_dev,kilo/nousresearch/hermes-4-70b
 hermes-4-70b,models_dev,nano-gpt/NousResearch/hermes-4-70b
 hermes-4-70b,openrouter,nousresearch/hermes-4-70b
-hermes-4-70b-fp8,huggingface,NousResearch/Hermes-4-70B-FP8
 hils-attention-7b,huggingface,tencent/HiLS-Attention-7B
 hunyuan-0-5b-instruct,huggingface,tencent/Hunyuan-0.5B-Instruct
 hunyuan-1-8b-instruct,huggingface,tencent/Hunyuan-1.8B-Instruct
 hunyuan-7b-instruct,huggingface,tencent/Hunyuan-7B-Instruct
 hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct
+hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct-FP8
 hunyuan-a13b-instruct,models_dev,siliconflow/tencent/Hunyuan-A13B-Instruct
 hunyuan-a13b-instruct,openrouter,tencent/hunyuan-a13b-instruct
-hunyuan-a13b-instruct-fp8,huggingface,tencent/Hunyuan-A13B-Instruct-FP8
 hunyuan-a13b-pretrain,huggingface,tencent/Hunyuan-A13B-Pretrain
 hunyuan-large,huggingface,tencent/Tencent-Hunyuan-Large
 hunyuan-turbos,epoch,Hunyuan-TurboS
@@ -1032,23 +962,22 @@ hy-mt2-30b-a3b,models_dev,kilo/tencent/hy-mt2-30b-a3b
 hy-mt2-30b-a3b,openrouter,tencent/hy-mt2-30b-a3b
 hy-mt2-7b,models_dev,kilo/tencent/hy-mt2-7b
 hy-mt2-7b,openrouter,tencent/hy-mt2-7b
-hy3-fp8,huggingface,tencent/Hy3-FP8
 hy3-preview,huggingface,tencent/Hy3-preview
 hy3-preview,models_dev,aihubmix/hy3-preview
 hy3-preview,openrouter,tencent/hy3-preview
 hy4-preview,huggingface,tencent/Hy4-preview
+hy4-preview,huggingface,tencent/Hy4-preview-FP8
 hy4-preview,models_dev,crossmodel/tencent/hy4-preview
 hy4-preview,openrouter,tencent/hy4-preview
-hy4-preview-fp8,huggingface,tencent/Hy4-preview-FP8
 intern-s1,huggingface,internlm/Intern-S1
-intern-s1-fp8,huggingface,internlm/Intern-S1-FP8
+intern-s1,huggingface,internlm/Intern-S1-FP8
 intern-s1-mini,huggingface,internlm/Intern-S1-mini
 intern-s1-pro,huggingface,internlm/Intern-S1-Pro
 intern-s2-mobius,huggingface,internlm/Intern-S2-Mobius
-intern-s2-mobius-fp8,huggingface,internlm/Intern-S2-Mobius-FP8
+intern-s2-mobius,huggingface,internlm/Intern-S2-Mobius-FP8
 intern-s2-preview,huggingface,internlm/Intern-S2-Preview
+intern-s2-preview,huggingface,internlm/Intern-S2-Preview-FP8
 intern-s2-preview-397b,huggingface,internlm/Intern-S2-Preview-397B
-intern-s2-preview-fp8,huggingface,internlm/Intern-S2-Preview-FP8
 internlm-20b,huggingface,internlm/internlm-20b
 internlm-7b,huggingface,internlm/internlm-7b
 internlm-chat-20b,huggingface,internlm/internlm-chat-20b
@@ -1058,11 +987,11 @@ internlm-xcomposer2-7b,huggingface,internlm/internlm-xcomposer2-7b
 internlm2-1-8b,huggingface,internlm/internlm2-1_8b
 internlm2-20b,huggingface,internlm/internlm2-20b
 internlm2-5-1-8b,huggingface,internlm/internlm2_5-1_8b
-internlm2-5-1-8b,huggingface,internlm/internlm2_5-1_8b-chat
+internlm2-5-1-8b-chat,huggingface,internlm/internlm2_5-1_8b-chat
 internlm2-5-20b,huggingface,internlm/internlm2_5-20b
-internlm2-5-20b,huggingface,internlm/internlm2_5-20b-chat
+internlm2-5-20b-chat,huggingface,internlm/internlm2_5-20b-chat
 internlm2-5-7b,huggingface,internlm/internlm2_5-7b
-internlm2-5-7b,huggingface,internlm/internlm2_5-7b-chat
+internlm2-5-7b-chat,huggingface,internlm/internlm2_5-7b-chat
 internlm2-5-7b-chat-1m,huggingface,internlm/internlm2_5-7b-chat-1m
 internlm2-7b,huggingface,internlm/internlm2-7b
 internlm2-base-20b,huggingface,internlm/internlm2-base-20b
@@ -1111,8 +1040,6 @@ kimi-k3,huggingface,moonshotai/Kimi-K3
 kimi-k3,models_dev,cline-pass/cline-pass/kimi-k3
 kimi-k3,openrouter,moonshotai/kimi-k3
 kimi-k3,wikipedia,Kimi (AI)
-kimi-latest,models_dev,privatemode-ai/kimi-latest
-kimi-latest,openrouter,~moonshotai/kimi-latest
 kimi-linear-48b-a3b-base,huggingface,moonshotai/Kimi-Linear-48B-A3B-Base
 kimi-linear-48b-a3b-instruct,huggingface,moonshotai/Kimi-Linear-48B-A3B-Instruct
 kimi-vl-a3b-instruct,huggingface,moonshotai/Kimi-VL-A3B-Instruct
@@ -1157,6 +1084,8 @@ ling-2-6-flash,huggingface,inclusionAI/Ling-2.6-flash
 ling-2-6-flash,models_dev,requesty/ling-2.6-flash
 ling-2-6-flash-base,huggingface,inclusionAI/Ling-2.6-flash-base
 ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash
+ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash-fp8
+ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash-int4
 ling-3-0-flash,models_dev,kilo/inclusionai/ling-3.0-flash
 ling-3-0-flash,openrouter,inclusionai/ling-3.0-flash
 ling-3-0-flash-base,huggingface,inclusionAI/Ling-3.0-flash-base
@@ -1168,8 +1097,6 @@ ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin:free
-ling-3-0-flash-fp8,huggingface,inclusionAI/Ling-3.0-flash-fp8
-ling-3-0-flash-int4,huggingface,inclusionAI/Ling-3.0-flash-int4
 ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL
@@ -1189,47 +1116,39 @@ llada2-0-mini-preview,huggingface,inclusionAI/LLaDA2.0-mini-preview
 llada2-1-flash,huggingface,inclusionAI/LLaDA2.1-flash
 llada2-1-mini,huggingface,inclusionAI/LLaDA2.1-mini
 llada2-2-flash,huggingface,inclusionAI/LLaDA2.2-flash
-llama-2-13b-chat-hf,huggingface,NousResearch/Llama-2-13b-chat-hf
-llama-2-13b-chat-hf,huggingface,meta-llama/Llama-2-13b-chat-hf
-llama-2-13b-hf,huggingface,NousResearch/Llama-2-13b-hf
-llama-2-13b-hf,huggingface,meta-llama/Llama-2-13b-hf
+llama-2-13b,huggingface,meta-llama/Llama-2-13b-hf
+llama-2-13b-chat,huggingface,meta-llama/Llama-2-13b-chat-hf
 llama-2-70b,huggingface,meta-llama/Llama-2-70b
+llama-2-70b,huggingface,meta-llama/Llama-2-70b-hf
 llama-2-70b,text_surface_forms,LLaMA 2
 llama-2-70b,text_surface_forms,Llama 2
 llama-2-70b,text_surface_forms,Llama2
 llama-2-70b,wikipedia,Llama (language model)
-llama-2-70b-chat-hf,huggingface,NousResearch/Llama-2-70b-chat-hf
-llama-2-70b-chat-hf,huggingface,meta-llama/Llama-2-70b-chat-hf
-llama-2-70b-hf,huggingface,NousResearch/Llama-2-70b-hf
-llama-2-70b-hf,huggingface,meta-llama/Llama-2-70b-hf
-llama-2-7b-chat-hf,huggingface,NousResearch/Llama-2-7b-chat-hf
-llama-2-7b-chat-hf,huggingface,meta-llama/Llama-2-7b-chat-hf
-llama-2-7b-hf,huggingface,NousResearch/Llama-2-7b-hf
-llama-2-7b-hf,huggingface,meta-llama/Llama-2-7b-hf
+llama-2-70b-chat,huggingface,meta-llama/Llama-2-70b-chat-hf
+llama-2-7b,huggingface,meta-llama/Llama-2-7b-hf
+llama-2-7b-chat,huggingface,meta-llama/Llama-2-7b-chat-hf
 llama-3-1-405b,huggingface,meta-llama/Llama-3.1-405B
-llama-3-1-405b-fp8,huggingface,meta-llama/Llama-3.1-405B-FP8
+llama-3-1-405b,huggingface,meta-llama/Llama-3.1-405B-FP8
 llama-3-1-405b-instruct,epoch,Llama 3.1-405B
 llama-3-1-405b-instruct,huggingface,meta-llama/Llama-3.1-405B-Instruct
+llama-3-1-405b-instruct,huggingface,meta-llama/Llama-3.1-405B-Instruct-FP8
 llama-3-1-405b-instruct,models_dev,cortecs/llama-3.1-405b-instruct
 llama-3-1-405b-instruct,text_surface_forms,Llama 3.1
 llama-3-1-405b-instruct,wikipedia,Llama (language model)
-llama-3-1-405b-instruct-fp8,huggingface,meta-llama/Llama-3.1-405B-Instruct-FP8
-llama-3-1-70b,huggingface,NousResearch/Meta-Llama-3.1-70B
 llama-3-1-70b,huggingface,meta-llama/Llama-3.1-70B
 llama-3-1-70b-instruct,epoch,Llama 3.1-70B
-llama-3-1-70b-instruct,huggingface,NousResearch/Meta-Llama-3.1-70B-Instruct
 llama-3-1-70b-instruct,huggingface,meta-llama/Llama-3.1-70B-Instruct
 llama-3-1-70b-instruct,models_dev,nvidia/meta/llama-3.1-70b-instruct
 llama-3-1-70b-instruct,openrouter,meta-llama/llama-3.1-70b-instruct
-llama-3-1-8b,huggingface,NousResearch/Meta-Llama-3.1-8B
 llama-3-1-8b,huggingface,meta-llama/Llama-3.1-8B
 llama-3-1-8b-instruct,epoch,Llama 3.1-8B
-llama-3-1-8b-instruct,huggingface,NousResearch/Meta-Llama-3.1-8B-Instruct
 llama-3-1-8b-instruct,huggingface,meta-llama/Llama-3.1-8B-Instruct
+llama-3-1-8b-instruct,models_dev,nano-gpt/Meta-Llama-3-1-8B-Instruct-FP8
 llama-3-1-8b-instruct,models_dev,pioneer/meta-llama/Llama-3.1-8B-Instruct
 llama-3-1-8b-instruct,openrouter,meta-llama/llama-3.1-8b-instruct
-llama-3-1-nemotron-70b-instruct-hf,epoch,Llama-3.1-Nemotron-70B-Instruct
-llama-3-1-nemotron-70b-instruct-hf,models_dev,nano-gpt/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+llama-3-1-nemotron-70b-instruct,epoch,Llama-3.1-Nemotron-70B-Instruct
+llama-3-1-nemotron-70b-instruct,models_dev,nano-gpt/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+llama-3-1-nemotron-70b-instruct,models_dev,nvidia/nvidia/llama-3.1-nemotron-70b-instruct
 llama-3-1-nemotron-nano-8b-v1,huggingface,nvidia/Llama-3.1-Nemotron-Nano-8B-v1
 llama-3-1-nemotron-nano-vl-8b-v1,huggingface,nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1
 llama-3-1-tulu-3-8b,huggingface,allenai/Llama-3.1-Tulu-3-8B
@@ -1238,8 +1157,7 @@ llama-3-1-tulu-3-8b-sft,huggingface,allenai/Llama-3.1-Tulu-3-8B-SFT
 llama-3-2-11b-instruct,epoch,Llama 3.2 11B
 llama-3-2-11b-instruct,models_dev,llmgateway/llama-3.2-11b-instruct
 llama-3-2-11b-vision,huggingface,meta-llama/Llama-3.2-11B-Vision
-llama-3-2-11b-vision,huggingface,meta-llama/Llama-3.2-11B-Vision-Instruct
-llama-3-2-1b,huggingface,NousResearch/Llama-3.2-1B
+llama-3-2-11b-vision-instruct,huggingface,meta-llama/Llama-3.2-11B-Vision-Instruct
 llama-3-2-1b,huggingface,meta-llama/Llama-3.2-1B
 llama-3-2-1b-instruct,epoch,Llama 3.2 1B
 llama-3-2-1b-instruct,huggingface,meta-llama/Llama-3.2-1B-Instruct
@@ -1256,8 +1174,7 @@ llama-3-3-70b-instruct,huggingface,meta-llama/Llama-3.3-70B-Instruct
 llama-3-3-70b-instruct,models_dev,nvidia/meta/llama-3.3-70b-instruct
 llama-3-3-70b-instruct,openrouter,meta-llama/llama-3.3-70b-instruct
 llama-3-3-nemotron-super-49b-v1,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1
-llama-3-3-nemotron-super-49b-v1-5-fp8,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1_5-FP8
-llama-3-70b,huggingface,NousResearch/Meta-Llama-3-70B
+llama-3-3-nemotron-super-49b-v1-5,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1_5-FP8
 llama-3-70b,huggingface,meta-llama/Meta-Llama-3-70B
 llama-3-70b-instruct,epoch,Llama 3-70B
 llama-3-70b-instruct,huggingface,NousResearch/Meta-Llama-3-70B-Instruct
@@ -1265,10 +1182,8 @@ llama-3-70b-instruct,huggingface,meta-llama/Meta-Llama-3-70B-Instruct
 llama-3-70b-instruct,models_dev,llmgateway/llama-3-70b-instruct
 llama-3-70b-instruct,text_surface_forms,Llama 3
 llama-3-70b-instruct,wikipedia,Llama (language model)
-llama-3-8b,huggingface,NousResearch/Meta-Llama-3-8B
 llama-3-8b,huggingface,meta-llama/Meta-Llama-3-8B
 llama-3-8b-instruct,epoch,Llama 3-8B
-llama-3-8b-instruct,huggingface,NousResearch/Meta-Llama-3-8B-Instruct
 llama-3-8b-instruct,huggingface,meta-llama/Meta-Llama-3-8B-Instruct
 llama-3-8b-instruct,models_dev,digitalocean/llama3-8b-instruct
 llama-3-8b-instruct,models_dev,novita-ai/meta-llama/llama-3-8b-instruct
@@ -1278,50 +1193,42 @@ llama-4-maverick,models_dev,helicone/llama-4-maverick
 llama-4-maverick,openrouter,meta-llama/llama-4-maverick
 llama-4-maverick,wikipedia,Llama (language model)
 llama-4-maverick-17b-128e,huggingface,meta-llama/Llama-4-Maverick-17B-128E
-llama-4-maverick-17b-128e,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct
-llama-4-maverick-17b-128e-instruct-fp8,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+llama-4-maverick-17b-128e-instruct,huggingface,meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
 llama-4-scout,epoch,Llama 4 Scout
 llama-4-scout,models_dev,helicone/llama-4-scout
 llama-4-scout,openrouter,meta-llama/llama-4-scout
 llama-4-scout-17b-16e,huggingface,meta-llama/Llama-4-Scout-17B-16E
-llama-4-scout-17b-16e,huggingface,meta-llama/Llama-4-Scout-17B-16E-Instruct
+llama-4-scout-17b-16e-instruct,huggingface,meta-llama/Llama-4-Scout-17B-16E-Instruct
 llama-guard-2-8b,huggingface,meta-llama/Meta-Llama-Guard-2-8B
 llama-guard-3-11b-vision,huggingface,meta-llama/Llama-Guard-3-11B-Vision
 llama-guard-3-1b,huggingface,meta-llama/Llama-Guard-3-1B
 llama-guard-3-8b,huggingface,meta-llama/Llama-Guard-3-8B
-llama-guard-3-8b-int8,huggingface,meta-llama/Llama-Guard-3-8B-INT8
+llama-guard-3-8b,huggingface,meta-llama/Llama-Guard-3-8B-INT8
 llama-guard-4-12b,huggingface,meta-llama/Llama-Guard-4-12B
 llama-guard-4-12b,models_dev,nvidia/meta/llama-guard-4-12b
 llama-guard-4-12b,openrouter,meta-llama/llama-guard-4-12b
 llamaguard-7b,huggingface,meta-llama/LlamaGuard-7b
 longcat-2-0,epoch,LongCat-2.0
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0
+longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-FP8
+longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-INT8
 longcat-2-0,models_dev,longcat/LongCat-2.0
 longcat-2-0,openrouter,meituan/longcat-2.0
-longcat-2-0-fp8,huggingface,meituan-longcat/LongCat-2.0-FP8
-longcat-2-0-int8,huggingface,meituan-longcat/LongCat-2.0-INT8
 longcat-flash-chat,epoch,LongCat-Flash
 longcat-flash-chat,huggingface,meituan-longcat/LongCat-Flash-Chat
+longcat-flash-chat,huggingface,meituan-longcat/LongCat-Flash-Chat-FP8
 longcat-flash-chat,models_dev,qiniu-ai/meituan/longcat-flash-chat
-longcat-flash-chat-fp8,huggingface,meituan-longcat/LongCat-Flash-Chat-FP8
 longcat-flash-lite,huggingface,meituan-longcat/LongCat-Flash-Lite
-longcat-flash-lite-fp8,huggingface,meituan-longcat/LongCat-Flash-Lite-FP8
+longcat-flash-lite,huggingface,meituan-longcat/LongCat-Flash-Lite-FP8
 longcat-flash-lite-sparse,huggingface,meituan-longcat/LongCat-Flash-Lite-Sparse
-longcat-flash-omni-fp8,huggingface,meituan-longcat/LongCat-Flash-Omni-FP8
+longcat-flash-omni,huggingface,meituan-longcat/LongCat-Flash-Omni-FP8
 longcat-flash-prover,huggingface,meituan-longcat/LongCat-Flash-Prover
 longcat-flash-thinking,huggingface,meituan-longcat/LongCat-Flash-Thinking
+longcat-flash-thinking,huggingface,meituan-longcat/LongCat-Flash-Thinking-FP8
 longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601
-longcat-flash-thinking-2601-fp8,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601-FP8
-longcat-flash-thinking-fp8,huggingface,meituan-longcat/LongCat-Flash-Thinking-FP8
+longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601-FP8
 longcat-flash-thinking-zigzag,huggingface,meituan-longcat/LongCat-Flash-Thinking-ZigZag
 longcat-heavymode-summary,huggingface,meituan-longcat/LongCat-HeavyMode-Summary
-lyria-3-clip-preview,google_api,lyria-3-clip-preview
-lyria-3-clip-preview,models_dev,edenai/google/lyria-3-clip-preview
-lyria-3-clip-preview,models_dev,google/lyria-3-clip-preview
-lyria-3-clip-preview,openrouter,google/lyria-3-clip-preview
-lyria-3-pro-preview,google_api,lyria-3-pro-preview
-lyria-3-pro-preview,models_dev,google/lyria-3-pro-preview
-lyria-3-pro-preview,openrouter,google/lyria-3-pro-preview
 mage-vl,huggingface,microsoft/Mage-VL
 medgemma-1-5-4b-it,huggingface,google/medgemma-1.5-4b-it
 medgemma-27b-it,huggingface,google/medgemma-27b-it
@@ -1354,16 +1261,16 @@ mimo-vl-7b-rl-2508,huggingface,XiaomiMiMo/MiMo-VL-7B-RL-2508
 mimo-vl-7b-sft,huggingface,XiaomiMiMo/MiMo-VL-7B-SFT
 mimo-vl-7b-sft-2508,huggingface,XiaomiMiMo/MiMo-VL-7B-SFT-2508
 mindlink-32b,huggingface,Skywork/MindLink-32B-0801
-minicpm-1b-sft-bf16,huggingface,openbmb/MiniCPM-1B-sft-bf16
-minicpm-2b-sft-bf16,huggingface,openbmb/MiniCPM-2B-sft-bf16
+minicpm-1b-sft,huggingface,openbmb/MiniCPM-1B-sft-bf16
+minicpm-2b-sft,huggingface,openbmb/MiniCPM-2B-sft-bf16
 minicpm-llama3-v-2-5,huggingface,openbmb/MiniCPM-Llama3-V-2_5
 minicpm-moe-8x2b,huggingface,openbmb/MiniCPM-MoE-8x2B
 minicpm-sala,huggingface,openbmb/MiniCPM-SALA
 minicpm-v-2-6,huggingface,openbmb/MiniCPM-V-2_6
-minicpm-v-2-6-int4,huggingface,openbmb/MiniCPM-V-2_6-int4
+minicpm-v-2-6,huggingface,openbmb/MiniCPM-V-2_6-int4
 minicpm-v-4,huggingface,openbmb/MiniCPM-V-4
 minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5
-minicpm-v-4-5-int4,huggingface,openbmb/MiniCPM-V-4_5-int4
+minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5-int4
 minicpm-v-4-6,huggingface,openbmb/MiniCPM-V-4.6
 minicpm-v-4-6-thinking,huggingface,openbmb/MiniCPM-V-4.6-Thinking
 minicpm3-4b,huggingface,openbmb/MiniCPM3-4B
@@ -1408,9 +1315,9 @@ minimax-m2-her,models_dev,kilo/minimax/minimax-m2-her
 minimax-m2-her,openrouter,minimax/minimax-m2-her
 minimax-m3,epoch,MiniMax-M3
 minimax-m3,huggingface,MiniMaxAI/MiniMax-M3
+minimax-m3,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
 minimax-m3,models_dev,cline-pass/cline-pass/minimax-m3
 minimax-m3,openrouter,minimax/minimax-m3
-minimax-m3-mxfp8,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
 minimax-text-01,epoch,MiniMax-Text-01
 minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01
 minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01-hf
@@ -1433,7 +1340,6 @@ mistral-7b,text_surface_forms,Mistral 7B
 mistral-7b,wikipedia,Mistral AI
 mistral-7b-instruct-v0-1,huggingface,mistralai/Mistral-7B-Instruct-v0.1
 mistral-7b-instruct-v0-2,huggingface,mistralai/Mistral-7B-Instruct-v0.2
-mistral-7b-v0-1,huggingface,mistralai/Mistral-7B-v0.1
 mistral-large,epoch,Mistral Large
 mistral-large,models_dev,nano-gpt/mistralai/mistral-large
 mistral-large,openrouter,mistralai/mistral-large
@@ -1486,7 +1392,7 @@ molmo2-4b,huggingface,allenai/Molmo2-4B
 molmo2-8b,huggingface,allenai/Molmo2-8B
 molmo2-o-7b,huggingface,allenai/Molmo2-O-7B
 moonlight-16b-a3b,huggingface,moonshotai/Moonlight-16B-A3B
-moonlight-16b-a3b,huggingface,moonshotai/Moonlight-16B-A3B-Instruct
+moonlight-16b-a3b-instruct,huggingface,moonshotai/Moonlight-16B-A3B-Instruct
 muse-glimmer-30b,models_dev,edenai/flexai/Muse-Glimmer-30B
 muse-glimmer-30b,openrouter,meta/muse-glimmer-30b
 muse-spark-1-1,epoch,Muse Spark 1.1
@@ -1533,7 +1439,7 @@ north-mini-code,models_dev,kilo/cohere/north-mini-code:free
 north-mini-code,models_dev,nano-gpt/cohere/north-mini-code
 north-mini-code,openrouter,cohere/north-mini-code:free
 north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0
-north-mini-code-1-0-fp8,huggingface,CohereLabs/North-Mini-Code-1.0-fp8
+north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0-fp8
 nous-hermes-2-mistral-7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mistral-7B-DPO
 nous-hermes-2-mixtral-8x7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
 nous-hermes-2-mixtral-8x7b-sft,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
@@ -1551,21 +1457,19 @@ nova-premier-v1,models_dev,kilo/amazon/nova-premier-v1
 nova-premier-v1,openrouter,amazon/nova-premier-v1
 nova-pro-v1,models_dev,cortecs/nova-pro-v1
 nova-pro-v1,openrouter,amazon/nova-pro-v1
-nv-embed-v1,epoch,NV-Embed-v1
-nv-embed-v1,models_dev,nvidia/nvidia/nv-embed-v1
-nvidia-nemotron-3-5-lightning-30b-a3b-base-bf16,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
-nvidia-nemotron-3-5-lightning-30b-a3b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
-nvidia-nemotron-3-nano-30b-a3b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-nvidia-nemotron-3-nano-30b-a3b-fp8,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
-nvidia-nemotron-3-nano-4b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
-nvidia-nemotron-3-super-120b-a12b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16
-nvidia-nemotron-3-ultra-550b-a55b-bf16,huggingface,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+nvidia-nemotron-3-5-lightning-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+nvidia-nemotron-3-5-lightning-30b-a3b-base,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
+nvidia-nemotron-3-nano-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
+nvidia-nemotron-3-nano-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
+nvidia-nemotron-3-nano-4b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+nvidia-nemotron-3-super-120b-a12b,huggingface,nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16
+nvidia-nemotron-3-ultra-550b-a55b,huggingface,nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
 nvidia-nemotron-nano-12b-v2,epoch,NVIDIA-Nemotron-Nano-12B-v2
 nvidia-nemotron-nano-12b-v2,models_dev,amazon-bedrock/nvidia.nemotron-nano-12b-v2
 nvidia-nemotron-nano-9b-v2,epoch,NVIDIA-Nemotron-Nano-9B-v2
 nvidia-nemotron-nano-9b-v2,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2
+nvidia-nemotron-nano-9b-v2,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2-FP8
 nvidia-nemotron-nano-9b-v2,models_dev,nvidia/nvidia/nvidia-nemotron-nano-9b-v2
-nvidia-nemotron-nano-9b-v2-fp8,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2-FP8
 nvidia-nemotron-parse-v1-1,huggingface,nvidia/NVIDIA-Nemotron-Parse-v1.1
 o1-preview,epoch,o1-preview
 o1-preview,models_dev,nano-gpt/openai/o1-preview
@@ -1593,13 +1497,13 @@ o4-mini,openrouter,openai/o4-mini
 o4-mini,wikipedia,OpenAI o4-mini
 o4-mini-high,models_dev,kilo/openai/o4-mini-high
 o4-mini-high,openrouter,openai/o4-mini-high
-olmo-1b-0724-hf,huggingface,allenai/OLMo-1B-0724-hf
-olmo-1b-hf,huggingface,allenai/OLMo-1B-hf
+olmo-1b,huggingface,allenai/OLMo-1B-hf
+olmo-1b-0724,huggingface,allenai/OLMo-1B-0724-hf
 olmo-2-0325-32b,huggingface,allenai/OLMo-2-0325-32B
-olmo-2-0325-32b,huggingface,allenai/OLMo-2-0325-32B-Instruct
+olmo-2-0325-32b-instruct,huggingface,allenai/OLMo-2-0325-32B-Instruct
 olmo-2-0425-1b,huggingface,allenai/OLMo-2-0425-1B
-olmo-2-0425-1b,huggingface,allenai/OLMo-2-0425-1B-Instruct
 olmo-2-0425-1b-dpo,huggingface,allenai/OLMo-2-0425-1B-DPO
+olmo-2-0425-1b-instruct,huggingface,allenai/OLMo-2-0425-1B-Instruct
 olmo-2-0425-1b-sft,huggingface,allenai/OLMo-2-0425-1B-SFT
 olmo-2-1124-13b-instruct,huggingface,allenai/OLMo-2-1124-13B-Instruct
 olmo-2-1124-7b-instruct,huggingface,allenai/OLMo-2-1124-7B-Instruct
@@ -1618,13 +1522,13 @@ olmo-3-7b-rl-zero-mix,huggingface,allenai/Olmo-3-7B-RL-Zero-Mix
 olmo-3-7b-think,huggingface,allenai/Olmo-3-7B-Think
 olmo-3-7b-think-dpo,huggingface,allenai/Olmo-3-7B-Think-DPO
 olmo-3-7b-think-sft,huggingface,allenai/Olmo-3-7B-Think-SFT
-olmo-7b-hf,huggingface,allenai/OLMo-7B-hf
+olmo-7b,huggingface,allenai/OLMo-7B-hf
 olmo-hybrid-7b,huggingface,allenai/Olmo-Hybrid-7B
 olmo-hybrid-instruct-sft-7b,huggingface,allenai/Olmo-Hybrid-Instruct-SFT-7B
 olmocr-2-7b,huggingface,allenai/olmOCR-2-7B-1025
-olmocr-2-7b-1025-fp8,huggingface,allenai/olmOCR-2-7B-1025-FP8
+olmocr-2-7b-1025,huggingface,allenai/olmOCR-2-7B-1025-FP8
 olmocr-7b-0225-preview,huggingface,allenai/olmOCR-7B-0225-preview
-olmocr-7b-0825-fp8,huggingface,allenai/olmOCR-7B-0825-FP8
+olmocr-7b-0825,huggingface,allenai/olmOCR-7B-0825-FP8
 olmoe-1b-7b,huggingface,allenai/OLMoE-1B-7B-0125
 olmoe-1b-7b,huggingface,allenai/OLMoE-1B-7B-0924
 olmoe-1b-7b-0125-instruct,huggingface,allenai/OLMoE-1B-7B-0125-Instruct
@@ -1739,7 +1643,7 @@ qwen-turbo,models_dev,alibaba/qwen-turbo
 qwen-vl-max,epoch,Qwen-VL-Max
 qwen-vl-max,models_dev,alibaba/qwen-vl-max
 qwen2-5-0-5b,huggingface,Qwen/Qwen2.5-0.5B
-qwen2-5-0-5b,huggingface,Qwen/Qwen2.5-0.5B-Instruct
+qwen2-5-0-5b-instruct,huggingface,Qwen/Qwen2.5-0.5B-Instruct
 qwen2-5-1-5b-instruct,huggingface,Qwen/Qwen2.5-1.5B-Instruct
 qwen2-5-14b-instruct,epoch,Qwen2.5-14B
 qwen2-5-14b-instruct,huggingface,Qwen/Qwen2.5-14B-Instruct
@@ -1813,16 +1717,18 @@ qwen3-32b,epoch,Qwen3-32B
 qwen3-32b,huggingface,Qwen/Qwen3-32B
 qwen3-32b,models_dev,iflowcn/qwen3-32b
 qwen3-32b,openrouter,qwen/qwen3-32b
+qwen3-4b,epoch,Qwen3-4B
 qwen3-4b,huggingface,Qwen/Qwen3-4B
+qwen3-4b,models_dev,novita-ai/qwen/qwen3-4b-fp8
 qwen3-4b-base,huggingface,Qwen/Qwen3-4B-Base
 qwen3-4b-instruct-2507,huggingface,Qwen/Qwen3-4B-Instruct-2507
 qwen3-5-0-8b,epoch,Qwen3.5-0.8B
 qwen3-5-0-8b,huggingface,Qwen/Qwen3.5-0.8B
 qwen3-5-0-8b,models_dev,qvac/qwen3.5-0.8b
 qwen3-5-122b-a10b,epoch,Qwen3.5-122B-A10B
+qwen3-5-122b-a10b,huggingface,Qwen/Qwen3.5-122B-A10B-FP8
 qwen3-5-122b-a10b,models_dev,alibaba/qwen3.5-122b-a10b
 qwen3-5-122b-a10b,openrouter,qwen/qwen3.5-122b-a10b
-qwen3-5-122b-a10b-fp8,huggingface,Qwen/Qwen3.5-122B-A10B-FP8
 qwen3-5-27b,epoch,Qwen3.5-27B
 qwen3-5-27b,huggingface,Qwen/Qwen3.5-27B
 qwen3-5-27b,models_dev,alibaba/qwen3.5-27b
@@ -1856,13 +1762,13 @@ qwen3-5-plus-02-15,models_dev,kilo/qwen/qwen3.5-plus-02-15
 qwen3-5-plus-02-15,openrouter,qwen/qwen3.5-plus-02-15
 qwen3-6-27b,epoch,Qwen3.6 27B
 qwen3-6-27b,huggingface,Qwen/Qwen3.6-27B
+qwen3-6-27b,huggingface,Qwen/Qwen3.6-27B-FP8
 qwen3-6-27b,models_dev,abacus/Qwen/Qwen3.6-27B
 qwen3-6-27b,openrouter,qwen/qwen3.6-27b
-qwen3-6-27b-fp8,huggingface,Qwen/Qwen3.6-27B-FP8
 qwen3-6-35b-a3b,huggingface,Qwen/Qwen3.6-35B-A3B
+qwen3-6-35b-a3b,huggingface,Qwen/Qwen3.6-35B-A3B-FP8
 qwen3-6-35b-a3b,models_dev,deepinfra/Qwen/Qwen3.6-35B-A3B
 qwen3-6-35b-a3b,openrouter,qwen/qwen3.6-35b-a3b
-qwen3-6-35b-a3b-fp8,huggingface,Qwen/Qwen3.6-35B-A3B-FP8
 qwen3-6-flash,models_dev,aihubmix/qwen3.6-flash
 qwen3-6-flash,openrouter,qwen/qwen3.6-flash
 qwen3-6-max-preview,models_dev,alibaba/qwen3.6-max-preview
@@ -1887,10 +1793,10 @@ qwen3-8-2-4t-a95b,models_dev,cortecs/qwen3.8-2.4t-a95b
 qwen3-8-2-4t-a95b,openrouter,qwen/qwen3.8-2.4t-a95b
 qwen3-8-27b,epoch,Qwen 3.8 27B
 qwen3-8-27b,huggingface,Qwen/Qwen3.8-27B
+qwen3-8-27b,huggingface,Qwen/Qwen3.8-27B-FP8
 qwen3-8-27b,models_dev,iteracompute/iteracompute/qwen3.8-27b
 qwen3-8-27b,models_dev,venice/qwen-3-8-27b
 qwen3-8-27b,openrouter,qwen/qwen3.8-27b
-qwen3-8-27b-fp8,huggingface,Qwen/Qwen3.8-27B-FP8
 qwen3-8-flash,models_dev,302ai/qwen3.8-flash
 qwen3-8-flash,models_dev,alibaba/qwen3.8-flash
 qwen3-8-flash,openrouter,qwen/qwen3.8-flash
@@ -1903,7 +1809,6 @@ qwen3-8b,epoch,Qwen3-8B
 qwen3-8b,huggingface,Qwen/Qwen3-8B
 qwen3-8b,models_dev,nano-gpt/qwen/Qwen3-8B
 qwen3-8b,openrouter,qwen/qwen3-8b
-qwen3-8b-fp8,huggingface,nvidia/Qwen3-8B-FP8
 qwen3-coder,models_dev,pendra/qwen3-coder:30b
 qwen3-coder,models_dev,vercel/alibaba/qwen3-coder
 qwen3-coder,openrouter,qwen/qwen3-coder
@@ -1915,9 +1820,9 @@ qwen3-coder-480b-a35b-instruct,models_dev,abacus/Qwen/Qwen3-Coder-480B-A35B-Inst
 qwen3-coder-flash,models_dev,alibaba/qwen3-coder-flash
 qwen3-coder-flash,openrouter,qwen/qwen3-coder-flash
 qwen3-coder-next,epoch,Qwen3-Coder-Next
+qwen3-coder-next,huggingface,Qwen/Qwen3-Coder-Next-FP8
 qwen3-coder-next,models_dev,llmgateway/qwen3-coder-next
 qwen3-coder-next,openrouter,qwen/qwen3-coder-next
-qwen3-coder-next-fp8,huggingface,Qwen/Qwen3-Coder-Next-FP8
 qwen3-coder-plus,models_dev,iflowcn/qwen3-coder-plus
 qwen3-coder-plus,openrouter,qwen/qwen3-coder-plus
 qwen3-max,epoch,Qwen3-Max
@@ -1936,6 +1841,7 @@ qwen3-omni-30b-a3b-instruct,models_dev,novita-ai/qwen/qwen3-omni-30b-a3b-instruc
 qwen3-omni-flash,epoch,Qwen3-Omni-Flash
 qwen3-omni-flash,models_dev,alibaba/qwen3-omni-flash
 qwen3-vl-235b-a22b-instruct,models_dev,llmgateway/qwen3-vl-235b-a22b-instruct
+qwen3-vl-235b-a22b-instruct,models_dev,stackit/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
 qwen3-vl-235b-a22b-instruct,openrouter,qwen/qwen3-vl-235b-a22b-instruct
 qwen3-vl-235b-a22b-thinking,models_dev,llmgateway/qwen3-vl-235b-a22b-thinking
 qwen3-vl-235b-a22b-thinking,openrouter,qwen/qwen3-vl-235b-a22b-thinking
@@ -1948,9 +1854,9 @@ qwen3-vl-32b-instruct,models_dev,siliconflow/Qwen/Qwen3-VL-32B-Instruct
 qwen3-vl-32b-instruct,openrouter,qwen/qwen3-vl-32b-instruct
 qwen3-vl-4b-instruct,huggingface,Qwen/Qwen3-VL-4B-Instruct
 qwen3-vl-8b-instruct,huggingface,Qwen/Qwen3-VL-8B-Instruct
+qwen3-vl-8b-instruct,huggingface,Qwen/Qwen3-VL-8B-Instruct-FP8
 qwen3-vl-8b-instruct,models_dev,kilo/qwen/qwen3-vl-8b-instruct
 qwen3-vl-8b-instruct,openrouter,qwen/qwen3-vl-8b-instruct
-qwen3-vl-8b-instruct-fp8,huggingface,Qwen/Qwen3-VL-8B-Instruct-FP8
 qwen3-vl-8b-thinking,models_dev,kilo/qwen/qwen3-vl-8b-thinking
 qwen3-vl-8b-thinking,openrouter,qwen/qwen3-vl-8b-thinking
 qwq-32b,epoch,QwQ-32B
@@ -2007,13 +1913,13 @@ rwkv7-g1j-1-5b,huggingface,RWKV/RWKV7-G1j-1.5B-20260831
 rwkv7-g1j-13-3b,huggingface,RWKV/RWKV7-G1j-13.3B-20260831
 rwkv7-g1j-2-9b,huggingface,RWKV/RWKV7-G1j-2.9B-20260831
 rwkv7-g1j-7-2b,huggingface,RWKV/RWKV7-G1j-7.2B-20260831
-rwkv7-goose-pile-1-47b-hf,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
-rwkv7-goose-pile-421m-hf,huggingface,RWKV/RWKV7-Goose-Pile-421M-HF
-rwkv7-goose-world-pth,huggingface,RWKV/RWKV7-Goose-World-PTH
-rwkv7-goose-world2-8-0-1b-hf,huggingface,RWKV/RWKV7-Goose-World2.8-0.1B-HF
-rwkv7-goose-world2-9-0-4b-hf,huggingface,RWKV/RWKV7-Goose-World2.9-0.4B-HF
-rwkv7-goose-world3-1-5b-hf,huggingface,RWKV/RWKV7-Goose-World3-1.5B-HF
-rwkv7-goose-world3-2-9b-hf,huggingface,RWKV/RWKV7-Goose-World3-2.9B-HF
+rwkv7-goose-pile-1-47b,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
+rwkv7-goose-pile-421m,huggingface,RWKV/RWKV7-Goose-Pile-421M-HF
+rwkv7-goose-world,huggingface,RWKV/RWKV7-Goose-World-PTH
+rwkv7-goose-world2-8-0-1b,huggingface,RWKV/RWKV7-Goose-World2.8-0.1B-HF
+rwkv7-goose-world2-9-0-4b,huggingface,RWKV/RWKV7-Goose-World2.9-0.4B-HF
+rwkv7-goose-world3-1-5b,huggingface,RWKV/RWKV7-Goose-World3-1.5B-HF
+rwkv7-goose-world3-2-9b,huggingface,RWKV/RWKV7-Goose-World3-2.9B-HF
 sa2va-1b,huggingface,ByteDance/Sa2VA-1B
 sa2va-26b,huggingface,ByteDance/Sa2VA-26B
 sa2va-4b,huggingface,ByteDance/Sa2VA-4B
@@ -2039,7 +1945,7 @@ seed-2-1-turbo,openrouter,bytedance-seed/seed-2-1-turbo
 seed-coder-8b-base,huggingface,ByteDance-Seed/Seed-Coder-8B-Base
 seed-coder-8b-instruct,huggingface,ByteDance-Seed/Seed-Coder-8B-Instruct
 seed-coder-8b-reasoning,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning
-seed-coder-8b-reasoning-bf16,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning-bf16
+seed-coder-8b-reasoning,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning-bf16
 seed-oss-36b-base,huggingface,ByteDance-Seed/Seed-OSS-36B-Base
 seed-oss-36b-base-wosyn,huggingface,ByteDance-Seed/Seed-OSS-36B-Base-woSyn
 seed-oss-36b-instruct,huggingface,ByteDance-Seed/Seed-OSS-36B-Instruct
@@ -2051,13 +1957,12 @@ skywork-13b-math,huggingface,Skywork/Skywork-13B-Math
 skywork-critic-llama-3-1-70b,huggingface,Skywork/Skywork-Critic-Llama-3.1-70B
 skywork-critic-llama-3-1-8b,huggingface,Skywork/Skywork-Critic-Llama-3.1-8B
 skywork-moe-base,huggingface,Skywork/Skywork-MoE-Base
-skywork-moe-base-fp8,huggingface,Skywork/Skywork-MoE-Base-FP8
+skywork-moe-base,huggingface,Skywork/Skywork-MoE-Base-FP8
 skywork-o1-open-llama-3-1-8b,huggingface,Skywork/Skywork-o1-Open-Llama-3.1-8B
 skywork-r1v-38b,huggingface,Skywork/Skywork-R1V-38B
 skywork-r1v2-38b,huggingface,Skywork/Skywork-R1V2-38B
 skywork-r1v3-38b,huggingface,Skywork/Skywork-R1V3-38B
 skywork-swe-32b,huggingface,Skywork/Skywork-SWE-32B
-skywork-vl-reward-7b,huggingface,Skywork/Skywork-VL-Reward-7B
 skyworkvl-38b,huggingface,Skywork/SkyworkVL-38B
 smollm2-1-7b,huggingface,HuggingFaceTB/SmolLM2-1.7B
 smollm2-1-7b-instruct-16k,huggingface,HuggingFaceTB/SmolLM2-1.7B-Instruct-16k
@@ -2100,9 +2005,9 @@ stablebeluga1-delta,huggingface,stabilityai/StableBeluga1-Delta
 stablebeluga2,huggingface,stabilityai/StableBeluga2
 stablecode-completion-alpha-3b-4k,huggingface,stabilityai/stablecode-completion-alpha-3b-4k
 stablelm-2-1-6b,huggingface,stabilityai/stablelm-2-1_6b
-stablelm-2-1-6b,huggingface,stabilityai/stablelm-2-1_6b-chat
+stablelm-2-1-6b-chat,huggingface,stabilityai/stablelm-2-1_6b-chat
 stablelm-2-12b,huggingface,stabilityai/stablelm-2-12b
-stablelm-2-12b,huggingface,stabilityai/stablelm-2-12b-chat
+stablelm-2-12b-chat,huggingface,stabilityai/stablelm-2-12b-chat
 stablelm-3b-4e1t,huggingface,stabilityai/stablelm-3b-4e1t
 stablelm-base-alpha-3b,huggingface,stabilityai/stablelm-base-alpha-3b
 stablelm-base-alpha-7b,huggingface,stabilityai/stablelm-base-alpha-7b
@@ -2112,21 +2017,21 @@ stablelm-tuned-alpha-7b,huggingface,stabilityai/stablelm-tuned-alpha-7b
 stablelm-zephyr-3b,huggingface,stabilityai/stablelm-zephyr-3b
 step-3-5-flash,epoch,Step 3.5 Flash
 step-3-5-flash,huggingface,stepfun-ai/Step-3.5-Flash
+step-3-5-flash,huggingface,stepfun-ai/Step-3.5-Flash-FP8
 step-3-5-flash,models_dev,empiriolabs/step-3-5-flash
 step-3-5-flash,openrouter,stepfun/step-3.5-flash
 step-3-5-flash-base,huggingface,stepfun-ai/Step-3.5-Flash-Base
 step-3-5-flash-base-midtrain,huggingface,stepfun-ai/Step-3.5-Flash-Base-Midtrain
-step-3-5-flash-fp8,huggingface,stepfun-ai/Step-3.5-Flash-FP8
 step-3-7-flash,epoch,Step 3.7 Flash
 step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash
+step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash-FP8
 step-3-7-flash,models_dev,nvidia/stepfun-ai/step-3.7-flash
 step-3-7-flash,openrouter,stepfun/step-3.7-flash
-step-3-7-flash-fp8,huggingface,stepfun-ai/Step-3.7-Flash-FP8
 step3,huggingface,stepfun-ai/step3
-step3-fp8,huggingface,stepfun-ai/step3-fp8
+step3,huggingface,stepfun-ai/step3-fp8
 step3-vl-10b,huggingface,stepfun-ai/Step3-VL-10B
+step3-vl-10b,huggingface,stepfun-ai/Step3-VL-10B-FP8
 step3-vl-10b-base,huggingface,stepfun-ai/Step3-VL-10B-Base
-step3-vl-10b-fp8,huggingface,stepfun-ai/Step3-VL-10B-FP8
 stepfun-formalizer-32b,huggingface,stepfun-ai/StepFun-Formalizer-32B
 stepfun-formalizer-7b,huggingface,stepfun-ai/StepFun-Formalizer-7B
 stepfun-prover-preview-32b,huggingface,stepfun-ai/StepFun-Prover-Preview-32B
@@ -2136,14 +2041,9 @@ synlogic-7b,huggingface,MiniMaxAI/SynLogic-7B
 synlogic-mix-3-32b,huggingface,MiniMaxAI/SynLogic-Mix-3-32B
 t5gemma-s-s-prefixlm,huggingface,google/t5gemma-s-s-prefixlm
 tencent-hy3,huggingface,tencent/Hy3
+tencent-hy3,huggingface,tencent/Hy3-FP8
 tencent-hy3,models_dev,crossmodel/tencent/hy3
 tencent-hy3,openrouter,tencent/hy3
-text-embedding-3-large,epoch,text-embedding-3-large
-text-embedding-3-large,models_dev,azure/text-embedding-3-large
-text-embedding-3-small,epoch,text-embedding-3-small
-text-embedding-3-small,models_dev,azure/text-embedding-3-small
-text-embedding-ada-002,epoch,text-embedding-ada-002
-text-embedding-ada-002,models_dev,azure/text-embedding-ada-002
 tiny-aya-base,huggingface,CohereLabs/tiny-aya-base
 tiny-aya-base-32k,huggingface,CohereLabs/tiny-aya-base-32K
 tiny-aya-earth,huggingface,CohereLabs/tiny-aya-earth
@@ -2172,11 +2072,10 @@ ui-venus-1-5-8b,huggingface,inclusionAI/UI-Venus-1.5-8B
 ui-venus-2-9b,huggingface,inclusionAI/UI-Venus-2-9B
 ui-venus-ground-7b,huggingface,inclusionAI/UI-Venus-Ground-7B
 unlimited-ocr,huggingface,baidu/Unlimited-OCR
-v5-eagle-7b-hf,huggingface,RWKV/v5-Eagle-7B-HF
-v6-finch-14b-hf,huggingface,RWKV/v6-Finch-14B-HF
-v6-finch-1b6-hf,huggingface,RWKV/v6-Finch-1B6-HF
-v6-finch-7b-hf,huggingface,RWKV/v6-Finch-7B-HF
-visionreward-video,huggingface,zai-org/VisionReward-Video
+v5-eagle-7b,huggingface,RWKV/v5-Eagle-7B-HF
+v6-finch-14b,huggingface,RWKV/v6-Finch-14B-HF
+v6-finch-1b6,huggingface,RWKV/v6-Finch-1B6-HF
+v6-finch-7b,huggingface,RWKV/v6-Finch-7B-HF
 vista-9b,huggingface,inclusionAI/VISTA-9B
 voxtral-small-24b-2507,models_dev,evroc/mistralai/Voxtral-Small-24B-2507
 voxtral-small-24b-2507,openrouter,mistralai/voxtral-small-24b-2507
@@ -2187,26 +2086,26 @@ wizardlm-2-8x22b,openrouter,microsoft/wizardlm-2-8x22b
 yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
 yarn-mistral-7b-128k,huggingface,NousResearch/Yarn-Mistral-7b-128k
 yi-1-5-34b,huggingface,01-ai/Yi-1.5-34B
-yi-1-5-34b,huggingface,01-ai/Yi-1.5-34B-Chat
 yi-1-5-34b-32k,huggingface,01-ai/Yi-1.5-34B-32K
+yi-1-5-34b-chat,huggingface,01-ai/Yi-1.5-34B-Chat
 yi-1-5-34b-chat-16k,huggingface,01-ai/Yi-1.5-34B-Chat-16K
 yi-1-5-6b,huggingface,01-ai/Yi-1.5-6B
-yi-1-5-6b,huggingface,01-ai/Yi-1.5-6B-Chat
+yi-1-5-6b-chat,huggingface,01-ai/Yi-1.5-6B-Chat
 yi-1-5-9b,huggingface,01-ai/Yi-1.5-9B
-yi-1-5-9b,huggingface,01-ai/Yi-1.5-9B-Chat
 yi-1-5-9b-32k,huggingface,01-ai/Yi-1.5-9B-32K
+yi-1-5-9b-chat,huggingface,01-ai/Yi-1.5-9B-Chat
 yi-1-5-9b-chat-16k,huggingface,01-ai/Yi-1.5-9B-Chat-16K
 yi-34b,huggingface,01-ai/Yi-34B
 yi-34b,huggingface,01-ai/Yi-34B-Chat
 yi-34b-200k,huggingface,01-ai/Yi-34B-200K
 yi-6b,huggingface,01-ai/Yi-6B
-yi-6b,huggingface,01-ai/Yi-6B-Chat
 yi-6b-200k,huggingface,01-ai/Yi-6B-200K
+yi-6b-chat,huggingface,01-ai/Yi-6B-Chat
 yi-9b,huggingface,01-ai/Yi-9B
 yi-9b-200k,huggingface,01-ai/Yi-9B-200K
 yi-coder-1-5b-chat,huggingface,01-ai/Yi-Coder-1.5B-Chat
 yi-coder-9b,huggingface,01-ai/Yi-Coder-9B
-yi-coder-9b,huggingface,01-ai/Yi-Coder-9B-Chat
+yi-coder-9b-chat,huggingface,01-ai/Yi-Coder-9B-Chat
 yi-large,epoch,Yi-Large
 yi-large,models_dev,nano-gpt/yi-large
 yi-vl-34b,huggingface,01-ai/Yi-VL-34B
@@ -2214,12 +2113,12 @@ yi-vl-6b,huggingface,01-ai/Yi-VL-6B
 youtu-llm-2b,huggingface,tencent/Youtu-LLM-2B
 youtu-llm-2b-base,huggingface,tencent/Youtu-LLM-2B-Base
 youtu-vl-4b-instruct,huggingface,tencent/Youtu-VL-4B-Instruct
-yuan2-102b-hf,huggingface,IEITYuan/Yuan2-102B-hf
-yuan2-2b-februa-hf,huggingface,IEITYuan/Yuan2-2B-Februa-hf
-yuan2-2b-hf,huggingface,IEITYuan/Yuan2-2B-hf
-yuan2-2b-janus-hf,huggingface,IEITYuan/Yuan2-2B-Janus-hf
-yuan2-2b-mars-hf,huggingface,IEITYuan/Yuan2-2B-Mars-hf
-yuan2-51b-hf,huggingface,IEITYuan/Yuan2-51B-hf
+yuan2-102b,huggingface,IEITYuan/Yuan2-102B-hf
+yuan2-2b,huggingface,IEITYuan/Yuan2-2B-hf
+yuan2-2b-februa,huggingface,IEITYuan/Yuan2-2B-Februa-hf
+yuan2-2b-janus,huggingface,IEITYuan/Yuan2-2B-Janus-hf
+yuan2-2b-mars,huggingface,IEITYuan/Yuan2-2B-Mars-hf
+yuan2-51b,huggingface,IEITYuan/Yuan2-51B-hf
 yuan2-m32,huggingface,IEITYuan/Yuan2-M32
 yuan2-m32,huggingface,IEITYuan/Yuan2-M32-hf
 zwz-4b,huggingface,inclusionAI/ZwZ-4B

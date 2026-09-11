@@ -8,51 +8,51 @@ independent machine sources agreed or a platform reported its own event,
 else `unreviewed` (a single aggregator claim). Filter on it before
 treating a date as settled.
 
-- Models: 1215; events: 2029
-- Review status: human_reviewed 0, curated 55, machine_corroborated 548, unreviewed 612
-- Event confidence: verified 904, inferred 1117, disputed 8
+- Models: 1135; events: 1872
+- Review status: human_reviewed 0, curated 55, machine_corroborated 483, unreviewed 597
+- Event confidence: verified 840, inferred 1025, disputed 7
 
 ## By organization
 
 | org | models | events | human_reviewed | curated | machine_corroborated | unreviewed | events verified |
 |---|---|---|---|---|---|---|---|
-| Alibaba | 89 | 165 | 0 | 2 | 67 | 20 | 49% |
-| OpenAI | 69 | 274 | 0 | 19 | 46 | 4 | 73% |
-| Google | 58 | 152 | 0 | 7 | 34 | 17 | 43% |
-| ByteDance | 52 | 64 | 0 | 0 | 23 | 29 | 38% |
-| Zhipu | 47 | 82 | 0 | 3 | 21 | 23 | 46% |
+| Alibaba | 84 | 155 | 0 | 2 | 63 | 19 | 50% |
+| OpenAI | 62 | 257 | 0 | 19 | 39 | 4 | 75% |
+| ByteDance | 51 | 62 | 0 | 0 | 22 | 29 | 37% |
+| Meta | 47 | 92 | 0 | 4 | 19 | 24 | 34% |
+| AI2 | 46 | 46 | 0 | 0 | 9 | 37 | 20% |
+| Google | 46 | 120 | 0 | 7 | 24 | 15 | 46% |
 | RWKV | 46 | 46 | 0 | 0 | 4 | 42 | 9% |
-| Ant Group | 45 | 54 | 0 | 0 | 24 | 21 | 48% |
-| AI2 | 44 | 44 | 0 | 0 | 9 | 35 | 20% |
 | EleutherAI | 44 | 44 | 0 | 0 | 1 | 43 | 2% |
-| DeepSeek | 43 | 86 | 0 | 3 | 26 | 14 | 57% |
-| TII | 40 | 40 | 0 | 0 | 2 | 38 | 5% |
-| Meta | 39 | 80 | 0 | 4 | 18 | 17 | 38% |
-| Shanghai AI Lab | 39 | 39 | 0 | 0 | 12 | 27 | 31% |
-| Baidu | 37 | 42 | 0 | 0 | 28 | 9 | 67% |
-| Cohere | 37 | 48 | 0 | 1 | 10 | 26 | 23% |
-| Nous | 37 | 45 | 0 | 0 | 9 | 28 | 22% |
+| Ant Group | 43 | 51 | 0 | 0 | 23 | 20 | 49% |
+| DeepSeek | 43 | 81 | 0 | 3 | 24 | 16 | 56% |
+| TII | 43 | 43 | 0 | 0 | 2 | 41 | 5% |
+| Shanghai AI Lab | 39 | 39 | 0 | 0 | 9 | 30 | 23% |
+| Cohere | 35 | 45 | 0 | 1 | 8 | 26 | 20% |
 | IBM | 35 | 40 | 0 | 0 | 4 | 31 | 10% |
-| Mistral | 33 | 75 | 0 | 3 | 20 | 10 | 41% |
-| NVIDIA | 31 | 45 | 0 | 0 | 12 | 19 | 27% |
-| OpenBMB | 31 | 31 | 0 | 0 | 6 | 25 | 19% |
-| Tencent | 30 | 40 | 0 | 1 | 12 | 17 | 40% |
-| Liquid AI | 27 | 29 | 0 | 0 | 21 | 6 | 72% |
-| Anthropic | 26 | 126 | 0 | 8 | 15 | 3 | 64% |
-| Microsoft | 24 | 36 | 0 | 0 | 13 | 11 | 36% |
-| StepFun | 20 | 22 | 0 | 0 | 11 | 9 | 50% |
-| 01.AI | 18 | 18 | 0 | 1 | 5 | 12 | 33% |
-| Stability | 17 | 17 | 0 | 0 | 8 | 9 | 47% |
+| Zhipu | 33 | 65 | 0 | 3 | 13 | 17 | 49% |
+| Mistral | 31 | 69 | 0 | 3 | 20 | 8 | 45% |
+| OpenBMB | 29 | 29 | 0 | 0 | 6 | 23 | 21% |
+| Baidu | 28 | 33 | 0 | 0 | 22 | 6 | 70% |
+| Liquid AI | 27 | 28 | 0 | 0 | 21 | 6 | 75% |
+| NVIDIA | 27 | 39 | 0 | 0 | 12 | 15 | 31% |
+| Tencent | 26 | 35 | 0 | 1 | 10 | 15 | 40% |
+| Nous | 24 | 29 | 0 | 0 | 6 | 18 | 21% |
+| 01.AI | 23 | 23 | 0 | 1 | 3 | 19 | 17% |
+| Anthropic | 22 | 114 | 0 | 8 | 11 | 3 | 68% |
+| Microsoft | 21 | 25 | 0 | 0 | 10 | 11 | 44% |
+| Stability | 19 | 19 | 0 | 0 | 8 | 11 | 42% |
 | Xiaomi | 17 | 22 | 0 | 0 | 14 | 3 | 64% |
-| Meituan | 16 | 20 | 0 | 0 | 12 | 4 | 60% |
-| MiniMax | 16 | 31 | 0 | 1 | 9 | 6 | 45% |
-| xAI | 16 | 42 | 0 | 2 | 9 | 5 | 36% |
+| StepFun | 16 | 18 | 0 | 0 | 9 | 7 | 50% |
 | Hugging Face | 15 | 15 | 0 | 0 | 4 | 11 | 27% |
-| Moonshot | 15 | 36 | 0 | 0 | 14 | 1 | 56% |
-| Skywork | 14 | 14 | 0 | 0 | 6 | 8 | 43% |
-| Baichuan | 12 | 12 | 0 | 0 | 5 | 7 | 42% |
-| AI21 | 10 | 10 | 0 | 0 | 1 | 9 | 10% |
-| Amazon | 8 | 16 | 0 | 0 | 5 | 3 | 31% |
+| MiniMax | 15 | 29 | 0 | 1 | 9 | 5 | 48% |
+| Moonshot | 15 | 34 | 0 | 0 | 13 | 2 | 56% |
+| xAI | 15 | 38 | 0 | 2 | 8 | 5 | 37% |
+| Skywork | 12 | 12 | 0 | 0 | 5 | 7 | 42% |
+| Baichuan | 11 | 11 | 0 | 0 | 5 | 6 | 45% |
+| Meituan | 10 | 14 | 0 | 0 | 9 | 1 | 64% |
+| AI21 | 9 | 9 | 0 | 0 | 1 | 8 | 11% |
+| Amazon | 8 | 14 | 0 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 0 | 0 | 7 | 0% |
 | Perplexity | 6 | 11 | 0 | 0 | 5 | 1 | 45% |
 | Snowflake | 3 | 3 | 0 | 0 | 1 | 2 | 33% |
@@ -62,11 +62,11 @@ treating a date as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 961 | 307 | 652 | 2 |
-| platform_availability | 305 | 303 | 0 | 2 |
-| api_ga | 278 | 55 | 222 | 1 |
-| announced | 212 | 48 | 163 | 1 |
-| retired | 173 | 93 | 79 | 1 |
+| weights_released | 906 | 272 | 633 | 1 |
+| platform_availability | 279 | 277 | 0 | 2 |
+| api_ga | 215 | 55 | 159 | 1 |
+| announced | 205 | 48 | 156 | 1 |
+| retired | 167 | 90 | 76 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |

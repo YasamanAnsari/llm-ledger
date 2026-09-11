@@ -11,9 +11,7 @@ claude-3-opus,,none,,,,,200000,,text|image,text,,,,,15,75,,2024-03-04,https://ww
 claude-3-sonnet,,none,,,,,200000,,text|image,text,,,,,3,15,,2024-03-04,https://www.anthropic.com/news/claude-3-family
 claude-fable-5,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,10,50,1,2026-09-01,https://models.dev/api.json
 claude-fable-5-1,true,,,,,,1000000,128000,text|image,text,2026-06,true,,,10,50,0.25,2026-09-01,https://models.dev/api.json
-claude-fable-latest,true,,,,,,1000000,128000,text|image|pdf,text,2026-01-31,true,,,10,50,1,2026-09-01,https://models.dev/api.json
 claude-haiku-4-5,false,none,,,,,200000,8192,text|image,text,2025-10,true,,,1,5,0.09999999999999999,2026-09-01,https://models.dev/api.json
-claude-haiku-latest,true,,,,,,200000,64000,text|image|pdf,text,,true,,,1,5,0.1,2026-09-01,https://models.dev/api.json
 claude-mythos-5,true,,,,,,1000000,128000,text|image|pdf,text,2026-01-31,true,,,10,50,1,2026-09-01,https://models.dev/api.json
 claude-opus-4,true,,,,,,200000,32000,text|image|pdf,text,,true,,,15,75,,2026-09-01,https://models.dev/api.json
 claude-opus-4-1,true,,,,,,200000,32000,text|image|pdf,text,2025-03-31,true,,,15,75,,2026-09-01,https://models.dev/api.json
@@ -22,15 +20,12 @@ claude-opus-4-6,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,4,20,0.4,20
 claude-opus-4-7,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,4,20,0.4,2026-09-01,https://models.dev/api.json
 claude-opus-4-8,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,4,20,0.4,2026-09-01,https://models.dev/api.json
 claude-opus-5,,toggleable,,true,hidden,false,1000000,128000,text|image,text,2026-05,true,,true,5,25,0.50,2026-08-25,https://platform.claude.com/docs/en/models/overview
-claude-opus-latest,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,5,25,0.5,2026-09-01,https://models.dev/api.json
 claude-sonnet-4,true,,,,,,200000,64000,text|image|pdf,text,,true,,,3,15,,2026-09-01,https://models.dev/api.json
 claude-sonnet-4-5,,toggleable,,true,hidden,false,200000,64000,text|image,text,2025-01,true,,true,3,15,0.30,2026-08-25,https://platform.claude.com/docs/en/models/sonnet-4-5/overview
 claude-sonnet-4-6,true,,,,,,1000000,64000,text|image|pdf,text,,true,,,2.4,12,0.24,2026-09-01,https://models.dev/api.json
 claude-sonnet-5,,toggleable,,true,hidden,false,1000000,128000,text|image,text,2026-01,true,,true,2,10,0.20,2026-08-25,https://platform.claude.com/docs/en/models/overview
-claude-sonnet-latest,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,2,10,0.2,2026-09-01,https://models.dev/api.json
 codestral,false,none,,,,,256000,4096,text,text,2024-10,true,,,0.3,0.9,,2026-09-01,https://models.dev/api.json
 codestral-2508,false,none,,,,,256000,256000,text,text,2025-03,true,,,0.334,1.003,0.033,2026-09-01,https://models.dev/api.json
-codestral-embed,false,none,,,,,8192,1536,text,text,,false,,,,,,2026-09-01,https://models.dev/api.json
 codex-mini,true,,,,,,200000,100000,text,text,2024-04,true,,,1.5,6,0.375,2026-09-01,https://models.dev/api.json
 cohere-command-a,true,,,,,,131072,8192,text,text,2024-06-01,true,,,2.5,10,,2026-09-01,https://models.dev/api.json
 cohere-command-a-reasoning,true,,,,,,256000,32000,text,text,2024-06-01,true,,,0.63,5.05,,2026-09-01,https://models.dev/api.json
@@ -39,7 +34,6 @@ command-r-08-2024,false,none,,,,,128000,4000,text,text,2024-06-01,true,,,0.15,0.
 command-r-plus,,none,,,,,128000,4000,text,text,,true,,,,,,,https://docs.cohere.com/docs/command-r-plus
 command-r-plus-08-2024,false,none,,,,,128000,4000,text,text,2024-06-01,true,,,,,,2026-09-01,https://models.dev/api.json
 command-r7b-12-2024,false,none,,,,,128000,4000,text,text,2024-06-01,true,,,0.0375,0.15,,2026-09-01,https://models.dev/api.json
-deepseek-chat,false,none,,,,,128000,8192,text,text,2024-07,true,,,0.29,0.43,,2026-09-01,https://models.dev/api.json
 deepseek-chat-v3,false,none,,,,,163840,147456,text,text,,true,,,0.25,1,,2026-09-01,https://models.dev/api.json
 deepseek-chat-v3-1,true,,,,,,161000,144900,text,text,,true,,,0.27,1,0.135,2026-09-01,https://models.dev/api.json
 deepseek-ocr,false,none,,,,,8192,8192,text|image,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
@@ -58,7 +52,6 @@ deepseek-v3-2,false,none,,,,,128000,64000,text,text,2024-12,true,,,0,0,,2026-09-
 deepseek-v3-2-exp,false,none,,,,,163840,65536,text,text,,false,,,0.28,0.42,0.14,2026-09-01,https://models.dev/api.json
 deepseek-v4-1-flash,true,,,,,,1000000,384000,text|image,text,2025-05,true,,,0.27,1.08,0.0054,2026-09-10,https://models.dev/api.json
 deepseek-v4-flash,true,,,,,,1000000,384000,text,text,2025-05,true,,,0.14,0.28,0.0028,2026-09-01,https://models.dev/api.json
-deepseek-v4-flash-latest,true,,,,,,1048576,384000,text,text,2025-05,true,,,0.14,0.28,0.028,2026-09-01,https://models.dev/api.json
 deepseek-v4-flash-vision-exp,true,,,,,,1000000,384000,text|image,text,,true,,,0.242,0.726,0.0077,2026-09-01,https://models.dev/api.json
 deepseek-v4-pro,,toggleable,low|high|max,,,false,1048576,,text,text,,true,,true,1.122,3.366,,2026-08-25,https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro
 devstral-2512,false,none,,,,,262144,262144,text,text,2025-12,true,,,,,,2026-09-01,https://models.dev/api.json
@@ -72,22 +65,17 @@ ernie-4-5-300b-a47b,false,none,,,,,131000,131000,text,text,,true,,,0.28,1.1,,202
 ernie-4-5-vl-28b-a3b,true,,,,,,30000,8000,text|image,text,,true,,,0.14,0.56,,2026-09-01,https://models.dev/api.json
 ernie-4-5-vl-424b-a47b,true,,,,,,123000,16000,image|text,text,,false,,,0.42,1.25,,2026-09-01,https://models.dev/api.json
 ernie-5-1,false,none,,,,,119000,64000,text,text,,false,,,0.75,3,0.75,2026-09-01,https://models.dev/api.json
-esm2-650m,false,none,,,,,128000,8192,text,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 gemini-1-0-pro,,none,,,,,32000,,text,text,,true,,,,,,,https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/
 gemini-1-5-flash,,none,,,,,1048576,8192,text|image|audio|video,text,,true,true,true,,,,,http://web.archive.org/web/20250314013619/https://ai.google.dev/gemini-api/docs/models/gemini
 gemini-1-5-pro,,none,,,,,2097152,8192,text|image|audio|video,text,,true,true,true,,,,,http://web.archive.org/web/20250314013619/https://ai.google.dev/gemini-api/docs/models/gemini
 gemini-2-0-flash,,none,,,,,1048576,8192,text|image|audio|video,text,2024-08,true,true,,,,,,http://web.archive.org/web/20250314013619/https://ai.google.dev/gemini-api/docs/models/gemini
 gemini-2-0-flash-lite,false,none,,,,,990000,8192,text|image|video|audio,text,,true,,,0.052,0.21,,2026-09-01,https://models.dev/api.json
 gemini-2-5-flash,true,,,,,,1048576,65536,text|image|audio|video|pdf,text,2025-01,true,,,0.3,2.5,0.03,2026-09-01,https://models.dev/api.json
-gemini-2-5-flash-image,true,,,,,,32768,32768,text|image,text|image,2024-06,false,,,0.3,30,,2026-09-01,https://models.dev/api.json
 gemini-2-5-flash-lite,true,,,,,,1048576,65536,text|image|audio|video|pdf,text,2025-01,true,,,,,,2026-09-01,https://models.dev/api.json
 gemini-2-5-pro,,toggleable,,true,,false,1048576,65536,text|image|audio|video,text,2025-01,true,true,true,1.25,10.00,0.125,2026-08-25,https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro
 gemini-2-5-pro-preview,true,,,,,,1048576,65536,pdf|image|text|audio,text,,true,,,1.25,10,0.125,2026-09-01,https://models.dev/api.json
 gemini-2-5-pro-preview-05-06,true,,,,,,1048756,65536,text|image|audio,text,,false,,,2.5,10,0.25,2026-09-01,https://models.dev/api.json
-gemini-3-1-flash-image,true,,,,,,1048576,32768,text|image,text|image,2025-01,false,,,0.5,3,,2026-09-01,https://models.dev/api.json
-gemini-3-1-flash-image-preview,true,,,,,,1048576,32768,text|image,text|image,2025-01,false,,,0.5,3,,2026-09-01,https://models.dev/api.json
 gemini-3-1-flash-lite,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,0.25,1.5,,2026-09-01,https://models.dev/api.json
-gemini-3-1-flash-lite-image,true,,,,,,65536,4096,text|image,text|image,2025-01,false,,,0.25,1.5,,2026-09-01,https://models.dev/api.json
 gemini-3-1-flash-lite-preview,false,none,,,,,1050000,65530,text|image|audio|video,text,,true,,,0.25,1.5,,2026-09-01,https://models.dev/api.json
 gemini-3-1-pro,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,2025-01,true,,,0,0,,2026-09-01,https://models.dev/api.json
 gemini-3-1-pro-preview,true,,,,,,1000000,64000,text|image|video|audio|pdf,text,2026-01,true,,,2,12,0.2,2026-09-01,https://models.dev/api.json
@@ -100,12 +88,6 @@ gemini-3-8-flash,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,,true,,
 gemini-3-flash,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,0.4,2.4,0.04,2026-09-01,https://models.dev/api.json
 gemini-3-flash-preview,true,,,,,,1048576,65536,text|image|audio,text,2025-01,true,,,0.5,3,0.05,2026-09-01,https://models.dev/api.json
 gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6,0.16,2026-09-01,https://models.dev/api.json
-gemini-3-pro-image,true,,,,,,65536,32768,text|image,text|image,2025-01,false,,,2,12,0.2,2026-09-01,https://models.dev/api.json
-gemini-3-pro-image-preview,false,none,,,,,32768,64000,text|image,text,2025-06,false,,,2,120,,2026-09-01,https://models.dev/api.json
-gemini-embedding,false,none,,,,,2048,1,text,text,2025-05,false,,,,,,2026-09-01,https://models.dev/api.json
-gemini-exp,false,none,,,,,2097152,8192,text|image|audio,text,,false,,,1.258,4.998,0.629,2026-09-01,https://models.dev/api.json
-gemini-flash-latest,true,,,,,,1048576,65536,text|image|video|pdf|audio,text,,true,,,0.75,3.75,0.075,2026-09-01,https://models.dev/api.json
-gemini-pro-latest,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,2025-01,true,,,2,12,0.2,2026-09-01,https://models.dev/api.json
 gemma-2-27b-it,false,none,,,,,8192,2048,text,text,,false,,,0.65,0.65,,2026-09-01,https://models.dev/api.json
 gemma-2-2b-it,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 gemma-2-9b-it,false,none,,,,,8192,8192,text,text,2024-06,false,,,0.01,0.03,,2026-09-01,https://models.dev/api.json
@@ -132,8 +114,6 @@ glm-5-3,true,,,,,,1000000,131072,text,text,,true,,,1.4,4.4,0.26,2026-09-01,https
 glm-5-3-flash,true,,,,,,1048576,131072,text|image|video,text,,true,,,0.15,0.5,0.03,2026-09-01,https://models.dev/api.json
 glm-5-turbo,true,,,,,,200000,32768,text,text,,true,,,1.2,4,0.24,2026-09-01,https://models.dev/api.json
 glm-5v-turbo,true,,,,,,202752,202752,text|image,text,,true,,,1.186,3.955,0.296,2026-09-01,https://models.dev/api.json
-glm-flash-latest,true,,,,,,1048576,131072,text|image|video,text,,true,,,0.075,0.25,0.015,2026-09-02,https://models.dev/api.json
-glm-latest,true,,,,,,1048576,131072,text,text,,true,,,1,3.2,0.2,2026-09-01,https://models.dev/api.json
 gpt-3-5,,none,,,,,16385,4096,text,text,2021-09-01,false,false,false,0.50,1.50,,2026-08-25,https://developers.openai.com/api/docs/models/gpt-3.5-turbo
 gpt-3-5-turbo,false,none,,,,,16385,4096,text,text,2021-09-01,true,,,0.5,1.5,,2026-09-01,https://models.dev/api.json
 gpt-3-5-turbo-16k,false,none,,,,,16385,4096,text|pdf,text,,true,,,3,4,,2026-09-01,https://models.dev/api.json
@@ -158,7 +138,6 @@ gpt-5-2-chat,false,none,,,,,128000,32000,pdf|image|text,text,,true,,,1.75,14,0.1
 gpt-5-2-codex,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,1.75,14,0.175,2026-09-01,https://models.dev/api.json
 gpt-5-2-pro,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,21,168,,2026-09-01,https://models.dev/api.json
 gpt-5-3-codex,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,1.75,14,0.18,2026-09-01,https://models.dev/api.json
-gpt-5-4-image-2,true,,,,,,272000,128000,image|text|pdf,image|text,,false,,,8,15,2,2026-09-01,https://models.dev/api.json
 gpt-5-4-mini,true,,,,,,400000,128000,text|image,text,,true,,,0.68,4,0.068,2026-09-01,https://models.dev/api.json
 gpt-5-4-nano,true,,,,,,400000,128000,text|image,text,2024-05-30,true,,,0.2,1.25,0.02,2026-09-01,https://models.dev/api.json
 gpt-5-4-pro,true,,,,,,1050000,128000,text|image,text,2025-08-31,true,,,30,180,0,2026-09-01,https://models.dev/api.json
@@ -172,8 +151,6 @@ gpt-5-6-sol-pro,true,,,,,,1050000,128000,text|image|pdf,text,2026-02-16,true,,,4
 gpt-5-6-terra,true,,,,,,1000000,128000,text|image,text,2026-02-16,true,,,2.5,15,0.25,2026-09-01,https://models.dev/api.json
 gpt-5-6-terra-pro,true,,,,,,1050000,128000,text|image|pdf,text,2026-02-16,true,,,2,12,0.2,2026-09-01,https://models.dev/api.json
 gpt-5-codex,false,none,,,,,400000,128000,text,text,2025-01,true,,,1.25,10,0.12500000000000003,2026-09-01,https://models.dev/api.json
-gpt-5-image,true,,,,,,400000,128000,image|text|pdf,image|text,,false,,,10,10,1.25,2026-09-01,https://models.dev/api.json
-gpt-5-image-mini,true,,,,,,400000,128000,pdf|image|text,image|text,,false,,,2.5,2,0.25,2026-09-01,https://models.dev/api.json
 gpt-5-mini,false,none,,,,,400000,128000,text|image,text,2025-01,true,,,0.25,2,0.024999999999999998,2026-09-01,https://models.dev/api.json
 gpt-5-nano,false,none,,,,,400000,128000,text|image,text,2025-01,true,,,0.049999999999999996,0.39999999999999997,0.005,2026-09-01,https://models.dev/api.json
 gpt-5-pro,false,none,,,,,128000,32768,text,text,2025-01,false,,,15,120,,2026-09-01,https://models.dev/api.json
@@ -181,10 +158,6 @@ gpt-6-astra,true,,,,,,1050000,1050000,text|image,text,,true,,,10,50,1,2026-09-05
 gpt-6-astra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-audio,false,none,,,,,128000,16384,text|audio|pdf,text|audio,,true,,,2.5,10,,2026-09-01,https://models.dev/api.json
 gpt-audio-mini,false,none,,,,,128000,16384,text|audio|pdf,text|audio,,true,,,0.6,2.4,,2026-09-01,https://models.dev/api.json
-gpt-chat-latest,true,,,,,,1050000,128000,text|image|pdf,text,,true,,,2,10,0.2,2026-09-01,https://models.dev/api.json
-gpt-image-2,false,none,,,,,0,16384,text|image,image|text,,false,,,8,30,,2026-09-01,https://models.dev/api.json
-gpt-latest,true,,,,,,1050000,128000,text|image|pdf,text,,true,,,2,10,0.2,2026-09-01,https://models.dev/api.json
-gpt-mini-latest,true,,,,,,400000,128000,pdf|image|text,text,2025-08-31,true,,,0.75,4.5,0.075,2026-09-01,https://models.dev/api.json
 gpt-oss-120b,true,,,,,,131072,32768,text,text,,true,,,0.15,0.6,,2026-09-01,https://models.dev/api.json
 gpt-oss-20b,true,,,,,,131072,32768,text,text,,true,,,0.07,0.2,,2026-09-01,https://models.dev/api.json
 gpt-oss-safeguard-20b,false,none,,,,,128000,16384,text,text,,true,,,0.07,0.2,,2026-09-01,https://models.dev/api.json
@@ -204,7 +177,6 @@ grok-4-6,true,,,,,,500000,200000,text|image,text,2026-02-01,true,,,2.27,6.8,0.57
 grok-4-fast,true,,,,,,2000000,64000,text|image,text,2025-01-01,true,,,0.2,0.5,0.05,2026-09-01,https://models.dev/api.json
 grok-build-0-1,true,,,,,,256000,256000,text|image,text,,true,,,1,2,0.2,2026-09-01,https://models.dev/api.json
 grok-code-fast-1,false,none,,,,,256000,10000,text,text,2024-08,true,,,0.19999999999999998,1.5,0.02,2026-09-01,https://models.dev/api.json
-grok-latest,true,,,,,,500000,500000,text|image,text,,true,,,2,6,0.5,2026-09-01,https://models.dev/api.json
 grok-voice-think-fast-1-0,false,none,,,,,0,0,text|audio,text|audio,,false,,,,,,2026-09-01,https://models.dev/api.json
 hermes-3-llama-3-1-405b,false,none,,,,,131072,16384,text,text,,false,,,1,1,,2026-09-01,https://models.dev/api.json
 hermes-3-llama-3-1-70b,false,none,,,,,131072,16384,text,text,,false,,,0.7,0.7,,2026-09-01,https://models.dev/api.json
@@ -224,7 +196,6 @@ kimi-k2-6,true,,,,,,262144,262144,text|image|video,text,2025-01,true,,,0.95,4,0.
 kimi-k2-7-code,true,,,,,,262144,262144,text|image|video,text,2025-01,true,,,0.95,4,0.19,2026-09-01,https://models.dev/api.json
 kimi-k2-thinking,true,,,,,,32768,4096,text,text,2024-08,true,,,0.55,2.25,0.275,2026-09-01,https://models.dev/api.json
 kimi-k3,,always_on,,,,,1048576,,text|image|video,text,,true,,,3.00,15.00,,2026-08-25,https://huggingface.co/moonshotai/Kimi-K3
-kimi-latest,true,,,,,,256000,262144,text|image,text,2025-01,true,,,1.791,8.9436,0.1733,2026-09-01,https://models.dev/api.json
 lfm2-5-2-6b,true,,,,,,65536,8192,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 ling-1t,false,none,,,,,128000,32000,text,text,2024-06,true,,,0.57,2.29,,2026-09-01,https://models.dev/api.json
 ling-2-6-flash,false,none,,,,,262144,262144,text,text,,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
@@ -236,7 +207,7 @@ llama-2-70b,,none,,,,,4096,,text,text,2022-09-01,,,,,,,,https://github.com/meta-
 llama-3-1-405b-instruct,,none,,,,,131072,,text,text,2023-12-01,true,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
 llama-3-1-70b-instruct,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 llama-3-1-8b-instruct,true,,,,,,128000,8192,text,text,2023-12-31,true,,,0.2,0.2,0.2,2026-09-01,https://models.dev/api.json
-llama-3-1-nemotron-70b-instruct-hf,false,none,,,,,16384,8192,text,text,,false,,,0.357,0.408,0.1785,2026-09-01,https://models.dev/api.json
+llama-3-1-nemotron-70b-instruct,false,none,,,,,16384,8192,text,text,,false,,,0.357,0.408,0.1785,2026-09-01,https://models.dev/api.json
 llama-3-2-11b-instruct,false,none,,,,,128000,8192,text,text,,false,,,0.07,0.33,,2026-09-01,https://models.dev/api.json
 llama-3-2-1b-instruct,true,,,,,,131072,60000,text,text,2023-12-31,false,,,0.1,0.201,0.1,2026-09-01,https://models.dev/api.json
 llama-3-2-3b-instruct,false,none,,,,,131072,8192,text|pdf,text,,false,,,0.0306,0.0493,0.0153,2026-09-01,https://models.dev/api.json
@@ -248,8 +219,6 @@ llama-4-scout,false,none,,,,,131072,8192,text|image,text,2025-01,true,,,0.08,0.3
 llama-guard-4-12b,false,none,,,,,128000,16384,text|image,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 longcat-2-0,true,,,,,,1000000,131072,text,text,,true,,,0.75,2.95,0.015,2026-09-01,https://models.dev/api.json
 longcat-flash-chat,false,none,,,,,131072,131072,text,text,,false,,,,,,2026-09-01,https://models.dev/api.json
-lyria-3-clip-preview,false,none,,,,,1048576,65536,text|image,text|audio,,false,,,0,0,,2026-09-01,https://models.dev/api.json
-lyria-3-pro-preview,false,none,,,,,1048576,65536,text|image,text|audio,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 mimo-v2-5,true,,,,,,1048576,131072,text|image|audio|video,text,2024-12,true,,,0.14,0.28,0.0028,2026-09-01,https://models.dev/api.json
 mimo-v2-5-pro,true,,,,,,1048576,131072,text,text,2024-12,true,,,1.74,3.48,0.0145,2026-09-01,https://models.dev/api.json
 mimo-v2-flash,true,,,,,,262144,4096,text,text,2024-12,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
@@ -308,7 +277,6 @@ nova-lite-v1,false,none,,,,,300000,5120,text,text,,false,,,0.0595,0.238,0.02975,
 nova-micro-v1,false,none,,,,,128000,5120,text,text,,true,,,0.035,0.14,,2026-09-01,https://models.dev/api.json
 nova-premier-v1,false,none,,,,,1000000,32000,text|image,text,,true,,,2.5,12.5,0.625,2026-09-01,https://models.dev/api.json
 nova-pro-v1,true,,,,,,300000,5000,text|image|pdf,text,2024-04,true,,,0.918,3.671,,2026-09-01,https://models.dev/api.json
-nv-embed-v1,false,none,,,,,32768,2048,text,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 nvidia-nemotron-nano-12b-v2,false,none,,,,,128000,4096,text|image,text,,true,,,0.2,0.6,,2026-09-01,https://models.dev/api.json
 nvidia-nemotron-nano-9b-v2,true,,,,,,131072,131072,text,text,2024-09,true,,,0,0,,2026-09-01,https://models.dev/api.json
 o1-preview,true,,,,,,128000,32768,text,text,,false,,,15,60,7.5,2026-09-01,https://models.dev/api.json
@@ -349,6 +317,7 @@ qwen3-30b-a3b,true,,,,,,40960,16384,text,text,,true,,,0.12,0.5,,2026-09-01,https
 qwen3-30b-a3b-instruct-2507,false,none,,,,,256000,32768,text,text,,false,,,0.2,0.5,0.1,2026-09-01,https://models.dev/api.json
 qwen3-30b-a3b-thinking-2507,true,,,,,,262144,32768,text,text,2025-04,true,,,0,0,,2026-09-01,https://models.dev/api.json
 qwen3-32b,false,none,,,,,128000,32000,text,text,2024-10,true,,,0,0,,2026-09-01,https://models.dev/api.json
+qwen3-4b,true,,,,,,128000,20000,text,text,,false,,,0.03,0.03,,2026-09-11,https://models.dev/api.json
 qwen3-5-0-8b,false,none,,,,,32768,8192,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 qwen3-5-122b-a10b,true,,,,,,262144,65536,text|image|video|audio,text,,true,,,0.4,3.2,,2026-09-01,https://models.dev/api.json
 qwen3-5-27b,true,,,,,,262144,65536,text|image|video|audio,text,,true,,,0.3,2.4,,2026-09-01,https://models.dev/api.json
@@ -415,9 +384,6 @@ sonar-reasoning-pro,true,,,,,,128000,4096,text|image,text,2025-09-01,false,,,,,,
 step-3-5-flash,true,,,,,,256000,131072,text,text,2025-01,true,,,0.1,0.3,0.02,2026-09-01,https://models.dev/api.json
 step-3-7-flash,true,,,,,,256000,16384,text|image,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 tencent-hy3,true,,,,,,262144,131072,text,text,,true,,,0.16,0.64,0.04,2026-09-01,https://models.dev/api.json
-text-embedding-3-large,false,none,,,,,8191,3072,text,text,,false,,,0.13,0,,2026-09-01,https://models.dev/api.json
-text-embedding-3-small,false,none,,,,,8191,1536,text,text,,false,,,0.02,0,,2026-09-01,https://models.dev/api.json
-text-embedding-ada-002,false,none,,,,,8192,1536,text,text,,false,,,0.1,0,,2026-09-01,https://models.dev/api.json
 ui-tars-1-5-7b,false,none,,,,,128000,2048,image|text,text,,false,,,0.1,0.2,0.1,2026-09-01,https://models.dev/api.json
 voxtral-small-24b-2507,false,none,,,,,32000,32000,audio|text,text,,false,,,0.0023,0.0023,,2026-09-01,https://models.dev/api.json
 wizardlm-2-8x22b,false,none,,,,,65535,8000,text,text,,false,,,0.62,0.62,,2026-09-01,https://models.dev/api.json
