@@ -149,7 +149,7 @@ For research:
 ## How much is in it
 
 <!-- stats:start -->
-Exact counts as of the last rebuild: 1135 models from 41 organizations, 1874 dated events, backed by 2884 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 82% of the models are open-weight; Chinese labs make up 49% of those.
+Exact counts as of the last rebuild: 1140 models from 41 organizations, 1879 dated events, backed by 2905 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 83% of the models are open-weight; Chinese labs make up 49% of those.
 
 Read the counts honestly. 0 models are `human_reviewed` (a named person checked a primary page); 5% are `curated` (the project read a primary page such as a vendor blog or deprecation table); 50% are `machine_corroborated` (two independent sources agreed, or a platform reported its own listing); the remaining 45% are `unreviewed` catalog drafts. 50% of events are `verified`, and 30% of those are a platform's own listing timestamp; 0 were checked by a named person.
 <!-- stats:end -->

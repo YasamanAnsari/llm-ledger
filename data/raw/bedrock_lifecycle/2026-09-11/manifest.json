@@ -1,7 +1,7 @@
 {
   "model-lifecycle-legacy.html": {
     "bytes": 25550,
-    "fetched_at": "2026-09-11T02:07:02+00:00",
+    "fetched_at": "2026-09-11T11:25:32+00:00",
     "sha256": "5afa5085fb3e87c4211affb878b32fa8cf49edf1cd3e760354e15842c013c00d",
     "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html"
   }
