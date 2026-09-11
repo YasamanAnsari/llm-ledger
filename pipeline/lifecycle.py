@@ -21,7 +21,7 @@ import csv
 import re
 import sys
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -30,7 +30,7 @@ import match
 import orgs_seed
 import schema
 from confidence import Claim, flatten_claims, group_claims, upsert_machine_event
-from schema import CLAIMS, EVENTS
+from schema import CLAIMS, EVENTS, MODELS
 
 # LiteLLM provider slugs that are hosting platforms, not model vendors.
 PLATFORM_PROVIDERS = {
@@ -112,6 +112,7 @@ def main() -> int:
                 (date.fromisoformat(row["retire_date"]), row["model_ref"], row))
 
     outcomes = Counter()
+    touched: set = set()
     for (model_id, platform), by_source in sorted(grouped.items()):
         claims = []
         for source, entries in by_source.items():
@@ -128,7 +129,12 @@ def main() -> int:
             events, event_index, claims_by_event, model_id, "retired", claims, today,
             platform=platform, next_id=schema.next_event_id)
         outcomes[outcome] += 1
+        if outcome in ("added", "updated"):
+            touched.add(model_id)
 
+    schema.mark_updated(models_by_id, touched,
+                        datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    schema.write_table(MODELS, list(models_by_id.values()))
     schema.write_table(EVENTS, events)
     schema.write_table(CLAIMS, flatten_claims(claims_by_event))
     print(f"lifecycle: retired events added={outcomes['added']} updated={outcomes['updated']} "

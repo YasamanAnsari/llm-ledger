@@ -413,6 +413,8 @@ def main() -> int:
 
     added_models = 0
     outcomes = Counter()
+    touched: set = set()
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for row in matched:
         key_hit = next((vendor_index[v] for v in match.key_variants(row["match_key"], identity=True)
                         if v in vendor_index), None)
@@ -450,6 +452,7 @@ def main() -> int:
             if key not in crosswalk_keys:
                 crosswalk_keys.add(key)
                 tables["crosswalk"].append(xw)
+                touched.add(model_id)
             if xw["namespace"] in schema.IDENTITY_NAMESPACES:
                 identity.setdefault((xw["namespace"], xw["identifier"]), model_id)
 
@@ -457,6 +460,7 @@ def main() -> int:
             draft["attributes"]["model_id"] = model_id
             attributes_by_id[model_id] = draft["attributes"]
             outcomes["attributes"] += 1
+            touched.add(model_id)
 
         floor = curated_announcement(event_index, model_id)
         # Availability first, so the announced claim can be checked against
@@ -466,8 +470,9 @@ def main() -> int:
                 ceiling = earliest_availability(event_index, model_id)
                 if ceiling is not None and ev["claims"][0].date > ceiling:
                     outcomes["announced-after-availability"] += 1
-                    withdraw_machine_announced_after(
-                        events, event_index, claims_by_event, model_id, ceiling)
+                    if withdraw_machine_announced_after(
+                            events, event_index, claims_by_event, model_id, ceiling):
+                        touched.add(model_id)
                     continue
             outcome = upsert_machine_event(
                 events, event_index, claims_by_event, model_id, ev["event_type"],
@@ -475,12 +480,15 @@ def main() -> int:
                 not_before=floor if ev["event_type"] in ("api_ga", "weights_released") else None,
                 next_id=schema.next_event_id)
             outcomes[outcome] += 1
+            if outcome in ("added", "updated", "precreated"):
+                touched.add(model_id)
         # A catalog may move availability in front of an `announced` row
         # drafted on an earlier run; the same rule applies to the stored row.
         ceiling = earliest_availability(event_index, model_id)
         if ceiling is not None and withdraw_machine_announced_after(
                 events, event_index, claims_by_event, model_id, ceiling):
             outcomes["announced-after-availability"] += 1
+            touched.add(model_id)
         # models.dev's open-weights verdict decides whether its date is a
         # weights or an API event; a row of the other type that rests on
         # models.dev alone is stale and goes.
@@ -490,7 +498,9 @@ def main() -> int:
             if withdraw_machine_event(events, event_index, claims_by_event, model_id, stale,
                                       only_hosts={"models.dev"}):
                 outcomes["stale-type-withdrawn"] += 1
+                touched.add(model_id)
 
+    schema.mark_updated(models_by_id, touched, now)
     schema.write_table(ORGANIZATIONS, list(orgs_by_id.values()))
     schema.write_table(MODELS, list(models_by_id.values()))
     schema.write_table(EVENTS, events)

@@ -41,3 +41,10 @@ def test_foreign_family_and_classification():
     assert derivative_from_name("deepseek-r1-distill-llama-8b", "deepseek") == "distill"
     assert derivative_from_name("hermes-3-llama-3-1-8b", "nous-research") == "finetune"
     assert derivative_from_name("qwen2-5-72b-instruct", "alibaba") == ""
+
+
+def test_mark_updated_touches_only_named_models():
+    from schema import mark_updated
+    rows = {"a": {"record_updated": "old"}, "b": {"record_updated": "old"}}
+    mark_updated(rows, {"a"}, "2026-10-01T00:00:00+00:00")
+    assert rows["a"]["record_updated"] == "2026-10-01T00:00:00+00:00" and rows["b"]["record_updated"] == "old"

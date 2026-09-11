@@ -130,6 +130,7 @@ def main() -> int:
 
     added_models = added_events = added_xw = 0
     drafted_this_run: set = set()
+    touched: set = set()
     earliest_repo: dict = {}
     for row in sorted(capped, key=lambda r: r["repo_id"]):
         repo_id = row["repo_id"]
@@ -193,6 +194,7 @@ def main() -> int:
                 {"model_id": model_id, "namespace": "huggingface", "identifier": repo_id})
             hf_xw[repo_id] = model_id
             added_xw += 1
+            touched.add(model_id)
 
         if not row["created_at"]:
             continue
@@ -239,10 +241,13 @@ def main() -> int:
             events, event_index, claims_by_event, model_id, "weights_released", claims,
             today, not_before=floor, next_id=schema.next_event_id)
         outcomes[outcome] = outcomes.get(outcome, 0) + 1
+        if outcome in ("added", "updated", "precreated"):
+            touched.add(model_id)
         if outcome in ("added", "updated", "unchanged"):
             assessed = event_index[(model_id, "weights_released", "")]["date"]
-            withdraw_machine_announced_after(
-                events, event_index, claims_by_event, model_id, date.fromisoformat(assessed))
+            if withdraw_machine_announced_after(
+                    events, event_index, claims_by_event, model_id, date.fromisoformat(assessed)):
+                touched.add(model_id)
         if outcome == "added":
             added_events += 1
         elif outcome == "precreated":
@@ -269,6 +274,7 @@ def main() -> int:
         added_models -= len(undatable)
         added_xw -= n_before - len(tables["crosswalk"])
 
+    schema.mark_updated(models_by_id, touched, now)
     schema.write_table(ORGANIZATIONS, tables["organizations"])
     schema.write_table(MODELS, list(models_by_id.values()))
     schema.write_table(EVENTS, events)

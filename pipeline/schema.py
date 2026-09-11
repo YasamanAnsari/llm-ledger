@@ -259,6 +259,13 @@ def load_core() -> dict:
     return {t.name: read_table(t) for t in CORE_TABLES}
 
 
+def mark_updated(models_by_id: dict, model_ids: set, now: str) -> None:
+    """Stamp record_updated on the models a loader changed this run."""
+    for mid in model_ids:
+        if mid in models_by_id:
+            models_by_id[mid]["record_updated"] = now
+
+
 # ---------------------------------------------------------------------------
 # Review queue (data/staging/review_queue.csv), shared by every producer
 # ---------------------------------------------------------------------------
