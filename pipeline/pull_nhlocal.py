@@ -10,10 +10,8 @@ with a small line parser to avoid a yaml dependency.
 """
 from __future__ import annotations
 
-import csv
 import re
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -27,10 +25,6 @@ BOLD_RE = re.compile(r"<b>(.+?)</b>")
 MONTHS = {m: i for i, m in enumerate(
     ("January", "February", "March", "April", "May", "June", "July",
      "August", "September", "October", "November", "December"), start=1)}
-
-QUEUE_COLUMNS = ["kind", "left_source", "left_key", "right_source",
-                 "right_key", "score", "note"]
-
 
 def parse_timeline(text: str) -> list[dict]:
     """Yield {name, date, precision, context} for each <b>bolded</b> mention."""
