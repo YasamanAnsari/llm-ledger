@@ -139,3 +139,12 @@ def test_upsert_never_touches_curated_rows() -> None:
     assert upsert_machine_event(events, index, {}, "m", "api_ga", [_c("2025-02-01", MD)],
                                 TODAY) == "skipped"
     assert curated["date"] == "2025-01-01"
+
+
+def test_upsert_records_the_agent_as_verifier_when_asked() -> None:
+    events, index, claims = [], {}, {}
+    a = _c("2025-01-20", OR, first_party=True)
+    upsert_machine_event(events, index, claims, "m", "platform_availability", [a], TODAY,
+                         platform="openrouter", next_id=lambda *_: "m-platform_availability-1",
+                         verifier="llm-ledger-agent")
+    assert events[0]["verified_by"] == "llm-ledger-agent"

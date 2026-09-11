@@ -65,10 +65,12 @@ SOURCE_TYPES = {
 CONFIDENCES = {"verified", "inferred", "disputed"}
 
 # Derived per model by build.py from its events (see compute_derived):
-#   human_reviewed       a named person verified at least one event
-#   machine_corroborated at least one event is verified by llm-ledger
+#   human_reviewed       a named person verified a curated event
+#   curated              the project (or its LLM agent) verified a curated
+#                        event read from a primary page
+#   machine_corroborated at least one machine event reached verified
 #   unreviewed           machine claims only, none corroborated
-REVIEW_STATUSES = {"unreviewed", "machine_corroborated", "human_reviewed"}
+REVIEW_STATUSES = {"unreviewed", "machine_corroborated", "curated", "human_reviewed"}
 
 CROSSWALK_NAMESPACES = {
     "openrouter", "models_dev", "huggingface", "modelscope", "openai_api",
@@ -83,12 +85,14 @@ PLATFORMS = {
     "fireworks", "deepinfra", "sagemaker", "github_models", "huggingface",
 }
 
-# HF license tags that are OSI-approved; everything else with a tag is
-# open_weights_restricted.
+# License tags that are OSI-approved. Any other tag that names terms is
+# open_weights_restricted; tags that name nothing get no family at all.
 LICENSE_OSI = {
-    "apache-2.0", "mit", "bsd-3-clause", "bsd-2-clause", "cc0-1.0", "openrail",
-    "gpl-3.0", "agpl-3.0", "mpl-2.0",
+    "apache-2.0", "mit", "bsd-3-clause", "bsd-2-clause", "cc0-1.0", "gpl-3.0",
+    "agpl-3.0", "mpl-2.0", "isc", "lgpl-3.0", "unlicense",
 }
+# Tags that say nothing about terms. No family is assigned; a person fills it.
+LICENSE_UNKNOWN = {"", "other", "unknown"}
 
 REASONING_TYPES = {"none", "always_on", "toggleable", "effort_tiered"}
 
@@ -383,9 +387,13 @@ def family_and_role(name: str) -> tuple:
 
 
 def license_family(license_tag: str) -> str:
-    if not license_tag:
+    """Family for a license tag; "" when the tag does not say (other/unknown)."""
+    key = re.sub(r"[\s_]+", "-", license_tag.strip().lower())
+    if key in LICENSE_UNKNOWN:
         return ""
-    return "osi_approved" if license_tag.lower() in LICENSE_OSI else "open_weights_restricted"
+    if key == "proprietary":
+        return "proprietary"
+    return "osi_approved" if key in LICENSE_OSI else "open_weights_restricted"
 
 
 def next_event_id(existing_events: list, model_id: str, event_type: str) -> str:

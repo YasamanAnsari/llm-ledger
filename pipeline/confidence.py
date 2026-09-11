@@ -30,6 +30,8 @@ AGREE_DAYS = 7
 BOUND_AGREE_DAYS = 2
 DISPUTE_DAYS = 30
 PROJECT_VERIFIER = "llm-ledger"
+AGENT_VERIFIER = "llm-ledger-agent"   # rows the LLM agent extracted from a page
+PROJECT_VERIFIERS = {PROJECT_VERIFIER, AGENT_VERIFIER}
 
 # Rows with these source types are owned by the loaders and re-assessed on
 # every run. Any other source type means a person curated the row: never
@@ -219,12 +221,14 @@ def withdraw_machine_announced_after(events: list, index: dict, claims_by_event:
 
 def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
                          model_id: str, event_type: str, claims: list, today: date,
-                         platform: str = "", not_before=None, next_id=None) -> str:
+                         platform: str = "", not_before=None, next_id=None,
+                         verifier: str = PROJECT_VERIFIER) -> str:
     """Add or refresh the machine-owned event for (model, type, platform).
 
     New claims replace stored claims from the same host; claims from other
     hosts (contributed by other loaders) are kept, and the event is
-    re-assessed from the full set. Returns "added", "updated", "unchanged",
+    re-assessed from the full set. `verifier` names who signs a machine
+    corroboration (the project, or its agent). Returns "added", "updated", "unchanged",
     "skipped" (curated row) or "precreated" (every claim predates
     `not_before`; any stale machine row is withdrawn). `index` maps
     (model_id, event_type, platform) -> row; both it and `claims_by_event`
@@ -247,11 +251,12 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
                 _remove_event(events, index, claims_by_event, existing)
             return "precreated"
     a = assess(merged)
+    verified_by = verifier if a.verified_by == PROJECT_VERIFIER else a.verified_by
 
     fields = {
         "date": a.date, "precision": a.precision, "confidence": a.confidence,
         "source_url": a.source_url, "source_type": a.source_type,
-        "verified_by": a.verified_by, "notes": a.notes,
+        "verified_by": verified_by, "notes": a.notes,
     }
     if existing is None:
         row = {

@@ -115,12 +115,23 @@ def test_family_and_role_from_name():
         assert family_and_role(name) == expected, (name, family_and_role(name))
 
 
-def test_family_role_recomputed_unless_human_reviewed():
+def test_review_status_distinguishes_people_from_the_project():
+    person = [_event("m1", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "vendor_blog", "verified_by": "Yasaman Ansari"}]
+    project = [_event("m2", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "vendor_blog", "verified_by": "llm-ledger"}]
+    agent = [_event("m3", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "vendor_blog", "verified_by": "llm-ledger-agent"}]
+    machine = [_event("m4", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "api_metadata", "verified_by": "llm-ledger"}]
+    rows = compute_derived([_model("m1"), _model("m2"), _model("m3"), _model("m4"), _model("m5")],
+                           person + project + agent + machine)
+    assert [r["review_status"] for r in rows] == [
+        "human_reviewed", "curated", "curated", "machine_corroborated", "unreviewed"]
+
+
+def test_family_role_recomputed_unless_curated():
     curated = {"model_id": "m1", "canonical_name": "GPT-5.1", "family": "GPT-5", "variant_role": "base"}
     stale = {"model_id": "m2", "canonical_name": "Qwen2.5-72B-Instruct", "family": "old", "variant_role": "other"}
-    reviewed = [_event("m1", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "vendor_blog"}]
+    reviewed = [_event("m1", "api_ga", "2025-08-07") | {"confidence": "verified", "source_type": "vendor_blog", "verified_by": "llm-ledger"}]
     a, b = compute_derived([curated, stale], reviewed)
-    assert a["review_status"] == "human_reviewed"
+    assert a["review_status"] == "curated"
     assert (a["family"], a["variant_role"]) == ("GPT-5", "base")        # curated stands
     assert (b["family"], b["variant_role"]) == ("Qwen2.5", "instruct")  # machine row re-derived
 
