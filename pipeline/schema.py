@@ -341,6 +341,37 @@ def snapshot_file(source: str, filename: str, max_age_days=MAX_SNAPSHOT_AGE_DAYS
     raise FileNotFoundError(f"no snapshot of {source} contains {filename}; run its puller")
 
 
+def snapshot_content_date(source: str, filename: str) -> str:
+    """Date the current payload of `filename` first appeared.
+
+    Walks the manifests newest to oldest while the sha256 is unchanged, so
+    two consecutive pulls of an identical payload print the same date and
+    the generated files do not churn daily. Days that did not record the
+    file (a failed pull) are skipped before the run starts and end it after.
+    """
+    base = RAW_DIR / source
+    if not base.exists():
+        raise FileNotFoundError(f"no snapshots for source '{source}' under {base}")
+    current, found = None, ""
+    for day in sorted((p for p in base.iterdir() if p.is_dir()), reverse=True):
+        manifest = day / "manifest.json"
+        if not manifest.exists():
+            continue
+        sha = json.loads(manifest.read_text(encoding="utf-8")).get(filename, {}).get("sha256")
+        if sha is None:
+            if current is None:
+                continue
+            break
+        if current is None:
+            current = sha
+        elif sha != current:
+            break
+        found = day.name
+    if not found:
+        raise FileNotFoundError(f"no manifest of {source} lists {filename}")
+    return found
+
+
 def write_snapshot(source: str, filename: str, payload: bytes, url: str) -> Path:
     """Store a raw payload plus a committed manifest (URL + hash, no payload)."""
     d = snapshot_dir(source)

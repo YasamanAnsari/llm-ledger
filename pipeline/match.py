@@ -392,7 +392,9 @@ def match() -> tuple:
                 "note": "92-97 band: confirm or reject before crosswalking",
             })
 
-    md_snapshot = schema.snapshot_file("models_dev", "normalized.csv").parent.name
+    # Dated by content, not by pull day, so an unchanged catalog does not
+    # rewrite every price_date in attributes.csv each morning.
+    md_snapshot = schema.snapshot_content_date("models_dev", "api.json")
     rows = []
     for key in sorted(clusters):
         c = clusters[key]

@@ -70,9 +70,8 @@ def _hist(values: list) -> list:
     return lines
 
 
-def main() -> int:
-    events = schema.read_table(schema.EVENTS)
-    models = {m["model_id"]: m for m in schema.read_table(schema.MODELS)}
+def build_sensitivity_report(events: list, models: dict) -> str:
+    """The report text for `events` rows and `models` keyed by model_id."""
     firsts = _first_dates(events)
 
     lines = [
@@ -132,9 +131,14 @@ def main() -> int:
     lines += ["## Coverage", "",
               f"- models with an anchor event: {len(firsts)}",
               f"- models with announced + an availability event: {both}", ""]
+    return "\n".join(lines)
 
+
+def main() -> int:
+    events = schema.read_table(schema.EVENTS)
+    models = {m["model_id"]: m for m in schema.read_table(schema.MODELS)}
     out = schema.GENERATED_DIR / "sensitivity_report.md"
-    out.write_text("\n".join(lines), encoding="utf-8")
+    out.write_text(build_sensitivity_report(events, models), encoding="utf-8")
     print(f"sensitivity: -> {out}")
     return 0
 

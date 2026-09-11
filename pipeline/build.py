@@ -9,12 +9,16 @@
 - Generates data/generated/models_latest.csv, a reading view of models.csv:
   the identifying columns with first_public_availability_date first, newest
   releases at the top, undated models last.
+- Generates the coverage and treatment-date sensitivity reports and the
+  README stats block, so no number in the repository can go stale.
 - Fills `family` and `variant_role` from the model name where no curator
   has set them (schema.family_and_role).
 
 Everything here is deterministic: fixed column orders, PK-sorted rows, no
-run timestamps in output. `validate.py` rule 9 rebuilds these artifacts
-in memory and byte-compares them against the files on disk.
+run timestamps in output, snapshot dates taken from payload content rather
+than pull day. `validate.py` rule 9 rebuilds every artifact in
+GENERATED_ARTIFACTS (plus the README) in memory and byte-compares it
+against the file on disk.
 """
 
 from __future__ import annotations
@@ -30,6 +34,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
+import sensitivity
 from confidence import PROJECT_VERIFIERS, is_machine_row
 from schema import (
     ATTRIBUTES, AVAILABILITY_EVENT_TYPES, EVENTS,
@@ -261,9 +266,11 @@ def _slug(text: str) -> str:
 
 
 def _load_epoch_snapshot() -> tuple:
-    """(snapshot_date, header, rows_by_model_name) from the latest raw pull."""
+    """(content_date, header, rows_by_model_name) from the latest raw pull.
+
+    The date is when this payload first appeared, so an unchanged Epoch
+    file does not rewrite `epoch_snapshot_date` on every row each day."""
     csv_path = schema.snapshot_file("epoch", "all_ai_models.csv")
-    snap_dir = csv_path.parent
     with csv_path.open(newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         header = list(reader.fieldnames or [])
@@ -272,7 +279,7 @@ def _load_epoch_snapshot() -> tuple:
             name = (row.get("Model") or row.get("System") or "").strip()
             if name and name not in by_name:
                 by_name[name] = row
-    return snap_dir.name, header, by_name
+    return schema.snapshot_content_date("epoch", "all_ai_models.csv"), header, by_name
 
 
 def build_enriched_bytes() -> bytes:
@@ -420,32 +427,45 @@ def build_coverage_report(models: list, events: list, organizations: list) -> st
     return "\n".join(lines) + "\n"
 
 
+def build_coverage_bytes() -> bytes:
+    models = compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS))
+    return build_coverage_report(models, schema.read_table(EVENTS),
+                                 schema.read_table(schema.ORGANIZATIONS)).encode("utf-8")
+
+
+def build_sensitivity_bytes() -> bytes:
+    models = {m["model_id"]: m for m in schema.read_table(MODELS)}
+    return sensitivity.build_sensitivity_report(schema.read_table(EVENTS), models).encode("utf-8")
+
+
+# Every generated artifact, with the function that rebuilds it from the
+# core tables. `main` writes them; validate.py rule 9 byte-compares them.
+GENERATED_ARTIFACTS = (
+    ("llm_ledger_wide.csv", build_wide_bytes),
+    ("llm_ledger_enriched.csv", build_enriched_bytes),
+    ("models_latest.csv", build_latest_bytes),
+    ("coverage_report.md", build_coverage_bytes),
+    ("sensitivity_report.md", build_sensitivity_bytes),
+)
+
+
 def main() -> int:
-    models = schema.read_table(MODELS)
-    events = schema.read_table(EVENTS)
-    models = compute_derived(models, events)
+    models = compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS))
     schema.write_table(MODELS, models)
     print("build: derived fields recomputed on data/core/models.csv")
 
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
-    (GENERATED_DIR / "llm_ledger_wide.csv").write_bytes(build_wide_bytes())
-    print("build: wrote data/generated/llm_ledger_wide.csv")
-    (GENERATED_DIR / "models_latest.csv").write_bytes(build_latest_bytes())
-    print("build: wrote data/generated/models_latest.csv")
-    (GENERATED_DIR / "coverage_report.md").write_text(
-        build_coverage_report(models, events, schema.read_table(schema.ORGANIZATIONS)),
-        encoding="utf-8")
-    print("build: wrote data/generated/coverage_report.md")
+    for filename, regenerate in GENERATED_ARTIFACTS:
+        try:
+            payload = regenerate()
+        except FileNotFoundError as exc:
+            # Only the Epoch join needs a raw snapshot; nothing is invented.
+            print(f"build: SKIPPED {filename} ({exc})")
+            continue
+        (GENERATED_DIR / filename).write_bytes(payload)
+        print(f"build: wrote data/generated/{filename}")
     (schema.REPO_ROOT / "README.md").write_bytes(build_readme_bytes())
     print("build: refreshed the README stats block")
-
-    try:
-        payload = build_enriched_bytes()
-    except FileNotFoundError as exc:
-        print(f"build: SKIPPED enriched artifact - no Epoch snapshot available ({exc})")
-        return 0
-    (GENERATED_DIR / "llm_ledger_enriched.csv").write_bytes(payload)
-    print("build: wrote data/generated/llm_ledger_enriched.csv")
     return 0
 
 

@@ -317,16 +317,12 @@ def check_rule8_vocabularies(tables: dict) -> list:
 
 
 def check_rule9_determinism(core_dir: Path) -> list:
-    """Generated CSV artifacts regenerate byte-identically from core tables."""
+    """Generated artifacts and the README stats regenerate byte-identically
+    from the core tables."""
     import build  # local import: build depends on schema only
 
     errors = []
-    for filename, regenerate in (
-        ("llm_ledger_wide.csv", build.build_wide_bytes),
-        ("llm_ledger_enriched.csv", build.build_enriched_bytes),
-        ("models_latest.csv", build.build_latest_bytes),
-        ("README.md", build.build_readme_bytes),
-    ):
+    for filename, regenerate in build.GENERATED_ARTIFACTS + (("README.md", build.build_readme_bytes),):
         path = (schema.REPO_ROOT if filename == "README.md" else schema.GENERATED_DIR) / filename
         if not path.exists():
             continue  # artifact not built yet; nothing to compare

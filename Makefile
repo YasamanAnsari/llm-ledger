@@ -22,8 +22,7 @@ census:
 lifecycle:
 	$(PY) pipeline/lifecycle.py
 
-sensitivity:
-	$(PY) pipeline/sensitivity.py
+sensitivity: build  # build writes the report; kept as a familiar name
 
 match:
 	$(PY) pipeline/match.py

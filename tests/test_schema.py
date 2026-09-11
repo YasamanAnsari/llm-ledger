@@ -75,3 +75,19 @@ def test_snapshot_file_skips_empty_days_and_refuses_stale():
     finally:
         schema.RAW_DIR = old_raw
         os.environ.pop("LEDGER_ALLOW_STALE", None)
+
+
+def test_snapshot_content_date_is_stable_while_the_payload_is():
+    import json
+    import tempfile
+    import schema
+    root = Path(tempfile.mkdtemp())
+    old = schema.RAW_DIR
+    schema.RAW_DIR = root
+    try:
+        for day, sha in (("2026-09-01", "a"), ("2026-09-02", "b"), ("2026-09-03", "b"), ("2026-09-04", "b")):
+            (root / "e" / day).mkdir(parents=True)
+            (root / "e" / day / "manifest.json").write_text(json.dumps({"f.csv": {"sha256": sha}}))
+        assert schema.snapshot_content_date("e", "f.csv") == "2026-09-02"
+    finally:
+        schema.RAW_DIR = old
