@@ -56,7 +56,10 @@ PER_ORG_CAP = 40  # top downloads per org; long-tail checkpoints add noise
 
 def load_wayback_captures() -> dict:
     """repo_id -> first public Wayback capture date, from the latest
-    pull_wayback snapshot; empty when none has been pulled."""
+    pull_wayback snapshot. Empty when none has been pulled: captures already
+    merged into claims.csv persist (upsert keeps other hosts' claims), so a
+    missing snapshot adds nothing rather than dropping anything; the run
+    summary reports the count."""
     try:
         # A first capture is a historical fact: the snapshot does not age.
         path = schema.snapshot_file("wayback", "normalized.csv", max_age_days=None)
@@ -69,7 +72,8 @@ def load_wayback_captures() -> dict:
 
 def load_modelscope_twins() -> dict:
     """(org_id, repo name lowercased) -> (created date, url) from the latest
-    pull_modelscope snapshot; empty when none has been pulled."""
+    pull_modelscope snapshot; empty when none has been pulled (safe for the
+    same reason as the Wayback captures)."""
     try:
         path = schema.snapshot_file("modelscope", "normalized.csv")
     except FileNotFoundError:
