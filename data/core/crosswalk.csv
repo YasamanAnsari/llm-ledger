@@ -1,5 +1,6 @@
 model_id,namespace,identifier
 academic-ds-9b,huggingface,ByteDance-Seed/academic-ds-9B
+ahn-dn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B
 ahn-mamba2-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B
@@ -277,6 +278,7 @@ deepseek-v3-2-exp,epoch,DeepSeek-V3.2-Exp
 deepseek-v3-2-exp,huggingface,deepseek-ai/DeepSeek-V3.2-Exp
 deepseek-v3-2-exp,models_dev,nano-gpt/deepseek-ai/deepseek-v3.2-exp
 deepseek-v3-2-exp,openrouter,deepseek/deepseek-v3.2-exp
+deepseek-v4-1-flash,huggingface,deepseek-ai/DeepSeek-V4.1-Flash
 deepseek-v4-1-flash,models_dev,crossmodel/deepseek/deepseek-v4.1-flash
 deepseek-v4-1-flash,openrouter,deepseek/deepseek-v4.1-flash
 deepseek-v4-flash,epoch,DeepSeek V4 Flash 0731
@@ -360,6 +362,7 @@ falcon-7b-instruct,huggingface,tiiuae/falcon-7b-instruct
 falcon-e-1b-base,huggingface,tiiuae/Falcon-E-1B-Base
 falcon-e-1b-instruct,huggingface,tiiuae/Falcon-E-1B-Instruct
 falcon-e-3b-base,huggingface,tiiuae/Falcon-E-3B-Base
+falcon-e-3b-instruct,huggingface,tiiuae/Falcon-E-3B-Instruct
 falcon-h1-0-5b-base,huggingface,tiiuae/Falcon-H1-0.5B-Base
 falcon-h1-0-5b-instruct,huggingface,tiiuae/Falcon-H1-0.5B-Instruct
 falcon-h1-1-5b-base,huggingface,tiiuae/Falcon-H1-1.5B-Base
@@ -512,6 +515,7 @@ gemma-4-12b-it,models_dev,pioneer/google/gemma-4-12B-it
 gemma-4-26b-a4b-it,epoch,Gemma 4 26B A4B
 gemma-4-26b-a4b-it,google_api,gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it,huggingface,google/gemma-4-26B-A4B-it
+gemma-4-26b-a4b-it,models_dev,amazon-bedrock/google.gemma-4-26b-a4b
 gemma-4-26b-a4b-it,models_dev,scaleway/gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it,openrouter,google/gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it-qat-q4-0-unquantized,huggingface,google/gemma-4-26B-A4B-it-qat-q4_0-unquantized
@@ -918,6 +922,7 @@ grok-code-fast-1,epoch,Grok Code Fast 1
 grok-code-fast-1,models_dev,helicone/grok-code-fast-1
 grok-voice-think-fast-1-0,epoch,Grok Voice Think Fast 1.0
 grok-voice-think-fast-1-0,models_dev,vercel/spacexai/grok-voice-think-fast-1.0
+grovemoe-inst,huggingface,inclusionAI/GroveMoE-Inst
 hermes-2-pro-llama-3-8b,huggingface,NousResearch/Hermes-2-Pro-Llama-3-8B
 hermes-2-pro-mistral-7b,huggingface,NousResearch/Hermes-2-Pro-Mistral-7B
 hermes-2-theta-llama-3-70b,huggingface,NousResearch/Hermes-2-Theta-Llama-3-70B
@@ -973,6 +978,7 @@ hy4-preview,openrouter,tencent/hy4-preview
 intern-s1,huggingface,internlm/Intern-S1
 intern-s1,huggingface,internlm/Intern-S1-FP8
 intern-s1-mini,huggingface,internlm/Intern-S1-mini
+intern-s1-mini,huggingface,internlm/Intern-S1-mini-FP8
 intern-s1-pro,huggingface,internlm/Intern-S1-Pro
 intern-s2-mobius,huggingface,internlm/Intern-S2-Mobius
 intern-s2-mobius,huggingface,internlm/Intern-S2-Mobius-FP8
@@ -1283,6 +1289,7 @@ minicpm5-1b,huggingface,openbmb/MiniCPM5-1B
 minicpm5-1b-base,huggingface,openbmb/MiniCPM5-1B-Base
 minicpm5-1b-sft,huggingface,openbmb/MiniCPM5-1B-SFT
 minicpm5-2b,huggingface,openbmb/MiniCPM5-2B
+minicpm5-2b-base,huggingface,openbmb/MiniCPM5-2B-Base
 minicpm5-2b-dspark,huggingface,openbmb/MiniCPM5-2B-DSpark
 minimax-01,models_dev,nano-gpt/minimax/minimax-01
 minimax-01,openrouter,minimax/minimax-01
@@ -1356,6 +1363,7 @@ mistral-large-3,epoch,Mistral Large 3
 mistral-large-3,models_dev,pioneer/mistral-large-3
 mistral-medium,epoch,Mistral Medium
 mistral-medium,mistral_api,mistral-medium
+mistral-medium,models_dev,pioneer/mistral-medium
 mistral-medium,models_dev,vercel/mistral/mistral-medium
 mistral-medium-3,epoch,Mistral Medium 3
 mistral-medium-3,mistral_api,mistral-medium-3
@@ -1891,6 +1899,7 @@ rwkv-3-pile-169m,huggingface,BlinkDL/rwkv-3-pile-169m
 rwkv-3-pile-1b5,huggingface,BlinkDL/rwkv-3-pile-1b5
 rwkv-4-169m-pile,huggingface,RWKV/rwkv-4-169m-pile
 rwkv-4-1b5-pile,huggingface,RWKV/rwkv-4-1b5-pile
+rwkv-4-3b-pile,huggingface,RWKV/rwkv-4-3b-pile
 rwkv-4-430m-pile,huggingface,RWKV/rwkv-4-430m-pile
 rwkv-4-7b-pile,huggingface,RWKV/rwkv-4-7b-pile
 rwkv-4-novel,huggingface,BlinkDL/rwkv-4-novel

@@ -7,7 +7,7 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-7d, n=118)
+- median 0d (IQR 0-8d, n=119)
 - range: 0d to 701d
 
 | gap | models |
@@ -17,7 +17,7 @@ positive means the second event happened after the first.
 | 8-30d | 7 |
 | 31-90d | 9 |
 | 91-365d | 12 |
-| >365d | 2 |
+| >365d | 3 |
 
 Per-organization medians (n>=3):
 
@@ -27,7 +27,7 @@ Per-organization medians (n>=3):
 - amazon: 0d (n=3)
 - anthropic: 0d (n=15)
 - deepseek: 0d (n=4)
-- mistral: 0d (n=6)
+- mistral: 0d (n=7)
 - bytedance: 0d (n=3)
 - zhipu: 0d (n=4)
 - openai: 0d (n=33)
@@ -35,13 +35,13 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=78)
+- median 0d (IQR 0-1d, n=77)
 - range: 0d to 185d
 
 | gap | models |
 |---|---|
-| same day | 54 |
-| 1-7d | 16 |
+| same day | 55 |
+| 1-7d | 14 |
 | 8-30d | 1 |
 | 31-90d | 1 |
 | 91-365d | 6 |
@@ -55,7 +55,7 @@ Per-organization medians (n>=3):
 - google: 0d (n=7)
 - zhipu: 0d (n=7)
 - moonshot: 0d (n=5)
-- meta: 0d (n=9)
+- meta: 0d (n=8)
 - nvidia: 0d (n=6)
 - minimax: 0d (n=5)
 
@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1120
+- models with an anchor event: 1125
 - models with announced + an availability event: 186
