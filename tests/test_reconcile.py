@@ -141,6 +141,40 @@ def test_image_generators_and_aliases_are_not_drafted() -> None:
     assert draft["model"]["model_type"] == "multimodal"
 
 
+def test_mistral_registry_time_is_not_a_date_but_deprecation_is() -> None:
+    import pull_vendor_apis
+    payload = {"data": [
+        {"id": "acme-1-2508", "created": 1789092422, "name": "acme-1-2508",
+         "max_context_length": 256000, "aliases": ["acme-1-latest"],
+         "deprecation": "2027-03-01T00:00:00", "deprecation_replacement_model": "acme-2"},
+        {"id": "acme-1-latest", "created": 1789092422, "aliases": ["acme-1-2508"], "deprecation": None},
+    ]}
+    rows = {r["id"]: r for r in pull_vendor_apis.normalize_mistral(payload)}
+    assert rows["acme-1-2508"]["created_date"] == ""          # response time, not a date
+    assert rows["acme-1-2508"]["shutdown_date"] == "2027-03-01"
+    assert rows["acme-1-2508"]["aliases"] == "acme-1-latest"
+    assert rows["acme-1-latest"]["shutdown_date"] == ""
+
+    vendor = {"acme-1": {"source": "mistral_api", "org_id": "mistral", "url": "https://api.mistral.ai/v1/models",
+                         "ids": ["acme-1-2508"], "created": [""], "shutdown": ["2027-03-01"], "aliases": set()}}
+    draft = reconcile.reconcile_cluster(_cluster(or_prefix="mistralai", md_provider="mistral"), TODAY, vendor)
+    ev = _events_by_type(draft)
+    assert not any("mistral_api created" in c.label for c in ev["api_ga"]["claims"])
+    assert ev["retired"]["claims"][0].first_party and ev["retired"]["claims"][0].date == date(2027, 3, 1)
+
+
+def test_vendor_alias_groups_link_split_keys_and_skip_moving_aliases() -> None:
+    def rec(*aliases):
+        return {"source": "mistral_api", "aliases": set(aliases)}
+    vendor = {"mistral-medium": rec("mistral-medium-3-5", "mistral-medium-latest"),
+              "mistral-medium-3-5": rec("mistral-medium", "mistral-medium-2604"),
+              "mistral-medium-2604": rec("mistral-medium-3-5"),
+              "mistral-medium-latest": rec("mistral-medium"),
+              "codestral-2508": rec("codestral-latest"),
+              "ministral-8b-2512": rec()}
+    assert reconcile.alias_groups(vendor) == [["mistral-medium", "mistral-medium-2604", "mistral-medium-3-5"]]
+
+
 def test_no_consensus_yields_no_stated_claim_and_a_review_row() -> None:
     reconcile.pending_review.clear()
     row = _cluster(md_release_dates="poe:2024-06-20|venice:2025-09-09|x:2024-10-22", or_created="")

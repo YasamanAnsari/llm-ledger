@@ -12,7 +12,8 @@ Snapshots go under `data/raw/{source}/{date}/`. We commit a manifest
 |---|---|---|---|
 | models.dev | `https://models.dev/api.json` | release date, open-weights flag, context, price, modalities | stated date; attributes |
 | OpenRouter | `https://openrouter.ai/api/v1/models` | listing date (`created`), expiration | first-party for `platform_availability` on OpenRouter |
-| OpenAI / Anthropic / Google / Mistral | vendor `/models` APIs | `created` (registry timestamp), `shutdown_date`, ids | `created` is a bound; `shutdown_date` is first-party `retired` (need keys) |
+| OpenAI / Anthropic / Google | vendor `/models` APIs | `created` (registry timestamp), `shutdown_date`, ids | `created` is a bound; `shutdown_date` is first-party `retired` (need keys) |
+| Mistral | `https://api.mistral.ai/v1/models` | `deprecation`, `aliases`, ids | `created` is the response time and is ignored; `deprecation` is first-party `retired`; `aliases` that span several ledger rows become `vendor_alias_group` review leads (needs key) |
 | Hugging Face Hub | `huggingface_hub` | `createdAt`, license, tags | bound for `weights_released` |
 | Internet Archive | `archive.org/wayback/available` | first public capture of the repo page | bound that corroborates `createdAt` |
 | Azure Foundry | model retirement schedule page | version dates, retirement dates | first-party `retired` on `azure` |

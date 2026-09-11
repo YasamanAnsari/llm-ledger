@@ -401,4 +401,9 @@ nhlocal_lead,nhlocal_aitimeline,o3 full@2025-04-01,,,,"month-precision community
 nhlocal_lead,nhlocal_aitimeline,text-davinci-002@2022-03-01,,,,month-precision community-timeline lead: OpenAI releases text-davinci-002 and code-davinci-002 with an API approach.
 nhlocal_lead,nhlocal_aitimeline,v4@2024-11-01,,,,"month-precision community-timeline lead: Suno upgraded its AIpowered music generator to v4, introducing new features and performance improvements."
 nhlocal_lead,nhlocal_aitimeline,v7@2025-04-01,,,,"month-precision community-timeline lead: Midjourney launches v7, with higher image quality and more precise control over style."
+vendor_alias_group,mistral_api,labs-leanstral-1-5,ledger,labs-leanstral-1-5-1,,vendor lists these ids as one model; merge (repair.merge_models) or reject
+vendor_alias_group,mistral_api,mistral-medium,ledger,mistral-medium-2604|mistral-medium-3|mistral-medium-3-5|mistral-vibe-cli-with-tools,,vendor lists these ids as one model; merge (repair.merge_models) or reject
+vendor_alias_group,mistral_api,mistral-ocr-2512,ledger,mistral-ocr-3|mistral-ocr-3-0,,vendor lists these ids as one model; merge (repair.merge_models) or reject
+vendor_alias_group,mistral_api,mistral-ocr-4,ledger,mistral-ocr-4-1,,vendor lists these ids as one model; merge (repair.merge_models) or reject
+vendor_alias_group,mistral_api,mistral-small-2603,ledger,mistral-vibe-cli-fast,,vendor lists these ids as one model; merge (repair.merge_models) or reject
 vocab_gap,mistral_changelog,mistral-large fine-tuning availability 2024-07-24,,,,verified vendor-changelog event dropped: feature_added vocabulary has no fine_tuning value; consider a schema addition

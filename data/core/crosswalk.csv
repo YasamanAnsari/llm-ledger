@@ -160,6 +160,7 @@ codellama-7b,huggingface,meta-llama/CodeLlama-7b-hf
 codellama-7b-instruct,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
 codestral,epoch,Codestral
 codestral,models_dev,vercel/mistral/codestral
+codestral-2508,mistral_api,codestral-2508
 codestral-2508,models_dev,cortecs/codestral-2508
 codestral-2508,openrouter,mistralai/codestral-2508
 codex-mini,epoch,codex-mini
@@ -1323,15 +1324,18 @@ minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01
 minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01-hf
 minimax-text-01,models_dev,llmgateway/minimax-text-01
 minimax-vl-01,huggingface,MiniMaxAI/MiniMax-VL-01
+ministral-14b-2512,mistral_api,ministral-14b-2512
 ministral-14b-2512,models_dev,kilo/mistralai/ministral-14b-2512
 ministral-14b-2512,openrouter,mistralai/ministral-14b-2512
 ministral-3b,epoch,Ministral 3B
 ministral-3b,models_dev,vercel/mistral/ministral-3b
+ministral-3b-2512,mistral_api,ministral-3b-2512
 ministral-3b-2512,models_dev,kilo/mistralai/ministral-3b-2512
 ministral-3b-2512,openrouter,mistralai/ministral-3b-2512
 ministral-8b,epoch,Ministral 8B
 ministral-8b,models_dev,vercel/mistral/ministral-8b
 ministral-8b,openrouter,mistralai/ministral-8b
+ministral-8b-2512,mistral_api,ministral-8b-2512
 ministral-8b-2512,models_dev,kilo/mistralai/ministral-8b-2512
 ministral-8b-2512,openrouter,mistralai/ministral-8b-2512
 mistral-7b,huggingface,mistralai/Mistral-7B-v0.1
@@ -1351,8 +1355,10 @@ mistral-large-2512,openrouter,mistralai/mistral-large-2512
 mistral-large-3,epoch,Mistral Large 3
 mistral-large-3,models_dev,pioneer/mistral-large-3
 mistral-medium,epoch,Mistral Medium
+mistral-medium,mistral_api,mistral-medium
 mistral-medium,models_dev,vercel/mistral/mistral-medium
 mistral-medium-3,epoch,Mistral Medium 3
+mistral-medium-3,mistral_api,mistral-medium-3
 mistral-medium-3,models_dev,empiriolabs/mistral-medium-3
 mistral-medium-3,models_dev,kilo/mistralai/mistral-medium-3
 mistral-medium-3,openrouter,mistralai/mistral-medium-3
@@ -1360,6 +1366,8 @@ mistral-medium-3-1,epoch,Mistral Medium 3.1
 mistral-medium-3-1,models_dev,kilo/mistralai/mistral-medium-3.1
 mistral-medium-3-1,openrouter,mistralai/mistral-medium-3.1
 mistral-medium-3-5,epoch,Mistral Medium 3.5
+mistral-medium-3-5,mistral_api,mistral-medium-3-5
+mistral-medium-3-5,mistral_api,mistral-medium-3.5
 mistral-medium-3-5,models_dev,kenari/mistral-medium-3-5:free
 mistral-medium-3-5,models_dev,nano-gpt/mistral/mistral-medium-3.5
 mistral-medium-3-5,openrouter,mistralai/mistral-medium-3-5
@@ -1371,6 +1379,7 @@ mistral-saba,models_dev,nano-gpt/mistralai/mistral-saba
 mistral-saba,openrouter,mistralai/mistral-saba
 mistral-small-24b-instruct-2501,models_dev,kilo/mistralai/mistral-small-24b-instruct-2501
 mistral-small-24b-instruct-2501,openrouter,mistralai/mistral-small-24b-instruct-2501
+mistral-small-2603,mistral_api,mistral-small-2603
 mistral-small-2603,models_dev,cortecs/mistral-small-2603
 mistral-small-2603,openrouter,mistralai/mistral-small-2603
 mistral-small-3-1-24b-instruct,models_dev,kilo/mistralai/mistral-small-3.1-24b-instruct

@@ -14,8 +14,9 @@ metadata), and dated events. Every event date goes through
 - vendor `/models` APIs (OpenAI `created`, Anthropic `created_at`) ->
   `api_ga` claims. These are registry timestamps that precede the public
   launch by days, so they corroborate a catalog date but do not verify on
-  their own. OpenAI `shutdown_date` is a published schedule -> first-party
-  `retired` claim.
+  their own. OpenAI `shutdown_date` and Mistral `deprecation` are published
+  schedules -> first-party `retired` claims. Mistral's `created` is the
+  response time and is never a claim.
 - any machine availability claim dated before a curated `announced` event
   is private pre-staging (repo or model object created ahead of launch):
   not loaded, and a stale machine row is withdrawn.
@@ -74,11 +75,11 @@ IN_SCOPE_TYPES = {"llm", "vlm", "multimodal"}
 pending_review: list = []
 
 
-def _queue(kind: str, left_key: str, note: str, right_key: str = "") -> None:
-    pending_review.append({"kind": kind, "left_source": "models_dev", "left_key": left_key,
+def _queue(kind: str, left_key: str, note: str, right_key: str = "",
+           left_source: str = "models_dev") -> None:
+    pending_review.append({"kind": kind, "left_source": left_source, "left_key": left_key,
                            "right_source": "ledger", "right_key": right_key, "score": "",
                            "note": note})
-
 
 
 def _read_matched() -> list:
@@ -95,7 +96,10 @@ def load_vendor_apis() -> dict:
     Snapshot ids (gpt-4o-2024-08-06) fold into their model key; the
     model's API availability is the earliest `created` across its ids, and
     it is retired only when every id carries a shutdown date (the latest).
-    Vendors without a snapshot on disk are simply absent.
+    Vendors without a snapshot on disk are simply absent. When a vendor
+    lists ids under several keys as `aliases` of one another (Mistral's
+    mistral-medium / mistral-medium-3-5 / mistral-medium-2604), the group
+    is queued as a `vendor_alias_group` lead for a person to merge.
     """
     by_key: dict = {}
     for source, (org_id, url) in VENDOR_APIS.items():
@@ -111,12 +115,45 @@ def load_vendor_apis() -> dict:
                     continue
                 entry = by_key.setdefault(key, {
                     "source": source, "org_id": org_id, "url": url,
-                    "ids": [], "created": [], "shutdown": [],
+                    "ids": [], "created": [], "shutdown": [], "aliases": set(),
                 })
                 entry["ids"].append(row["id"])
                 entry["created"].append(row["created_date"])
                 entry["shutdown"].append(row["shutdown_date"])
+                entry["aliases"].update(filter(None, row.get("aliases", "").split("|")))
+    for group in alias_groups(by_key):
+        _queue("vendor_alias_group", group[0], "vendor lists these ids as one model; merge "
+               "(repair.merge_models) or reject", right_key="|".join(group[1:]),
+               left_source=by_key[group[0]]["source"])
     return by_key
+
+
+def alias_groups(vendor: dict) -> list:
+    """Sorted groups of distinct non-alias keys a vendor says serve one
+    model, one group per connected set of `aliases` references."""
+    real = {k for k in vendor if not (match.is_alias_key(k) or match.is_out_of_scope_key(k))}
+    linked: dict = {k: set() for k in real}
+    for key, rec in vendor.items():
+        if key not in real:
+            continue
+        for alias in rec["aliases"]:
+            other = match.normalize_name(alias)["key"]
+            if other in real and other != key:
+                linked[key].add(other)
+                linked[other].add(key)
+    groups, seen = [], set()
+    for key in sorted(real):
+        if key in seen or not linked[key]:
+            continue
+        group, stack = set(), [key]
+        while stack:
+            k = stack.pop()
+            if k not in group:
+                group.add(k)
+                stack.extend(linked[k])
+        seen |= group
+        groups.append(sorted(group))
+    return groups
 
 
 def _vendor_index(vendor: dict) -> dict:
@@ -551,7 +588,7 @@ def main() -> int:
     schema.write_table(CROSSWALK, tables["crosswalk"])
     schema.write_table(ATTRIBUTES, list(attributes_by_id.values()))
 
-    schema.merge_review_queue(pending_review, replace_kinds=("md_no_consensus",))
+    schema.merge_review_queue(pending_review, replace_kinds=("md_no_consensus", "vendor_alias_group"))
     report = write_disagreement_report(matched)
     print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
           f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "
