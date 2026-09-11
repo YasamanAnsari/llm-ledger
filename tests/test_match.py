@@ -122,3 +122,67 @@ def test_identity_variants_keep_the_role():
     assert "qwen2-5-72b" not in key_variants("qwen2-5-72b-instruct", identity=True)
     assert "qwen-2-5-72b-instruct" in key_variants("qwen2-5-72b-instruct", identity=True)
     assert "qwen2-5-72b" in key_variants("qwen2-5-72b-instruct")   # cross-catalog matching only
+
+
+def test_review_decisions_settle_fuzzy_pairs():
+    from match import apply_fuzzy_decision
+    decisions = {("fuzzy_match", "deepseekmath-v2", "deepseek-math-v2"): {"decision": "accept"},
+                 ("fuzzy_match", "gemini-1-5-flash", "gemini-2-5-flash"): {"decision": "reject"}}
+    assert apply_fuzzy_decision(decisions, "deepseekmath-v2", "deepseek-math-v2") == "accept"
+    assert apply_fuzzy_decision(decisions, "gemini-1-5-flash", "gemini-2-5-flash") == "reject"
+    assert apply_fuzzy_decision(decisions, "a", "b") == ""
+
+
+def _md(key, provider, model_key, release):
+    norm = normalize_name(f"{provider}/{model_key}")
+    row = {"provider": provider, "model_key": model_key, "release_date": release,
+           "open_weights": "true", "modalities_in": "text", "modalities_out": "text",
+           "context_length": "", "max_output_tokens": "", "cost_input": "", "cost_output": "",
+           "cost_cache_read": "", "reasoning": "", "tool_call": "", "knowledge_cutoff": ""}
+    return {key: {"norm": norm, "row": row, "release_date": release, "provider_count": 1,
+                  "dates": [(provider, release)], "ow_votes": [(provider, "true")]}}
+
+
+def _or(key, or_id, created):
+    return {key: {"norm": normalize_name(or_id),
+                  "row": {"id": or_id, "created_date": created, "expiration_date": ""}}}
+
+
+def _epoch(key, name, org, published):
+    return {key: {"norm": normalize_name(name),
+                  "row": {"model": name, "organization": org, "publication_date": published,
+                          "confidence": ""}}}
+
+
+def test_match_clusters_by_identity_variants_and_never_auto_accepts_below_97():
+    from match import match
+    md = _md("qwen2-5-72b-instruct", "alibaba", "qwen2.5-72b-instruct", "2024-09-19")
+    orr = _or("qwen-2-5-72b-instruct", "qwen/qwen-2.5-72b-instruct", "2024-09-19")
+    epoch = _epoch("gemini-1-5-flash", "Gemini 1.5 Flash", "Google", "2024-05-14")
+    rows, queue = match(md, orr, epoch, md_snapshot="2026-09-01")
+    (cluster,) = [r for r in rows if r["match_key"] == "qwen2-5-72b-instruct"]
+    assert cluster["sources"] == "models_dev|openrouter" and "or:exact" in cluster["match_method"]
+    assert cluster["md_snapshot_date"] == "2026-09-01"
+    assert not any("fuzzy" in r["match_method"] for r in rows)
+    assert len(rows) == 1  # an Epoch entry alone never seeds a cluster
+
+
+def test_match_applies_review_decisions_to_the_fuzzy_band():
+    from match import match
+    # 92-97 band pair: queued without a decision, joined once accepted,
+    # silently dropped once rejected.
+    md = _md("deepseek-math-v2", "deepseek", "deepseek-math-v2", "2025-11-27")
+    orr = _or("deepseekmath-v2", "deepseek/deepseekmath-v2", "2025-11-28")
+    rows, queue = match(md, orr, {})
+    assert [(q["left_key"], q["right_key"]) for q in queue] == [("deepseekmath-v2", "deepseek-math-v2")]
+    assert {r["sources"] for r in rows} == {"models_dev", "openrouter"}
+
+    accept = {("fuzzy_match", "deepseekmath-v2", "deepseek-math-v2"): {"decision": "accept"}}
+    rows, queue = match(md, orr, {}, decisions=accept)
+    (cluster,) = rows
+    assert cluster["sources"] == "models_dev|openrouter" and cluster["match_method"] == "or:reviewed"
+    assert queue == []
+
+    reject = {("fuzzy_match", "deepseekmath-v2", "deepseek-math-v2"): {"decision": "reject"}}
+    rows, queue = match(md, orr, {}, decisions=reject)
+    assert {r["sources"] for r in rows} == {"models_dev", "openrouter"} and queue == []

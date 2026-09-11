@@ -89,7 +89,11 @@ derived columns; `validate` must be green before anything is committed.
 
 Weekly: read `data/staging/review_queue.csv` and
 `data/generated/coverage_report.md`; verify the labs with the lowest
-verified share first.
+verified share first. Settle a queue row by appending a line to
+`data/staging/review_decisions.csv` with the row's `kind`, `left_key`,
+`right_key`, a decision (`accept`, `reject` or `dismiss`), your name and
+the date. The next run applies it (an accepted `fuzzy_match` joins with
+method `reviewed`) and never queues that item again.
 
 Monthly: rebuild, append `CHANGELOG.md`, tag `vYYYY.MM`.
 

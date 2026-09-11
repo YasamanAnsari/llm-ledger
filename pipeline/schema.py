@@ -274,17 +274,43 @@ def mark_updated(models_by_id: dict, model_ids: set, now: str) -> None:
 REVIEW_QUEUE_COLUMNS = ("kind", "left_source", "left_key", "right_source",
                         "right_key", "score", "note")
 
+# A person settles a queue row by appending a line here. `decision` is
+# accept (join / apply), reject (do not) or dismiss (not worth tracking);
+# any decided (kind, left_key, right_key) is never queued again.
+REVIEW_DECISION_COLUMNS = ("kind", "left_key", "right_key", "decision",
+                           "decided_by", "decided_on", "note")
+DECISIONS = {"accept", "reject", "dismiss"}
+
+
+def read_review_decisions() -> dict:
+    """(kind, left_key, right_key) -> decision row; empty when no file."""
+    path = STAGING_DIR / "review_decisions.csv"
+    if not path.exists():
+        return {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        if tuple(reader.fieldnames or ()) != REVIEW_DECISION_COLUMNS:
+            raise ValueError(f"{path} header must be {REVIEW_DECISION_COLUMNS}")
+        rows = list(reader)
+    bad = [r for r in rows if r["decision"] not in DECISIONS]
+    if bad:
+        raise ValueError(f"{path}: decision must be one of {sorted(DECISIONS)}: {bad[0]}")
+    return {(r["kind"], r["left_key"], r["right_key"]): r for r in rows}
+
 
 def merge_review_queue(rows: list, replace_kinds: tuple = ()) -> Path:
     """Append rows to the review queue, deduplicating on (kind, left_key,
-    right_key); rows of `replace_kinds` are rewritten by this producer."""
+    right_key); rows of `replace_kinds` are rewritten by this producer.
+    Rows a person has already decided on are dropped, new or existing."""
     STAGING_DIR.mkdir(parents=True, exist_ok=True)
     path = STAGING_DIR / "review_queue.csv"
+    decided = set(read_review_decisions())
     existing = []
     if path.exists():
         with path.open(newline="", encoding="utf-8") as fh:
-            existing = [r for r in csv.DictReader(fh) if r["kind"] not in replace_kinds]
-    seen = {(r["kind"], r["left_key"], r["right_key"]) for r in existing}
+            existing = [r for r in csv.DictReader(fh) if r["kind"] not in replace_kinds
+                        and (r["kind"], r["left_key"], r["right_key"]) not in decided]
+    seen = {(r["kind"], r["left_key"], r["right_key"]) for r in existing} | decided
     merged = existing + [r for r in rows if (r["kind"], r["left_key"], r["right_key"]) not in seen]
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=REVIEW_QUEUE_COLUMNS, lineterminator="\n")

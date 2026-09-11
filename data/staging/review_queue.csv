@@ -94,6 +94,37 @@ hf_recreated_repo,huggingface,EleutherAI/pythia-1b-deduped,ledger,pythia-1b-dedu
 hf_recreated_repo,huggingface,EleutherAI/pythia-2.8b,ledger,pythia-2-8b,,first archive capture 2023-02-01 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-410m-deduped,ledger,pythia-410m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first archive capture 2023-02-01 predates repo creation 2023-02-14; weights date needs a primary source
+hf_unmapped_namespace,huggingface,AEON-7,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,Hai929,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,InternScience,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,LGAI-EXAONE,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,RadixArk,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ReliquaryForge,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,TinyLlama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,apple,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,bigscience,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,dphn,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,facebook,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,hmellor,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ibm-research,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,mlabonne,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ornith-ai,,,,8 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,peft-internal-testing,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,protoLabsAI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,rinna,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,swiss-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,13 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,z-lab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 md_no_consensus,models_dev,MiniMax-M1,ledger,minimax-m1,,resellers disagree: 302ai:2025-06-16|kilo:2025-06-17|nano-gpt:2025-01-08|openrouter:2025-06-17|qiniu-ai:2025-08-05
 md_no_consensus,models_dev,MiniMaxAI/MiniMax-M1-80k,ledger,minimax-m1-80k,,resellers disagree: jiekou:2026-01|nano-gpt:2025-01-08|novita-ai:2025-06-17
 md_no_consensus,models_dev,NousResearch/hermes-4-405b:thinking,ledger,hermes-4-405b,,resellers disagree: cortecs:2024-08-13|kilo:2025-08-26|nano-gpt:2024-01-01|nano-gpt:2025-08-26|nebius:2026-01-30|openrouter:2025-08-26

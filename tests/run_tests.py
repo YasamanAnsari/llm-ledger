@@ -9,7 +9,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import test_build
+import test_census
 import test_confidence
+import test_lifecycle
 import test_match
 import test_nhlocal
 import test_reconcile
@@ -18,7 +20,7 @@ import test_schema
 import test_validate
 
 MODULES = (test_match, test_confidence, test_reconcile, test_validate, test_build,
-           test_nhlocal, test_schema, test_repair)
+           test_nhlocal, test_schema, test_repair, test_census, test_lifecycle)
 
 
 def main() -> int:

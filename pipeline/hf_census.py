@@ -23,6 +23,7 @@ from __future__ import annotations
 import csv
 import re
 import sys
+from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -75,29 +76,44 @@ def classify(key: str, org_id: str) -> str:
     return "derivative"
 
 
-def include(row: dict) -> bool:
+def in_scope(row: dict) -> bool:
+    """A language/vision-language checkpoint under its own name: not a
+    quantization, adapter, alias or out-of-scope product."""
     if row["pipeline_tag"] not in ("text-generation", "image-text-to-text"):
         return False
-    if not row["org_id"]:
-        return False  # unmapped namespace: lead, not a core row
     name = row["repo_id"].split("/")[-1]
     if EXCLUDE_NAME_RE.search(name):
         return False
     key = matchmod.normalize_name(row["repo_id"])["key"]
     if matchmod.is_alias_key(key) or matchmod.is_out_of_scope_key(key):
         return False
-    tags = set(row["tags"].lower().split("|"))
-    if tags & EXCLUDE_TAGS:
-        return False
-    return True
+    return not set(row["tags"].lower().split("|")) & EXCLUDE_TAGS
 
 
-def main() -> int:
-    snap = schema.snapshot_file("hf", "normalized.csv")
-    with snap.open(newline="", encoding="utf-8") as fh:
-        repos = list(csv.DictReader(fh))
+def include(row: dict) -> bool:
+    # An unmapped namespace is a lead for the review queue, not a core row.
+    return bool(row["org_id"]) and in_scope(row)
 
-    tables = schema.load_core()
+
+def unmapped_namespace_leads(repos: list) -> list:
+    """One review row per namespace with in-scope repos and no org mapping,
+    so a new lab is noticed instead of silently skipped."""
+    counts = Counter(r["namespace"] for r in repos if not r["org_id"] and in_scope(r))
+    return [{
+        "kind": "hf_unmapped_namespace", "left_source": "huggingface", "left_key": ns,
+        "right_source": "", "right_key": "", "score": "",
+        "note": f"{n} in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss",
+    } for ns, n in sorted(counts.items())]
+
+
+def census(repos: list, tables: dict, captures: dict, today: date, now: str) -> tuple:
+    """Load the Hub sweep into `tables` (mutated in place).
+
+    `repos` are pull_hf rows, `captures` repo_id -> first Wayback capture
+    date. Returns (outcomes, review_rows): outcome counts from the
+    confidence policy plus the census's own counters, and the rows that
+    need a person.
+    """
     models_by_id = {m["model_id"]: m for m in tables["models"]}
     org_ids = {o["org_id"] for o in tables["organizations"]}
     hf_xw = {r["identifier"]: r["model_id"] for r in tables["crosswalk"]
@@ -107,12 +123,9 @@ def main() -> int:
     events = tables["events"]
     event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
     claims_by_event = group_claims(tables["claims"])
-    captures = load_wayback_captures()
 
-    review_rows = []
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    today = date.today()
-    outcomes: dict = {}
+    review_rows = unmapped_namespace_leads(repos)
+    outcomes: Counter = Counter()
 
     included = [r for r in repos if include(r)]
     by_org: dict = {}
@@ -126,7 +139,6 @@ def main() -> int:
         capped.extend(rows[:PER_ORG_CAP])
         capped.extend(r for r in rows[PER_ORG_CAP:] if r["repo_id"] in hf_xw)
 
-    added_models = added_events = added_xw = 0
     drafted_this_run: set = set()
     touched: set = set()
     earliest_repo: dict = {}
@@ -192,7 +204,7 @@ def main() -> int:
                     tables["organizations"].append(dict(seed))
                     org_ids.add(row["org_id"])
             drafted_this_run.add(model_id)
-            added_models += 1
+            outcomes["models"] += 1
 
         key = (model_id, "huggingface", repo_id)
         if key not in xw_keys:
@@ -201,7 +213,7 @@ def main() -> int:
                 {"model_id": model_id, "namespace": "huggingface", "identifier": repo_id})
             hf_xw[repo_id] = model_id
             with_hub_repo.add(model_id)
-            added_xw += 1
+            outcomes["crosswalk"] += 1
             touched.add(model_id)
 
         if not row["created_at"]:
@@ -248,7 +260,7 @@ def main() -> int:
         outcome = upsert_machine_event(
             events, event_index, claims_by_event, model_id, "weights_released", claims,
             today, not_before=floor, next_id=schema.next_event_id)
-        outcomes[outcome] = outcomes.get(outcome, 0) + 1
+        outcomes[outcome] += 1
         if outcome in ("added", "updated", "withdrawn"):
             touched.add(model_id)
         if outcome in ("added", "updated", "unchanged"):
@@ -256,9 +268,7 @@ def main() -> int:
             if withdraw_machine_announced_after(
                     events, event_index, claims_by_event, model_id, date.fromisoformat(assessed)):
                 touched.add(model_id)
-        if outcome == "added":
-            added_events += 1
-        elif outcome in ("precreated", "withdrawn"):
+        if outcome in ("precreated", "withdrawn"):
             # Repo existed before the curated announcement: created private.
             review_rows.append({
                 "kind": "hf_precreated_repo", "left_source": "huggingface",
@@ -279,23 +289,35 @@ def main() -> int:
         n_before = len(tables["crosswalk"])
         tables["crosswalk"] = [r for r in tables["crosswalk"]
                                if r["model_id"] not in undatable]
-        added_models -= len(undatable)
-        added_xw -= n_before - len(tables["crosswalk"])
+        outcomes["models"] -= len(undatable)
+        outcomes["crosswalk"] -= n_before - len(tables["crosswalk"])
 
     schema.mark_updated(models_by_id, touched, now)
-    schema.write_table(ORGANIZATIONS, tables["organizations"])
-    schema.write_table(MODELS, list(models_by_id.values()))
-    schema.write_table(EVENTS, events)
-    schema.write_table(CLAIMS, flatten_claims(claims_by_event))
-    schema.write_table(CROSSWALK, tables["crosswalk"])
+    tables["models"] = list(models_by_id.values())
+    tables["claims"] = flatten_claims(claims_by_event)
+    outcomes["included"], outcomes["capped"] = len(included), len(capped)
+    return outcomes, review_rows
 
-    if review_rows:
-        schema.merge_review_queue(review_rows)
 
-    print(f"hf_census: swept {len(repos)} repos, {len(included)} pass inclusion, "
-          f"{len(capped)} after per-org cap; +{added_models} models, "
-          f"+{added_events} weights events ({outcomes.get('updated', 0)} refreshed, "
-          f"{outcomes.get('skipped', 0)} curated left alone), +{added_xw} crosswalk rows, "
+def main() -> int:
+    snap = schema.snapshot_file("hf", "normalized.csv")
+    with snap.open(newline="", encoding="utf-8") as fh:
+        repos = list(csv.DictReader(fh))
+    tables = schema.load_core()
+    captures = load_wayback_captures()
+
+    outcomes, review_rows = census(
+        repos, tables, captures, date.today(),
+        datetime.now(timezone.utc).isoformat(timespec="seconds"))
+
+    for table in (ORGANIZATIONS, MODELS, EVENTS, CLAIMS, CROSSWALK):
+        schema.write_table(table, tables[table.name])
+    schema.merge_review_queue(review_rows, replace_kinds=("hf_unmapped_namespace",))
+
+    print(f"hf_census: swept {len(repos)} repos, {outcomes['included']} pass inclusion, "
+          f"{outcomes['capped']} after per-org cap; +{outcomes['models']} models, "
+          f"+{outcomes['added']} weights events ({outcomes['updated']} refreshed, "
+          f"{outcomes['skipped']} curated left alone), +{outcomes['crosswalk']} crosswalk rows, "
           f"{len(captures)} Wayback captures available, {len(review_rows)} queued for review")
     return 0
 

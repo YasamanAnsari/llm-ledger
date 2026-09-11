@@ -4,7 +4,9 @@ Joins the latest models.dev, OpenRouter, and Epoch snapshots on normalized
 model names. Exact/variant matches join directly; fuzzy candidates are
 auto-accepted at rapidfuzz ratio >= 97, queued for manual review in the
 92-97 band, and discarded below 92 (a poisoned crosswalk is worse than a
-missing match).
+missing match). A queued pair a person has accepted in
+data/staging/review_decisions.csv joins with method `reviewed`; a rejected
+or dismissed one is never queued again.
 
 Outputs:
     data/generated/matched_models.csv   one row per matched cluster
@@ -321,12 +323,48 @@ def _fuzzy_pairs(left_keys: list, right_index: dict) -> list:
     return pairs
 
 
-def match() -> tuple:
-    """Returns (matched_rows, review_queue_rows)."""
-    md = load_models_dev()
-    orr = load_openrouter()
-    epoch = load_epoch()
+def apply_fuzzy_decision(decisions: dict, left: str, right: str) -> str:
+    """A person's decision on a queued fuzzy pair: accept / reject /
+    dismiss, or "" when nobody has ruled on it."""
+    row = decisions.get(("fuzzy_match", left, right))
+    return row["decision"] if row else ""
 
+
+def _settle_fuzzy(unmatched: list, right_index: dict, decisions: dict,
+                  left_source: str, right_source: str) -> tuple:
+    """(joins, queue_rows) for keys that found no exact match.
+
+    A pair joins when a person accepted it or the score clears AUTO_ACCEPT;
+    a rejected or dismissed pair is dropped without being queued again;
+    the 92-97 band waits in the review queue.
+    """
+    joins, queue = [], []
+    for left, right, score in _fuzzy_pairs(unmatched, right_index):
+        decision = apply_fuzzy_decision(decisions, left, right)
+        if decision == "accept":
+            joins.append((left, right, "reviewed"))
+        elif decision:
+            continue
+        elif score >= AUTO_ACCEPT:
+            joins.append((left, right, f"fuzzy:{score:.0f}"))
+        else:
+            queue.append({
+                "kind": "fuzzy_match", "left_source": left_source, "left_key": left,
+                "right_source": right_source, "right_key": right, "score": f"{score:.1f}",
+                "note": "92-97 band: confirm or reject before crosswalking",
+            })
+    return joins, queue
+
+
+def match(md: dict, orr: dict, epoch: dict, decisions: dict | None = None,
+          md_snapshot: str = "") -> tuple:
+    """Cluster the three catalogs. Returns (matched_rows, review_queue_rows).
+
+    `md`, `orr`, `epoch` are the loaders' key -> record dicts; `decisions`
+    is schema.read_review_decisions(); `md_snapshot` dates the models.dev
+    metadata carried into the rows.
+    """
+    decisions = decisions or {}
     md_index = _variant_index(md)
     epoch_index = _variant_index(epoch)
 
@@ -350,18 +388,12 @@ def match() -> tuple:
             c["methods"].append("or:exact")
         else:
             unmatched_or.append(key)
-    for left, right, score in _fuzzy_pairs(unmatched_or, md_index):
-        if score >= AUTO_ACCEPT:
-            c = cluster_for(right)
-            c["or"] = orr[left]
-            c["methods"].append(f"or:fuzzy:{score:.0f}")
-        else:
-            review_queue.append({
-                "kind": "fuzzy_match", "left_source": "openrouter",
-                "left_key": left, "right_source": "models_dev",
-                "right_key": right, "score": f"{score:.1f}",
-                "note": "92-97 band: confirm or reject before crosswalking",
-            })
+    joins, queued = _settle_fuzzy(unmatched_or, md_index, decisions, "openrouter", "models_dev")
+    review_queue += queued
+    for left, right, how in joins:
+        c = cluster_for(right)
+        c["or"] = orr[left]
+        c["methods"].append(f"or:{how}")
     matched_or = {id(c["or"]) for c in clusters.values() if c["or"]}
     for key, record in orr.items():
         if id(record) not in matched_or and key not in clusters:
@@ -378,23 +410,14 @@ def match() -> tuple:
             c["methods"].append("epoch:exact")
         else:
             unmatched_epoch.append(key)
-    for left, right, score in _fuzzy_pairs(unmatched_epoch, cluster_index):
-        if score >= AUTO_ACCEPT:
-            c = clusters[right]
-            if c["epoch"] is None:
-                c["epoch"] = epoch[left]
-                c["methods"].append(f"epoch:fuzzy:{score:.0f}")
-        else:
-            review_queue.append({
-                "kind": "fuzzy_match", "left_source": "epoch",
-                "left_key": left, "right_source": "ledger_cluster",
-                "right_key": right, "score": f"{score:.1f}",
-                "note": "92-97 band: confirm or reject before crosswalking",
-            })
+    joins, queued = _settle_fuzzy(unmatched_epoch, cluster_index, decisions, "epoch", "ledger_cluster")
+    review_queue += queued
+    for left, right, how in joins:
+        c = clusters[right]
+        if c["epoch"] is None:
+            c["epoch"] = epoch[left]
+            c["methods"].append(f"epoch:{how}")
 
-    # Dated by content, not by pull day, so an unchanged catalog does not
-    # rewrite every price_date in attributes.csv each morning.
-    md_snapshot = schema.snapshot_content_date("models_dev", "api.json")
     rows = []
     for key in sorted(clusters):
         c = clusters[key]
@@ -446,7 +469,11 @@ def match() -> tuple:
 
 
 def main() -> int:
-    rows, review_queue = match()
+    # Dated by content, not by pull day, so an unchanged catalog does not
+    # rewrite every price_date in attributes.csv each morning.
+    md_snapshot = schema.snapshot_content_date("models_dev", "api.json")
+    rows, review_queue = match(load_models_dev(), load_openrouter(), load_epoch(),
+                               schema.read_review_decisions(), md_snapshot)
 
     out = schema.GENERATED_DIR / "matched_models.csv"
     out.parent.mkdir(parents=True, exist_ok=True)

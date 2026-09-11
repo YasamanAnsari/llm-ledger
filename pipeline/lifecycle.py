@@ -86,22 +86,27 @@ def _platform_for(row: dict, developer_org: str) -> str | None:
     return PLATFORM_PROVIDERS.get(provider)
 
 
-def main() -> int:
-    tables = schema.load_core()
+SOURCES = ("azure_lifecycle", "bedrock_lifecycle", "litellm")
+
+
+def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
+    """Upsert `retired` events into `tables` (mutated in place) from the
+    normalized lifecycle rows of each source; `now` stamps record_updated
+    on touched models. Returns outcome counts plus `unresolved:<source>`
+    for rows naming no ledger model."""
     models_by_id = {m["model_id"]: m for m in tables["models"]}
     events = tables["events"]
     event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
     claims_by_event = group_claims(tables["claims"])
-    today = date.today()
 
-    # (model_id, platform) -> {host: [(date, model_ref, row)]}
+    # (model_id, platform) -> {source: [(date, model_ref, row)]}
     grouped: dict = defaultdict(lambda: defaultdict(list))
-    unresolved = Counter()
-    for source in ("azure_lifecycle", "bedrock_lifecycle", "litellm"):
-        for row in _read(source):
+    outcomes: Counter = Counter()
+    for source, rows in rows_by_source.items():
+        for row in rows:
             model_id = _resolve(row["model_ref"], models_by_id)
             if not model_id:
-                unresolved[source] += 1
+                outcomes[f"unresolved:{source}"] += 1
                 continue
             platform = _platform_for(row, models_by_id[model_id]["developer_org_id"])
             if platform is None:
@@ -109,7 +114,6 @@ def main() -> int:
             grouped[(model_id, platform)][source].append(
                 (date.fromisoformat(row["retire_date"]), row["model_ref"], row))
 
-    outcomes = Counter()
     touched: set = set()
     for (model_id, platform), by_source in sorted(grouped.items()):
         claims = []
@@ -130,14 +134,21 @@ def main() -> int:
         if outcome in ("added", "updated"):
             touched.add(model_id)
 
-    schema.mark_updated(models_by_id, touched,
-                        datetime.now(timezone.utc).isoformat(timespec="seconds"))
-    schema.write_table(MODELS, list(models_by_id.values()))
-    schema.write_table(EVENTS, events)
-    schema.write_table(CLAIMS, flatten_claims(claims_by_event))
+    schema.mark_updated(models_by_id, touched, now)
+    tables["claims"] = flatten_claims(claims_by_event)
+    return outcomes
+
+
+def main() -> int:
+    tables = schema.load_core()
+    outcomes = load({source: _read(source) for source in SOURCES}, tables, date.today(),
+                    datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    for table in (MODELS, EVENTS, CLAIMS):
+        schema.write_table(table, tables[table.name])
+    unresolved = {k.split(":", 1)[1]: v for k, v in outcomes.items() if k.startswith("unresolved:")}
     print(f"lifecycle: retired events added={outcomes['added']} updated={outcomes['updated']} "
           f"unchanged={outcomes['unchanged']} curated-skipped={outcomes['skipped']}; "
-          f"unresolved refs: {dict(unresolved)}")
+          f"unresolved refs: {unresolved}")
     return 0
 
 
