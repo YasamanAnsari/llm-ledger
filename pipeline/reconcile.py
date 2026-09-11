@@ -195,7 +195,7 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     model_id = match.slug_for(row["match_key"], org_id)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     open_weights = row["md_open_weights"] == "true"
-    derivative = schema.derivative_from_name(model_id)
+    derivative = schema.derivative_from_name(model_id, org_id)
 
     model = {
         "model_id": model_id,

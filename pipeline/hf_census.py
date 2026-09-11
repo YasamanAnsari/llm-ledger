@@ -64,6 +64,18 @@ def load_wayback_captures() -> dict:
                 for r in csv.DictReader(fh) if r["first_capture_date"]}
 
 
+def classify(key: str, org_id: str) -> str:
+    """own: the publisher's model. mirror: another lab's model re-hosted
+    (family opens the name, publisher never named). derivative: a build on
+    another lab's family under the publisher's own name."""
+    position, other = orgs_seed.foreign_family(key, org_id)
+    if not other:
+        return "own"
+    if position == 0 and not orgs_seed.mentions_org(key, org_id):
+        return "mirror"
+    return "derivative"
+
+
 def include(row: dict) -> bool:
     if row["pipeline_tag"] not in ("text-generation", "image-text-to-text"):
         return False
@@ -122,6 +134,16 @@ def main() -> int:
     for row in sorted(capped, key=lambda r: r["repo_id"]):
         repo_id = row["repo_id"]
         norm = matchmod.normalize_name(repo_id)
+        if classify(norm["key"], row["org_id"]) == "mirror":
+            # Another lab's weights re-hosted under this namespace: not a
+            # release by this publisher, and not this repo's date either.
+            review_rows.append({
+                "kind": "hf_mirror_repo", "left_source": "huggingface",
+                "left_key": repo_id, "right_source": "ledger",
+                "right_key": orgs_seed.family_org(norm["key"]), "score": "",
+                "note": "re-hosted copy of another lab's weights; not a release",
+            })
+            continue
         # Same short-key slug rule as reconcile, so "tencent/Hy3" and the
         # aggregators' "hy3" cluster land on one id (tencent-hy3).
         slug = matchmod.slug_for(norm["key"], row["org_id"])
@@ -139,7 +161,7 @@ def main() -> int:
             if not model_id:
                 continue
             name = repo_id.split("/")[-1]
-            derivative = schema.derivative_from_name(model_id)
+            derivative = schema.derivative_from_name(model_id, row["org_id"])
             models_by_id[model_id] = {
                 "model_id": model_id,
                 "canonical_name": name,

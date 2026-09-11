@@ -158,7 +158,18 @@ PROVIDER_TO_ORG = {
     "olmo": "allenai", "tulu": "allenai", "falcon": "tii",
     "smollm": "huggingface", "jamba": "ai21", "dbrx": "databricks",
     "arctic": "snowflake", "sonar": "perplexity", "hermes": "nous-research",
-    "qwq": "alibaba", "qvq": "alibaba", "nemotron": "nvidia",
+    "qwq": "alibaba", "qvq": "alibaba", "nemotron": "nvidia", "minitron": "nvidia",
+}
+
+# Family names that unambiguously belong to one lab. A name built from one
+# of these under another lab's namespace is a mirror (when the family opens
+# the name and the publisher is not named) or a derivative (otherwise).
+# "gpt" is absent on purpose: GPT-NeoX, GPT-J and BioGPT are not OpenAI's.
+FOREIGN_FAMILY_TOKENS = {
+    "llama", "qwen", "gemma", "mistral", "mixtral", "phi", "deepseek", "yi",
+    "falcon", "glm", "internlm", "baichuan", "olmo", "granite", "minicpm",
+    "rwkv", "gemini", "claude", "kimi", "hunyuan", "ernie", "command",
+    "nemotron", "hermes",
 }
 
 
@@ -168,3 +179,27 @@ def resolve_org(*candidates: str) -> str:
         if candidate and candidate.lower() in PROVIDER_TO_ORG:
             return PROVIDER_TO_ORG[candidate.lower()]
     return ""
+
+
+def family_org(key: str) -> str:
+    """Org the leading family token resolves to, else ""."""
+    first = key.split("-")[0]
+    return resolve_org(first, first.rstrip("0123456789"))
+
+
+def mentions_org(key: str, org_id: str) -> bool:
+    """True when any provider or family token of `org_id` occurs in the key."""
+    return any(v == org_id and len(k) >= 3 and k in key
+               for k, v in PROVIDER_TO_ORG.items())
+
+
+def foreign_family(key: str, org_id: str) -> tuple:
+    """(position, org) of the first family token owned by another lab, else
+    (-1, "")."""
+    for i, tok in enumerate(key.split("-")):
+        base = tok.rstrip("0123456789")
+        if base in FOREIGN_FAMILY_TOKENS:
+            other = PROVIDER_TO_ORG.get(base, "")
+            if other and other != org_id:
+                return i, other
+    return -1, ""

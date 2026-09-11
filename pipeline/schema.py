@@ -332,18 +332,23 @@ def date_matches_precision(value: str, precision: str) -> bool:
     return False
 
 
-def derivative_from_name(model_id: str) -> str:
+def derivative_from_name(model_id: str, org_id: str = "") -> str:
     """Derivative type a model name states outright, else "".
 
-    Only markers that are unambiguous in lab naming are automated:
-    `distill` (DeepSeek-R1-Distill-*) and `merge`. Fine-tunes are a human
-    call: `-instruct` / `-sft` checkpoints are usually a lab's own release.
+    `distill` (DeepSeek-R1-Distill-*) and `merge` are read from the name.
+    With the publisher's `org_id`, a name that carries another lab's family
+    token (Hermes-3-Llama-3.1-8B under Nous Research) is a `finetune`. A
+    lab's own `-instruct` / `-sft` checkpoints are not derivatives.
     """
     tokens = set(model_id.lower().split("-"))
     if "distill" in tokens or "distilled" in tokens:
         return "distill"
     if "merge" in tokens or "merged" in tokens:
         return "merge"
+    if org_id:
+        import orgs_seed  # local import: orgs_seed has no dependencies
+        if orgs_seed.foreign_family(model_id.lower(), org_id)[1]:
+            return "finetune"
     return ""
 
 
