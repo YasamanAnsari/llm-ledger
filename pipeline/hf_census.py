@@ -105,6 +105,7 @@ def main() -> int:
     org_ids = {o["org_id"] for o in tables["organizations"]}
     hf_xw = {r["identifier"]: r["model_id"] for r in tables["crosswalk"]
              if r["namespace"] == "huggingface"}
+    with_hub_repo = set(hf_xw.values())
     xw_keys = {(r["model_id"], r["namespace"], r["identifier"]) for r in tables["crosswalk"]}
     events = tables["events"]
     event_index = {(e["model_id"], e["event_type"], e.get("platform", "")): e for e in events}
@@ -157,6 +158,15 @@ def main() -> int:
                 if variant in models_by_id:
                     model_id = variant
                     break
+        # Catalogs name the served checkpoint without its role suffix
+        # ("kimi-k2" is Kimi-K2-Instruct). An instruct/chat repo may attach
+        # to such a row only while it has no Hub repo of its own; once a
+        # repo is attached, any other checkpoint is a different model.
+        if not model_id:
+            for variant in matchmod.key_variants(norm["key"]):
+                if variant in models_by_id and variant not in with_hub_repo:
+                    model_id = variant
+                    break
         if not model_id:
             model_id = slug
             if not model_id:
@@ -193,6 +203,7 @@ def main() -> int:
             tables["crosswalk"].append(
                 {"model_id": model_id, "namespace": "huggingface", "identifier": repo_id})
             hf_xw[repo_id] = model_id
+            with_hub_repo.add(model_id)
             added_xw += 1
             touched.add(model_id)
 

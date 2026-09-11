@@ -68,8 +68,8 @@ ROLE_SUFFIXES = ("-instruct", "-chat", "-it")
 # key and recorded as `format_suffix`.
 FORMAT_TOKENS = {
     "fp8", "fp16", "bf16", "fp4", "nvfp4", "mxfp4", "mxfp8", "int4", "int8",
-    "w4a16", "w8a8", "w4afp8", "4bit", "8bit", "hf", "pth", "paddle",
-    "safetensors",
+    "w4a16", "w8a8", "w4afp8", "w4a8c8", "2bits", "4bits", "8bits", "4bit",
+    "8bit", "tp2", "tp4", "tp8", "hf", "pth", "paddle", "safetensors",
 }
 
 # Date-like suffixes marking a dated snapshot of an alias.
@@ -80,10 +80,14 @@ MMDD_SUFFIX_RE = re.compile(r"-(0[1-9]|1[0-2])([0-2]\d|3[01])$")
 ALIAS_TOKENS = {"latest"}
 ALIAS_KEYS = {"deepseek-chat", "deepseek-reasoner", "gemini-exp", "chatgpt-4o-latest"}
 # Products this ledger does not track: embeddings, rerankers, speech
-# utilities, moderation and reward models, protein models.
+# utilities, moderation and reward models, protein models, and image /
+# video / music generators named as such. Modalities alone cannot tell an
+# image generator from a language model that also emits images, so the
+# generator families are named here.
 OUT_OF_SCOPE_RE = re.compile(
     r"(^|-)(embed|embedding|embeddings|rerank|tts|transcribe|transcription|"
-    r"moderation|reward|esm\d*|visionreward)(-|$)")
+    r"moderation|reward|esm\d*|visionreward|image|imagen|dall-?e\d*|sora|veo\d*|"
+    r"lyria|flux|kontext)(-|$)")
 
 
 def is_alias_key(key: str) -> bool:

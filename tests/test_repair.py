@@ -88,3 +88,14 @@ def test_delete_retag_detach_and_claim_resets():
     (claim,) = [c for c in t["claims"] if c["event_id"] == "x-weights_released-1"]
     assert (claim["label"], claim["date"], claim["bound"]) == ("epoch.ai", "2025-01-02", "false")
     assert t["events"][0]["notes"] == "single source: epoch.ai 2025-01-02"
+
+
+def test_reset_without_a_hub_claim_removes_the_event():
+    t = _tables()
+    t["claims"] = [{"event_id": "x-weights_released-1", "source_url": "https://web.archive.org/x",
+                    "source_type": "wayback", "date": "2024-12-01", "precision": "day",
+                    "label": "first public capture", "bound": "true", "first_party": "false"}]
+    t["events"][0].update({"source_type": "wayback", "date": "2024-12-01"})
+    assert repair.reset_to_hub_claim(t, "x-weights_released-1", date(2026, 10, 1)) is False
+    assert not any(e["event_id"] == "x-weights_released-1" for e in t["events"])
+    assert not any(c["event_id"] == "x-weights_released-1" for c in t["claims"])

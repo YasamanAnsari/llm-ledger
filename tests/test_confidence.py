@@ -167,3 +167,12 @@ def test_withdraw_machine_event_only_when_every_claim_is_from_the_named_hosts() 
                          [_c("2025-01-01", MD, label="models.dev"), _c("2025-01-02", OR, label="openrouter")],
                          TODAY, next_id=lambda *_: "m-api_ga-1")
     assert not withdraw_machine_event(events, index, claims, "m", "api_ga", only_hosts={"models.dev"})
+
+
+def test_a_capture_alone_cannot_date_a_pre_staged_repo() -> None:
+    events, index, claims = [], {}, {}
+    hub = _c("2026-02-10", HF, source_type="hf_hub", bound=True)
+    capture = _c("2026-02-13", WB, source_type="wayback", bound=True)
+    outcome = upsert_machine_event(events, index, claims, "m", "weights_released", [hub, capture],
+                                   TODAY, not_before=date(2026, 2, 12), next_id=lambda *_: "x")
+    assert outcome == "precreated" and not events and not claims

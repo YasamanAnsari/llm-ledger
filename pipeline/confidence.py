@@ -264,10 +264,12 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
                    if _host(r["source_url"]) not in new_hosts]
     if not_before is not None:
         merged = [c for c in merged if c.date >= not_before]
-        if not merged:
-            if existing is not None:
-                _remove_event(events, index, claims_by_event, existing)
-            return "precreated"
+    if not merged or all(c.source_type == "wayback" for c in merged):
+        # Nothing left but a crawl: a capture brackets the release from
+        # above and cannot date it on its own. The repo was pre-staged.
+        if existing is not None:
+            _remove_event(events, index, claims_by_event, existing)
+        return "precreated"
     a = assess(merged)
     verified_by = verifier if a.verified_by == PROJECT_VERIFIER else a.verified_by
 

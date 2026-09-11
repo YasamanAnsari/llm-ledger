@@ -120,6 +120,20 @@ def test_image_generators_and_aliases_are_not_drafted() -> None:
     assert reconcile.reconcile_cluster(
         _cluster(match_key="gpt-chat-latest", md_model_key="gpt-chat-latest",
                  or_id="openai/gpt-chat-latest"), TODAY) is None
+    # a language model that also emits images stays, as multimodal
+    draft = reconcile.reconcile_cluster(
+        _cluster(match_key="gpt-5-5-pro", md_model_key="gpt-5.5-pro", or_id="openai/gpt-5.5-pro",
+                 md_modalities_in="text|image", md_modalities_out="text|image"), TODAY)
+    assert draft["model"]["model_type"] == "multimodal"
+    # no modality metadata at all: still a text model, never descoped
+    draft = reconcile.reconcile_cluster(
+        _cluster(match_key="gpt-5-5-pro", md_model_key="gpt-5.5-pro", or_id="openai/gpt-5.5-pro",
+                 md_modalities_in="", md_modalities_out=""), TODAY)
+    assert draft["model"]["model_type"] == "llm"
+    # a music generator (audio out, no text out) is not a language model
+    assert reconcile.reconcile_cluster(
+        _cluster(match_key="lyria", md_model_key="lyria", or_id="google/lyria",
+                 md_modalities_in="text", md_modalities_out="audio"), TODAY) is None
     # audio in/out is a multimodal LLM and stays
     draft = reconcile.reconcile_cluster(
         _cluster(match_key="gpt-audio", md_model_key="gpt-audio", or_id="openai/gpt-audio",

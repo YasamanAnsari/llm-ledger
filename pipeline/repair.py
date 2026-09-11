@@ -108,12 +108,16 @@ def detach_crosswalk(tables: dict, model_id: str, namespace: str, identifier: st
     return len(tables["crosswalk"]) < before
 
 
-def reset_to_hub_claim(tables: dict, event_id: str, today: date) -> None:
+def reset_to_hub_claim(tables: dict, event_id: str, today: date) -> bool:
     """Drop every non-hub claim on a weights event and re-assess from the
-    repo-creation claim alone (the archive saw a different artifact)."""
+    repo-creation claim alone (the archive saw a different artifact). With
+    no hub claim to fall back to, a capture cannot date anything: the event
+    and its claims are removed. Returns True when the event survives."""
     hub = [c for c in tables["claims"] if c["event_id"] == event_id and c["source_type"] == "hf_hub"]
     if not hub:
-        raise ValueError(f"{event_id}: no hf_hub claim to fall back to")
+        tables["events"] = [e for e in tables["events"] if e["event_id"] != event_id]
+        tables["claims"] = [c for c in tables["claims"] if c["event_id"] != event_id]
+        return False
     tables["claims"] = [c for c in tables["claims"] if c["event_id"] != event_id] + hub
     a = assess([claim_from_row(c) for c in hub])
     for e in tables["events"]:
@@ -122,6 +126,7 @@ def reset_to_hub_claim(tables: dict, event_id: str, today: date) -> None:
                       "source_url": a.source_url, "source_type": a.source_type,
                       "verified_by": a.verified_by, "notes": a.notes,
                       "verified_date": today.isoformat() if a.confidence == "verified" else ""})
+    return True
 
 
 def backfill_single_claim(tables: dict, event_id: str, label: str) -> None:

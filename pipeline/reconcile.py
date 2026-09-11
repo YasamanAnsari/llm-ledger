@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import match
 import orgs_seed
+import repair
 import schema
 from confidence import (
     Claim, curated_announcement, earliest_availability, flatten_claims,
@@ -128,16 +129,18 @@ def _vendor_index(vendor: dict) -> dict:
 
 
 def _infer_model_type(modalities_in: str, modalities_out: str) -> str:
-    """Model type from catalog modalities; "" when the product is out of
-    scope (image or video generation, even with a text channel)."""
+    """Model type from catalog modalities; "" when the product emits no
+    text at all (music, speech synthesis, pure image generation). Image
+    generators that also return a text channel are excluded by name in
+    match.OUT_OF_SCOPE_RE."""
     mod_in = set(filter(None, modalities_in.split("|")))
     mod_out = set(filter(None, modalities_out.split("|")))
-    if not mod_in:
-        return ""
-    if mod_out & {"image", "video"}:
-        return ""  # image/video generation is out of scope even with a text channel
+    if not mod_in and not mod_out:
+        return "llm"  # no modality metadata: a catalog entry is a text model until shown otherwise
+    if mod_out and "text" not in mod_out:
+        return ""  # a language model produces text; music/TTS/image generators do not
     if mod_out - {"text"}:
-        return "multimodal"  # speech-native LLMs
+        return "multimodal"  # LLMs that also emit images or speech
     if mod_in == {"text"}:
         return "llm"
     if mod_in & {"image", "video"}:
@@ -176,6 +179,16 @@ def _attributes_from_models_dev(model_id: str, row: dict) -> dict:
     }
 
 
+def out_of_scope(row: dict) -> bool:
+    """A cluster the ledger does not track: an alias, a named out-of-scope
+    product, or a catalog entry whose modalities make it a generator."""
+    key = row["match_key"]
+    if match.is_alias_key(key) or match.is_out_of_scope_key(key):
+        return True
+    return bool(row["md_model_key"]) and not _infer_model_type(
+        row["md_modalities_in"], row["md_modalities_out"])
+
+
 def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dict | None:
     """Turn one matched cluster into draft core rows, or None if out of scope.
 
@@ -187,7 +200,7 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     sources = row["sources"].split("|")
     if len(sources) < 2:
         return None
-    if match.is_alias_key(row["match_key"]) or match.is_out_of_scope_key(row["match_key"]):
+    if out_of_scope(row):
         return None  # a moving alias or a product the ledger does not track
     # Attribution priority: OpenRouter's curated vendor namespace, then the
     # model-family token from the name itself (nemotron beats llama), then
@@ -199,10 +212,7 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
         row["or_prefix"], *family_tokens, row["md_prefix"], row["md_provider"])
     if not org_id:
         return None
-    model_type = _infer_model_type(row["md_modalities_in"], row["md_modalities_out"])
-    if row["md_model_key"] and not model_type:
-        return None  # confidently out of scope (image/audio generator)
-    model_type = model_type or "llm"
+    model_type = _infer_model_type(row["md_modalities_in"], row["md_modalities_out"]) or "llm"
 
     model_id = match.slug_for(row["match_key"], org_id)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -414,6 +424,7 @@ def main() -> int:
     added_models = 0
     outcomes = Counter()
     touched: set = set()
+    descoped: set = set()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for row in matched:
         key_hit = next((vendor_index[v] for v in match.key_variants(row["match_key"], identity=True)
@@ -421,6 +432,16 @@ def main() -> int:
         cluster_vendor = {row["match_key"]: vendor[key_hit]} if key_hit else None
         draft = reconcile_cluster(row, today, cluster_vendor)
         if draft is None:
+            if out_of_scope(row):
+                # A row drafted from this cluster on an earlier run, before the
+                # scope rule caught it, goes; curated rows are never touched.
+                for ns, ident in (("openrouter", row["or_id"]), ("epoch", row["epoch_model"]),
+                                  ("models_dev", f"{row['md_provider']}/{row['md_model_key']}")):
+                    mid = identity.get((ns, ident)) if ident else None
+                    if mid and models_by_id.get(mid, {}).get("notes") == \
+                            "from catalog metadata; identity and lineage unreviewed" \
+                            and models_by_id[mid]["review_status"] in ("unreviewed", "machine_corroborated"):
+                        descoped.add(mid)
             continue
 
         for seed in orgs_seed.SEED_ORGS:
@@ -463,6 +484,17 @@ def main() -> int:
             touched.add(model_id)
 
         floor = curated_announcement(event_index, model_id)
+        # models.dev's open-weights verdict decides whether its date is a
+        # weights or an API event; a row of the other type that rests on
+        # models.dev alone is stale and goes first, so the announced claim
+        # below is judged against current availability only.
+        md_types = {e["event_type"] for e in draft["events"]
+                    if any(c.label.startswith("models.dev") for c in e["claims"])}
+        for stale in {"api_ga", "weights_released"} - md_types:
+            if withdraw_machine_event(events, event_index, claims_by_event, model_id, stale,
+                                      only_hosts={"models.dev"}):
+                outcomes["stale-type-withdrawn"] += 1
+                touched.add(model_id)
         # Availability first, so the announced claim can be checked against
         # every availability date on record (incl. the Hub census's).
         for ev in sorted(draft["events"], key=lambda e: e["event_type"] == "announced"):
@@ -489,16 +521,28 @@ def main() -> int:
                 events, event_index, claims_by_event, model_id, ceiling):
             outcomes["announced-after-availability"] += 1
             touched.add(model_id)
-        # models.dev's open-weights verdict decides whether its date is a
-        # weights or an API event; a row of the other type that rests on
-        # models.dev alone is stale and goes.
-        md_types = {e["event_type"] for e in draft["events"]
-                    if any(c.label.startswith("models.dev") for c in e["claims"])}
-        for stale in {"api_ga", "weights_released"} - md_types:
-            if withdraw_machine_event(events, event_index, claims_by_event, model_id, stale,
-                                      only_hosts={"models.dev"}):
-                outcomes["stale-type-withdrawn"] += 1
-                touched.add(model_id)
+
+    # A catalog that stops supporting a date leaves a machine-drafted row
+    # with no availability or announcement: no date, no row (rule 6).
+    anchors = {"announced", "platform_availability", "api_ga", "weights_released",
+               "consumer_rollout", "api_preview", "free_tier"}
+    anchored = {e["model_id"] for e in events if e["event_type"] in anchors}
+    orphans = {m["model_id"] for m in models_by_id.values()
+               if m["model_id"] not in anchored and m["review_status"] in ("unreviewed", "machine_corroborated")
+               and m["notes"] == "from catalog metadata; identity and lineage unreviewed"}
+    outcomes["descoped-withdrawn"] += len(descoped - orphans)
+    orphans |= descoped
+    if orphans:
+        working = {"models": list(models_by_id.values()), "events": events,
+                   "claims": flatten_claims(claims_by_event), "crosswalk": tables["crosswalk"],
+                   "attributes": list(attributes_by_id.values())}
+        repair.delete_models(working, orphans)
+        models_by_id = {m["model_id"]: m for m in working["models"]}
+        events = working["events"]
+        claims_by_event = group_claims(working["claims"])
+        tables["crosswalk"] = working["crosswalk"]
+        attributes_by_id = {a["model_id"]: a for a in working["attributes"]}
+        outcomes["undatable-withdrawn"] += len(orphans - descoped)
 
     schema.mark_updated(models_by_id, touched, now)
     schema.write_table(ORGANIZATIONS, list(orgs_by_id.values()))
@@ -512,7 +556,9 @@ def main() -> int:
     report = write_disagreement_report(matched)
     print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
           f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "
-          f"curated-skipped={outcomes['skipped']} precreated-dropped={outcomes['precreated']}; "
+          f"curated-skipped={outcomes['skipped']} precreated-dropped={outcomes['precreated']} "
+          f"undatable-withdrawn={outcomes['undatable-withdrawn']} "
+          f"descoped-withdrawn={outcomes['descoped-withdrawn']}; "
           f"+{outcomes['attributes']} attributes; "
           f"vendor APIs: {sorted({v['source'] for v in vendor.values()})}; "
           f"orgs={len(orgs_by_id)}; report -> {report}")
