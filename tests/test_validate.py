@@ -215,6 +215,17 @@ def test_rule11_machine_rows_have_claims_and_curated_rows_have_none():
     assert any("rule11" in e and "carries claims" in e for e in _errors(curated_with_claim))
 
 
+def test_rule14_superseded_claim_needs_a_live_sibling():
+    machine = _event(source_type="api_metadata", source_url="https://models.dev/api.json")
+    live = {"event_id": "acme-1-api_ga-1", "source_url": "https://models.dev/api.json",
+            "source_type": "api_metadata", "date": "2025-01-15", "precision": "day",
+            "label": "models.dev", "bound": "false", "first_party": "false", "superseded_on": ""}
+    old = dict(live, date="2025-01-10", superseded_on="2026-09-12")
+    assert not any("rule14" in e for e in _errors(_tables(events=[machine], claims=[live, old])))
+    assert any("rule14" in e for e in _errors(_tables(events=[machine], claims=[old])))
+    assert any("superseded_on" in e for e in _errors(_tables(events=[machine], claims=[live, dict(old, superseded_on="soon")])))
+
+
 def test_rule12_one_model_per_machine_identifier():
     models = [_model(), _model(model_id="acme-2"), _model(model_id="acme-1-snap", snapshot_of="acme-1")]
     events = [_event(), _event(event_id="acme-2-api_ga-1", model_id="acme-2"),

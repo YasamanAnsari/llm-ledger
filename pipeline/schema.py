@@ -200,8 +200,10 @@ CLAIMS = Table(
     name="claims",
     filename="claims.csv",
     columns=("event_id", "source_url", "source_type", "date", "precision",
-             "label", "bound", "first_party"),
-    pk=("event_id", "source_url"),
+             "label", "bound", "first_party", "superseded_on"),
+    # One source can hold several dated statements about one event: the
+    # live one (superseded_on empty) and the ones it moved away from.
+    pk=("event_id", "source_url", "date"),
 )
 
 CORE_TABLES = (ORGANIZATIONS, MODELS, EVENTS, CLAIMS, CROSSWALK, ATTRIBUTES)

@@ -30,6 +30,17 @@ Policy (every rule below is enforced by a validation rule or a test):
   differing mirror is written to `notes` as `differs:`, an agreeing one
   as `agrees:` (not as independent corroboration). 4 rows change
   (3 disputed -> verified, 1 inferred -> verified); 67 notes reworded.
+- `claims.csv` keeps what a source said before it moved its date. New
+  column `superseded_on` (empty on the live row; the pull date that saw
+  the change on the old one); primary key is now
+  `(event_id, source_url, date)`. Loaders re-assess from live rows only.
+  New validation rule 14: a superseded claim has a live claim from the
+  same source on the same event. New artifact
+  `data/generated/reschedules.csv`: one row per move, signed in days.
+  Backfilled 6 moves from the daily snapshots since v2026.09, taking only
+  pairs of consecutive daily updates with no code change in between
+  (Epoch 2026-09-03: 1, OpenRouter 2026-09-05: 1) plus Azure's four
+  o-series moves of 2026-09-12, confirmed against the raw page snapshots.
 - `first_public_availability_date` ignores `quarter`/`year` placeholders
   (8 models lose a Jan-1 headline date); new derived column
   `first_availability_confidence`.

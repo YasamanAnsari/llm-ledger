@@ -144,6 +144,36 @@ def test_upsert_merges_claims_across_loaders_and_is_idempotent() -> None:
     assert len(claims["m-weights_released-1"]) == 2
 
 
+def test_upsert_keeps_a_moved_date_as_superseded_history() -> None:
+    events, index, claims = [], {}, {}
+    azure = "https://learn.microsoft.com/azure/retirements"
+    mirror = "https://raw.githubusercontent.com/BerriAI/litellm/x.json"
+    day1 = [_c("2026-10-01", azure, first_party=True), _c("2026-10-01", mirror)]
+    upsert_machine_event(events, index, claims, "m", "retired", day1, date(2026, 9, 1),
+                         platform="azure", next_id=lambda *_: "m-retired-1")
+    # Azure moves the date; the mirror has not caught up.
+    day2 = [_c("2026-11-19", azure, first_party=True), _c("2026-10-01", mirror)]
+    assert upsert_machine_event(events, index, claims, "m", "retired", day2, date(2026, 9, 12),
+                                platform="azure") == "updated"
+    rows = claims["m-retired-1"]
+    live = [r for r in rows if not r["superseded_on"]]
+    gone = [r for r in rows if r["superseded_on"]]
+    assert {(r["source_url"], r["date"]) for r in live} == {(azure, "2026-11-19"), (mirror, "2026-10-01")}
+    assert [(r["source_url"], r["date"], r["superseded_on"]) for r in gone] == [(azure, "2026-10-01", "2026-09-12")]
+    assert (events[0]["date"], events[0]["confidence"]) == ("2026-11-19", "verified")
+    # Same statements again: nothing moves, history stays.
+    assert upsert_machine_event(events, index, claims, "m", "retired", day2, date(2026, 9, 13),
+                                platform="azure") == "unchanged"
+    assert len(claims["m-retired-1"]) == 3
+    # Azure returns to the old date: the live row takes that key, the
+    # 11-19 statement becomes history.
+    assert upsert_machine_event(events, index, claims, "m", "retired", day1, date(2026, 9, 14),
+                                platform="azure") == "updated"
+    hist = sorted((r["date"], r["superseded_on"]) for r in claims["m-retired-1"] if r["superseded_on"])
+    assert hist == [("2026-11-19", "2026-09-14")]
+    assert events[0]["date"] == "2026-10-01"
+
+
 def test_upsert_withdraws_claims_before_curated_announcement() -> None:
     events, index, claims = [], {}, {}
     early = [_c("2026-06-13", HF, source_type="hf_hub", bound=True)]

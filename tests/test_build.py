@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
-from build import LATEST_COLUMNS, compute_derived, latest_first
+from build import LATEST_COLUMNS, build_reschedule_rows, compute_derived, latest_first
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -171,3 +171,20 @@ def test_machine_row_with_weights_event_becomes_open_weights():
     a, b = compute_derived([machine, curated], events)
     assert a["access_type"] == "open_weights"
     assert b["access_type"] == "api_only"          # curated rows are a human call
+
+
+def test_reschedules_chain_each_superseded_claim_to_the_next_statement():
+    azure = "https://learn.microsoft.com/azure/retirements"
+    events = [{"event_id": "o3-retired-2", "model_id": "o3", "event_type": "retired", "platform": "azure"}]
+
+    def claim(day, superseded_on="", url=azure):
+        return {"event_id": "o3-retired-2", "source_url": url, "date": day, "label": "azure_lifecycle (o3)",
+                "first_party": "true", "superseded_on": superseded_on}
+    claims = [claim("2026-10-01", "2026-09-05"), claim("2026-12-17", "2026-09-12"), claim("2026-11-19"),
+              claim("2026-10-01", url="https://raw.githubusercontent.com/x/litellm.json")]
+    rows = build_reschedule_rows(events, claims)
+    assert [(r["from_date"], r["to_date"], r["days_moved"], r["observed_on"]) for r in rows] == [
+        ("2026-10-01", "2026-12-17", "77", "2026-09-05"),
+        ("2026-12-17", "2026-11-19", "-28", "2026-09-12"),
+    ]
+    assert rows[0]["source"] == "azure_lifecycle" and rows[0]["platform"] == "azure"

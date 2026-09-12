@@ -11,6 +11,8 @@
   releases at the top, undated models last.
 - Generates the coverage and treatment-date sensitivity reports and the
   README stats block, so no number in the repository can go stale.
+- Generates data/generated/reschedules.csv: every time a source moved its
+  date for an event (from claims.csv's superseded rows), signed in days.
 - Fills `family` and `variant_role` from the model name where no curator
   has set them (schema.family_and_role).
 
@@ -30,12 +32,13 @@ import sys
 from collections import Counter
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
 import sensitivity
-from confidence import PROJECT_VERIFIERS, curated_model_ids, is_machine_row
+from confidence import PROJECT_VERIFIERS, curated_model_ids, is_machine_row, live_claims
 from schema import (
     ATTRIBUTES, AVAILABILITY_EVENT_TYPES, EVENTS,
     FALLBACK_AVAILABILITY_EVENT_TYPES, GENERATED_DIR, MODELS,
@@ -318,7 +321,7 @@ def build_readme_stats(models: list, events: list, claims: list, organizations: 
     return "\n".join([
         f"Exact counts as of the last rebuild: {n} models from "
         f"{len({m['developer_org_id'] for m in models})} organizations, {len(events)} dated "
-        f"events, backed by {len(claims)} recorded claims. First availability runs from "
+        f"events, backed by {len(live_claims(claims))} live source claims. First availability runs from "
         f"{dated[0]} to {dated[-1]}. {pct(len(open_w), n)} of the models are open-weight; "
         f"Chinese labs make up {pct(sum(m['developer_org_id'] in cn for m in open_w), len(open_w))} "
         f"of those.",
@@ -422,6 +425,48 @@ def build_sensitivity_bytes() -> bytes:
     return sensitivity.build_sensitivity_report(schema.read_table(EVENTS), models).encode("utf-8")
 
 
+RESCHEDULE_COLUMNS = ("event_id", "model_id", "event_type", "platform", "source",
+                      "source_url", "first_party", "from_date", "to_date",
+                      "days_moved", "observed_on")
+
+
+def build_reschedule_rows(events: list, claims: list) -> list:
+    """One row per time a source moved its date for an event: each
+    superseded claim paired with the next statement from the same source
+    (the next superseded one by observation date, else the live one).
+    `days_moved` is signed: positive means the date slipped later."""
+    by_event = {e["event_id"]: e for e in events}
+    by_source: dict = {}
+    for c in claims:
+        by_source.setdefault((c["event_id"], urlparse(c["source_url"]).netloc), []).append(c)
+    rows = []
+    for (event_id, _), group in by_source.items():
+        history = sorted((c for c in group if c["superseded_on"]),
+                         key=lambda c: (c["superseded_on"], c["date"]))
+        if not history:
+            continue
+        # A source with several live claims (rare) is read as assess reads
+        # it: by its earliest statement.
+        live = min((c for c in group if not c["superseded_on"]), key=lambda c: c["date"])
+        e = by_event[event_id]
+        for old, new in zip(history, history[1:] + [live]):
+            moved = (date.fromisoformat(new["date"]) - date.fromisoformat(old["date"])).days
+            rows.append({
+                "event_id": event_id, "model_id": e["model_id"],
+                "event_type": e["event_type"], "platform": e["platform"],
+                "source": old["label"].split(" (")[0], "source_url": old["source_url"],
+                "first_party": old["first_party"], "from_date": old["date"],
+                "to_date": new["date"], "days_moved": str(moved),
+                "observed_on": old["superseded_on"],
+            })
+    return sorted(rows, key=lambda r: (r["event_id"], r["source_url"], r["observed_on"], r["from_date"]))
+
+
+def build_reschedules_bytes() -> bytes:
+    rows = build_reschedule_rows(schema.read_table(EVENTS), schema.read_table(schema.CLAIMS))
+    return _csv_bytes(list(RESCHEDULE_COLUMNS), rows)
+
+
 # Every generated artifact, with the function that rebuilds it from the
 # core tables. `main` writes them; validate.py rule 9 byte-compares them.
 GENERATED_ARTIFACTS = (
@@ -430,6 +475,7 @@ GENERATED_ARTIFACTS = (
     ("models_latest.csv", build_latest_bytes),
     ("coverage_report.md", build_coverage_bytes),
     ("sensitivity_report.md", build_sensitivity_bytes),
+    ("reschedules.csv", build_reschedules_bytes),
 )
 
 

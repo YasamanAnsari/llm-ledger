@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import schema
-from confidence import MACHINE_SOURCE_TYPES
+from confidence import MACHINE_SOURCE_TYPES, live_claims
 from schema import (
     ACCESS_TYPES, AVAILABILITY_EVENT_TYPES, BOOL_VALUES, CONFIDENCES,
     CORE_TABLES, CROSSWALK_NAMESPACES, DERIVATIVE_TYPES,
@@ -297,6 +297,8 @@ def check_rule8_vocabularies(tables: dict) -> list:
             errors.append(f"rule8: {key} source_url invalid")
         if not date_matches_precision(row.get("date", ""), "day"):
             errors.append(f"rule8: {key} date '{row.get('date', '')}' is not ISO")
+        if row.get("superseded_on") and not date_matches_precision(row["superseded_on"], "day"):
+            errors.append(f"rule8: {key} superseded_on '{row['superseded_on']}' is not ISO")
 
     for row in tables["attributes"]:
         key = f"attributes {row['model_id']}"
@@ -375,6 +377,19 @@ def check_rule13_access_type_events(tables: dict) -> list:
     return errors
 
 
+def check_rule14_claim_history(tables: dict) -> list:
+    """A superseded claim is what a source said before it moved its date:
+    the same source must still have a live claim on that event."""
+    errors = []
+    live = {(c["event_id"], urlparse(c["source_url"]).netloc)
+            for c in live_claims(tables.get("claims", []))}
+    for c in tables.get("claims", []):
+        if c.get("superseded_on") and (c["event_id"], urlparse(c["source_url"]).netloc) not in live:
+            errors.append(f"rule14: superseded claim {c['event_id']}/{c['source_url']} {c['date']} "
+                          "has no live claim from the same source")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -406,6 +421,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     errors += check_rule11_claims_coverage(tables)
     errors += check_rule12_identifier_uniqueness(tables)
     errors += check_rule13_access_type_events(tables)
+    errors += check_rule14_claim_history(tables)
     return errors, warnings
 
 

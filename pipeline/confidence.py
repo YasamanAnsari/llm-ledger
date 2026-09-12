@@ -189,7 +189,15 @@ def claim_to_row(event_id: str, c: Claim) -> dict:
         "source_type": c.source_type, "date": c.date.isoformat(),
         "precision": c.precision, "label": c.label,
         "bound": str(c.bound).lower(), "first_party": str(c.first_party).lower(),
+        "superseded_on": "",
     }
+
+
+def live_claims(rows: list) -> list:
+    """Claim rows a source currently stands behind. A row with
+    `superseded_on` set is what the same source said before it moved its
+    date; it is history, never evidence."""
+    return [r for r in rows if not r.get("superseded_on")]
 
 
 def claim_from_row(row: dict) -> Claim:
@@ -216,6 +224,10 @@ def group_claims(rows: list) -> dict:
 
 def flatten_claims(grouped: dict) -> list:
     return [row for rows in grouped.values() for row in rows]
+
+
+def _claim_order(row: dict) -> tuple:
+    return (row["source_url"], row["date"], row.get("superseded_on", ""))
 
 
 def _remove_event(events: list, index: dict, claims_by_event: dict, row: dict) -> None:
@@ -284,15 +296,17 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
                          verifier: str = PROJECT_VERIFIER) -> str:
     """Add or refresh the machine-owned event for (model, type, platform).
 
-    New claims replace stored claims from the same host; claims from other
-    hosts (contributed by other loaders) are kept, and the event is
-    re-assessed from the full set. `verifier` names who signs a machine
-    corroboration (the project, or its agent). Returns "added", "updated",
-    "unchanged", "skipped" (curated row), "precreated" (every claim predates
-    `not_before` or only a crawl remains; nothing was on record) or
-    "withdrawn" (same, and the stale machine row was removed). `index` maps
-    (model_id, event_type, platform) -> row; both it and `claims_by_event`
-    are kept in sync.
+    New claims replace stored claims from the same host; a stored claim
+    whose host now states a different date is kept with `superseded_on` =
+    today (the source moved its date: that is history worth measuring, not
+    a competing opinion). Claims from other hosts (contributed by other
+    loaders) are kept, and the event is re-assessed from the live set.
+    `verifier` names who signs a machine corroboration (the project, or its
+    agent). Returns "added", "updated", "unchanged", "skipped" (curated
+    row), "precreated" (every claim predates `not_before` or only a crawl
+    remains; nothing was on record) or "withdrawn" (same, and the stale
+    machine row was removed). `index` maps (model_id, event_type, platform)
+    -> row; both it and `claims_by_event` are kept in sync.
     """
     key = (model_id, event_type, platform)
     existing = index.get(key)
@@ -300,10 +314,20 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
         return "skipped"
 
     merged = list(claims)
+    history: list = []
     if existing is not None:
-        new_hosts = {_host(c.source_url) for c in claims}
-        merged += [claim_from_row(r) for r in claims_by_event.get(existing["event_id"], [])
-                   if _host(r["source_url"]) not in new_hosts]
+        new_dates_by_host: dict = {}
+        for c in claims:
+            new_dates_by_host.setdefault(_host(c.source_url), set()).add(c.date.isoformat())
+        for r in claims_by_event.get(existing["event_id"], []):
+            if r.get("superseded_on"):
+                history.append(r)
+                continue
+            host = _host(r["source_url"])
+            if host not in new_dates_by_host:
+                merged.append(claim_from_row(r))
+            elif r["date"] not in new_dates_by_host[host]:
+                history.append({**r, "superseded_on": today.isoformat()})
     if not_before is not None:
         merged = [c for c in merged if c.date >= not_before]
     if not merged or all(c.source_type == "wayback" for c in merged):
@@ -334,11 +358,16 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
         claims_by_event[row["event_id"]] = [claim_to_row(row["event_id"], c) for c in merged]
         return "added"
 
-    claim_rows = sorted((claim_to_row(existing["event_id"], c) for c in merged),
-                        key=lambda r: r["source_url"])
+    live_rows = [claim_to_row(existing["event_id"], c) for c in merged]
+    # A source that returns to a date it once left: the live row takes the
+    # key (event, source, date) and the history row for it goes.
+    live_keys = {(r["source_url"], r["date"]) for r in live_rows}
+    claim_rows = sorted(live_rows + [r for r in history
+                                     if (r["source_url"], r["date"]) not in live_keys],
+                        key=_claim_order)
     changed = (any(existing.get(k, "") != v for k, v in fields.items())
                or sorted(claims_by_event.get(existing["event_id"], []),
-                         key=lambda r: r["source_url"]) != claim_rows)
+                         key=_claim_order) != claim_rows)
     claims_by_event[existing["event_id"]] = claim_rows
     if not changed:
         return "unchanged"

@@ -11,7 +11,7 @@ from __future__ import annotations
 from datetime import date
 
 import schema
-from confidence import Claim, assess, claim_from_row, claim_to_row
+from confidence import Claim, assess, claim_from_row, claim_to_row, live_claims
 
 MODEL_FK_COLUMNS = ("base_model_id", "parent_model_id", "snapshot_of",
                     "predecessor_id", "successor_id")
@@ -119,7 +119,7 @@ def reset_to_hub_claim(tables: dict, event_id: str, today: date) -> bool:
         tables["claims"] = [c for c in tables["claims"] if c["event_id"] != event_id]
         return False
     tables["claims"] = [c for c in tables["claims"] if c["event_id"] != event_id] + hub
-    a = assess([claim_from_row(c) for c in hub])
+    a = assess([claim_from_row(c) for c in live_claims(hub)])
     for e in tables["events"]:
         if e["event_id"] == event_id:
             e.update({"date": a.date, "precision": a.precision, "confidence": a.confidence,

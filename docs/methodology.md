@@ -65,7 +65,13 @@ If the source only gives a month, we store the first of that month and
 ## How sure we are
 
 One policy in `pipeline/confidence.py` decides every machine-dated row;
-every claim it weighed is kept in `data/core/claims.csv`.
+every claim it weighed is kept in `data/core/claims.csv`. A source that
+changes its date does not overwrite its earlier claim: the old row is
+kept with `superseded_on` = the pull date that saw the change, only the
+live row counts as evidence, and `data/generated/reschedules.csv` lists
+every such move with its signed size in days. Vendors reschedule
+shutdowns; that is a fact about the vendor, and it is recorded rather
+than lost.
 
 - `verified`: a curator read a primary source (`verified_by` is a
   person's name, or `llm-ledger` / `llm-ledger-agent` when the project's

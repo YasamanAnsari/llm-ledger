@@ -115,8 +115,8 @@
 <text x="1034" y="382" fill="#e6edf3" font-size="12.5">verified_by</text>
 <text x="1034" y="402" fill="#e6edf3" font-size="12.5">verified_date</text>
 <text x="1034" y="422" fill="#e6edf3" font-size="12.5">notes</text>
-<rect x="1020" y="530" width="370" height="212" rx="10" fill="none" stroke="#bc8cff" stroke-width="7" stroke-opacity="0.18"/>
-<rect x="1020" y="530" width="370" height="212" rx="10" fill="#111827" stroke="#bc8cff" stroke-width="1.6"/>
+<rect x="1020" y="530" width="370" height="232" rx="10" fill="none" stroke="#bc8cff" stroke-width="7" stroke-opacity="0.18"/>
+<rect x="1020" y="530" width="370" height="232" rx="10" fill="#111827" stroke="#bc8cff" stroke-width="1.6"/>
 <path d="M 1020,564 h 370" stroke="#bc8cff" stroke-width="1" stroke-opacity="0.6"/>
 <text x="1034" y="553" fill="#bc8cff" font-size="15" font-weight="bold">claims</text>
 <text x="1376" y="553" fill="#8b949e" font-size="12" text-anchor="end">claims.csv</text>
@@ -127,10 +127,12 @@
 <text x="1376" y="602" fill="#e3b341" font-size="11" font-weight="bold" text-anchor="end">PK</text>
 <text x="1034" y="622" fill="#e6edf3" font-size="12.5">source_type</text>
 <text x="1034" y="642" fill="#e6edf3" font-size="12.5">date</text>
+<text x="1376" y="642" fill="#e3b341" font-size="11" font-weight="bold" text-anchor="end">PK</text>
 <text x="1034" y="662" fill="#e6edf3" font-size="12.5">precision</text>
 <text x="1034" y="682" fill="#e6edf3" font-size="12.5">label</text>
 <text x="1034" y="702" fill="#e6edf3" font-size="12.5">bound</text>
 <text x="1034" y="722" fill="#e6edf3" font-size="12.5">first_party</text>
+<text x="1034" y="742" fill="#e6edf3" font-size="12.5">superseded_on</text>
 <rect x="430" y="780" width="350" height="452" rx="10" fill="none" stroke="#ff7b72" stroke-width="7" stroke-opacity="0.18"/>
 <rect x="430" y="780" width="350" height="452" rx="10" fill="#111827" stroke="#ff7b72" stroke-width="1.6"/>
 <path d="M 430,814 h 350" stroke="#ff7b72" stroke-width="1" stroke-opacity="0.6"/>

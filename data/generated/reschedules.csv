@@ -1,0 +1,7 @@
+event_id,model_id,event_type,platform,source,source_url,first_party,from_date,to_date,days_moved,observed_on
+o1-pro-retired-2,o1-pro,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-21,2026-11-19,29,2026-09-12
+o3-mini-retired-2,o3-mini,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-01,2026-11-19,49,2026-09-12
+o3-pro-retired-2,o3-pro,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-12-17,2026-11-19,-28,2026-09-12
+o4-mini-retired-2,o4-mini,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-16,2026-11-19,34,2026-09-12
+qwen3-5-397b-a17b-announced-1,qwen3-5-397b-a17b,announced,,epoch.ai,https://epoch.ai/data/all_ai_models.csv,false,2026-02-13,2026-02-15,2,2026-09-03
+qwen3-8-max-platform_availability-1,qwen3-8-max,platform_availability,openrouter,openrouter,https://openrouter.ai/api/v1/models,true,2026-08-03,2026-09-03,31,2026-09-05

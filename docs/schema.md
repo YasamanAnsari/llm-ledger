@@ -159,17 +159,27 @@ datasets disagree with each other.
 | Column | Type | Rules |
 |---|---|---|
 | `event_id` | FK to events | |
-| `source_url` | URL | one row per (event, source host) |
+| `source_url` | URL | one live row per (event, source host) |
 | `source_type` | enum | same vocabulary as events |
 | `date` | ISO date | what this source says |
 | `precision` | `day` or `year` | `year` for catalog Jan-1 placeholders |
 | `label` | string | short source name, e.g. `models.dev`, `hub repo created` |
 | `bound` | bool | the timestamp brackets the event (repo or model-registry creation, first crawl) rather than stating it |
 | `first_party` | bool | the source reports its own event (OpenRouter listing on OpenRouter, Azure retirement on Azure) |
+| `superseded_on` | ISO date or empty | empty: what the source says now. Set: what it said until that day, when a pull found it stating a different date |
+
+Primary key: `(event_id, source_url, date)`.
 
 `events.csv` holds the conclusion; this table holds every claim it rests on,
-so a loader can re-assess from the full set and a reader can see exactly
+so a loader can re-assess from the live set and a reader can see exactly
 which sources said what. Curated events have no rows here.
+
+When a source moves its date (Azure pushes a retirement back, a catalog
+corrects a release date) the old row is not overwritten: it stays with
+`superseded_on` set to the pull date that saw the change, and the new
+statement becomes the live row. Only live rows are evidence; the
+superseded ones are the dated history of what each source said, and
+`data/generated/reschedules.csv` reads them out as one row per move.
 
 ## crosswalk.csv
 
@@ -275,6 +285,11 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
 - `data/generated/coverage_report.md` - per-organization model and event
   counts with review status and verified share; read this before quoting
   the headline row counts.
+- `data/generated/reschedules.csv` - one row per time a source moved
+  its date for an event, from the superseded rows of `claims.csv`:
+  `from_date`, `to_date`, signed `days_moved` (positive = slipped
+  later), `observed_on` (the pull that saw the change), `first_party`.
+  Platform retirement tables are where this happens most.
 - `data/generated/sensitivity_report.md` - how far apart the candidate
   "release dates" of one model sit (announced vs api_ga vs
   weights_released ...), for researchers choosing a treatment date.
@@ -336,3 +351,5 @@ rewrite the dataset.
     model.
 13. `access_type=api_only` is incompatible with a `weights_released`
     event; `build.py` sets `open_weights` on machine rows that gain one.
+14. A claim with `superseded_on` set has a live claim from the same
+    source host on the same event: history hangs off a current statement.
