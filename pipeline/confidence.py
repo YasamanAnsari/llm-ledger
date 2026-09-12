@@ -9,7 +9,7 @@ Loaders collect the claims they have for one (model, event_type) and call
   platform's own timestamp for its own event (`first_party`), which is
   `verified` by llm-ledger;
 - two or more independent machine claims (distinct source hosts) that agree
-  within `agree_days` are `verified` by llm-ledger;
+  within AGREE_DAYS are `verified` by llm-ledger;
 - claims that spread over more than DISPUTE_DAYS are `disputed`;
 - anything in between stays `inferred`.
 
@@ -23,11 +23,11 @@ from dataclasses import dataclass
 from datetime import date
 from urllib.parse import urlparse
 
-AGREE_DAYS = 7
-# A bracketing timestamp (repo/registry creation, first crawl) only confirms
-# a stated date when it sits this close; further off, the artifact was
+# Two sources agree when their dates sit this close: it absorbs the UTC vs
+# local-day offset of a launch, nothing more. For a bracketing timestamp
+# (repo/registry creation, first crawl) a wider gap means the artifact was
 # pre-staged and says nothing about the launch day.
-BOUND_AGREE_DAYS = 2
+AGREE_DAYS = 2
 DISPUTE_DAYS = 30
 PROJECT_VERIFIER = "llm-ledger"
 AGENT_VERIFIER = "llm-ledger-agent"   # rows the LLM agent extracted from a page
@@ -132,14 +132,13 @@ def assess(claims: list) -> Assessment:
     # Day-precision claims are compared to the day; a year placeholder only
     # disputes when it names a different year. Bounds (repo/registry
     # creation, first crawl) corroborate when close; one that trails the
-    # chosen date by more than the window is lag (a late crawl, a mirror
+    # chosen date by more than AGREE_DAYS is lag (a late crawl, a mirror
     # created months later) and says nothing. A bound that LEADS the chosen
     # date stays in: the artifact may have been public there first. Only
     # stated dates dispute.
     comparable = [c for c in independent if c.precision == "day"] or independent
     comparable = [c for c in comparable
-                  if not c.bound or (c.date - best.date).days <= BOUND_AGREE_DAYS]
-    window = BOUND_AGREE_DAYS if any(c.bound for c in comparable) else AGREE_DAYS
+                  if not c.bound or (c.date - best.date).days <= AGREE_DAYS]
     spread = (max(c.date for c in comparable) - min(c.date for c in comparable)).days
     stated_day = [c for c in comparable if not c.bound]
     stated_spread = ((max(c.date for c in stated_day) - min(c.date for c in stated_day)).days
@@ -150,7 +149,7 @@ def assess(claims: list) -> Assessment:
         return result("disputed", f"sources disagree; kept "
                                   f"{'first-party' if best.first_party else 'best-evidenced'} "
                                   f"claim: {_describe(independent)}")
-    if len(comparable) >= 2 and spread <= window:
+    if len(comparable) >= 2 and spread <= AGREE_DAYS:
         return result("verified", f"corroborated within {spread}d: {_describe(independent)}")
     if len(comparable) < 2:
         return result("inferred", f"single source, later bounds are lag: {_describe(independent)}")

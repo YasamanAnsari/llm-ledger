@@ -14,7 +14,7 @@ For each included repo:
   and flip them later), so on its own the claim is `inferred`. When
   pull_wayback.py has recorded the first public Wayback capture of the
   repo page, or pull_modelscope.py the lab's twin repo on ModelScope, and
-  it agrees within confidence.BOUND_AGREE_DAYS, the row becomes `verified`
+  it agrees within confidence.AGREE_DAYS, the row becomes `verified`
   by llm-ledger. The 2022-03-02 HF backfill artifact is queued for review,
   never used.
 - queues one lead per Hub namespace that has in-scope repos but no org
@@ -279,7 +279,7 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
                 f"https://web.archive.org/web/{captures[repo_id].replace('-', '')}/{repo_url}",
                 "wayback", bound=True, label="first public capture"))
         # The same lab's twin repo on ModelScope: an independent creation
-        # timestamp. Two creations within BOUND_AGREE_DAYS corroborate.
+        # timestamp. Two creations within AGREE_DAYS corroborate.
         twin = modelscope.get((models_by_id[model_id]["developer_org_id"],
                                repo_id.split("/")[-1].lower()))
         if twin:

@@ -39,6 +39,12 @@ def test_first_party_date_wins_over_earlier_aggregator() -> None:
     assert (a.date, a.source_url, a.confidence) == ("2025-01-20", OR, "verified")
 
 
+def test_stated_dates_three_days_apart_are_not_corroborated() -> None:
+    a = assess([_c("2025-01-20", MD), _c("2025-01-23", OR)])
+    assert a.confidence == "inferred"
+    assert "claims differ by 3d" in a.notes
+
+
 def test_same_host_twice_is_still_one_source() -> None:
     a = assess([_c("2025-01-20", MD), _c("2025-01-21", MD + "?x")])
     assert a.confidence == "inferred"

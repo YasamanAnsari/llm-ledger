@@ -70,10 +70,9 @@ every claim it weighed is kept in `data/core/claims.csv`.
 - `verified`: a curator read a primary source (`verified_by` is a
   person's name, or `llm-ledger` / `llm-ledger-agent` when the project's
   LLM-assisted curation did the reading), or `verified_by=llm-ledger`
-  on a machine row: two independent machine sources agree within 7 days
-  (2 days when one is a bracketing timestamp), or a platform reported its
-  own event (OpenRouter's listing date, Azure's retirement schedule).
-- `inferred`: one machine source, or sources that differ by 8-30 days.
+  on a machine row: two independent machine sources agree within two
+  days, or a platform reported its own event (OpenRouter's listing date, Azure's retirement schedule).
+- `inferred`: one machine source, or sources that differ by 3-30 days.
 - `disputed`: two stated dates disagree by more than 30 days. The
   best-evidenced date stays in `date`; everything else is in `notes`.
 - A machine date that falls *before* a human-verified announcement is

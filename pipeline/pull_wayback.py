@@ -4,7 +4,7 @@ rests only on repo creation.
 Repo `createdAt` is a lower bound on the public release (repos are created
 private). The first Internet Archive capture of the repo page is evidence
 the repo was public by then. hf_census.py feeds both to the confidence
-policy: creation within BOUND_AGREE_DAYS of the first capture verifies the
+policy: creation within AGREE_DAYS of the first capture verifies the
 date; a wider gap keeps it inferred (crawl lag is common for small repos).
 
 Only repos still `inferred` and without a Wayback claim are queried, oldest

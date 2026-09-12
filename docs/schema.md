@@ -233,8 +233,8 @@ One policy, `pipeline/confidence.py`, decides every machine-dated row:
 
 | `confidence` | Meaning |
 |---|---|
-| `verified` | Either a person opened a primary source (`verified_by` = their name), or `verified_by=llm-ledger`: two independent machine sources agreed on the date within 7 days (2 days when one of them is a bracketing timestamp), or a platform reported its own event. |
-| `inferred` | One machine source, or several that differ by 8-30 days. The row carries the best-evidenced date and lists the others in `notes`. |
+| `verified` | Either a person opened a primary source (`verified_by` = their name), or `verified_by=llm-ledger`: two independent machine sources agreed on the date within two days, or a platform reported its own event. |
+| `inferred` | One machine source, or several that differ by 3-30 days. The row carries the best-evidenced date and lists the others in `notes`. |
 | `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. |
 
 Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,

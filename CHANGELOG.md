@@ -19,6 +19,10 @@ Policy (every rule below is enforced by a validation rule or a test):
   are left alone, is now `confidence.curated_model_ids`, computed from
   the events on every run. The coverage report counts models as
   curated / corroborated / single-source instead.
+- One agreement window. Two stated machine dates corroborate within two
+  days, the same window bracketing timestamps already had (`AGREE_DAYS`;
+  the 7-day stated-claim window and `BOUND_AGREE_DAYS` are gone). No row
+  changed: every verified machine event already sat within two days.
 - `first_public_availability_date` ignores `quarter`/`year` placeholders
   (8 models lose a Jan-1 headline date); new derived column
   `first_availability_confidence`.
