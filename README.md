@@ -151,7 +151,7 @@ For research:
 <!-- stats:start -->
 Exact counts as of the last rebuild: 1143 models from 41 organizations, 1883 dated events, backed by 2913 recorded claims. First availability runs from 2021-11-18 to 2026-09-10. 83% of the models are open-weight; Chinese labs make up 49% of those.
 
-Read the counts honestly. 49% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 30% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 5% have a verified event read from a primary page such as a vendor blog or deprecation table, 50% have only machine-corroborated events, and the remaining 45% rest on a single source. Filter on `events.confidence` before treating a date as settled.
+Read the counts honestly. 50% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 30% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 5% have a verified event read from a primary page such as a vendor blog or deprecation table, 50% have only machine-corroborated events, and the remaining 45% rest on a single source. Filter on `events.confidence` before treating a date as settled.
 <!-- stats:end -->
 
 Per-lab detail is in [`coverage_report.md`](data/generated/coverage_report.md),

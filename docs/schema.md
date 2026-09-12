@@ -235,7 +235,7 @@ One policy, `pipeline/confidence.py`, decides every machine-dated row:
 |---|---|
 | `verified` | Either a person opened a primary source (`verified_by` = their name), or `verified_by=llm-ledger`: two independent machine sources agreed on the date within two days, or a platform reported its own event. |
 | `inferred` | One machine source, or several that differ by 3-30 days. The row carries the best-evidenced date and lists the others in `notes`. |
-| `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. |
+| `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. A `first_party` record is never disputed by a third party: a differing mirror is noted (`differs:`), the first-party date stands as `verified`. |
 
 Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,
 ModelScope twin-repo creation, vendor model-registry `created`, first

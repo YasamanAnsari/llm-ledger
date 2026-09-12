@@ -61,6 +61,20 @@ def test_middling_gap_stays_inferred() -> None:
     assert a.confidence == "inferred" and "differ by 14d" in a.notes
 
 
+def test_first_party_schedule_is_never_disputed_by_a_stale_mirror() -> None:
+    # Azure moved o3-mini's retirement; LiteLLM still carries the old date.
+    azure = _c("2026-11-19", "https://learn.microsoft.com/azure/retirements", first_party=True)
+    mirror = _c("2026-10-01", "https://raw.githubusercontent.com/BerriAI/litellm/x.json")
+    a = assess([azure, mirror])
+    assert (a.confidence, a.date) == ("verified", "2026-11-19")
+    assert "differs: raw.githubusercontent.com 2026-10-01" in a.notes
+    # An agreeing mirror is noted as agreement, not as independent corroboration.
+    assert "agrees:" in assess([azure, _c("2026-11-19", mirror.source_url)]).notes
+    # Two first-party schedules that clash still dispute.
+    other = _c("2026-08-01", "https://platform.other.example/schedule", first_party=True)
+    assert assess([azure, other]).confidence == "disputed"
+
+
 def test_human_claim_wins_over_everything() -> None:
     a = assess([_c("2025-01-01", MD), _c("2025-03-01", OR, first_party=True),
                 _c("2025-02-10", "https://openai.com/blog/x", source_type="vendor_blog",

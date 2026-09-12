@@ -94,7 +94,6 @@ hf_recreated_repo,huggingface,EleutherAI/pythia-1b-deduped,ledger,pythia-1b-dedu
 hf_recreated_repo,huggingface,EleutherAI/pythia-2.8b,ledger,pythia-2-8b,,first archive capture 2023-02-01 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-410m-deduped,ledger,pythia-410m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first archive capture 2023-02-01 predates repo creation 2023-02-14; weights date needs a primary source
-hf_unmapped_namespace,huggingface,AEON-7,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Hai929,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -104,7 +103,9 @@ hf_unmapped_namespace,huggingface,LGAI-EXAONE,,,,1 in-scope repos; add to pull_h
 hf_unmapped_namespace,huggingface,RadixArk,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ReliquaryForge,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,TinyLlama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ai-sage,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,apple,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,bigscience,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -115,14 +116,14 @@ hf_unmapped_namespace,huggingface,hmellor,,,,2 in-scope repos; add to pull_hf.NA
 hf_unmapped_namespace,huggingface,ibm-research,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,mlabonne,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,8 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,peft-internal-testing,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,protoLabsAI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,rinna,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,sarvamai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,swiss-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,trl-internal-testing,,,,13 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,z-lab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 md_no_consensus,models_dev,MiniMax-M1,ledger,minimax-m1,,resellers disagree: 302ai:2025-06-16|kilo:2025-06-17|nano-gpt:2025-01-08|openrouter:2025-06-17|qiniu-ai:2025-08-05
@@ -158,7 +159,7 @@ md_no_consensus,models_dev,llama-3.1-405b-instruct,ledger,llama-3-1-405b-instruc
 md_no_consensus,models_dev,meta-llama/Llama-3.2-1B-Instruct,ledger,llama-3-2-1b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
 md_no_consensus,models_dev,meta-llama/llama-3.2-3b-instruct,ledger,llama-3-2-3b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|llmgateway:2024-09-18|llmgateway-providers:2024-09-18|nano-gpt:2024-01-01|novita-ai:2024-09-18|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
 md_no_consensus,models_dev,microsoft/wizardlm-2-8x22b,ledger,wizardlm-2-8x22b,,resellers disagree: kilo:2024-04-16|nano-gpt:2025-04-15|novita-ai:2024-04-24|openrouter:2024-04-16
-md_no_consensus,models_dev,mistralai/Voxtral-Small-24B-2507,ledger,voxtral-small-24b-2507,,resellers disagree: evroc:2025-03-01|greenpt:2025-07-15|kilo:2025-10-30|openrouter:2025-10-30
+md_no_consensus,models_dev,mistral/ministral-3b,ledger,ministral-3b,,resellers disagree: azure:2024-10-22|azure-cognitive-services:2024-10-22|pioneer:2024-10-16|vercel:2024-10-01
 md_no_consensus,models_dev,mistralai/mistral-large,ledger,mistral-large,,resellers disagree: kenari:2024-11-01|kilo:2024-02-26|nano-gpt:2024-01-01|openrouter:2024-02-26
 md_no_consensus,models_dev,nova-pro-v1,ledger,nova-pro-v1,,resellers disagree: cortecs:2024-12-03|kilo:2024-12-05|nano-gpt:2024-12-03|openrouter:2024-12-05
 md_no_consensus,models_dev,openai/gpt-3.5-turbo-instruct,ledger,gpt-3-5-turbo-instruct,,resellers disagree: azure:2023-09-21|azure-cognitive-services:2023-09-21|kilo:2023-09-28|openrouter:2023-09-28|poe:2023-09-20
@@ -241,6 +242,7 @@ nhlocal_lead,nhlocal_aitimeline,Gemini 2.0 Pro Experimental@2025-02-01,,,,"month
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 - Deep Think@2025-09-01,,,,"month-precision community-timeline lead: An advanced Gemini variant, reported as Gemini 2.5 - Deep Think, achieved gold-medal-level performance at the ICPC World Finals programming contest."
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Deep Think@2025-08-01,,,,"month-precision community-timeline lead: Google introduced Gemini 2.5 Deep Think, a special ""extended thinking"" mode for solving complex problems and exploring alternatives."
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Flash Audio@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3.0 Flash, setting a new standard for price-performance, and deploys Deep Research, an autonomous agent capable of multi-step synthesis"
+nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Flash Image@2025-08-01,,,,"month-precision community-timeline lead: Google launched a preview of Gemini 2.5 Flash Image (showcased as *nano-banana*), an advanced model for precise image editing, merging, and maintaining characte"
 nhlocal_lead,nhlocal_aitimeline,Gemini 3 Deep Think@2026-02-01,,,,"month-precision community-timeline lead: Google launches Gemini 3 Deep Think, a specialized reasoning mode that reaches 84.6% on ARC-AGI-2."
 nhlocal_lead,nhlocal_aitimeline,Gemini 3.0 Flash@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3.0 Flash, setting a new standard for price-performance, and deploys Deep Research, an autonomous agent capable of multi-step synthesis"
 nhlocal_lead,nhlocal_aitimeline,Gemini 3.0@2025-11-01,,,,"month-precision community-timeline lead: Google debuted Gemini 3.0, a flagship ""thinking"" model that claimed the top spot on major benchmarks."
@@ -256,6 +258,7 @@ nhlocal_lead,nhlocal_aitimeline,Gemini Pro@2023-12-01,,,,"month-precision commun
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro@2024-02-01,,,,"month-precision community-timeline lead: Google upgrades the artificial intelligence chat in Bard, basing it on the new Gemini Pro model, in all available languages. Google replaces ""Bard"" with ""Gemini"
 nhlocal_lead,nhlocal_aitimeline,Gemini model for computer control@2025-10-01,,,,"month-precision community-timeline lead: Google released a Gemini model for computer control, achieving state-of-the-art (SOTA) performance in GUI automation."
 nhlocal_lead,nhlocal_aitimeline,Gemini-2.0-Flash-Thinking@2024-12-01,,,,"month-precision community-timeline lead: Google revealed Gemini-2.0-Flash-Thinking, a thinking model based on Gemini 2.0 Flash, which secured second place in the chatbot leaderboard."
+nhlocal_lead,nhlocal_aitimeline,Gemini-Exp-1206@2024-12-01,,,,"month-precision community-timeline lead: Google unveiled the experimental model Gemini-Exp-1206, which ranked first in the chatbot leaderboard."
 nhlocal_lead,nhlocal_aitimeline,Gemma 2@2024-06-01,,,,"month-precision community-timeline lead: Google announces Gemma 2 open source language models with 9B and 27B parameter sizes. Also, the company opens the context window capabilities to developers for "
 nhlocal_lead,nhlocal_aitimeline,Gemma 3n@2025-05-01,,,,"month-precision community-timeline lead: Google introduces Gemma 3n, an open-source generative AI model for on-device use, with an efficient architecture and multi-modal (audio, text, visual) capabilit"
 nhlocal_lead,nhlocal_aitimeline,Gemma@2024-12-01,,,,"month-precision community-timeline lead: Google launched a multi-modal open-source model called PaliGemma 2, integrated with existing Gemma models."
@@ -390,6 +393,8 @@ nhlocal_lead,nhlocal_aitimeline,Wan 2.5@2025-09-01,,,,"month-precision community
 nhlocal_lead,nhlocal_aitimeline,Z-Image-Turbo@2025-12-01,,,,"month-precision community-timeline lead: Alibaba open-sources Z-Image-Turbo, a highly efficient 6B model, and releases Qwen-Image-2512, which specializes in high-fidelity typography and complex visual "
 nhlocal_lead,nhlocal_aitimeline,advanced voice mode@2024-09-01,,,,month-precision community-timeline lead: OpenAI launches the advanced voice mode of GPT 4o for all subscribers.
 nhlocal_lead,nhlocal_aitimeline,code-davinci-002@2022-03-01,,,,month-precision community-timeline lead: OpenAI releases text-davinci-002 and code-davinci-002 with an API approach.
+nhlocal_lead,nhlocal_aitimeline,gemini-exp-1114@2024-11-01,,,,"month-precision community-timeline lead: Google introduced two experimental models, gemini-exp-1114 and gemini-exp-1121, currently leading the arena chatbot with enhanced performance."
+nhlocal_lead,nhlocal_aitimeline,gemini-exp-1121@2024-11-01,,,,"month-precision community-timeline lead: Google introduced two experimental models, gemini-exp-1114 and gemini-exp-1121, currently leading the arena chatbot with enhanced performance."
 nhlocal_lead,nhlocal_aitimeline,gold medal@2025-07-01,,,,month-precision community-timeline lead: An experimental OpenAI model secures a gold medal at IMO 2025 without any external tools.
 nhlocal_lead,nhlocal_aitimeline,gpt-audio-1.5@2026-02-01,,,,"month-precision community-timeline lead: OpenAI adds gpt-audio-1.5, an upgraded speech model for audio input and spoken responses."
 nhlocal_lead,nhlocal_aitimeline,llama 3.1 model@2024-07-01,,,,"month-precision community-timeline lead: Meta releases as open source the llama 3.1 model in sizes 8B, 70B and 405B. The large model features the same capabilities as the best closed source models"

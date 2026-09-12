@@ -23,6 +23,13 @@ Policy (every rule below is enforced by a validation rule or a test):
   days, the same window bracketing timestamps already had (`AGREE_DAYS`;
   the 7-day stated-claim window and `BOUND_AGREE_DAYS` are gone). No row
   changed: every verified machine event already sat within two days.
+- A first-party record is never `disputed` by a third party. When Azure
+  moved four o-series retirements to 2026-11-19, LiteLLM still carried
+  the old dates and the rows were marked disputed against a stale
+  mirror. The platform's own schedule now stands as `verified`; a
+  differing mirror is written to `notes` as `differs:`, an agreeing one
+  as `agrees:` (not as independent corroboration). 4 rows change
+  (3 disputed -> verified, 1 inferred -> verified); 67 notes reworded.
 - `first_public_availability_date` ignores `quarter`/`year` placeholders
   (8 models lose a Jan-1 headline date); new derived column
   `first_availability_confidence`.

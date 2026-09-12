@@ -1,8 +1,8 @@
 {
   "retirement-schedule.html": {
     "bytes": 73137,
-    "fetched_at": "2026-09-12T10:50:56+00:00",
-    "sha256": "7a79abc6faa59716111d2cfed457c0c1aff99d444a34a6997d0bc8b536dbb9b6",
+    "fetched_at": "2026-09-12T19:01:50+00:00",
+    "sha256": "0c43d642c18b1f72d25245e7e2eab551c98dcb0dde41d5c0cb9115a8a3b03643",
     "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
   }
 }

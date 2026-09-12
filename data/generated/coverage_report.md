@@ -10,14 +10,14 @@ as settled.
 
 - Models: 1143; events: 1883
 - Models: curated 55, corroborated 572, single-source 516
-- Event confidence: verified 930, inferred 944, disputed 9
+- Event confidence: verified 934, inferred 943, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 84 | 155 | 2 | 68 | 14 | 54% |
-| OpenAI | 62 | 257 | 19 | 39 | 4 | 74% |
+| OpenAI | 62 | 257 | 19 | 39 | 4 | 75% |
 | ByteDance | 52 | 63 | 0 | 22 | 30 | 37% |
 | Meta | 47 | 91 | 4 | 19 | 24 | 34% |
 | RWKV | 47 | 47 | 0 | 12 | 35 | 26% |
@@ -66,7 +66,7 @@ as settled.
 | platform_availability | 279 | 277 | 0 | 2 |
 | api_ga | 214 | 55 | 158 | 1 |
 | announced | 206 | 48 | 157 | 1 |
-| retired | 167 | 87 | 77 | 3 |
+| retired | 167 | 91 | 76 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |

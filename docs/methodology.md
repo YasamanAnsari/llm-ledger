@@ -75,6 +75,11 @@ every claim it weighed is kept in `data/core/claims.csv`.
 - `inferred`: one machine source, or sources that differ by 3-30 days.
 - `disputed`: two stated dates disagree by more than 30 days. The
   best-evidenced date stays in `date`; everything else is in `notes`.
+  A first-party record (the platform's own retirement table, a
+  registry's own listing date) is never disputed by a third party: a
+  mirror that differs is a stale or wrong transcription and is only
+  noted (`differs:` in `notes`). Two first-party records can still
+  dispute each other.
 - A machine date that falls *before* a human-verified announcement is
   pre-staging (a repo or model object created ahead of launch) and is
   not loaded at all.

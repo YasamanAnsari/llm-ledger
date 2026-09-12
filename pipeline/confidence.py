@@ -7,10 +7,11 @@ Loaders collect the claims they have for one (model, event_type) and call
   verified_by=the person);
 - a single machine claim is `inferred`, unless it is the vendor's or the
   platform's own timestamp for its own event (`first_party`), which is
-  `verified` by llm-ledger;
+  `verified` by llm-ledger; a first-party stated date also outranks any
+  third-party date (a mirror that differs is noted, never a dispute);
 - two or more independent machine claims (distinct source hosts) that agree
   within AGREE_DAYS are `verified` by llm-ledger;
-- claims that spread over more than DISPUTE_DAYS are `disputed`;
+- stated claims that spread over more than DISPUTE_DAYS are `disputed`;
 - anything in between stays `inferred`.
 
 The chosen date is the first-party claim when there is one, else the
@@ -145,6 +146,20 @@ def assess(claims: list) -> Assessment:
                      if len(stated_day) >= 2 else 0)
     year_conflict = any(c.precision == "year" and c.date.year != best.date.year
                         for c in independent)
+    # The source reporting its own event (a platform's retirement table, a
+    # registry's own listing date) is authoritative for it. A third-party
+    # date that differs is a stale or wrong transcription, not a peer
+    # opinion: it is noted, never a dispute. Two first-party claims can
+    # still dispute each other.
+    others = [c for c in independent if c is not best]
+    if (best.first_party and not best.bound and best.precision == "day"
+            and not any(c.first_party for c in others)):
+        agree = [c for c in others if abs((c.date - best.date).days) <= AGREE_DAYS]
+        differ = [c for c in others if c not in agree]
+        notes = f"first-party: {_describe([best])}"
+        notes += f"; agrees: {_describe(agree)}" if agree else ""
+        notes += f"; differs: {_describe(differ)}" if differ else ""
+        return result("verified", notes)
     if year_conflict or stated_spread > DISPUTE_DAYS:
         return result("disputed", f"sources disagree; kept "
                                   f"{'first-party' if best.first_party else 'best-evidenced'} "
