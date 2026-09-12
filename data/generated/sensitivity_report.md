@@ -41,22 +41,22 @@ Per-organization medians (n>=3):
 | gap | models |
 |---|---|
 | same day | 55 |
-| 1-7d | 14 |
+| 1-7d | 13 |
 | 8-30d | 1 |
-| 31-90d | 1 |
+| 31-90d | 2 |
 | 91-365d | 6 |
 | >365d | 0 |
 
 Per-organization medians (n>=3):
 
 - alibaba: 0d (n=12)
-- mistral: 0d (n=5)
+- mistral: 0d (n=4)
 - deepseek: 0d (n=9)
 - google: 0d (n=7)
 - zhipu: 0d (n=7)
 - moonshot: 0d (n=5)
 - meta: 0d (n=8)
-- nvidia: 0d (n=6)
+- nvidia: 0d (n=7)
 - minimax: 0d (n=5)
 
 ## announced -> consumer_rollout
@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1125
+- models with an anchor event: 1129
 - models with announced + an availability event: 186

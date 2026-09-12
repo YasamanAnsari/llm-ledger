@@ -363,10 +363,10 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-30,weights_released,verified,kimi-linear-48b-a3b-base,Kimi-Linear-48B-A3B-Base,moonshot,Kimi-Linear,base,llm,open_weights,osi_approved
 2025-10-30,weights_released,verified,kimi-linear-48b-a3b-instruct,Kimi-Linear-48B-A3B-Instruct,moonshot,Kimi-Linear,instruct,llm,open_weights,osi_approved
 2025-10-30,api_ga,inferred,sonar-pro-search,sonar-pro-search,perplexity,sonar-search,pro,vlm,api_only,proprietary
-2025-10-30,platform_availability_fallback,verified,voxtral-small-24b-2507,Voxtral-Small-24B-2507,mistral,Voxtral,mini,multimodal,open_weights,
 2025-10-29,weights_released,inferred,falcon-h1r-7b,Falcon-H1R-7B,tii,Falcon-H1R,,llm,open_weights,
 2025-10-29,weights_released,inferred,gpt-oss-safeguard-20b,openai.gpt-oss-safeguard-20b,openai,openai.gpt-oss-safeguard,,llm,open_weights,proprietary
 2025-10-29,weights_released,inferred,spatial-ssrl-7b,Spatial-SSRL-7B,shanghai-ai-lab,Spatial-SSRL,,vlm,open_weights,osi_approved
+2025-10-28,weights_released,inferred,nvidia-nemotron-nano-12b-v2,NVIDIA-Nemotron-Nano-12B-v2,nvidia,NVIDIA-Nemotron-v2,nano,vlm,open_weights,proprietary
 2025-10-28,weights_released,inferred,ouro-1-4b,Ouro-1.4B,bytedance,Ouro,,llm,open_weights,osi_approved
 2025-10-28,weights_released,inferred,ouro-1-4b-thinking,Ouro-1.4B-Thinking,bytedance,Ouro,thinking,llm,open_weights,osi_approved
 2025-10-28,weights_released,inferred,ouro-2-6b,Ouro-2.6B,bytedance,Ouro,,llm,open_weights,osi_approved
@@ -377,6 +377,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-24,weights_released,inferred,longcat-flash-omni,LongCat-Flash-Omni-FP8,meituan,LongCat-Omni,mini,llm,open_weights,osi_approved
 2025-10-23,platform_availability_fallback,verified,qwen3-vl-32b-instruct,Qwen3-VL-32B-Instruct,alibaba,Qwen3,instruct,vlm,api_only,proprietary
 2025-10-22,weights_released,verified,lfm2-vl-3b,LFM2-VL-3B,liquid-ai,LFM2,vision,vlm,open_weights,
+2025-10-22,weights_released,inferred,nvidia-nemotron-nano-12b-v2-vl,NVIDIA-Nemotron-Nano-12B-v2-VL-FP8,nvidia,NVIDIA-Nemotron-v2,vision,vlm,open_weights,
 2025-10-21,weights_released,inferred,sa2va-qwen3-vl-4b,Sa2VA-Qwen3-VL-4B,bytedance,Sa2VA-Qwen3,vision,vlm,open_weights,osi_approved
 2025-10-19,weights_released,inferred,qwen3-vl-2b-instruct,Qwen3-VL-2B-Instruct,alibaba,Qwen3,instruct,vlm,open_weights,osi_approved
 2025-10-17,weights_released,inferred,dolphin-1-5,Dolphin-1.5,bytedance,Dolphin-1.5,,vlm,open_weights,osi_approved
@@ -501,6 +502,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-07-22,weights_released,verified,qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,Qwen3,coder,llm,open_weights,
 2025-07-21,weights_released,inferred,qwen3-235b-a22b-2507,qwen3-235b-a22b-2507,alibaba,Qwen3,,llm,open_weights,proprietary
 2025-07-20,weights_released,verified,glm-4-5-air-base,GLM-4.5-Air-Base,zhipu,GLM-4.5-Air,base,llm,open_weights,osi_approved
+2025-07-15,weights_released,inferred,voxtral-small-24b-2507,Voxtral-Small-24B-2507,mistral,Voxtral,mini,multimodal,open_weights,
 2025-07-12,weights_released,verified,minicpm-v-4,MiniCPM-V-4,openbmb,MiniCPM-V-4,,vlm,open_weights,osi_approved
 2025-07-11,weights_released,verified,kimi-k2,Kimi K2,moonshot,Kimi K2,,llm,open_weights,open_weights_restricted
 2025-07-10,weights_released,verified,lfm2-1-2b,LFM2-1.2B,liquid-ai,LFM2,,llm,open_weights,
@@ -757,7 +759,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-12-03,weights_released,inferred,falcon3-10b-base,Falcon3-10B-Base,tii,Falcon3,base,llm,open_weights,
 2024-12-03,weights_released,inferred,hermes-3-llama-3-2-3b,Hermes-3-Llama-3.2-3B,nous-research,Hermes-3-Llama-3.2,,llm,open_weights,open_weights_restricted
 2024-12-02,weights_released,inferred,command-r7b-12-2024,command-r7b-12-2024,cohere,command-r7b-12,,llm,open_weights,
-2024-12-01,api_ga,inferred,nvidia-nemotron-nano-12b-v2,NVIDIA-Nemotron-Nano-12B-v2,nvidia,NVIDIA-Nemotron-v2,nano,vlm,api_only,proprietary
 2024-11-29,weights_released,inferred,falcon3-7b-instruct,Falcon3-7B-Instruct,tii,Falcon3,instruct,llm,open_weights,
 2024-11-28,weights_released,inferred,falcon3-3b-instruct-1-58bit,Falcon3-3B-Instruct-1.58bit,tii,Falcon3-1.58bit,instruct,llm,open_weights,
 2024-11-28,weights_released,inferred,falcon3-7b-instruct-1-58bit,Falcon3-7B-Instruct-1.58bit,tii,Falcon3-1.58bit,instruct,llm,open_weights,
@@ -786,7 +787,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-10-23,weights_released,inferred,aya-expanse-32b,aya-expanse-32b,cohere,aya-expanse,,llm,open_weights,open_weights_restricted
 2024-10-23,weights_released,inferred,aya-expanse-8b,aya-expanse-8b,cohere,aya-expanse,,llm,open_weights,open_weights_restricted
 2024-10-23,weights_released,verified,glm-4-9b-chat,glm-4-9b-chat-hf,zhipu,GLM-4,chat,llm,open_weights,
-2024-10-22,weights_released,inferred,ministral-3b,Ministral 3B,mistral,ministral,,llm,open_weights,
 2024-10-13,weights_released,inferred,falcon-mamba-tiny-dev,falcon-mamba-tiny-dev,tii,falcon-mamba-dev,mini,llm,open_weights,
 2024-10-03,weights_released,inferred,granite-3-0-1b-a400m-base,granite-3.0-1b-a400m-base,ibm,granite-3.0,base,llm,open_weights,osi_approved
 2024-10-03,weights_released,inferred,granite-3-0-1b-a400m-instruct,granite-3.0-1b-a400m-instruct,ibm,granite-3.0,instruct,llm,open_weights,osi_approved
@@ -1030,6 +1030,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-10-31,weights_released,inferred,yarn-mistral-7b-128k,Yarn-Mistral-7b-128k,nous-research,Yarn-Mistral,,llm,open_weights,osi_approved
 2023-10-29,weights_released,inferred,deepseek-coder-1-3b-instruct,deepseek-coder-1.3b-instruct,deepseek,deepseek,instruct,llm,open_weights,
 2023-10-29,weights_released,inferred,deepseek-coder-6-7b-instruct,deepseek-coder-6.7b-instruct,deepseek,deepseek,instruct,llm,open_weights,
+2023-10-29,weights_released,inferred,skywork-13b-base-3-1tb,Skywork-13B-Base-3.1TB,skywork,Skywork-3.1TB,base,llm,open_weights,
 2023-10-28,weights_released,inferred,deepseek-coder-1-3b-base,deepseek-coder-1.3b-base,deepseek,deepseek,coder,llm,open_weights,
 2023-10-24,weights_released,inferred,skywork-13b-math,Skywork-13B-Math,skywork,Skywork-Math,,llm,open_weights,
 2023-10-23,weights_released,inferred,deepseek-coder-6-7b-base,deepseek-coder-6.7b-base,deepseek,deepseek,coder,llm,open_weights,
@@ -1048,6 +1049,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-08-29,weights_released,inferred,baichuan2-13b-chat,Baichuan2-13B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-29,weights_released,inferred,baichuan2-7b-chat,Baichuan2-7B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-28,api_ga,inferred,gpt-3-5-turbo-16k,gpt-3.5-turbo-16k,openai,GPT-3.5,,llm,api_only,proprietary
+2023-08-09,weights_released,inferred,japanese-stablelm-base-alpha-7b,japanese-stablelm-base-alpha-7b,stability,japanese-stablelm-alpha,base,llm,open_weights,osi_approved
 2023-08-07,weights_released,verified,stablecode-completion-alpha-3b-4k,stablecode-completion-alpha-3b-4k,stability,stablecode-completion-alpha,,llm,open_weights,osi_approved
 2023-08-04,weights_released,inferred,stablelm-base-alpha-7b-v2,stablelm-base-alpha-7b-v2,stability,stablelm-alpha-v2,base,llm,open_weights,open_weights_restricted
 2023-07-27,weights_released,verified,stablebeluga-13b,StableBeluga-13B,stability,StableBeluga,,llm,open_weights,
@@ -1133,6 +1135,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 ,,,grok-3-mini,Grok-3 mini,xai,Grok-3,mini,llm,api_only,proprietary
 ,,,grok-4-fast,Grok 4 Fast,xai,Grok 4 Fast,,vlm,api_only,proprietary
 ,,,grok-code-fast-1,Grok Code Fast 1,xai,Grok Fast 1,coder,llm,api_only,proprietary
+,,,ministral-3b,Ministral 3B,mistral,ministral,,llm,open_weights,
 ,,,mistral-7b,Mistral 7B,mistral,Mistral 7B,base,llm,open_weights,osi_approved
 ,,,mixtral-8x7b-instruct,Mixtral 8x7B Instruct,mistral,Mixtral,instruct,llm,open_weights,osi_approved
 ,,,o1-preview,o1-preview,openai,o1,,llm,api_only,proprietary
