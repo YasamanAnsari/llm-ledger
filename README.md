@@ -200,13 +200,27 @@ the run: nothing is committed on a day a source could not be read.
 
 ## License
 
-Code: [MIT](LICENSE-CODE). Data: [CC BY 4.0](LICENSE-DATA). You can
-reuse the data; you must give credit (name, title, link, license).
-That is the license. A paper citation is what we ask for on top.
+The dataset (everything under `data/`) is licensed under the
+[Creative Commons Attribution 4.0 International License](LICENSE)
+(CC BY 4.0). You may copy, redistribute, and build on it for any
+purpose, including commercially, provided you credit "Yasaman Ansari,
+llm-ledger", link to the license, and indicate any changes you made.
 
-Upstream: [Epoch AI](https://epoch.ai/data/ai-models) and
-[NHLOCAL/AiTimeline](https://github.com/nhlocal/AiTimeline) (both CC BY
-4.0). Other sites: we keep facts and URLs, not their dumps.
+The source code (`pipeline/`, `tests/`, `Makefile`) is licensed under the
+[MIT License](pipeline/LICENSE).
+
+Upstream data incorporated here is CC BY 4.0 and credited accordingly:
+[Epoch AI, "Data on AI Models"](https://epoch.ai/data/ai-models), used in
+`data/generated/llm_ledger_enriched.csv` and as one dating signal among
+several; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline),
+used as a discovery lead for pre-API-era models. Other sources contribute
+individual facts and their URLs, not copies of their content.
+
+## How to cite
+
+If this dataset contributes to published work, please cite it. GitHub's
+"Cite this repository" button reads [`CITATION.cff`](CITATION.cff);
+the BibTeX equivalent is:
 
 ```bibtex
 @misc{llmledger2026,
@@ -218,4 +232,3 @@ Upstream: [Epoch AI](https://epoch.ai/data/ai-models) and
 }
 ```
 
-[`CITATION.cff`](CITATION.cff) feeds GitHub's cite button.

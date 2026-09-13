@@ -274,7 +274,7 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
 - `data/generated/llm_ledger_enriched.csv` - the wide file LEFT JOINed to an
   Epoch AI snapshot via the crosswalk, carrying Epoch's scale columns and
   confidence labels plus a constant `epoch_snapshot_date` column. Epoch data
-  is CC BY 4.0 and credited in LICENSE-DATA and the README.
+  is CC BY 4.0 and credited in the README.
 - `data/generated/models_latest.csv` - a reading view of `models.csv`:
   the identifying columns (`first_public_availability_date`,
   `first_availability_via`, `model_id`, `canonical_name`,

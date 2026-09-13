@@ -23,6 +23,10 @@ Policy (every rule below is enforced by a validation rule or a test):
   days, the same window bracketing timestamps already had (`AGREE_DAYS`;
   the 7-day stated-claim window and `BOUND_AGREE_DAYS` are gone). No row
   changed: every verified machine event already sat within two days.
+- Licensing files reorganised: `LICENSE` is now the CC BY 4.0 legal code
+  verbatim (the dataset), `pipeline/LICENSE` the MIT text (the code);
+  the pointer file and the paraphrased `LICENSE-DATA` are gone. Terms,
+  upstream attribution and the citation request live in the README.
 - A first-party record is never `disputed` by a third party. When Azure
   moved four o-series retirements to 2026-11-19, LiteLLM still carried
   the old dates and the rows were marked disputed against a stale
