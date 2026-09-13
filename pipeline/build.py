@@ -326,7 +326,7 @@ def build_readme_stats(models: list, events: list, claims: list, organizations: 
         f"Chinese labs make up {pct(sum(m['developer_org_id'] in cn for m in open_w), len(open_w))} "
         f"of those.",
         "",
-        f"Read the counts honestly. {pct(conf['verified'], len(events))} of events are "
+        f"Read the counts together with their confidence labels. {pct(conf['verified'], len(events))} of events are "
         f"`verified` (two independent sources agreed within two days, or a platform reported "
         f"its own listing); {pct(platform_own, len(verified))} of those are a platform's own "
         f"listing timestamp, and {by_person} were checked by a named person. Per model: "
