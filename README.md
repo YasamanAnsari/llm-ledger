@@ -181,8 +181,15 @@ still will not.
 
 ## Rebuild
 
+The pipeline that produces every file under `data/` lives here so the
+dataset can be rebuilt and audited; it runs on Python 3.11 (the version
+the daily job uses) with the exact pins in `requirements.txt`. The
+LLM-assisted discovery agent that drafts new rows for review runs from a
+separate repository: it holds API credentials and unreviewed drafts,
+neither of which belongs in a dataset.
+
 ```bash
-python -m venv .venv && .venv/bin/pip install -r requirements.txt
+python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
 make all   # pull match reconcile census lifecycle build validate test
 ```
 
