@@ -6,22 +6,24 @@ quote when we need evidence.
 ## Tier 1: scripts
 
 Snapshots go under `data/raw/{source}/{date}/`. We commit a manifest
-(URL + sha256), not the dump.
+(URL + sha256), not the dump. The Terms column records the license or
+terms each source is used under; from sources without an open license
+we keep only facts (identifiers, timestamps) and the URL they came from.
 
-| Source | Endpoint | What we take | Role |
-|---|---|---|---|
-| models.dev | `https://models.dev/api.json` | release date, open-weights flag, context, price, modalities | stated date; attributes |
-| OpenRouter | `https://openrouter.ai/api/v1/models` | listing date (`created`), expiration | first-party for `platform_availability` on OpenRouter |
-| OpenAI / Anthropic / Google | vendor `/models` APIs | `created` (registry timestamp), `shutdown_date`, ids | `created` is a bound; `shutdown_date` is first-party `retired` (need keys) |
-| Mistral | `https://api.mistral.ai/v1/models` | `deprecation`, `aliases`, ids | `created` is the response time and is ignored; `deprecation` is first-party `retired`; `aliases` that span several ledger rows become `vendor_alias_group` review leads (needs key) |
-| Hugging Face Hub | `huggingface_hub` | `createdAt`, license, tags | bound for `weights_released` |
-| Internet Archive | `archive.org/wayback/available` | first public capture of the repo page | bound that corroborates `createdAt` |
-| Azure Foundry | model retirement schedule page | version dates, retirement dates | first-party `retired` on `azure` |
-| Amazon Bedrock | model lifecycle page | EOL dates | first-party `retired` on `bedrock` |
-| LiteLLM | `model_prices_and_context_window.json` | `deprecation_date` | corroborates retirements |
-| Epoch AI | `https://epoch.ai/data/all_ai_models.csv` | publication date; scale columns | `announced` claim; enrichment join |
-| ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | bound that corroborates the Hub `createdAt` (no token) |
-| arXiv | export API | paper v1 date | lookup tool for `paper_published` |
+| Source | Endpoint | What we take | Role | Terms |
+|---|---|---|---|---|
+| models.dev | `https://models.dev/api.json` | release date, open-weights flag, context, price, modalities | stated date; attributes | MIT ([sst/models.dev](https://github.com/sst/models.dev)) |
+| OpenRouter | `https://openrouter.ai/api/v1/models` | listing date (`created`), expiration | first-party for `platform_availability` on OpenRouter | OpenRouter API terms; we keep ids and timestamps, not listings |
+| OpenAI / Anthropic / Google | vendor `/models` APIs | `created` (registry timestamp), `shutdown_date`, ids | `created` is a bound; `shutdown_date` is first-party `retired` (need keys) | each vendor's API terms, under our own keys; ids and timestamps only |
+| Mistral | `https://api.mistral.ai/v1/models` | `deprecation`, `aliases`, ids | `created` is the response time and is ignored; `deprecation` is first-party `retired`; `aliases` that span several ledger rows become `vendor_alias_group` review leads (needs key) | Mistral API terms, under our own key; ids and dates only |
+| Hugging Face Hub | `huggingface_hub` | `createdAt`, license, tags | bound for `weights_released` | Hub API under the Hugging Face terms of service; repo metadata only, no files |
+| Internet Archive | `archive.org/wayback/available` | first public capture of the repo page | bound that corroborates `createdAt` | Wayback Availability API; we keep the capture timestamp and URL |
+| Azure Foundry | model retirement schedule page | version dates, retirement dates | first-party `retired` on `azure` | CC BY 4.0 ([MicrosoftDocs/azure-ai-docs](https://github.com/MicrosoftDocs/azure-ai-docs)) |
+| Amazon Bedrock | model lifecycle page | EOL dates | first-party `retired` on `bedrock` | AWS documentation site terms; we keep the dates and the page URL, not the page |
+| LiteLLM | `model_prices_and_context_window.json` | `deprecation_date` | corroborates retirements | MIT ([BerriAI/litellm](https://github.com/BerriAI/litellm), outside `enterprise/`) |
+| Epoch AI | `https://epoch.ai/data/all_ai_models.csv` | publication date; scale columns | `announced` claim; enrichment join | CC BY 4.0, credited in the README and in `llm_ledger_enriched.csv` |
+| ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | bound that corroborates the Hub `createdAt` (no token) | ModelScope site terms; public search API, repo metadata only |
+| arXiv | export API | paper v1 date | lookup tool for `paper_published` | descriptive metadata is CC0 1.0 (arXiv API terms of use) |
 
 Pullers with no key just skip. No fake rows. Every machine claim a row
 rests on is kept in `data/core/claims.csv`.

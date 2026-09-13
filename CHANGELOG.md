@@ -3,7 +3,7 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
-## 2026-09-11 (v2026.10)
+## 2026-09-13 (v2026.10)
 
 Identity, scope and provenance overhaul after a full audit of the data and
 workflows. Column layout of `models.csv` gains one derived column; model
@@ -27,6 +27,9 @@ Policy (every rule below is enforced by a validation rule or a test):
   verbatim (the dataset), `pipeline/LICENSE` the MIT text (the code);
   the pointer file and the paraphrased `LICENSE-DATA` are gone. Terms,
   upstream attribution and the citation request live in the README.
+  Correction: NHLOCAL/AiTimeline is MIT-licensed, not CC BY 4.0 as the
+  old file said. `docs/sources.md` gains a Terms column naming the license
+  or terms every script-pulled source is used under.
 - A first-party record is never `disputed` by a third party. When Azure
   moved four o-series retirements to 2026-11-19, LiteLLM still carried
   the old dates and the rows were marked disputed against a stale

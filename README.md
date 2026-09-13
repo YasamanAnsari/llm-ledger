@@ -182,8 +182,10 @@ still will not.
 ## Rebuild
 
 The pipeline that produces every file under `data/` lives here so the
-dataset can be rebuilt and audited; it runs on Python 3.11 (the version
-the daily job uses) with the exact pins in `requirements.txt`. The
+dataset can be rebuilt and audited: anyone who doubts a date can
+re-derive it. It runs on Python 3.11, the version the daily job uses;
+`requirements.txt` is pinned to the exact versions that job runs, so it
+reads as a lockfile, and newer minor versions will most likely work. The
 LLM-assisted discovery agent that drafts new rows for review runs from a
 separate repository: it holds API credentials and unreviewed drafts,
 neither of which belongs in a dataset.
@@ -216,12 +218,12 @@ llm-ledger", link to the license, and indicate any changes you made.
 The source code (`pipeline/`, `tests/`, `Makefile`) is licensed under the
 [MIT License](pipeline/LICENSE).
 
-Upstream data incorporated here is CC BY 4.0 and credited accordingly:
-[Epoch AI, "Data on AI Models"](https://epoch.ai/data/ai-models), used in
-`data/generated/llm_ledger_enriched.csv` and as one dating signal among
-several; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline),
-used as a discovery lead for pre-API-era models. Other sources contribute
-individual facts and their URLs, not copies of their content.
+Upstream data incorporated here: [Epoch AI, "Data on AI Models"](https://epoch.ai/data/ai-models)
+(CC BY 4.0), used in `data/generated/llm_ledger_enriched.csv` and as one
+dating signal among several; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
+(MIT), used as a discovery lead for pre-API-era models. The terms every
+other source is used under are listed in [`docs/sources.md`](docs/sources.md);
+from them we keep individual facts and their URLs, not copies of content.
 
 ## How to cite
 
