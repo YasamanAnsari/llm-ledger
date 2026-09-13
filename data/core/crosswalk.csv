@@ -1009,6 +1009,7 @@ internlm2-chat-1-8b,huggingface,internlm/internlm2-chat-1_8b
 internlm2-chat-20b,huggingface,internlm/internlm2-chat-20b
 internlm2-chat-7b,huggingface,internlm/internlm2-chat-7b
 internlm2-chat-7b-sft,huggingface,internlm/internlm2-chat-7b-sft
+internlm2-math-20b,huggingface,internlm/internlm2-math-20b
 internlm2-math-plus-1-8b,huggingface,internlm/internlm2-math-plus-1_8b
 internlm2-math-plus-20b,huggingface,internlm/internlm2-math-plus-20b
 internlm2-math-plus-7b,huggingface,internlm/internlm2-math-plus-7b
@@ -1297,6 +1298,7 @@ minicpm5-1b-sft,huggingface,openbmb/MiniCPM5-1B-SFT
 minicpm5-2b,huggingface,openbmb/MiniCPM5-2B
 minicpm5-2b-base,huggingface,openbmb/MiniCPM5-2B-Base
 minicpm5-2b-dspark,huggingface,openbmb/MiniCPM5-2B-DSpark
+minicpm5-2b-sft,huggingface,openbmb/MiniCPM5-2B-SFT
 minimax-01,models_dev,nano-gpt/minimax/minimax-01
 minimax-01,openrouter,minimax/minimax-01
 minimax-m1,models_dev,nano-gpt/MiniMax-M1
@@ -1497,6 +1499,7 @@ nvidia-nemotron-nano-9b-v2,epoch,NVIDIA-Nemotron-Nano-9B-v2
 nvidia-nemotron-nano-9b-v2,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2
 nvidia-nemotron-nano-9b-v2,huggingface,nvidia/NVIDIA-Nemotron-Nano-9B-v2-FP8
 nvidia-nemotron-nano-9b-v2,models_dev,nvidia/nvidia/nvidia-nemotron-nano-9b-v2
+nvidia-nemotron-parse-2-0,huggingface,nvidia/NVIDIA-Nemotron-Parse-2.0
 nvidia-nemotron-parse-v1-1,huggingface,nvidia/NVIDIA-Nemotron-Parse-v1.1
 o1-preview,epoch,o1-preview
 o1-preview,models_dev,nano-gpt/openai/o1-preview
@@ -1642,11 +1645,13 @@ pythia-1b-v0,huggingface,EleutherAI/pythia-1b-v0
 pythia-2-8b,huggingface,EleutherAI/pythia-2.8b
 pythia-2-8b-deduped,huggingface,EleutherAI/pythia-2.8b-deduped
 pythia-31m,huggingface,EleutherAI/pythia-31m
+pythia-31m-deduped,huggingface,EleutherAI/pythia-31m-deduped
 pythia-410m,huggingface,EleutherAI/pythia-410m
 pythia-410m-deduped,huggingface,EleutherAI/pythia-410m-deduped
 pythia-410m-seed1,huggingface,EleutherAI/pythia-410m-seed1
 pythia-410m-seed2,huggingface,EleutherAI/pythia-410m-seed2
 pythia-410m-seed3,huggingface,EleutherAI/pythia-410m-seed3
+pythia-410m-seed4,huggingface,EleutherAI/pythia-410m-seed4
 pythia-410m-seed7,huggingface,EleutherAI/pythia-410m-seed7
 pythia-410m-seed8,huggingface,EleutherAI/pythia-410m-seed8
 pythia-410m-seed9,huggingface,EleutherAI/pythia-410m-seed9
@@ -1905,6 +1910,7 @@ ring-2-6-1t,huggingface,inclusionAI/Ring-2.6-1T
 ring-2-6-1t,models_dev,zenmux/inclusionai/ring-2.6-1t
 ring-mini-linear-2-0,huggingface,inclusionAI/Ring-mini-linear-2.0
 rlvr-8b,huggingface,stepfun-ai/RLVR-8B-0926
+rwkv-2-pile-430m,huggingface,BlinkDL/rwkv-2-pile-430m
 rwkv-3-pile-169m,huggingface,BlinkDL/rwkv-3-pile-169m
 rwkv-3-pile-1b5,huggingface,BlinkDL/rwkv-3-pile-1b5
 rwkv-4-169m-pile,huggingface,RWKV/rwkv-4-169m-pile
