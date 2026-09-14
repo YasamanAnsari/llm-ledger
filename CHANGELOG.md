@@ -246,3 +246,7 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
   Filled availability gaps: GPT-4.5 consumer/API preview events from the
   archived launch post; three announced-only open-weight models dated from
   their HF repo timestamps.
+
+## 2026-09-14
+
+- `north-mini-code-announced-1` 2026-06-09 verified (vendor_blog; evidence: "Introducing North Mini Code: Cohere’s first model for developers"; agrees: epoch.ai 2026-06-09)

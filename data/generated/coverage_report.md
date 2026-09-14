@@ -9,8 +9,8 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1151; events: 1913
-- Models: curated 55, corroborated 579, single-source 517
-- Event confidence: verified 954, inferred 953, disputed 6
+- Models: curated 56, corroborated 578, single-source 517
+- Event confidence: verified 955, inferred 952, disputed 6
 
 ## By organization
 
@@ -28,7 +28,7 @@ as settled.
 | Ant Group | 44 | 52 | 0 | 31 | 13 | 63% |
 | DeepSeek | 43 | 82 | 3 | 26 | 14 | 61% |
 | Shanghai AI Lab | 41 | 41 | 0 | 32 | 9 | 78% |
-| Cohere | 35 | 45 | 1 | 8 | 26 | 20% |
+| Cohere | 35 | 45 | 2 | 7 | 26 | 22% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
 | Zhipu | 33 | 70 | 3 | 23 | 7 | 64% |
 | Mistral | 31 | 71 | 3 | 20 | 8 | 44% |
@@ -65,7 +65,7 @@ as settled.
 | weights_released | 925 | 372 | 552 | 1 |
 | platform_availability | 279 | 277 | 0 | 2 |
 | api_ga | 214 | 55 | 158 | 1 |
-| announced | 206 | 48 | 157 | 1 |
+| announced | 206 | 49 | 156 | 1 |
 | retired | 189 | 104 | 85 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |

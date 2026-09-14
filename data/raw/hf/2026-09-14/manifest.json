@@ -1,7 +1,7 @@
 {
   "normalized.csv": {
     "bytes": 603087,
-    "fetched_at": "2026-09-14T14:12:37+00:00",
+    "fetched_at": "2026-09-14T14:23:21+00:00",
     "sha256": "0cc9088dd87d42ad89542c17e54b674436112c3983af1457800587cbd3101980",
     "url": "https://huggingface.co/api/models (org sweep + top downloads)"
   }
