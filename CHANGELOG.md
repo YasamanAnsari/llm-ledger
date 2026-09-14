@@ -5,6 +5,10 @@ Data corrections update rows in place; this file preserves the history.
 
 ## 2026-09-14
 
+- `north-mini-code-announced-1`: source_url corrected from the Cohere blog
+  index to the post (`cohere.com/blog/north-mini-code`, dated 2026-06-09).
+  The agent read the event off the index page; it now cites the post
+  whose headline the evidence quote opens with.
 - Lifecycle loader resolves a platform's model id through the crosswalk
   first (exact id), then by name; when the two name different models the
   row goes to the review queue as `lifecycle_ambiguous` instead of being
