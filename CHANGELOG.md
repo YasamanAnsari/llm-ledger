@@ -3,6 +3,24 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-09-14
+
+- Lifecycle loader resolves a platform's model id through the crosswalk
+  first (exact id), then by name; when the two name different models the
+  row goes to the review queue as `lifecycle_ambiguous` instead of being
+  guessed. Azure's `o1-2024-12-17` and `o3-2025-04-16` were unresolved by
+  name alone (the ids are `openai-o1`, `openai-o3`); their Azure
+  retirements are now recorded, with the 09-12 Azure move
+  (2026-10-21 to 2026-11-19) and LiteLLM's 09-13 follow-up backfilled as
+  superseded claims from the raw snapshots.
+- Azure Foundry's partner-served `FW-` SKUs (Fireworks AI) resolve to the
+  model they serve; the event stays on `platform=azure` and `detail`
+  records `served_by=Fireworks AI (<sku>)`. 12 `retired` events added;
+  where Azure lists a native and a partner SKU of one model
+  (DeepSeek-V3.1, Kimi-K2.5) the event now carries the later partner date
+  under the existing last-version rule. Those two date changes are the
+  resolver's, not Azure's, so no superseded claim was written for them.
+
 ## 2026-09-13 (v2026.10)
 
 Identity, scope and provenance overhaul after a full audit of the data and

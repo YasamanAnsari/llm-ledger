@@ -12,7 +12,9 @@ event through the shared confidence policy:
 
 A model with several versions on a platform is retired there when the LAST
 version is; the latest date wins and the versions are listed in the label.
-Rows that resolve to no model are counted, not invented.
+A row names its model by exact id first (the crosswalk), by name second;
+when the two disagree it goes to the review queue. Rows that resolve to no
+model are counted, not invented.
 """
 
 from __future__ import annotations
@@ -48,23 +50,71 @@ VENDOR_PROVIDERS = {"openai": "openai", "anthropic": "anthropic", "gemini": "goo
 # not part of the model's identity.
 ENGINE_SUFFIX_RE = re.compile(r"(-v\d+(:\d+)?|:\d+)$")
 
+# Azure Foundry lists SKUs served by a partner under a prefix. The event
+# stays on platform=azure (it is Azure's schedule); the partner goes in
+# `detail`, so no host that nothing else in the ledger uses appears as a
+# platform.
+SERVING_PARTNERS = {"FW": "Fireworks AI"}
+PARTNER_PREFIX_RE = re.compile(r"^(" + "|".join(SERVING_PARTNERS) + r")-", re.IGNORECASE)
+
+# Review rows collected during a run; main() writes them to the shared queue.
+pending_review: list = []
+
+
+def _serving_partner(model_ref: str) -> str:
+    m = PARTNER_PREFIX_RE.match(model_ref.split("/")[-1])
+    return SERVING_PARTNERS[m.group(1).upper()] if m else ""
+
 
 def _model_key(model_ref: str) -> str:
     ref = model_ref.split("/")[-1]
+    ref = PARTNER_PREFIX_RE.sub("", ref)
     ref = ENGINE_SUFFIX_RE.sub("", ref)
     return match.normalize_name(ref)["key"]
 
 
-def _resolve(model_ref: str, models_by_id: dict) -> str:
-    key = _model_key(model_ref)
-    if not key:
-        return ""
+def crosswalk_index(crosswalk: list) -> dict:
+    """identifier (last path segment, lower-cased) -> {model_id} over the
+    identity namespaces; the exact ids catalogs and vendor registries use."""
+    index: dict = defaultdict(set)
+    for row in crosswalk:
+        if row["namespace"] in schema.IDENTITY_NAMESPACES:
+            index[row["identifier"].split("/")[-1].lower()].add(row["model_id"])
+    return index
+
+
+def _resolve_by_name(key: str, models_by_id: dict) -> str:
     for variant in match.key_variants(key, identity=True):
         if variant in models_by_id:
             return variant
     org = orgs_seed.resolve_org(key.split("-")[0])
     slug = match.slug_for(key, org) if org else key
     return slug if slug in models_by_id else ""
+
+
+def _resolve(model_ref: str, models_by_id: dict, xw_index: dict) -> tuple:
+    """(model_id, conflict): a crosswalk hit on the exact id wins; with none,
+    the name is matched; when both exist and disagree nothing is picked and
+    the pair comes back as `conflict` for the review queue. Name-only
+    matching once sent Azure's `o3-2025-04-16` nowhere while the crosswalk
+    already knew the id."""
+    ref = PARTNER_PREFIX_RE.sub("", model_ref.split("/")[-1]).lower()
+    by_id = {m for cand in (ref, ENGINE_SUFFIX_RE.sub("", ref)) for m in xw_index.get(cand, ())}
+    by_id = {m for m in by_id if m in models_by_id}
+    key = _model_key(model_ref)
+    by_name = _resolve_by_name(key, models_by_id) if key else ""
+    if by_name and by_name in by_id:
+        # One id may map to a model and its dated snapshots (rule 12); the
+        # name says which of them the row means.
+        return by_name, ""
+    if len(by_id) == 1:
+        (hit,) = by_id
+        if by_name and by_name != hit:
+            return "", f"crosswalk:{hit}|name:{by_name}"
+        return hit, ""
+    if len(by_id) > 1:
+        return "", "crosswalk:" + ",".join(sorted(by_id))
+    return by_name, ""
 
 
 def _read(source: str) -> list:
@@ -95,6 +145,7 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
     on touched models. Returns outcome counts plus `unresolved:<source>`
     for rows naming no ledger model."""
     models_by_id = {m["model_id"]: m for m in tables["models"]}
+    xw_index = crosswalk_index(tables.get("crosswalk", []))
     events = tables["events"]
     event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
@@ -104,7 +155,16 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
     outcomes: Counter = Counter()
     for source, rows in rows_by_source.items():
         for row in rows:
-            model_id = _resolve(row["model_ref"], models_by_id)
+            model_id, conflict = _resolve(row["model_ref"], models_by_id, xw_index)
+            if conflict:
+                pending_review.append({
+                    "kind": "lifecycle_ambiguous", "left_source": source,
+                    "left_key": row["model_ref"], "right_source": "ledger",
+                    "right_key": conflict, "score": "",
+                    "note": "exact-id crosswalk and name matching name different models; "
+                            "add the id to crosswalk.csv for the right one"})
+                outcomes[f"ambiguous:{source}"] += 1
+                continue
             if not model_id:
                 outcomes[f"unresolved:{source}"] += 1
                 continue
@@ -133,6 +193,15 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
         outcomes[outcome] += 1
         if outcome in ("added", "updated"):
             touched.add(model_id)
+        row = event_index.get((model_id, "retired", platform))
+        partner_skus = sorted({(e[1].split("/")[-1], _serving_partner(e[1]))
+                               for entries in by_source.values()
+                               for e in entries if _serving_partner(e[1])})
+        if row is not None and partner_skus and outcome != "skipped":
+            detail = "; ".join(f"served_by={partner} ({sku})" for sku, partner in partner_skus)
+            if row["detail"] != detail:
+                row["detail"] = detail
+                touched.add(model_id)
 
     schema.mark_updated(models_by_id, touched, now)
     tables["claims"] = flatten_claims(claims_by_event)
@@ -145,10 +214,12 @@ def main() -> int:
                     datetime.now(timezone.utc).isoformat(timespec="seconds"))
     for table in (MODELS, EVENTS, CLAIMS):
         schema.write_table(table, tables[table.name])
+    schema.merge_review_queue(pending_review, replace_kinds=("lifecycle_ambiguous",))
     unresolved = {k.split(":", 1)[1]: v for k, v in outcomes.items() if k.startswith("unresolved:")}
+    ambiguous = {k.split(":", 1)[1]: v for k, v in outcomes.items() if k.startswith("ambiguous:")}
     print(f"lifecycle: retired events added={outcomes['added']} updated={outcomes['updated']} "
           f"unchanged={outcomes['unchanged']} curated-skipped={outcomes['skipped']}; "
-          f"unresolved refs: {unresolved}")
+          f"unresolved refs: {unresolved}; ambiguous (review queue): {ambiguous}")
     return 0
 
 

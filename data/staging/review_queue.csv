@@ -116,7 +116,7 @@ hf_unmapped_namespace,huggingface,hmellor,,,,2 in-scope repos; add to pull_hf.NA
 hf_unmapped_namespace,huggingface,ibm-research,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ornith-ai,,,,8 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ornith-ai,,,,9 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,peft-internal-testing,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,protoLabsAI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,rinna,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -126,6 +126,7 @@ hf_unmapped_namespace,huggingface,swiss-ai,,,,1 in-scope repos; add to pull_hf.N
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,z-lab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+lifecycle_ambiguous,litellm,groq/meta-llama/llama-4-maverick-17b-128e-instruct,ledger,crosswalk:llama-4-maverick|name:llama-4-maverick-17b-128e-instruct,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 md_no_consensus,models_dev,MiniMax-M1,ledger,minimax-m1,,resellers disagree: 302ai:2025-06-16|kilo:2025-06-17|nano-gpt:2025-01-08|openrouter:2025-06-17|qiniu-ai:2025-08-05
 md_no_consensus,models_dev,MiniMaxAI/MiniMax-M1-80k,ledger,minimax-m1-80k,,resellers disagree: jiekou:2026-01|nano-gpt:2025-01-08|novita-ai:2025-06-17
 md_no_consensus,models_dev,NousResearch/hermes-4-405b:thinking,ledger,hermes-4-405b,,resellers disagree: cortecs:2024-08-13|kilo:2025-08-26|nano-gpt:2024-01-01|nano-gpt:2025-08-26|nebius:2026-01-30|openrouter:2025-08-26

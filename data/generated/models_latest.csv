@@ -285,6 +285,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-01-12,weights_released,inferred,falcon-h1-tiny-multilingual-100m-base,Falcon-H1-Tiny-Multilingual-100M-Base,tii,Falcon-H1-Multilingual,base,llm,open_weights,
 2026-01-12,weights_released,inferred,falcon-h1-tiny-multilingual-100m-instruct,Falcon-H1-Tiny-Multilingual-100M-Instruct,tii,Falcon-H1-Multilingual,instruct,llm,open_weights,
 2026-01-12,weights_released,inferred,falcon-h1-tiny-r-0-6b,Falcon-H1-Tiny-R-0.6B,tii,Falcon-H1-R,mini,llm,open_weights,
+2026-01-12,weights_released,inferred,falcon-h1-tiny-r-90m,Falcon-H1-Tiny-R-90M,tii,Falcon-H1-R,mini,llm,open_weights,
 2026-01-07,weights_released,inferred,medgemma-1-5-4b-it,medgemma-1.5-4b-it,google,medgemma-1.5,instruct,vlm,open_weights,
 2026-01-06,weights_released,inferred,ai21-jamba2-3b,AI21-Jamba2-3B,ai21,AI21-Jamba2,,llm,open_weights,osi_approved
 2026-01-06,weights_released,inferred,ai21-jamba2-mini,AI21-Jamba2-Mini,ai21,AI21-Jamba2,mini,llm,open_weights,osi_approved
@@ -341,6 +342,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-11-25,weights_released,verified,llada2-0-flash,LLaDA2.0-flash,ant-group,LLaDA2.0,mini,llm,open_weights,osi_approved
 2025-11-25,weights_released,verified,llada2-0-mini,LLaDA2.0-mini,ant-group,LLaDA2.0,mini,llm,open_weights,osi_approved
 2025-11-24,api_ga,verified,claude-opus-4-5,Claude Opus 4.5,anthropic,Claude 4.5,,vlm,api_only,proprietary
+2025-11-21,weights_released,inferred,spatial-ssrl-qwen3vl-4b,Spatial-SSRL-Qwen3VL-4B,shanghai-ai-lab,Spatial-SSRL-Qwen3VL,,vlm,open_weights,osi_approved
 2025-11-20,api_ga,inferred,grok-4-1-fast,Grok 4.1 Fast,xai,Grok 4.1 Fast,,vlm,api_only,proprietary
 2025-11-19,weights_released,verified,mimo-embodied-7b,MiMo-Embodied-7B,xiaomi,MiMo-Embodied,,vlm,open_weights,osi_approved
 2025-11-19,weights_released,verified,olmo-3-32b-think,olmo-3-32b-think,allenai,Olmo-3,thinking,llm,open_weights,proprietary

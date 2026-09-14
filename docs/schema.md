@@ -125,7 +125,10 @@ will ever modify.
   web_browsing, file_upload, structured_output`.
 - `price_changed`: `input:old->new;output:old->new` in USD per 1M tokens.
 - `renamed`: `old->new`.
-- `retired`: optional `migration_target_id=<model_id>`.
+- `retired`: optional `migration_target_id=<model_id>`; `served_by=<partner> (<sku>)`
+  when a platform's schedule lists the model under a serving partner (Azure
+  Foundry's `FW-` SKUs are served by Fireworks AI; the event stays on
+  `platform=azure`).
 
 ## Event type vocabulary
 
@@ -307,7 +310,8 @@ rewrite the dataset.
 - `data/staging/review_queue.csv` - rows the loaders could not settle:
   `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
   `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
-  `hf_unmapped_namespace`, `vendor_alias_group`, `nhlocal_lead`, ...),
+  `hf_unmapped_namespace`, `vendor_alias_group`, `nhlocal_lead`,
+  `lifecycle_ambiguous`, ...),
   the two keys involved, a score and a note. Rewritten by every run.
 - `data/staging/review_decisions.csv` - append-only, hand-edited:
   `kind,left_key,right_key,decision,decided_by,decided_on,note` with

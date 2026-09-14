@@ -382,6 +382,7 @@ falcon-h1-tiny-90m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-90M-Instruct
 falcon-h1-tiny-multilingual-100m-base,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Base
 falcon-h1-tiny-multilingual-100m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Instruct
 falcon-h1-tiny-r-0-6b,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B
+falcon-h1-tiny-r-90m,huggingface,tiiuae/Falcon-H1-Tiny-R-90M
 falcon-h1r-7b,huggingface,tiiuae/Falcon-H1R-7B
 falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b
 falcon-mamba-7b-instruct,huggingface,tiiuae/falcon-mamba-7b-instruct
@@ -2032,6 +2033,7 @@ sonar-reasoning-pro,models_dev,anyapi/perplexity/sonar-reasoning-pro
 sonar-reasoning-pro,openrouter,perplexity/sonar-reasoning-pro
 spatial-ssrl-3b,huggingface,internlm/Spatial-SSRL-3B
 spatial-ssrl-7b,huggingface,internlm/Spatial-SSRL-7B
+spatial-ssrl-qwen3vl-4b,huggingface,internlm/Spatial-SSRL-Qwen3VL-4B
 stable-diffcoder-8b-base,huggingface,ByteDance-Seed/Stable-DiffCoder-8B-Base
 stable-diffcoder-8b-instruct,huggingface,ByteDance-Seed/Stable-DiffCoder-8B-Instruct
 stablebeluga-13b,huggingface,stabilityai/StableBeluga-13B
