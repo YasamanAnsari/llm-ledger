@@ -75,8 +75,13 @@ tables, the Wayback Machine. Every catalog date becomes a claim, and one
 policy (`pipeline/confidence.py`) turns claims into a verdict:
 
 - one source alone is `inferred`;
-- two independent sources that agree are `verified`, signed `llm-ledger`;
-- stated dates that clash are `disputed`, with every value kept in `notes`.
+- two independent sources that agree within two days are `verified`,
+  signed `llm-ledger`;
+- a platform's own record of its own event (an OpenRouter listing, an
+  Azure retirement schedule) is `verified` on its own and outranks any
+  third-party copy of it; a copy that differs is noted, not disputed;
+- stated dates from independent sources that clash by more than 30 days
+  are `disputed`, with every value kept in `notes`.
 
 Repo and registry creation timestamps can corroborate a date but never
 set one on their own, because a Hugging Face repo is usually created
