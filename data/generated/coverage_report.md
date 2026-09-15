@@ -8,9 +8,9 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1151; events: 1913
-- Models: curated 56, corroborated 578, single-source 517
-- Event confidence: verified 955, inferred 952, disputed 6
+- Models: 1153; events: 1912
+- Models: curated 56, corroborated 578, single-source 519
+- Event confidence: verified 955, inferred 951, disputed 6
 
 ## By organization
 
@@ -18,28 +18,28 @@ as settled.
 |---|---|---|---|---|---|---|
 | Alibaba | 84 | 162 | 2 | 68 | 14 | 54% |
 | OpenAI | 62 | 261 | 19 | 39 | 4 | 75% |
-| ByteDance | 52 | 63 | 0 | 23 | 29 | 38% |
+| ByteDance | 52 | 62 | 0 | 23 | 29 | 39% |
 | RWKV | 48 | 48 | 0 | 12 | 36 | 25% |
 | Meta | 47 | 91 | 4 | 21 | 22 | 36% |
 | AI2 | 46 | 46 | 0 | 11 | 35 | 24% |
 | EleutherAI | 46 | 46 | 0 | 1 | 45 | 2% |
 | Google | 46 | 120 | 7 | 24 | 15 | 46% |
 | TII | 45 | 45 | 0 | 3 | 42 | 7% |
-| Ant Group | 44 | 52 | 0 | 31 | 13 | 63% |
+| Ant Group | 44 | 53 | 0 | 31 | 13 | 62% |
 | DeepSeek | 43 | 82 | 3 | 26 | 14 | 61% |
 | Shanghai AI Lab | 41 | 41 | 0 | 32 | 9 | 78% |
 | Cohere | 35 | 45 | 2 | 7 | 26 | 22% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
 | Zhipu | 33 | 70 | 3 | 23 | 7 | 64% |
-| Mistral | 31 | 71 | 3 | 20 | 8 | 44% |
-| OpenBMB | 31 | 31 | 0 | 15 | 16 | 48% |
+| OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
+| Mistral | 31 | 70 | 3 | 20 | 8 | 44% |
 | NVIDIA | 29 | 42 | 0 | 12 | 17 | 29% |
 | Baidu | 28 | 33 | 0 | 22 | 6 | 70% |
-| Liquid AI | 27 | 28 | 0 | 21 | 6 | 75% |
+| Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | Nous | 24 | 29 | 0 | 6 | 18 | 21% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
-| Anthropic | 22 | 114 | 8 | 11 | 3 | 68% |
+| Anthropic | 22 | 112 | 8 | 11 | 3 | 69% |
 | Microsoft | 21 | 25 | 0 | 10 | 11 | 44% |
 | Stability | 20 | 20 | 0 | 9 | 11 | 45% |
 | Xiaomi | 17 | 22 | 0 | 15 | 2 | 68% |
@@ -62,9 +62,9 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 925 | 372 | 552 | 1 |
+| weights_released | 927 | 372 | 554 | 1 |
 | platform_availability | 279 | 277 | 0 | 2 |
-| api_ga | 214 | 55 | 158 | 1 |
+| api_ga | 211 | 55 | 155 | 1 |
 | announced | 206 | 49 | 156 | 1 |
 | retired | 189 | 104 | 85 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
