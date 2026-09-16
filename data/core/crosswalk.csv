@@ -1944,6 +1944,7 @@ rwkv-4-world,huggingface,BlinkDL/rwkv-4-world
 rwkv-5-world,huggingface,BlinkDL/rwkv-5-world
 rwkv-5-world-1b5,huggingface,RWKV/rwkv-5-world-1b5
 rwkv-5-world-3b,huggingface,RWKV/rwkv-5-world-3b
+rwkv-5-world-all,huggingface,RWKV/rwkv-5-world-all-pth
 rwkv-6-world,huggingface,BlinkDL/rwkv-6-world
 rwkv-6-world-1b6,huggingface,RWKV/rwkv-6-world-1b6
 rwkv-6-world-3b,huggingface,RWKV/rwkv-6-world-3b

@@ -8,18 +8,18 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1153; events: 1912
-- Models: curated 56, corroborated 578, single-source 519
-- Event confidence: verified 955, inferred 951, disputed 6
+- Models: 1154; events: 1911
+- Models: curated 56, corroborated 578, single-source 520
+- Event confidence: verified 955, inferred 950, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 84 | 162 | 2 | 68 | 14 | 54% |
+| Alibaba | 84 | 161 | 2 | 68 | 14 | 54% |
 | OpenAI | 62 | 261 | 19 | 39 | 4 | 75% |
 | ByteDance | 52 | 62 | 0 | 23 | 29 | 39% |
-| RWKV | 48 | 48 | 0 | 12 | 36 | 25% |
+| RWKV | 49 | 49 | 0 | 12 | 37 | 24% |
 | Meta | 47 | 91 | 4 | 21 | 22 | 36% |
 | AI2 | 46 | 46 | 0 | 11 | 35 | 24% |
 | EleutherAI | 46 | 46 | 0 | 1 | 45 | 2% |
@@ -32,7 +32,7 @@ as settled.
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
 | Zhipu | 33 | 70 | 3 | 23 | 7 | 64% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
-| Mistral | 31 | 70 | 3 | 20 | 8 | 44% |
+| Mistral | 31 | 69 | 3 | 20 | 8 | 45% |
 | NVIDIA | 29 | 42 | 0 | 12 | 17 | 29% |
 | Baidu | 28 | 33 | 0 | 22 | 6 | 70% |
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
@@ -62,10 +62,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 927 | 372 | 554 | 1 |
+| weights_released | 929 | 372 | 556 | 1 |
 | platform_availability | 279 | 277 | 0 | 2 |
-| api_ga | 211 | 55 | 155 | 1 |
-| announced | 206 | 49 | 156 | 1 |
+| api_ga | 209 | 55 | 153 | 1 |
+| announced | 205 | 49 | 155 | 1 |
 | retired | 189 | 104 | 85 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
