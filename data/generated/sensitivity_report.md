@@ -35,26 +35,26 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=77)
-- range: 0d to 185d
+- median 0d (IQR 0-1d, n=79)
+- range: 0d to 779d
 
 | gap | models |
 |---|---|
 | same day | 56 |
-| 1-7d | 13 |
+| 1-7d | 14 |
 | 8-30d | 1 |
 | 31-90d | 2 |
 | 91-365d | 5 |
-| >365d | 0 |
+| >365d | 1 |
 
 Per-organization medians (n>=3):
 
 - mistral: 0d (n=5)
-- deepseek: 0d (n=9)
+- deepseek: 0d (n=10)
 - google: 0d (n=7)
 - zhipu: 0d (n=7)
 - moonshot: 0d (n=5)
-- meta: 0d (n=8)
+- meta: 0d (n=9)
 - nvidia: 0d (n=7)
 - minimax: 0d (n=5)
 - alibaba: 0d (n=11)
@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1138
-- models with announced + an availability event: 182
+- models with an anchor event: 1141
+- models with announced + an availability event: 184

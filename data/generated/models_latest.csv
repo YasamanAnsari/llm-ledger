@@ -1,8 +1,10 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-09-13,weights_released,verified,intern-s2-397b,Intern-S2-397B,shanghai-ai-lab,Intern-S2,,vlm,open_weights,osi_approved
 2026-09-10,weights_released,verified,deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,deepseek-v4.1,mini,vlm,open_weights,
 2026-09-10,weights_released,inferred,deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,DeepSeek V4,mini,llm,open_weights,
 2026-09-10,weights_released,inferred,deepseek-v4-flash-vision-exp,deepseek-v4-flash-vision-exp,deepseek,DeepSeek-V4,vision,vlm,open_weights,proprietary
 2026-09-10,weights_released,inferred,ling-3-0-flash-vl,ling-3.0-flash-vl,ant-group,Ling-3.0,vision,vlm,open_weights,
+2026-09-10,weights_released,inferred,llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,Llama 3.1,instruct,llm,open_weights,open_weights_restricted
 2026-09-08,weights_released,inferred,tiny-aya-base-32k,tiny-aya-base-32K,cohere,aya,base,llm,open_weights,open_weights_restricted
 2026-09-06,weights_released,inferred,minicpm5-2b,MiniCPM5-2B,openbmb,MiniCPM5,,llm,open_weights,osi_approved
 2026-09-06,weights_released,verified,minicpm5-2b-dspark,MiniCPM5-2B-DSpark,openbmb,MiniCPM5-DSpark,,llm,open_weights,osi_approved
@@ -256,6 +258,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-02-09,weights_released,verified,ui-venus-1-5-30b-a3b,UI-Venus-1.5-30B-A3B,ant-group,UI-Venus-1.5,,vlm,open_weights,osi_approved
 2026-02-09,weights_released,verified,ui-venus-1-5-8b,UI-Venus-1.5-8B,ant-group,UI-Venus-1.5,,vlm,open_weights,osi_approved
 2026-02-05,api_ga,inferred,gpt-5-3-codex,GPT-5.3 Codex,openai,GPT-5.3 Codex,,vlm,api_only,proprietary
+2026-02-05,api_ga,inferred,gpt-5-3-codex-spark,GPT-5.3-Codex-Spark,openai,GPT-5.3-Codex-Spark,,vlm,api_only,proprietary
 2026-02-04,api_ga,verified,claude-opus-4-6,Claude Opus 4.6,anthropic,Claude 4.6,,vlm,api_only,proprietary
 2026-02-03,weights_released,inferred,points-gui-g,POINTS-GUI-G,tencent,POINTS-GUI-G,,vlm,open_weights,
 2026-02-03,weights_released,inferred,qwen3-coder-next,Qwen3-Coder-Next,alibaba,Qwen3-Next,coder,llm,open_weights,proprietary
@@ -390,6 +393,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-16,weights_released,verified,caprl-internvl3-5-8b,CapRL-InternVL3.5-8B,shanghai-ai-lab,CapRL-InternVL3.5,,vlm,open_weights,osi_approved
 2025-10-16,weights_released,inferred,sa2va-internvl3-2b,Sa2VA-InternVL3-2B,bytedance,Sa2VA-InternVL3,,vlm,open_weights,osi_approved
 2025-10-16,weights_released,verified,sa2va-internvl3-8b,Sa2VA-InternVL3-8B,bytedance,Sa2VA-InternVL3,,vlm,open_weights,osi_approved
+2025-10-16,weights_released,inferred,sa2va-qwen2-5-vl-7b,Sa2VA-Qwen2_5-VL-7B,bytedance,Sa2VA-Qwen2_5,vision,vlm,open_weights,osi_approved
 2025-10-15,api_ga,verified,claude-haiku-4-5,Claude Haiku 4.5,anthropic,Claude 4.5,mini,vlm,api_only,proprietary
 2025-10-14,weights_released,inferred,olmo-3-7b-think-sft,Olmo-3-7B-Think-SFT,allenai,Olmo-3,instruct,llm,open_weights,osi_approved
 2025-10-14,api_ga,inferred,qwen3-vl-8b-thinking,qwen3-vl-8b-thinking,alibaba,Qwen3,thinking,vlm,api_only,proprietary
@@ -848,7 +852,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-07-30,weights_released,verified,internlm2-5-1-8b-chat,internlm2_5-1_8b-chat,shanghai-ai-lab,internlm2_5-1,chat,llm,open_weights,
 2024-07-30,weights_released,verified,internlm2-5-20b-chat,internlm2_5-20b-chat,shanghai-ai-lab,internlm2_5,chat,llm,open_weights,
 2024-07-28,weights_released,inferred,hermes-3-llama-3-1-8b,Hermes-3-Llama-3.1-8B,nous-research,hermes-3-llama-3.1,,llm,open_weights,open_weights_restricted
-2024-07-23,platform_availability_fallback,verified,llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,Llama 3.1,instruct,llm,open_weights,open_weights_restricted
 2024-07-23,weights_released,inferred,llama-3-1-70b-instruct,Llama 3.1-70B,meta,Llama 3.1,,llm,open_weights,
 2024-07-23,weights_released,inferred,llama-3-1-8b-instruct,Llama 3.1-8B,meta,Llama 3.1,,llm,open_weights,
 2024-07-23,weights_released,inferred,llama-3-8b-instruct,Llama 3-8B,meta,Llama 3,,llm,open_weights,

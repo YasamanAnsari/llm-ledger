@@ -138,6 +138,7 @@ gpt-5-2-chat,false,none,,,,,128000,32000,pdf|image|text,text,,true,,,1.75,14,0.1
 gpt-5-2-codex,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,1.75,14,0.175,2026-09-01,https://models.dev/api.json
 gpt-5-2-pro,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,21,168,,2026-09-01,https://models.dev/api.json
 gpt-5-3-codex,true,,,,,,400000,128000,text|image,text,2025-08-31,true,,,1.75,14,0.18,2026-09-01,https://models.dev/api.json
+gpt-5-3-codex-spark,true,,,,,,128000,32000,text|image|pdf,text,2025-08-31,true,,,1.75,14,0.175,2026-09-17,https://models.dev/api.json
 gpt-5-4-mini,true,,,,,,400000,128000,text|image,text,,true,,,0.68,4,0.068,2026-09-01,https://models.dev/api.json
 gpt-5-4-nano,true,,,,,,400000,128000,text|image,text,2024-05-30,true,,,0.2,1.25,0.02,2026-09-01,https://models.dev/api.json
 gpt-5-4-pro,true,,,,,,1050000,128000,text|image,text,2025-08-31,true,,,30,180,0,2026-09-01,https://models.dev/api.json
