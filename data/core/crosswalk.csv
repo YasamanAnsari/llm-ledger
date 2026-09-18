@@ -197,6 +197,7 @@ cosmos-reason2-2b,huggingface,nvidia/Cosmos-Reason2-2B
 cosmos-reason2-8b,huggingface,nvidia/Cosmos-Reason2-8B
 cpm-ant-10b,huggingface,openbmb/cpm-ant-10b
 cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
+deep-ignorance-e2e-strong-filter,huggingface,EleutherAI/deep-ignorance-e2e-strong-filter
 deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B-Preview
 deephermes-3-llama-3-8b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-8B-Preview
 deephermes-3-mistral-24b-preview,huggingface,NousResearch/DeepHermes-3-Mistral-24B-Preview
@@ -1380,6 +1381,7 @@ mistral-large-2407,openrouter,mistralai/mistral-large-2407
 mistral-large-2512,models_dev,anyapi/mistralai/mistral-large-2512
 mistral-large-2512,models_dev,mistral/mistral-large-2512
 mistral-large-2512,openrouter,mistralai/mistral-large-2512
+mistral-large-2512,openrouter,mistralai/mistral-large-2512:batch
 mistral-large-3,epoch,Mistral Large 3
 mistral-large-3,models_dev,ollama-cloud/mistral-large-3:675b
 mistral-large-3,models_dev,pioneer/mistral-large-3
@@ -1481,6 +1483,7 @@ north-mini-code,models_dev,nano-gpt/cohere/north-mini-code
 north-mini-code,openrouter,cohere/north-mini-code:free
 north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0
 north-mini-code-1-0,huggingface,CohereLabs/North-Mini-Code-1.0-fp8
+nous-hermes-13b,huggingface,NousResearch/Nous-Hermes-13b
 nous-hermes-2-mistral-7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mistral-7B-DPO
 nous-hermes-2-mixtral-8x7b-dpo,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
 nous-hermes-2-mixtral-8x7b-sft,huggingface,NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
@@ -1932,6 +1935,7 @@ rlvr-8b,huggingface,stepfun-ai/RLVR-8B-0926
 rwkv-2-pile-430m,huggingface,BlinkDL/rwkv-2-pile-430m
 rwkv-3-pile-169m,huggingface,BlinkDL/rwkv-3-pile-169m
 rwkv-3-pile-1b5,huggingface,BlinkDL/rwkv-3-pile-1b5
+rwkv-4-14b-pile,huggingface,RWKV/rwkv-4-14b-pile
 rwkv-4-169m-pile,huggingface,RWKV/rwkv-4-169m-pile
 rwkv-4-1b5-pile,huggingface,RWKV/rwkv-4-1b5-pile
 rwkv-4-3b-pile,huggingface,RWKV/rwkv-4-3b-pile

@@ -551,6 +551,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-06-23,weights_released,verified,phi-tiny-moe-instruct,Phi-tiny-MoE-instruct,microsoft,Phi-MoE,instruct,llm,open_weights,osi_approved
 2025-06-21,weights_released,verified,kimi-vl-a3b-thinking-2506,Kimi-VL-A3B-Thinking-2506,moonshot,Kimi,thinking,vlm,open_weights,osi_approved
 2025-06-20,platform_availability_fallback,verified,mistral-small-3-2-24b-instruct,mistral-small-3.2-24b-instruct,mistral,mistral-3.2,instruct,vlm,open_weights,proprietary
+2025-06-19,weights_released,inferred,deep-ignorance-e2e-strong-filter,deep-ignorance-e2e-strong-filter,eleutherai,deep-ignorance-e2e-strong-filter,,llm,open_weights,osi_approved
 2025-06-19,weights_released,inferred,t5gemma-s-s-prefixlm,t5gemma-s-s-prefixlm,google,t5gemma-s-s-prefixlm,,llm,open_weights,open_weights_restricted
 2025-06-17,api_ga,inferred,gemini-2-5-flash,Gemini 2.5 Flash,google,Gemini 2.5,mini,vlm,api_only,proprietary
 2025-06-17,api_ga,inferred,gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,google,Gemini 2.5,mini,vlm,api_only,proprietary
@@ -1083,9 +1084,11 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-07-06,weights_released,verified,internlm-7b,internlm-7b,shanghai-ai-lab,internlm,,llm,open_weights,
 2023-07-06,weights_released,verified,internlm-chat-7b,internlm-chat-7b,shanghai-ai-lab,internlm,chat,llm,open_weights,
 2023-06-13,weights_released,verified,baichuan-7b,Baichuan-7B,baichuan,Baichuan,,llm,open_weights,
+2023-06-03,weights_released,inferred,nous-hermes-13b,Nous-Hermes-13b,nous-research,Nous-Hermes,,llm,open_weights,open_weights_restricted
 2023-05-25,weights_released,verified,falcon-40b-instruct,falcon-40b-instruct,tii,falcon,instruct,llm,open_weights,osi_approved
 2023-05-24,weights_released,verified,falcon-40b,falcon-40b,tii,falcon,,llm,open_weights,osi_approved
 2023-05-07,weights_released,inferred,rwkv-4-world,rwkv-4-world,rwkv,rwkv-4-world,,llm,open_weights,osi_approved
+2023-05-05,weights_released,inferred,rwkv-4-14b-pile,rwkv-4-14b-pile,rwkv,rwkv-4-pile,,llm,open_weights,
 2023-05-05,weights_released,inferred,rwkv-4-7b-pile,rwkv-4-7b-pile,rwkv,rwkv-4-pile,,llm,open_weights,
 2023-05-05,weights_released,inferred,rwkv-raven-7b,rwkv-raven-7b,rwkv,rwkv-raven,,llm,open_weights,
 2023-05-04,weights_released,inferred,rwkv-4-169m-pile,rwkv-4-169m-pile,rwkv,rwkv-4-pile,,llm,open_weights,

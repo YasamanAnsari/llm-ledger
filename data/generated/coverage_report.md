@@ -8,9 +8,9 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1157; events: 1926
-- Models: curated 56, corroborated 579, single-source 522
-- Event confidence: verified 956, inferred 964, disputed 6
+- Models: 1160; events: 1932
+- Models: curated 56, corroborated 579, single-source 525
+- Event confidence: verified 956, inferred 970, disputed 6
 
 ## By organization
 
@@ -19,25 +19,25 @@ as settled.
 | Alibaba | 84 | 163 | 2 | 68 | 14 | 53% |
 | OpenAI | 63 | 262 | 19 | 39 | 5 | 75% |
 | ByteDance | 53 | 63 | 0 | 23 | 30 | 38% |
-| RWKV | 49 | 49 | 0 | 12 | 37 | 24% |
+| RWKV | 50 | 50 | 0 | 12 | 38 | 24% |
+| EleutherAI | 47 | 47 | 0 | 1 | 46 | 2% |
 | Meta | 47 | 93 | 4 | 21 | 22 | 35% |
 | AI2 | 46 | 46 | 0 | 11 | 35 | 24% |
-| EleutherAI | 46 | 46 | 0 | 1 | 45 | 2% |
 | Google | 46 | 121 | 7 | 24 | 15 | 45% |
 | TII | 45 | 45 | 0 | 3 | 42 | 7% |
 | Ant Group | 44 | 53 | 0 | 31 | 13 | 62% |
-| DeepSeek | 43 | 87 | 3 | 26 | 14 | 57% |
+| DeepSeek | 43 | 88 | 3 | 26 | 14 | 57% |
 | Shanghai AI Lab | 42 | 42 | 0 | 33 | 9 | 79% |
 | Cohere | 35 | 45 | 2 | 7 | 26 | 22% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
-| Zhipu | 33 | 70 | 3 | 23 | 7 | 64% |
+| Zhipu | 33 | 72 | 3 | 23 | 7 | 62% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Mistral | 31 | 69 | 3 | 20 | 8 | 45% |
 | NVIDIA | 29 | 43 | 0 | 12 | 17 | 28% |
 | Baidu | 28 | 33 | 0 | 22 | 6 | 70% |
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
-| Nous | 24 | 30 | 0 | 6 | 18 | 20% |
+| Nous | 25 | 31 | 0 | 6 | 19 | 19% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | Anthropic | 22 | 112 | 8 | 11 | 3 | 69% |
 | Microsoft | 21 | 25 | 0 | 10 | 11 | 44% |
@@ -62,11 +62,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 932 | 373 | 558 | 1 |
+| weights_released | 935 | 373 | 561 | 1 |
 | platform_availability | 279 | 277 | 0 | 2 |
 | api_ga | 210 | 55 | 154 | 1 |
 | announced | 206 | 49 | 156 | 1 |
-| retired | 199 | 104 | 95 | 0 |
+| retired | 202 | 104 | 98 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
