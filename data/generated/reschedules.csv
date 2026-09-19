@@ -2,7 +2,7 @@ event_id,model_id,event_type,platform,source,source_url,first_party,from_date,to
 deepseek-v4-pro-retired-2,deepseek-v4-pro,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-29,33,2026-09-18
 gemma-4-31b-it-retired-1,gemma-4-31b-it,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-15,19,2026-09-13
 gemma-4-31b-it-retired-1,gemma-4-31b-it,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-15,2026-09-14,-1,2026-09-18
-gpt-4-1-nano-retired-2,gpt-4-1-nano,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-04-14,2026-10-14,-182,2026-09-17
+gpt-4-1-nano-retired-2,gpt-4-1-nano,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-14,2027-04-14,182,2026-09-19
 gpt-4-1-nano-retired-2,gpt-4-1-nano,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-04-14,2026-10-14,-182,2026-09-18
 gpt-oss-20b-retired-1,gpt-oss-20b,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-15,2026-09-14,-1,2026-09-18
 o1-pro-retired-2,o1-pro,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-21,2026-11-19,29,2026-09-12

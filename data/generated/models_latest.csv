@@ -1,4 +1,5 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-09-18,weights_released,inferred,glm-5-3-flashx,glm-5.3-flashx,zhipu,glm-5.3-flashx,,vlm,open_weights,
 2026-09-13,weights_released,verified,intern-s2-397b,Intern-S2-397B,shanghai-ai-lab,Intern-S2,,vlm,open_weights,osi_approved
 2026-09-10,weights_released,verified,deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,deepseek-v4.1,mini,vlm,open_weights,
 2026-09-10,weights_released,inferred,deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,DeepSeek V4,mini,llm,open_weights,
@@ -8,6 +9,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-09-08,weights_released,inferred,tiny-aya-base-32k,tiny-aya-base-32K,cohere,aya,base,llm,open_weights,open_weights_restricted
 2026-09-06,weights_released,inferred,minicpm5-2b,MiniCPM5-2B,openbmb,MiniCPM5,,llm,open_weights,osi_approved
 2026-09-06,weights_released,verified,minicpm5-2b-dspark,MiniCPM5-2B-DSpark,openbmb,MiniCPM5-DSpark,,llm,open_weights,osi_approved
+2026-09-05,weights_released,inferred,llada2-2-mini,LLaDA2.2-mini,ant-group,LLaDA2.2,mini,llm,open_weights,osi_approved
 2026-09-04,api_ga,inferred,gpt-6-astra,GPT-6 Astra,openai,GPT-6 Astra,,vlm,api_only,proprietary
 2026-09-04,api_ga,inferred,gpt-6-astra-pro,gpt-6-astra-pro,openai,gpt-6-astra,pro,vlm,api_only,proprietary
 2026-09-04,api_ga,inferred,ling-3-0-flash-sante,ling-3.0-flash-sante:free,ant-group,ling-3.0-sante:free,mini,llm,api_only,proprietary
@@ -443,6 +445,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-09-16,weights_released,inferred,qianfan-vl-8b,Qianfan-VL-8B,baidu,Qianfan,vision,vlm,open_weights,
 2025-09-15,api_ga,inferred,gpt-5-codex,GPT-5-Codex,openai,GPT-5-Codex,,llm,api_only,proprietary
 2025-09-15,api_ga,inferred,qwen3-omni-flash,Qwen3-Omni-Flash,alibaba,Qwen3-Omni,mini,multimodal,api_only,proprietary
+2025-09-12,weights_released,inferred,k2-merged-3-5t,k2-merged-3.5T-bf16,nous-research,k2-merged,,llm,open_weights,
 2025-09-12,weights_released,inferred,olmo-3-1025-7b,Olmo-3-1025-7B,allenai,Olmo-3,,llm,open_weights,osi_approved
 2025-09-11,platform_availability_fallback,verified,qwen3-next-80b-a3b-instruct,Qwen3-Next-80B-A3B,alibaba,Qwen3-Next,,llm,api_only,proprietary
 2025-09-11,platform_availability_fallback,verified,qwen3-next-80b-a3b-thinking,qwen3-next-80b-a3b-thinking,alibaba,Qwen3-Next,thinking,llm,open_weights,
@@ -1098,6 +1101,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-05-04,weights_released,verified,rwkv-4-pileplus,rwkv-4-pileplus,rwkv,rwkv-4-pileplus,,llm,open_weights,osi_approved
 2023-05-04,weights_released,inferred,rwkv-raven-1b5,rwkv-raven-1b5,rwkv,rwkv-raven-1b5,,llm,open_weights,
 2023-04-26,weights_released,inferred,falcon-rw-1b,falcon-rw-1b,tii,falcon-rw,,llm,open_weights,osi_approved
+2023-04-26,weights_released,inferred,falcon-rw-7b,falcon-rw-7b,tii,falcon-rw,,llm,open_weights,osi_approved
 2023-04-25,weights_released,inferred,falcon-7b-instruct,falcon-7b-instruct,tii,falcon,instruct,llm,open_weights,osi_approved
 2023-04-24,weights_released,inferred,falcon-7b,falcon-7b,tii,falcon,,llm,open_weights,osi_approved
 2023-04-19,weights_released,verified,stablelm-tuned-alpha-3b,stablelm-tuned-alpha-3b,stability,stablelm-tuned-alpha,,llm,open_weights,open_weights_restricted

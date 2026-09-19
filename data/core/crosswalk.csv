@@ -391,6 +391,7 @@ falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b
 falcon-mamba-7b-instruct,huggingface,tiiuae/falcon-mamba-7b-instruct
 falcon-mamba-tiny-dev,huggingface,tiiuae/falcon-mamba-tiny-dev
 falcon-rw-1b,huggingface,tiiuae/falcon-rw-1b
+falcon-rw-7b,huggingface,tiiuae/falcon-rw-7b
 falcon3-10b-base,huggingface,tiiuae/Falcon3-10B-Base
 falcon3-10b-instruct,huggingface,tiiuae/Falcon3-10B-Instruct
 falcon3-1b-base,huggingface,tiiuae/Falcon3-1B-Base
@@ -610,6 +611,8 @@ glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash-BF16
 glm-5-3-flash,models_dev,cline-pass/cline-pass/glm-5.3-flash
 glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
 glm-5-3-flash,openrouter,z-ai/glm-5.3-flash
+glm-5-3-flashx,models_dev,vercel/zai/glm-5.3-flashx
+glm-5-3-flashx,openrouter,z-ai/glm-5.3-flashx
 glm-5-turbo,models_dev,venice/z-ai-glm-5-turbo
 glm-5-turbo,openrouter,z-ai/glm-5-turbo
 glm-5v-turbo,models_dev,cortecs/glm-5v-turbo
@@ -1029,6 +1032,7 @@ januscoderv-7b,huggingface,internlm/JanusCoderV-7B
 japanese-stablelm-base-alpha-7b,huggingface,stabilityai/japanese-stablelm-base-alpha-7b
 japanese-stablelm-base-gamma-7b,huggingface,stabilityai/japanese-stablelm-base-gamma-7b
 japanese-stablelm-instruct-gamma-7b,huggingface,stabilityai/japanese-stablelm-instruct-gamma-7b
+k2-merged-3-5t,huggingface,NousResearch/k2-merged-3.5T-bf16
 kimi-dev-72b,huggingface,moonshotai/Kimi-Dev-72B
 kimi-k2,epoch,Kimi K2
 kimi-k2,huggingface,moonshotai/Kimi-K2-Instruct
@@ -1141,6 +1145,7 @@ llada2-0-mini-preview,huggingface,inclusionAI/LLaDA2.0-mini-preview
 llada2-1-flash,huggingface,inclusionAI/LLaDA2.1-flash
 llada2-1-mini,huggingface,inclusionAI/LLaDA2.1-mini
 llada2-2-flash,huggingface,inclusionAI/LLaDA2.2-flash
+llada2-2-mini,huggingface,inclusionAI/LLaDA2.2-mini
 llama-2-13b,huggingface,meta-llama/Llama-2-13b-hf
 llama-2-13b-chat,huggingface,meta-llama/Llama-2-13b-chat-hf
 llama-2-70b,huggingface,meta-llama/Llama-2-70b
