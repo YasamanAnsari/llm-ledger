@@ -540,6 +540,7 @@ glm-4-32b,models_dev,nano-gpt/THUDM/GLM-4-32B-0414
 glm-4-5,epoch,GLM-4.5
 glm-4-5,huggingface,zai-org/GLM-4.5
 glm-4-5,huggingface,zai-org/GLM-4.5-FP8
+glm-4-5,models_dev,abacus/zai-org/GLM-4.5
 glm-4-5,models_dev,zenmux/z-ai/glm-4.5
 glm-4-5,openrouter,z-ai/glm-4.5
 glm-4-5,text_surface_forms,GLM
@@ -547,6 +548,7 @@ glm-4-5,text_surface_forms,GLM-4.5
 glm-4-5-air,epoch,GLM-4.5-Air
 glm-4-5-air,huggingface,zai-org/GLM-4.5-Air
 glm-4-5-air,huggingface,zai-org/GLM-4.5-Air-FP8
+glm-4-5-air,models_dev,huggingface/zai-org/GLM-4.5-Air
 glm-4-5-air,models_dev,zenmux/z-ai/glm-4.5-air
 glm-4-5-air,openrouter,z-ai/glm-4.5-air
 glm-4-5-air-base,huggingface,zai-org/GLM-4.5-Air-Base
@@ -927,6 +929,7 @@ grok-4-6,epoch,Grok 4.6
 grok-4-6,models_dev,venice/grok-4-6
 grok-4-6,openrouter,x-ai/grok-4.6
 grok-4-fast,epoch,Grok 4 Fast
+grok-4-fast,models_dev,qiniu-ai/x-ai/grok-4-fast
 grok-4-fast,models_dev,zenmux/x-ai/grok-4-fast
 grok-build-0-1,epoch,Grok Build 0.1
 grok-build-0-1,models_dev,aihubmix/grok-build-0.1

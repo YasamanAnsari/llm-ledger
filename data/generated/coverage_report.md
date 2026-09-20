@@ -8,9 +8,9 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1164; events: 1940
-- Models: curated 56, corroborated 580, single-source 528
-- Event confidence: verified 960, inferred 974, disputed 6
+- Models: 1164; events: 1946
+- Models: curated 56, corroborated 581, single-source 527
+- Event confidence: verified 967, inferred 973, disputed 6
 
 ## By organization
 
@@ -26,7 +26,7 @@ as settled.
 | Google | 46 | 124 | 7 | 24 | 15 | 47% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | Ant Group | 45 | 54 | 0 | 31 | 14 | 61% |
-| DeepSeek | 43 | 88 | 3 | 26 | 14 | 57% |
+| DeepSeek | 43 | 92 | 3 | 26 | 14 | 59% |
 | Shanghai AI Lab | 42 | 42 | 0 | 33 | 9 | 79% |
 | Cohere | 35 | 45 | 2 | 7 | 26 | 22% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
@@ -34,9 +34,9 @@ as settled.
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Mistral | 31 | 69 | 3 | 20 | 8 | 45% |
 | NVIDIA | 29 | 43 | 0 | 12 | 17 | 28% |
-| Baidu | 28 | 33 | 0 | 22 | 6 | 70% |
+| Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
-| Nous | 26 | 32 | 0 | 6 | 20 | 19% |
+| Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | Anthropic | 22 | 112 | 8 | 11 | 3 | 69% |
@@ -45,7 +45,7 @@ as settled.
 | Xiaomi | 17 | 22 | 0 | 15 | 2 | 68% |
 | StepFun | 16 | 18 | 0 | 12 | 4 | 67% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
-| MiniMax | 15 | 30 | 1 | 10 | 4 | 53% |
+| MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
 | xAI | 15 | 38 | 2 | 8 | 5 | 37% |
 | Skywork | 13 | 13 | 0 | 5 | 8 | 38% |
@@ -62,11 +62,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 939 | 373 | 565 | 1 |
+| weights_released | 938 | 374 | 563 | 1 |
 | platform_availability | 280 | 278 | 0 | 2 |
-| api_ga | 210 | 55 | 154 | 1 |
+| api_ga | 211 | 55 | 155 | 1 |
+| retired | 211 | 113 | 98 | 0 |
 | announced | 206 | 49 | 156 | 1 |
-| retired | 205 | 107 | 98 | 0 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
