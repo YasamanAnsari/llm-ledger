@@ -1390,6 +1390,7 @@ japanese-stablelm-base-gamma-7b-weights_released-1,https://web.archive.org/web/2
 japanese-stablelm-instruct-gamma-7b-weights_released-1,https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b,hf_hub,2023-10-16,day,hub repo created,true,false,
 japanese-stablelm-instruct-gamma-7b-weights_released-1,https://web.archive.org/web/20231224/https://huggingface.co/stabilityai/japanese-stablelm-instruct-gamma-7b,wayback,2023-12-24,day,first public capture,true,false,
 k2-merged-3-5t-weights_released-1,https://huggingface.co/NousResearch/k2-merged-3.5T-bf16,hf_hub,2025-09-12,day,hub repo created,true,false,
+k2-merged-3-5t-weights_released-1,https://web.archive.org/web/20260109/https://huggingface.co/NousResearch/k2-merged-3.5T-bf16,wayback,2026-01-09,day,first public capture,true,false,
 kimi-dev-72b-weights_released-1,https://huggingface.co/moonshotai/Kimi-Dev-72B,hf_hub,2025-06-16,day,hub repo created,true,false,
 kimi-dev-72b-weights_released-1,https://web.archive.org/web/20250616/https://huggingface.co/moonshotai/Kimi-Dev-72B,wayback,2025-06-16,day,first public capture,true,false,
 kimi-k2-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-01-27,day,openrouter,false,true,
