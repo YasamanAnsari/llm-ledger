@@ -928,6 +928,9 @@ grok-4-5,openrouter,x-ai/grok-4.5
 grok-4-6,epoch,Grok 4.6
 grok-4-6,models_dev,venice/grok-4-6
 grok-4-6,openrouter,x-ai/grok-4.6
+grok-4-7,epoch,Grok 4.7
+grok-4-7,models_dev,venice/grok-4-7
+grok-4-7,openrouter,x-ai/grok-4.7
 grok-4-fast,epoch,Grok 4 Fast
 grok-4-fast,models_dev,qiniu-ai/x-ai/grok-4-fast
 grok-4-fast,models_dev,zenmux/x-ai/grok-4-fast
@@ -989,6 +992,7 @@ hy3-preview,models_dev,aihubmix/hy3-preview
 hy3-preview,openrouter,tencent/hy3-preview
 hy4-preview,huggingface,tencent/Hy4-preview
 hy4-preview,huggingface,tencent/Hy4-preview-FP8
+hy4-preview,models_dev,aihubmix/hy4-preview
 hy4-preview,models_dev,crossmodel/tencent/hy4-preview
 hy4-preview,openrouter,tencent/hy4-preview
 intern-s1,huggingface,internlm/Intern-S1
@@ -1031,6 +1035,7 @@ internlm2-math-plus-7b,huggingface,internlm/internlm2-math-plus-7b
 internlm3-8b-instruct,huggingface,internlm/internlm3-8b-instruct
 jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
+januscoder-14b,huggingface,internlm/JanusCoder-14B
 januscoderv-7b,huggingface,internlm/JanusCoderV-7B
 japanese-stablelm-base-alpha-7b,huggingface,stabilityai/japanese-stablelm-base-alpha-7b
 japanese-stablelm-base-gamma-7b,huggingface,stabilityai/japanese-stablelm-base-gamma-7b
@@ -1246,6 +1251,7 @@ longcat-2-0,epoch,LongCat-2.0
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-FP8
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-INT8
+longcat-2-0,models_dev,aihubmix/longcat-2.0
 longcat-2-0,models_dev,longcat/LongCat-2.0
 longcat-2-0,openrouter,meituan/longcat-2.0
 longcat-flash-chat,epoch,LongCat-Flash
@@ -1282,6 +1288,15 @@ mimo-v2-5-pro,huggingface,XiaomiMiMo/MiMo-V2.5-Pro
 mimo-v2-5-pro,models_dev,cline-pass/cline-pass/mimo-v2.5-pro
 mimo-v2-5-pro,openrouter,xiaomi/mimo-v2.5-pro
 mimo-v2-5-pro-base,huggingface,XiaomiMiMo/MiMo-V2.5-Pro-Base
+mimo-v2-6-distill-qwen-9b,huggingface,XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B
+mimo-v2-6-flash,models_dev,crossmodel/xiaomi/mimo-v2.6-flash
+mimo-v2-6-flash,openrouter,xiaomi/mimo-v2.6-flash
+mimo-v2-6-flash-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-RL
+mimo-v2-6-pro,models_dev,crossmodel/xiaomi/mimo-v2.6-pro
+mimo-v2-6-pro,openrouter,xiaomi/mimo-v2.6-pro
+mimo-v2-6-pro-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Pro-RL
+mimo-v2-6-pro-ultraspeed,models_dev,empiriolabs/mimo-v2-6-pro-ultraspeed
+mimo-v2-6-pro-ultraspeed,openrouter,xiaomi/mimo-v2.6-pro-ultraspeed
 mimo-v2-flash,epoch,MiMo-V2-Flash
 mimo-v2-flash,huggingface,XiaomiMiMo/MiMo-V2-Flash
 mimo-v2-flash,models_dev,huggingface/XiaomiMiMo/MiMo-V2-Flash
@@ -1454,6 +1469,7 @@ muse-spark-1-2,openrouter,meta/muse-spark-1.2
 muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
 muse-spark-1-3,epoch,Muse Spark 1.3
+muse-spark-1-3,models_dev,aihubmix/muse-spark-1.3
 muse-spark-1-3,models_dev,empiriolabs/muse-spark-1-3
 muse-spark-1-3,models_dev,kilo/meta/muse-spark-1.3
 muse-spark-1-3,openrouter,meta/muse-spark-1.3
@@ -1569,6 +1585,7 @@ olmo-3-1125-32b,huggingface,allenai/Olmo-3-1125-32B
 olmo-3-32b-think,huggingface,allenai/Olmo-3-32B-Think
 olmo-3-32b-think,models_dev,kilo/allenai/olmo-3-32b-think
 olmo-3-32b-think,openrouter,allenai/olmo-3-32b-think
+olmo-3-32b-think-sft,huggingface,allenai/Olmo-3-32B-Think-SFT
 olmo-3-7b-instruct,huggingface,allenai/Olmo-3-7B-Instruct
 olmo-3-7b-instruct-dpo,huggingface,allenai/Olmo-3-7B-Instruct-DPO
 olmo-3-7b-instruct-sft,huggingface,allenai/Olmo-3-7B-Instruct-SFT
@@ -2079,6 +2096,7 @@ stablelm-2-12b,huggingface,stabilityai/stablelm-2-12b
 stablelm-2-12b-chat,huggingface,stabilityai/stablelm-2-12b-chat
 stablelm-3b-4e1t,huggingface,stabilityai/stablelm-3b-4e1t
 stablelm-base-alpha-3b,huggingface,stabilityai/stablelm-base-alpha-3b
+stablelm-base-alpha-3b-v2,huggingface,stabilityai/stablelm-base-alpha-3b-v2
 stablelm-base-alpha-7b,huggingface,stabilityai/stablelm-base-alpha-7b
 stablelm-base-alpha-7b-v2,huggingface,stabilityai/stablelm-base-alpha-7b-v2
 stablelm-tuned-alpha-3b,huggingface,stabilityai/stablelm-tuned-alpha-3b
@@ -2096,6 +2114,8 @@ step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash
 step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash-FP8
 step-3-7-flash,models_dev,nvidia/stepfun-ai/step-3.7-flash
 step-3-7-flash,openrouter,stepfun/step-3.7-flash
+step-5-preview,epoch,Step 5 Preview
+step-5-preview,models_dev,empiriolabs/step-5-preview
 step3,huggingface,stepfun-ai/step3
 step3,huggingface,stepfun-ai/step3-fp8
 step3-vl-10b,huggingface,stepfun-ai/Step3-VL-10B
@@ -2111,6 +2131,7 @@ synlogic-mix-3-32b,huggingface,MiniMaxAI/SynLogic-Mix-3-32B
 t5gemma-s-s-prefixlm,huggingface,google/t5gemma-s-s-prefixlm
 tencent-hy3,huggingface,tencent/Hy3
 tencent-hy3,huggingface,tencent/Hy3-FP8
+tencent-hy3,models_dev,aihubmix/hy3
 tencent-hy3,models_dev,crossmodel/tencent/hy3
 tencent-hy3,openrouter,tencent/hy3
 tiny-aya-base,huggingface,CohereLabs/tiny-aya-base

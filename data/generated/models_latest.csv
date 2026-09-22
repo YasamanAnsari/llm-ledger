@@ -1,5 +1,13 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-09-22,api_ga,inferred,mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,mimo-v2.6,mini,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,mimo-v2.6,pro,vlm,api_only,proprietary
+2026-09-21,api_ga,inferred,grok-4-7,Grok 4.7,xai,Grok 4.7,,vlm,api_only,proprietary
+2026-09-21,weights_released,inferred,mimo-v2-6-distill-qwen-9b,MiMo-V2.6-Distill-Qwen-9B,xiaomi,MiMo-V2.6-Distill-Qwen,,vlm,open_weights,osi_approved
+2026-09-21,weights_released,inferred,mimo-v2-6-flash-rl,MiMo-V2.6-Flash-RL,xiaomi,MiMo-V2.6-RL,mini,llm,open_weights,osi_approved
+2026-09-21,weights_released,inferred,mimo-v2-6-pro-rl,MiMo-V2.6-Pro-RL,xiaomi,MiMo-V2.6-RL,pro,llm,open_weights,osi_approved
+2026-09-21,api_ga,inferred,mimo-v2-6-pro-ultraspeed,mimo-v2-6-pro-ultraspeed,xiaomi,mimo-v2-6-ultraspeed,pro,vlm,api_only,proprietary
 2026-09-18,weights_released,inferred,glm-5-3-flashx,glm-5.3-flashx,zhipu,glm-5.3-flashx,,vlm,open_weights,
+2026-09-16,api_ga,inferred,step-5-preview,Step 5 Preview,stepfun,Step 5,,vlm,api_only,proprietary
 2026-09-13,weights_released,verified,intern-s2-397b,Intern-S2-397B,shanghai-ai-lab,Intern-S2,,vlm,open_weights,osi_approved
 2026-09-10,weights_released,verified,deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,deepseek-v4.1,mini,vlm,open_weights,
 2026-09-10,weights_released,inferred,deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,DeepSeek V4,mini,llm,open_weights,
@@ -116,6 +124,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-06-10,weights_released,verified,evoquality,EvoQuality,bytedance,EvoQuality,,vlm,open_weights,osi_approved
 2026-06-10,weights_released,inferred,sa2va-qwen3-vl-4b-sam3,Sa2VA-Qwen3-VL-4B-SAM3,bytedance,Sa2VA-Qwen3-SAM3,vision,vlm,open_weights,osi_approved
 2026-06-09,api_ga,inferred,claude-mythos-5,Claude Mythos 5,anthropic,Claude Mythos 5,,vlm,api_only,proprietary
+2026-06-09,api_ga,inferred,gemma-4-12b-it,Gemma 4 12B,google,Gemma 4,,llm,api_only,proprietary
 2026-06-07,api_ga,verified,claude-fable-5,Claude Fable 5,anthropic,Claude Fable 5,,vlm,api_only,proprietary
 2026-06-05,weights_released,inferred,north-mini-code-1-0,North-Mini-Code-1.0,cohere,North-1.0,coder,llm,open_weights,osi_approved
 2026-06-04,weights_released,inferred,nemotron-3-5-content-safety,nemotron-3.5-content-safety:free,nvidia,nemotron-3.5-content-safety:free,,vlm,open_weights,
@@ -359,6 +368,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-11-17,weights_released,inferred,hermes-4-3-36b,Hermes-4.3-36B,nous-research,Hermes-4.3,,llm,open_weights,osi_approved
 2025-11-17,weights_released,inferred,olmo-3-7b-instruct-sft,Olmo-3-7B-Instruct-SFT,allenai,Olmo-3,instruct,llm,open_weights,osi_approved
 2025-11-15,weights_released,inferred,nvidia-nemotron-parse-v1-1,NVIDIA-Nemotron-Parse-v1.1,nvidia,NVIDIA-Nemotron-Parse-v1.1,,vlm,open_weights,
+2025-11-14,weights_released,inferred,olmo-3-32b-think-sft,Olmo-3-32B-Think-SFT,allenai,Olmo-3,instruct,llm,open_weights,osi_approved
 2025-11-13,api_ga,verified,gpt-5-1-codex,GPT-5.1-Codex,openai,GPT-5.1-Codex,,multimodal,api_only,proprietary
 2025-11-13,api_ga,inferred,gpt-5-1-codex-max,GPT-5.1-Codex-Max,openai,GPT-5.1-Codex,,vlm,api_only,proprietary
 2025-11-13,api_ga,verified,gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,GPT-5.1-Codex,mini,multimodal,api_only,proprietary
@@ -380,6 +390,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-28,weights_released,inferred,ouro-1-4b-thinking,Ouro-1.4B-Thinking,bytedance,Ouro,thinking,llm,open_weights,osi_approved
 2025-10-28,weights_released,inferred,ouro-2-6b,Ouro-2.6B,bytedance,Ouro,,llm,open_weights,osi_approved
 2025-10-28,weights_released,inferred,ouro-2-6b-thinking,Ouro-2.6B-Thinking,bytedance,Ouro,thinking,llm,open_weights,osi_approved
+2025-10-27,weights_released,verified,januscoder-14b,JanusCoder-14B,shanghai-ai-lab,JanusCoder,,llm,open_weights,osi_approved
 2025-10-27,weights_released,verified,januscoderv-7b,JanusCoderV-7B,shanghai-ai-lab,JanusCoderV,,vlm,open_weights,osi_approved
 2025-10-27,weights_released,inferred,minimax-m2,MiniMax-M2,minimax,MiniMax-M2,,llm,open_weights,proprietary
 2025-10-24,weights_released,inferred,deepseek-ocr,Deepseek OCR,deepseek,deepseek,vision,vlm,open_weights,
@@ -1066,6 +1077,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-08-28,api_ga,inferred,gpt-3-5-turbo-16k,gpt-3.5-turbo-16k,openai,GPT-3.5,,llm,api_only,proprietary
 2023-08-09,weights_released,verified,japanese-stablelm-base-alpha-7b,japanese-stablelm-base-alpha-7b,stability,japanese-stablelm-alpha,base,llm,open_weights,osi_approved
 2023-08-07,weights_released,verified,stablecode-completion-alpha-3b-4k,stablecode-completion-alpha-3b-4k,stability,stablecode-completion-alpha,,llm,open_weights,osi_approved
+2023-08-04,weights_released,inferred,stablelm-base-alpha-3b-v2,stablelm-base-alpha-3b-v2,stability,stablelm-alpha-v2,base,llm,open_weights,open_weights_restricted
 2023-08-04,weights_released,inferred,stablelm-base-alpha-7b-v2,stablelm-base-alpha-7b-v2,stability,stablelm-alpha-v2,base,llm,open_weights,open_weights_restricted
 2023-07-27,weights_released,verified,stablebeluga-13b,StableBeluga-13B,stability,StableBeluga,,llm,open_weights,
 2023-07-27,weights_released,verified,stablebeluga-7b,StableBeluga-7B,stability,StableBeluga,,llm,open_weights,
@@ -1151,7 +1163,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 ,,,doubao-seed-1-8,Doubao Seed 1.8,bytedance,Doubao Seed 1.8,,vlm,api_only,proprietary
 ,,,gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,google,Gemini 2.0,mini,vlm,api_only,proprietary
 ,,,gemini-3-pro,Gemini 3 Pro,google,Gemini 3,pro,vlm,api_only,proprietary
-,,,gemma-4-12b-it,Gemma 4 12B,google,Gemma 4,,llm,api_only,proprietary
 ,,,grok-3-mini,Grok-3 mini,xai,Grok-3,mini,llm,api_only,proprietary
 ,,,grok-4-1-fast,Grok 4.1 Fast,xai,Grok 4.1 Fast,,vlm,api_only,proprietary
 ,,,grok-code-fast-1,Grok Code Fast 1,xai,Grok Fast 1,coder,llm,api_only,proprietary

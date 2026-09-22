@@ -8,26 +8,26 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1164; events: 1946
-- Models: curated 56, corroborated 581, single-source 527
-- Event confidence: verified 967, inferred 973, disputed 6
+- Models: 1175; events: 1967
+- Models: curated 56, corroborated 586, single-source 533
+- Event confidence: verified 975, inferred 986, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 84 | 163 | 2 | 68 | 14 | 53% |
+| Alibaba | 84 | 164 | 2 | 68 | 14 | 53% |
 | OpenAI | 63 | 262 | 19 | 39 | 5 | 75% |
-| ByteDance | 53 | 63 | 0 | 23 | 30 | 38% |
+| ByteDance | 53 | 66 | 0 | 23 | 30 | 41% |
 | RWKV | 50 | 50 | 0 | 12 | 38 | 24% |
+| AI2 | 47 | 47 | 0 | 11 | 36 | 23% |
 | EleutherAI | 47 | 47 | 0 | 1 | 46 | 2% |
 | Meta | 47 | 93 | 4 | 21 | 22 | 35% |
-| AI2 | 46 | 46 | 0 | 11 | 35 | 24% |
-| Google | 46 | 124 | 7 | 24 | 15 | 47% |
+| Google | 46 | 125 | 7 | 24 | 15 | 46% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | Ant Group | 45 | 54 | 0 | 31 | 14 | 61% |
 | DeepSeek | 43 | 92 | 3 | 26 | 14 | 59% |
-| Shanghai AI Lab | 42 | 42 | 0 | 33 | 9 | 79% |
+| Shanghai AI Lab | 43 | 43 | 0 | 34 | 9 | 79% |
 | Cohere | 35 | 45 | 2 | 7 | 26 | 22% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
 | Zhipu | 34 | 74 | 3 | 24 | 7 | 62% |
@@ -39,15 +39,15 @@ as settled.
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
+| Xiaomi | 23 | 31 | 0 | 18 | 5 | 58% |
 | Anthropic | 22 | 112 | 8 | 11 | 3 | 69% |
 | Microsoft | 21 | 25 | 0 | 10 | 11 | 44% |
-| Stability | 20 | 20 | 0 | 9 | 11 | 45% |
-| Xiaomi | 17 | 22 | 0 | 15 | 2 | 68% |
-| StepFun | 16 | 18 | 0 | 12 | 4 | 67% |
+| Stability | 21 | 21 | 0 | 9 | 12 | 43% |
+| StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
+| xAI | 16 | 41 | 2 | 9 | 5 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
-| xAI | 15 | 38 | 2 | 8 | 5 | 37% |
 | Skywork | 13 | 13 | 0 | 5 | 8 | 38% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
 | Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
@@ -62,11 +62,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 938 | 374 | 563 | 1 |
-| platform_availability | 280 | 278 | 0 | 2 |
-| api_ga | 211 | 55 | 155 | 1 |
-| retired | 211 | 113 | 98 | 0 |
-| announced | 206 | 49 | 156 | 1 |
+| weights_released | 944 | 375 | 568 | 1 |
+| platform_availability | 284 | 282 | 0 | 2 |
+| api_ga | 217 | 55 | 161 | 1 |
+| retired | 215 | 116 | 99 | 0 |
+| announced | 207 | 49 | 157 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |

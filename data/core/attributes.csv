@@ -176,6 +176,7 @@ grok-4-20-multi-agent,true,,,,,,1000000,30000,text|image|pdf,text,,false,,,1.25,
 grok-4-3,true,,,,,,1000000,32768,text|image,text,,true,,,1.25,2.5,0.2,2026-09-01,https://models.dev/api.json
 grok-4-5,true,,,,,,500000,32000,text|image,text,,true,,,2.27,6.8,0.34,2026-09-01,https://models.dev/api.json
 grok-4-6,true,,,,,,500000,200000,text|image,text,2026-02-01,true,,,2.27,6.8,0.57,2026-09-01,https://models.dev/api.json
+grok-4-7,true,,,,,,500000,200000,text|image,text,2026-05,true,,,2.27,6.8,0.57,2026-09-22,https://models.dev/api.json
 grok-4-fast,true,,,,,,2000000,64000,text|image,text,2025-01-01,true,,,0.2,0.5,0.05,2026-09-01,https://models.dev/api.json
 grok-build-0-1,true,,,,,,256000,256000,text|image,text,,true,,,1,2,0.2,2026-09-01,https://models.dev/api.json
 grok-code-fast-1,false,none,,,,,256000,10000,text,text,2024-08,true,,,0.19999999999999998,1.5,0.02,2026-09-01,https://models.dev/api.json
@@ -223,6 +224,9 @@ longcat-2-0,true,,,,,,1000000,131072,text,text,,true,,,0.75,2.95,0.015,2026-09-0
 longcat-flash-chat,false,none,,,,,131072,131072,text,text,,false,,,,,,2026-09-01,https://models.dev/api.json
 mimo-v2-5,true,,,,,,1048576,131072,text|image|audio|video,text,2024-12,true,,,0.14,0.28,0.0028,2026-09-01,https://models.dev/api.json
 mimo-v2-5-pro,true,,,,,,1048576,131072,text,text,2024-12,true,,,1.74,3.48,0.0145,2026-09-01,https://models.dev/api.json
+mimo-v2-6-flash,true,,,,,,1048576,131072,text|image|audio|video,text,2026-09-22,true,,,0.16,0.32,0.004,2026-09-22,https://models.dev/api.json
+mimo-v2-6-pro,true,,,,,,1048576,131072,text|image|audio|video,text,2026-09-22,true,,,0.47,0.94,0.005,2026-09-22,https://models.dev/api.json
+mimo-v2-6-pro-ultraspeed,true,,,,,,1000000,131072,text|image|video|audio,text,,true,,,21.75,43.5,21.75,2026-09-22,https://models.dev/api.json
 mimo-v2-flash,true,,,,,,262144,4096,text,text,2024-12,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
 mimo-v2-omni,true,,,,,,262144,128000,text|image|audio|pdf,text,2024-12,true,,,0.4,2,0.08,2026-09-01,https://models.dev/api.json
 mimo-v2-pro,true,,,,,,1048576,131072,text,text,2024-12,true,,,1,3,0.2,2026-09-01,https://models.dev/api.json
@@ -385,6 +389,7 @@ sonar-reasoning,true,,,,,,127000,4096,text,text,2025-01,false,,,1,5,,2026-09-01,
 sonar-reasoning-pro,true,,,,,,128000,4096,text|image,text,2025-09-01,false,,,,,,2026-09-01,https://models.dev/api.json
 step-3-5-flash,true,,,,,,256000,131072,text,text,2025-01,true,,,0.1,0.3,0.02,2026-09-01,https://models.dev/api.json
 step-3-7-flash,true,,,,,,256000,16384,text|image,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
+step-5-preview,true,,,,,,1024000,131072,text|image|video,text,,true,,,1,2.7,0.05,2026-09-22,https://models.dev/api.json
 tencent-hy3,true,,,,,,262144,131072,text,text,,true,,,0.16,0.64,0.04,2026-09-01,https://models.dev/api.json
 ui-tars-1-5-7b,false,none,,,,,128000,2048,image|text,text,,false,,,0.1,0.2,0.1,2026-09-01,https://models.dev/api.json
 voxtral-small-24b-2507,false,none,,,,,32000,32000,audio|text,text,,false,,,0.0023,0.0023,,2026-09-01,https://models.dev/api.json
