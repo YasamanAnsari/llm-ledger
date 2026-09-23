@@ -1,12 +1,19 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
-2026-09-22,api_ga,inferred,mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,mimo-v2.6,mini,vlm,api_only,proprietary
-2026-09-22,api_ga,inferred,mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,mimo-v2.6,pro,vlm,api_only,proprietary
+2026-09-22,api_ga,verified,claude-opus-5-5,claude-opus-5-5,anthropic,claude-5-5,,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,command-a-plus,command-a-plus,cohere,command-a,,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,gpt-6-luna,gpt-6-luna,openai,gpt-6-luna,,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,gpt-6-luna-pro,gpt-6-luna-pro,openai,gpt-6-luna,pro,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,gpt-6-sol,gpt-6-sol,openai,gpt-6-sol,,vlm,api_only,proprietary
+2026-09-22,api_ga,inferred,gpt-6-sol-pro,gpt-6-sol-pro,openai,gpt-6-sol,pro,vlm,api_only,proprietary
+2026-09-22,weights_released,inferred,mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,mimo-v2.6,mini,vlm,open_weights,proprietary
+2026-09-22,weights_released,inferred,mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,mimo-v2.6,pro,vlm,open_weights,proprietary
 2026-09-21,api_ga,inferred,grok-4-7,Grok 4.7,xai,Grok 4.7,,vlm,api_only,proprietary
 2026-09-21,weights_released,inferred,mimo-v2-6-distill-qwen-9b,MiMo-V2.6-Distill-Qwen-9B,xiaomi,MiMo-V2.6-Distill-Qwen,,vlm,open_weights,osi_approved
 2026-09-21,weights_released,inferred,mimo-v2-6-flash-rl,MiMo-V2.6-Flash-RL,xiaomi,MiMo-V2.6-RL,mini,llm,open_weights,osi_approved
 2026-09-21,weights_released,inferred,mimo-v2-6-pro-rl,MiMo-V2.6-Pro-RL,xiaomi,MiMo-V2.6-RL,pro,llm,open_weights,osi_approved
-2026-09-21,api_ga,inferred,mimo-v2-6-pro-ultraspeed,mimo-v2-6-pro-ultraspeed,xiaomi,mimo-v2-6-ultraspeed,pro,vlm,api_only,proprietary
+2026-09-21,weights_released,inferred,mimo-v2-6-pro-ultraspeed,mimo-v2-6-pro-ultraspeed,xiaomi,mimo-v2-6-ultraspeed,pro,vlm,open_weights,proprietary
 2026-09-18,weights_released,inferred,glm-5-3-flashx,glm-5.3-flashx,zhipu,glm-5.3-flashx,,vlm,open_weights,
+2026-09-17,api_ga,inferred,qwen3-8-omni-flash,qwen3.8-omni-flash,alibaba,qwen3.8-omni,mini,vlm,api_only,proprietary
 2026-09-16,api_ga,inferred,step-5-preview,Step 5 Preview,stepfun,Step 5,,vlm,api_only,proprietary
 2026-09-13,weights_released,verified,intern-s2-397b,Intern-S2-397B,shanghai-ai-lab,Intern-S2,,vlm,open_weights,osi_approved
 2026-09-10,weights_released,verified,deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,deepseek-v4.1,mini,vlm,open_weights,
@@ -17,7 +24,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-09-08,weights_released,inferred,tiny-aya-base-32k,tiny-aya-base-32K,cohere,aya,base,llm,open_weights,open_weights_restricted
 2026-09-06,weights_released,inferred,minicpm5-2b,MiniCPM5-2B,openbmb,MiniCPM5,,llm,open_weights,osi_approved
 2026-09-06,weights_released,verified,minicpm5-2b-dspark,MiniCPM5-2B-DSpark,openbmb,MiniCPM5-DSpark,,llm,open_weights,osi_approved
-2026-09-05,weights_released,inferred,llada2-2-mini,LLaDA2.2-mini,ant-group,LLaDA2.2,mini,llm,open_weights,osi_approved
+2026-09-05,weights_released,verified,llada2-2-mini,LLaDA2.2-mini,ant-group,LLaDA2.2,mini,llm,open_weights,osi_approved
 2026-09-04,api_ga,inferred,gpt-6-astra,GPT-6 Astra,openai,GPT-6 Astra,,vlm,api_only,proprietary
 2026-09-04,api_ga,inferred,gpt-6-astra-pro,gpt-6-astra-pro,openai,gpt-6-astra,pro,vlm,api_only,proprietary
 2026-09-04,api_ga,inferred,ling-3-0-flash-sante,ling-3.0-flash-sante:free,ant-group,ling-3.0-sante:free,mini,llm,api_only,proprietary

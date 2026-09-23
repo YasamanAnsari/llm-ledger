@@ -136,6 +136,9 @@ claude-opus-5,epoch,Claude Opus 5
 claude-opus-5,models_dev,venice/claude-opus-5
 claude-opus-5,openrouter,anthropic/claude-opus-5
 claude-opus-5,wikipedia,Claude (language model)
+claude-opus-5-5,anthropic_api,claude-opus-5-5
+claude-opus-5-5,models_dev,venice/claude-opus-5-5
+claude-opus-5-5,openrouter,anthropic/claude-opus-5.5
 claude-sonnet-4,epoch,Claude Sonnet 4
 claude-sonnet-4,models_dev,abacus/claude-sonnet-4-20250514
 claude-sonnet-4,models_dev,nano-gpt/anthropic/claude-sonnet-4:thinking:1024
@@ -176,6 +179,8 @@ cohere-command-a-reasoning,models_dev,sap-ai-core/cohere--command-a-reasoning
 cola-dlm,huggingface,ByteDance-Seed/Cola-DLM
 command-a,models_dev,kilo/cohere/command-a
 command-a,openrouter,cohere/command-a
+command-a-plus,models_dev,kilo/cohere/command-a-plus
+command-a-plus,openrouter,cohere/command-a-plus
 command-a-plus-05-2026,huggingface,CohereLabs/command-a-plus-05-2026-bf16
 command-a-plus-05-2026,huggingface,CohereLabs/command-a-plus-05-2026-fp8
 command-a-plus-05-2026-w4a4,huggingface,CohereLabs/command-a-plus-05-2026-w4a4
@@ -834,6 +839,16 @@ gpt-6-astra,openai_api,gpt-6-astra
 gpt-6-astra,openrouter,openai/gpt-6-astra
 gpt-6-astra-pro,models_dev,kilo/openai/gpt-6-astra-pro
 gpt-6-astra-pro,openrouter,openai/gpt-6-astra-pro
+gpt-6-luna,models_dev,azure/gpt-6-luna
+gpt-6-luna,openai_api,gpt-6-luna
+gpt-6-luna,openrouter,openai/gpt-6-luna
+gpt-6-luna-pro,models_dev,kilo/openai/gpt-6-luna-pro
+gpt-6-luna-pro,openrouter,openai/gpt-6-luna-pro
+gpt-6-sol,models_dev,azure/gpt-6-sol
+gpt-6-sol,openai_api,gpt-6-sol
+gpt-6-sol,openrouter,openai/gpt-6-sol
+gpt-6-sol-pro,models_dev,kilo/openai/gpt-6-sol-pro
+gpt-6-sol-pro,openrouter,openai/gpt-6-sol-pro
 gpt-audio,models_dev,kilo/openai/gpt-audio
 gpt-audio,openai_api,gpt-audio
 gpt-audio,openai_api,gpt-audio-2025-08-28
@@ -1289,9 +1304,11 @@ mimo-v2-5-pro,models_dev,cline-pass/cline-pass/mimo-v2.5-pro
 mimo-v2-5-pro,openrouter,xiaomi/mimo-v2.5-pro
 mimo-v2-5-pro-base,huggingface,XiaomiMiMo/MiMo-V2.5-Pro-Base
 mimo-v2-6-distill-qwen-9b,huggingface,XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B
+mimo-v2-6-flash,models_dev,cline-pass/cline-pass/mimo-v2.6-flash
 mimo-v2-6-flash,models_dev,crossmodel/xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash,openrouter,xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-RL
+mimo-v2-6-pro,models_dev,cline-pass/cline-pass/mimo-v2.6-pro
 mimo-v2-6-pro,models_dev,crossmodel/xiaomi/mimo-v2.6-pro
 mimo-v2-6-pro,openrouter,xiaomi/mimo-v2.6-pro
 mimo-v2-6-pro-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Pro-RL
@@ -1474,6 +1491,7 @@ muse-spark-1-3,models_dev,empiriolabs/muse-spark-1-3
 muse-spark-1-3,models_dev,kilo/meta/muse-spark-1.3
 muse-spark-1-3,openrouter,meta/muse-spark-1.3
 muse-spark-1-3-contributor,models_dev,bothub/muse-spark-1.3-contributor
+muse-spark-1-3-contributor,models_dev,cline-pass/cline-pass/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
@@ -1883,6 +1901,8 @@ qwen3-8-max,models_dev,cline-pass/cline-pass/qwen3.8-max
 qwen3-8-max,models_dev,venice/qwen-3-8-max
 qwen3-8-max,openrouter,qwen/qwen3.8-max
 qwen3-8-max,openrouter,qwen/qwen3.8-max-0902
+qwen3-8-omni-flash,models_dev,aihubmix/qwen3.8-omni-flash
+qwen3-8-omni-flash,openrouter,qwen/qwen3.8-omni-flash
 qwen3-8b,epoch,Qwen3-8B
 qwen3-8b,huggingface,Qwen/Qwen3-8B
 qwen3-8b,models_dev,nano-gpt/qwen/Qwen3-8B
