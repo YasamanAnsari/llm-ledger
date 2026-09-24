@@ -8,29 +8,29 @@ or a platform reported its own event), and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1182; events: 1981
-- Models: curated 56, corroborated 594, single-source 532
-- Event confidence: verified 984, inferred 991, disputed 6
+- Models: 1187; events: 1996
+- Models: curated 56, corroborated 597, single-source 534
+- Event confidence: verified 987, inferred 1003, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 85 | 166 | 2 | 69 | 14 | 53% |
-| OpenAI | 67 | 270 | 19 | 43 | 5 | 74% |
+| Alibaba | 86 | 168 | 2 | 70 | 14 | 53% |
+| OpenAI | 67 | 274 | 19 | 43 | 5 | 73% |
 | ByteDance | 53 | 66 | 0 | 23 | 30 | 41% |
 | RWKV | 50 | 50 | 0 | 12 | 38 | 24% |
+| EleutherAI | 49 | 49 | 0 | 1 | 48 | 2% |
+| Meta | 48 | 96 | 4 | 21 | 23 | 34% |
 | AI2 | 47 | 47 | 0 | 11 | 36 | 23% |
-| EleutherAI | 47 | 47 | 0 | 1 | 46 | 2% |
-| Meta | 47 | 93 | 4 | 21 | 22 | 35% |
 | Google | 46 | 125 | 7 | 24 | 15 | 46% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
-| Ant Group | 45 | 54 | 0 | 32 | 13 | 63% |
-| DeepSeek | 43 | 92 | 3 | 26 | 14 | 59% |
+| Ant Group | 45 | 53 | 0 | 32 | 13 | 64% |
+| DeepSeek | 43 | 94 | 3 | 26 | 14 | 57% |
 | Shanghai AI Lab | 43 | 43 | 0 | 34 | 9 | 79% |
 | Cohere | 36 | 47 | 2 | 8 | 26 | 23% |
 | IBM | 35 | 40 | 0 | 4 | 31 | 10% |
-| Zhipu | 34 | 74 | 3 | 24 | 7 | 62% |
+| Zhipu | 35 | 77 | 3 | 25 | 7 | 61% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Mistral | 31 | 69 | 3 | 20 | 8 | 45% |
 | NVIDIA | 29 | 43 | 0 | 12 | 17 | 28% |
@@ -40,7 +40,7 @@ as settled.
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | Anthropic | 23 | 114 | 8 | 12 | 3 | 69% |
-| Xiaomi | 23 | 31 | 0 | 18 | 5 | 58% |
+| Xiaomi | 23 | 31 | 0 | 19 | 4 | 61% |
 | Microsoft | 21 | 25 | 0 | 10 | 11 | 44% |
 | Stability | 21 | 21 | 0 | 9 | 12 | 43% |
 | StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
@@ -62,10 +62,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 947 | 376 | 570 | 1 |
-| platform_availability | 291 | 289 | 0 | 2 |
-| api_ga | 221 | 56 | 164 | 1 |
-| retired | 215 | 116 | 99 | 0 |
+| weights_released | 950 | 377 | 572 | 1 |
+| platform_availability | 293 | 291 | 0 | 2 |
+| retired | 224 | 116 | 108 | 0 |
+| api_ga | 222 | 56 | 165 | 1 |
 | announced | 207 | 49 | 157 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |

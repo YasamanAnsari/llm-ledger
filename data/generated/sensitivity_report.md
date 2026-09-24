@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1166
+- models with an anchor event: 1171
 - models with announced + an availability event: 186

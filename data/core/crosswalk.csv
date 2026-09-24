@@ -298,6 +298,7 @@ deepseek-v4-flash,openrouter,deepseek/deepseek-v4-flash
 deepseek-v4-flash-dspark,huggingface,deepseek-ai/DeepSeek-V4-Flash-DSpark
 deepseek-v4-flash-vision-exp,huggingface,deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
 deepseek-v4-flash-vision-exp,models_dev,above/deepseek-v4-flash-vision-exp
+deepseek-v4-flash-vision-exp,models_dev,aihubmix/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,models_dev,crossmodel/deepseek/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,openrouter,deepseek/deepseek-v4-flash-vision-exp
 deepseek-v4-pro,epoch,DeepSeek-V4-Pro
@@ -620,6 +621,8 @@ glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
 glm-5-3-flash,openrouter,z-ai/glm-5.3-flash
 glm-5-3-flashx,models_dev,vercel/zai/glm-5.3-flashx
 glm-5-3-flashx,openrouter,z-ai/glm-5.3-flashx
+glm-5-3-prime,models_dev,kilo/z-ai/glm-5.3-prime
+glm-5-3-prime,openrouter,z-ai/glm-5.3-prime
 glm-5-turbo,models_dev,venice/z-ai-glm-5-turbo
 glm-5-turbo,openrouter,z-ai/glm-5-turbo
 glm-5v-turbo,models_dev,cortecs/glm-5v-turbo
@@ -839,11 +842,13 @@ gpt-6-astra,openai_api,gpt-6-astra
 gpt-6-astra,openrouter,openai/gpt-6-astra
 gpt-6-astra-pro,models_dev,kilo/openai/gpt-6-astra-pro
 gpt-6-astra-pro,openrouter,openai/gpt-6-astra-pro
+gpt-6-luna,models_dev,aihubmix/gpt-6-luna
 gpt-6-luna,models_dev,azure/gpt-6-luna
 gpt-6-luna,openai_api,gpt-6-luna
 gpt-6-luna,openrouter,openai/gpt-6-luna
 gpt-6-luna-pro,models_dev,kilo/openai/gpt-6-luna-pro
 gpt-6-luna-pro,openrouter,openai/gpt-6-luna-pro
+gpt-6-sol,models_dev,aihubmix/gpt-6-sol
 gpt-6-sol,models_dev,azure/gpt-6-sol
 gpt-6-sol,openai_api,gpt-6-sol
 gpt-6-sol,openrouter,openai/gpt-6-sol
@@ -1217,6 +1222,7 @@ llama-3-2-1b-instruct,epoch,Llama 3.2 1B
 llama-3-2-1b-instruct,huggingface,meta-llama/Llama-3.2-1B-Instruct
 llama-3-2-1b-instruct,models_dev,pioneer/meta-llama/Llama-3.2-1B-Instruct
 llama-3-2-1b-instruct,openrouter,meta-llama/llama-3.2-1b-instruct
+llama-3-2-1b-instruct-spinquant-int4-eo8,huggingface,meta-llama/Llama-3.2-1B-Instruct-SpinQuant_INT4_EO8
 llama-3-2-3b,huggingface,meta-llama/Llama-3.2-3B
 llama-3-2-3b-instruct,epoch,Llama 3.2 3B
 llama-3-2-3b-instruct,huggingface,meta-llama/Llama-3.2-3B-Instruct
@@ -1312,6 +1318,7 @@ mimo-v2-6-pro,models_dev,cline-pass/cline-pass/mimo-v2.6-pro
 mimo-v2-6-pro,models_dev,crossmodel/xiaomi/mimo-v2.6-pro
 mimo-v2-6-pro,openrouter,xiaomi/mimo-v2.6-pro
 mimo-v2-6-pro-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Pro-RL
+mimo-v2-6-pro-ultraspeed,models_dev,above/mimo-v2.6-pro-ultraspeed
 mimo-v2-6-pro-ultraspeed,models_dev,empiriolabs/mimo-v2-6-pro-ultraspeed
 mimo-v2-6-pro-ultraspeed,openrouter,xiaomi/mimo-v2.6-pro-ultraspeed
 mimo-v2-flash,epoch,MiMo-V2-Flash
@@ -1681,6 +1688,7 @@ pythia-12b,huggingface,EleutherAI/pythia-12b
 pythia-12b-deduped,huggingface,EleutherAI/pythia-12b-deduped
 pythia-14m,huggingface,EleutherAI/pythia-14m
 pythia-14m-deduped,huggingface,EleutherAI/pythia-14m-deduped
+pythia-14m-seed6,huggingface,EleutherAI/pythia-14m-seed6
 pythia-160m,huggingface,EleutherAI/pythia-160m
 pythia-160m-data-seed1,huggingface,EleutherAI/pythia-160m-data-seed1
 pythia-160m-data-seed2,huggingface,EleutherAI/pythia-160m-data-seed2
@@ -1719,6 +1727,7 @@ pythia-6-9b-deduped,huggingface,EleutherAI/pythia-6.9b-deduped
 pythia-70m-deduped,huggingface,EleutherAI/pythia-70m-deduped
 pythia-70m-seed1,huggingface,EleutherAI/pythia-70m-seed1
 pythia-70m-seed2,huggingface,EleutherAI/pythia-70m-seed2
+pythia-70m-seed3,huggingface,EleutherAI/pythia-70m-seed3
 qianfan-ocr,huggingface,baidu/Qianfan-OCR
 qianfan-vl-3b,huggingface,baidu/Qianfan-VL-3B
 qianfan-vl-70b,huggingface,baidu/Qianfan-VL-70B
@@ -1901,6 +1910,8 @@ qwen3-8-max,models_dev,cline-pass/cline-pass/qwen3.8-max
 qwen3-8-max,models_dev,venice/qwen-3-8-max
 qwen3-8-max,openrouter,qwen/qwen3.8-max
 qwen3-8-max,openrouter,qwen/qwen3.8-max-0902
+qwen3-8-max-prime,models_dev,kilo/qwen/qwen3.8-max-prime
+qwen3-8-max-prime,openrouter,qwen/qwen3.8-max-prime
 qwen3-8-omni-flash,models_dev,aihubmix/qwen3.8-omni-flash
 qwen3-8-omni-flash,openrouter,qwen/qwen3.8-omni-flash
 qwen3-8b,epoch,Qwen3-8B
@@ -2135,6 +2146,7 @@ step-3-7-flash,huggingface,stepfun-ai/Step-3.7-Flash-FP8
 step-3-7-flash,models_dev,nvidia/stepfun-ai/step-3.7-flash
 step-3-7-flash,openrouter,stepfun/step-3.7-flash
 step-5-preview,epoch,Step 5 Preview
+step-5-preview,models_dev,aihubmix/step-5-preview
 step-5-preview,models_dev,empiriolabs/step-5-preview
 step3,huggingface,stepfun-ai/step3
 step3,huggingface,stepfun-ai/step3-fp8

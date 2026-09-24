@@ -115,6 +115,7 @@ glm-5-2,,toggleable,high|max,,,false,1048576,,text,text,,true,,,1.19,3.74,,2026-
 glm-5-3,true,,,,,,1000000,131072,text,text,,true,,,1.4,4.4,0.26,2026-09-01,https://models.dev/api.json
 glm-5-3-flash,true,,,,,,1048576,131072,text|image|video,text,,true,,,0.15,0.5,0.03,2026-09-01,https://models.dev/api.json
 glm-5-3-flashx,true,,,,,,1000000,131072,text|image,text,,true,,,0.37,1.25,0.075,2026-09-19,https://models.dev/api.json
+glm-5-3-prime,true,,,,,,1000000,131072,text,text,,true,,,2.8,8.8,0.56,2026-09-24,https://models.dev/api.json
 glm-5-turbo,true,,,,,,200000,32768,text,text,,true,,,1.2,4,0.24,2026-09-01,https://models.dev/api.json
 glm-5v-turbo,true,,,,,,202752,202752,text|image,text,,true,,,1.186,3.955,0.296,2026-09-01,https://models.dev/api.json
 gpt-3-5,,none,,,,,16385,4096,text,text,2021-09-01,false,false,false,0.50,1.50,,2026-08-25,https://developers.openai.com/api/docs/models/gpt-3.5-turbo
@@ -355,6 +356,7 @@ qwen3-8-2-4t-a95b,true,,,,,,262000,262000,text|image,text,,true,,,2,6,0.5,2026-0
 qwen3-8-27b,true,,,,,,327680,65536,text|image,text,,true,,,0.3,2.5,,2026-09-01,https://models.dev/api.json
 qwen3-8-flash,true,,,,,,1000000,131072,text|image|video,text,,true,,,0.15,0.47,0.016,2026-09-01,https://models.dev/api.json
 qwen3-8-max,true,,,,,,1000000,131072,text|image|video|pdf,text,,true,,,2,6,0.25,2026-09-01,https://models.dev/api.json
+qwen3-8-max-prime,true,,,,,,1000000,131072,text|image|video,text,,true,,,4,12,0.5,2026-09-24,https://models.dev/api.json
 qwen3-8-omni-flash,true,,,,,,1000000,131072,text|image|audio|video,text,,true,,,0.1126,0.380025,0.014075,2026-09-23,https://models.dev/api.json
 qwen3-8b,false,none,,,,,41000,32768,text,text,,false,,,0.47,0.47,0.235,2026-09-01,https://models.dev/api.json
 qwen3-coder,false,none,,,,,262144,65536,text,text,2025-04,true,,,0,0,,2026-09-01,https://models.dev/api.json
