@@ -7,8 +7,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
+import schema
 from build import (LATEST_COLUMNS, _agent_section, build_reschedule_rows, compute_derived,
-                   latest_first)
+                   latest_first, latest_pull_date)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -203,3 +204,19 @@ def test_agent_section_counts_agent_only_models_and_the_last_week_of_declines() 
     text = "\n".join(_agent_section([agent, machine], declined))
     assert "single-source inferred 1" in text and "listed yet (withdrawn after 60 days unless one does): 1" in text
     assert "| budget | 4 |" in text and "| not_a_model | 3 |" in text
+
+
+def test_data_as_of_is_the_newest_pull_that_stored_a_payload() -> None:
+    import json
+    import tempfile
+    saved = schema.RAW_DIR
+    schema.RAW_DIR = Path(tempfile.mkdtemp())
+    try:
+        for day, manifest in (("2026-10-01", {"a.json": {"sha256": "x"}}),
+                              ("2026-10-03", {}),                     # the pull failed
+                              ("2026-10-02", {"a.json": {"sha256": "y"}})):
+            (schema.RAW_DIR / "src" / day).mkdir(parents=True)
+            (schema.RAW_DIR / "src" / day / "manifest.json").write_text(json.dumps(manifest))
+        assert latest_pull_date() == "2026-10-02"
+    finally:
+        schema.RAW_DIR = saved

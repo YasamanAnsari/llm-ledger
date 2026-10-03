@@ -32,6 +32,16 @@ Data corrections update rows in place; this file preserves the history.
   fill in family, variant and access type for agent-found models. One
   model moves from curated to corroborated (`north-mini-code`). The
   coverage report gains a section on what the agent wrote and declined.
+- The agent reads each new post on a vendor's blog index as its own page,
+  extracts with a fixed output schema and a rule that products, plans and
+  customer stories are not model events, and stops at $1 a run or $30 a
+  month. Every refusal is counted by reason in `data/agent_declined.csv`.
+  Its extraction precision is measured on pages it read before and is
+  published in `docs/methodology.md`.
+- `Meta Superintelligence Labs` is an alias of `meta`, so posts signed by
+  the lab count as Meta's own.
+- The README stats paragraph opens with the date of the latest source
+  pull.
 
 ## 2026-09-14
 

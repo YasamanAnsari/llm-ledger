@@ -75,7 +75,7 @@ than lost.
 
 - `verified`: a curator read a primary source (`verified_by` is a
   person's name, or `llm-ledger` / `llm-ledger-agent` when the project's
-  LLM-assisted curation did the reading), or `verified_by=llm-ledger`
+  LLM-assisted curation did the reading and a catalog agreed), or `verified_by=llm-ledger`
   on a machine row: two independent machine sources agree within two
   days, or a platform reported its own event (OpenRouter's listing date, Azure's retirement schedule).
 - `inferred`: one machine source, or sources that differ by 3-30 days.
@@ -112,6 +112,46 @@ the date. The next run applies it (an accepted `fuzzy_match` joins with
 method `reviewed`) and never queues that item again.
 
 Monthly: rebuild, append `CHANGELOG.md`, tag `vYYYY.MM`.
+
+### The page-reading agent
+
+Catalogs do not see an announcement until a model is listed. A daily
+agent covers the gap: it watches vendor feeds, blog indexes (each new
+post link is read as its own page, so a row cites the post, never the
+index), changelogs and deprecation tables, and asks an LLM to name the
+model, the event and the date, with a quote. Nothing it writes is checked
+by a person before it is published, so every row is filtered by rules
+instead:
+
+- the quote must be on the page, the date must be plausible for the
+  page, and only the maker's own outlet can date the maker's events;
+- a new model is created only from a launch event whose quote names it,
+  and never for a product, plan or bare family name (ChatGPT Enterprise,
+  Claude Platform on AWS, "Claude");
+- a row that agrees with the catalog claims already on record replaces
+  that machine row as `verified`; a row that disagrees is not written; a
+  row with no other source is published as `inferred` with `notes`
+  starting `single source`, and a catalog stating the same date later
+  makes it `verified`;
+- it never touches a slot a person or an earlier row already holds, and
+  each row must keep `validate` green on its own;
+- a model only the agent has seen is withdrawn, with a `CHANGELOG.md`
+  line, if no catalog, Hub repo or vendor API lists it within 60 days;
+- spend is capped at $1 a run and $30 a month.
+
+Each refusal gets a reason code (`not_a_model`, `third_party_claim`,
+`disagrees_with_record`, `budget`, ...); `data/agent_declined.csv` counts
+them per day and `coverage_report.md` shows the last week. Rows the agent
+wrote carry `verified_by=llm-ledger-agent`; filter on it to exclude them.
+
+Measured extraction quality: on 15 pages it read between March and
+October 2026 (6 launch posts with 13 attested events, and 9 pages that an
+earlier version of the agent misread: customer stories, guides, product
+and region announcements), 19 of 20 extracted candidates were correct
+(95% precision) and all 13 events were found. The one error read
+availability on Cohere's managed platform as API availability. The set is
+small; the figure is a floor check, not a guarantee, and is re-measured
+when the prompt or model changes.
 
 Fixes edit the row. `record_created` / `record_updated` and the
 changelog keep history.

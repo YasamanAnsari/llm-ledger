@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import csv
 import io
+import json
 import re
 import sys
 from collections import Counter
@@ -301,7 +302,18 @@ README_STATS_START = "<!-- stats:start -->"
 README_STATS_END = "<!-- stats:end -->"
 
 
-def build_readme_stats(models: list, events: list, claims: list, organizations: list) -> str:
+def latest_pull_date() -> str:
+    """Newest day on which any source pull stored a payload, read from the
+    committed manifests so a rebuild anywhere prints the same date."""
+    days = [m.parent.name for m in schema.RAW_DIR.glob("*/*/manifest.json")
+            if any("sha256" in entry for entry in json.loads(m.read_text(encoding="utf-8")).values())]
+    if not days:
+        raise FileNotFoundError(f"no raw manifest under {schema.RAW_DIR} records a payload")
+    return max(days)
+
+
+def build_readme_stats(models: list, events: list, claims: list, organizations: list,
+                       data_as_of: str) -> str:
     """The README's headline paragraph, computed so it can never go stale."""
     n = len(models)
     conf = Counter(e["confidence"] for e in events)
@@ -320,7 +332,7 @@ def build_readme_stats(models: list, events: list, claims: list, organizations: 
         return f"{100 * part / whole:.0f}%" if whole else "0%"
 
     return "\n".join([
-        f"Exact counts as of the last rebuild: {n} models from "
+        f"Data as of {data_as_of}, the latest source pull. Exact counts: {n} models from "
         f"{len({m['developer_org_id'] for m in models})} organizations, {len(events)} dated "
         f"events, backed by {len(live_claims(claims))} live source claims. First availability runs from "
         f"{dated[0]} to {dated[-1]}. {pct(len(open_w), n)} of the models are open-weight; "
@@ -350,7 +362,7 @@ def build_readme_bytes() -> bytes:
     stats = build_readme_stats(
         compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS)),
         schema.read_table(EVENTS), schema.read_table(schema.CLAIMS),
-        schema.read_table(schema.ORGANIZATIONS))
+        schema.read_table(schema.ORGANIZATIONS), latest_pull_date())
     return render_readme(readme.read_text(encoding="utf-8"), stats).encode("utf-8")
 
 
