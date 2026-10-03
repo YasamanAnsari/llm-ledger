@@ -44,9 +44,11 @@ from schema import CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
 HF_BACKFILL_DATE = "2022-03-02"
 
 # Conversion/adapter markers: these repos repackage an existing checkpoint.
+# Intermediate training checkpoints are snapshots of a run, not releases.
 EXCLUDE_NAME_RE = re.compile(
     r"(gguf|awq|gptq|exl2|onnx|openvino|mlx|-mxfp4|-nvfp4|w4a16|w8a8|"
-    r"-4bit|-8bit|-fp4|-bnb|bitsandbytes|-lora|-adapter|-dpo-lora)",
+    r"-4bit|-8bit|-fp4|-bnb|bitsandbytes|-lora|-adapter|-dpo-lora|"
+    r"[-_]step-?\d|intermediate|[-_]checkpoints?$)",
     re.IGNORECASE,
 )
 EXCLUDE_TAGS = {"gguf", "awq", "gptq", "onnx", "mlx", "peft", "lora", "adapter"}
@@ -99,7 +101,11 @@ def classify(key: str, org_id: str) -> str:
 def in_scope(row: dict) -> bool:
     """A language/vision-language checkpoint under its own name: not a
     quantization, adapter, alias or out-of-scope product."""
-    if row["pipeline_tag"] not in ("text-generation", "image-text-to-text"):
+    tags = set(row["tags"].lower().split("|"))
+    # Mistral ships its weights in its own format, so the Hub infers no
+    # pipeline tag; a repo that declares vLLM serving is still a generator.
+    untagged_generator = not row["pipeline_tag"] and "vllm" in tags
+    if row["pipeline_tag"] not in ("text-generation", "image-text-to-text") and not untagged_generator:
         return False
     name = row["repo_id"].split("/")[-1]
     if EXCLUDE_NAME_RE.search(name):
@@ -107,7 +113,7 @@ def in_scope(row: dict) -> bool:
     key = matchmod.normalize_name(row["repo_id"])["key"]
     if matchmod.is_alias_key(key) or matchmod.is_out_of_scope_key(key):
         return False
-    return not set(row["tags"].lower().split("|")) & EXCLUDE_TAGS
+    return not tags & EXCLUDE_TAGS
 
 
 def include(row: dict) -> bool:

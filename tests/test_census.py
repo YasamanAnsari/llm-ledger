@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import schema
-from hf_census import census, unmapped_namespace_leads
+from hf_census import census, in_scope, unmapped_namespace_leads
 
 TODAY, NOW = date(2026, 10, 1), "2026-10-01T00:00:00+00:00"
 
@@ -88,3 +88,13 @@ def test_unmapped_namespaces_become_one_lead_each():
     (lead,) = unmapped_namespace_leads(repos)
     assert (lead["kind"], lead["left_key"]) == ("hf_unmapped_namespace", "newlab")
     assert lead["note"].startswith("2 in-scope repos")
+
+
+def test_untagged_repo_counts_only_when_it_declares_vllm_serving():
+    # Real Hub rows: Mistral's own-format weights carry no pipeline tag.
+    assert in_scope(_repo("mistralai/Magistral-Small-2506", "mistral", "2025-06-04", tag="",
+                          tags="vllm|safetensors|mistral|mistral-common"))
+    assert not in_scope(_repo("google/electra-base-discriminator", "google", "2022-03-02", tag="",
+                              tags="transformers|pytorch|electra|pretraining|en"))
+    assert not in_scope(_repo("google/flan-t5-base", "google", "2022-10-21", tag="",
+                              tags="transformers|text-generation-inference"))

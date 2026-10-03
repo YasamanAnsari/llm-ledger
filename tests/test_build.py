@@ -45,6 +45,22 @@ def test_tie_priority_weights_over_api():
     assert row["first_availability_via"] == "weights_released"
 
 
+def test_person_read_launch_beats_a_late_unverified_listing():
+    # Llama 3.1 405B Instruct: launched on Bedrock on 2024-07-23, then one
+    # reseller listed it on 2026-09-10 and models.dev called that a release.
+    launch = [_event("m1", "announced", "2024-07-23", confidence="verified"),
+              {**_event("m1", "platform_availability", "2024-07-23", confidence="verified"),
+               "source_type": "vendor_blog", "verified_by": "llm-ledger"}]
+    (row,) = compute_derived([_model()], launch + [_event("m1", "weights_released", "2026-09-10")])
+    assert row["first_public_availability_date"] == "2024-07-23"
+    assert row["first_availability_via"] == "platform_availability_fallback"
+    assert row["first_availability_confidence"] == "verified"
+    # 155 days is GPT-4 Turbo's real preview-to-GA wait: a gap that short
+    # keeps the GA date as the headline.
+    (row,) = compute_derived([_model()], launch + [_event("m1", "api_ga", "2024-12-25")])
+    assert row["first_public_availability_date"] == "2024-12-25"
+
+
 def test_fallback_suffix():
     events = [_event("m1", "api_preview", "2025-02-01")]
     (row,) = compute_derived([_model()], events)

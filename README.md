@@ -96,7 +96,10 @@ Operating rules that fall out of this:
 - Hugging Face `createdAt` of 2022-03-02 is a backfill, never a weights
   date. The Hub sweep keeps the top 40 repos per lab by downloads
   (`PER_ORG_CAP` in `pipeline/hf_census.py`); repos already in the ledger
-  stay tracked when they fall out of the top 40.
+  stay tracked when they fall out of the top 40. A repo counts when the
+  Hub tags it `text-generation` or `image-text-to-text`, or when it has no
+  tag but declares vLLM serving (Mistral's own-format weights carry no
+  tag). Intermediate training checkpoints are not releases.
 - Names: exact match first. Fuzzy score >= 97 joins; 92-97 waits for a
   person; below 92 is no match.
 - We looked for Chinese labs on purpose: their Hugging Face namespaces
@@ -107,7 +110,8 @@ Operating rules that fall out of this:
   sits in `data/staging/review_queue.csv` until a vendor page, Hub
   timestamp, or arXiv v1 backs it.
 - A repo re-hosted under another lab's namespace is a lead, not a
-  release. Packaging suffixes (FP8, BF16, INT4, an `-hf` conversion)
+  release. Packaging suffixes (FP8, BF16, INT4, an `-hf` or `-vllm`
+  conversion, a Petals build)
   never create a second model. API aliases (`-latest`, `deepseek-chat`)
   are not models. Image, video and music generators, embeddings and
   rerankers are out of scope by name.

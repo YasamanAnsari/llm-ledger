@@ -40,7 +40,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import schema
 import sensitivity
 from confidence import (AGENT_VERIFIER, PROJECT_VERIFIERS, curated_model_ids, is_machine_row,
-                        live_claims)
+                        is_person_verified, live_claims)
 from schema import (
     ATTRIBUTES, AVAILABILITY_EVENT_TYPES, EVENTS,
     FALLBACK_AVAILABILITY_EVENT_TYPES, GENERATED_DIR, MODELS,
@@ -49,6 +49,12 @@ from schema import (
 # Tie priority for first_availability_via.
 VIA_PRIORITY = ("weights_released", "api_ga", "consumer_rollout")
 FALLBACK_VIA_PRIORITY = ("api_preview", "free_tier", "platform_availability")
+ANY_AVAILABILITY = (AVAILABILITY_EVENT_TYPES | FALLBACK_AVAILABILITY_EVENT_TYPES
+                    | {"platform_availability"})
+
+# An unverified first availability this long after the announcement is
+# usually a reseller's late listing or a successor sharing the name.
+LONG_GAP_DAYS = 180
 
 # Stable pivot order for the wide file.
 WIDE_EVENT_ORDER = (
@@ -121,12 +127,29 @@ def compute_derived(models: list, events: list) -> list:
                 first_date, via = chosen["date"], chosen["event_type"] + "_fallback"
                 via_precision, via_confidence = chosen["precision"], chosen.get("confidence", "")
 
+        announced = _earliest_global(events, mid, {"announced"})
+        # The tiers rank event types, not evidence: an unverified date long
+        # after the announcement is a late listing when a person read an
+        # earlier launch, so the person-read launch headlines instead.
+        # ponytail: LONG_GAP_DAYS is a fixed line; a real 7-month preview-to-GA
+        # gap with an unverified GA date would be overridden too.
+        late = (announced and first_date and via_confidence != "verified"
+                and (date.fromisoformat(first_date)
+                     - date.fromisoformat(announced[0]["date"])).days > LONG_GAP_DAYS)
+        person_read = [e for e in _earliest_global(events, mid, ANY_AVAILABILITY, HEADLINE_PRECISIONS)
+                       if is_person_verified(e) and e["date"] < first_date] if late else []
+        if person_read:
+            chosen = _pick_first(person_read, VIA_PRIORITY + FALLBACK_VIA_PRIORITY)
+            first_date, via = chosen["date"], chosen["event_type"]
+            if via not in AVAILABILITY_EVENT_TYPES:
+                via += "_fallback"
+            via_precision, via_confidence = chosen["precision"], "verified"
+
         row["first_public_availability_date"] = first_date
         row["first_availability_via"] = via
         row["first_availability_confidence"] = via_confidence
 
         anticipation = ""
-        announced = _earliest_global(events, mid, {"announced"})
         if announced and first_date:
             ann = announced[0]
             precisions_ok = {ann["precision"], via_precision} <= {"day", "month"}
@@ -537,10 +560,27 @@ GENERATED_ARTIFACTS = (
 )
 
 
+def long_gap_review_rows(models: list) -> list:
+    """One review row per model whose unverified first availability falls
+    more than LONG_GAP_DAYS after its announcement; a person decides."""
+    return [{
+        "kind": "long_announce_gap", "left_source": "ledger", "left_key": m["model_id"],
+        "right_source": "", "right_key": "", "score": m["anticipation_days"],
+        "note": (f"{m['first_availability_via']} {m['first_public_availability_date']} is "
+                 f"{m['anticipation_days']}d after the announcement and unverified: "
+                 "confirm the launch date or reject the later listing"),
+    } for m in models
+        if m["anticipation_days"] and int(m["anticipation_days"]) > LONG_GAP_DAYS
+        and m["first_availability_confidence"] != "verified"]
+
+
 def main() -> int:
     models = compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS))
     schema.write_table(MODELS, models)
     print("build: derived fields recomputed on data/core/models.csv")
+    gaps = long_gap_review_rows(models)
+    schema.merge_review_queue(gaps, replace_kinds=("long_announce_gap",))
+    print(f"build: {len(gaps)} long announce-to-availability gap(s) queued for review")
 
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     for filename, regenerate in GENERATED_ARTIFACTS:

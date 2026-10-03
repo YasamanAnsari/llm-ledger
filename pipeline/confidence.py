@@ -175,14 +175,17 @@ def is_machine_row(row: dict) -> bool:
     return row.get("source_type", "") in MACHINE_SOURCE_TYPES
 
 
+def is_person_verified(row: dict) -> bool:
+    """A verified event a person read from a primary page."""
+    return (row.get("confidence") == "verified" and not is_machine_row(row)
+            and row.get("verified_by") != AGENT_VERIFIER)
+
+
 def curated_model_ids(events: list) -> set:
-    """Models with a verified event that a person read from a primary page.
-    Loaders never rewrite these models' curated fields; everything else,
-    including models only the agent has dated, is machine-owned and
-    re-derived on every run."""
-    return {e["model_id"] for e in events
-            if e.get("confidence") == "verified" and not is_machine_row(e)
-            and e.get("verified_by") != AGENT_VERIFIER}
+    """Models with a person-verified event. Loaders never rewrite these
+    models' curated fields; everything else, including models only the
+    agent has dated, is machine-owned and re-derived on every run."""
+    return {e["model_id"] for e in events if is_person_verified(e)}
 
 
 def claim_to_row(event_id: str, c: Claim) -> dict:

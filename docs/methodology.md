@@ -17,9 +17,16 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    Baidu, Tencent, MiniMax, ByteDance, Meituan, Xiaomi, 01.AI, Baichuan,
    iFlytek, StepFun, Shanghai AI Lab, OpenBMB, IEIT, Skywork, RWKV,
    Ant Group
-3. Other open-weight models (Hugging Face; ModelScope for the Chinese
+3. Other labs swept by name: Korea (LG AI Research, NAVER, Kakao,
+   Upstage), Japan (Sakana AI, Preferred Networks, rinna), Europe (Aleph
+   Alpha, Kyutai, Swiss AI), Russia (Sber, Yandex), the Gulf and India
+   (MBZUAI, Sarvam), China (SenseTime, Kuaishou), and US labs outside
+   tier 1 (Apple, Salesforce, ServiceNow, Arcee, Prime Intellect, Zyphra,
+   Writer, Inception Labs, Thinking Machines, Poolside), plus BigScience
+   and TinyLlama for the open-model history
+4. Other open-weight models (Hugging Face; ModelScope for the Chinese
    labs)
-4. Older models (GPT-1/2/3, BERT era), usually as leads first
+5. Older models (GPT-1/2/3, BERT era), usually as leads first
 
 ## How we date a row
 

@@ -72,6 +72,7 @@ FORMAT_TOKENS = {
     "fp8", "fp16", "bf16", "fp4", "nvfp4", "mxfp4", "mxfp8", "int4", "int8",
     "w4a16", "w8a8", "w4afp8", "w4a8c8", "2bits", "4bits", "8bits", "4bit",
     "8bit", "tp2", "tp4", "tp8", "hf", "pth", "paddle", "safetensors",
+    "block", "vllm", "petals",
 }
 
 # Date-like suffixes marking a dated snapshot of an alias.

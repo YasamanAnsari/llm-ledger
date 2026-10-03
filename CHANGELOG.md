@@ -5,6 +5,25 @@ Data corrections update rows in place; this file preserves the history.
 
 ## 2026-10-03
 
+- 28 labs added to the sweep: LG AI Research, NAVER, Kakao, Upstage,
+  Sakana AI, Preferred Networks, rinna, Aleph Alpha, Kyutai, Swiss AI,
+  Sber, Yandex, MBZUAI, Sarvam, SenseTime, Kuaishou, Apple, Salesforce,
+  ServiceNow, Arcee, Prime Intellect, Zyphra, Writer, Inception Labs,
+  Thinking Machines, Poolside, BigScience and TinyLlama; Meta's older
+  `facebook` Hub namespace now counts as Meta.
+- The Hub sweep had dropped 57 of Mistral's 60 repos, Magistral among
+  them: Mistral's own-format weights carry no pipeline tag. An untagged
+  repo that declares vLLM serving now counts. Hub repos that repeat a
+  Mistral model already on record under its API name are pinned to that
+  model in the crosswalk. Intermediate training checkpoints and `-vllm`,
+  `-fp8-block` and Petals repackagings are not separate models.
+- Llama 3.1 405B Instruct read 2026-09-10, a single reseller's listing that
+  models.dev called a weights release; it now reads 2024-07-23, the
+  Bedrock and Vertex launch a person verified. An unverified first
+  availability more than 180 days after the announcement gives way to an
+  earlier person-verified launch, and otherwise goes to the review queue
+  as `long_announce_gap`.
+
 - Validation rule 4 pairs `deprecation_announced` with `retired` within one
   platform scope. LiteLLM began listing Azure's 2025-06-06 retirement of
   GPT-4 on 2026-09-25; compared against OpenAI's own 2026-04-22 deprecation

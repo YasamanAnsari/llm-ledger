@@ -234,6 +234,11 @@ added for models without a hand-written row.
 - `first_availability_via` = the event type that achieved the minimum; ties
   broken by priority `weights_released > api_ga > consumer_rollout`
   (fallback ties: `api_preview > free_tier > platform_availability`).
+- Evidence beats tier once: when the chosen date is not `verified`, falls
+  more than 180 days after the announcement (`LONG_GAP_DAYS`), and a
+  person-verified availability event of any type is earlier, the earliest
+  person-verified event sets the date instead (a reseller listing a model
+  years after launch is not its launch).
 - `first_availability_confidence` = the `confidence` of the event that set
   the date (`verified`, `inferred`, or `disputed`); empty when undated.
 - `anticipation_days` = `first_public_availability_date - announced.date`;
@@ -311,7 +316,7 @@ rewrite the dataset.
   `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
   `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
   `hf_unmapped_namespace`, `vendor_alias_group`, `nhlocal_lead`,
-  `lifecycle_ambiguous`, ...),
+  `lifecycle_ambiguous`, `long_announce_gap`, ...),
   the two keys involved, a score and a note. Rewritten by every run.
 - `data/staging/review_decisions.csv` - append-only, hand-edited:
   `kind,left_key,right_key,decision,decided_by,decided_on,note` with

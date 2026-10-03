@@ -33,7 +33,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-09-10,weights_released,inferred,deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,DeepSeek V4,mini,llm,open_weights,
 2026-09-10,weights_released,inferred,deepseek-v4-flash-vision-exp,deepseek-v4-flash-vision-exp,deepseek,DeepSeek-V4,vision,vlm,open_weights,proprietary
 2026-09-10,weights_released,inferred,ling-3-0-flash-vl,ling-3.0-flash-vl,ant-group,Ling-3.0,vision,vlm,open_weights,
-2026-09-10,weights_released,inferred,llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,Llama 3.1,instruct,llm,open_weights,open_weights_restricted
 2026-09-08,weights_released,inferred,tiny-aya-base-32k,tiny-aya-base-32K,cohere,aya,base,llm,open_weights,open_weights_restricted
 2026-09-06,weights_released,inferred,llada-ui,LLaDA-UI,ant-group,LLaDA-UI,,vlm,open_weights,
 2026-09-06,weights_released,inferred,minicpm5-2b,MiniCPM5-2B,openbmb,MiniCPM5,,llm,open_weights,osi_approved
@@ -901,6 +900,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-07-30,weights_released,verified,internlm2-5-1-8b-chat,internlm2_5-1_8b-chat,shanghai-ai-lab,internlm2_5-1,chat,llm,open_weights,
 2024-07-30,weights_released,verified,internlm2-5-20b-chat,internlm2_5-20b-chat,shanghai-ai-lab,internlm2_5,chat,llm,open_weights,
 2024-07-28,weights_released,inferred,hermes-3-llama-3-1-8b,Hermes-3-Llama-3.1-8B,nous-research,hermes-3-llama-3.1,,llm,open_weights,open_weights_restricted
+2024-07-23,platform_availability_fallback,verified,llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,Llama 3.1,instruct,llm,open_weights,open_weights_restricted
 2024-07-23,weights_released,inferred,llama-3-1-70b-instruct,Llama 3.1-70B,meta,Llama 3.1,,llm,open_weights,
 2024-07-23,weights_released,inferred,llama-3-1-8b-instruct,Llama 3.1-8B,meta,Llama 3.1,,llm,open_weights,
 2024-07-23,weights_released,inferred,llama-3-8b-instruct,Llama 3-8B,meta,Llama 3,,llm,open_weights,

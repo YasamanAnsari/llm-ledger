@@ -127,6 +127,12 @@ hf_unmapped_namespace,huggingface,trl-internal-testing,,,,11 in-scope repos; add
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,z-lab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 lifecycle_ambiguous,litellm,groq/meta-llama/llama-4-maverick-17b-128e-instruct,ledger,crosswalk:llama-4-maverick|name:llama-4-maverick-17b-128e-instruct,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
+long_announce_gap,ledger,amazon-nova-lite,,,364,api_ga 2025-12-02 is 364d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,hunyuan-turbos,,,362,api_ga 2026-03-08 is 362d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,llama-3-1-nemotron-70b-instruct,,,185,weights_released 2025-04-15 is 185d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,qwen-turbo,,,269,api_ga 2024-11-01 is 269d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,reka-edge,,,701,api_ga 2026-03-20 is 701d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,seed-1-6,,,195,api_ga 2025-12-23 is 195d after the announcement and unverified: confirm the launch date or reject the later listing
 md_no_consensus,models_dev,MiniMax-M1,ledger,minimax-m1,,resellers disagree: 302ai:2025-06-16|kilo:2025-06-17|nano-gpt:2025-01-08|openrouter:2025-06-17|qiniu-ai:2025-08-05
 md_no_consensus,models_dev,MiniMaxAI/MiniMax-M1-80k,ledger,minimax-m1-80k,,resellers disagree: jiekou:2026-01|nano-gpt:2025-01-08|novita-ai:2025-06-17
 md_no_consensus,models_dev,NousResearch/hermes-4-405b:thinking,ledger,hermes-4-405b,,resellers disagree: cortecs:2024-08-13|kilo:2025-08-26|nano-gpt:2024-01-01|nano-gpt:2025-08-26|nebius:2026-01-30|openrouter:2025-08-26

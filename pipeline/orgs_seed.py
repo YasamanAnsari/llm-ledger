@@ -1,8 +1,9 @@
 """Curated organization seed rows and provider-name resolution.
 
-Covers the frontier/API-era commercial labs and the systematically swept
-Chinese labs. `PROVIDER_TO_ORG` maps vendor prefixes and provider slugs
-observed in Tier-1 sources to stable org_ids; models from unmapped
+Covers the frontier/API-era commercial labs, the systematically swept
+Chinese labs, and Korean, Japanese and other open-weight publishers.
+`PROVIDER_TO_ORG` maps vendor prefixes and provider slugs observed in
+Tier-1 sources to stable org_ids; models from unmapped
 providers are not loaded into core tables (they remain visible in
 matched_models.csv and the review queue).
 """
@@ -62,6 +63,47 @@ SEED_ORGS = [
     _org("eleutherai", "EleutherAI", "EleutherAI", "Eleuther AI", "US", "nonprofit", "EleutherAI"),
     _org("stability", "Stability AI", "Stability", "StabilityAI|StableLM", "GB", "startup",
          "Stability AI"),
+    _org("apple", "Apple", "Apple", "Apple Inc|Apple Intelligence|OpenELM", "US", "big_tech", "Apple"),
+    _org("salesforce", "Salesforce", "Salesforce", "Salesforce Research|Salesforce AI Research|xGen",
+         "US", "big_tech", "Salesforce"),
+    _org("servicenow", "ServiceNow", "ServiceNow", "ServiceNow AI|ServiceNow-AI|Apriel",
+         "US", "big_tech", "ServiceNow"),
+    _org("arcee", "Arcee AI", "Arcee", "Arcee|arcee-ai|Trinity", "US", "startup", "Arcee AI"),
+    _org("prime-intellect", "Prime Intellect", "Prime Intellect", "PrimeIntellect|INTELLECT",
+         "US", "startup", "Prime Intellect"),
+    _org("zyphra", "Zyphra", "Zyphra", "Zamba", "US", "startup", "Zyphra"),
+    _org("writer", "Writer", "Writer", "Writer Inc|Palmyra", "US", "startup", "Writer"),
+    _org("inception-labs", "Inception Labs", "Inception", "Inception|Mercury", "US", "startup",
+         "Inception Labs"),
+    _org("thinking-machines", "Thinking Machines Lab", "Thinking Machines",
+         "Thinking Machines|thinkingmachines|Inkling", "US", "startup", "Thinking Machines"),
+    _org("poolside", "Poolside", "Poolside", "poolside|Laguna", "US", "startup", "Poolside"),
+    _org("bigscience", "BigScience", "BigScience", "BigScience Workshop|BLOOM", "", "academic",
+         "BigScience"),
+    _org("tinyllama", "TinyLlama", "TinyLlama", "TinyLlama Project|SUTD StatNLP", "SG", "academic"),
+    _org("aleph-alpha", "Aleph Alpha", "Aleph Alpha", "Aleph-Alpha|Pharia|Luminous", "DE", "startup",
+         "Aleph Alpha"),
+    _org("kyutai", "Kyutai", "Kyutai", "Kyutai Labs|Helium", "FR", "nonprofit", "Kyutai"),
+    _org("swiss-ai", "Swiss AI Initiative", "Swiss AI", "Apertus|ETH Zurich|EPFL|CSCS", "CH",
+         "academic"),
+    _org("sber", "Sber", "Sber", "Sberbank|SberDevices|GigaChat|ai-sage", "RU", "big_tech", "Sber"),
+    _org("yandex", "Yandex", "Yandex", "YandexGPT|Alice AI", "RU", "big_tech", "Yandex"),
+    _org("mbzuai", "Mohamed bin Zayed University of Artificial Intelligence", "MBZUAI",
+         "MBZUAI|K2 Think", "AE", "academic",
+         "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)"),
+    _org("sarvam", "Sarvam AI", "Sarvam", "Sarvam|sarvamai", "IN", "startup", "Sarvam"),
+
+    # Korean and Japanese labs.
+    _org("lg", "LG AI Research", "LG AI Research", "LG|LGAI|EXAONE", "KR", "big_tech",
+         "LG AI Research"),
+    _org("naver", "NAVER", "NAVER", "Naver|NAVER Cloud|Naver Clova|HyperCLOVA X", "KR", "big_tech",
+         "NAVER"),
+    _org("kakao", "Kakao", "Kakao", "Kakao Corp|kakaocorp|Kanana", "KR", "big_tech", "Kakao"),
+    _org("upstage", "Upstage", "Upstage", "Upstage AI|Solar", "KR", "startup", "Upstage"),
+    _org("sakana", "Sakana AI", "Sakana", "Sakana|SakanaAI|Fugu", "JP", "startup"),
+    _org("pfn", "Preferred Networks", "PFN", "Preferred Networks Inc|PFN|PLaMo|pfnet", "JP",
+         "startup", "Preferred Networks Inc"),
+    _org("rinna", "rinna", "rinna", "rinna Co.", "JP", "startup", "rinna"),
 
     # Chinese labs swept on purpose.
     _org("alibaba", "Alibaba Cloud", "Alibaba",
@@ -97,6 +139,9 @@ SEED_ORGS = [
          "RWKV Foundation"),
     _org("ant-group", "Ant Group", "Ant Group", "Ling|Bailing|inclusionAI|Ant Ling",
          "CN", "big_tech", "Ant Group"),
+    _org("sensetime", "SenseTime", "SenseTime", "SenseNova|sensenova", "CN", "big_tech", "SenseTime"),
+    _org("kuaishou", "Kuaishou", "Kuaishou", "Kuaishou Technology|Kwai|Kwaipilot|Keye",
+         "CN", "big_tech", "Kuaishou Technology"),
 ]
 
 # Vendor prefixes / provider slugs (lowercased) observed in Tier-1 sources.
@@ -151,6 +196,36 @@ PROVIDER_TO_ORG = {
     "rwkv": "rwkv", "blinkdl": "rwkv",
     "ant": "ant-group", "ant-group": "ant-group", "inclusionai": "ant-group",
     "ling": "ant-group", "bailing": "ant-group",
+    "sensenova": "sensetime", "sensetime": "sensetime",
+    "kwaipilot": "kuaishou", "kwai-keye": "kuaishou", "kuaishou": "kuaishou", "keye": "kuaishou",
+    # Other labs
+    "apple": "apple", "openelm": "apple",
+    "salesforce": "salesforce", "xgen": "salesforce",
+    "servicenow": "servicenow", "servicenow-ai": "servicenow", "apriel": "servicenow",
+    "arcee": "arcee", "arcee-ai": "arcee", "trinity": "arcee",
+    "primeintellect": "prime-intellect", "prime-intellect": "prime-intellect",
+    "intellect": "prime-intellect",
+    "zyphra": "zyphra", "zamba": "zyphra",
+    "writer": "writer", "palmyra": "writer",
+    "inception": "inception-labs", "mercury": "inception-labs",
+    "thinkingmachines": "thinking-machines", "inkling": "thinking-machines",
+    "poolside": "poolside", "laguna": "poolside",
+    "bigscience": "bigscience", "bloom": "bigscience", "bloomz": "bigscience",
+    "tinyllama": "tinyllama",
+    "aleph-alpha": "aleph-alpha", "pharia": "aleph-alpha",
+    "kyutai": "kyutai", "helium": "kyutai",
+    "swiss-ai": "swiss-ai", "apertus": "swiss-ai",
+    "sber": "sber", "ai-sage": "sber", "gigachat": "sber",
+    "yandex": "yandex", "yandexgpt": "yandex",
+    "mbzuai": "mbzuai",
+    "sarvam": "sarvam", "sarvamai": "sarvam",
+    "lgai-exaone": "lg", "lgai": "lg", "exaone": "lg",
+    "naver": "naver", "naver-hyperclovax": "naver", "hyperclovax": "naver",
+    "kakao": "kakao", "kakaocorp": "kakao", "kanana": "kakao",
+    "upstage": "upstage", "solar": "upstage",
+    "sakana": "sakana", "sakanaai": "sakana", "fugu": "sakana",
+    "pfnet": "pfn", "plamo": "pfn",
+    "rinna": "rinna",
     # Family-name tokens (used when no curated vendor namespace is present)
     "gpt": "openai", "claude": "anthropic", "gemma": "google",
     "mixtral": "mistral", "ministral": "mistral", "codestral": "mistral",
