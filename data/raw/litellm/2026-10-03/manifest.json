@@ -1,7 +1,7 @@
 {
   "model_prices_and_context_window.json": {
     "bytes": 3038574,
-    "fetched_at": "2026-10-03T18:06:39+00:00",
+    "fetched_at": "2026-10-03T18:09:25+00:00",
     "sha256": "9c00432b9133e71400d4b7c2a9aed4b2f1db952c55987bcfe2fbe262b082d9a0",
     "url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
   }
