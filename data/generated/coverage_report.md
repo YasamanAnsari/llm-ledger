@@ -9,8 +9,8 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1217; events: 2066
-- Models: curated 56, corroborated 609, single-source 552
-- Event confidence: verified 1016, inferred 1044, disputed 6
+- Models: curated 56, corroborated 612, single-source 549
+- Event confidence: verified 1019, inferred 1041, disputed 6
 
 ## By organization
 
@@ -25,7 +25,7 @@ as settled.
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
 | Meta | 48 | 98 | 4 | 21 | 23 | 34% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
-| Shanghai AI Lab | 46 | 46 | 0 | 34 | 12 | 74% |
+| Shanghai AI Lab | 46 | 46 | 0 | 36 | 10 | 78% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
@@ -38,7 +38,7 @@ as settled.
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
-| Xiaomi | 25 | 33 | 0 | 21 | 4 | 64% |
+| Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
 | Anthropic | 24 | 117 | 8 | 13 | 3 | 69% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
@@ -62,7 +62,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 976 | 385 | 590 | 1 |
+| weights_released | 976 | 388 | 587 | 1 |
 | platform_availability | 297 | 295 | 0 | 2 |
 | retired | 261 | 131 | 130 | 0 |
 | api_ga | 224 | 58 | 165 | 1 |
