@@ -12,6 +12,12 @@ Data corrections update rows in place; this file preserves the history.
   run refused to publish from 2026-09-25 to 2026-10-02. No row changed by
   the rule itself; the missed days are caught up by the 2026-10-03 update
   (raw snapshots for those days were not kept).
+- Churn guard in `pipeline/validate.py`: a run that removes more than 2% of
+  the committed events, or re-dates more than 5%, is refused unless run with
+  `--allow-churn`. The daily job now also archives each day's raw pull
+  privately even when a later step fails, opens an issue when a run fails,
+  and judges each agent row on its own so one bad extraction no longer
+  holds back the others.
 
 ## 2026-09-14
 

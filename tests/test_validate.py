@@ -261,3 +261,14 @@ def test_rule13_api_only_cannot_have_weights():
     ok = _tables(models=[_model(access_type="open_weights")],
                  events=[_event(event_id="acme-1-weights_released-1", event_type="weights_released")])
     assert not any("rule13" in e for e in _errors(ok))
+
+
+def test_churn_guard_trips_on_mass_removal_or_redating():
+    previous = [{"event_id": f"m-{i}-api_ga-1", "date": "2025-01-01"} for i in range(100)]
+    assert validate.check_churn(previous, previous) == []
+    assert validate.check_churn([], previous) == []
+    two_removed = previous[2:]
+    assert validate.check_churn(previous, two_removed) == []           # exactly 2%: allowed
+    assert any("removed" in e for e in validate.check_churn(previous, previous[3:]))
+    redated = [dict(e, date="2025-02-01") if i < 6 else e for i, e in enumerate(previous)]
+    assert any("re-dated" in e for e in validate.check_churn(previous, redated))

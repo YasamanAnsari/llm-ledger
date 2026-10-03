@@ -5,11 +5,16 @@ fails. Warnings (rule 4's scheduled-future `retired` events) are printed but
 do not fail the run.
 
 Usage:
-    python pipeline/validate.py
+    python pipeline/validate.py                # rules + churn guard vs. HEAD
+    python pipeline/validate.py --allow-churn  # intentional migration
 """
 
 from __future__ import annotations
 
+import argparse
+import csv
+import io
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -29,6 +34,8 @@ from schema import (
     REASONING_VISIBILITY, SOURCE_TYPES, VARIANT_ROLES,
     date_matches_precision,
 )
+
+EVENTS_FILENAME = schema.EVENTS.filename
 
 # Event chain that must be non-decreasing in time (rule 4).
 ORDER_CHAIN = ("announced", "preview", "api_preview", "api_ga")
@@ -435,9 +442,51 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     return errors, warnings
 
 
+# One run may not remove or re-date more than this share of the events on
+# record; daily updates stay well under 0.5% of either.
+CHURN_MAX_REMOVED = 0.02
+CHURN_MAX_REDATED = 0.05
+
+
+def check_churn(previous: list, current: list) -> list:
+    """Errors when one run removes or re-dates an unusual share of events."""
+    if not previous:
+        return []
+    now = {e["event_id"]: e["date"] for e in current}
+    removed = sum(1 for e in previous if e["event_id"] not in now)
+    redated = sum(1 for e in previous if e["event_id"] in now and now[e["event_id"]] != e["date"])
+    errors = []
+    for count, limit, what in ((removed, CHURN_MAX_REMOVED, "removed"),
+                               (redated, CHURN_MAX_REDATED, "re-dated")):
+        if count > limit * len(previous):
+            errors.append(f"churn: {count} of {len(previous)} events {what} since the last "
+                          f"commit (limit {limit:.0%}); rerun with --allow-churn if intended")
+    return errors
+
+
+def committed_events() -> list | None:
+    """events.csv as of HEAD, or None outside a git checkout."""
+    path = (schema.CORE_DIR / EVENTS_FILENAME).relative_to(schema.REPO_ROOT).as_posix()
+    result = subprocess.run(["git", "show", f"HEAD:{path}"], cwd=schema.REPO_ROOT,
+                            capture_output=True, text=True)
+    if result.returncode != 0:
+        return None
+    return list(csv.DictReader(io.StringIO(result.stdout)))
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--allow-churn", action="store_true",
+                        help="skip the churn guard for an intentional migration")
+    args = parser.parse_args()
     tables = schema.load_core()
     errors, warnings = validate_tables(tables, today=date.today())
+    if not args.allow_churn:
+        previous = committed_events()
+        if previous is None:
+            warnings.append("churn: no committed events.csv to compare against; guard skipped")
+        else:
+            errors += check_churn(previous, tables["events"])
 
     for warning in warnings:
         print(f"WARNING: {warning}")

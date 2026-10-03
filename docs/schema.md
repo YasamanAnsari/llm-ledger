@@ -359,3 +359,8 @@ rewrite the dataset.
     event; `build.py` sets `open_weights` on machine rows that gain one.
 14. A claim with `superseded_on` set has a live claim from the same
     source host on the same event: history hangs off a current statement.
+
+Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
+run may not remove more than 2% of the events committed at `HEAD`, nor
+re-date more than 5% of them. Daily updates stay under 0.5% of either; a
+deliberate migration passes `--allow-churn`.
