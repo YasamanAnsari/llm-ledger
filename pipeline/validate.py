@@ -150,11 +150,21 @@ def check_rule4_temporal_sanity(tables: dict, today: date) -> tuple:
                         f"rule4: model {model_id} ({region}): {earlier} {firsts[earlier]} "
                         f"after {later} {firsts[later]}"
                     )
-        if "deprecation_announced" in firsts and "retired" in firsts:
-            if firsts["deprecation_announced"] > firsts["retired"]:
+        # Deprecation and retirement pair up per platform scope: a host can
+        # retire a model before its vendor announces the vendor's own
+        # shutdown (Azure dropped GPT-4 in 2025; OpenAI announced in 2026).
+        scoped: dict = {}
+        for row, d in items:
+            key = (row["event_type"], row.get("platform", ""))
+            if key not in scoped or d < scoped[key]:
+                scoped[key] = d
+        for (et, platform), announced_on in scoped.items():
+            retired_on = scoped.get(("retired", platform))
+            if et == "deprecation_announced" and retired_on and announced_on > retired_on:
+                where = f"{region}, {platform}" if platform else region
                 errors.append(
-                    f"rule4: model {model_id} ({region}): deprecation_announced "
-                    f"{firsts['deprecation_announced']} after retired {firsts['retired']}"
+                    f"rule4: model {model_id} ({where}): deprecation_announced "
+                    f"{announced_on} after retired {retired_on}"
                 )
         if "announced" in firsts:
             availability = [

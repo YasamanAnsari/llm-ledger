@@ -1,0 +1,8 @@
+{
+  "models.json": {
+    "bytes": 10727,
+    "fetched_at": "2026-10-03T18:06:38+00:00",
+    "sha256": "2bd390be8d002b2c796b53ce462b7264dfc6872cb65a41cbf748479b83a1b89b",
+    "url": "https://api.anthropic.com/v1/models"
+  }
+}

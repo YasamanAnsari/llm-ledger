@@ -330,7 +330,9 @@ rewrite the dataset.
    quarter means the first day of Jan/Apr/Jul/Oct, year means Jan 1).
 4. Temporal sanity per model and region:
    `announced <= preview <= api_preview <= api_ga` where present;
-   `deprecation_announced <= retired`; availability more than 30 days before
+   `deprecation_announced <= retired` within one platform scope (a host may
+   retire a model before its vendor announces its own shutdown); availability
+   more than 30 days before
    `announced` is an error (1-30 days a warning); no event after today
    except `retired` rows from published shutdown schedules (one summary
    warning).

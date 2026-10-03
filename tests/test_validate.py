@@ -107,6 +107,20 @@ def test_rule4_announced_after_api_ga():
     assert any("rule4" in e for e in _errors(_tables(events=events)))
 
 
+def test_rule4_deprecation_pairs_with_retirement_on_the_same_platform():
+    vendor = [_event(event_id="acme-1-deprecation_announced-1", event_type="deprecation_announced",
+                     date="2026-04-22", source_type="deprecation_page"),
+              _event(event_id="acme-1-retired-1", event_type="retired", date="2026-10-23",
+                     source_type="deprecation_page")]
+    host = _event(event_id="acme-1-retired-2", event_type="retired", date="2025-06-06",
+                  platform="azure", source_type="deprecation_page")
+    assert not any("deprecation_announced" in e for e in _errors(_tables(events=vendor + [host])))
+    late = _event(event_id="acme-1-retired-1", event_type="retired", date="2026-01-01",
+                  source_type="deprecation_page")
+    assert any("deprecation_announced 2026-04-22 after retired 2026-01-01" in e
+               for e in _errors(_tables(events=[vendor[0], late])))
+
+
 def test_rule4_future_event_fails_but_future_retired_warns():
     bad = _tables(events=[_event(date="2027-01-01")])
     assert any("rule4" in e and "future" in e for e in _errors(bad))
