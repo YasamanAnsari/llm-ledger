@@ -1,8 +1,8 @@
 {
   "normalized.csv": {
     "bytes": 138239,
-    "fetched_at": "2026-10-03T19:19:42+00:00",
-    "sha256": "4dde8f37b28eb63913676cd731461a5d429c6c3e110b48ef629d1cfb584242e6",
+    "fetched_at": "2026-10-03T19:45:04+00:00",
+    "sha256": "f66f679f4fe5d81bea76b88a52eb01e56b07a5bd3f1b003c6c75fb6ad4d6dc6e",
     "url": "https://modelscope.cn/api/v1/dolphin/models (organizations sweep)"
   }
 }

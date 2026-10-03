@@ -10,8 +10,8 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1217; events: 2066
-- Models: curated 55, corroborated 613, single-source 549
-- Event confidence: verified 1019, inferred 1041, disputed 6
+- Models: curated 55, corroborated 614, single-source 548
+- Event confidence: verified 1020, inferred 1040, disputed 6
 
 ## By organization
 
@@ -26,7 +26,7 @@ as settled.
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
 | Meta | 48 | 98 | 4 | 21 | 23 | 34% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
-| Shanghai AI Lab | 46 | 46 | 0 | 36 | 10 | 78% |
+| Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
@@ -63,7 +63,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 976 | 388 | 587 | 1 |
+| weights_released | 976 | 389 | 586 | 1 |
 | platform_availability | 297 | 295 | 0 | 2 |
 | retired | 261 | 131 | 130 | 0 |
 | api_ga | 224 | 58 | 165 | 1 |
@@ -83,4 +83,9 @@ as settled.
 
 - Events it wrote: 1 (verified 1, single-source inferred 0)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 0
-- Declined: no runs recorded yet
+
+Declined in the 7 days to 2026-10-03, by reason:
+
+| reason | count |
+|---|---|
+| no_dated_event | 1 |

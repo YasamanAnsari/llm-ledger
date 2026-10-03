@@ -8,7 +8,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-09-27,weights_released,verified,mimo-v2-6-flash-mopd,MiMo-V2.6-Flash-MOPD,xiaomi,MiMo-V2.6-MOPD,mini,llm,open_weights,osi_approved
 2026-09-27,weights_released,inferred,mimo-v2-6-pro-mopd,MiMo-V2.6-Pro-MOPD,xiaomi,MiMo-V2.6-MOPD,pro,llm,open_weights,osi_approved
 2026-09-26,weights_released,verified,intern-decision-0-8b,Intern-Decision-0.8B,shanghai-ai-lab,Intern-Decision,,vlm,open_weights,osi_approved
-2026-09-26,weights_released,inferred,intern-decision-2b,Intern-Decision-2B,shanghai-ai-lab,Intern-Decision,,vlm,open_weights,osi_approved
+2026-09-26,weights_released,verified,intern-decision-2b,Intern-Decision-2B,shanghai-ai-lab,Intern-Decision,,vlm,open_weights,osi_approved
 2026-09-26,weights_released,verified,intern-decision-4b,Intern-Decision-4B,shanghai-ai-lab,Intern-Decision,,vlm,open_weights,osi_approved
 2026-09-23,api_ga,inferred,glm-5-3-prime,glm-5.3-prime,zhipu,glm-5.3-prime,,llm,api_only,proprietary
 2026-09-23,api_ga,inferred,qwen3-8-max-prime,qwen3.8-max-prime,alibaba,qwen3.8-prime,,vlm,api_only,proprietary
