@@ -3,6 +3,16 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-10-03
+
+- Validation rule 4 pairs `deprecation_announced` with `retired` within one
+  platform scope. LiteLLM began listing Azure's 2025-06-06 retirement of
+  GPT-4 on 2026-09-25; compared against OpenAI's own 2026-04-22 deprecation
+  notice (global scope) it read as "announced after retired" and the daily
+  run refused to publish from 2026-09-25 to 2026-10-02. No row changed by
+  the rule itself; the missed days are caught up by the 2026-10-03 update
+  (raw snapshots for those days were not kept).
+
 ## 2026-09-14
 
 - `north-mini-code-announced-1`: source_url corrected from the Cohere blog
