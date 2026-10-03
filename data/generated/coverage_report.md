@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1217; events: 2066
-- Models: curated 55, corroborated 615, single-source 547
-- Event confidence: verified 1021, inferred 1039, disputed 6
+- Models: 1626; events: 2503
+- Models: curated 55, corroborated 632, single-source 939
+- Event confidence: verified 1044, inferred 1453, disputed 6
 
 ## By organization
 
@@ -23,51 +23,79 @@ as settled.
 | EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
 | RWKV | 52 | 52 | 0 | 14 | 38 | 27% |
 | AI2 | 50 | 50 | 0 | 12 | 38 | 24% |
+| Meta | 50 | 100 | 4 | 21 | 25 | 33% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
-| Meta | 48 | 98 | 4 | 21 | 23 | 34% |
+| Mistral | 49 | 93 | 3 | 21 | 25 | 37% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
+| MBZUAI | 39 | 39 | 0 | 0 | 39 | 0% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Cohere | 36 | 48 | 1 | 9 | 26 | 23% |
 | Zhipu | 35 | 78 | 3 | 25 | 7 | 62% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
-| Mistral | 31 | 71 | 3 | 20 | 8 | 44% |
-| NVIDIA | 29 | 44 | 0 | 12 | 17 | 27% |
+| NVIDIA | 31 | 46 | 0 | 12 | 19 | 26% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
 | Anthropic | 24 | 117 | 8 | 13 | 3 | 69% |
+| Kakao | 24 | 24 | 0 | 0 | 24 | 0% |
+| Salesforce | 24 | 24 | 0 | 0 | 24 | 0% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
+| BigScience | 23 | 23 | 0 | 0 | 23 | 0% |
+| Arcee | 22 | 23 | 0 | 1 | 21 | 9% |
+| PFN | 22 | 22 | 0 | 0 | 22 | 0% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
+| Sakana | 19 | 23 | 0 | 4 | 15 | 17% |
 | StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
+| Writer | 17 | 19 | 0 | 1 | 16 | 5% |
+| Kyutai | 16 | 16 | 0 | 0 | 16 | 0% |
+| rinna | 16 | 16 | 0 | 0 | 16 | 0% |
 | xAI | 16 | 41 | 2 | 9 | 5 | 37% |
+| Apple | 15 | 15 | 0 | 0 | 15 | 0% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
+| LG AI Research | 14 | 14 | 0 | 0 | 14 | 0% |
+| SenseTime | 14 | 14 | 0 | 0 | 14 | 0% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
+| Swiss AI | 14 | 16 | 0 | 0 | 14 | 0% |
+| Upstage | 14 | 18 | 0 | 3 | 11 | 17% |
+| Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
+| Kuaishou | 12 | 13 | 0 | 1 | 11 | 8% |
+| Sber | 12 | 12 | 0 | 0 | 12 | 0% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
 | Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
+| Aleph Alpha | 9 | 9 | 0 | 0 | 9 | 0% |
+| ServiceNow | 9 | 9 | 0 | 0 | 9 | 0% |
+| TinyLlama | 9 | 9 | 0 | 0 | 9 | 0% |
 | Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
+| Prime Intellect | 7 | 7 | 0 | 0 | 7 | 0% |
+| NAVER | 6 | 6 | 0 | 0 | 6 | 0% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
+| Poolside | 6 | 10 | 0 | 2 | 4 | 40% |
+| Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
+| Inception | 3 | 5 | 0 | 2 | 1 | 40% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
+| Thinking Machines | 2 | 6 | 0 | 2 | 0 | 50% |
+| Yandex | 1 | 1 | 0 | 0 | 1 | 0% |
 
 ## By event type
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 976 | 390 | 585 | 1 |
-| platform_availability | 297 | 295 | 0 | 2 |
-| retired | 261 | 131 | 130 | 0 |
-| api_ga | 224 | 58 | 165 | 1 |
-| announced | 208 | 49 | 158 | 1 |
+| weights_released | 1378 | 395 | 982 | 1 |
+| platform_availability | 313 | 311 | 0 | 2 |
+| retired | 263 | 133 | 130 | 0 |
+| api_ga | 235 | 58 | 176 | 1 |
+| announced | 214 | 49 | 164 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -88,5 +116,4 @@ Declined in the 7 days to 2026-10-03, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 3 |
 | no_dated_event | 1 |

@@ -7,16 +7,16 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-8d, n=117)
+- median 0d (IQR 0-8d, n=119)
 - range: 0d to 701d
 
 | gap | models |
 |---|---|
-| same day | 68 |
+| same day | 69 |
 | 1-7d | 19 |
 | 8-30d | 7 |
 | 31-90d | 9 |
-| 91-365d | 12 |
+| 91-365d | 13 |
 | >365d | 2 |
 
 Per-organization medians (n>=3):
@@ -35,12 +35,12 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=79)
+- median 0d (IQR 0-1d, n=83)
 - range: 0d to 779d
 
 | gap | models |
 |---|---|
-| same day | 56 |
+| same day | 60 |
 | 1-7d | 14 |
 | 8-30d | 1 |
 | 31-90d | 2 |
@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1200
-- models with announced + an availability event: 186
+- models with an anchor event: 1610
+- models with announced + an availability event: 192
