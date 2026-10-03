@@ -110,7 +110,7 @@ never rewrite its `family`, `variant_role` or `access_type`
 | `source_url` | URL | REQUIRED; the page actually consulted, or the chosen source when several claims back the row (see `claims.csv`) |
 | `source_type` | enum | `vendor_blog, vendor_docs, vendor_changelog, deprecation_page, system_card, arxiv, hf_hub, github, modelscope, api_metadata, lifecycle_table, news, wikipedia, community_timeline, published_paper, wayback` |
 | `confidence` | enum | `verified, inferred, disputed` (see confidence semantics) |
-| `verified_by` | string | required when `confidence=verified`; a person's name, `llm-ledger` for a machine corroboration or a project-curated row, or `llm-ledger-agent` when the project's LLM agent read the page |
+| `verified_by` | string | required when `confidence=verified`; a person's name, `llm-ledger` for a machine corroboration or a project-curated row, or `llm-ledger-agent` when the project's LLM agent read the page (set on every agent row, `inferred` ones included, to name the writer) |
 | `verified_date` | date | required when `confidence=verified` |
 | `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
 
@@ -247,7 +247,7 @@ One policy, `pipeline/confidence.py`, decides every machine-dated row:
 | `confidence` | Meaning |
 |---|---|
 | `verified` | Either a person opened a primary source (`verified_by` = their name), or `verified_by=llm-ledger`: two independent machine sources agreed on the date within two days, or a platform reported its own event. |
-| `inferred` | One machine source, or several that differ by 3-30 days. The row carries the best-evidenced date and lists the others in `notes`. |
+| `inferred` | One machine source, or several that differ by 3-30 days. The row carries the best-evidenced date and lists the others in `notes`. An agent row (`verified_by=llm-ledger-agent`) is `inferred` while the page it read is its only source (`notes` start `single source`); it becomes `verified` when a catalog states the same date. |
 | `disputed` | Two *stated* dates conflict by more than 30 days, or a year placeholder names a different year. All values recorded in `notes`; `date` keeps the best-evidenced value. A `first_party` record is never disputed by a third party: a differing mirror is noted (`differs:`), the first-party date stands as `verified`. |
 
 Bracketing timestamps (`bound=true` in `claims.csv`: Hub repo creation,

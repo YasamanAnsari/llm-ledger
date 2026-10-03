@@ -176,11 +176,13 @@ def is_machine_row(row: dict) -> bool:
 
 
 def curated_model_ids(events: list) -> set:
-    """Models with a verified event that was read from a primary page rather
-    than produced by a loader. Loaders never rewrite these models' curated
-    fields; everything else is machine-owned and re-derived on every run."""
+    """Models with a verified event that a person read from a primary page.
+    Loaders never rewrite these models' curated fields; everything else,
+    including models only the agent has dated, is machine-owned and
+    re-derived on every run."""
     return {e["model_id"] for e in events
-            if e.get("confidence") == "verified" and not is_machine_row(e)}
+            if e.get("confidence") == "verified" and not is_machine_row(e)
+            and e.get("verified_by") != AGENT_VERIFIER}
 
 
 def claim_to_row(event_id: str, c: Claim) -> dict:
@@ -257,10 +259,14 @@ def curated_announcement(index: dict, model_id: str):
 
     Machine availability claims (Hub repo creation, vendor model-registry
     `created`, catalog release dates) that fall BEFORE this date describe
-    private pre-staging, not a release, and are not loaded.
+    private pre-staging, not a release, and are not loaded. The agent's
+    single-page `inferred` row is not a floor: a misread date there would
+    hide the catalog evidence that could correct it.
     """
     row = index.get((model_id, "announced", ""))
     if row is None or is_machine_row(row):
+        return None
+    if row.get("verified_by") == AGENT_VERIFIER and row["confidence"] != "verified":
         return None
     return date.fromisoformat(row["date"])
 
@@ -290,6 +296,22 @@ def withdraw_machine_announced_after(events: list, index: dict, claims_by_event:
     return True
 
 
+def _confirm_agent_row(row: dict, claims: list, today: date) -> str:
+    """Upgrade the agent's lone `inferred` row to `verified` when `claims`
+    agree with its date; any other curated row is left alone."""
+    if row.get("verified_by") != AGENT_VERIFIER or row["confidence"] != "inferred":
+        return "skipped"
+    page = Claim(date.fromisoformat(row["date"]), row["source_url"], row["source_type"],
+                 precision=row["precision"], label=row["source_type"])
+    verdict = assess([page] + list(claims))
+    if verdict.confidence != "verified" or verdict.date != row["date"]:
+        return "skipped"
+    row["confidence"] = "verified"
+    row["verified_date"] = today.isoformat()
+    row["notes"] = f"{row['notes']}; confirmed by {_describe(claims)}"
+    return "confirmed"
+
+
 def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
                          model_id: str, event_type: str, claims: list, today: date,
                          platform: str = "", not_before=None, next_id=None,
@@ -303,15 +325,18 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
     loaders) are kept, and the event is re-assessed from the live set.
     `verifier` names who signs a machine corroboration (the project, or its
     agent). Returns "added", "updated", "unchanged", "skipped" (curated
-    row), "precreated" (every claim predates `not_before` or only a crawl
-    remains; nothing was on record) or "withdrawn" (same, and the stale
+    row), "confirmed" (an `inferred` row the agent read from a single page,
+    now verified because these claims agree with it; the claims stay
+    unrecorded, as for any curated row), "precreated" (every claim
+    predates `not_before` or only a crawl remains; nothing was on record)
+    or "withdrawn" (same, and the stale
     machine row was removed). `index` maps (model_id, event_type, platform)
     -> row; both it and `claims_by_event` are kept in sync.
     """
     key = (model_id, event_type, platform)
     existing = index.get(key)
     if existing is not None and not is_machine_row(existing):
-        return "skipped"
+        return _confirm_agent_row(existing, claims, today)
 
     merged = list(claims)
     history: list = []

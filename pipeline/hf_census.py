@@ -290,7 +290,7 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
             events, event_index, claims_by_event, model_id, "weights_released", claims,
             today, not_before=floor, next_id=schema.next_event_id)
         outcomes[outcome] += 1
-        if outcome in ("added", "updated", "withdrawn"):
+        if outcome in ("added", "updated", "withdrawn", "confirmed"):
             touched.add(model_id)
         if outcome in ("added", "updated", "unchanged"):
             assessed = event_index[(model_id, "weights_released", "")]["date"]

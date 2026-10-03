@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import date
 
-from confidence import Claim, assess, upsert_machine_event, withdraw_machine_event
+from confidence import Claim, assess, curated_model_ids, upsert_machine_event, withdraw_machine_event
 
 MD = "https://models.dev/api.json"
 OR = "https://openrouter.ai/api/v1/models"
@@ -189,6 +189,32 @@ def test_upsert_never_touches_curated_rows() -> None:
     assert upsert_machine_event(events, index, {}, "m", "api_ga", [_c("2025-02-01", MD)],
                                 TODAY) == "skipped"
     assert curated["date"] == "2025-01-01"
+
+
+def test_a_catalog_confirms_the_agents_single_page_row_only_when_it_agrees() -> None:
+    def agent_row() -> dict:
+        return {"event_id": "m-api_ga-1", "model_id": "m", "event_type": "api_ga",
+                "platform": "", "date": "2025-01-01", "precision": "day",
+                "source_url": "https://acme.ai/blog/m", "source_type": "vendor_blog",
+                "confidence": "inferred", "verified_by": "llm-ledger-agent",
+                "verified_date": "", "notes": "single source"}
+    row = agent_row()
+    events, index = [row], {("m", "api_ga", ""): row}
+    assert upsert_machine_event(events, index, {}, "m", "api_ga", [_c("2025-06-01", MD)],
+                                TODAY) == "skipped"
+    assert row["confidence"] == "inferred"
+    assert upsert_machine_event(events, index, {}, "m", "api_ga", [_c("2025-01-01", MD)],
+                                TODAY) == "confirmed"
+    assert (row["confidence"], row["verified_date"]) == ("verified", TODAY.isoformat())
+    assert len(events) == 1
+
+
+def test_agent_rows_leave_model_attributes_to_the_loaders() -> None:
+    human = {"model_id": "a", "confidence": "verified", "verified_by": "yasaman",
+             "source_type": "vendor_blog"}
+    agent = {"model_id": "b", "confidence": "verified", "verified_by": "llm-ledger-agent",
+             "source_type": "vendor_blog"}
+    assert curated_model_ids([human, agent]) == {"a"}
 
 
 def test_upsert_records_the_agent_as_verifier_when_asked() -> None:

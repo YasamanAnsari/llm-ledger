@@ -7,7 +7,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
-from build import LATEST_COLUMNS, build_reschedule_rows, compute_derived, latest_first
+from build import (LATEST_COLUMNS, _agent_section, build_reschedule_rows, compute_derived,
+                   latest_first)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -188,3 +189,17 @@ def test_reschedules_chain_each_superseded_claim_to_the_next_statement():
         ("2026-12-17", "2026-11-19", "-28", "2026-09-12"),
     ]
     assert rows[0]["source"] == "azure_lifecycle" and rows[0]["platform"] == "azure"
+
+
+def test_agent_section_counts_agent_only_models_and_the_last_week_of_declines() -> None:
+    agent = {"model_id": "new", "verified_by": "llm-ledger-agent", "source_type": "vendor_blog",
+             "confidence": "inferred"}
+    machine = {"model_id": "old", "verified_by": "", "source_type": "api_metadata",
+               "confidence": "verified"}
+    declined = [{"date": "2026-09-20", "reason": "not_a_model", "count": "9"},
+                {"date": "2026-09-28", "reason": "not_a_model", "count": "2"},
+                {"date": "2026-10-03", "reason": "not_a_model", "count": "1"},
+                {"date": "2026-10-03", "reason": "budget", "count": "4"}]
+    text = "\n".join(_agent_section([agent, machine], declined))
+    assert "single-source inferred 1" in text and "listed yet (withdrawn after 60 days unless one does): 1" in text
+    assert "| budget | 4 |" in text and "| not_a_model | 3 |" in text

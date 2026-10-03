@@ -191,7 +191,7 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
             events, event_index, claims_by_event, model_id, "retired", claims, today,
             platform=platform, next_id=schema.next_event_id)
         outcomes[outcome] += 1
-        if outcome in ("added", "updated"):
+        if outcome in ("added", "updated", "confirmed"):
             touched.add(model_id)
         row = event_index.get((model_id, "retired", platform))
         partner_skus = sorted({(e[1].split("/")[-1], _serving_partner(e[1]))

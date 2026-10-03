@@ -18,6 +18,20 @@ Data corrections update rows in place; this file preserves the history.
   privately even when a later step fails, opens an issue when a run fails,
   and judges each agent row on its own so one bad extraction no longer
   holds back the others.
+- Publishing rule for rows the page-reading agent writes
+  (`verified_by=llm-ledger-agent`): a row whose date agrees with the
+  machine claims already on record replaces that row as `verified`; a row
+  with no other source is published as `inferred`. A catalog that later
+  lists the same date upgrades it to `verified`. The agent may now create a
+  model it read about before any catalog listed it, only from a launch
+  event whose quote names the model and whose name is not a product or a
+  bare family name. Such a model is withdrawn, with a line here, if no
+  catalog, Hub repo or vendor API lists it within 60 days.
+- Agent rows no longer count as `curated` in the coverage report or the
+  README (that word now means a person checked the page), and the loaders
+  fill in family, variant and access type for agent-found models. One
+  model moves from curated to corroborated (`north-mini-code`). The
+  coverage report gains a section on what the agent wrote and declined.
 
 ## 2026-09-14
 
