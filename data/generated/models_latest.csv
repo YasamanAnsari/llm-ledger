@@ -243,7 +243,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-03-16,api_ga,inferred,glm-5-turbo,z-ai-glm-5-turbo,zhipu,z-ai-glm-5,,llm,open_weights,
 2026-03-16,weights_released,inferred,mistral-small-2603,mistral-small-2603,mistral,mistral,mini,vlm,open_weights,
 2026-03-16,weights_released,inferred,mistral-small-4,Mistral Small 4,mistral,Mistral 4,mini,vlm,open_weights,
-2026-03-16,weights_released,inferred,molmopoint-8b,MolmoPoint-8B,allenai,MolmoPoint,,vlm,open_weights,osi_approved
+2026-03-16,weights_released,verified,molmopoint-8b,MolmoPoint-8B,allenai,MolmoPoint,,vlm,open_weights,osi_approved
 2026-03-12,weights_released,inferred,gemma-4-31b,gemma-4-31B,google,gemma-4,,vlm,open_weights,osi_approved
 2026-03-11,weights_released,inferred,nemotron-3-super,Nemotron 3 Super,nvidia,Nemotron 3 Super,,llm,open_weights,
 2026-03-11,weights_released,inferred,nemotron-3-super-120b-a12b,nemotron-3-super-120b-a12b,nvidia,nemotron-3-super,,llm,open_weights,

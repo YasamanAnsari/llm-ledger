@@ -10,8 +10,8 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1217; events: 2066
-- Models: curated 55, corroborated 614, single-source 548
-- Event confidence: verified 1020, inferred 1040, disputed 6
+- Models: curated 55, corroborated 615, single-source 547
+- Event confidence: verified 1021, inferred 1039, disputed 6
 
 ## By organization
 
@@ -22,7 +22,7 @@ as settled.
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
 | RWKV | 52 | 52 | 0 | 14 | 38 | 27% |
-| AI2 | 50 | 50 | 0 | 11 | 39 | 22% |
+| AI2 | 50 | 50 | 0 | 12 | 38 | 24% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
 | Meta | 48 | 98 | 4 | 21 | 23 | 34% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
@@ -63,7 +63,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 976 | 389 | 586 | 1 |
+| weights_released | 976 | 390 | 585 | 1 |
 | platform_availability | 297 | 295 | 0 | 2 |
 | retired | 261 | 131 | 130 | 0 |
 | api_ga | 224 | 58 | 165 | 1 |
@@ -88,4 +88,5 @@ Declined in the 7 days to 2026-10-03, by reason:
 
 | reason | count |
 |---|---|
+| community_lead | 3 |
 | no_dated_event | 1 |
