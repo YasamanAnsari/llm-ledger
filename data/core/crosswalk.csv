@@ -53,6 +53,7 @@ arcee-spark,huggingface,arcee-ai/Arcee-Spark
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
 armorocr,huggingface,inclusionAI/ArmorOCR
 autoglm-phone-9b,huggingface,zai-org/AutoGLM-Phone-9B
+autoglm-phone-9b-multilingual,huggingface,zai-org/AutoGLM-Phone-9B-Multilingual
 aya-23-35b,huggingface,CohereLabs/aya-23-35B
 aya-23-8b,huggingface,CohereLabs/aya-23-8B
 aya-expanse-32b,huggingface,CohereLabs/aya-expanse-32b
@@ -1557,6 +1558,7 @@ llamaguard-7b,huggingface,meta-llama/LlamaGuard-7b
 llava-meta-llama-3-8b-instruct,huggingface,MBZUAI/LLaVA-Meta-Llama-3-8B-Instruct
 llava-meta-llama-3-8b-instruct-ft,huggingface,MBZUAI/LLaVA-Meta-Llama-3-8B-Instruct-FT
 llava-phi-3-mini-4k-instruct,huggingface,MBZUAI/LLaVA-Phi-3-mini-4k-instruct
+locateanything-3b,huggingface,nvidia/LocateAnything-3B
 longcat-2-0,epoch,LongCat-2.0
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0
 longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-FP8
@@ -1816,8 +1818,10 @@ mixtral-8x7b-instruct,wikipedia,Mistral AI
 mixtral-8x7b-v0-1,huggingface,mistralai/Mixtral-8x7B-v0.1
 mobillama-05b,huggingface,MBZUAI/MobiLlama-05B
 mobillama-05b-chat,huggingface,MBZUAI/MobiLlama-05B-Chat
+mobillama-08b,huggingface,MBZUAI/MobiLlama-08B
 mobillama-1b,huggingface,MBZUAI/MobiLlama-1B
 mobillama-1b-chat,huggingface,MBZUAI/MobiLlama-1B-Chat
+molmo-72b,huggingface,allenai/Molmo-72B-0924
 molmo-7b-d,huggingface,allenai/Molmo-7B-D-0924
 molmo2-4b,huggingface,allenai/Molmo2-4B
 molmo2-8b,huggingface,allenai/Molmo2-8B
@@ -2236,6 +2240,7 @@ qwen3-4b,huggingface,Qwen/Qwen3-4B
 qwen3-4b,models_dev,novita-ai/qwen/qwen3-4b-fp8
 qwen3-4b-base,huggingface,Qwen/Qwen3-4B-Base
 qwen3-4b-instruct-2507,huggingface,Qwen/Qwen3-4B-Instruct-2507
+qwen3-4b-instruct-2507,huggingface,Qwen/Qwen3-4B-Instruct-2507-FP8
 qwen3-5-0-8b,epoch,Qwen3.5-0.8B
 qwen3-5-0-8b,huggingface,Qwen/Qwen3.5-0.8B
 qwen3-5-0-8b,models_dev,qvac/qwen3.5-0.8b

@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1626; events: 2503
-- Models: curated 55, corroborated 632, single-source 939
-- Event confidence: verified 1044, inferred 1453, disputed 6
+- Models: 1630; events: 2507
+- Models: curated 55, corroborated 642, single-source 933
+- Event confidence: verified 1054, inferred 1447, disputed 6
 
 ## By organization
 
@@ -22,20 +22,20 @@ as settled.
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
 | RWKV | 52 | 52 | 0 | 14 | 38 | 27% |
-| AI2 | 50 | 50 | 0 | 12 | 38 | 24% |
+| AI2 | 51 | 51 | 0 | 12 | 39 | 24% |
 | Meta | 50 | 100 | 4 | 21 | 25 | 33% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
-| Mistral | 49 | 93 | 3 | 21 | 25 | 37% |
+| Mistral | 49 | 93 | 3 | 23 | 23 | 39% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
-| MBZUAI | 39 | 39 | 0 | 0 | 39 | 0% |
+| MBZUAI | 40 | 40 | 0 | 0 | 40 | 0% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Cohere | 36 | 48 | 1 | 9 | 26 | 23% |
-| Zhipu | 35 | 78 | 3 | 25 | 7 | 62% |
+| Zhipu | 36 | 79 | 3 | 26 | 7 | 62% |
+| NVIDIA | 32 | 47 | 0 | 12 | 20 | 26% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
-| NVIDIA | 31 | 46 | 0 | 12 | 19 | 26% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
@@ -43,10 +43,10 @@ as settled.
 | Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
 | Anthropic | 24 | 117 | 8 | 13 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 0 | 24 | 0% |
-| Salesforce | 24 | 24 | 0 | 0 | 24 | 0% |
+| Salesforce | 24 | 24 | 0 | 1 | 23 | 4% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
-| BigScience | 23 | 23 | 0 | 0 | 23 | 0% |
+| BigScience | 23 | 23 | 0 | 1 | 22 | 4% |
 | Arcee | 22 | 23 | 0 | 1 | 21 | 9% |
 | PFN | 22 | 22 | 0 | 0 | 22 | 0% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
@@ -54,7 +54,7 @@ as settled.
 | StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 0 | 16 | 0% |
-| rinna | 16 | 16 | 0 | 0 | 16 | 0% |
+| rinna | 16 | 16 | 0 | 4 | 12 | 25% |
 | xAI | 16 | 41 | 2 | 9 | 5 | 37% |
 | Apple | 15 | 15 | 0 | 0 | 15 | 0% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
@@ -73,7 +73,7 @@ as settled.
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
 | Aleph Alpha | 9 | 9 | 0 | 0 | 9 | 0% |
 | ServiceNow | 9 | 9 | 0 | 0 | 9 | 0% |
-| TinyLlama | 9 | 9 | 0 | 0 | 9 | 0% |
+| TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
 | Prime Intellect | 7 | 7 | 0 | 0 | 7 | 0% |
@@ -91,7 +91,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1378 | 395 | 982 | 1 |
+| weights_released | 1382 | 405 | 976 | 1 |
 | platform_availability | 313 | 311 | 0 | 2 |
 | retired | 263 | 133 | 130 | 0 |
 | api_ga | 235 | 58 | 176 | 1 |
@@ -112,8 +112,9 @@ as settled.
 - Events it wrote: 1 (verified 1, single-source inferred 0)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 0
 
-Declined in the 7 days to 2026-10-03, by reason:
+Declined in the 7 days to 2026-10-04, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 1 |
+| community_lead | 4 |
+| no_dated_event | 3 |
