@@ -246,6 +246,7 @@ codellama-13b-instruct,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
 codellama-34b-instruct,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
 codellama-7b,huggingface,meta-llama/CodeLlama-7b-hf
 codellama-7b-instruct,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
+codellama-7b-python,huggingface,meta-llama/CodeLlama-7b-Python-hf
 codestral,epoch,Codestral
 codestral,huggingface,mistralai/Codestral-22B-v0.1
 codestral,models_dev,vercel/mistral/codestral
@@ -775,6 +776,7 @@ glm-5-3-prime,openrouter,z-ai/glm-5.3-prime
 glm-5-turbo,models_dev,venice/z-ai-glm-5-turbo
 glm-5-turbo,openrouter,z-ai/glm-5-turbo
 glm-5v-turbo,models_dev,cortecs/glm-5v-turbo
+glm-5v-turbo,models_dev,edenai/zai/glm-5v-turbo
 glm-5v-turbo,openrouter,z-ai/glm-5v-turbo
 glm-edge-1-5b-chat,huggingface,zai-org/glm-edge-1.5b-chat
 glm-edge-4b-chat,huggingface,zai-org/glm-edge-4b-chat
@@ -2457,6 +2459,7 @@ rwkv7-g1j-2-9b,huggingface,RWKV/RWKV7-G1j-2.9B-20260831
 rwkv7-g1j-7-2b,huggingface,RWKV/RWKV7-G1j-7.2B-20260831
 rwkv7-g1k-1-5b,huggingface,RWKV/RWKV7-G1k-1.5B-20260930
 rwkv7-g1k-2-9b,huggingface,RWKV/RWKV7-G1k-2.9B-20260930
+rwkv7-g1k-7-2b,huggingface,RWKV/RWKV7-G1k-7.2B-20260930
 rwkv7-goose-pile-1-47b,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
 rwkv7-goose-pile-421m,huggingface,RWKV/RWKV7-Goose-Pile-421M-HF
 rwkv7-goose-world,huggingface,RWKV/RWKV7-Goose-World-PTH

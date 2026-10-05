@@ -2,3 +2,7 @@ date,reason,count
 2026-10-03,no_dated_event,1
 2026-10-04,community_lead,4
 2026-10-04,no_dated_event,2
+2026-10-05,community_lead,4
+2026-10-05,launch_event_required,2
+2026-10-05,no_dated_event,4
+2026-10-05,not_a_model,2

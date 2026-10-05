@@ -313,3 +313,8 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 ## 2026-09-14
 
 - `north-mini-code-announced-1` 2026-06-09 verified (vendor_blog; evidence: "Introducing North Mini Code: Cohere’s first model for developers"; agrees: epoch.ai 2026-06-09)
+
+## 2026-10-05
+
+- new model `rerank-v3-5`
+- `rerank-v3-5-announced-1` 2024-12-02 inferred (deprecation_page; evidence: "On December 2nd, 2024, we announced the release of Rerank-v3.5 along with the deprecation of the Rerank-v2.0 model family.")
