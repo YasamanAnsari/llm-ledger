@@ -40,7 +40,14 @@ apertus-v1-1-1-5b-instruct,huggingface,swiss-ai/Apertus-v1.1-1.5B-Instruct
 apertus-v1-1-4b,huggingface,swiss-ai/Apertus-v1.1-4B
 apertus-v1-1-4b-instruct,huggingface,swiss-ai/Apertus-v1.1-4B-Instruct
 apertus-v1-5-70b,huggingface,swiss-ai/Apertus-v1.5-70B
+apertus-v1-5-70b-base,huggingface,swiss-ai/Apertus-v1.5-70B-base
+apertus-v1-5-70b-rlvr,huggingface,swiss-ai/Apertus-v1.5-70B-RLVR
+apertus-v1-5-70b-sft,huggingface,swiss-ai/Apertus-v1.5-70B-SFT
 apertus-v1-5-8b,huggingface,swiss-ai/Apertus-v1.5-8B
+apertus-v1-5-8b-base,huggingface,swiss-ai/Apertus-v1.5-8B-base
+apertus-v1-5-8b-dpo,huggingface,swiss-ai/Apertus-v1.5-8B-DPO
+apertus-v1-5-8b-rlvr,huggingface,swiss-ai/Apertus-v1.5-8B-RLVR
+apertus-v1-5-8b-sft,huggingface,swiss-ai/Apertus-v1.5-8B-SFT
 apriel-1-5-15b-thinker,huggingface,ServiceNow-AI/Apriel-1.5-15b-Thinker
 apriel-1-6-15b-thinker,huggingface,ServiceNow-AI/Apriel-1.6-15b-Thinker
 apriel-5b-base,huggingface,ServiceNow-AI/Apriel-5B-Base
@@ -48,6 +55,7 @@ apriel-5b-instruct,huggingface,ServiceNow-AI/Apriel-5B-Instruct
 apriel-h1-15b-thinker-sft,huggingface,ServiceNow-AI/Apriel-H1-15b-Thinker-SFT
 apriel-nemotron-15b-thinker,huggingface,ServiceNow-AI/Apriel-Nemotron-15b-Thinker
 aprielguard,huggingface,ServiceNow-AI/AprielGuard
+arcee-blitz,huggingface,arcee-ai/Arcee-Blitz
 arcee-lite,huggingface,arcee-ai/arcee-lite
 arcee-spark,huggingface,arcee-ai/Arcee-Spark
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
@@ -2050,6 +2058,7 @@ palmyra-vision,huggingface,Writer/palmyra-vision-vllm
 palmyra-x5,epoch,Palmyra X5
 palmyra-x5,models_dev,merge-gateway/writer/palmyra-x5
 palmyra-x5,openrouter,writer/palmyra-x5
+palo-7b,huggingface,MBZUAI/PALO-7B
 paralleltubedecoding-qwen3-vl-4b,huggingface,MBZUAI/ParallelTubeDecoding-Qwen3-VL-4B
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-hf
@@ -2458,6 +2467,7 @@ rwkv7-g1j-13-3b,huggingface,RWKV/RWKV7-G1j-13.3B-20260831
 rwkv7-g1j-2-9b,huggingface,RWKV/RWKV7-G1j-2.9B-20260831
 rwkv7-g1j-7-2b,huggingface,RWKV/RWKV7-G1j-7.2B-20260831
 rwkv7-g1k-1-5b,huggingface,RWKV/RWKV7-G1k-1.5B-20260930
+rwkv7-g1k-13-3b,huggingface,RWKV/RWKV7-G1k-13.3B-20260930
 rwkv7-g1k-2-9b,huggingface,RWKV/RWKV7-G1k-2.9B-20260930
 rwkv7-g1k-7-2b,huggingface,RWKV/RWKV7-G1k-7.2B-20260930
 rwkv7-goose-pile-1-47b,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF

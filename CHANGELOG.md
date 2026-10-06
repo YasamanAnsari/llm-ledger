@@ -318,3 +318,9 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 
 - new model `rerank-v3-5`
 - `rerank-v3-5-announced-1` 2024-12-02 inferred (deprecation_page; evidence: "On December 2nd, 2024, we announced the release of Rerank-v3.5 along with the deprecation of the Rerank-v2.0 model family.")
+
+## 2026-10-06
+
+- new model `mistral-large-4`
+- `glm-5-3-platform_availability-2` 2026-10-05 inferred (vendor_blog; evidence: "GLM 5.3 from Z.ai (Zhipu AI) is now available on Amazon Bedrock .")
+- `mistral-large-4-announced-1` 2026-10-06 inferred (vendor_blog; evidence: "Today, we’re launching a public preview of Mistral Large 4.")

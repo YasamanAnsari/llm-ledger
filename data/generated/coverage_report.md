@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1633; events: 2510
-- Models: curated 55, corroborated 665, single-source 913
-- Event confidence: verified 1077, inferred 1427, disputed 6
+- Models: 1644; events: 2522
+- Models: curated 55, corroborated 679, single-source 910
+- Event confidence: verified 1091, inferred 1425, disputed 6
 
 ## By organization
 
@@ -20,20 +20,20 @@ as settled.
 | Alibaba | 87 | 186 | 2 | 71 | 14 | 56% |
 | OpenAI | 69 | 284 | 19 | 45 | 5 | 72% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
-| RWKV | 53 | 53 | 0 | 15 | 38 | 28% |
+| RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
 | AI2 | 51 | 51 | 0 | 13 | 38 | 25% |
 | Meta | 51 | 101 | 4 | 21 | 26 | 33% |
+| Mistral | 50 | 94 | 3 | 26 | 21 | 41% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
-| Mistral | 49 | 93 | 3 | 25 | 21 | 41% |
 | Google | 47 | 125 | 7 | 24 | 16 | 46% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
-| MBZUAI | 40 | 40 | 0 | 0 | 40 | 0% |
+| MBZUAI | 41 | 41 | 0 | 0 | 41 | 0% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
-| Zhipu | 36 | 79 | 3 | 26 | 7 | 62% |
+| Zhipu | 36 | 80 | 3 | 26 | 7 | 61% |
 | NVIDIA | 32 | 47 | 0 | 12 | 20 | 26% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
@@ -42,14 +42,15 @@ as settled.
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
 | Anthropic | 24 | 117 | 8 | 13 | 3 | 69% |
-| Kakao | 24 | 24 | 0 | 2 | 22 | 8% |
-| Salesforce | 24 | 24 | 0 | 3 | 21 | 12% |
+| Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
+| Salesforce | 24 | 24 | 0 | 4 | 20 | 17% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
+| Arcee | 23 | 24 | 0 | 6 | 17 | 29% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
-| Arcee | 22 | 23 | 0 | 4 | 18 | 22% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
+| Swiss AI | 21 | 23 | 0 | 2 | 19 | 9% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
@@ -63,11 +64,10 @@ as settled.
 | LG AI Research | 14 | 14 | 0 | 0 | 14 | 0% |
 | SenseTime | 14 | 14 | 0 | 0 | 14 | 0% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
-| Swiss AI | 14 | 16 | 0 | 0 | 14 | 0% |
-| Upstage | 14 | 18 | 0 | 4 | 10 | 22% |
+| Upstage | 14 | 18 | 0 | 5 | 9 | 28% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
-| Kuaishou | 12 | 13 | 0 | 1 | 11 | 8% |
-| Sber | 12 | 12 | 0 | 1 | 11 | 8% |
+| Kuaishou | 12 | 13 | 0 | 3 | 9 | 23% |
+| Sber | 12 | 12 | 0 | 3 | 9 | 25% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
 | Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
@@ -77,7 +77,7 @@ as settled.
 | Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
 | Prime Intellect | 7 | 7 | 0 | 2 | 5 | 29% |
-| NAVER | 6 | 6 | 0 | 1 | 5 | 17% |
+| NAVER | 6 | 6 | 0 | 2 | 4 | 33% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 2 | 4 | 40% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
@@ -91,11 +91,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1384 | 428 | 955 | 1 |
-| platform_availability | 313 | 311 | 0 | 2 |
+| weights_released | 1394 | 442 | 951 | 1 |
+| platform_availability | 314 | 311 | 1 | 2 |
 | retired | 263 | 133 | 130 | 0 |
 | api_ga | 235 | 58 | 176 | 1 |
-| announced | 215 | 49 | 165 | 1 |
+| announced | 216 | 49 | 166 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -109,14 +109,17 @@ as settled.
 
 ## Page-reading agent
 
-- Events it wrote: 2 (verified 1, single-source inferred 1)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 1
+- Events it wrote: 4 (verified 1, single-source inferred 3)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-05, by reason:
+Declined in the 7 days to 2026-10-06, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 8 |
-| no_dated_event | 7 |
-| launch_event_required | 2 |
-| not_a_model | 2 |
+| community_lead | 23 |
+| no_dated_event | 12 |
+| not_a_model | 5 |
+| launch_event_required | 4 |
+| disagrees_with_record | 3 |
+| already_recorded | 1 |
+| order_violation | 1 |
