@@ -96,6 +96,7 @@ gemini-3-8-flash,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,,true,,
 gemini-3-flash,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,0.4,2.4,0.04,2026-09-01,https://models.dev/api.json
 gemini-3-flash-preview,true,,,,,,1048576,65536,text|image|audio,text,2025-01,true,,,0.5,3,0.05,2026-09-01,https://models.dev/api.json
 gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6,0.16,2026-09-01,https://models.dev/api.json
+gemini-nano-banana-2-1,true,,,,,,65536,58982,image|text|pdf,image|text,,true,,,1.5,7.5,,2026-10-07,https://models.dev/api.json
 gemma-2-27b-it,false,none,,,,,8192,2048,text,text,,false,,,0.65,0.65,,2026-09-01,https://models.dev/api.json
 gemma-2-2b-it,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 gemma-2-9b-it,false,none,,,,,8192,8192,text,text,2024-06,false,,,0.01,0.03,,2026-09-01,https://models.dev/api.json
@@ -274,6 +275,7 @@ mistral-large,,none,,,,,32768,,text,text,,true,true,,,,,,https://mistral.ai/news
 mistral-large-2407,false,none,,,,,131072,104857,text|pdf,text,,true,,,2,6,0.2,2026-09-01,https://models.dev/api.json
 mistral-large-2512,false,none,,,,,262144,262144,text|image,text,2024-11,true,,,,,,2026-09-01,https://models.dev/api.json
 mistral-large-3,false,none,,,,,256000,131072,text|image,text,2024-11,true,,,0.5,1.5,0.5,2026-09-01,https://models.dev/api.json
+mistral-large-4-0,true,,,,,,524288,262144,text|image,text,,true,,,1.36,4.18,0.14,2026-10-07,https://models.dev/api.json
 mistral-medium,false,none,,,,,128000,64000,text|image,text,2024-10,true,,,0.4,2,,2026-09-01,https://models.dev/api.json
 mistral-medium-3,false,none,,,,,131072,104857,text|image|pdf,text,,true,,,0.4,2,0.04,2026-09-01,https://models.dev/api.json
 mistral-medium-3-1,false,none,,,,,131072,104857,text|image|pdf,text,,true,,,0.4,2,0.04,2026-09-01,https://models.dev/api.json

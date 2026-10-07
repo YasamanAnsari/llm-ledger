@@ -13,3 +13,8 @@ date,reason,count
 2026-10-06,no_dated_event,5
 2026-10-06,not_a_model,3
 2026-10-06,order_violation,1
+2026-10-07,already_recorded,1
+2026-10-07,community_lead,14
+2026-10-07,launch_event_required,3
+2026-10-07,no_dated_event,10
+2026-10-07,third_party_claim,3

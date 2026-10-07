@@ -57,6 +57,7 @@ apriel-nemotron-15b-thinker,huggingface,ServiceNow-AI/Apriel-Nemotron-15b-Thinke
 aprielguard,huggingface,ServiceNow-AI/AprielGuard
 arcee-blitz,huggingface,arcee-ai/Arcee-Blitz
 arcee-lite,huggingface,arcee-ai/arcee-lite
+arcee-nova,huggingface,arcee-ai/Arcee-Nova
 arcee-spark,huggingface,arcee-ai/Arcee-Spark
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
 armorocr,huggingface,inclusionAI/ArmorOCR
@@ -627,6 +628,9 @@ gemini-3-flash-preview,models_dev,abacus/gemini-3-flash-preview
 gemini-3-flash-preview,openrouter,google/gemini-3-flash-preview
 gemini-3-pro,epoch,Gemini 3 Pro
 gemini-3-pro,models_dev,poe/google/gemini-3-pro
+gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
+gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
+gemini-nano-banana-2-1,openrouter,google/gemini-nano-banana-2.1
 gemma-2-27b-it,epoch,Gemma 2 27B
 gemma-2-27b-it,huggingface,google/gemma-2-27b-it
 gemma-2-27b-it,models_dev,kilo/google/gemma-2-27b-it
@@ -1454,6 +1458,7 @@ ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
 ling-3-1-flash,models_dev,nano-gpt/inclusionai/ling-3.1-flash
 ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
@@ -1770,6 +1775,8 @@ mistral-large-2512,openrouter,mistralai/mistral-large-2512:batch
 mistral-large-3,epoch,Mistral Large 3
 mistral-large-3,models_dev,ollama-cloud/mistral-large-3:675b
 mistral-large-3,models_dev,pioneer/mistral-large-3
+mistral-large-4-0,models_dev,kilo/mistralai/mistral-large-4-0
+mistral-large-4-0,openrouter,mistralai/mistral-large-4-0
 mistral-large-instruct-2411,huggingface,mistralai/Mistral-Large-Instruct-2411
 mistral-medium,epoch,Mistral Medium
 mistral-medium,mistral_api,mistral-medium
@@ -2536,6 +2543,7 @@ sequential-helium-6b,huggingface,kyutai/Sequential_Helium_6B
 shieldstral-1-0-3b,huggingface,mistralai/Shieldstral-1.0-3B
 simplesd-30b-instruct,huggingface,apple/SimpleSD-30B-instruct
 simplesd-4b-instruct,huggingface,apple/SimpleSD-4B-instruct
+simplesd-4b-thinking,huggingface,apple/SimpleSD-4B-thinking
 singguard-2b,huggingface,inclusionAI/SingGuard-2b
 singguard-nsfa-0-8b,huggingface,inclusionAI/SingGuard-NSFA-0.8B
 singguard-nsfa-4b,huggingface,inclusionAI/SingGuard-NSFA-4B

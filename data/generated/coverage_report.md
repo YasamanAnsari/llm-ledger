@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1644; events: 2522
-- Models: curated 55, corroborated 679, single-source 910
-- Event confidence: verified 1091, inferred 1425, disputed 6
+- Models: 1648; events: 2534
+- Models: curated 55, corroborated 695, single-source 898
+- Event confidence: verified 1108, inferred 1420, disputed 6
 
 ## By organization
 
@@ -22,11 +22,11 @@ as settled.
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
-| AI2 | 51 | 51 | 0 | 13 | 38 | 25% |
+| AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Meta | 51 | 101 | 4 | 21 | 26 | 33% |
-| Mistral | 50 | 94 | 3 | 26 | 21 | 41% |
-| Ant Group | 49 | 58 | 0 | 35 | 14 | 64% |
-| Google | 47 | 125 | 7 | 24 | 16 | 46% |
+| Mistral | 51 | 96 | 3 | 28 | 20 | 44% |
+| Ant Group | 49 | 59 | 0 | 35 | 14 | 63% |
+| Google | 48 | 129 | 7 | 25 | 16 | 46% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
@@ -41,33 +41,33 @@ as settled.
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
 | Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
-| Anthropic | 24 | 117 | 8 | 13 | 3 | 69% |
+| Anthropic | 24 | 119 | 8 | 13 | 3 | 68% |
+| Arcee | 24 | 25 | 0 | 11 | 13 | 48% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | Salesforce | 24 | 24 | 0 | 4 | 20 | 17% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
-| Arcee | 23 | 24 | 0 | 6 | 17 | 29% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
-| Swiss AI | 21 | 23 | 0 | 2 | 19 | 9% |
+| Swiss AI | 21 | 23 | 0 | 3 | 18 | 13% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
+| Apple | 16 | 16 | 0 | 1 | 15 | 6% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| xAI | 16 | 41 | 2 | 9 | 5 | 37% |
-| Apple | 15 | 15 | 0 | 0 | 15 | 0% |
+| xAI | 16 | 42 | 2 | 9 | 5 | 36% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
 | LG AI Research | 14 | 14 | 0 | 0 | 14 | 0% |
-| SenseTime | 14 | 14 | 0 | 0 | 14 | 0% |
+| SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
 | Upstage | 14 | 18 | 0 | 5 | 9 | 28% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
-| Kuaishou | 12 | 13 | 0 | 3 | 9 | 23% |
-| Sber | 12 | 12 | 0 | 3 | 9 | 25% |
+| Kuaishou | 12 | 13 | 0 | 5 | 7 | 38% |
+| Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
 | Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
@@ -76,7 +76,7 @@ as settled.
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
-| Prime Intellect | 7 | 7 | 0 | 2 | 5 | 29% |
+| Prime Intellect | 7 | 7 | 0 | 3 | 4 | 43% |
 | NAVER | 6 | 6 | 0 | 2 | 4 | 33% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 2 | 4 | 40% |
@@ -91,10 +91,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1394 | 442 | 951 | 1 |
-| platform_availability | 314 | 311 | 1 | 2 |
-| retired | 263 | 133 | 130 | 0 |
-| api_ga | 235 | 58 | 176 | 1 |
+| weights_released | 1396 | 457 | 938 | 1 |
+| platform_availability | 316 | 313 | 1 | 2 |
+| retired | 268 | 133 | 135 | 0 |
+| api_ga | 238 | 58 | 179 | 1 |
 | announced | 216 | 49 | 166 | 1 |
 | consumer_rollout | 23 | 23 | 0 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -112,14 +112,15 @@ as settled.
 - Events it wrote: 4 (verified 1, single-source inferred 3)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-06, by reason:
+Declined in the 7 days to 2026-10-07, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 23 |
-| no_dated_event | 12 |
+| community_lead | 37 |
+| no_dated_event | 22 |
+| launch_event_required | 7 |
 | not_a_model | 5 |
-| launch_event_required | 4 |
 | disagrees_with_record | 3 |
-| already_recorded | 1 |
+| third_party_claim | 3 |
+| already_recorded | 2 |
 | order_violation | 1 |
