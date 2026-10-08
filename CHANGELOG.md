@@ -324,3 +324,8 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - new model `mistral-large-4`
 - `glm-5-3-platform_availability-2` 2026-10-05 inferred (vendor_blog; evidence: "GLM 5.3 from Z.ai (Zhipu AI) is now available on Amazon Bedrock .")
 - `mistral-large-4-announced-1` 2026-10-06 inferred (vendor_blog; evidence: "Today, we’re launching a public preview of Mistral Large 4.")
+
+## 2026-10-08
+
+- `gpt-6-sol-consumer_rollout-1` 2026-10-07 inferred (vendor_blog; evidence: "GPT‑6 in ChatGPT is powered by GPT‑6 Sol for Plus, Pro, Business, and Enterprise tiers")
+- `claude-haiku-5-5-platform_availability-2` 2026-10-07 inferred (vendor_blog; evidence: "Today, we’re excited to announce the availability of Claude Haiku 5.5 on Amazon Bedrock and Claude Platform on AWS .")

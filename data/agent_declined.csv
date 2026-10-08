@@ -18,3 +18,8 @@ date,reason,count
 2026-10-07,launch_event_required,3
 2026-10-07,no_dated_event,10
 2026-10-07,third_party_claim,3
+2026-10-08,already_recorded,1
+2026-10-08,community_lead,12
+2026-10-08,launch_event_required,3
+2026-10-08,no_dated_event,7
+2026-10-08,not_a_model,3

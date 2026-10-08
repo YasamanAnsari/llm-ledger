@@ -3,6 +3,7 @@ academic-ds-9b,huggingface,ByteDance-Seed/academic-ds-9B
 afm-4-5b,huggingface,arcee-ai/AFM-4.5B
 afm-4-5b-base,huggingface,arcee-ai/AFM-4.5B-Base
 afm-4-5b-base-pre-anneal,huggingface,arcee-ai/AFM-4.5B-Base-Pre-Anneal
+afm-4-5b-preview,huggingface,arcee-ai/AFM-4.5B-Preview
 ahn-dn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B
@@ -185,6 +186,9 @@ claude-haiku-4-5,anthropic_api,claude-haiku-4-5-20251001
 claude-haiku-4-5,epoch,Claude Haiku 4.5
 claude-haiku-4-5,models_dev,helicone/claude-haiku-4-5-20251001
 claude-haiku-4-5,openrouter,anthropic/claude-haiku-4.5
+claude-haiku-5-5,anthropic_api,claude-haiku-5-5
+claude-haiku-5-5,models_dev,amazon-bedrock/anthropic.claude-haiku-5-5
+claude-haiku-5-5,openrouter,anthropic/claude-haiku-5.5
 claude-mythos-5,epoch,Claude Mythos 5
 claude-mythos-5,models_dev,azure/claude-mythos-5
 claude-opus-4,epoch,Claude Opus 4
@@ -301,6 +305,8 @@ cpm-ant-10b,huggingface,openbmb/cpm-ant-10b
 ctm-imagenet,huggingface,SakanaAI/ctm-imagenet
 ctm-maze-large,huggingface,SakanaAI/ctm-maze-large
 cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
+d1-3b,huggingface,LiquidAI/d1-3B
+d1-omni-600m,huggingface,LiquidAI/d1-omni-600M
 deep-ignorance-e2e-strong-filter,huggingface,EleutherAI/deep-ignorance-e2e-strong-filter
 deep-ignorance-unfiltered,huggingface,EleutherAI/deep-ignorance-unfiltered
 deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B-Preview
@@ -1178,6 +1184,7 @@ hipo-8b,huggingface,Kwaipilot/HiPO-8B
 homunculus,huggingface,arcee-ai/Homunculus
 hunyuan-0-5b-instruct,huggingface,tencent/Hunyuan-0.5B-Instruct
 hunyuan-1-8b-instruct,huggingface,tencent/Hunyuan-1.8B-Instruct
+hunyuan-1-8b-pretrain,huggingface,tencent/Hunyuan-1.8B-Pretrain
 hunyuan-7b-instruct,huggingface,tencent/Hunyuan-7B-Instruct
 hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct
 hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct-FP8
@@ -1775,6 +1782,7 @@ mistral-large-2512,openrouter,mistralai/mistral-large-2512:batch
 mistral-large-3,epoch,Mistral Large 3
 mistral-large-3,models_dev,ollama-cloud/mistral-large-3:675b
 mistral-large-3,models_dev,pioneer/mistral-large-3
+mistral-large-4-0,models_dev,cortecs/mistral-large-4-0
 mistral-large-4-0,models_dev,kilo/mistralai/mistral-large-4-0
 mistral-large-4-0,openrouter,mistralai/mistral-large-4-0
 mistral-large-instruct-2411,huggingface,mistralai/Mistral-Large-Instruct-2411
@@ -2121,6 +2129,7 @@ pythia-12b,huggingface,EleutherAI/pythia-12b
 pythia-12b-deduped,huggingface,EleutherAI/pythia-12b-deduped
 pythia-14m,huggingface,EleutherAI/pythia-14m
 pythia-14m-deduped,huggingface,EleutherAI/pythia-14m-deduped
+pythia-14m-seed1,huggingface,EleutherAI/pythia-14m-seed1
 pythia-14m-seed6,huggingface,EleutherAI/pythia-14m-seed6
 pythia-160m,huggingface,EleutherAI/pythia-160m
 pythia-160m-data-seed1,huggingface,EleutherAI/pythia-160m-data-seed1
@@ -2645,6 +2654,7 @@ step-3-7-flash,openrouter,stepfun/step-3.7-flash
 step-5-preview,epoch,Step 5 Preview
 step-5-preview,models_dev,aihubmix/step-5-preview
 step-5-preview,models_dev,empiriolabs/step-5-preview
+step-5-preview,openrouter,stepfun/step-5-preview
 step3,huggingface,stepfun-ai/step3
 step3,huggingface,stepfun-ai/step3-fp8
 step3-vl-10b,huggingface,stepfun-ai/Step3-VL-10B

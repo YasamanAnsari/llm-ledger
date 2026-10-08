@@ -9,40 +9,40 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1648; events: 2534
-- Models: curated 55, corroborated 695, single-source 898
-- Event confidence: verified 1108, inferred 1420, disputed 6
+- Models: 1654; events: 2546
+- Models: curated 55, corroborated 708, single-source 891
+- Event confidence: verified 1124, inferred 1416, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 186 | 2 | 71 | 14 | 56% |
-| OpenAI | 69 | 284 | 19 | 45 | 5 | 72% |
+| Alibaba | 87 | 188 | 2 | 71 | 14 | 56% |
+| OpenAI | 69 | 285 | 19 | 45 | 5 | 72% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
-| EleutherAI | 52 | 52 | 0 | 1 | 51 | 2% |
+| EleutherAI | 53 | 53 | 0 | 1 | 52 | 2% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Meta | 51 | 101 | 4 | 21 | 26 | 33% |
-| Mistral | 51 | 96 | 3 | 28 | 20 | 44% |
+| Mistral | 51 | 94 | 3 | 28 | 20 | 45% |
 | Ant Group | 49 | 59 | 0 | 35 | 14 | 63% |
 | Google | 48 | 129 | 7 | 25 | 16 | 46% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
-| DeepSeek | 43 | 95 | 3 | 26 | 14 | 57% |
+| DeepSeek | 43 | 96 | 3 | 26 | 14 | 56% |
 | MBZUAI | 41 | 41 | 0 | 0 | 41 | 0% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 36 | 80 | 3 | 26 | 7 | 61% |
 | NVIDIA | 32 | 47 | 0 | 12 | 20 | 26% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
+| Liquid AI | 30 | 31 | 0 | 21 | 9 | 68% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
-| Liquid AI | 28 | 29 | 0 | 21 | 7 | 72% |
+| Tencent | 27 | 37 | 1 | 16 | 10 | 54% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
-| Tencent | 26 | 36 | 1 | 15 | 10 | 53% |
-| Xiaomi | 25 | 33 | 0 | 22 | 3 | 67% |
-| Anthropic | 24 | 119 | 8 | 13 | 3 | 68% |
-| Arcee | 24 | 25 | 0 | 11 | 13 | 48% |
+| Anthropic | 25 | 123 | 8 | 14 | 3 | 67% |
+| Arcee | 25 | 26 | 0 | 14 | 11 | 58% |
+| Xiaomi | 25 | 33 | 0 | 23 | 2 | 70% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | Salesforce | 24 | 24 | 0 | 4 | 20 | 17% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
@@ -50,33 +50,33 @@ as settled.
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
-| Swiss AI | 21 | 23 | 0 | 3 | 18 | 13% |
+| Swiss AI | 21 | 23 | 0 | 4 | 17 | 17% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
-| StepFun | 17 | 19 | 0 | 12 | 5 | 63% |
+| StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
-| Apple | 16 | 16 | 0 | 1 | 15 | 6% |
+| Apple | 16 | 16 | 0 | 2 | 14 | 12% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 42 | 2 | 9 | 5 | 36% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
-| LG AI Research | 14 | 14 | 0 | 0 | 14 | 0% |
+| LG AI Research | 14 | 14 | 0 | 1 | 13 | 7% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
 | Upstage | 14 | 18 | 0 | 5 | 9 | 28% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
-| Kuaishou | 12 | 13 | 0 | 5 | 7 | 38% |
+| Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
 | Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
-| Aleph Alpha | 9 | 9 | 0 | 0 | 9 | 0% |
+| Aleph Alpha | 9 | 9 | 0 | 1 | 8 | 11% |
 | ServiceNow | 9 | 9 | 0 | 1 | 8 | 11% |
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
-| Prime Intellect | 7 | 7 | 0 | 3 | 4 | 43% |
+| Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 2 | 4 | 33% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 2 | 4 | 40% |
@@ -91,12 +91,12 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1396 | 457 | 938 | 1 |
-| platform_availability | 316 | 313 | 1 | 2 |
-| retired | 268 | 133 | 135 | 0 |
-| api_ga | 238 | 58 | 179 | 1 |
+| weights_released | 1401 | 468 | 932 | 1 |
+| platform_availability | 319 | 315 | 2 | 2 |
+| retired | 272 | 135 | 137 | 0 |
+| api_ga | 237 | 59 | 177 | 1 |
 | announced | 216 | 49 | 166 | 1 |
-| consumer_rollout | 23 | 23 | 0 | 0 |
+| consumer_rollout | 24 | 23 | 1 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
@@ -109,18 +109,18 @@ as settled.
 
 ## Page-reading agent
 
-- Events it wrote: 4 (verified 1, single-source inferred 3)
+- Events it wrote: 6 (verified 1, single-source inferred 5)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-07, by reason:
+Declined in the 7 days to 2026-10-08, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 37 |
-| no_dated_event | 22 |
-| launch_event_required | 7 |
-| not_a_model | 5 |
+| community_lead | 49 |
+| no_dated_event | 29 |
+| launch_event_required | 10 |
+| not_a_model | 8 |
+| already_recorded | 3 |
 | disagrees_with_record | 3 |
 | third_party_claim | 3 |
-| already_recorded | 2 |
 | order_violation | 1 |
