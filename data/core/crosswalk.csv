@@ -245,6 +245,7 @@ claude-sonnet-5-5,anthropic_api,claude-sonnet-5-5
 claude-sonnet-5-5,epoch,Claude Sonnet 5.5
 claude-sonnet-5-5,models_dev,venice/claude-sonnet-5-5
 claude-sonnet-5-5,openrouter,anthropic/claude-sonnet-5.5
+coda-v0-instruct,huggingface,Salesforce/CoDA-v0-Instruct
 codegeex4-all-9b,huggingface,zai-org/codegeex4-all-9b
 codegen-2b-mono,huggingface,Salesforce/codegen-2B-mono
 codegen-2b-multi,huggingface,Salesforce/codegen-2B-multi
@@ -635,6 +636,7 @@ gemini-3-flash-preview,openrouter,google/gemini-3-flash-preview
 gemini-3-pro,epoch,Gemini 3 Pro
 gemini-3-pro,models_dev,poe/google/gemini-3-pro
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
+gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,openrouter,google/gemini-nano-banana-2.1
 gemma-2-27b-it,epoch,Gemma 2 27B
@@ -1455,7 +1457,9 @@ ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin:free
+ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante
 ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante:free
+ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante
 ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL-fp8
@@ -1793,6 +1797,7 @@ mistral-medium,models_dev,vercel/mistral/mistral-medium
 mistral-medium-3,epoch,Mistral Medium 3
 mistral-medium-3,mistral_api,mistral-medium-3
 mistral-medium-3,models_dev,empiriolabs/mistral-medium-3
+mistral-medium-3,models_dev,google-vertex/mistral-medium-3
 mistral-medium-3,models_dev,kilo/mistralai/mistral-medium-3
 mistral-medium-3,openrouter,mistralai/mistral-medium-3
 mistral-medium-3-1,epoch,Mistral Medium 3.1
