@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1655; events: 2553
+- Models: 1655; events: 2556
 - Models: curated 55, corroborated 716, single-source 884
-- Event confidence: verified 1132, inferred 1415, disputed 6
+- Event confidence: verified 1135, inferred 1415, disputed 6
 
 ## By organization
 
@@ -25,7 +25,7 @@ as settled.
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Meta | 51 | 101 | 4 | 21 | 26 | 33% |
 | Mistral | 51 | 94 | 3 | 28 | 20 | 45% |
-| Ant Group | 49 | 59 | 0 | 35 | 14 | 63% |
+| Ant Group | 49 | 60 | 0 | 35 | 14 | 62% |
 | Google | 48 | 132 | 7 | 25 | 16 | 45% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | TII | 46 | 46 | 0 | 3 | 43 | 7% |
@@ -40,10 +40,10 @@ as settled.
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Tencent | 27 | 37 | 1 | 16 | 10 | 54% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
-| Anthropic | 25 | 124 | 8 | 14 | 3 | 67% |
+| Anthropic | 25 | 124 | 8 | 14 | 3 | 68% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Salesforce | 25 | 25 | 0 | 4 | 21 | 16% |
-| Xiaomi | 25 | 33 | 0 | 23 | 2 | 70% |
+| Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
@@ -91,11 +91,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1402 | 476 | 925 | 1 |
+| weights_released | 1403 | 476 | 926 | 1 |
 | platform_availability | 319 | 315 | 2 | 2 |
-| retired | 278 | 135 | 143 | 0 |
-| api_ga | 237 | 59 | 177 | 1 |
-| announced | 216 | 49 | 166 | 1 |
+| retired | 280 | 138 | 142 | 0 |
+| api_ga | 239 | 59 | 179 | 1 |
+| announced | 214 | 49 | 164 | 1 |
 | consumer_rollout | 24 | 23 | 1 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -112,12 +112,12 @@ as settled.
 - Events it wrote: 6 (verified 1, single-source inferred 5)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-09, by reason:
+Declined in the 7 days to 2026-10-10, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 63 |
-| no_dated_event | 39 |
+| community_lead | 73 |
+| no_dated_event | 64 |
 | launch_event_required | 10 |
 | not_a_model | 8 |
 | already_recorded | 3 |

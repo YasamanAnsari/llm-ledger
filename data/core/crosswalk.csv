@@ -457,6 +457,7 @@ ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-2Bits-TP4-Paddle
 ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-FP8-Paddle
 ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-Paddle
 ernie-4-5-300b-a47b,huggingface,baidu/ERNIE-4.5-300B-A47B-W4A8C8-TP4-Paddle
+ernie-4-5-300b-a47b,models_dev,jiekou/baidu/ernie-4.5-300b-a47b-paddle
 ernie-4-5-300b-a47b,models_dev,novita-ai/baidu/ernie-4.5-300b-a47b-paddle
 ernie-4-5-300b-a47b,models_dev,siliconflow/baidu/ERNIE-4.5-300B-A47B
 ernie-4-5-300b-a47b-base,huggingface,baidu/ERNIE-4.5-300B-A47B-Base-Paddle
@@ -2767,6 +2768,7 @@ voxtral-small-24b-2507,openrouter,mistralai/voxtral-small-24b-2507
 wildguard,huggingface,allenai/wildguard
 wizardlm-2-8x22b,epoch,WizardLM-2 8x22B
 wizardlm-2-8x22b,models_dev,kilo/microsoft/wizardlm-2-8x22b
+wizardlm-2-8x22b,models_dev,nano-gpt/microsoft/wizardlm-2-8x22b
 wizardlm-2-8x22b,openrouter,microsoft/wizardlm-2-8x22b
 xgen-7b-8k-base,huggingface,Salesforce/xgen-7b-8k-base
 xgen-mm-phi3-mini-instruct-interleave-r-v1-5,huggingface,Salesforce/xgen-mm-phi3-mini-instruct-interleave-r-v1.5

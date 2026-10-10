@@ -7,41 +7,41 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-8d, n=119)
+- median 0d (IQR 0-7d, n=119)
 - range: 0d to 701d
 
 | gap | models |
 |---|---|
-| same day | 69 |
+| same day | 70 |
 | 1-7d | 19 |
-| 8-30d | 7 |
+| 8-30d | 6 |
 | 31-90d | 9 |
 | 91-365d | 13 |
 | >365d | 2 |
 
 Per-organization medians (n>=3):
 
-- alibaba: 15d (n=9)
+- alibaba: 8d (n=8)
 - google: 4d (n=18)
 - amazon: 0d (n=3)
 - anthropic: 0d (n=14)
-- deepseek: 0d (n=4)
+- deepseek: 0d (n=3)
 - bytedance: 0d (n=3)
 - zhipu: 0d (n=4)
 - openai: 0d (n=33)
 - xai: 0d (n=9)
-- meta: 0d (n=3)
+- meta: 0d (n=4)
 - mistral: 0d (n=4)
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=83)
+- median 0d (IQR 0-1d, n=81)
 - range: 0d to 779d
 
 | gap | models |
 |---|---|
-| same day | 60 |
-| 1-7d | 14 |
+| same day | 59 |
+| 1-7d | 13 |
 | 8-30d | 1 |
 | 31-90d | 2 |
 | 91-365d | 5 |
@@ -50,11 +50,11 @@ Per-organization medians (n>=3):
 Per-organization medians (n>=3):
 
 - mistral: 0d (n=5)
-- deepseek: 0d (n=10)
+- deepseek: 0d (n=9)
 - google: 0d (n=7)
 - zhipu: 0d (n=7)
 - moonshot: 0d (n=5)
-- meta: 0d (n=9)
+- meta: 0d (n=8)
 - nvidia: 0d (n=7)
 - minimax: 0d (n=5)
 - alibaba: 0d (n=11)
@@ -145,5 +145,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1641
-- models with announced + an availability event: 192
+- models with an anchor event: 1642
+- models with announced + an availability event: 190
