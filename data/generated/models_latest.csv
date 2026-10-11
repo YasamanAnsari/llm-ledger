@@ -611,9 +611,9 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-06,api_ga,inferred,gpt-5-pro,GPT-5 Pro,openai,GPT-5,pro,llm,api_only,proprietary
 2025-10-06,weights_released,inferred,olmocr-2-7b,olmOCR-2-7B-1025,allenai,olmOCR-2,,vlm,open_weights,osi_approved
 2025-10-06,weights_released,inferred,olmocr-2-7b-1025,olmOCR-2-7B-1025-FP8,allenai,olmOCR-2,,vlm,open_weights,osi_approved
+2025-10-06,platform_availability_fallback,verified,qwen3-vl-30b-a3b-instruct,Qwen3-VL-30B-A3B-Instruct,alibaba,Qwen3,instruct,vlm,open_weights,
 2025-10-06,platform_availability_fallback,verified,qwen3-vl-30b-a3b-thinking,qwen3-vl-30b-a3b-thinking,alibaba,Qwen3,thinking,vlm,api_only,proprietary
 2025-10-05,weights_released,inferred,ai21-jamba-reasoning-3b,AI21-Jamba-Reasoning-3B,ai21,AI21-Jamba,thinking,llm,open_weights,osi_approved
-2025-10-04,weights_released,inferred,qwen3-vl-30b-a3b-instruct,Qwen3-VL-30B-A3B-Instruct,alibaba,Qwen3,instruct,vlm,open_weights,
 2025-09-30,weights_released,verified,bfs-prover-v2-32b,BFS-Prover-V2-32B,bytedance,BFS-Prover-V2,,llm,open_weights,osi_approved
 2025-09-30,weights_released,verified,glm-4-6,GLM-4.6,zhipu,GLM-4.6,,llm,open_weights,proprietary
 2025-09-29,api_ga,verified,claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,Claude 4,base,vlm,api_only,proprietary
@@ -713,7 +713,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-08-03,weights_released,inferred,cudallm-8b,cudaLLM-8B,bytedance,cudaLLM,,llm,open_weights,osi_approved
 2025-08-01,weights_released,verified,mindlink-32b,MindLink-32B-0801,skywork,MindLink,,llm,open_weights,osi_approved
 2025-08-01,weights_released,verified,mindlink-72b,MindLink-72B-0801,skywork,MindLink,,llm,open_weights,osi_approved
-2025-07-31,weights_released,verified,llama-3-3-nemotron-super-49b-v1-5,Llama-3_3-Nemotron-Super-49B-v1_5-FP8,nvidia,Llama-3_3-Nemotron-Super-v1_5,,llm,open_weights,
 2025-07-31,platform_availability_fallback,verified,qwen3-coder-30b-a3b-instruct,qwen3-coder-30b-a3b-instruct,alibaba,Qwen3,instruct,llm,open_weights,
 2025-07-30,api_ga,inferred,codestral-2508,codestral-2508,mistral,Codestral,,llm,open_weights,
 2025-07-30,weights_released,verified,hunyuan-0-5b-instruct,Hunyuan-0.5B-Instruct,tencent,Hunyuan,instruct,llm,open_weights,
@@ -729,6 +728,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-07-28,weights_released,verified,hunyuan-1-8b-pretrain,Hunyuan-1.8B-Pretrain,tencent,Hunyuan-Pretrain,,llm,open_weights,
 2025-07-28,api_ga,inferred,qwen3-coder-flash,qwen3-coder-flash,alibaba,Qwen3,coder,llm,api_only,proprietary
 2025-07-28,weights_released,inferred,step3,step3,stepfun,Step3,,vlm,open_weights,osi_approved
+2025-07-25,weights_released,inferred,llama-3-3-nemotron-super-49b-v1-5,Llama-3_3-Nemotron-Super-49B-v1_5-FP8,nvidia,Llama-3_3-Nemotron-Super-v1_5,,llm,open_weights,
 2025-07-25,platform_availability_fallback,verified,qwen3-235b-a22b-thinking-2507,qwen3-235b-a22b-thinking-2507,alibaba,Qwen3,thinking,llm,open_weights,
 2025-07-24,weights_released,verified,intern-s1,Intern-S1,shanghai-ai-lab,Intern-S1,,vlm,open_weights,osi_approved
 2025-07-23,weights_released,verified,kanana-1-5-15-7b-a3b-instruct,kanana-1.5-15.7b-a3b-instruct,kakao,kanana-1.5,instruct,llm,open_weights,

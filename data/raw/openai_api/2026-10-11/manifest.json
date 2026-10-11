@@ -1,0 +1,8 @@
+{
+  "models.json": {
+    "bytes": 21507,
+    "fetched_at": "2026-10-11T12:55:00+00:00",
+    "sha256": "d31959f5410404224cf53b0beb4b1d1b1ffaa1e8554dd93e0c8853051ae19231",
+    "url": "https://api.openai.com/v1/models"
+  }
+}

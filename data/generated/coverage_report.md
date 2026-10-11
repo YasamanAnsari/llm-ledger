@@ -9,15 +9,15 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1655; events: 2556
-- Models: curated 55, corroborated 716, single-source 884
-- Event confidence: verified 1135, inferred 1415, disputed 6
+- Models: 1655; events: 2555
+- Models: curated 55, corroborated 715, single-source 885
+- Event confidence: verified 1134, inferred 1415, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 188 | 2 | 71 | 14 | 56% |
+| Alibaba | 87 | 187 | 2 | 71 | 14 | 57% |
 | OpenAI | 69 | 285 | 19 | 45 | 5 | 72% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
@@ -34,7 +34,7 @@ as settled.
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 36 | 80 | 3 | 26 | 7 | 61% |
-| NVIDIA | 32 | 48 | 0 | 12 | 20 | 25% |
+| NVIDIA | 32 | 48 | 0 | 11 | 21 | 23% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Liquid AI | 30 | 31 | 0 | 22 | 8 | 71% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
@@ -91,7 +91,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1403 | 476 | 926 | 1 |
+| weights_released | 1402 | 475 | 926 | 1 |
 | platform_availability | 319 | 315 | 2 | 2 |
 | retired | 280 | 138 | 142 | 0 |
 | api_ga | 239 | 59 | 179 | 1 |
@@ -112,12 +112,12 @@ as settled.
 - Events it wrote: 6 (verified 1, single-source inferred 5)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-10, by reason:
+Declined in the 7 days to 2026-10-11, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 73 |
-| no_dated_event | 64 |
+| community_lead | 81 |
+| no_dated_event | 65 |
 | launch_event_required | 10 |
 | not_a_model | 8 |
 | already_recorded | 3 |

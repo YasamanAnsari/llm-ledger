@@ -187,6 +187,7 @@ claude-haiku-4-5,epoch,Claude Haiku 4.5
 claude-haiku-4-5,models_dev,helicone/claude-haiku-4-5-20251001
 claude-haiku-4-5,openrouter,anthropic/claude-haiku-4.5
 claude-haiku-5-5,anthropic_api,claude-haiku-5-5
+claude-haiku-5-5,models_dev,302ai/claude-haiku-5-5
 claude-haiku-5-5,models_dev,amazon-bedrock/anthropic.claude-haiku-5-5
 claude-haiku-5-5,openrouter,anthropic/claude-haiku-5.5
 claude-mythos-5,epoch,Claude Mythos 5
@@ -773,6 +774,7 @@ glm-5-1,huggingface,zai-org/GLM-5.1
 glm-5-1,huggingface,zai-org/GLM-5.1-FP8
 glm-5-1,models_dev,nearai/zai-org/GLM-5.1-FP8
 glm-5-1,models_dev,novita-ai/zai-org/glm-5.1
+glm-5-1,models_dev,ollama-cloud/glm-5.1
 glm-5-1,openrouter,z-ai/glm-5.1
 glm-5-2,epoch,GLM-5.2
 glm-5-2,huggingface,zai-org/GLM-5.2
@@ -1008,6 +1010,7 @@ gpt-5-pro,openai_api,gpt-5-pro
 gpt-5-pro,openai_api,gpt-5-pro-2025-10-06
 gpt-5-pro,openrouter,openai/gpt-5-pro
 gpt-6-1-sol,epoch,GPT-6.1 Sol
+gpt-6-1-sol,models_dev,302ai/gpt-6.1-sol
 gpt-6-1-sol,models_dev,amazon-bedrock/openai.gpt-6.1-sol
 gpt-6-1-sol,openai_api,gpt-6.1-sol
 gpt-6-1-sol,openrouter,openai/gpt-6.1-sol
@@ -1548,6 +1551,7 @@ llama-3-3-70b-instruct,huggingface,meta-llama/Llama-3.3-70B-Instruct
 llama-3-3-70b-instruct,models_dev,nvidia/meta/llama-3.3-70b-instruct
 llama-3-3-70b-instruct,openrouter,meta-llama/llama-3.3-70b-instruct
 llama-3-3-nemotron-super-49b-v1,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1
+llama-3-3-nemotron-super-49b-v1-5,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1_5
 llama-3-3-nemotron-super-49b-v1-5,huggingface,nvidia/Llama-3_3-Nemotron-Super-49B-v1_5-FP8
 llama-3-70b,huggingface,meta-llama/Meta-Llama-3-70B
 llama-3-70b-instruct,epoch,Llama 3-70B
