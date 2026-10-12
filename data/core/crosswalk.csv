@@ -1191,6 +1191,7 @@ homunculus,huggingface,arcee-ai/Homunculus
 hunyuan-0-5b-instruct,huggingface,tencent/Hunyuan-0.5B-Instruct
 hunyuan-1-8b-instruct,huggingface,tencent/Hunyuan-1.8B-Instruct
 hunyuan-1-8b-pretrain,huggingface,tencent/Hunyuan-1.8B-Pretrain
+hunyuan-4b-instruct,huggingface,tencent/Hunyuan-4B-Instruct
 hunyuan-7b-instruct,huggingface,tencent/Hunyuan-7B-Instruct
 hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct
 hunyuan-a13b-instruct,huggingface,tencent/Hunyuan-A13B-Instruct-FP8
@@ -1612,6 +1613,7 @@ longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2
 longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2601-FP8
 longcat-flash-thinking-zigzag,huggingface,meituan-longcat/LongCat-Flash-Thinking-ZigZag
 longcat-heavymode-summary,huggingface,meituan-longcat/LongCat-HeavyMode-Summary
+longcite-glm4-9b,huggingface,zai-org/LongCite-glm4-9b
 mage-vl,huggingface,microsoft/Mage-VL
 magistral-small-2506,huggingface,mistralai/Magistral-Small-2506
 magistral-small-2509,huggingface,mistralai/Magistral-Small-2509
@@ -2380,6 +2382,7 @@ qwen3-8b,openrouter,qwen/qwen3-8b
 qwen3-coder,models_dev,pendra/qwen3-coder:30b
 qwen3-coder,models_dev,vercel/alibaba/qwen3-coder
 qwen3-coder,openrouter,qwen/qwen3-coder
+qwen3-coder-30b-a3b-instruct,huggingface,Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8
 qwen3-coder-30b-a3b-instruct,models_dev,alibaba/qwen3-coder-30b-a3b-instruct
 qwen3-coder-30b-a3b-instruct,openrouter,qwen/qwen3-coder-30b-a3b-instruct
 qwen3-coder-480b-a35b-instruct,epoch,Qwen3-Coder-480B-A35B
