@@ -329,3 +329,11 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 
 - `gpt-6-sol-consumer_rollout-1` 2026-10-07 inferred (vendor_blog; evidence: "GPT‑6 in ChatGPT is powered by GPT‑6 Sol for Plus, Pro, Business, and Enterprise tiers")
 - `claude-haiku-5-5-platform_availability-2` 2026-10-07 inferred (vendor_blog; evidence: "Today, we’re excited to announce the availability of Claude Haiku 5.5 on Amazon Bedrock and Claude Platform on AWS .")
+
+## 2026-10-13
+
+- `gemini-3-6-flash-consumer_rollout-1` 2026-07-21 inferred (vendor_changelog; evidence: "We’re introducing Gemini 3.6 Flash, an upgraded version of our Flash model... We're excited to bring this model to all Gemini app users globally.")
+- `gemini-3-5-flash-consumer_rollout-1` 2026-05-19 inferred (vendor_changelog; evidence: "Gemini 3.5 Flash is our best model yet for getting challenging tasks done quickly and efficiently... Rolling out to everyone globally.")
+- `gemini-3-1-pro-consumer_rollout-1` 2026-02-19 inferred (vendor_changelog; evidence: "3.1 Pro is rolling out globally to the Gemini app, with higher limits for users with Google AI Pro and Ultra plans.")
+- `gemini-3-flash-consumer_rollout-1` 2025-12-17 inferred (vendor_changelog; evidence: "Gemini 3 Flash is now the new default model in the Gemini app.")
+- `gemini-3-pro-consumer_rollout-1` 2025-11-18 inferred (vendor_changelog; evidence: "Gemini 3 Pro is rolling out to everyone in the Gemini app starting today, with higher limits for users in the Google AI Plus, Pro & Ultra plans.")

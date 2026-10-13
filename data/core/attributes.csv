@@ -296,6 +296,7 @@ muse-spark-1-2,true,,,,,,1048576,131072,text|image|audio|video,text,,true,,,1.25
 muse-spark-1-2-contributor,true,,,,,,1048576,131072,text|image|video|pdf|audio,text,,true,,,0.1,0.2,,2026-09-01,https://models.dev/api.json
 muse-spark-1-3,true,,,,,,1048576,943718,text|image|video|pdf|audio,text,,true,,,1.25,4.25,0.15,2026-09-03,https://models.dev/api.json
 muse-spark-1-3-contributor,true,,,,,,1048576,943718,text|image|video|pdf|audio,text,,true,,,0.1,0.2,0.002,2026-09-03,https://models.dev/api.json
+muse-wonder,true,,,,,,1048576,943718,text|image|video|pdf|audio,text,,true,,,4,20,0.2,2026-10-13,https://models.dev/api.json
 nemotron-3-5-content-safety,true,,,,,,128000,8192,text|image,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 nemotron-3-5-lightning,true,,,,,,262144,131072,text,text,,true,,,0.08,0.2,0.04,2026-09-01,https://models.dev/api.json
 nemotron-3-nano-30b-a3b,true,,,,,,131072,131072,text,text,2024-09,true,,,0,0,,2026-09-01,https://models.dev/api.json

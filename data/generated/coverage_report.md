@@ -9,26 +9,26 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1657; events: 2558
-- Models: curated 55, corroborated 718, single-source 884
-- Event confidence: verified 1138, inferred 1414, disputed 6
+- Models: 1662; events: 2572
+- Models: curated 55, corroborated 719, single-source 888
+- Event confidence: verified 1139, inferred 1427, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 188 | 2 | 71 | 14 | 57% |
+| Alibaba | 87 | 189 | 2 | 71 | 14 | 57% |
 | OpenAI | 69 | 285 | 19 | 45 | 5 | 72% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | EleutherAI | 53 | 53 | 0 | 1 | 52 | 2% |
+| Meta | 52 | 103 | 4 | 22 | 26 | 33% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
-| Meta | 51 | 101 | 4 | 21 | 26 | 33% |
-| Mistral | 51 | 94 | 3 | 28 | 20 | 45% |
+| Mistral | 51 | 95 | 3 | 28 | 20 | 44% |
 | Ant Group | 49 | 60 | 0 | 35 | 14 | 62% |
-| Google | 48 | 132 | 7 | 25 | 16 | 45% |
+| Google | 48 | 137 | 7 | 25 | 16 | 43% |
+| TII | 47 | 47 | 0 | 3 | 44 | 6% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
-| TII | 46 | 46 | 0 | 3 | 43 | 7% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
 | MBZUAI | 41 | 41 | 0 | 0 | 41 | 0% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
@@ -37,24 +37,24 @@ as settled.
 | NVIDIA | 32 | 48 | 0 | 11 | 21 | 23% |
 | OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
 | Liquid AI | 30 | 31 | 0 | 22 | 8 | 71% |
+| Tencent | 29 | 39 | 1 | 17 | 11 | 54% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
-| Tencent | 28 | 38 | 1 | 17 | 10 | 55% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Anthropic | 25 | 124 | 8 | 14 | 3 | 68% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Salesforce | 25 | 25 | 0 | 4 | 21 | 16% |
+| Stability | 25 | 25 | 0 | 9 | 16 | 36% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
-| Stability | 24 | 24 | 0 | 9 | 15 | 38% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
 | Swiss AI | 21 | 23 | 0 | 5 | 16 | 22% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
+| Apple | 17 | 17 | 0 | 2 | 15 | 12% |
 | StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
-| Apple | 16 | 16 | 0 | 2 | 14 | 12% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 42 | 2 | 9 | 5 | 36% |
@@ -64,7 +64,7 @@ as settled.
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
-| Upstage | 14 | 18 | 0 | 6 | 8 | 33% |
+| Upstage | 14 | 17 | 0 | 6 | 8 | 35% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
@@ -74,7 +74,7 @@ as settled.
 | Aleph Alpha | 9 | 9 | 0 | 1 | 8 | 11% |
 | ServiceNow | 9 | 9 | 0 | 1 | 8 | 11% |
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
-| Amazon | 8 | 14 | 0 | 5 | 3 | 36% |
+| Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
@@ -91,12 +91,12 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1405 | 479 | 925 | 1 |
-| platform_availability | 319 | 315 | 2 | 2 |
+| weights_released | 1418 | 479 | 938 | 1 |
+| platform_availability | 320 | 316 | 2 | 2 |
 | retired | 280 | 138 | 142 | 0 |
-| api_ga | 239 | 59 | 179 | 1 |
-| announced | 214 | 49 | 164 | 1 |
-| consumer_rollout | 24 | 23 | 1 | 0 |
+| api_ga | 233 | 59 | 173 | 1 |
+| announced | 215 | 49 | 165 | 1 |
+| consumer_rollout | 29 | 23 | 6 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
@@ -109,18 +109,16 @@ as settled.
 
 ## Page-reading agent
 
-- Events it wrote: 6 (verified 1, single-source inferred 5)
+- Events it wrote: 11 (verified 1, single-source inferred 10)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-12, by reason:
+Declined in the 7 days to 2026-10-13, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 86 |
+| community_lead | 80 |
 | no_dated_event | 61 |
-| launch_event_required | 8 |
-| not_a_model | 6 |
-| already_recorded | 3 |
-| disagrees_with_record | 3 |
+| launch_event_required | 7 |
+| not_a_model | 3 |
 | third_party_claim | 3 |
-| order_violation | 1 |
+| already_recorded | 2 |
