@@ -97,6 +97,7 @@ gemini-3-8-flash,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,,true,,
 gemini-3-flash,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,0.4,2.4,0.04,2026-09-01,https://models.dev/api.json
 gemini-3-flash-preview,true,,,,,,1048576,65536,text|image|audio,text,2025-01,true,,,0.5,3,0.05,2026-09-01,https://models.dev/api.json
 gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6,0.16,2026-09-01,https://models.dev/api.json
+gemini-4-argon,true,,,,,,1048576,1048576,text|image|audio,text,,true,,,4,20,0.2,2026-10-14,https://models.dev/api.json
 gemini-nano-banana-2-1,true,,,,,,65536,58982,image|text|pdf,image|text,,true,,,1.5,7.5,,2026-10-07,https://models.dev/api.json
 gemma-2-27b-it,false,none,,,,,8192,2048,text,text,,false,,,0.65,0.65,,2026-09-01,https://models.dev/api.json
 gemma-2-2b-it,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
@@ -221,6 +222,7 @@ kimi-k2-thinking,true,,,,,,32768,4096,text,text,2024-08,true,,,0.55,2.25,0.275,2
 kimi-k3,,always_on,,,,,1048576,,text|image|video,text,,true,,,3.00,15.00,,2026-08-25,https://huggingface.co/moonshotai/Kimi-K3
 laguna-s-2-1,true,,,,,,1048576,32768,text,text,,true,,,0,0,0,2026-10-03,https://models.dev/api.json
 laguna-xs-2-1,true,,,,,,262144,32768,text,text,,true,,,0,0,0,2026-10-03,https://models.dev/api.json
+lfm-2-5-24b-a2b,true,,,,,,128000,8192,text,text,,true,,,0.05,0.7,0.025,2026-10-14,https://models.dev/api.json
 lfm2-5-2-6b,true,,,,,,65536,8192,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 ling-1t,false,none,,,,,128000,32000,text,text,2024-06,true,,,0.57,2.29,,2026-09-01,https://models.dev/api.json
 ling-2-6-flash,false,none,,,,,262144,262144,text,text,,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json

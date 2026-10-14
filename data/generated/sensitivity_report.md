@@ -7,14 +7,14 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-6d, n=116)
+- median 0d (IQR 0-7d, n=117)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
 | same day | 69 |
 | 1-7d | 19 |
-| 8-30d | 5 |
+| 8-30d | 6 |
 | 31-90d | 9 |
 | 91-365d | 13 |
 | >365d | 1 |
@@ -22,7 +22,7 @@ positive means the second event happened after the first.
 Per-organization medians (n>=3):
 
 - alibaba: 8d (n=8)
-- google: 2d (n=17)
+- google: 4d (n=18)
 - amazon: 0d (n=3)
 - anthropic: 0d (n=14)
 - deepseek: 0d (n=3)
@@ -61,14 +61,14 @@ Per-organization medians (n>=3):
 
 ## announced -> consumer_rollout
 
-- median 0d (IQR 0-9d, n=28)
+- median 0d (IQR 0-13d, n=29)
 - range: 0d to 117d
 
 | gap | models |
 |---|---|
 | same day | 20 |
 | 1-7d | 0 |
-| 8-30d | 2 |
+| 8-30d | 3 |
 | 31-90d | 5 |
 | 91-365d | 1 |
 | >365d | 0 |
@@ -76,7 +76,7 @@ Per-organization medians (n>=3):
 Per-organization medians (n>=3):
 
 - anthropic: 0d (n=6)
-- google: 0d (n=7)
+- google: 0d (n=8)
 - openai: 0d (n=13)
 
 ## announced -> free_tier
@@ -146,5 +146,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1652
-- models with announced + an availability event: 191
+- models with an anchor event: 1656
+- models with announced + an availability event: 192

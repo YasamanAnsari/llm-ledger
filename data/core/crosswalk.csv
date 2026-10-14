@@ -648,6 +648,10 @@ gemini-3-flash-preview,models_dev,abacus/gemini-3-flash-preview
 gemini-3-flash-preview,openrouter,google/gemini-3-flash-preview
 gemini-3-pro,epoch,Gemini 3 Pro
 gemini-3-pro,models_dev,poe/google/gemini-3-pro
+gemini-4-argon,epoch,Gemini 4 Argon
+gemini-4-argon,google_api,gemini-4-argon
+gemini-4-argon,models_dev,llmgateway/gemini-4-argon
+gemini-4-argon,openrouter,google/gemini-4-argon
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
@@ -1318,6 +1322,7 @@ japanese-gpt-neox-3-6b-instruction-ppo,huggingface,rinna/japanese-gpt-neox-3.6b-
 japanese-gpt-neox-3-6b-instruction-sft-v2,huggingface,rinna/japanese-gpt-neox-3.6b-instruction-sft-v2
 japanese-gpt-neox-small,huggingface,rinna/japanese-gpt-neox-small
 japanese-stablelm-base-alpha-7b,huggingface,stabilityai/japanese-stablelm-base-alpha-7b
+japanese-stablelm-base-beta-7b,huggingface,stabilityai/japanese-stablelm-base-beta-7b
 japanese-stablelm-base-gamma-7b,huggingface,stabilityai/japanese-stablelm-base-gamma-7b
 japanese-stablelm-base-ja-vocab-beta-7b,huggingface,stabilityai/japanese-stablelm-base-ja_vocab-beta-7b
 japanese-stablelm-instruct-beta-70b,huggingface,stabilityai/japanese-stablelm-instruct-beta-70b
@@ -1436,6 +1441,9 @@ lamini-t5-223m,huggingface,MBZUAI/LaMini-T5-223M
 lamini-t5-61m,huggingface,MBZUAI/LaMini-T5-61M
 lamini-t5-738m,huggingface,MBZUAI/LaMini-T5-738M
 lensvlm-9b,huggingface,apple/LensVLM-9B
+lfm-2-5-24b-a2b,huggingface,LiquidAI/LFM2.5-24B-A2B
+lfm-2-5-24b-a2b,models_dev,kilo/liquid/lfm-2.5-24b-a2b
+lfm-2-5-24b-a2b,openrouter,liquid/lfm-2.5-24b-a2b
 lfm2-1-2b,huggingface,LiquidAI/LFM2-1.2B
 lfm2-1-2b-extract,huggingface,LiquidAI/LFM2-1.2B-Extract
 lfm2-2-6b,huggingface,LiquidAI/LFM2-2.6B
@@ -1720,6 +1728,7 @@ minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5
 minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5-int4
 minicpm-v-4-6,huggingface,openbmb/MiniCPM-V-4.6
 minicpm-v-4-6-thinking,huggingface,openbmb/MiniCPM-V-4.6-Thinking
+minicpm-v-4-7-35b-a3b,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B
 minicpm3-4b,huggingface,openbmb/MiniCPM3-4B
 minicpm4-0-5b,huggingface,openbmb/MiniCPM4-0.5B
 minicpm4-1-8b,huggingface,openbmb/MiniCPM4.1-8B
@@ -1996,6 +2005,7 @@ nova-micro-v1,models_dev,kilo/amazon/nova-micro-v1
 nova-micro-v1,openrouter,amazon/nova-micro-v1
 nova-premier-v1,models_dev,kilo/amazon/nova-premier-v1
 nova-premier-v1,openrouter,amazon/nova-premier-v1
+nova-pro-v1,models_dev,aimlapi/amazon/nova-pro-v1
 nova-pro-v1,models_dev,cortecs/nova-pro-v1
 nova-pro-v1,openrouter,amazon/nova-pro-v1
 nvidia-nemotron-3-5-lightning-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16

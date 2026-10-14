@@ -337,3 +337,10 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `gemini-3-1-pro-consumer_rollout-1` 2026-02-19 inferred (vendor_changelog; evidence: "3.1 Pro is rolling out globally to the Gemini app, with higher limits for users with Google AI Pro and Ultra plans.")
 - `gemini-3-flash-consumer_rollout-1` 2025-12-17 inferred (vendor_changelog; evidence: "Gemini 3 Flash is now the new default model in the Gemini app.")
 - `gemini-3-pro-consumer_rollout-1` 2025-11-18 inferred (vendor_changelog; evidence: "Gemini 3 Pro is rolling out to everyone in the Gemini app starting today, with higher limits for users in the Google AI Plus, Pro & Ultra plans.")
+
+## 2026-10-14
+
+- `gemini-4-argon-api_ga-1` 2026-10-13 verified (vendor_blog; evidence: "Gemini 4 Argon is now globally available today for developers and enterprises via the API in AI Studio and Gemini platform"; agrees: models.dev (firs)
+- `gemini-4-argon-consumer_rollout-1` 2026-10-13 inferred (vendor_blog; evidence: "For everyday users: Try it starting today in the Gemini app and AI Mode in Search if you’re a Google AI Ultra or Pro subscriber.")
+- `gemini-4-argon-price_changed-1` 2026-10-13 inferred (vendor_blog; evidence: "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens")
+- `grok-4-7-platform_availability-2` 2026-10-13 inferred (vendor_blog; evidence: "SpaceXAI’s Grok 4.7 is now available on Amazon Bedrock, which offers a choice of foundation models (FMs) from multiple providers.")

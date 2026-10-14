@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1662; events: 2572
-- Models: curated 55, corroborated 719, single-source 888
-- Event confidence: verified 1139, inferred 1427, disputed 6
+- Models: 1666; events: 2583
+- Models: curated 55, corroborated 725, single-source 886
+- Event confidence: verified 1150, inferred 1427, disputed 6
 
 ## By organization
 
@@ -26,24 +26,24 @@ as settled.
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Mistral | 51 | 95 | 3 | 28 | 20 | 44% |
 | Ant Group | 49 | 60 | 0 | 35 | 14 | 62% |
-| Google | 48 | 137 | 7 | 25 | 16 | 43% |
-| TII | 47 | 47 | 0 | 3 | 44 | 6% |
+| Google | 49 | 142 | 7 | 26 | 16 | 45% |
+| TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
-| DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
+| DeepSeek | 43 | 97 | 3 | 26 | 14 | 57% |
 | MBZUAI | 41 | 41 | 0 | 0 | 41 | 0% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 37 | 81 | 3 | 27 | 7 | 62% |
-| NVIDIA | 32 | 48 | 0 | 11 | 21 | 23% |
-| OpenBMB | 32 | 32 | 0 | 15 | 17 | 47% |
-| Liquid AI | 30 | 31 | 0 | 22 | 8 | 71% |
-| Tencent | 29 | 39 | 1 | 17 | 11 | 54% |
+| OpenBMB | 33 | 33 | 0 | 15 | 18 | 45% |
+| NVIDIA | 32 | 48 | 0 | 12 | 20 | 25% |
+| Liquid AI | 31 | 34 | 0 | 23 | 8 | 68% |
+| Tencent | 29 | 39 | 1 | 18 | 10 | 56% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
+| Stability | 26 | 26 | 0 | 9 | 17 | 35% |
 | Anthropic | 25 | 124 | 8 | 14 | 3 | 68% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Salesforce | 25 | 25 | 0 | 4 | 21 | 16% |
-| Stability | 25 | 25 | 0 | 9 | 16 | 36% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
@@ -52,12 +52,12 @@ as settled.
 | Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
 | Swiss AI | 21 | 23 | 0 | 5 | 16 | 22% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
-| Apple | 17 | 17 | 0 | 2 | 15 | 12% |
+| Apple | 17 | 17 | 0 | 3 | 14 | 18% |
 | StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| xAI | 16 | 42 | 2 | 9 | 5 | 36% |
+| xAI | 16 | 43 | 2 | 9 | 5 | 35% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
@@ -91,34 +91,35 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1418 | 479 | 938 | 1 |
-| platform_availability | 320 | 316 | 2 | 2 |
-| retired | 280 | 138 | 142 | 0 |
-| api_ga | 233 | 59 | 173 | 1 |
-| announced | 215 | 49 | 165 | 1 |
-| consumer_rollout | 29 | 23 | 6 | 0 |
+| weights_released | 1421 | 482 | 938 | 1 |
+| platform_availability | 323 | 318 | 3 | 2 |
+| retired | 280 | 143 | 137 | 0 |
+| api_ga | 235 | 60 | 174 | 1 |
+| announced | 216 | 49 | 166 | 1 |
+| consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
 | free_tier | 10 | 9 | 0 | 1 |
 | api_preview | 8 | 8 | 0 | 0 |
-| price_changed | 7 | 7 | 0 | 0 |
+| price_changed | 8 | 7 | 1 | 0 |
 | system_card | 6 | 6 | 0 | 0 |
 | alias_repointed | 3 | 2 | 1 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 11 (verified 1, single-source inferred 10)
+- Events it wrote: 15 (verified 2, single-source inferred 13)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-13, by reason:
+Declined in the 7 days to 2026-10-14, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 80 |
+| community_lead | 76 |
 | no_dated_event | 61 |
-| launch_event_required | 7 |
+| already_recorded | 8 |
+| third_party_claim | 6 |
+| launch_event_required | 5 |
+| disagrees_with_record | 3 |
 | not_a_model | 3 |
-| third_party_claim | 3 |
-| already_recorded | 2 |
