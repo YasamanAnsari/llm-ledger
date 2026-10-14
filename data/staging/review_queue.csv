@@ -1,4 +1,28 @@
 kind,left_source,left_key,right_source,right_key,score,note
+catalog_unmapped_vendor,models_dev,intfloat,ledger,,,e.g. multilingual-e5-large-instruct; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,models_dev,llm360,ledger,,,e.g. k2-think; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,models_dev,motif-technologies,ledger,,,e.g. motif-3; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,models_dev,trustedrouter,ledger,,,e.g. fast; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,models_dev,voyage,ledger,,,e.g. voyage-3-5; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,aion-labs,ledger,,,e.g. aion-2-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,anthracite-org,ledger,,,e.g. magnum-v4-72b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,cognitivecomputations,ledger,,,e.g. dolphin-mistral-24b-venice-edition; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,dots-studio,ledger,,,e.g. dots-3-note-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,fireworks,ledger,,,e.g. ember-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,gryphe,ledger,,,e.g. mythomax-l2-13b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,inference-net,ledger,,,e.g. schematron-v2-small; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,mancer,ledger,,,e.g. weaver; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,morph,ledger,,,e.g. morph-v3-fast; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,nex-agi,ledger,,,e.g. nex-n2-5-mini; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,openrouter,ledger,,,e.g. auto; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,perceptron,ledger,,,e.g. perceptron-mk1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,prism-ml,ledger,,,e.g. ternary-bonsai-2-27b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,relace,ledger,,,e.g. relace-apply-3; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,sao10k,ledger,,,e.g. l3-1-euryale-70b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,scaledown,ledger,,,e.g. extract; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,thedrummer,ledger,,,e.g. cydonia-24b-v4-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,unbiased,ledger,,,e.g. pareto-26-10-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,undi95,ledger,,,e.g. remm-slerp-l2-13b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,cohere-command,ledger_cluster,cohere-command-a,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,command-a+,ledger_cluster,command-a,94.7,92-97 band: confirm or reject before crosswalking
@@ -159,6 +183,7 @@ hf_recreated_repo,huggingface,EleutherAI/pythia-410m-deduped,ledger,pythia-410m-
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first archive capture 2023-02-01 predates repo creation 2023-02-14; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b-deduped,ledger,pythia-6-9b-deduped,,first archive capture 2023-02-01 predates repo creation 2023-02-25; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124-7b-instruct,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
+hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-sft,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,DavidAU,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
