@@ -247,6 +247,11 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     org_id = orgs_seed.resolve_org(
         row["or_prefix"], *family_tokens, row["md_prefix"], row["md_provider"])
     if not org_id:
+        vendor_prefix = row["or_prefix"] or row["md_prefix"]
+        if vendor_prefix:
+            _queue("catalog_unmapped_vendor", vendor_prefix,
+                   f"e.g. {row['match_key']}; add to orgs_seed.PROVIDER_TO_ORG or dismiss",
+                   left_source="openrouter" if row["or_prefix"] else "models_dev")
         return None
     model_type = _infer_model_type(row["md_modalities_in"], row["md_modalities_out"]) or "llm"
 
@@ -591,7 +596,7 @@ def main() -> int:
     schema.write_table(CROSSWALK, tables["crosswalk"])
     schema.write_table(ATTRIBUTES, list(attributes_by_id.values()))
 
-    schema.merge_review_queue(pending_review, replace_kinds=("md_no_consensus", "vendor_alias_group"))
+    schema.merge_review_queue(pending_review, replace_kinds=("md_no_consensus", "vendor_alias_group", "catalog_unmapped_vendor"))
     report = write_disagreement_report(matched)
     print(f"reconcile: +{added_models} models; events added={outcomes['added']} "
           f"updated={outcomes['updated']} unchanged={outcomes['unchanged']} "

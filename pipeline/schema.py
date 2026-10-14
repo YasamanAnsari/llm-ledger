@@ -305,7 +305,12 @@ def merge_review_queue(rows: list, replace_kinds: tuple = ()) -> Path:
             existing = [r for r in csv.DictReader(fh) if r["kind"] not in replace_kinds
                         and (r["kind"], r["left_key"], r["right_key"]) not in decided]
     seen = {(r["kind"], r["left_key"], r["right_key"]) for r in existing} | decided
-    merged = existing + [r for r in rows if (r["kind"], r["left_key"], r["right_key"]) not in seen]
+    merged = existing
+    for row in rows:
+        key = (row["kind"], row["left_key"], row["right_key"])
+        if key not in seen:
+            seen.add(key)
+            merged.append(row)
     with path.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=REVIEW_QUEUE_COLUMNS, lineterminator="\n")
         writer.writeheader()

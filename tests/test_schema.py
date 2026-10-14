@@ -91,3 +91,19 @@ def test_snapshot_content_date_is_stable_while_the_payload_is():
         assert schema.snapshot_content_date("e", "f.csv") == "2026-09-02"
     finally:
         schema.RAW_DIR = old
+
+
+def test_merge_review_queue_collapses_repeated_new_rows():
+    import csv
+    import tempfile
+    import schema
+    old = schema.STAGING_DIR
+    schema.STAGING_DIR = Path(tempfile.mkdtemp())
+    try:
+        lead = {"kind": "k", "left_source": "s", "left_key": "a", "right_source": "",
+                "right_key": "", "score": "", "note": ""}
+        path = schema.merge_review_queue([lead, dict(lead, note="second sighting")])
+        with path.open(newline="", encoding="utf-8") as fh:
+            assert [r["note"] for r in csv.DictReader(fh)] == [""]
+    finally:
+        schema.STAGING_DIR = old

@@ -10,6 +10,10 @@ Data corrections update rows in place; this file preserves the history.
   when Meta re-created the repos under `meta-llama`; their original repos
   are pinned in the crosswalk, so they read 2023-08-24, the launch day.
   Code Llama 13B (base) is added.
+- A model listed by two catalogs under a vendor that maps to no lab was
+  dropped without trace; each such vendor is now a
+  `catalog_unmapped_vendor` review lead, the API-side twin of
+  `hf_unmapped_namespace`, so a new API-only lab is noticed.
 
 ## 2026-10-03
 

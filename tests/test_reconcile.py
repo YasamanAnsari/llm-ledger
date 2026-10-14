@@ -90,10 +90,15 @@ def test_far_future_expiration_sentinel_is_ignored() -> None:
     assert "retired" not in ev
 
 
-def test_single_source_or_unresolvable_org_yields_nothing() -> None:
+def test_single_source_or_unresolvable_org_yields_nothing_but_a_vendor_lead() -> None:
+    reconcile.pending_review.clear()
     assert reconcile.reconcile_cluster(_cluster(sources="models_dev"), TODAY) is None
-    assert reconcile.reconcile_cluster(
-        _cluster(match_key="zzz", or_prefix="nobody", md_provider="nobody"), TODAY) is None
+    assert not reconcile.pending_review
+    for key in ("zzz-1", "zzz-2"):
+        assert reconcile.reconcile_cluster(
+            _cluster(match_key=key, or_prefix="nobody", md_provider="nobody"), TODAY) is None
+    leads = [(r["kind"], r["left_source"], r["left_key"]) for r in reconcile.pending_review]
+    assert leads == [("catalog_unmapped_vendor", "openrouter", "nobody")] * 2
 
 
 def test_attributes_come_from_models_dev_without_guessing_reasoning_type() -> None:

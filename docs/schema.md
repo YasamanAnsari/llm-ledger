@@ -315,7 +315,7 @@ rewrite the dataset.
 - `data/staging/review_queue.csv` - rows the loaders could not settle:
   `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
   `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
-  `hf_unmapped_namespace`, `vendor_alias_group`, `nhlocal_lead`,
+  `hf_unmapped_namespace`, `catalog_unmapped_vendor`, `vendor_alias_group`, `nhlocal_lead`,
   `lifecycle_ambiguous`, `long_announce_gap`, ...),
   the two keys involved, a score and a note. Rewritten by every run.
 - `data/staging/review_decisions.csv` - append-only, hand-edited:
