@@ -3,6 +3,14 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-10-14
+
+- Meta's original `codellama` Hub namespace now counts as Meta. Code Llama
+  7B, 7B Instruct, 7B Python, 13B Instruct and 34B Instruct read 2024-03,
+  when Meta re-created the repos under `meta-llama`; their original repos
+  are pinned in the crosswalk, so they read 2023-08-24, the launch day.
+  Code Llama 13B (base) is added.
+
 ## 2026-10-03
 
 - 28 labs added to the sweep: LG AI Research, NAVER, Kakao, Upstage,

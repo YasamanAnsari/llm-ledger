@@ -257,10 +257,15 @@ codegen-6b-mono,huggingface,Salesforce/codegen-6B-mono
 codegen-6b-multi,huggingface,Salesforce/codegen-6B-multi
 codegen2-16b-p,huggingface,Salesforce/codegen2-16B_P
 codegen2-1b-p,huggingface,Salesforce/codegen2-1B_P
+codellama-13b-instruct,huggingface,codellama/CodeLlama-13b-Instruct-hf
 codellama-13b-instruct,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
+codellama-34b-instruct,huggingface,codellama/CodeLlama-34b-Instruct-hf
 codellama-34b-instruct,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
+codellama-7b,huggingface,codellama/CodeLlama-7b-hf
 codellama-7b,huggingface,meta-llama/CodeLlama-7b-hf
+codellama-7b-instruct,huggingface,codellama/CodeLlama-7b-Instruct-hf
 codellama-7b-instruct,huggingface,meta-llama/CodeLlama-7b-Instruct-hf
+codellama-7b-python,huggingface,codellama/CodeLlama-7b-Python-hf
 codellama-7b-python,huggingface,meta-llama/CodeLlama-7b-Python-hf
 codestral,epoch,Codestral
 codestral,huggingface,mistralai/Codestral-22B-v0.1

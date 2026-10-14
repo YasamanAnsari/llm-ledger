@@ -65,7 +65,7 @@ NAMESPACE_TO_ORG = {
     "ai21labs": "ai21",
     "EleutherAI": "eleutherai",
     "stabilityai": "stability",
-    "facebook": "meta",
+    "facebook": "meta", "codellama": "meta",
     "apple": "apple",
     "Salesforce": "salesforce",
     "ServiceNow-AI": "servicenow",
