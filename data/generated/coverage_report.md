@@ -11,7 +11,7 @@ as settled.
 
 - Models: 1666; events: 2583
 - Models: curated 55, corroborated 725, single-source 886
-- Event confidence: verified 1150, inferred 1427, disputed 6
+- Event confidence: verified 1151, inferred 1426, disputed 6
 
 ## By organization
 
@@ -36,7 +36,7 @@ as settled.
 | Zhipu | 37 | 81 | 3 | 27 | 7 | 62% |
 | OpenBMB | 33 | 33 | 0 | 15 | 18 | 45% |
 | NVIDIA | 32 | 48 | 0 | 12 | 20 | 25% |
-| Liquid AI | 31 | 34 | 0 | 23 | 8 | 68% |
+| Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 29 | 39 | 1 | 18 | 10 | 56% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
@@ -91,7 +91,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1421 | 482 | 938 | 1 |
+| weights_released | 1421 | 483 | 937 | 1 |
 | platform_availability | 323 | 318 | 3 | 2 |
 | retired | 280 | 143 | 137 | 0 |
 | api_ga | 235 | 60 | 174 | 1 |
@@ -116,10 +116,8 @@ Declined in the 7 days to 2026-10-14, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 76 |
-| no_dated_event | 61 |
-| already_recorded | 8 |
-| third_party_claim | 6 |
-| launch_event_required | 5 |
-| disagrees_with_record | 3 |
+| community_lead | 75 |
+| no_dated_event | 55 |
+| launch_event_required | 4 |
 | not_a_model | 3 |
+| already_recorded | 1 |

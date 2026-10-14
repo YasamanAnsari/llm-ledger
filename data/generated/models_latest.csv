@@ -1,6 +1,6 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
 2026-10-13,api_ga,verified,gemini-4-argon,Gemini 4 Argon,google,Gemini 4 Argon,,vlm,api_only,proprietary
-2026-10-12,weights_released,inferred,lfm-2-5-24b-a2b,lfm-2.5-24b-a2b,liquid-ai,lfm-2.5,,llm,open_weights,proprietary
+2026-10-12,weights_released,verified,lfm-2-5-24b-a2b,lfm-2.5-24b-a2b,liquid-ai,lfm-2.5,,llm,open_weights,proprietary
 2026-10-12,api_ga,inferred,muse-wonder,muse-wonder,meta,muse-wonder,,vlm,api_only,proprietary
 2026-10-09,weights_released,verified,youtu-parsing-omni,Youtu-Parsing-Omni,tencent,Youtu-Parsing-Omni,,vlm,open_weights,
 2026-10-07,api_ga,verified,claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,anthropic.claude-5-5,mini,vlm,api_only,proprietary

@@ -1,9 +1,7 @@
 kind,left_source,left_key,right_source,right_key,score,note
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,bielik-11b-v2,ledger_cluster,bielik-11b-v2-6-instruct,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,cohere-command,ledger_cluster,cohere-command-a,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,command-a+,ledger_cluster,command-a,94.7,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,deepseek-prover-v2-7b,ledger_cluster,deepseek-prover-v2-671b,95.5,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,deepseekmath-v2,ledger_cluster,deepseek-math-v2,96.8,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,devstral-small,ledger_cluster,devstral-small-2,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,flux-1-kontext-max,ledger_cluster,flux-kontext-max,94.1,92-97 band: confirm or reject before crosswalking
@@ -19,15 +17,16 @@ fuzzy_match,epoch,gemma-3n,ledger_cluster,gemma-3,93.3,92-97 band: confirm or re
 fuzzy_match,epoch,glm-4v-9b,ledger_cluster,glm-4-9b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gpt-realtime,ledger_cluster,gpt-realtime-2,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gpt-transcribe,ledger_cluster,gpt-4o-transcribe,93.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,granite-3-1-8b,ledger_cluster,granite-4-1-8b,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,granite-3-2-8b,ledger_cluster,granite-4-2-8b,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,granite-4-0-h-small,ledger_cluster,granite-4-h-small,94.4,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,granite-4-1-8b,ledger_cluster,granite-4-2-8b,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,grok-1,ledger_cluster,grok-4-1,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,grok-4-3-beta,ledger_cluster,grok-4-2-beta,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hermes-3-405b,ledger_cluster,hermes-4-405b,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hunyuan-turbo,ledger_cluster,hunyuan-turbos,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,imagen,ledger_cluster,imagen-3,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mai-code-1-flash,ledger_cluster,mai-code-1-1-flash,94.1,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,mai-image-2-5,ledger_cluster,mai-image-2-6,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mercury,ledger_cluster,mercury-2,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,minimax-m1-40k,ledger_cluster,minimax-m1-80k,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,ministral-3-14b,ledger_cluster,mistral-3-14b,92.9,92-97 band: confirm or reject before crosswalking
@@ -43,14 +42,21 @@ fuzzy_match,epoch,qwen2-5-omni-3b,ledger_cluster,qwen2-5-omni-7b,93.3,92-97 band
 fuzzy_match,epoch,qwen2-5-vl-3b,ledger_cluster,qwen2-5-vl-32b-instruct,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-math-72b,ledger_cluster,qwen2-5-math-72b-instruct,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-math-7b,ledger_cluster,qwen2-5-math-7b-instruct,92.9,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,qwen2-vl-72b,ledger_cluster,qwen25-vl-72b-instruct,96.0,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,qwen2-vl-72b,ledger_cluster,qwen2-5-vl-72b-instruct,92.3,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,solar-pro,ledger_cluster,solar-pro4,94.7,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,tencent-hy4-preview,ledger_cluster,tencent/hy4-preview,94.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,whisper,ledger_cluster,whisper-1,93.3,92-97 band: confirm or reject before crosswalking
 hf_backfill_date,huggingface,EleutherAI/gpt-j-6b,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,EleutherAI/gpt-neo-1.3B,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,EleutherAI/gpt-neo-125m,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,EleutherAI/gpt-neo-2.7B,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,Salesforce/ctrl,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,microsoft/DialoGPT-medium,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,rinna/japanese-gpt-1b,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,rinna/japanese-gpt2-medium,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,rinna/japanese-gpt2-small,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,rinna/japanese-gpt2-xsmall,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_mirror_repo,huggingface,NousResearch/Llama-2-13b-chat-hf,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,NousResearch/Llama-2-13b-hf,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,NousResearch/Llama-2-70b-chat-hf,ledger,meta,,re-hosted copy of another lab's weights; not a release
@@ -66,8 +72,62 @@ hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-70B,ledger,meta,,re-hoste
 hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-70B-Instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-8B,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-8B-Instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/DeepSeek-R1-Distill-Qwen-1.5B,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/DeepSeek-R1-Distill-Qwen-7B,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/GLM-0.5B,ledger,zhipu,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3-70B-Instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3-8B,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3.1-405B-Instruct-FP8,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3.1-70B-Instruct-FP8,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3.1-8B-Instruct-FP8,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen2.5-0.5B-Reverse-Text-SFT,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-0.6B,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-0.6B-untied,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-1.7B,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-30B-A3B-Base-Fast,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-4B,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-4B-Instruct-2507-untied,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3-8B,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3.5-0.8B-Reverse-Text-RL,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3.5-0.8B-Reverse-Text-SFT,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/Qwen3.5-4B-untied,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/glm4-moe-tiny,ledger,zhipu,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/llama-14m-fresh,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/llama-150m-fresh,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/llama-1b-fresh,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/llama-2m-fresh,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/llama-60m-fresh,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/qwen3-moe-tiny,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-Coding-Expert,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-CycleQD-CS,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-DB-Expert,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-OS-Expert,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,SakanaAI/Llama-3-Karamaru-v1,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,Salesforce/Llama-xLAM-2-8b-fc-r,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/DeepSeek-R1-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/GLM-4-32B-Base-32K,ledger,zhipu,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/Llama-3-SEC-Base,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/Llama-3.1-SuperNova-Lite,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/Mistral-7B-Instruct-v0.2-sliced-24-layer,ledger,mistral,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/mistral-sliced,ledger,mistral,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,nvidia/Qwen3-8B-FP8,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,pfnet/Llama3-Preferred-MedSwallow-70B,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,pfnet/Qwen2.5-1.5B-pfn-qfin,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,pfnet/Qwen3-1.7B-pfn-qfin,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/deepseek-r1-distill-qwen2.5-bakeneko-32b,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/gemma-2-baku-2b,ledger,google,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/gemma-2-baku-2b-it,ledger,google,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/llama-3-youko-70b,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/llama-3-youko-70b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/llama-3-youko-8b,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/llama-3-youko-8b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/qwen2.5-bakeneko-32b,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,rinna/qwen2.5-bakeneko-32b-instruct,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,tencent/DeepSeek-V3.1-Terminus-W4AFP8,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,upstage/Llama-2-70b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,upstage/llama-30b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,upstage/llama-30b-instruct-2048,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,upstage/llama-65b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_precreated_repo,huggingface,01-ai/Yi-34B,ledger,yi-34b,,"repo created 2023-11-01, announced 2023-11-02; weights date needs a primary source"
 hf_precreated_repo,huggingface,CohereLabs/c4ai-command-r-plus,ledger,command-r-plus,,"repo created 2024-04-03, announced 2024-04-04; weights date needs a primary source"
 hf_precreated_repo,huggingface,MiniMaxAI/MiniMax-M2.1,ledger,minimax-m2-1,,"repo created 2025-12-20, announced 2025-12-23; weights date needs a primary source"
@@ -81,6 +141,7 @@ hf_precreated_repo,huggingface,meta-llama/Llama-2-70b,ledger,llama-2-70b,,"repo 
 hf_precreated_repo,huggingface,meta-llama/Llama-3.1-405B-Instruct,ledger,llama-3-1-405b-instruct,,"repo created 2024-07-16, announced 2024-07-23; weights date needs a primary source"
 hf_precreated_repo,huggingface,meta-llama/Meta-Llama-3-70B-Instruct,ledger,llama-3-70b-instruct,,"repo created 2024-04-17, announced 2024-04-18; weights date needs a primary source"
 hf_precreated_repo,huggingface,mistralai/Mistral-7B-v0.1,ledger,mistral-7b,,"repo created 2023-09-20, announced 2023-09-27; weights date needs a primary source"
+hf_precreated_repo,huggingface,mistralai/Mixtral-8x7B-Instruct-v0.1,ledger,mixtral-8x7b-instruct,,"repo created 2023-12-10, announced 2023-12-11; weights date needs a primary source"
 hf_precreated_repo,huggingface,moonshotai/Kimi-K3,ledger,kimi-k3,,"repo created 2026-06-13, announced 2026-07-16; weights date needs a primary source"
 hf_precreated_repo,huggingface,tencent/Tencent-Hunyuan-Large,ledger,hunyuan-large,,"repo created 2024-10-22, announced 2024-11-05; weights date needs a primary source"
 hf_precreated_repo,huggingface,zai-org/GLM-4.5,ledger,glm-4-5,,"repo created 2025-07-20, announced 2025-07-28; weights date needs a primary source"
@@ -88,107 +149,106 @@ hf_precreated_repo,huggingface,zai-org/GLM-5,ledger,glm-5,,"repo created 2026-02
 hf_recreated_repo,huggingface,EleutherAI/pythia-1.4b-deduped,ledger,pythia-1-4b-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-09; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-12b,ledger,pythia-12b,,first archive capture 2023-02-03 predates repo creation 2023-02-28; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-12b-deduped,ledger,pythia-12b-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-27; weights date needs a primary source
+hf_recreated_repo,huggingface,EleutherAI/pythia-14m,ledger,pythia-14m,,first archive capture 2024-01-22 predates repo creation 2026-02-24; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-160m-deduped,ledger,pythia-160m-deduped,,first archive capture 2023-02-01 predates repo creation 2023-02-08; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-1b,ledger,pythia-1b,,first archive capture 2023-02-27 predates repo creation 2023-03-10; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-1b-deduped,ledger,pythia-1b-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-14; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-2.8b,ledger,pythia-2-8b,,first archive capture 2023-02-01 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-410m-deduped,ledger,pythia-410m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first archive capture 2023-02-01 predates repo creation 2023-02-14; weights date needs a primary source
+hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b-deduped,ledger,pythia-6-9b-deduped,,first archive capture 2023-02-01 predates repo creation 2023-02-25; weights date needs a primary source
+hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124-7b-instruct,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
+hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,DavidAU,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,Hai929,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,GSAI-ML,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,InternScience,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,LGAI-EXAONE,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,RadixArk,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ReliquaryForge,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,TinyLlama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,RadixArk,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,RedHatAI,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ai-sage,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,apple,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,bigscience,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,alpindale,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,codellama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,dphn,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,facebook,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,hmellor,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ibm-research,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,huggyllama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ornith-ai,,,,9 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,peft-internal-testing,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,protoLabsAI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,rinna,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,sarvamai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ornith-ai,,,,7 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,peft-internal-testing,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,swiss-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,trl-internal-testing,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,state-spaces,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,5 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,z-lab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-lifecycle_ambiguous,litellm,groq/meta-llama/llama-4-maverick-17b-128e-instruct,ledger,crosswalk:llama-4-maverick|name:llama-4-maverick-17b-128e-instruct,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 long_announce_gap,ledger,amazon-nova-lite,,,364,api_ga 2025-12-02 is 364d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,hunyuan-turbos,,,362,api_ga 2026-03-08 is 362d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,llama-3-1-nemotron-70b-instruct,,,185,weights_released 2025-04-15 is 185d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,palmyra-x5,,,268,api_ga 2026-01-21 is 268d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,qwen-turbo,,,269,api_ga 2024-11-01 is 269d after the announcement and unverified: confirm the launch date or reject the later listing
-long_announce_gap,ledger,reka-edge,,,701,api_ga 2026-03-20 is 701d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,reka-edge,,,701,weights_released 2026-03-20 is 701d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,seed-1-6,,,195,api_ga 2025-12-23 is 195d after the announcement and unverified: confirm the launch date or reject the later listing
 md_no_consensus,models_dev,MiniMax-M1,ledger,minimax-m1,,resellers disagree: 302ai:2025-06-16|kilo:2025-06-17|nano-gpt:2025-01-08|openrouter:2025-06-17|qiniu-ai:2025-08-05
-md_no_consensus,models_dev,MiniMaxAI/MiniMax-M1-80k,ledger,minimax-m1-80k,,resellers disagree: jiekou:2026-01|nano-gpt:2025-01-08|novita-ai:2025-06-17
-md_no_consensus,models_dev,NousResearch/hermes-4-405b:thinking,ledger,hermes-4-405b,,resellers disagree: cortecs:2024-08-13|kilo:2025-08-26|nano-gpt:2024-01-01|nano-gpt:2025-08-26|nebius:2026-01-30|openrouter:2025-08-26
-md_no_consensus,models_dev,Qwen/Qwen3-30B-A3B-Thinking-2507,ledger,qwen3-30b-a3b-thinking-2507,,resellers disagree: kilo:2025-08-28|modelscope:2025-07-30|openrouter:2025-08-28|qiniu-ai:2026-02-04
-md_no_consensus,models_dev,Qwen/Qwen3-VL-30B-A3B-Instruct,ledger,qwen3-vl-30b-a3b-instruct,,resellers disagree: kilo:2025-10-06|llmgateway:2025-10-02|llmgateway-providers:2025-10-05|llmgateway-providers:2025-10-05|nearai:2025-09-23|novita-ai:2025-10-11|openrouter:2025-10-06|siliconflow:2025-10-05|siliconflow-cn:2025-10-05
-md_no_consensus,models_dev,Qwen/Qwen3-VL-32B-Instruct,ledger,qwen3-vl-32b-instruct,,resellers disagree: kilo:2025-10-23|openrouter:2025-10-23|siliconflow:2025-10-21|siliconflow-cn:2025-10-21
-md_no_consensus,models_dev,amazon/nova-lite-v1,ledger,nova-lite-v1,,resellers disagree: cortecs:2025-04-14|kilo:2024-12-05|nano-gpt:2024-12-03|openrouter:2024-12-05
+md_no_consensus,models_dev,MiniMaxAI/MiniMax-M1-80k,ledger,minimax-m1-80k,,resellers disagree: huggingface:2025-06-17|jiekou:2026-01|nano-gpt:2025-01-08|novita-ai:2025-06-17
 md_no_consensus,models_dev,anthropic-claude-3.5-sonnet,ledger,claude-3-5-sonnet,,resellers disagree: digitalocean:2024-06-20|qiniu-ai:2025-09-09|sap-ai-core:2024-10-22
-md_no_consensus,models_dev,baidu/ernie-4.5-300b-a47b-paddle,ledger,ernie-4-5-300b-a47b,,resellers disagree: jiekou:2026-01|novita-ai:2025-06-30|siliconflow:2025-07-02|siliconflow-cn:2025-07-02
+md_no_consensus,models_dev,anthropic/claude-sonnet-4:thinking:1024,ledger,claude-sonnet-4,,resellers disagree: abacus:2025-05-14|cortecs:2025-05-22|digitalocean:2025-05-22|fastrouter:2025-05-22|helicone:2025-05-14|jiekou:2026-01|kilo:2025-05-22|merge-gateway:2025-05-22|nano-gpt:2024-01-01|nano-gpt:2024-01-01|nano-gpt:2024-01-01|nano-gpt:2024-01-01|nano-gpt:2025-02-24|nano-gpt:2025-09-29|opencode:2025-05-22|openrouter:2025-05-22|poe:2025-05-21|vercel:2025-05-22|zenmux:2025-05-22
 md_no_consensus,models_dev,claude-3-7-sonnet-20250219,ledger,claude-3-7-sonnet,,resellers disagree: abacus:2025-02-19|digitalocean:2025-02-24|helicone:2025-02-19|merge-gateway:2025-02-19|qiniu-ai:2025-08-05|sap-ai-core:2025-02-24|zenmux:2025-02-24
+md_no_consensus,models_dev,claude-3-haiku-20240307,ledger,claude-3-haiku,,resellers disagree: helicone:2024-03-07|sap-ai-core:2024-03-13
 md_no_consensus,models_dev,claude-3.5-haiku,ledger,claude-3-5-haiku,,resellers disagree: digitalocean:2024-11-05|helicone:2024-10-22|opencode:2024-10-22|qiniu-ai:2025-08-26|zenmux:2024-11-04
-md_no_consensus,models_dev,codestral-2508,ledger,codestral-2508,,resellers disagree: cortecs:2025-07-30|kilo:2025-08-01|llmgateway:2025-07-30|llmgateway-providers:2025-07-30|nano-gpt:2025-08-01|openrouter:2025-08-01
-md_no_consensus,models_dev,deepseek-ai/DeepSeek-OCR,ledger,deepseek-ocr,,resellers disagree: novita-ai:2025-10-24|siliconflow-cn:2025-10-20
-md_no_consensus,models_dev,deepseek-ai/DeepSeek-V3.1-Terminus:thinking,ledger,deepseek-v3-1-terminus,,resellers disagree: abacus:2025-06-01|alibaba-cn:2025-09-29|helicone:2025-09-22|kilo:2025-09-22|nano-gpt:2024-01-01|nano-gpt:2025-08-02|novita-ai:2025-09-22|openrouter:2025-09-22|qiniu-ai:2025-09-22|siliconflow:2025-09-29|siliconflow-cn:2025-09-29|vercel:2025-09-22
-md_no_consensus,models_dev,deepseek-ai/DeepSeek-V3.1:thinking,ledger,deepseek-v3-1,,resellers disagree: abacus:2025-01-20|alibaba-cn:2025-01-01|baseten:2025-08-25|deepinfra:2025-08-21|huggingface:2025-08-21|jiekou:2026-01|meganova:2025-08-25|merge-gateway:2025-08-21|nano-gpt:2024-01-01|nano-gpt:2025-07-26|novita-ai:2025-08-21|pioneer:2025-08-21|qiniu-ai:2025-08-19|siliconflow:2025-08-25|submodel:2025-08-23|togetherai:2025-08-21|tokengo:2025-08-21|vercel:2025-08-21|wandb:2025-08-21
-md_no_consensus,models_dev,deepseek-r1,ledger,deepseek-r1,,resellers disagree: abacus:2025-01-20|alibaba-cn:2025-01-01|alibaba-cn:2025-05-28|alibaba-cn:2025-05-28|anyapi:2025-12-01|azure:2025-01-20|azure-cognitive-services:2025-01-20|cortecs:2025-05-28|deepinfra:2025-05-28|drun:2025-01-20|huggingface:2025-01-20|huggingface:2025-05-28|iflowcn:2025-01-20|io-net:2025-01-20|jiekou:2026-01|kilo:2025-01-20|kilo:2025-05-28|meganova:2025-05-28|merge-gateway:2025-01-20|nano-gpt:2025-01-20|nano-gpt:2025-05-28|novita-ai:2025-05-28|openrouter:2025-01-20|openrouter:2025-05-28|qiniu-ai:2025-08-05|qiniu-ai:2025-08-05|siliconflow:2025-05-28|siliconflow-cn:2025-05-28|snowflake-cortex:2025-01-20|submodel:2025-08-23|tensorx:2025-05-28|togetherai:2025-01-20|vercel:2025-01-20
-md_no_consensus,models_dev,deepseek-r1-distill-llama-70b,ledger,deepseek-r1-distill-llama-70b,,resellers disagree: alibaba-cn:2025-01-01|digitalocean:2025-01-30|fastrouter:2025-01-23|helicone:2025-01-20|kilo:2025-01-23|novita-ai:2025-01-27|openrouter:2025-01-23
-md_no_consensus,models_dev,deepseek-r1-distill-qwen-14b,ledger,deepseek-r1-distill-qwen-14b,,resellers disagree: alibaba-cn:2025-01-01|novita-ai:2025-01-20
-md_no_consensus,models_dev,deepseek-r1-distill-qwen-32b,ledger,deepseek-r1-distill-qwen-32b,,resellers disagree: alibaba-cn:2025-01-01|novita-ai:2025-01-20
+md_no_consensus,models_dev,claude-opus-4-20250514,ledger,claude-opus-4,,resellers disagree: abacus:2025-05-14|digitalocean:2025-05-22|helicone:2025-05-14|jiekou:2026-01|merge-gateway:2025-05-22|poe:2025-05-21|zenmux:2025-05-22
+md_no_consensus,models_dev,deepseek-ai/DeepSeek-V3.1-Terminus:thinking,ledger,deepseek-v3-1-terminus,,resellers disagree: abacus:2025-06-01|alibaba-cn:2025-09-29|helicone:2025-09-22|kilo:2025-09-22|nano-gpt:2024-01-01|nano-gpt:2025-08-02|openrouter:2025-09-22|qiniu-ai:2025-09-22|siliconflow:2025-09-29|siliconflow-cn:2025-09-29
+md_no_consensus,models_dev,deepseek-ai/DeepSeek-V3.1:thinking,ledger,deepseek-v3-1,,resellers disagree: abacus:2025-01-20|alibaba-cn:2025-01-01|baseten:2025-08-25|deepinfra:2025-08-21|huggingface:2025-08-21|jiekou:2026-01|meganova:2025-08-25|merge-gateway:2025-08-21|nano-gpt:2024-01-01|nano-gpt:2025-07-26|pioneer:2025-08-21|qiniu-ai:2025-08-19|sambanova:2025-08-21|siliconflow:2025-08-25|submodel:2025-08-23|togetherai:2025-08-21|tokengo:2025-08-21|vercel:2025-08-21|wandb:2025-08-21
+md_no_consensus,models_dev,deepseek-ai/deepseek-v3.2-exp,ledger,deepseek-v3-2-exp,,resellers disagree: alibaba-cn:2025-01-01|kilo:2025-09-29|meganova:2025-10-10|nano-gpt:2024-01-01|openrouter:2025-09-29|qiniu-ai:2025-09-29|siliconflow:2025-10-10|zenmux:2025-09-29
+md_no_consensus,models_dev,deepseek-r1,ledger,deepseek-r1,,resellers disagree: abacus:2025-01-20|alibaba-cn:2025-01-01|alibaba-cn:2025-05-28|alibaba-cn:2025-05-28|anyapi:2025-12-01|azure:2025-01-20|azure-cognitive-services:2025-01-20|deepinfra:2025-05-28|drun:2025-01-20|huggingface:2025-01-20|huggingface:2025-05-28|iflowcn:2025-01-20|io-net:2025-01-20|jiekou:2026-01|kilo:2025-01-20|kilo:2025-05-28|meganova:2025-05-28|melious:2025-01-20|merge-gateway:2025-01-20|merge-gateway:2025-05-28|nano-gpt:2025-01-20|nano-gpt:2025-05-28|novita-ai:2025-05-28|openrouter:2025-01-20|openrouter:2025-05-28|qiniu-ai:2025-08-05|qiniu-ai:2025-08-05|siliconflow:2025-05-28|siliconflow-cn:2025-05-28|snowflake-cortex:2025-01-20|submodel:2025-08-23|tensorx:2025-05-28|togetherai:2025-01-20|vercel:2025-01-20
+md_no_consensus,models_dev,deepseek-r1-distill-llama-70b,ledger,deepseek-r1-distill-llama-70b,,resellers disagree: alibaba-cn:2025-01-01|digitalocean:2025-01-30|fastrouter:2025-01-23|helicone:2025-01-20
+md_no_consensus,models_dev,google/diffusiongemma-26B-A4B-it,ledger,diffusiongemma-26b-a4b-it,,resellers disagree: nvidia:2026-06-09|pioneer:2026-05-31
 md_no_consensus,models_dev,google/gemini-2.0-flash,ledger,gemini-2-0-flash,,resellers disagree: poe:2024-12-11|qiniu-ai:2025-08-05
 md_no_consensus,models_dev,google/gemini-2.0-flash-lite,ledger,gemini-2-0-flash-lite,,resellers disagree: 302ai:2025-06-16|poe:2025-02-05|qiniu-ai:2025-08-05
 md_no_consensus,models_dev,google/gemini-3-pro,ledger,gemini-3-pro,,resellers disagree: opencode:2025-11-18|poe:2025-10-22
-md_no_consensus,models_dev,google/gemma-4-12B-it,ledger,gemma-4-12b-it,,resellers disagree: nano-gpt:2026-08-01|pioneer:2026-05-31
 md_no_consensus,models_dev,grok-3,ledger,grok-3,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,grok-3-mini,ledger,grok-3-mini,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
-md_no_consensus,models_dev,grok-code-fast-1,ledger,grok-code-fast-1,,resellers disagree: abacus:2025-09-01|frogbot:2025-08-28|helicone:2024-08-25|jiekou:2026-01|poe:2025-08-22|qiniu-ai:2025-09-02|zenmux:2025-08-26
-md_no_consensus,models_dev,inclusionai/ling-3.0-flash,ledger,ling-3-0-flash,,resellers disagree: kilo:2026-07-23|llmgateway:2026-08-02|llmgateway-providers:2026-08-02|llmgateway-providers:2026-08-02|nano-gpt:2026-07-23|nano-gpt:2026-07-23|openrouter:2026-07-23|vercel:2026-08-06
-md_no_consensus,models_dev,kimi-k2,ledger,kimi-k2,,resellers disagree: fastrouter:2025-07-11|helicone:2025-01-01|helicone:2025-09-05|iflowcn:2024-12-01|iflowcn:2025-09-05|jiekou:2026-01|kilo:2025-07-11|kilo:2025-09-04|llmgateway:2025-07-11|llmgateway-providers:2025-07-11|novita-ai:2025-09-05|opencode:2025-09-05|openrouter:2025-07-11|openrouter:2025-09-04|qiniu-ai:2025-08-05|qiniu-ai:2025-09-08|vercel:2025-07-11|zenmux:2025-09-04
-md_no_consensus,models_dev,ling-2.6-flash,ledger,ling-2-6-flash,,resellers disagree: novita-ai:2026-04-24|requesty:2026-04-21
-md_no_consensus,models_dev,llama-3.1-405b-instruct,ledger,llama-3-1-405b-instruct,,resellers disagree: cortecs:2024-07-23|nano-gpt:2026-09-10
-md_no_consensus,models_dev,meta-llama/Llama-3.2-1B-Instruct,ledger,llama-3-2-1b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
-md_no_consensus,models_dev,meta-llama/llama-3.2-3b-instruct,ledger,llama-3-2-3b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|llmgateway:2024-09-18|llmgateway-providers:2024-09-18|nano-gpt:2024-01-01|novita-ai:2024-09-18|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
-md_no_consensus,models_dev,microsoft/wizardlm-2-8x22b,ledger,wizardlm-2-8x22b,,resellers disagree: kilo:2024-04-16|nano-gpt:2025-04-15|novita-ai:2024-04-24|openrouter:2024-04-16
+md_no_consensus,models_dev,grok-code-fast-1,ledger,grok-code-fast-1,,resellers disagree: abacus:2025-09-01|frogbot:2025-08-28|helicone:2024-08-25|jiekou:2026-01|poe:2025-08-22|qiniu-ai:2025-09-02
+md_no_consensus,models_dev,ibm-granite/granite-4.2-8b,ledger,granite-4-2-8b,,resellers disagree: kilo:2026-08-31|llmgateway:2026-09-01|llmgateway-providers:2026-09-01|nano-gpt:2026-08-31|openrouter:2026-08-31|wandb:2026-08-24
+md_no_consensus,models_dev,inclusionai/ring-2.6-1t,ledger,ring-2-6-1t,,resellers disagree: requesty:2026-05-08|zenmux:2026-05-07
+md_no_consensus,models_dev,kimi-k2,ledger,kimi-k2,,resellers disagree: aimlapi:2025-07-11|aimlapi:2025-09-05|fastrouter:2025-07-11|helicone:2025-01-01|helicone:2025-09-05|iflowcn:2024-12-01|iflowcn:2025-09-05|jiekou:2026-01|kilo:2025-07-11|kilo:2025-09-05|llmgateway:2025-07-11|llmgateway-providers:2025-07-11|novita-ai:2025-09-05|opencode:2025-09-05|openrouter:2025-07-11|openrouter:2025-09-05|prime:2025-09-05|qiniu-ai:2025-08-05|qiniu-ai:2025-09-08|vercel:2025-07-11|zenmux:2025-09-04
+md_no_consensus,models_dev,mercury-coder-small,ledger,mercury-coder-small,,resellers disagree: nano-gpt:2024-01-01|vercel:2025-02-26
+md_no_consensus,models_dev,meta-llama/Llama-3.2-1B-Instruct,ledger,llama-3-2-1b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|novita-ai:2024-09-25|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
+md_no_consensus,models_dev,meta-llama/llama-3.2-3b-instruct,ledger,llama-3-2-3b-instruct,,resellers disagree: inference:2025-01-01|kilo:2024-09-25|llmgateway:2024-09-18|llmgateway-providers:2024-09-18|nano-gpt:2024-01-01|nvidia:2024-09-18|openrouter:2024-09-25|pioneer:2024-08-31
+md_no_consensus,models_dev,microsoft/wizardlm-2-8x22b,ledger,wizardlm-2-8x22b,,resellers disagree: kilo:2024-04-16|nano-gpt:2024-04-15|novita-ai:2024-04-15|openrouter:2024-04-16
+md_no_consensus,models_dev,mistral-medium,ledger,mistral-medium,,resellers disagree: pioneer:2025-05-07|sap-ai-core:2026-04-29
 md_no_consensus,models_dev,mistral/ministral-3b,ledger,ministral-3b,,resellers disagree: azure:2024-10-22|azure-cognitive-services:2024-10-22|pioneer:2024-10-16|vercel:2024-10-01
-md_no_consensus,models_dev,mistralai/mistral-large,ledger,mistral-large,,resellers disagree: kenari:2024-11-01|kilo:2024-02-26|nano-gpt:2024-01-01|openrouter:2024-02-26
-md_no_consensus,models_dev,nova-pro-v1,ledger,nova-pro-v1,,resellers disagree: cortecs:2024-12-03|kilo:2024-12-05|nano-gpt:2024-12-03|openrouter:2024-12-05
 md_no_consensus,models_dev,openai/gpt-3.5-turbo-instruct,ledger,gpt-3-5-turbo-instruct,,resellers disagree: azure:2023-09-21|azure-cognitive-services:2023-09-21|kilo:2023-09-28|openrouter:2023-09-28|poe:2023-09-20
 md_no_consensus,models_dev,openai/o3-mini-high,ledger,o3-mini-high,,resellers disagree: kilo:2025-02-12|nano-gpt:2024-01-01|openrouter:2025-02-12|poe:2025-01-31
-md_no_consensus,models_dev,qwen/qwen3-vl-30b-a3b-thinking,ledger,qwen3-vl-30b-a3b-thinking,,resellers disagree: kilo:2025-10-06|novita-ai:2025-10-11|openrouter:2025-10-06|qiniu-ai:2026-02-09|siliconflow:2025-10-11|siliconflow-cn:2025-10-11
-md_no_consensus,models_dev,qwen/qwen3-vl-8b-instruct,ledger,qwen3-vl-8b-instruct,,resellers disagree: kilo:2025-10-14|novita-ai:2025-10-17|openrouter:2025-10-14|siliconflow:2025-10-15|siliconflow-cn:2025-10-15
-md_no_consensus,models_dev,qwen3-235b-a22b-thinking-2507,ledger,qwen3-235b-a22b-thinking-2507,,resellers disagree: huggingface:2025-07-25|iflowcn:2025-07-01|io-net:2025-07-01|jiekou:2026-01|kilo:2025-07-25|llmgateway:2025-07-08|llmgateway-providers:2025-07-25|modelscope:2025-07-25|nano-gpt:2025-09-11|novita-ai:2025-07-25|openrouter:2025-07-25|qiniu-ai:2025-08-12|siliconflow:2025-07-28|siliconflow-cn:2025-07-28|submodel:2025-08-23|venice:2025-04-29
-md_no_consensus,models_dev,qwen3-30b-a3b-instruct-2507,ledger,qwen3-30b-a3b-instruct-2507,,resellers disagree: cortecs:2025-07-28|kilo:2025-07-29|modelscope:2025-07-30|nano-gpt:2025-02-20|nebius:2026-01-28|openrouter:2025-07-29|qiniu-ai:2026-02-04|siliconflow:2025-07-30|siliconflow-cn:2025-07-30|wandb:2025-07-29
-md_no_consensus,models_dev,qwen3.5-0.8b,ledger,qwen3-5-0-8b,,resellers disagree: nano-gpt:2026-08-16|qvac:2025-11-01
-md_no_consensus,models_dev,qwen3.5-2b,ledger,qwen3-5-2b,,resellers disagree: nano-gpt:2026-08-16|qvac:2025-11-01|requesty:2026-03-10
-md_no_consensus,models_dev,qwen3.5-4b,ledger,qwen3-5-4b,,resellers disagree: empiriolabs:2026-03-02|nano-gpt:2026-08-16|qvac:2025-11-01|siliconflow-cn:2026-03-03
+md_no_consensus,models_dev,qwen/qwen3-30b-a3b-instruct-2507,ledger,qwen3-30b-a3b-instruct-2507,,resellers disagree: ambient:2026-10-09|cortecs:2025-07-28|kilo:2025-07-29|modelscope:2025-07-30|nano-gpt:2025-02-20|nebius:2026-01-28|openrouter:2025-07-29|qiniu-ai:2026-02-04|siliconflow:2025-07-30|siliconflow-cn:2025-07-30
+md_no_consensus,models_dev,qwen/qwen3-vl-30b-a3b-thinking,ledger,qwen3-vl-30b-a3b-thinking,,resellers disagree: kilo:2025-10-06|openrouter:2025-10-06|qiniu-ai:2026-02-09|siliconflow:2025-10-11|siliconflow-cn:2025-10-11
+md_no_consensus,models_dev,qwen/qwen3-vl-8b-instruct,ledger,qwen3-vl-8b-instruct,,resellers disagree: kilo:2025-10-14|openrouter:2025-10-14|siliconflow:2025-10-15|siliconflow-cn:2025-10-15
+md_no_consensus,models_dev,qwen3-235b-a22b-thinking-2507,ledger,qwen3-235b-a22b-thinking-2507,,resellers disagree: huggingface:2025-07-25|iflowcn:2025-07-01|io-net:2025-07-01|jiekou:2026-01|kilo:2025-07-25|llmgateway:2025-07-08|llmgateway-providers:2025-07-25|modelscope:2025-07-25|openrouter:2025-07-25|qiniu-ai:2025-08-12|siliconflow-cn:2025-07-28|submodel:2025-08-23|venice:2025-04-29
+md_no_consensus,models_dev,qwen3.5-2b,ledger,qwen3-5-2b,,resellers disagree: qvac:2025-11-01|requesty:2026-03-10
+md_no_consensus,models_dev,qwen3.5-4b,ledger,qwen3-5-4b,,resellers disagree: empiriolabs:2026-03-02|qvac:2025-11-01|siliconflow-cn:2026-03-03
+md_no_consensus,models_dev,seed-2-1-turbo,ledger,seed-2-1-turbo,,resellers disagree: empiriolabs:2026-06-23|kilo:2026-08-12|nano-gpt:2026-08-12|openrouter:2026-08-12|venice:2026-06-28|vercel:2026-06-23
 md_no_consensus,models_dev,tencent/Hunyuan-A13B-Instruct,ledger,hunyuan-a13b-instruct,,resellers disagree: kilo:2025-07-08|openrouter:2025-07-08|siliconflow:2025-06-30|siliconflow-cn:2025-06-30
+md_no_consensus,models_dev,upstage/solar-pro-3,ledger,solar-pro-3,,resellers disagree: aimlapi:2026-01|kilo:2026-01-27|nano-gpt:2026-03-03|openrouter:2026-01-27
 md_no_consensus,models_dev,volcengine/doubao-seed-1.8,ledger,doubao-seed-1-8,,resellers disagree: ofox:2025-12-28|zenmux:2025-12-18
-md_no_consensus,models_dev,x-ai/grok-4-fast,ledger,grok-4-fast,,resellers disagree: qiniu-ai:2025-09-20|zenmux:2025-09-19
+md_no_consensus,models_dev,x-ai/grok-4.1-fast,ledger,grok-4-1-fast,,resellers disagree: ofox:2025-11-19|qiniu-ai:2025-11-20
 nhlocal_lead,nhlocal_aitimeline,10 gigawatts@2025-09-01,,,,month-precision community-timeline lead: OpenAI and NVIDIA announced a strategic partnership for NVIDIA to supply at least 10 gigawatts of AI systems for OpenAI's infrastructure.
 nhlocal_lead,nhlocal_aitimeline,2.0@2024-12-01,,,,"month-precision community-timeline lead: Pika Labs released 2.0, the latest version of its AI-powered video generator."
+nhlocal_lead,nhlocal_aitimeline,3.5 Flash Cyber@2026-07-01,,,,month-precision community-timeline lead: Grok 4.5 and Gemini 3.6 Flash improve coding agents; Google also introduces 3.5 Flash-Lite and 3.5 Flash Cyber.
+nhlocal_lead,nhlocal_aitimeline,3.5 Flash-Lite@2026-07-01,,,,month-precision community-timeline lead: Grok 4.5 and Gemini 3.6 Flash improve coding agents; Google also introduces 3.5 Flash-Lite and 3.5 Flash Cyber.
+nhlocal_lead,nhlocal_aitimeline,3.8 Flash Cyber@2026-09-01,,,,month-precision community-timeline lead: Google launches Gemini 3.8 Flash for coding agents and 3.8 Flash Cyber for trusted security defenders.
+nhlocal_lead,nhlocal_aitimeline,84.6% on ARC-AGI-2@2026-02-01,,,,"month-precision community-timeline lead: Google upgrades Gemini 3 Deep Think for scientific reasoning, reaching an ARC Prize-verified 84.6% on ARC-AGI-2."
 nhlocal_lead,nhlocal_aitimeline,AI Overviews@2024-05-01,,,,month-precision community-timeline lead: Google announces AI Overviews intended to give a summary of the relevant information in Google search.
 nhlocal_lead,nhlocal_aitimeline,ARC-2@2025-12-01,,,,"month-precision community-timeline lead: A specialized system by Poetiq, powered by GPT-5.2, reportedly solves the ARC-2 benchmark, marking a major breakthrough in abstract reasoning."
+nhlocal_lead,nhlocal_aitimeline,ARC-AGI-2 public evaluation set@2025-11-01,,,,"month-precision community-timeline lead: Poetiq reports preliminary results above 60% on the ARC-AGI-2 public evaluation set, using a reasoning system built on frontier language models."
+nhlocal_lead,nhlocal_aitimeline,ARC-AGI-2 public evaluation set@2025-12-01,,,,month-precision community-timeline lead: Poetiq reports results up to 75% on the ARC-AGI-2 public evaluation set using GPT-5.2 X-High with its reasoning system.
 nhlocal_lead,nhlocal_aitimeline,ARC-AGI-2@2025-11-01,,,,"month-precision community-timeline lead: Poetiq shatters the ARC-AGI-2 benchmark with a score of over 60%, surpassing the human average."
 nhlocal_lead,nhlocal_aitimeline,ARC-AGI-2@2026-02-01,,,,"month-precision community-timeline lead: Google launches Gemini 3 Deep Think, a specialized reasoning mode that reaches 84.6% on ARC-AGI-2."
 nhlocal_lead,nhlocal_aitimeline,ARC-AGI@2024-12-01,,,,"month-precision community-timeline lead: OpenAI announced o3, a groundbreaking AI model achieving 87.5% in the ARC-AGI benchmark, 25.2% in the Frontier Math Benchmark (compared to under 2% in previous "
 nhlocal_lead,nhlocal_aitimeline,AlphaEvolve@2025-05-01,,,,"month-precision community-timeline lead: Google DeepMind launches AlphaEvolve, an autonomous code-optimizer using evolutionary strategies with LLMs, achieving SOTA on 75% of math problems and discoveri"
+nhlocal_lead,nhlocal_aitimeline,AlphaGenome Atlas@2026-09-01,,,,"month-precision community-timeline lead: Google releases AlphaGenome Atlas, mapping predicted molecular effects of all nine billion possible single-letter human DNA variants for researchers."
+nhlocal_lead,nhlocal_aitimeline,AlphaGenome@2026-01-01,,,,"month-precision community-timeline lead: Google DeepMind publishes AlphaGenome in Nature, advancing prediction of how DNA variants affect gene regulation."
 nhlocal_lead,nhlocal_aitimeline,AlphaGeometry 2@2024-07-01,,,,"month-precision community-timeline lead: Google DeepMind has unveiled two new AI systems that won silver medals at this year's International Mathematical Olympiad (IMO),  AlphaProof and AlphaGeometry 2"
 nhlocal_lead,nhlocal_aitimeline,AlphaProof@2024-07-01,,,,"month-precision community-timeline lead: Google DeepMind has unveiled two new AI systems that won silver medals at this year's International Mathematical Olympiad (IMO),  AlphaProof and AlphaGeometry 2"
 nhlocal_lead,nhlocal_aitimeline,Apollo@2024-12-01,,,,"month-precision community-timeline lead: Meta introduced Apollo, a video generation model available in three different sizes."
@@ -197,51 +257,73 @@ nhlocal_lead,nhlocal_aitimeline,Aria@2024-10-01,,,,"month-precision community-ti
 nhlocal_lead,nhlocal_aitimeline,Astra model@2024-05-01,,,,"month-precision community-timeline lead: 'Google announces a large number of AI features in its products. The main ones: increasing the token limit to 2 million for Gemini 1.5 to waiting list, releasin"
 nhlocal_lead,nhlocal_aitimeline,Aurora@2024-12-01,,,,"month-precision community-timeline lead: xAI integrated Aurora, a new model for generating high-quality and realistic images."
 nhlocal_lead,nhlocal_aitimeline,AxiomProver@2026-01-01,,,,month-precision community-timeline lead: AxiomProver solves all 12 problems from the 2025 Putnam exam using formal Lean proofs.
+nhlocal_lead,nhlocal_aitimeline,Behemoth@2025-04-01,,,,"month-precision community-timeline lead: Meta releases Llama 4 Scout and Maverick, multimodal mixture-of-experts models. Scout supports a 10-million-token context window; the larger Behemoth model is p"
 nhlocal_lead,nhlocal_aitimeline,Bing AI@2023-02-01,,,,"month-precision community-timeline lead: Microsoft gradually releases Bing AI, an AI chat based on an upgraded GPT model integrating internet search."
 nhlocal_lead,nhlocal_aitimeline,Chameleon@2024-05-01,,,,"month-precision community-timeline lead: Meta introduces Chameleon, a new multimodal model that seamlessly renders text and images."
 nhlocal_lead,nhlocal_aitimeline,ChatGPT Agent@2025-07-01,,,,"month-precision community-timeline lead: OpenAI unveils the ChatGPT Agent, embedding autonomous coding, web research and tool use directly within the chat interface."
 nhlocal_lead,nhlocal_aitimeline,ChatGPT Atlas@2025-10-01,,,,"month-precision community-timeline lead: OpenAI announced ChatGPT Atlas, an AI-native web browser with a built-in ""Agent Mode"" for task automation."
+nhlocal_lead,nhlocal_aitimeline,ChatGPT Images 2.0@2026-04-01,,,,"month-precision community-timeline lead: OpenAI launches ChatGPT Images 2.0, adding image generation with reasoning, web search, and improved text rendering."
+nhlocal_lead,nhlocal_aitimeline,ChatGPT Images 2.5@2026-09-01,,,,month-precision community-timeline lead: OpenAI releases ChatGPT Images 2.5 for precise image editing and opens its full-duplex GPT-Live-1 voice model to API developers.
+nhlocal_lead,nhlocal_aitimeline,ChatGPT search@2024-10-01,,,,"month-precision community-timeline lead: OpenAI launches ChatGPT search, allowing users to search the web directly within ChatGPT."
 nhlocal_lead,nhlocal_aitimeline,Claude 3.5 Sonnet New@2024-10-01,,,,"month-precision community-timeline lead: Anthropic launches Claude 3.5 Sonnet New, demonstrating significant advancements in specific areas over its previous version, and announces Claude 3.5 Haiku."
 nhlocal_lead,nhlocal_aitimeline,Claude 3.7 Thinking@2025-02-01,,,,"month-precision community-timeline lead: Anthropic introduces Claude 3.7 and Claude 3.7 Thinking, a new model with enhanced coding performance, support for ""Extended Thinking"" mode, and the ability to "
 nhlocal_lead,nhlocal_aitimeline,Claude 3.7@2025-02-01,,,,"month-precision community-timeline lead: Anthropic introduces Claude 3.7 and Claude 3.7 Thinking, a new model with enhanced coding performance, support for ""Extended Thinking"" mode, and the ability to "
 nhlocal_lead,nhlocal_aitimeline,Claude 4 Opus@2025-05-01,,,,"month-precision community-timeline lead: 'Anthropic releases Claude 4 Opus and Claude Sonnet 4: Opus 4 offers a Hybrid ""Deep Thought"" mode with enhanced long-term context and 7-hour autonomous operatio"
 nhlocal_lead,nhlocal_aitimeline,Claude 4.5 Haiku@2025-10-01,,,,"month-precision community-timeline lead: Anthropic released Claude 4.5 Haiku, a fast, cost-effective model for high-volume, low-latency applications."
 nhlocal_lead,nhlocal_aitimeline,Claude Cowork@2026-01-01,,,,"month-precision community-timeline lead: Anthropic launches Claude Cowork, a research preview for delegating knowledge-work tasks across documents, spreadsheets, and presentations."
+nhlocal_lead,nhlocal_aitimeline,Claude Mythos Preview@2026-04-01,,,,"month-precision community-timeline lead: Anthropic unveils Claude Mythos Preview through Project Glasswing, restricting access to selected defenders after demonstrating major advances in software vulne"
+nhlocal_lead,nhlocal_aitimeline,Claude Mythos Preview@2026-07-01,,,,"month-precision community-timeline lead: Claude Mythos Preview helps discover stronger attacks on HAWK signatures and reduced-round AES, advancing cryptanalysis without breaking production encryption."
 nhlocal_lead,nhlocal_aitimeline,Claude Sonnet 3.5@2024-06-01,,,,"month-precision community-timeline lead: Anthropic releases the Claude Sonnet 3.5 model, which presents better capabilities than other models with low resource usage."
 nhlocal_lead,nhlocal_aitimeline,Codestral Mamba@2024-07-01,,,,"month-precision community-timeline lead: 'mistral ai releases three new models: Codestral Mamba, Mistral NeMo and Mathstral designed for mathematics'"
+nhlocal_lead,nhlocal_aitimeline,Codex-Spark@2026-02-01,,,,month-precision community-timeline lead: OpenAI releases GPT-5.3-Codex for autonomous coding and previews Codex-Spark for real-time development on Cerebras hardware.
 nhlocal_lead,nhlocal_aitimeline,Codex@2025-05-01,,,,"month-precision community-timeline lead: OpenAI releases Codex, an autonomous code agent in ChatGPT, powered by the o3 model, for writing code, debugging, testing, and creating GitHub Pull Requests."
 nhlocal_lead,nhlocal_aitimeline,Codex@2025-12-01,,,,"month-precision community-timeline lead: 'OpenAI releases GPT-5.2, featuring the autonomous Codex agent for complex engineering tasks, and GPT-Image 1.5, which claims the #1 spot on vision benchmarks, "
+nhlocal_lead,nhlocal_aitimeline,Conversational Speech Model (CSM)@2025-02-01,,,,"month-precision community-timeline lead: Sesame AI unveiled its Conversational Speech Model (CSM), enabling remarkably human-like, real-time voice interaction, incorporating emotional nuances, natural "
 nhlocal_lead,nhlocal_aitimeline,Conversational Speech Model (CSM)@2025-03-01,,,,"month-precision community-timeline lead: Sesame AI unveiled its Conversational Speech Model (CSM), enabling remarkably human-like, real-time voice interaction, incorporating emotional nuances, natural "
 nhlocal_lead,nhlocal_aitimeline,Copilot+@2024-05-01,,,,"month-precision community-timeline lead: 'Microsoft announces Copilot+ for dedicated computers, which will allow a full search of the user''s history through screenshots of the user''s activity. The co"
+nhlocal_lead,nhlocal_aitimeline,Cowork@2026-01-01,,,,"month-precision community-timeline lead: Anthropic previews Cowork, extending Claude's agents to everyday work with local files."
 nhlocal_lead,nhlocal_aitimeline,DALL-E 2@2022-04-01,,,,month-precision community-timeline lead: DALL-E 2 is announced for gradual release.
 nhlocal_lead,nhlocal_aitimeline,DALL-E 3@2023-10-01,,,,month-precision community-timeline lead: DALL-E 3 is released.
 nhlocal_lead,nhlocal_aitimeline,Deep Research@2025-02-01,,,,"month-precision community-timeline lead: OpenAI unveils Deep Research, a tool for autonomous research, enabling real-time web searches and comprehensive report generation."
 nhlocal_lead,nhlocal_aitimeline,Deep Research@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3.0 Flash, setting a new standard for price-performance, and deploys Deep Research, an autonomous agent capable of multi-step synthesis"
+nhlocal_lead,nhlocal_aitimeline,Deep Think@2025-05-01,,,,"month-precision community-timeline lead: Google previews Deep Think, an enhanced reasoning mode for Gemini 2.5 Pro, with trusted testers. It also updates Gemini 2.5 Flash and previews native audio capa"
 nhlocal_lead,nhlocal_aitimeline,DeepSearch@2025-02-01,,,,"month-precision community-timeline lead: xAI launches Grok 3, Grok 3 Reasoning and Grok 3 mini, next-generation AI models trained with 10 times the computing power of Grok 2, significantly improving SO"
 nhlocal_lead,nhlocal_aitimeline,DeepSeek-R1-Lite-Preview@2024-11-01,,,,"month-precision community-timeline lead: DeepSeek unveiled its new AI model, DeepSeek-R1-Lite-Preview, which incorporates reasoning capabilities and delivers impressive performance on the AIME and MATH"
 nhlocal_lead,nhlocal_aitimeline,DeepSeekCoderV2@2024-06-01,,,,"month-precision community-timeline lead: DeepSeekAI publishes the DeepSeekCoderV2 open source language model which presents similar coding capabilities to models such as GPT-4, Claude 3 Opus and more."
 nhlocal_lead,nhlocal_aitimeline,DeepSeekMath-V2@2025-11-01,,,,"month-precision community-timeline lead: DeepSeek released DeepSeekMath-V2 as open source, achieving gold-medal performance in math olympiads."
 nhlocal_lead,nhlocal_aitimeline,Devstral 2@2025-12-01,,,,"month-precision community-timeline lead: Mistral AI launches the Mistral 3 family (Large & Ministral) alongside Mistral OCR 3 and the Devstral 2 coding series, reinforcing its open-weight leadership wi"
+nhlocal_lead,nhlocal_aitimeline,DiffusionGemma@2026-06-01,,,,"month-precision community-timeline lead: Google releases DiffusionGemma, an experimental open model that generates text in parallel blocks for faster inference."
 nhlocal_lead,nhlocal_aitimeline,Dream Machine 1.5@2024-08-01,,,,month-precision community-timeline lead: Luma has unveiled the Dream Machine 1.5 model for video creation.
 nhlocal_lead,nhlocal_aitimeline,Eleven v3 (alpha)@2025-06-01,,,,month-precision community-timeline lead: ElevenLabs rolls out Eleven v3 (alpha) TTS with fine grained emotion control and support for 70+ languages.
+nhlocal_lead,nhlocal_aitimeline,Erdős's unit-distance conjecture@2026-05-01,,,,"month-precision community-timeline lead: An internal OpenAI model disproves Erdős's unit-distance conjecture, open since 1946; external mathematicians check the proof."
 nhlocal_lead,nhlocal_aitimeline,FLUX 2@2025-11-01,,,,"month-precision community-timeline lead: Black Forest Labs launched FLUX 2, a high-performance open-weight image generation model."
+nhlocal_lead,nhlocal_aitimeline,FLUX.2 dev@2025-11-01,,,,"month-precision community-timeline lead: Black Forest Labs launches FLUX.2, an image-generation and editing model family, with open weights for FLUX.2 dev."
+nhlocal_lead,nhlocal_aitimeline,FLUX.2@2025-11-01,,,,"month-precision community-timeline lead: Black Forest Labs launches FLUX.2, an image-generation and editing model family, with open weights for FLUX.2 dev."
+nhlocal_lead,nhlocal_aitimeline,Fable 5@2026-06-01,,,,"month-precision community-timeline lead: Anthropic launches Fable 5 for general use and restricted Mythos 5; US export controls suspend both three days later, until July 1."
 nhlocal_lead,nhlocal_aitimeline,Fara-7B@2025-11-01,,,,"month-precision community-timeline lead: Microsoft open-sourced Fara-7B, a small model optimized for browser agents and computer control."
 nhlocal_lead,nhlocal_aitimeline,Figure 03@2025-10-01,,,,"month-precision community-timeline lead: Figure unveiled Figure 03, a humanoid robot designed for domestic and general-purpose tasks."
 nhlocal_lead,nhlocal_aitimeline,Firefly 2@2023-10-01,,,,month-precision community-timeline lead: Adobe releases Firefly 2.
 nhlocal_lead,nhlocal_aitimeline,Firefly 3@2024-04-01,,,,month-precision community-timeline lead: Adobe announces its new image creation model Firefly 3.
 nhlocal_lead,nhlocal_aitimeline,Firefly Video@2024-10-01,,,,"month-precision community-timeline lead: Adobe announces its video creation model, Firefly Video."
+nhlocal_lead,nhlocal_aitimeline,Firefly@2023-03-01,,,,month-precision community-timeline lead: Adobe releases the Firefly image creation model as a beta version to a waiting list. The model allowed a variety of capabilities including text formatting.
 nhlocal_lead,nhlocal_aitimeline,Firefly@2023-04-01,,,,month-precision community-timeline lead: Adobe releases the Firefly image creation model as a beta version to a waiting list. The model allowed a variety of capabilities including text formatting.
 nhlocal_lead,nhlocal_aitimeline,Florence 2@2024-06-01,,,,month-precision community-timeline lead: Microsoft releases in open source a series of image recognition models called Florence 2.
 nhlocal_lead,nhlocal_aitimeline,Fluid@2024-10-01,,,,"month-precision community-timeline lead: Google DeepMind and MIT unveil Fluid, a texttoimage generation model with industryleading performance at a scale of 10.5B parameters."
 nhlocal_lead,nhlocal_aitimeline,Flux 1.1 Pro@2024-10-01,,,,"month-precision community-timeline lead: Flux 1.1 Pro is released, showcasing advanced capabilities for image creation."
 nhlocal_lead,nhlocal_aitimeline,Flux@2024-08-01,,,,"month-precision community-timeline lead: '""Black Forest Labs"" releases weights for an image creation model named Flux, which shows better performance than similar closedsource models.'"
 nhlocal_lead,nhlocal_aitimeline,Frontier Math Benchmark@2024-12-01,,,,"month-precision community-timeline lead: OpenAI announced o3, a groundbreaking AI model achieving 87.5% in the ARC-AGI benchmark, 25.2% in the Frontier Math Benchmark (compared to under 2% in previous "
+nhlocal_lead,nhlocal_aitimeline,GPT Image 1.5@2025-12-01,,,,"month-precision community-timeline lead: OpenAI releases GPT-5.2 for complex knowledge work, GPT-5.2-Codex for autonomous software engineering, and GPT Image 1.5 for improved image generation and preci"
 nhlocal_lead,nhlocal_aitimeline,GPT-4o Image Generation@2025-03-01,,,,"month-precision community-timeline lead: OpenAI integrated GPT-4o Image Generation, enabling high-fidelity text-to-image creation, text rendering within images, and more."
 nhlocal_lead,nhlocal_aitimeline,GPT-4o model@2024-05-01,,,,"month-precision community-timeline lead: OpenAI announces the GPT-4o model that presents full multimodal capabilities, including receiving and creating text, images, and audio. The model presents an im"
+nhlocal_lead,nhlocal_aitimeline,GPT-5.1 Thinking@2025-11-01,,,,"month-precision community-timeline lead: OpenAI launches GPT-5.1 Instant and GPT-5.1 Thinking, improving conversational responses, instruction following, and adaptive reasoning."
 nhlocal_lead,nhlocal_aitimeline,GPT-5.3 Instant@2026-03-01,,,,"month-precision community-timeline lead: OpenAI releases GPT-5.3 Instant, a faster general-purpose GPT-5.3 variant for latency-sensitive tasks."
 nhlocal_lead,nhlocal_aitimeline,GPT-5.3-Codex-Spark@2026-02-01,,,,"month-precision community-timeline lead: OpenAI introduces GPT-5.3-Codex and GPT-5.3-Codex-Spark, upgraded coding models for long-running and real-time development work."
 nhlocal_lead,nhlocal_aitimeline,GPT-5.4@2026-03-01,,,,"month-precision community-timeline lead: OpenAI launches GPT-5.4 alongside GPT-5.4 mini and GPT-5.4 nano, expanding the GPT-5.4 family across flagship and lightweight tiers."
+nhlocal_lead,nhlocal_aitimeline,"GPT-5.6 Sol, Terra, and Luna@2026-06-01",,,,"month-precision community-timeline lead: OpenAI begins a limited preview of GPT-5.6 Sol, Terra, and Luna, ahead of July's general release."
+nhlocal_lead,nhlocal_aitimeline,"GPT-5.6 Sol, Terra, and Luna@2026-07-01",,,,"month-precision community-timeline lead: OpenAI releases GPT-5.6 Sol, Terra, and Luna broadly, improving performance per token and introducing parallel agents for demanding tasks."
 nhlocal_lead,nhlocal_aitimeline,GPT-Image 1.5@2025-12-01,,,,"month-precision community-timeline lead: 'OpenAI releases GPT-5.2, featuring the autonomous Codex agent for complex engineering tasks, and GPT-Image 1.5, which claims the #1 spot on vision benchmarks, "
+nhlocal_lead,nhlocal_aitimeline,GPT-Live-1@2026-09-01,,,,month-precision community-timeline lead: OpenAI releases ChatGPT Images 2.5 for precise image editing and opens its full-duplex GPT-Live-1 voice model to API developers.
+nhlocal_lead,nhlocal_aitimeline,GPT-Live@2026-07-01,,,,"month-precision community-timeline lead: OpenAI introduces GPT-Live, bringing simultaneous listening and speaking to ChatGPT Voice."
 nhlocal_lead,nhlocal_aitimeline,Gemini 1.5 Flash8B@2024-08-01,,,,"month-precision community-timeline lead: 'Google has introduced three new experimental AI models: Gemini 1.5 Flash8B, Gemini 1.5 Pro Enhanced, and Gemini 1.5 Flash Updated.'"
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.0 Flash Experimental@2025-03-01,,,,"month-precision community-timeline lead: Google expanded experimental image generation and editing within Gemini 2.0 Flash Experimental, enabling image generation and editing, including enhanced text c"
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.0 Flash-Lite Preview@2025-02-01,,,,"month-precision community-timeline lead: Google releases Gemini 2.0 Flash, Gemini 2.0 Flash-Lite Preview, and Gemini 2.0 Pro Experimental."
@@ -250,24 +332,31 @@ nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 - Deep Think@2025-09-01,,,,"month-pre
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Deep Think@2025-08-01,,,,"month-precision community-timeline lead: Google introduced Gemini 2.5 Deep Think, a special ""extended thinking"" mode for solving complex problems and exploring alternatives."
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Flash Audio@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3.0 Flash, setting a new standard for price-performance, and deploys Deep Research, an autonomous agent capable of multi-step synthesis"
 nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Flash Image@2025-08-01,,,,"month-precision community-timeline lead: Google launched a preview of Gemini 2.5 Flash Image (showcased as *nano-banana*), an advanced model for precise image editing, merging, and maintaining characte"
+nhlocal_lead,nhlocal_aitimeline,Gemini 2.5 Flash Native Audio@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3 Flash, opens the upgraded Gemini Deep Research agent to developers through the Interactions API, and updates Gemini 2.5 Flash Native "
 nhlocal_lead,nhlocal_aitimeline,Gemini 3 Deep Think@2026-02-01,,,,"month-precision community-timeline lead: Google launches Gemini 3 Deep Think, a specialized reasoning mode that reaches 84.6% on ARC-AGI-2."
 nhlocal_lead,nhlocal_aitimeline,Gemini 3.0 Flash@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3.0 Flash, setting a new standard for price-performance, and deploys Deep Research, an autonomous agent capable of multi-step synthesis"
 nhlocal_lead,nhlocal_aitimeline,Gemini 3.0@2025-11-01,,,,"month-precision community-timeline lead: Google debuted Gemini 3.0, a flagship ""thinking"" model that claimed the top spot on major benchmarks."
+nhlocal_lead,nhlocal_aitimeline,Gemini Deep Research@2025-12-01,,,,"month-precision community-timeline lead: Google introduces Gemini 3 Flash, opens the upgraded Gemini Deep Research agent to developers through the Interactions API, and updates Gemini 2.5 Flash Native "
 nhlocal_lead,nhlocal_aitimeline,Gemini Deep Think@2025-07-01,,,,"month-precision community-timeline lead: Google introduces Gemini Deep Think, which also earns an IMO 2025 gold by solving five of six problems with parallel reasoning."
 nhlocal_lead,nhlocal_aitimeline,Gemini Diffusion@2025-05-01,,,,"month-precision community-timeline lead: Google releases Gemini Diffusion, an experimental text diffusion model achieving high-speed text generation with enhanced control and creativity via noise refin"
 nhlocal_lead,nhlocal_aitimeline,Gemini Flash 1.5 002@2024-09-01,,,,"month-precision community-timeline lead: Google has rolled out new model updates ready for deployment, Gemini Pro 1.5 002 and Gemini Flash 1.5 002, showcasing significantly improved longcontext process"
 nhlocal_lead,nhlocal_aitimeline,Gemini Flash 1.5 model@2024-05-01,,,,"month-precision community-timeline lead: 'Google announces a large number of AI features in its products. The main ones: increasing the token limit to 2 million for Gemini 1.5 to waiting list, releasin"
 nhlocal_lead,nhlocal_aitimeline,Gemini Flash Thinking 0121@2025-01-01,,,,"month-precision community-timeline lead: Google introduced Gemini Flash Thinking 0121, an enhanced reasoning model that secured the top spot in the Arena Chatbots rankings."
+nhlocal_lead,nhlocal_aitimeline,Gemini Omni Flash@2026-05-01,,,,"month-precision community-timeline lead: Google introduces Gemini Omni Flash, combining multimodal reasoning with video generation and conversational editing."
+nhlocal_lead,nhlocal_aitimeline,Gemini Omni Flash@2026-06-01,,,,month-precision community-timeline lead: Google launches the faster Nano Banana 2 Lite and opens Gemini Omni Flash video generation to API developers.
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro 1.5 002@2024-09-01,,,,"month-precision community-timeline lead: Google has rolled out new model updates ready for deployment, Gemini Pro 1.5 002 and Gemini Flash 1.5 002, showcasing significantly improved longcontext process"
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro 1.5@2024-02-01,,,,"month-precision community-timeline lead: Google announces the Gemini Pro 1.5 multimodal language model capable of parsing up to a million tokens, as well as parsing video and images. The model is gradu"
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro 1.5@2024-12-01,,,,"month-precision community-timeline lead: Google launched Gemini 2.0 Flash in beta. This model leads benchmarks and outperforms the previous version, Gemini Pro 1.5. Additionally, Google introduced live"
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro@2023-12-01,,,,"month-precision community-timeline lead: Google upgrades Bard in limited areas, moving it to be based on the upgraded Gemini Pro language model."
 nhlocal_lead,nhlocal_aitimeline,Gemini Pro@2024-02-01,,,,"month-precision community-timeline lead: Google upgrades the artificial intelligence chat in Bard, basing it on the new Gemini Pro model, in all available languages. Google replaces ""Bard"" with ""Gemini"
+nhlocal_lead,nhlocal_aitimeline,Gemini Robotics 2 and ER 2@2026-07-01,,,,"month-precision community-timeline lead: Google introduces Gemini Robotics 2 and ER 2, enabling whole-body control, adaptation to new robot bodies, and collaboration between robots."
 nhlocal_lead,nhlocal_aitimeline,Gemini model for computer control@2025-10-01,,,,"month-precision community-timeline lead: Google released a Gemini model for computer control, achieving state-of-the-art (SOTA) performance in GUI automation."
 nhlocal_lead,nhlocal_aitimeline,Gemini-2.0-Flash-Thinking@2024-12-01,,,,"month-precision community-timeline lead: Google revealed Gemini-2.0-Flash-Thinking, a thinking model based on Gemini 2.0 Flash, which secured second place in the chatbot leaderboard."
 nhlocal_lead,nhlocal_aitimeline,Gemini-Exp-1206@2024-12-01,,,,"month-precision community-timeline lead: Google unveiled the experimental model Gemini-Exp-1206, which ranked first in the chatbot leaderboard."
 nhlocal_lead,nhlocal_aitimeline,Gemma 2@2024-06-01,,,,"month-precision community-timeline lead: Google announces Gemma 2 open source language models with 9B and 27B parameter sizes. Also, the company opens the context window capabilities to developers for "
+nhlocal_lead,nhlocal_aitimeline,Gemma 3@2025-03-01,,,,"month-precision community-timeline lead: Google releases Gemma 3 in 1B, 4B, 12B, and 27B sizes. The 4B and larger models support image understanding and a 128K context window, alongside multilingual te"
 nhlocal_lead,nhlocal_aitimeline,Gemma 3n@2025-05-01,,,,"month-precision community-timeline lead: Google introduces Gemma 3n, an open-source generative AI model for on-device use, with an efficient architecture and multi-modal (audio, text, visual) capabilit"
+nhlocal_lead,nhlocal_aitimeline,Gemma 4@2026-04-01,,,,"month-precision community-timeline lead: Google releases Gemma 4, an Apache-licensed family of multimodal reasoning models for servers, laptops, and phones."
 nhlocal_lead,nhlocal_aitimeline,Gemma@2024-12-01,,,,"month-precision community-timeline lead: Google launched a multi-modal open-source model called PaliGemma 2, integrated with existing Gemma models."
 nhlocal_lead,nhlocal_aitimeline,Gen-4.5@2025-12-01,,,,"month-precision community-timeline lead: Runway releases Gen-4.5, a video generation model that rises to the top of industry leaderboards for motion consistency and prompt adherence."
 nhlocal_lead,nhlocal_aitimeline,Gen3 Alpha@2024-06-01,,,,"month-precision community-timeline lead: Runway introduces Gen3 Alpha, a new AI model for video generation."
@@ -278,6 +367,7 @@ nhlocal_lead,nhlocal_aitimeline,Grok 2 mini@2024-08-01,,,,"month-precision commu
 nhlocal_lead,nhlocal_aitimeline,Grok 2@2024-08-01,,,,"month-precision community-timeline lead: xAI Corporation has launched the models Grok 2 and Grok 2 mini, which demonstrate performance on par with leading SOTA models in the market."
 nhlocal_lead,nhlocal_aitimeline,Grok 3 Reasoning@2025-02-01,,,,"month-precision community-timeline lead: xAI launches Grok 3, Grok 3 Reasoning and Grok 3 mini, next-generation AI models trained with 10 times the computing power of Grok 2, significantly improving SO"
 nhlocal_lead,nhlocal_aitimeline,Grok AI@2023-12-01,,,,month-precision community-timeline lead: X Corporation launches Grok AI chatbot for paid subscribers in English language.
+nhlocal_lead,nhlocal_aitimeline,Grok Imagine API@2026-01-01,,,,month-precision community-timeline lead: xAI launches the Grok Imagine API for video generation and editing with synchronized audio.
 nhlocal_lead,nhlocal_aitimeline,Grok Voice Agent API@2025-12-01,,,,"month-precision community-timeline lead: xAI launches the Grok Voice Agent API, enabling native, real-time bidirectional audio streaming for developers."
 nhlocal_lead,nhlocal_aitimeline,Grok-1.5V@2024-04-01,,,,"month-precision community-timeline lead: X Corporation releases an upgrade to its language model, Grok-1.5V, which integrates high-level image recognition. In the test presented by the company, the mod"
 nhlocal_lead,nhlocal_aitimeline,Ideogram 2.0@2024-08-01,,,,"month-precision community-timeline lead: Ideogram 2.0 has been released, offering image generation capabilities that surpass those of other leading models."
@@ -286,6 +376,7 @@ nhlocal_lead,nhlocal_aitimeline,Imagen 3@2024-08-01,,,,"month-precision communit
 nhlocal_lead,nhlocal_aitimeline,Imagen 3@2024-12-01,,,,"month-precision community-timeline lead: Google introduced Veo 2, a beta version video generation model capable of producing 4K videos up to two minutes long. The model outperformed SORA in human evalu"
 nhlocal_lead,nhlocal_aitimeline,Imagen 4@2025-05-01,,,,"month-precision community-timeline lead: Google releases Veo 3, a video generation model for synchronized 4K video with natural audio integration, and Imagen 4, an advanced image model with deeper cont"
 nhlocal_lead,nhlocal_aitimeline,Imagine Video@2026-01-01,,,,"month-precision community-timeline lead: xAI launches Imagine Video, a video generation model in Grok that quickly rises to the top of public leaderboards."
+nhlocal_lead,nhlocal_aitimeline,Jacobian conjecture@2026-07-01,,,,"month-precision community-timeline lead: Claude Fable 5 helps mathematician Levent Alpöge disprove the Jacobian conjecture in dimension three, overturning a problem posed in 1939."
 nhlocal_lead,nhlocal_aitimeline,Janus AI@2024-10-01,,,,"month-precision community-timeline lead: Janus AI, a multimodal language model capable of recognizing and generating both text and images, is released as open source by DeepSeekAI."
 nhlocal_lead,nhlocal_aitimeline,Janus Pro 7B@2025-01-01,,,,"month-precision community-timeline lead: DeepSeek open-sourced a fully multimodal model, Janus Pro 7B, which supports both text and image generation."
 nhlocal_lead,nhlocal_aitimeline,Jules@2025-05-01,,,,"month-precision community-timeline lead: Google releases Jules, an asynchronous autonomous coding agent on Gemini 2.5 Pro, analyzing repositories and creating GitHub Pull Requests."
@@ -294,10 +385,13 @@ nhlocal_lead,nhlocal_aitimeline,Kling 1.6@2024-12-01,,,,"month-precision communi
 nhlocal_lead,nhlocal_aitimeline,Kling 2.0@2025-04-01,,,,"month-precision community-timeline lead: A series of video model updates - Veo 2.0 (Google), Runway Gen-4, Vidu Q1, and Kling 2.0 – a leap forward in high-quality video generation, with improvements in"
 nhlocal_lead,nhlocal_aitimeline,Kyutai@2024-09-01,,,,"month-precision community-timeline lead: Kyutai releases two opensource versions of its voicetovoice model, Moshi."
 nhlocal_lead,nhlocal_aitimeline,LLaMA@2023-02-01,,,,month-precision community-timeline lead: Meta releases the LLaMA language model as open-source for research purposes. The model is later leaked.
+nhlocal_lead,nhlocal_aitimeline,Lean proof of Fermat's Last Theorem@2026-09-01,,,,"month-precision community-timeline lead: Anthropic publishes the first complete Lean proof of Fermat's Last Theorem, formalized largely autonomously by Claude in 11 days."
 nhlocal_lead,nhlocal_aitimeline,Llama 3.2@2024-09-01,,,,"month-precision community-timeline lead: Meta releases Llama 3.2 in sizes 1B, 3B, 11B and 90B, featuring image recognition capabilities for the first time."
 nhlocal_lead,nhlocal_aitimeline,Llama 3.3 70B@2024-12-01,,,,"month-precision community-timeline lead: Meta released Llama 3.3 70B, a model offering performance comparable to Llama 3.1 405B."
 nhlocal_lead,nhlocal_aitimeline,Llama 4@2025-04-01,,,,month-precision community-timeline lead: Meta releases Llama 4 in three sizes with a context window of 10 million tokens and medium performance.
+nhlocal_lead,nhlocal_aitimeline,Lyria 3 Pro@2026-03-01,,,,"month-precision community-timeline lead: Google's Lyria 3 Pro adds three-minute tracks, while Suno v5.5 introduces personalized voices and music models."
 nhlocal_lead,nhlocal_aitimeline,Mathstral@2024-07-01,,,,"month-precision community-timeline lead: 'mistral ai releases three new models: Codestral Mamba, Mistral NeMo and Mathstral designed for mathematics'"
+nhlocal_lead,nhlocal_aitimeline,Maverick@2025-04-01,,,,"month-precision community-timeline lead: Meta releases Llama 4 Scout and Maverick, multimodal mixture-of-experts models. Scout supports a 10-million-token context window; the larger Behemoth model is p"
 nhlocal_lead,nhlocal_aitimeline,Meta Spirit LM@2024-10-01,,,,month-precision community-timeline lead: Meta releases an opensource speechtospeech language model named Meta Spirit LM.
 nhlocal_lead,nhlocal_aitimeline,Meta@2024-09-01,,,,"month-precision community-timeline lead: Meta releases Llama 3.2 in sizes 1B, 3B, 11B and 90B, featuring image recognition capabilities for the first time."
 nhlocal_lead,nhlocal_aitimeline,Midjourney v1@2022-02-01,,,,month-precision community-timeline lead: Midjourney v1
@@ -319,14 +413,23 @@ nhlocal_lead,nhlocal_aitimeline,Mixtral 8x22B@2024-04-01,,,,month-precision comm
 nhlocal_lead,nhlocal_aitimeline,Moltbook@2026-01-01,,,,"month-precision community-timeline lead: Moltbook, a social platform where AI agents post and reply to each other, becomes a viral online phenomenon."
 nhlocal_lead,nhlocal_aitimeline,Moshi@2024-09-01,,,,"month-precision community-timeline lead: Kyutai releases two opensource versions of its voicetovoice model, Moshi."
 nhlocal_lead,nhlocal_aitimeline,Movie Gen@2024-10-01,,,,"month-precision community-timeline lead: Meta unveils Movie Gen, a new AI model that generates videos, images, and audio from text input."
+nhlocal_lead,nhlocal_aitimeline,Muse Glimmer@2026-08-01,,,,"month-precision community-timeline lead: Meta releases Muse Glimmer, an Apache-licensed 30B model for local agents on consumer hardware."
+nhlocal_lead,nhlocal_aitimeline,Muse Spark@2026-04-01,,,,"month-precision community-timeline lead: Meta introduces Muse Spark, a multimodal reasoning model powering Meta AI, with parallel agents and a private API preview."
+nhlocal_lead,nhlocal_aitimeline,Muse@2026-09-01,,,,"month-precision community-timeline lead: Meta introduces Muse, a personal agent that works across apps from a dedicated virtual computer, accessible through WhatsApp."
+nhlocal_lead,nhlocal_aitimeline,Music AI Sandbox@2024-05-01,,,,"month-precision community-timeline lead: Google announces Gemini 1.5 Flash and a 2-million-token preview for Gemini 1.5 Pro. It also introduces Imagen 3, the Music AI Sandbox, the video model Veo, and "
 nhlocal_lead,nhlocal_aitimeline,Music AI@2024-05-01,,,,"month-precision community-timeline lead: 'Google announces a large number of AI features in its products. The main ones: increasing the token limit to 2 million for Gemini 1.5 to waiting list, releasin"
+nhlocal_lead,nhlocal_aitimeline,Mythos 5.1@2026-09-01,,,,"month-precision community-timeline lead: Anthropic releases Claude Fable 5.1 and restricted Mythos 5.1, improving scientific research, coding, and safeguards."
+nhlocal_lead,nhlocal_aitimeline,Mythos 5@2026-06-01,,,,"month-precision community-timeline lead: Anthropic launches Fable 5 for general use and restricted Mythos 5; US export controls suspend both three days later, until July 1."
 nhlocal_lead,nhlocal_aitimeline,NOVA@2024-12-01,,,,"month-precision community-timeline lead: Amazon introduced a new series of models called NOVA, designed for text, image, and video processing."
+nhlocal_lead,nhlocal_aitimeline,Nano Banana 2 Lite@2026-06-01,,,,month-precision community-timeline lead: Google launches the faster Nano Banana 2 Lite and opens Gemini Omni Flash video generation to API developers.
 nhlocal_lead,nhlocal_aitimeline,Nano Banana 2@2026-02-01,,,,"month-precision community-timeline lead: Google launches Nano Banana 2, a Gemini 3.1 Flash-based image model that matches Nano Banana Pro quality at lower latency."
 nhlocal_lead,nhlocal_aitimeline,Nano Banana Pro@2025-11-01,,,,"month-precision community-timeline lead: Google released Nano Banana Pro, a superior image generation and editing model based on Gemini 3."
+nhlocal_lead,nhlocal_aitimeline,Navier-Stokes Millennium Problem@2026-09-01,,,,"month-precision community-timeline lead: OpenAI publishes a proposed Navier-Stokes Millennium Problem solution from an internal model, including a Lean proof of finite-time singularities in forced flui"
 nhlocal_lead,nhlocal_aitimeline,Neo@2025-10-01,,,,"month-precision community-timeline lead: 1X announced Neo, a humanoid robot marketed as the first consumer-ready model for home use."
 nhlocal_lead,nhlocal_aitimeline,NotebookLM@2024-09-01,,,,month-precision community-timeline lead: Google releases an update to its AI tool NotebookLM that enables users to create podcasts based on their own content.
 nhlocal_lead,nhlocal_aitimeline,Nova 2 Sonic@2025-12-01,,,,"month-precision community-timeline lead: Amazon unveils the Nova 2 series, highlighted by Nova 2 Sonic, a native speech-to-speech model delivering ultra-low latency and natural conversation flow."
 nhlocal_lead,nhlocal_aitimeline,Nova 2@2025-12-01,,,,"month-precision community-timeline lead: Amazon unveils the Nova 2 series, highlighted by Nova 2 Sonic, a native speech-to-speech model delivering ultra-low latency and natural conversation flow."
+nhlocal_lead,nhlocal_aitimeline,Nova Act@2025-03-01,,,,"month-precision community-timeline lead: Amazon introduces Nova Act, a research preview of a browser-action model and an SDK for building agents that perform multi-step tasks."
 nhlocal_lead,nhlocal_aitimeline,Nova Act@2025-04-01,,,,"month-precision community-timeline lead: Amazon introduces Nova Act, a new framework for building multi-step autonomous agents."
 nhlocal_lead,nhlocal_aitimeline,OpenAI@2024-09-01,,,,month-precision community-timeline lead: OpenAI launches the advanced voice mode of GPT 4o for all subscribers.
 nhlocal_lead,nhlocal_aitimeline,OpenELM@2024-04-01,,,,month-precision community-timeline lead: Apple releases as full open source a series of small language models under the name OpenELM. The models are available in four weights between 270 million and 3 
@@ -346,8 +449,11 @@ nhlocal_lead,nhlocal_aitimeline,Pixtral Large@2024-11-01,,,,"month-precision com
 nhlocal_lead,nhlocal_aitimeline,Pixtral12B@2024-09-01,,,,"month-precision community-timeline lead: The French AI company Mistral has introduced Pixtral12B, its first multimodal model capable of processing both images and text."
 nhlocal_lead,nhlocal_aitimeline,Poetiq@2025-11-01,,,,"month-precision community-timeline lead: Poetiq shatters the ARC-AGI-2 benchmark with a score of over 60%, surpassing the human average."
 nhlocal_lead,nhlocal_aitimeline,Poetiq@2025-12-01,,,,"month-precision community-timeline lead: A specialized system by Poetiq, powered by GPT-5.2, reportedly solves the ARC-2 benchmark, marking a major breakthrough in abstract reasoning."
+nhlocal_lead,nhlocal_aitimeline,Project Astra@2024-05-01,,,,"month-precision community-timeline lead: Google announces Gemini 1.5 Flash and a 2-million-token preview for Gemini 1.5 Pro. It also introduces Imagen 3, the Music AI Sandbox, the video model Veo, and "
+nhlocal_lead,nhlocal_aitimeline,Project Glasswing@2026-04-01,,,,"month-precision community-timeline lead: Anthropic unveils Claude Mythos Preview through Project Glasswing, restricting access to selected defenders after demonstrating major advances in software vulne"
 nhlocal_lead,nhlocal_aitimeline,QVQ-72B-Preview@2024-12-01,,,,"month-precision community-timeline lead: Alibaba unveiled QVQ-72B-Preview, a cutting-edge thinking model capable of analyzing images, featuring SOTA-level performance."
 nhlocal_lead,nhlocal_aitimeline,QwQ 32B Preview@2024-11-01,,,,"month-precision community-timeline lead: Alibaba released its new model, QwQ 32B Preview, which integrates reasoning capabilities before responding. The model competes with, and sometimes surpasses, Op"
+nhlocal_lead,nhlocal_aitimeline,QwQ-Max-Preview@2025-02-01,,,,"month-precision community-timeline lead: Alibaba launches QwQ-Max-Preview, a preview reasoning model based on Qwen2.5-Max, with a focus on math, coding, and agent tasks."
 nhlocal_lead,nhlocal_aitimeline,QwQ-Max@2025-02-01,,,,"month-precision community-timeline lead: Alibaba launches QwQ-Max – a reasoning model based on Qwen2.5-Max, offering improved analytical and logical capabilities."
 nhlocal_lead,nhlocal_aitimeline,Qwen 3@2025-04-01,,,,"month-precision community-timeline lead: Alibaba releases Qwen 3 as open source, in various sizes, with very impressive capabilities for their size."
 nhlocal_lead,nhlocal_aitimeline,Qwen-3-Max@2025-09-01,,,,"month-precision community-timeline lead: Alibaba unveiled Qwen-3-Max, its flagship model with over a trillion parameters, focusing on long context and agent capabilities."
@@ -358,11 +464,13 @@ nhlocal_lead,nhlocal_aitimeline,Qwen2.5-Max@2025-01-01,,,,"month-precision commu
 nhlocal_lead,nhlocal_aitimeline,Qwen2.5-VL 32B@2025-03-01,,,,"month-precision community-timeline lead: Alibaba released the Qwen2.5-VL 32B, open-source vision-language model with robust capabilities in visual analysis, text-in-image understanding, and visual agen"
 nhlocal_lead,nhlocal_aitimeline,Qwen2.5-VL@2025-01-01,,,,"month-precision community-timeline lead: Alibaba unveiled Qwen2.5-Max, a large language model that surpasses several leading models, including DeepSeek-V3, GPT-4o, and Claude 3.5. Additionally, the Qwe"
 nhlocal_lead,nhlocal_aitimeline,Qwen3-235B-A22B-Instruct-2507@2025-07-01,,,,"month-precision community-timeline lead: Alibaba open-sources two variants, Qwen3-235B-A22B-Instruct-2507 (instruction-tuned) and Qwen3-Coder, for general LLM use and automated code generation."
+nhlocal_lead,nhlocal_aitimeline,Qwen3.5@2026-02-01,,,,"month-precision community-timeline lead: Z.ai releases GLM-5 for autonomous engineering, while Alibaba's Qwen3.5 brings native vision to its open-weight agent models."
 nhlocal_lead,nhlocal_aitimeline,R1-0528@2025-05-01,,,,"month-precision community-timeline lead: DeepSeek open-sources R1-0528, a code-and-inference model with near–o4-mini performance and moderate computational needs."
 nhlocal_lead,nhlocal_aitimeline,R1-Zero@2025-01-01,,,,"month-precision community-timeline lead: DeepSeek open-sourced the reasoning models R1 and R1-Zero, which demonstrated capabilities similar to o1 across various domains at a fraction of the cost. Addit"
 nhlocal_lead,nhlocal_aitimeline,R1@2025-01-01,,,,"month-precision community-timeline lead: DeepSeek open-sourced the reasoning models R1 and R1-Zero, which demonstrated capabilities similar to o1 across various domains at a fraction of the cost. Addit"
 nhlocal_lead,nhlocal_aitimeline,Recraft v3@2024-10-01,,,,"month-precision community-timeline lead: The texttoimage model Recraft v3 has been released to the public, ranking first in benchmarks compared to similar models."
 nhlocal_lead,nhlocal_aitimeline,Reka AI@2024-04-01,,,,"month-precision community-timeline lead: The startup Reka AI presents a series of multimodal language models in 3 sizes. The models are capable of processing video, audio and images. The large model fe"
+nhlocal_lead,nhlocal_aitimeline,Reka Core@2024-04-01,,,,"month-precision community-timeline lead: Reka AI introduces Reka Core, joining its smaller Flash and Edge models. Core processes video, audio, and images, with benchmark results the company reports as "
 nhlocal_lead,nhlocal_aitimeline,Runway Gen-4@2025-04-01,,,,"month-precision community-timeline lead: A series of video model updates - Veo 2.0 (Google), Runway Gen-4, Vidu Q1, and Kling 2.0 – a leap forward in high-quality video generation, with improvements in"
 nhlocal_lead,nhlocal_aitimeline,Runway@2024-06-01,,,,"month-precision community-timeline lead: Runway introduces Gen3 Alpha, a new AI model for video generation."
 nhlocal_lead,nhlocal_aitimeline,SORA@2024-12-01,,,,"month-precision community-timeline lead: OpenAI released SORA, a video generation model, along with the full version of o1 and o1 Pro for advanced subscribers. Additionally, the company launched a live"
@@ -370,6 +478,7 @@ nhlocal_lead,nhlocal_aitimeline,Search GPT@2024-10-01,,,,"month-precision commun
 nhlocal_lead,nhlocal_aitimeline,SearchGPT@2024-07-01,,,,"month-precision community-timeline lead: OpenAI launched SearchGPT, an integrated web search"
 nhlocal_lead,nhlocal_aitimeline,Seedance 2.0@2026-02-01,,,,"month-precision community-timeline lead: ByteDance releases Seedance 2.0, an upgraded video generation model with stronger motion quality and multimodal control."
 nhlocal_lead,nhlocal_aitimeline,Seedream 4.0@2025-09-01,,,,"month-precision community-timeline lead: ByteDance released Seedream 4.0, a next-generation image model unifying high-quality text-to-image generation and natural-language image editing."
+nhlocal_lead,nhlocal_aitimeline,Sonnet 4.6@2026-02-01,,,,"month-precision community-timeline lead: Anthropic releases Claude Opus 4.6 and Sonnet 4.6, advancing autonomous coding and computer use with 1M-token context windows in beta."
 nhlocal_lead,nhlocal_aitimeline,Sora 2@2025-09-01,,,,"month-precision community-timeline lead: OpenAI released Sora 2, a flagship video and audio generation model with improved physical modeling and synchronized sound."
 nhlocal_lead,nhlocal_aitimeline,Sora@2024-02-01,,,,month-precision community-timeline lead: OpenAI announces the Sora model that produces videos up to a minute long. The model is not released to the public at this time.
 nhlocal_lead,nhlocal_aitimeline,Stable Audio 2.0@2024-04-01,,,,month-precision community-timeline lead: Stability AI releases a new update to the music creation model - Stable Audio 2.0.
@@ -390,21 +499,29 @@ nhlocal_lead,nhlocal_aitimeline,Suno v5@2025-09-01,,,,"month-precision community
 nhlocal_lead,nhlocal_aitimeline,Suno@2024-11-01,,,,"month-precision community-timeline lead: Suno upgraded its AIpowered music generator to v4, introducing new features and performance improvements."
 nhlocal_lead,nhlocal_aitimeline,Titans@2025-01-01,,,,"month-precision community-timeline lead: Google published a research paper on a new language model architecture called Titans, designed to enable models to retain both short- and long-term memory. This"
 nhlocal_lead,nhlocal_aitimeline,Udio v1.5@2024-07-01,,,,"month-precision community-timeline lead: Startup Udio has released Udio v1.5, an updated version of its music creation model"
+nhlocal_lead,nhlocal_aitimeline,V4 Pro and Flash@2026-04-01,,,,"month-precision community-timeline lead: DeepSeek releases V4 Pro and Flash, open-weight models that sharply reduce the memory and compute costs of million-token contexts."
 nhlocal_lead,nhlocal_aitimeline,Veo 2.0@2025-04-01,,,,"month-precision community-timeline lead: A series of video model updates - Veo 2.0 (Google), Runway Gen-4, Vidu Q1, and Kling 2.0 – a leap forward in high-quality video generation, with improvements in"
 nhlocal_lead,nhlocal_aitimeline,Veo 2@2024-12-01,,,,"month-precision community-timeline lead: Google introduced Veo 2, a beta version video generation model capable of producing 4K videos up to two minutes long. The model outperformed SORA in human evalu"
+nhlocal_lead,nhlocal_aitimeline,Veo 2@2025-04-01,,,,"month-precision community-timeline lead: Video-generation tools expand with Veo 2 in Gemini and Whisk, Vidu Q1, and Kling 2.0, following the March launch of Runway Gen-4. The releases improve video rea"
 nhlocal_lead,nhlocal_aitimeline,Veo 3@2025-05-01,,,,"month-precision community-timeline lead: Google releases Veo 3, a video generation model for synchronized 4K video with natural audio integration, and Imagen 4, an advanced image model with deeper cont"
 nhlocal_lead,nhlocal_aitimeline,Veo@2024-05-01,,,,"month-precision community-timeline lead: 'Google announces a large number of AI features in its products. The main ones: increasing the token limit to 2 million for Gemini 1.5 to waiting list, releasin"
 nhlocal_lead,nhlocal_aitimeline,Video Model 1.5@2024-10-01,,,,"month-precision community-timeline lead: Pika introduces Video Model 1.5 along with ""Pika Effects."""
 nhlocal_lead,nhlocal_aitimeline,Vidu Q1@2025-04-01,,,,"month-precision community-timeline lead: A series of video model updates - Veo 2.0 (Google), Runway Gen-4, Vidu Q1, and Kling 2.0 – a leap forward in high-quality video generation, with improvements in"
+nhlocal_lead,nhlocal_aitimeline,Wan 2.5 Preview@2025-09-01,,,,"month-precision community-timeline lead: Alibaba releases Wan 2.5 Preview, a video-generation model with synchronized audio, clips up to 10 seconds, and improved prompt adherence and motion."
 nhlocal_lead,nhlocal_aitimeline,Wan 2.5@2025-09-01,,,,"month-precision community-timeline lead: Wan 2.5 was released, a generative video model focused on multi-shot consistency and character animation."
+nhlocal_lead,nhlocal_aitimeline,WeatherNext 3@2026-09-01,,,,"month-precision community-timeline lead: Google launches WeatherNext 3, using live satellite observations for hourly, higher-resolution forecasts across Search, Maps, and Gemini."
+nhlocal_lead,nhlocal_aitimeline,WeatherNext@2026-08-01,,,,"month-precision community-timeline lead: Google publishes WeatherNext cyclone research in Nature, achieving three-day forecasts as accurate as previous two-day forecasts, and releases the model."
 nhlocal_lead,nhlocal_aitimeline,Z-Image-Turbo@2025-12-01,,,,"month-precision community-timeline lead: Alibaba open-sources Z-Image-Turbo, a highly efficient 6B model, and releases Qwen-Image-2512, which specializes in high-fidelity typography and complex visual "
 nhlocal_lead,nhlocal_aitimeline,advanced voice mode@2024-09-01,,,,month-precision community-timeline lead: OpenAI launches the advanced voice mode of GPT 4o for all subscribers.
 nhlocal_lead,nhlocal_aitimeline,code-davinci-002@2022-03-01,,,,month-precision community-timeline lead: OpenAI releases text-davinci-002 and code-davinci-002 with an API approach.
+nhlocal_lead,nhlocal_aitimeline,codex-1@2025-05-01,,,,"month-precision community-timeline lead: OpenAI releases a research preview of Codex, a cloud coding agent in ChatGPT powered by codex-1, a version of o3 optimized for software engineering. It writes c"
 nhlocal_lead,nhlocal_aitimeline,gemini-exp-1114@2024-11-01,,,,"month-precision community-timeline lead: Google introduced two experimental models, gemini-exp-1114 and gemini-exp-1121, currently leading the arena chatbot with enhanced performance."
 nhlocal_lead,nhlocal_aitimeline,gemini-exp-1121@2024-11-01,,,,"month-precision community-timeline lead: Google introduced two experimental models, gemini-exp-1114 and gemini-exp-1121, currently leading the arena chatbot with enhanced performance."
 nhlocal_lead,nhlocal_aitimeline,gold medal@2025-07-01,,,,month-precision community-timeline lead: An experimental OpenAI model secures a gold medal at IMO 2025 without any external tools.
+nhlocal_lead,nhlocal_aitimeline,gold-medal-level performance@2025-07-01,,,,"month-precision community-timeline lead: OpenAI reports that an experimental reasoning model reaches gold-medal-level performance on IMO 2025, scoring 35/42 without external tools or internet access."
 nhlocal_lead,nhlocal_aitimeline,gpt-audio-1.5@2026-02-01,,,,"month-precision community-timeline lead: OpenAI adds gpt-audio-1.5, an upgraded speech model for audio input and spoken responses."
 nhlocal_lead,nhlocal_aitimeline,llama 3.1 model@2024-07-01,,,,"month-precision community-timeline lead: Meta releases as open source the llama 3.1 model in sizes 8B, 70B and 405B. The large model features the same capabilities as the best closed source models"
+nhlocal_lead,nhlocal_aitimeline,mini and nano@2026-03-01,,,,"month-precision community-timeline lead: OpenAI releases GPT-5.4, unifying reasoning, coding, and native computer use with 1M-token context; smaller mini and nano variants follow."
 nhlocal_lead,nhlocal_aitimeline,o1 mini@2024-09-01,,,,"month-precision community-timeline lead: 'OPENAI has released two nextgeneration AI models to its subscribers: o1 preview and o1 mini. These models show a significant improvement in performance, partic"
 nhlocal_lead,nhlocal_aitimeline,o3 full@2025-04-01,,,,"month-precision community-timeline lead: OpenAI introduces o3 full and o4 mini, highly advanced models for reasoning, math, and coding."
 nhlocal_lead,nhlocal_aitimeline,text-davinci-002@2022-03-01,,,,month-precision community-timeline lead: OpenAI releases text-davinci-002 and code-davinci-002 with an API approach.
