@@ -1,8 +1,8 @@
 {
   "api.json": {
-    "bytes": 5625968,
-    "fetched_at": "2026-10-14T18:04:30+00:00",
-    "sha256": "b2d6749b97a134513327e01839f2d8bb7d0cb3a0bf56cc240bf8a9f3b3e3ad7e",
+    "bytes": 5623041,
+    "fetched_at": "2026-10-14T18:41:10+00:00",
+    "sha256": "9aad036e3c3fc28f0173b0e268034b92f7caf5465c4c5b6543b7deac185f0217",
     "url": "https://models.dev/api.json"
   }
 }

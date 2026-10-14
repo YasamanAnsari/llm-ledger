@@ -1333,12 +1333,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-03-20,weights_released,inferred,tiny-random-stablelm-2,tiny-random-stablelm-2,stability,random-stablelm-2,mini,llm,open_weights,
 2024-03-17,weights_released,verified,grok-1,grok-1,xai,grok-1,,llm,open_weights,osi_approved
 2024-03-15,weights_released,inferred,yi-9b-200k,Yi-9B-200K,01ai,Yi,,llm,open_weights,osi_approved
-2024-03-14,weights_released,inferred,codellama-34b-instruct,CodeLlama-34b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
 2024-03-13,api_ga,verified,claude-3-haiku,Claude 3 Haiku,anthropic,Claude 3,mini,vlm,api_only,proprietary
-2024-03-13,weights_released,inferred,codellama-13b-instruct,CodeLlama-13b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
-2024-03-13,weights_released,inferred,codellama-7b,CodeLlama-7b-hf,meta,CodeLlama,,llm,open_weights,open_weights_restricted
-2024-03-13,weights_released,inferred,codellama-7b-instruct,CodeLlama-7b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
-2024-03-13,weights_released,inferred,codellama-7b-python,CodeLlama-7b-Python-hf,meta,CodeLlama-Python,,llm,open_weights,open_weights_restricted
 2024-03-11,weights_released,inferred,c4ai-command-r-v01,c4ai-command-r-v01,cohere,c4ai-command-r-v01,,llm,open_weights,open_weights_restricted
 2024-03-11,weights_released,inferred,hermes-2-pro-mistral-7b,Hermes-2-Pro-Mistral-7B,nous-research,Hermes-2-Mistral,pro,llm,open_weights,osi_approved
 2024-03-09,weights_released,inferred,tinyllama-v1-1,TinyLlama_v1.1,tinyllama,TinyLlama_v1.1,,llm,open_weights,osi_approved
@@ -1489,6 +1484,12 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-08-29,weights_released,inferred,baichuan2-13b-chat,Baichuan2-13B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-29,weights_released,inferred,baichuan2-7b-chat,Baichuan2-7B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-28,api_ga,inferred,gpt-3-5-turbo-16k,gpt-3.5-turbo-16k,openai,GPT-3.5,,llm,api_only,proprietary
+2023-08-24,weights_released,inferred,codellama-13b,CodeLlama-13b-hf,meta,CodeLlama,,llm,open_weights,open_weights_restricted
+2023-08-24,weights_released,inferred,codellama-13b-instruct,CodeLlama-13b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
+2023-08-24,weights_released,inferred,codellama-34b-instruct,CodeLlama-34b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
+2023-08-24,weights_released,inferred,codellama-7b,CodeLlama-7b-hf,meta,CodeLlama,,llm,open_weights,open_weights_restricted
+2023-08-24,weights_released,inferred,codellama-7b-instruct,CodeLlama-7b-Instruct-hf,meta,CodeLlama,instruct,llm,open_weights,open_weights_restricted
+2023-08-24,weights_released,inferred,codellama-7b-python,CodeLlama-7b-Python-hf,meta,CodeLlama-Python,,llm,open_weights,open_weights_restricted
 2023-08-23,weights_released,inferred,palmyra-20b-chat,palmyra-20b-chat,writer,palmyra,chat,llm,open_weights,osi_approved
 2023-08-09,weights_released,verified,japanese-stablelm-base-alpha-7b,japanese-stablelm-base-alpha-7b,stability,japanese-stablelm-alpha,base,llm,open_weights,osi_approved
 2023-08-07,weights_released,verified,stablecode-completion-alpha-3b-4k,stablecode-completion-alpha-3b-4k,stability,stablecode-completion-alpha,,llm,open_weights,osi_approved

@@ -78,6 +78,7 @@ apertus-v1-5-70b-weights_released-1,https://huggingface.co/swiss-ai/Apertus-v1.5
 apertus-v1-5-70b-weights_released-1,https://web.archive.org/web/20260724/https://huggingface.co/swiss-ai/Apertus-v1.5-70B,wayback,2026-07-24,day,first public capture,true,false,
 apertus-v1-5-8b-base-weights_released-1,https://huggingface.co/swiss-ai/Apertus-v1.5-8B-base,hf_hub,2026-09-23,day,hub repo created,true,false,
 apertus-v1-5-8b-dpo-weights_released-1,https://huggingface.co/swiss-ai/Apertus-v1.5-8B-DPO,hf_hub,2026-08-22,day,hub repo created,true,false,
+apertus-v1-5-8b-dpo-weights_released-1,https://web.archive.org/web/20261009/https://huggingface.co/swiss-ai/Apertus-v1.5-8B-DPO,wayback,2026-10-09,day,first public capture,true,false,
 apertus-v1-5-8b-rlvr-weights_released-1,https://huggingface.co/swiss-ai/Apertus-v1.5-8B-RLVR,hf_hub,2026-08-22,day,hub repo created,true,false,
 apertus-v1-5-8b-rlvr-weights_released-1,https://web.archive.org/web/20261011/https://huggingface.co/swiss-ai/Apertus-v1.5-8B-RLVR,wayback,2026-10-11,day,first public capture,true,false,
 apertus-v1-5-8b-sft-weights_released-1,https://huggingface.co/swiss-ai/Apertus-v1.5-8B-SFT,hf_hub,2026-08-22,day,hub repo created,true,false,
@@ -407,15 +408,21 @@ codegen2-16b-p-weights_released-1,https://huggingface.co/Salesforce/codegen2-16B
 codegen2-16b-p-weights_released-1,https://web.archive.org/web/20240918/https://huggingface.co/Salesforce/codegen2-16B_P,wayback,2024-09-18,day,first public capture,true,false,
 codegen2-1b-p-weights_released-1,https://huggingface.co/Salesforce/codegen2-1B_P,hf_hub,2023-04-25,day,hub repo created,true,false,
 codegen2-1b-p-weights_released-1,https://web.archive.org/web/20240402/https://huggingface.co/Salesforce/codegen2-1B_P,wayback,2024-04-02,day,first public capture,true,false,
-codellama-13b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-13b-Instruct-hf,hf_hub,2024-03-13,day,hub repo created,true,false,
+codellama-13b-instruct-weights_released-1,https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-13b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-13b-Instruct-hf,hf_hub,2024-03-13,day,hub repo created,true,false,2026-10-14
 codellama-13b-instruct-weights_released-1,https://web.archive.org/web/20240527/https://huggingface.co/meta-llama/CodeLlama-13b-Instruct-hf,wayback,2024-05-27,day,first public capture,true,false,
-codellama-34b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-34b-Instruct-hf,hf_hub,2024-03-14,day,hub repo created,true,false,
+codellama-13b-weights_released-1,https://huggingface.co/codellama/CodeLlama-13b-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-34b-instruct-weights_released-1,https://huggingface.co/codellama/CodeLlama-34b-Instruct-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-34b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-34b-Instruct-hf,hf_hub,2024-03-14,day,hub repo created,true,false,2026-10-14
 codellama-34b-instruct-weights_released-1,https://web.archive.org/web/20240531/https://huggingface.co/meta-llama/CodeLlama-34b-Instruct-hf,wayback,2024-05-31,day,first public capture,true,false,
-codellama-7b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf,hf_hub,2024-03-13,day,hub repo created,true,false,
+codellama-7b-instruct-weights_released-1,https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-7b-instruct-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf,hf_hub,2024-03-13,day,hub repo created,true,false,2026-10-14
 codellama-7b-instruct-weights_released-1,https://web.archive.org/web/20240530/https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf,wayback,2024-05-30,day,first public capture,true,false,
-codellama-7b-python-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-Python-hf,hf_hub,2024-03-13,day,hub repo created,true,false,
+codellama-7b-python-weights_released-1,https://huggingface.co/codellama/CodeLlama-7b-Python-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-7b-python-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-Python-hf,hf_hub,2024-03-13,day,hub repo created,true,false,2026-10-14
 codellama-7b-python-weights_released-1,https://web.archive.org/web/20240529/https://huggingface.co/meta-llama/CodeLlama-7b-Python-hf,wayback,2024-05-29,day,first public capture,true,false,
-codellama-7b-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-hf,hf_hub,2024-03-13,day,hub repo created,true,false,
+codellama-7b-weights_released-1,https://huggingface.co/codellama/CodeLlama-7b-hf,hf_hub,2023-08-24,day,hub repo created,true,false,
+codellama-7b-weights_released-1,https://huggingface.co/meta-llama/CodeLlama-7b-hf,hf_hub,2024-03-13,day,hub repo created,true,false,2026-10-14
 codellama-7b-weights_released-1,https://web.archive.org/web/20240530/https://huggingface.co/meta-llama/CodeLlama-7b-hf,wayback,2024-05-30,day,first public capture,true,false,
 codestral-2508-api_ga-1,https://models.dev/api.json,api_metadata,2025-07-30,day,models.dev (first_party),false,false,
 codestral-2508-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-08-01,day,openrouter,false,true,

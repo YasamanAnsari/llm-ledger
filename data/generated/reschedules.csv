@@ -6,6 +6,11 @@ claude-opus-4-5-retired-2,claude-opus-4-5,retired,azure,litellm,https://raw.gith
 claude-sonnet-4-5-retired-1,claude-sonnet-4-5,retired,,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-29,2026-11-30,62,2026-10-03
 claude-sonnet-4-5-retired-2,claude-sonnet-4-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-19,2026-11-30,42,2026-10-03
 claude-sonnet-4-5-retired-2,claude-sonnet-4-5,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-19,2026-11-30,42,2026-10-03
+codellama-13b-instruct-weights_released-1,codellama-13b-instruct,weights_released,,hub repo created,https://huggingface.co/meta-llama/CodeLlama-13b-Instruct-hf,false,2024-03-13,2023-08-24,-202,2026-10-14
+codellama-34b-instruct-weights_released-1,codellama-34b-instruct,weights_released,,hub repo created,https://huggingface.co/meta-llama/CodeLlama-34b-Instruct-hf,false,2024-03-14,2023-08-24,-203,2026-10-14
+codellama-7b-instruct-weights_released-1,codellama-7b-instruct,weights_released,,hub repo created,https://huggingface.co/meta-llama/CodeLlama-7b-Instruct-hf,false,2024-03-13,2023-08-24,-202,2026-10-14
+codellama-7b-python-weights_released-1,codellama-7b-python,weights_released,,hub repo created,https://huggingface.co/meta-llama/CodeLlama-7b-Python-hf,false,2024-03-13,2023-08-24,-202,2026-10-14
+codellama-7b-weights_released-1,codellama-7b,weights_released,,hub repo created,https://huggingface.co/meta-llama/CodeLlama-7b-hf,false,2024-03-13,2023-08-24,-202,2026-10-14
 deepseek-ocr-weights_released-1,deepseek-ocr,weights_released,,models.dev,https://models.dev/api.json,false,2025-10-24,2025-10-20,-4,2026-10-10
 deepseek-v3-1-retired-1,deepseek-v3-1,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-07-01,2026-07-13,-353,2026-10-14
 deepseek-v4-flash-retired-2,deepseek-v4-flash,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-29,2026-10-22,23,2026-10-10
