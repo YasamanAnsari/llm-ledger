@@ -159,6 +159,7 @@ hf_recreated_repo,huggingface,EleutherAI/pythia-31m,ledger,pythia-31m,,first arc
 hf_recreated_repo,huggingface,EleutherAI/pythia-410m-deduped,ledger,pythia-410m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first archive capture 2023-02-01 predates repo creation 2023-02-14; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b-deduped,ledger,pythia-6-9b-deduped,,first archive capture 2023-02-01 predates repo creation 2023-02-25; weights date needs a primary source
+hf_recreated_repo,huggingface,EleutherAI/pythia-70m-deduped,ledger,pythia-70m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124-7b-instruct,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-sft,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
@@ -171,19 +172,16 @@ hf_unmapped_namespace,huggingface,RadixArk,,,,1 in-scope repos; add to pull_hf.N
 hf_unmapped_namespace,huggingface,RedHatAI,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,alpindale,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,hmellor,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,huggyllama,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,7 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,peft-internal-testing,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,state-spaces,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,5 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 long_announce_gap,ledger,amazon-nova-lite,,,364,api_ga 2025-12-02 is 364d after the announcement and unverified: confirm the launch date or reject the later listing

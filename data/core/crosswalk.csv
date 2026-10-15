@@ -1551,6 +1551,7 @@ ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash
 ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
 ling-3-1-flash,models_dev,nano-gpt/inclusionai/ling-3.1-flash
 ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
@@ -1704,6 +1705,7 @@ loopedlm-p2-huginn-m-parcae,huggingface,IFM/LoopedLM-P2-huginn-m-parcae
 loopedlm-p2-huginn-s-fixed-pln5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-pln5
 loopedlm-p2-huginn-s-fixed-r5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-r5
 loopedlm-p2-huginn-s-huginn-linear,huggingface,IFM/LoopedLM-P2-huginn-s-huginn-linear
+loopedlm-p2-huginn-s-learned-entropy0,huggingface,IFM/LoopedLM-P2-huginn-s-learned-entropy0
 loopedlm-p2-huginn-s-orthoinj,huggingface,IFM/LoopedLM-P2-huginn-s-orthoinj
 loopedlm-p2-huginn-s-parcae,huggingface,IFM/LoopedLM-P2-huginn-s-parcae
 mage-vl,huggingface,microsoft/Mage-VL
@@ -1785,6 +1787,7 @@ minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5
 minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5-int4
 minicpm-v-4-6,huggingface,openbmb/MiniCPM-V-4.6
 minicpm-v-4-6-thinking,huggingface,openbmb/MiniCPM-V-4.6-Thinking
+minicpm-v-4-7-1b,huggingface,openbmb/MiniCPM-V-4.7-1B
 minicpm-v-4-7-35b-a3b,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B
 minicpm3-4b,huggingface,openbmb/MiniCPM3-4B
 minicpm4-0-5b,huggingface,openbmb/MiniCPM4-0.5B
@@ -2146,6 +2149,7 @@ olmo-3-7b-rl-zero-mix,huggingface,allenai/Olmo-3-7B-RL-Zero-Mix
 olmo-3-7b-think,huggingface,allenai/Olmo-3-7B-Think
 olmo-3-7b-think-dpo,huggingface,allenai/Olmo-3-7B-Think-DPO
 olmo-3-7b-think-sft,huggingface,allenai/Olmo-3-7B-Think-SFT
+olmo-7b,huggingface,allenai/OLMo-7B
 olmo-7b,huggingface,allenai/OLMo-7B-hf
 olmo-7b-0724,huggingface,allenai/OLMo-7B-0724-hf
 olmo-hybrid-7b,huggingface,allenai/Olmo-Hybrid-7B

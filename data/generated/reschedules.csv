@@ -1,4 +1,5 @@
 event_id,model_id,event_type,platform,source,source_url,first_party,from_date,to_date,days_moved,observed_on
+claude-3-haiku-retired-2,claude-3-haiku,retired,bedrock,bedrock_lifecycle,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html,true,2026-09-10,2026-10-17,37,2026-10-15
 claude-haiku-4-5-retired-2,claude-haiku-4-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-19,2026-11-15,27,2026-10-03
 claude-haiku-4-5-retired-2,claude-haiku-4-5,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-19,2026-11-15,27,2026-10-03
 claude-opus-4-5-retired-2,claude-opus-4-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-19,2026-11-24,36,2026-10-03
@@ -32,6 +33,7 @@ o3-pro-retired-2,o3-pro,retired,azure,azure_lifecycle,https://learn.microsoft.co
 o3-pro-retired-2,o3-pro,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-12-17,2026-11-19,-28,2026-09-13
 o4-mini-retired-2,o4-mini,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-16,2026-11-19,34,2026-09-12
 o4-mini-retired-2,o4-mini,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-16,2026-11-19,34,2026-09-13
+olmo-7b-weights_released-1,olmo-7b,weights_released,,hub repo created,https://huggingface.co/allenai/OLMo-7B-hf,false,2024-04-12,2024-01-09,-94,2026-10-15
 openai-o1-retired-2,openai-o1,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-21,2026-11-19,29,2026-09-12
 openai-o1-retired-2,openai-o1,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-21,2026-11-19,29,2026-09-13
 openai-o3-retired-2,openai-o3,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-21,2026-11-19,29,2026-09-12

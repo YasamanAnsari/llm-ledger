@@ -9,24 +9,24 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1718; events: 2641
-- Models: curated 55, corroborated 729, single-source 934
-- Event confidence: verified 1157, inferred 1478, disputed 6
+- Models: 1720; events: 2644
+- Models: curated 55, corroborated 739, single-source 926
+- Event confidence: verified 1170, inferred 1468, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 87 | 189 | 2 | 71 | 14 | 57% |
+| MBZUAI | 69 | 69 | 0 | 5 | 64 | 7% |
 | OpenAI | 69 | 285 | 19 | 45 | 5 | 72% |
-| MBZUAI | 68 | 68 | 0 | 0 | 68 | 0% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | EleutherAI | 53 | 53 | 0 | 1 | 52 | 2% |
-| Meta | 53 | 104 | 4 | 22 | 27 | 33% |
+| Meta | 53 | 104 | 4 | 23 | 26 | 34% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Mistral | 51 | 95 | 3 | 28 | 20 | 44% |
-| Ant Group | 49 | 60 | 0 | 35 | 14 | 62% |
+| Ant Group | 49 | 61 | 0 | 35 | 14 | 62% |
 | Google | 49 | 142 | 7 | 26 | 16 | 45% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
@@ -34,14 +34,14 @@ as settled.
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 37 | 81 | 3 | 27 | 7 | 62% |
-| OpenBMB | 33 | 33 | 0 | 15 | 18 | 45% |
+| OpenBMB | 34 | 34 | 0 | 15 | 19 | 44% |
 | NVIDIA | 32 | 48 | 0 | 12 | 20 | 25% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 29 | 39 | 1 | 18 | 10 | 56% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
-| Anthropic | 25 | 125 | 8 | 14 | 3 | 68% |
+| Anthropic | 25 | 125 | 8 | 15 | 2 | 70% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Salesforce | 25 | 25 | 0 | 4 | 21 | 16% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
@@ -76,11 +76,11 @@ as settled.
 | ServiceNow | 9 | 9 | 0 | 1 | 8 | 11% |
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
-| Motif | 8 | 9 | 0 | 1 | 7 | 11% |
+| Motif | 8 | 9 | 0 | 3 | 5 | 33% |
 | IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
-| Perceptron | 6 | 8 | 0 | 2 | 4 | 25% |
+| Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
@@ -94,9 +94,9 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1470 | 484 | 985 | 1 |
+| weights_released | 1473 | 494 | 978 | 1 |
 | platform_availability | 326 | 321 | 3 | 2 |
-| retired | 282 | 145 | 137 | 0 |
+| retired | 282 | 148 | 134 | 0 |
 | api_ga | 238 | 60 | 177 | 1 |
 | announced | 217 | 49 | 167 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
@@ -119,6 +119,6 @@ Declined in the 7 days to 2026-10-15, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 61 |
-| no_dated_event | 49 |
+| community_lead | 59 |
+| no_dated_event | 47 |
 | launch_event_required | 1 |
