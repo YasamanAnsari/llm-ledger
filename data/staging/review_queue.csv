@@ -1,28 +1,4 @@
 kind,left_source,left_key,right_source,right_key,score,note
-catalog_unmapped_vendor,models_dev,intfloat,ledger,,,e.g. multilingual-e5-large-instruct; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,models_dev,llm360,ledger,,,e.g. k2-think; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,models_dev,motif-technologies,ledger,,,e.g. motif-3; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,models_dev,trustedrouter,ledger,,,e.g. fast; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,models_dev,voyage,ledger,,,e.g. voyage-3-5; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,aion-labs,ledger,,,e.g. aion-2-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,anthracite-org,ledger,,,e.g. magnum-v4-72b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,cognitivecomputations,ledger,,,e.g. dolphin-mistral-24b-venice-edition; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,dots-studio,ledger,,,e.g. dots-3-note-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,fireworks,ledger,,,e.g. ember-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,gryphe,ledger,,,e.g. mythomax-l2-13b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,inference-net,ledger,,,e.g. schematron-v2-small; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,mancer,ledger,,,e.g. weaver; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,morph,ledger,,,e.g. morph-v3-fast; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,nex-agi,ledger,,,e.g. nex-n2-5-mini; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,openrouter,ledger,,,e.g. auto; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,perceptron,ledger,,,e.g. perceptron-mk1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,prism-ml,ledger,,,e.g. ternary-bonsai-2-27b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,relace,ledger,,,e.g. relace-apply-3; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,sao10k,ledger,,,e.g. l3-1-euryale-70b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,scaledown,ledger,,,e.g. extract; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,thedrummer,ledger,,,e.g. cydonia-24b-v4-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,unbiased,ledger,,,e.g. pareto-26-10-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,undi95,ledger,,,e.g. remm-slerp-l2-13b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,cohere-command,ledger_cluster,cohere-command-a,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,command-a+,ledger_cluster,command-a,94.7,92-97 band: confirm or reject before crosswalking
@@ -98,6 +74,7 @@ hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-8B,ledger,meta,,re-hosted
 hf_mirror_repo,huggingface,NousResearch/Meta-Llama-3.1-8B-Instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,PrimeIntellect/DeepSeek-R1-Distill-Qwen-1.5B,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,PrimeIntellect/DeepSeek-R1-Distill-Qwen-7B,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,PrimeIntellect/DeepSeek-V4.1-Flash-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,PrimeIntellect/GLM-0.5B,ledger,zhipu,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3-70B-Instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,PrimeIntellect/Meta-Llama-3-8B,ledger,meta,,re-hosted copy of another lab's weights; not a release

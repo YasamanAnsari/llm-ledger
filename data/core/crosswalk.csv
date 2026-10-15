@@ -26,6 +26,7 @@ amazon-nova-micro,epoch,Amazon Nova Micro
 amazon-nova-micro,models_dev,sap-ai-core/amazon--nova-micro
 amazon-nova-pro,epoch,Amazon Nova Pro
 amazon-nova-pro,models_dev,sap-ai-core/amazon--nova-pro
+amber,huggingface,IFM/Amber
 apertus-70b,epoch,Apertus 70B
 apertus-70b,models_dev,cortecs/apertus-70b
 apertus-70b-2509,huggingface,swiss-ai/Apertus-70B-2509
@@ -315,6 +316,8 @@ cosmos-reason2-8b,huggingface,nvidia/Cosmos-Reason2-8B
 cosmos3-nano,huggingface,nvidia/Cosmos3-Nano
 cosmos3-super,huggingface,nvidia/Cosmos3-Super
 cpm-ant-10b,huggingface,openbmb/cpm-ant-10b
+crystal,huggingface,IFM/Crystal
+crystalchat,huggingface,IFM/CrystalChat
 ctm-imagenet,huggingface,SakanaAI/ctm-imagenet
 ctm-maze-large,huggingface,SakanaAI/ctm-maze-large
 cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
@@ -447,6 +450,19 @@ distill-bloom-1b3-10x,huggingface,bigscience/distill-bloom-1b3-10x
 dolphin,huggingface,ByteDance/Dolphin
 dolphin-1-5,huggingface,ByteDance/Dolphin-1.5
 dolphin-v2,huggingface,ByteDance/Dolphin-v2
+dots-3-note-preview,models_dev,kilo/dots-studio/dots-3-note-preview:free
+dots-3-note-preview,openrouter,dots-studio/dots-3-note-preview:free
+dots-llm1-base,huggingface,dots-studio/dots.llm1.base
+dots-llm1-base,huggingface,rednote-hilab/dots.llm1.base
+dots-llm1-inst,huggingface,dots-studio/dots.llm1.inst
+dots-llm1-inst-fp8-dynamic,huggingface,dots-studio/dots.llm1.inst-FP8-dynamic
+dots-mocr,huggingface,dots-studio/dots.mocr
+dots-mocr-svg,huggingface,dots-studio/dots.mocr-svg
+dots-ocr,huggingface,dots-studio/dots.ocr
+dots-ocr-base,huggingface,dots-studio/dots.ocr.base
+dots-vlm1-inst,huggingface,dots-studio/dots.vlm1.inst
+dots3-note-prev,huggingface,dots-studio/dots3-note-prev
+dots3-note-prev,huggingface,dots-studio/dots3-note-prev-fp8
 doubao-seed-1-8,epoch,Doubao Seed 1.8
 doubao-seed-1-8,models_dev,zenmux/volcengine/doubao-seed-1.8
 doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
@@ -609,6 +625,7 @@ gemini-2-5-pro-preview-05-06,models_dev,nano-gpt/gemini-2.5-pro-preview-05-06
 gemini-2-5-pro-preview-05-06,openrouter,google/gemini-2.5-pro-preview-05-06
 gemini-3-1-flash-lite,epoch,Gemini 3.1 Flash-Lite
 gemini-3-1-flash-lite,google_api,gemini-3.1-flash-lite
+gemini-3-1-flash-lite,models_dev,neon/gemini-3-1-flash-lite
 gemini-3-1-flash-lite,models_dev,poe/google/gemini-3.1-flash-lite
 gemini-3-1-flash-lite,openrouter,google/gemini-3.1-flash-lite
 gemini-3-1-flash-lite-preview,google_api,gemini-3.1-flash-lite-preview
@@ -648,6 +665,7 @@ gemini-3-8-flash,models_dev,crossmodel/gemini/gemini-3.8-flash
 gemini-3-8-flash,models_dev,google/gemini-3.8-flash
 gemini-3-8-flash,openrouter,google/gemini-3.8-flash
 gemini-3-flash,epoch,Gemini 3 Flash
+gemini-3-flash,models_dev,neon/gemini-3-flash
 gemini-3-flash,models_dev,poe/google/gemini-3-flash
 gemini-3-flash-preview,google_api,gemini-3-flash-preview
 gemini-3-flash-preview,models_dev,abacus/gemini-3-flash-preview
@@ -1320,6 +1338,10 @@ internlm2-math-plus-1-8b,huggingface,internlm/internlm2-math-plus-1_8b
 internlm2-math-plus-20b,huggingface,internlm/internlm2-math-plus-20b
 internlm2-math-plus-7b,huggingface,internlm/internlm2-math-plus-7b
 internlm3-8b-instruct,huggingface,internlm/internlm3-8b-instruct
+isaac-0-1,huggingface,PerceptronAI/Isaac-0.1
+isaac-0-1-base,huggingface,PerceptronAI/Isaac-0.1-Base
+isaac-0-2-1b,huggingface,PerceptronAI/Isaac-0.2-1B
+isaac-0-2-2b-preview,huggingface,PerceptronAI/Isaac-0.2-2B-Preview
 jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
 januscoder-14b,huggingface,internlm/JanusCoder-14B
@@ -1340,7 +1362,21 @@ k-exaone-2-0-750b-a37b,huggingface,LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-FP8
 k-exaone-2-0-750b-a37b-dspark,huggingface,LGAI-EXAONE/K-EXAONE-2.0-750B-A37B-DSpark
 k-exaone-236b-a23b,huggingface,LGAI-EXAONE/K-EXAONE-236B-A23B
 k-exaone-236b-a23b,huggingface,LGAI-EXAONE/K-EXAONE-236B-A23B-FP8
+k2-horizon-0-9b,huggingface,IFM/K2-Horizon-0.9B
+k2-horizon-3-7b,huggingface,IFM/K2-Horizon-3.7B
+k2-horizon-32b,huggingface,IFM/K2-Horizon-32B
+k2-horizon-32b,huggingface,IFM/K2-Horizon-32B-FP8
+k2-horizon-375b-a23b,huggingface,IFM/K2-Horizon-375B-A23B
+k2-horizon-375b-a23b,huggingface,IFM/K2-Horizon-375B-A23B-FP8
+k2-horizon-7b,huggingface,IFM/K2-Horizon-7B
+k2-horizon-7b,huggingface,IFM/K2-Horizon-7B-FP8
+k2-horizon-mova-36b-a4b,huggingface,IFM/K2-Horizon-MoVA-36B-A4B
+k2-horizon-mova-36b-a4b,huggingface,IFM/K2-Horizon-MoVA-36B-A4B-FP8
 k2-merged-3-5t,huggingface,NousResearch/k2-merged-3.5T-bf16
+k2-think,epoch,K2 Think
+k2-think,models_dev,nano-gpt/LLM360/K2-Think
+k2-think-v2,huggingface,IFM/K2-Think-V2
+k2-type-0-9b,huggingface,IFM/K2-Type-0.9B
 kanana-1-5-15-7b-a3b-base,huggingface,kakaocorp/kanana-1.5-15.7b-a3b-base
 kanana-1-5-15-7b-a3b-instruct,huggingface,kakaocorp/kanana-1.5-15.7b-a3b-instruct
 kanana-1-5-2-1b-base,huggingface,kakaocorp/kanana-1.5-2.1b-base
@@ -1655,6 +1691,21 @@ longcat-flash-thinking-2601,huggingface,meituan-longcat/LongCat-Flash-Thinking-2
 longcat-flash-thinking-zigzag,huggingface,meituan-longcat/LongCat-Flash-Thinking-ZigZag
 longcat-heavymode-summary,huggingface,meituan-longcat/LongCat-HeavyMode-Summary
 longcite-glm4-9b,huggingface,zai-org/LongCite-glm4-9b
+loopedlm-p2-d4-m,huggingface,IFM/LoopedLM-P2-d4-m
+loopedlm-p2-d4-s,huggingface,IFM/LoopedLM-P2-d4-s
+loopedlm-p2-huginn-l-fixed-r5,huggingface,IFM/LoopedLM-P2-huginn-l-fixed-r5
+loopedlm-p2-huginn-l-learned-entropy0,huggingface,IFM/LoopedLM-P2-huginn-l-learned-entropy0
+loopedlm-p2-huginn-m-fixed-pln5,huggingface,IFM/LoopedLM-P2-huginn-m-fixed-pln5
+loopedlm-p2-huginn-m-fixed-r5,huggingface,IFM/LoopedLM-P2-huginn-m-fixed-r5
+loopedlm-p2-huginn-m-learned-entropy0,huggingface,IFM/LoopedLM-P2-huginn-m-learned-entropy0
+loopedlm-p2-huginn-m-learned-entropy0p01,huggingface,IFM/LoopedLM-P2-huginn-m-learned-entropy0p01
+loopedlm-p2-huginn-m-orthoinj,huggingface,IFM/LoopedLM-P2-huginn-m-orthoinj
+loopedlm-p2-huginn-m-parcae,huggingface,IFM/LoopedLM-P2-huginn-m-parcae
+loopedlm-p2-huginn-s-fixed-pln5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-pln5
+loopedlm-p2-huginn-s-fixed-r5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-r5
+loopedlm-p2-huginn-s-huginn-linear,huggingface,IFM/LoopedLM-P2-huginn-s-huginn-linear
+loopedlm-p2-huginn-s-orthoinj,huggingface,IFM/LoopedLM-P2-huginn-s-orthoinj
+loopedlm-p2-huginn-s-parcae,huggingface,IFM/LoopedLM-P2-huginn-s-parcae
 mage-vl,huggingface,microsoft/Mage-VL
 magistral-small-2506,huggingface,mistralai/Magistral-Small-2506
 magistral-small-2509,huggingface,mistralai/Magistral-Small-2509
@@ -1925,6 +1976,16 @@ molmo2-o-7b,huggingface,allenai/Molmo2-O-7B
 molmopoint-8b,huggingface,allenai/MolmoPoint-8B
 moonlight-16b-a3b,huggingface,moonshotai/Moonlight-16B-A3B
 moonlight-16b-a3b-instruct,huggingface,moonshotai/Moonlight-16B-A3B-Instruct
+motif-2-12-7b-base,huggingface,Motif-Technologies/Motif-2-12.7B-Base
+motif-2-12-7b-instruct,huggingface,Motif-Technologies/Motif-2-12.7B-Instruct
+motif-2-12-7b-reasoning,huggingface,Motif-Technologies/Motif-2-12.7B-Reasoning
+motif-2-6b,huggingface,Motif-Technologies/Motif-2.6B
+motif-2-6b-v1-1-lc,huggingface,Motif-Technologies/Motif-2.6b-v1.1-LC
+motif-3,epoch,Motif-3
+motif-3,huggingface,Motif-Technologies/Motif-3
+motif-3,models_dev,aiand/motif-technologies/motif-3
+motif-3-base,huggingface,Motif-Technologies/Motif-3-Base
+motif-3-beta,huggingface,Motif-Technologies/Motif-3-Beta
 mt0-xl,huggingface,bigscience/mt0-xl
 mt0-xxl,huggingface,bigscience/mt0-xxl
 mt0-xxl-mt,huggingface,bigscience/mt0-xxl-mt
@@ -1976,7 +2037,9 @@ nemotron-3-nano-30b-a3b,openrouter,nvidia/nemotron-3-nano-30b-a3b
 nemotron-3-nano-omni-30b-a3b-reasoning,models_dev,nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
 nemotron-3-nano-omni-30b-a3b-reasoning,openrouter,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
 nemotron-3-super,epoch,Nemotron 3 Super
+nemotron-3-super,models_dev,boundless/nemotron3-super
 nemotron-3-super,models_dev,ollama-cloud/nemotron-3-super
+nemotron-3-super-120b-a12b,models_dev,nano-gpt/nvidia/nemotron-3-super-120b-a12b
 nemotron-3-super-120b-a12b,models_dev,nvidia/nvidia/nemotron-3-super-120b-a12b
 nemotron-3-super-120b-a12b,openrouter,nvidia/nemotron-3-super-120b-a12b
 nemotron-3-ultra,epoch,Nemotron 3 Ultra
@@ -2154,6 +2217,10 @@ palmyra-x5,models_dev,merge-gateway/writer/palmyra-x5
 palmyra-x5,openrouter,writer/palmyra-x5
 palo-7b,huggingface,MBZUAI/PALO-7B
 paralleltubedecoding-qwen3-vl-4b,huggingface,MBZUAI/ParallelTubeDecoding-Qwen3-VL-4B
+perceptron-mk1,models_dev,kilo/perceptron/perceptron-mk1
+perceptron-mk1,openrouter,perceptron/perceptron-mk1
+perceptron-mk1-5,models_dev,kilo/perceptron/perceptron-mk1.5
+perceptron-mk1-5,openrouter,perceptron/perceptron-mk1.5
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-hf
 pharia-1-llm-7b-control-aligned,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-aligned

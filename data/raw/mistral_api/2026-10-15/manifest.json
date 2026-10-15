@@ -1,0 +1,8 @@
+{
+  "models.json": {
+    "bytes": 33784,
+    "fetched_at": "2026-10-15T04:34:22+00:00",
+    "sha256": "b156cdd9cf124f1b25f103e849b629e22d61557b76588f90302fb5b1b0b19eee",
+    "url": "https://api.mistral.ai/v1/models"
+  }
+}

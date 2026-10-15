@@ -63,6 +63,7 @@ deepseek-v4-pro,,toggleable,low|high|max,,,false,1048576,,text,text,,true,,true,
 devstral-2512,false,none,,,,,262144,262144,text,text,2025-12,true,,,,,,2026-09-01,https://models.dev/api.json
 devstral-small-2,false,none,,,,,256000,256000,text|image,text,2024-10,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
 diffusiongemma-26b-a4b-it,true,,,,,,262144,131072,text,text,,true,,,0.5,0.5,0.5,2026-09-01,https://models.dev/api.json
+dots-3-note-preview,true,,,,,,512000,460800,text|image,text,,true,,,0,0,,2026-10-15,https://models.dev/api.json
 doubao-seed-1-8,true,,,,,,256000,64000,text|image|video,text,2025-01-01,true,,,0.11,0.28,0.02,2026-09-01,https://models.dev/api.json
 doubao-seed-2-1-pro,false,none,,,,,256000,128000,text,text,,false,,,1,5,0.5,2026-09-01,https://models.dev/api.json
 doubao-seed-2-1-turbo,false,none,,,,,256000,128000,text,text,,false,,,0.5,2.5,0.25,2026-09-01,https://models.dev/api.json
@@ -213,6 +214,7 @@ hy3-preview,true,,,,,,256000,128000,text,text,,true,,,0.17,0.566661,0.051,2026-0
 hy4-preview,true,,,,,,1048576,65536,text,text,,true,,,0.96,2.88,0.048,2026-09-01,https://models.dev/api.json
 inkling,true,,,,,,65536,65536,text|image,text,,true,,,1.87,4.68,0.374,2026-10-03,https://models.dev/api.json
 inkling-small,true,,,,,,262144,262144,text,text,,true,,,0.5,1.2,0.1,2026-10-03,https://models.dev/api.json
+k2-think,false,none,,,,,128000,32768,text,text,,false,,,0.17,0.68,0.085,2026-10-15,https://models.dev/api.json
 kat-coder-pro-v2-5,false,none,,,,,262144,235929,text,text,,true,,,0.74,2.96,0.15,2026-10-03,https://models.dev/api.json
 kimi-k2,,none,,,,,131072,,text,text,,true,,,0.57,2.30,,2026-08-25,https://huggingface.co/moonshotai/Kimi-K2-Instruct
 kimi-k2-5,true,,,,,,256000,128000,text|image,text,,true,,,0.6,3,0.1,2026-09-01,https://models.dev/api.json
@@ -292,6 +294,7 @@ mistral-small-3-2-24b-instruct,false,none,,,,,128000,16384,image|text,text,,true
 mistral-small-4,false,none,,,,,256000,65536,text|image,text,2025-06,true,,,0.15,0.6,0.15,2026-09-01,https://models.dev/api.json
 mixtral-8x22b-instruct,false,none,,,,,65536,52428,text|pdf,text,,true,,,2,6,0.2,2026-09-01,https://models.dev/api.json
 mixtral-8x7b-instruct,,none,,,,,32768,,text,text,,,,,,,,,https://mistral.ai/news/mixtral-of-experts
+motif-3,true,,,,,,262144,262144,text,text,,true,,,0.5,2,0.2,2026-10-15,https://models.dev/api.json
 muse-glimmer-30b,true,,,,,,131072,131072,text|image,text,2026-01-04,false,,,0.3,1.1,,2026-09-01,https://models.dev/api.json
 muse-spark-1-1,true,,,,,,1000000,32000,text|image|video,text,,true,,,1.25,4.25,0.15,2026-09-01,https://models.dev/api.json
 muse-spark-1-2,true,,,,,,1048576,131072,text|image|audio|video,text,,true,,,1.25,4.25,0.15,2026-09-01,https://models.dev/api.json
@@ -327,6 +330,8 @@ openai-o3,,always_on,,true,hidden,false,200000,100000,text|image,text,2024-06-01
 openreasoning-nemotron-32b,true,,,,,,32768,65536,text,text,,false,,,0.1,0.4,0.05,2026-09-01,https://models.dev/api.json
 paligemma,false,none,,,,,128000,8192,text|image,text,,false,,,0,0,,2026-09-01,https://models.dev/api.json
 palmyra-x5,false,none,,,,,1000000,250000,text,text,,true,,,0.6,6,,2026-10-03,https://models.dev/api.json
+perceptron-mk1,true,,,,,,32768,8192,text|image|video,text,,false,,,0.15,1.5,,2026-10-15,https://models.dev/api.json
+perceptron-mk1-5,true,,,,,,36864,8192,text|image|video|audio,text,,true,,,0.15,1.5,,2026-10-15,https://models.dev/api.json
 phi-4,false,none,,,,,128000,4096,text,text,2023-10,false,,,0.125,0.5,,2026-09-01,https://models.dev/api.json
 phi-4-mini,false,none,,,,,128000,4096,text,text,2023-10,true,,,0.075,0.3,,2026-09-01,https://models.dev/api.json
 phi-4-multimodal,false,none,,,,,128000,4096,text|image|audio,text,2023-10,false,,,0.08,0.32,,2026-09-01,https://models.dev/api.json
