@@ -18,11 +18,12 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    iFlytek, StepFun, Shanghai AI Lab, OpenBMB, IEIT, Skywork, RWKV,
    Ant Group
 3. Other labs swept by name: Korea (LG AI Research, NAVER, Kakao,
-   Upstage), Japan (Sakana AI, Preferred Networks, rinna), Europe (Aleph
-   Alpha, Kyutai, Swiss AI), Russia (Sber, Yandex), the Gulf and India
-   (MBZUAI, Sarvam), China (SenseTime, Kuaishou), and US labs outside
-   tier 1 (Apple, Salesforce, ServiceNow, Arcee, Prime Intellect, Zyphra,
-   Writer, Inception Labs, Thinking Machines, Poolside), plus BigScience
+   Upstage, Motif Technologies), Japan (Sakana AI, Preferred Networks,
+   rinna), Europe (Aleph Alpha, Kyutai, Swiss AI), Russia (Sber, Yandex),
+   the Gulf and India (MBZUAI, Sarvam), China (SenseTime, Kuaishou,
+   Xiaohongshu), and US labs outside tier 1 (Apple, Salesforce, ServiceNow,
+   Arcee, Prime Intellect, Zyphra, Writer, Inception Labs, Thinking
+   Machines, Poolside, Perceptron), plus BigScience
    and TinyLlama for the open-model history
 4. Other open-weight models (Hugging Face; ModelScope for the Chinese
    labs)

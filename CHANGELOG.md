@@ -14,6 +14,11 @@ Data corrections update rows in place; this file preserves the history.
   dropped without trace; each such vendor is now a
   `catalog_unmapped_vendor` review lead, the API-side twin of
   `hf_unmapped_namespace`, so a new API-only lab is noticed.
+- From its first leads: Perceptron (US), Motif Technologies (KR) and
+  Xiaohongshu (CN, the Dots Studio models) are added as labs, and
+  LLM360 and IFM (K2 Think) count as MBZUAI. The other twenty vendors,
+  fine-tune shops, routers and tool or embedding endpoints, are dismissed
+  in `review_decisions.csv`.
 
 ## 2026-10-03
 

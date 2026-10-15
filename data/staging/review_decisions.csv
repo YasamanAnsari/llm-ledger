@@ -1,1 +1,21 @@
 kind,left_key,right_key,decision,decided_by,decided_on,note
+catalog_unmapped_vendor,aion-labs,,dismiss,llm-ledger,2026-10-14,"not a model lab: role-play systems built on GLM, DeepSeek and Llama models"
+catalog_unmapped_vendor,anthracite-org,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,cognitivecomputations,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,fireworks,,dismiss,llm-ledger,2026-10-14,not a model lab: inference provider
+catalog_unmapped_vendor,gryphe,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,inference-net,,dismiss,llm-ledger,2026-10-14,not a model lab: inference provider; task-specific fine-tunes
+catalog_unmapped_vendor,intfloat,,dismiss,llm-ledger,2026-10-14,"not a model lab: embedding models, out of scope"
+catalog_unmapped_vendor,mancer,,dismiss,llm-ledger,2026-10-14,not a model lab: inference provider; role-play fine-tunes
+catalog_unmapped_vendor,morph,,dismiss,llm-ledger,2026-10-14,not a model lab: code-apply tool models
+catalog_unmapped_vendor,nex-agi,,dismiss,llm-ledger,2026-10-14,not a model lab: fine-tunes of Qwen models
+catalog_unmapped_vendor,openrouter,,dismiss,llm-ledger,2026-10-14,not a model lab: router aliases
+catalog_unmapped_vendor,prism-ml,,dismiss,llm-ledger,2026-10-14,not a model lab: compressed Qwen models
+catalog_unmapped_vendor,relace,,dismiss,llm-ledger,2026-10-14,not a model lab: code-apply tool models
+catalog_unmapped_vendor,sao10k,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,scaledown,,dismiss,llm-ledger,2026-10-14,not a model lab: tool endpoints
+catalog_unmapped_vendor,thedrummer,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,trustedrouter,,dismiss,llm-ledger,2026-10-14,not a model lab: router aliases
+catalog_unmapped_vendor,unbiased,,dismiss,llm-ledger,2026-10-14,not a model lab: router or tool endpoint
+catalog_unmapped_vendor,undi95,,dismiss,llm-ledger,2026-10-14,not a model lab: community fine-tunes
+catalog_unmapped_vendor,voyage,,dismiss,llm-ledger,2026-10-14,"not a model lab: embedding models, out of scope"
