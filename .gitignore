@@ -17,3 +17,6 @@ __pycache__/
 data/raw/**
 !data/raw/**/
 !data/raw/**/manifest.json
+
+# Site build output
+site/dist/
