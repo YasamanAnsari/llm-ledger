@@ -43,11 +43,13 @@ apertus-v1-1-4b,huggingface,swiss-ai/Apertus-v1.1-4B
 apertus-v1-1-4b-instruct,huggingface,swiss-ai/Apertus-v1.1-4B-Instruct
 apertus-v1-5-70b,huggingface,swiss-ai/Apertus-v1.5-70B
 apertus-v1-5-70b-base,huggingface,swiss-ai/Apertus-v1.5-70B-base
+apertus-v1-5-70b-rl,huggingface,swiss-ai/Apertus-v1.5-70B-RL
 apertus-v1-5-70b-rlvr,huggingface,swiss-ai/Apertus-v1.5-70B-RLVR
 apertus-v1-5-70b-sft,huggingface,swiss-ai/Apertus-v1.5-70B-SFT
 apertus-v1-5-8b,huggingface,swiss-ai/Apertus-v1.5-8B
 apertus-v1-5-8b-base,huggingface,swiss-ai/Apertus-v1.5-8B-base
 apertus-v1-5-8b-dpo,huggingface,swiss-ai/Apertus-v1.5-8B-DPO
+apertus-v1-5-8b-rl,huggingface,swiss-ai/Apertus-v1.5-8B-RL
 apertus-v1-5-8b-rlvr,huggingface,swiss-ai/Apertus-v1.5-8B-RLVR
 apertus-v1-5-8b-sft,huggingface,swiss-ai/Apertus-v1.5-8B-SFT
 apriel-1-5-15b-thinker,huggingface,ServiceNow-AI/Apriel-1.5-15b-Thinker
@@ -261,6 +263,7 @@ codegen2-1b-p,huggingface,Salesforce/codegen2-1B_P
 codellama-13b,huggingface,codellama/CodeLlama-13b-hf
 codellama-13b-instruct,huggingface,codellama/CodeLlama-13b-Instruct-hf
 codellama-13b-instruct,huggingface,meta-llama/CodeLlama-13b-Instruct-hf
+codellama-34b,huggingface,meta-llama/CodeLlama-34b-hf
 codellama-34b-instruct,huggingface,codellama/CodeLlama-34b-Instruct-hf
 codellama-34b-instruct,huggingface,meta-llama/CodeLlama-34b-Instruct-hf
 codellama-7b,huggingface,codellama/CodeLlama-7b-hf
@@ -356,6 +359,7 @@ deepseek-r1,huggingface,deepseek-ai/DeepSeek-R1
 deepseek-r1,huggingface,deepseek-ai/DeepSeek-R1-0528
 deepseek-r1,models_dev,alibaba-cn/deepseek-r1
 deepseek-r1,openrouter,deepseek/deepseek-r1
+deepseek-r1,openrouter,deepseek/deepseek-r1-0528
 deepseek-r1,text_surface_forms,DeepSeek
 deepseek-r1,text_surface_forms,DeepSeek R1
 deepseek-r1,text_surface_forms,DeepSeek-R1
@@ -410,6 +414,7 @@ deepseek-v3-2-exp,models_dev,nano-gpt/deepseek-ai/deepseek-v3.2-exp
 deepseek-v3-2-exp,openrouter,deepseek/deepseek-v3.2-exp
 deepseek-v4-1-flash,epoch,DeepSeek V4.1 Flash
 deepseek-v4-1-flash,huggingface,deepseek-ai/DeepSeek-V4.1-Flash
+deepseek-v4-1-flash,huggingface,deepseek-ai/DeepSeek-V4.1-Flash-1017
 deepseek-v4-1-flash,models_dev,cline-pass/cline-pass/deepseek-v4.1-flash
 deepseek-v4-1-flash,models_dev,crossmodel/deepseek/deepseek-v4.1-flash
 deepseek-v4-1-flash,openrouter,deepseek/deepseek-v4.1-flash
@@ -725,6 +730,8 @@ gemma-4-31b-it,huggingface,google/gemma-4-31B-it
 gemma-4-31b-it,models_dev,abacus/google/gemma-4-31b-it
 gemma-4-31b-it,openrouter,google/gemma-4-31b-it
 gemma-4-31b-it-qat-q4-0-unquantized,huggingface,google/gemma-4-31B-it-qat-q4_0-unquantized
+gemma-sea-lion-v4-27b-it,epoch,Gemma-SEA-LION-v4-27B-IT
+gemma-sea-lion-v4-27b-it,models_dev,nano-gpt/aisingapore/Gemma-SEA-LION-v4-27B-IT
 generrna,huggingface,pfnet/GenerRNA
 geochat-7b,huggingface,MBZUAI/geochat-7B
 gfusion-10b-a1-8b,huggingface,ai-sage/GFusion-10B-A1.8B
@@ -832,6 +839,7 @@ glm-5-3-flash,huggingface,zai-org/GLM-5.3-Flash-BF16
 glm-5-3-flash,models_dev,cline-pass/cline-pass/glm-5.3-flash
 glm-5-3-flash,models_dev,venice/z-ai-glm-5-3-flash
 glm-5-3-flash,openrouter,z-ai/glm-5.3-flash
+glm-5-3-flashx,models_dev,commandcode/z-ai/glm-5.3-flashx
 glm-5-3-flashx,models_dev,vercel/zai/glm-5.3-flashx
 glm-5-3-flashx,openrouter,z-ai/glm-5.3-flashx
 glm-5-3-prime,models_dev,kilo/z-ai/glm-5.3-prime
@@ -1098,6 +1106,7 @@ gpt-oss-120b,epoch,gpt-oss-120b
 gpt-oss-120b,huggingface,openai/gpt-oss-120b
 gpt-oss-120b,models_dev,frogbot/gpt-oss-120b
 gpt-oss-120b,openrouter,openai/gpt-oss-120b
+gpt-oss-120b-eagle3-short-context,huggingface,nvidia/gpt-oss-120b-Eagle3-short-context
 gpt-oss-120b-sft-aimo3-fishmath,huggingface,SakanaAI/gpt-oss-120b-sft-aimo3-fishmath
 gpt-oss-20b,epoch,gpt-oss-20b
 gpt-oss-20b,huggingface,openai/gpt-oss-20b
@@ -1255,6 +1264,7 @@ hunyuan-turbos,models_dev,tencent-coding-plan/hunyuan-turbos
 hunyuanocr,huggingface,tencent/HunyuanOCR
 hy-embodied-0-5-x,huggingface,tencent/HY-Embodied-0.5-X
 hy-embodied-vlm-1-0,huggingface,tencent/Hy-Embodied-VLM-1.0
+hy-memory-30b-a3b,huggingface,tencent/Hy-Memory-30B-A3B
 hy-mt2-1-8b,models_dev,aimlapi/tencent/hy-mt2-1.8b
 hy-mt2-1-8b,models_dev,kilo/tencent/hy-mt2-1.8b
 hy-mt2-1-8b,openrouter,tencent/hy-mt2-1.8b
@@ -1484,6 +1494,7 @@ lamini-t5-61m,huggingface,MBZUAI/LaMini-T5-61M
 lamini-t5-738m,huggingface,MBZUAI/LaMini-T5-738M
 lensvlm-9b,huggingface,apple/LensVLM-9B
 lfm-2-5-24b-a2b,huggingface,LiquidAI/LFM2.5-24B-A2B
+lfm-2-5-24b-a2b,huggingface,LiquidAI/LFM2.5-24B-A2B-FP8
 lfm-2-5-24b-a2b,models_dev,kilo/liquid/lfm-2.5-24b-a2b
 lfm-2-5-24b-a2b,openrouter,liquid/lfm-2.5-24b-a2b
 lfm2-1-2b,huggingface,LiquidAI/LFM2-1.2B
@@ -1552,6 +1563,7 @@ ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash
+ling-3-1-flash,models_dev,commandcode/inclusionai/ling-3.1-flash:free
 ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
 ling-3-1-flash,models_dev,nano-gpt/inclusionai/ling-3.1-flash
 ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
@@ -1706,6 +1718,7 @@ loopedlm-p2-huginn-s-fixed-pln5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-pln5
 loopedlm-p2-huginn-s-fixed-r5,huggingface,IFM/LoopedLM-P2-huginn-s-fixed-r5
 loopedlm-p2-huginn-s-huginn-linear,huggingface,IFM/LoopedLM-P2-huginn-s-huginn-linear
 loopedlm-p2-huginn-s-learned-entropy0,huggingface,IFM/LoopedLM-P2-huginn-s-learned-entropy0
+loopedlm-p2-huginn-s-learned-entropy0p01,huggingface,IFM/LoopedLM-P2-huginn-s-learned-entropy0p01
 loopedlm-p2-huginn-s-orthoinj,huggingface,IFM/LoopedLM-P2-huginn-s-orthoinj
 loopedlm-p2-huginn-s-parcae,huggingface,IFM/LoopedLM-P2-huginn-s-parcae
 mage-vl,huggingface,microsoft/Mage-VL
@@ -1788,7 +1801,12 @@ minicpm-v-4-5,huggingface,openbmb/MiniCPM-V-4_5-int4
 minicpm-v-4-6,huggingface,openbmb/MiniCPM-V-4.6
 minicpm-v-4-6-thinking,huggingface,openbmb/MiniCPM-V-4.6-Thinking
 minicpm-v-4-7-1b,huggingface,openbmb/MiniCPM-V-4.7-1B
+minicpm-v-4-7-1b,huggingface,openbmb/MiniCPM-V-4.7-1B-int4
+minicpm-v-4-7-1b-dspark,huggingface,openbmb/MiniCPM-V-4.7-1B-DSpark
 minicpm-v-4-7-35b-a3b,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B
+minicpm-v-4-7-35b-a3b,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B-FP8
+minicpm-v-4-7-35b-a3b,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B-int4
+minicpm-v-4-7-35b-a3b-dspark,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B-DSpark
 minicpm3-4b,huggingface,openbmb/MiniCPM3-4B
 minicpm4-0-5b,huggingface,openbmb/MiniCPM4-0.5B
 minicpm4-1-8b,huggingface,openbmb/MiniCPM4.1-8B
@@ -1839,6 +1857,8 @@ minimax-m3,huggingface,MiniMaxAI/MiniMax-M3
 minimax-m3,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
 minimax-m3,models_dev,cline-pass/cline-pass/minimax-m3
 minimax-m3,openrouter,minimax/minimax-m3
+minimax-m3-1-flash,models_dev,venice/minimax-m3-1-flash
+minimax-m3-1-flash,openrouter,minimax/minimax-m3.1-flash:free
 minimax-text-01,epoch,MiniMax-Text-01
 minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01
 minimax-text-01,huggingface,MiniMaxAI/MiniMax-Text-01-hf
@@ -1932,6 +1952,7 @@ mistral-saba,epoch,Mistral Saba
 mistral-saba,models_dev,aimlapi/mistralai/mistral-saba
 mistral-saba,models_dev,nano-gpt/mistralai/mistral-saba
 mistral-saba,openrouter,mistralai/mistral-saba
+mistral-small-24b-base-2501,huggingface,mistralai/Mistral-Small-24B-Base-2501
 mistral-small-24b-instruct-2501,huggingface,mistralai/Mistral-Small-24B-Instruct-2501
 mistral-small-24b-instruct-2501,models_dev,aimlapi/mistralai/mistral-small-24b-instruct-2501
 mistral-small-24b-instruct-2501,models_dev,kilo/mistralai/mistral-small-24b-instruct-2501
@@ -2003,6 +2024,7 @@ muse-spark-1-1,openrouter,meta/muse-spark-1.1
 muse-spark-1-2,epoch,Muse Spark 1.2
 muse-spark-1-2,models_dev,abacus/muse-spark-1.2
 muse-spark-1-2,openrouter,meta/muse-spark-1.2
+muse-spark-1-2-contributor,models_dev,commandcode/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,models_dev,llmtr/meta/muse-spark-1.2-contributor
 muse-spark-1-2-contributor,openrouter,meta/muse-spark-1.2-contributor
 muse-spark-1-3,epoch,Muse Spark 1.3
@@ -2014,6 +2036,9 @@ muse-spark-1-3-contributor,models_dev,bothub/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,models_dev,cline-pass/cline-pass/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
+muse-spark-open,epoch,Muse Spark Open
+muse-spark-open,models_dev,cloudflare-ai-gateway/meta/muse-spark-open
+muse-spark-open,openrouter,meta/muse-spark-open
 muse-wonder,models_dev,kilo/meta/muse-wonder
 muse-wonder,openrouter,meta/muse-wonder
 nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
@@ -2034,6 +2059,8 @@ nemotron-3-5-content-safety,openrouter,nvidia/nemotron-3.5-content-safety:free
 nemotron-3-5-lightning,epoch,Nemotron 3.5 Lightning
 nemotron-3-5-lightning,models_dev,kilo/nvidia/nemotron-3.5-lightning
 nemotron-3-5-lightning,openrouter,nvidia/nemotron-3.5-lightning
+nemotron-3-5-super-vl,models_dev,digitalocean/nemotron-3.5-super-vl
+nemotron-3-5-super-vl,openrouter,nvidia/nemotron-3.5-super-vl
 nemotron-3-nano-30b-a3b,epoch,Nemotron 3-Nano-30B-A3B
 nemotron-3-nano-30b-a3b,models_dev,nvidia/nvidia/nemotron-3-nano-30b-a3b
 nemotron-3-nano-30b-a3b,openrouter,nvidia/nemotron-3-nano-30b-a3b
@@ -2281,6 +2308,7 @@ pythia-14m,huggingface,EleutherAI/pythia-14m
 pythia-14m-deduped,huggingface,EleutherAI/pythia-14m-deduped
 pythia-14m-seed1,huggingface,EleutherAI/pythia-14m-seed1
 pythia-14m-seed6,huggingface,EleutherAI/pythia-14m-seed6
+pythia-14m-seed9,huggingface,EleutherAI/pythia-14m-seed9
 pythia-160m,huggingface,EleutherAI/pythia-160m
 pythia-160m-data-seed1,huggingface,EleutherAI/pythia-160m-data-seed1
 pythia-160m-data-seed2,huggingface,EleutherAI/pythia-160m-data-seed2
@@ -2747,6 +2775,7 @@ solar-0-70b-16bit,huggingface,upstage/SOLAR-0-70b-16bit
 solar-10-7b-instruct-v1-0,huggingface,upstage/SOLAR-10.7B-Instruct-v1.0
 solar-10-7b-v1-0,huggingface,upstage/SOLAR-10.7B-v1.0
 solar-mini4,models_dev,kilo/upstage/solar-mini4
+solar-mini4,models_dev,nano-gpt/upstage/solar-mini4
 solar-mini4,openrouter,upstage/solar-mini4
 solar-open-100b,huggingface,upstage/Solar-Open-100B
 solar-open2-250b,huggingface,upstage/Solar-Open2-250B
@@ -2804,6 +2833,7 @@ stablelm-zephyr-3b,huggingface,stabilityai/stablelm-zephyr-3b
 step-3-5-flash,epoch,Step 3.5 Flash
 step-3-5-flash,huggingface,stepfun-ai/Step-3.5-Flash
 step-3-5-flash,huggingface,stepfun-ai/Step-3.5-Flash-FP8
+step-3-5-flash,models_dev,commandcode/stepfun/Step-3.5-Flash
 step-3-5-flash,models_dev,empiriolabs/step-3-5-flash
 step-3-5-flash,openrouter,stepfun/step-3.5-flash
 step-3-5-flash-base,huggingface,stepfun-ai/Step-3.5-Flash-Base

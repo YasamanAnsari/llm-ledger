@@ -36,3 +36,8 @@ date,reason,count
 2026-10-14,no_dated_event,1
 2026-10-15,community_lead,5
 2026-10-15,no_dated_event,2
+2026-10-19,community_lead,14
+2026-10-19,disagrees_with_record,1
+2026-10-19,no_dated_event,14
+2026-10-19,not_a_model,1
+2026-10-19,quote_not_on_page,3

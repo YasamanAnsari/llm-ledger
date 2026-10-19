@@ -9,57 +9,57 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1720; events: 2644
-- Models: curated 55, corroborated 739, single-source 926
-- Event confidence: verified 1170, inferred 1468, disputed 6
+- Models: 1734; events: 2670
+- Models: curated 55, corroborated 745, single-source 934
+- Event confidence: verified 1181, inferred 1483, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 87 | 189 | 2 | 71 | 14 | 57% |
-| MBZUAI | 69 | 69 | 0 | 5 | 64 | 7% |
-| OpenAI | 69 | 285 | 19 | 45 | 5 | 72% |
+| MBZUAI | 70 | 70 | 0 | 6 | 64 | 9% |
+| OpenAI | 69 | 288 | 19 | 45 | 5 | 73% |
 | ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
+| Meta | 55 | 108 | 4 | 24 | 27 | 33% |
+| EleutherAI | 54 | 54 | 0 | 1 | 53 | 2% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
-| EleutherAI | 53 | 53 | 0 | 1 | 52 | 2% |
-| Meta | 53 | 104 | 4 | 23 | 26 | 34% |
+| Mistral | 52 | 97 | 3 | 29 | 20 | 44% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
-| Mistral | 51 | 95 | 3 | 28 | 20 | 44% |
+| Google | 50 | 145 | 7 | 26 | 17 | 44% |
 | Ant Group | 49 | 61 | 0 | 35 | 14 | 62% |
-| Google | 49 | 142 | 7 | 26 | 16 | 45% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 57% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 37 | 81 | 3 | 27 | 7 | 62% |
-| OpenBMB | 34 | 34 | 0 | 15 | 19 | 44% |
-| NVIDIA | 32 | 48 | 0 | 12 | 20 | 25% |
+| OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
+| NVIDIA | 34 | 51 | 0 | 13 | 21 | 25% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
-| Tencent | 29 | 39 | 1 | 18 | 10 | 56% |
+| Tencent | 30 | 40 | 1 | 19 | 10 | 58% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
 | Nous | 26 | 32 | 0 | 7 | 19 | 22% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
-| Anthropic | 25 | 125 | 8 | 15 | 2 | 70% |
+| Anthropic | 25 | 126 | 8 | 15 | 2 | 70% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Salesforce | 25 | 25 | 0 | 4 | 21 | 16% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
+| Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
-| Microsoft | 21 | 30 | 0 | 10 | 11 | 37% |
-| Swiss AI | 21 | 23 | 0 | 5 | 16 | 22% |
+| Microsoft | 21 | 31 | 0 | 10 | 11 | 35% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
 | StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
+| MiniMax | 16 | 33 | 1 | 11 | 4 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 43 | 2 | 9 | 5 | 35% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
-| MiniMax | 15 | 31 | 1 | 10 | 4 | 55% |
 | Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
@@ -94,11 +94,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1473 | 494 | 978 | 1 |
-| platform_availability | 326 | 321 | 3 | 2 |
-| retired | 282 | 148 | 134 | 0 |
+| weights_released | 1489 | 496 | 992 | 1 |
+| platform_availability | 329 | 324 | 3 | 2 |
+| retired | 287 | 154 | 133 | 0 |
 | api_ga | 238 | 60 | 177 | 1 |
-| announced | 217 | 49 | 167 | 1 |
+| announced | 219 | 49 | 169 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -115,10 +115,13 @@ as settled.
 - Events it wrote: 15 (verified 2, single-source inferred 13)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-15, by reason:
+Declined in the 7 days to 2026-10-19, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 59 |
-| no_dated_event | 47 |
+| community_lead | 28 |
+| no_dated_event | 22 |
+| quote_not_on_page | 3 |
+| disagrees_with_record | 1 |
 | launch_event_required | 1 |
+| not_a_model | 1 |

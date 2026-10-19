@@ -12,8 +12,8 @@ positive means the second event happened after the first.
 
 | gap | models |
 |---|---|
-| same day | 69 |
-| 1-7d | 19 |
+| same day | 70 |
+| 1-7d | 18 |
 | 8-30d | 6 |
 | 31-90d | 9 |
 | 91-365d | 13 |
@@ -24,7 +24,7 @@ Per-organization medians (n>=3):
 - alibaba: 8d (n=8)
 - google: 4d (n=18)
 - amazon: 0d (n=3)
-- anthropic: 0d (n=14)
+- anthropic: 0d (n=15)
 - deepseek: 0d (n=3)
 - bytedance: 0d (n=3)
 - zhipu: 0d (n=4)
@@ -35,15 +35,15 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=85)
+- median 0d (IQR 0-1d, n=89)
 - range: 0d to 779d
 
 | gap | models |
 |---|---|
-| same day | 60 |
-| 1-7d | 13 |
+| same day | 62 |
+| 1-7d | 14 |
 | 8-30d | 3 |
-| 31-90d | 2 |
+| 31-90d | 3 |
 | 91-365d | 5 |
 | >365d | 2 |
 
@@ -51,10 +51,10 @@ Per-organization medians (n>=3):
 
 - mistral: 0d (n=5)
 - deepseek: 0d (n=9)
-- google: 0d (n=8)
+- google: 0d (n=9)
 - zhipu: 0d (n=7)
 - moonshot: 0d (n=5)
-- meta: 0d (n=8)
+- meta: 0d (n=9)
 - nvidia: 0d (n=7)
 - minimax: 0d (n=5)
 - alibaba: 0d (n=11)
@@ -146,5 +146,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1710
-- models with announced + an availability event: 193
+- models with an anchor event: 1724
+- models with announced + an availability event: 197
