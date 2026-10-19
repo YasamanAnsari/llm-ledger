@@ -138,3 +138,5 @@ async function init(){
  }catch(error){console.error(error);$('result-count').textContent='The interactive dataset could not load.';$('table-body').innerHTML='<tr><td colspan="8" class="empty-state"><strong>The dataset couldn’t be loaded.</strong><a class="source-link" href="./data/models.csv" download>Download models CSV ↗</a> · <a class="source-link" href="./data/events.csv" download>Download events CSV ↗</a><button id="retry-load">Try again</button></td></tr>';$('retry-load').addEventListener('click',init);}
 }
 init();
+const backToTop=$('back-to-top');
+addEventListener('scroll',()=>backToTop.classList.toggle('visible',scrollY>innerHeight),{passive:true});

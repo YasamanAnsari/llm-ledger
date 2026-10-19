@@ -1,4 +1,11 @@
-# llm-ledger
+<p align="center">
+  <img src="site/assets/logo.svg" alt="LLM ledger" width="420">
+</p>
+
+<p align="center">
+  <strong>Explore the dataset online: <a href="https://ledger.yasamanansari.com">ledger.yasamanansari.com</a></strong><br>
+  by <a href="https://yasamanansari.com">Yasaman Ansari</a>
+</p>
 
 Ask "when was OpenAI's o3 released?" and you get four honest answers:
 

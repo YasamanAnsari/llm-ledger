@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#174c3e"/><g fill="#e2edc7"><rect x="15" y="16" width="34" height="7" rx="1"/><rect x="15" y="29" width="24" height="7" rx="1"/><rect x="15" y="42" width="34" height="7" rx="1"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">LLM ledger favicon</title>
+  <desc id="desc">Nested-L monogram with a milestone dot.</desc>
+  <g transform="translate(9 6)"><g id="monogram">
+    <path id="outer-l" fill="#174C3E" d="M13 18H28a4 4 0 0 1 4 4v89a5 5 0 0 0 5 5h77a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H14A14 14 0 0 1 0 134V31a13 13 0 0 1 13-13Z"/>
+    <path id="inner-l" fill="#82977D" d="M48 0h24a5 5 0 0 1 5 5v63a5 5 0 0 0 5 5h55a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5H57a14 14 0 0 1-14-14V5a5 5 0 0 1 5-5Z"/>
+    <circle id="milestone" fill="#82977D" cx="105" cy="31" r="15"/>
+  </g></g>
+</svg>
