@@ -9,37 +9,37 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1734; events: 2670
-- Models: curated 55, corroborated 745, single-source 934
-- Event confidence: verified 1181, inferred 1483, disputed 6
+- Models: 1737; events: 2677
+- Models: curated 55, corroborated 747, single-source 935
+- Event confidence: verified 1183, inferred 1488, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 189 | 2 | 71 | 14 | 57% |
+| Alibaba | 87 | 188 | 2 | 71 | 14 | 57% |
 | MBZUAI | 70 | 70 | 0 | 6 | 64 | 9% |
-| OpenAI | 69 | 288 | 19 | 45 | 5 | 73% |
-| ByteDance | 55 | 68 | 0 | 23 | 32 | 40% |
+| OpenAI | 69 | 289 | 19 | 45 | 5 | 73% |
+| ByteDance | 55 | 69 | 0 | 23 | 32 | 39% |
+| EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
 | Meta | 55 | 108 | 4 | 24 | 27 | 33% |
-| EleutherAI | 54 | 54 | 0 | 1 | 53 | 2% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
-| Mistral | 52 | 97 | 3 | 29 | 20 | 44% |
+| Mistral | 53 | 99 | 3 | 30 | 20 | 44% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
 | Google | 50 | 145 | 7 | 26 | 17 | 44% |
-| Ant Group | 49 | 61 | 0 | 35 | 14 | 62% |
+| Ant Group | 49 | 58 | 0 | 35 | 14 | 62% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 57% |
 | Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
-| Zhipu | 37 | 81 | 3 | 27 | 7 | 62% |
+| Zhipu | 37 | 82 | 3 | 27 | 7 | 61% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
-| NVIDIA | 34 | 51 | 0 | 13 | 21 | 25% |
+| NVIDIA | 34 | 52 | 0 | 13 | 21 | 25% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 30 | 40 | 1 | 19 | 10 | 58% |
 | Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
-| Nous | 26 | 32 | 0 | 7 | 19 | 22% |
+| Nous | 26 | 34 | 0 | 7 | 19 | 26% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
 | Anthropic | 25 | 126 | 8 | 15 | 2 | 70% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
@@ -69,7 +69,7 @@ as settled.
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
-| Meituan | 10 | 14 | 0 | 9 | 1 | 71% |
+| Meituan | 10 | 13 | 0 | 9 | 1 | 69% |
 | RedNote | 10 | 12 | 0 | 1 | 9 | 17% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
 | Aleph Alpha | 9 | 9 | 0 | 1 | 8 | 11% |
@@ -84,21 +84,21 @@ as settled.
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
-| Inception | 3 | 5 | 0 | 2 | 1 | 40% |
+| Inception | 4 | 7 | 0 | 3 | 1 | 43% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
-| Thinking Machines | 2 | 6 | 0 | 2 | 0 | 50% |
+| Thinking Machines | 2 | 7 | 0 | 2 | 0 | 43% |
 | Yandex | 1 | 1 | 0 | 0 | 1 | 0% |
 
 ## By event type
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1489 | 496 | 992 | 1 |
-| platform_availability | 329 | 324 | 3 | 2 |
-| retired | 287 | 154 | 133 | 0 |
-| api_ga | 238 | 60 | 177 | 1 |
-| announced | 219 | 49 | 169 | 1 |
+| weights_released | 1493 | 494 | 998 | 1 |
+| platform_availability | 330 | 325 | 3 | 2 |
+| retired | 292 | 156 | 136 | 0 |
+| api_ga | 234 | 61 | 172 | 1 |
+| announced | 220 | 49 | 170 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -115,13 +115,12 @@ as settled.
 - Events it wrote: 15 (verified 2, single-source inferred 13)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 2
 
-Declined in the 7 days to 2026-10-19, by reason:
+Declined in the 7 days to 2026-10-20, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 28 |
-| no_dated_event | 22 |
+| community_lead | 25 |
+| no_dated_event | 23 |
 | quote_not_on_page | 3 |
 | disagrees_with_record | 1 |
-| launch_event_required | 1 |
 | not_a_model | 1 |

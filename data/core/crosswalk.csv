@@ -1156,6 +1156,7 @@ granite-4-1-8b,openrouter,ibm-granite/granite-4.1-8b
 granite-4-2-30b,huggingface,ibm-granite/granite-4.2-30b
 granite-4-2-3b,huggingface,ibm-granite/granite-4.2-3b
 granite-4-2-8b,huggingface,ibm-granite/granite-4.2-8b
+granite-4-2-8b,models_dev,kilo/ibm-granite/granite-4.2-8b
 granite-4-2-8b,models_dev,wandb/ibm-granite/granite-4.2-8b
 granite-4-2-8b,openrouter,ibm-granite/granite-4.2-8b
 granite-docling-258m,huggingface,ibm-granite/granite-docling-258M
@@ -1557,6 +1558,7 @@ ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL-fp8
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL-int4
+ling-3-0-flash-vl,models_dev,kilo/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,models_dev,nano-gpt/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
@@ -1742,6 +1744,8 @@ mercury-2,openrouter,inception/mercury-2
 mercury-2-5,models_dev,aimlapi/inception/mercury-2.5
 mercury-2-5,models_dev,inception/mercury-2.5
 mercury-2-5,openrouter,inception/mercury-2.5
+mercury-3,models_dev,inception/mercury-3
+mercury-3,openrouter,inception/mercury-3
 mercury-coder-small,epoch,Mercury Coder Small
 mercury-coder-small,models_dev,nano-gpt/mercury-coder-small
 mimo-7b-base,huggingface,XiaomiMiMo/MiMo-7B-Base
@@ -1876,6 +1880,7 @@ ministral-3-3b-reasoning-2512,huggingface,mistralai/Ministral-3-3B-Reasoning-251
 ministral-3-8b-base-2512,huggingface,mistralai/Ministral-3-8B-Base-2512
 ministral-3-8b-reasoning-2512,huggingface,mistralai/Ministral-3-8B-Reasoning-2512
 ministral-3b,epoch,Ministral 3B
+ministral-3b,models_dev,pioneer/ministral-3b
 ministral-3b,models_dev,vercel/mistral/ministral-3b
 ministral-3b-2512,huggingface,mistralai/Ministral-3-3B-Instruct-2512
 ministral-3b-2512,huggingface,mistralai/Ministral-3-3B-Instruct-2512-BF16
@@ -1919,6 +1924,7 @@ mistral-large-3,models_dev,pioneer/mistral-large-3
 mistral-large-4-0,models_dev,cortecs/mistral-large-4-0
 mistral-large-4-0,models_dev,kilo/mistralai/mistral-large-4-0
 mistral-large-4-0,openrouter,mistralai/mistral-large-4-0
+mistral-large-instruct-2407,huggingface,mistralai/Mistral-Large-Instruct-2407
 mistral-large-instruct-2411,huggingface,mistralai/Mistral-Large-Instruct-2411
 mistral-medium,epoch,Mistral Medium
 mistral-medium,mistral_api,mistral-medium
@@ -1946,6 +1952,7 @@ mistral-nemo,epoch,Mistral NeMo
 mistral-nemo,huggingface,mistralai/Mistral-Nemo-Instruct-2407
 mistral-nemo,models_dev,aimlapi/mistralai/mistral-nemo
 mistral-nemo,models_dev,kilo/mistralai/mistral-nemo
+mistral-nemo,models_dev,mistral/mistral-nemo
 mistral-nemo,openrouter,mistralai/mistral-nemo
 mistral-nemo-base-2407,huggingface,mistralai/Mistral-Nemo-Base-2407
 mistral-saba,epoch,Mistral Saba
@@ -2244,6 +2251,7 @@ palmyra-small,huggingface,Writer/palmyra-small
 palmyra-vision,huggingface,Writer/palmyra-vision
 palmyra-vision,huggingface,Writer/palmyra-vision-vllm
 palmyra-x5,epoch,Palmyra X5
+palmyra-x5,models_dev,kilo/writer/palmyra-x5
 palmyra-x5,models_dev,merge-gateway/writer/palmyra-x5
 palmyra-x5,openrouter,writer/palmyra-x5
 palo-7b,huggingface,MBZUAI/PALO-7B
@@ -2350,6 +2358,7 @@ pythia-70m-seed1,huggingface,EleutherAI/pythia-70m-seed1
 pythia-70m-seed2,huggingface,EleutherAI/pythia-70m-seed2
 pythia-70m-seed3,huggingface,EleutherAI/pythia-70m-seed3
 pythia-70m-seed4,huggingface,EleutherAI/pythia-70m-seed4
+pythia-70m-seed5,huggingface,EleutherAI/pythia-70m-seed5
 qianfan-ocr,huggingface,baidu/Qianfan-OCR
 qianfan-vl-3b,huggingface,baidu/Qianfan-VL-3B
 qianfan-vl-70b,huggingface,baidu/Qianfan-VL-70B
@@ -2547,6 +2556,7 @@ qwen3-8b,huggingface,Qwen/Qwen3-8B
 qwen3-8b,models_dev,nano-gpt/qwen/Qwen3-8B
 qwen3-8b,models_dev,nano-gpt/qwen/qwen3-8b
 qwen3-8b,openrouter,qwen/qwen3-8b
+qwen3-coder,models_dev,kilo/qwen/qwen3-coder
 qwen3-coder,models_dev,pendra/qwen3-coder:30b
 qwen3-coder,models_dev,vercel/alibaba/qwen3-coder
 qwen3-coder,openrouter,qwen/qwen3-coder
@@ -2556,6 +2566,7 @@ qwen3-coder-30b-a3b-instruct,openrouter,qwen/qwen3-coder-30b-a3b-instruct
 qwen3-coder-480b-a35b-instruct,epoch,Qwen3-Coder-480B-A35B
 qwen3-coder-480b-a35b-instruct,huggingface,Qwen/Qwen3-Coder-480B-A35B-Instruct
 qwen3-coder-480b-a35b-instruct,models_dev,abacus/Qwen/Qwen3-Coder-480B-A35B-Instruct
+qwen3-coder-480b-a35b-instruct,models_dev,alibaba/qwen3-coder-480b-a35b-instruct
 qwen3-coder-flash,models_dev,alibaba/qwen3-coder-flash
 qwen3-coder-flash,openrouter,qwen/qwen3-coder-flash
 qwen3-coder-next,epoch,Qwen3-Coder-Next
@@ -2698,6 +2709,7 @@ sarvam-30b,huggingface,sarvamai/sarvam-30b
 sarvam-30b,huggingface,sarvamai/sarvam-30b-fp8
 sarvam-m,huggingface,sarvamai/sarvam-m
 seed-1-6,epoch,Seed 1.6
+seed-1-6,models_dev,kilo/bytedance-seed/seed-1.6
 seed-1-6,models_dev,vercel/bytedance/seed-1.6
 seed-1-6,openrouter,bytedance-seed/seed-1.6
 seed-1-6-flash,models_dev,aimlapi/bytedance-seed/seed-1.6-flash

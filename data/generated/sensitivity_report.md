@@ -7,16 +7,16 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-7d, n=117)
+- median 0d (IQR 0-2d, n=115)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 70 |
-| 1-7d | 18 |
-| 8-30d | 6 |
+| same day | 72 |
+| 1-7d | 16 |
+| 8-30d | 5 |
 | 31-90d | 9 |
-| 91-365d | 13 |
+| 91-365d | 12 |
 | >365d | 1 |
 
 Per-organization medians (n>=3):
@@ -35,13 +35,13 @@ Per-organization medians (n>=3):
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=89)
+- median 0d (IQR 0-1d, n=93)
 - range: 0d to 779d
 
 | gap | models |
 |---|---|
-| same day | 62 |
-| 1-7d | 14 |
+| same day | 68 |
+| 1-7d | 12 |
 | 8-30d | 3 |
 | 31-90d | 3 |
 | 91-365d | 5 |
@@ -49,10 +49,11 @@ Per-organization medians (n>=3):
 
 Per-organization medians (n>=3):
 
-- mistral: 0d (n=5)
+- mistral: 0d (n=6)
+- cohere: 0d (n=3)
 - deepseek: 0d (n=9)
 - google: 0d (n=9)
-- zhipu: 0d (n=7)
+- zhipu: 0d (n=9)
 - moonshot: 0d (n=5)
 - meta: 0d (n=9)
 - nvidia: 0d (n=7)
@@ -146,5 +147,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1724
-- models with announced + an availability event: 197
+- models with an anchor event: 1727
+- models with announced + an availability event: 199
