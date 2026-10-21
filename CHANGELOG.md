@@ -361,3 +361,21 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `gemini-4-argon-consumer_rollout-1` 2026-10-13 inferred (vendor_blog; evidence: "For everyday users: Try it starting today in the Gemini app and AI Mode in Search if you’re a Google AI Ultra or Pro subscriber.")
 - `gemini-4-argon-price_changed-1` 2026-10-13 inferred (vendor_blog; evidence: "The model launches today at an introductory price 1 of $2 per million input tokens and $10 per million output tokens")
 - `grok-4-7-platform_availability-2` 2026-10-13 inferred (vendor_blog; evidence: "SpaceXAI’s Grok 4.7 is now available on Amazon Bedrock, which offers a choice of foundation models (FMs) from multiple providers.")
+
+## 2026-10-21
+
+- new model `claude-mythos`
+- new model `fable-5-1`
+- new model `voxtral-small-transcribe-3`
+- new model `voxtral-mini-tts-3`
+- new model `voxtral-mini-transcribe-3`
+- new model `voxtral-mini-transcribe-realtime-3`
+- `claude-haiku-5-5-announced-1` 2026-10-07 inferred (vendor_blog; evidence: "Introducing Claude Haiku 5.5 Claude Haiku 5.5 is our fastest, most capable small model.")
+- `claude-sonnet-5-5-announced-1` 2026-09-28 verified (vendor_blog; evidence: "Introducing Claude Sonnet 5.5 Claude Sonnet 5.5 is a clear upgrade over Claude Sonnet 5, runs 30%+ faster"; agrees: epoch.ai 2026-09-28)
+- `claude-opus-5-5-announced-1` 2026-09-22 inferred (vendor_blog; evidence: "Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work")
+- `claude-mythos-announced-1` 2026-09-15 inferred (vendor_blog; evidence: "Introducing Claude Mythos and Fable 5.1 They’re the world’s most advanced models for coding and knowledge work")
+- `fable-5-1-announced-1` 2026-09-15 inferred (vendor_blog; evidence: "Introducing Claude Mythos and Fable 5.1 They’re the world’s most advanced models for coding and knowledge work")
+- `voxtral-small-transcribe-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "The speech-to-text model, Voxtral Small Transcribe 3 , is state-of-the-art in multilingual transcription")
+- `voxtral-mini-tts-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "The text-to-speech model, Voxtral Mini TTS 3 , introduces new voices that adjust their emotion, pace, and emphasis")
+- `voxtral-mini-transcribe-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "Voxtral Mini Transcribe 3 New Efficient, low-latency speech transcription model.")
+- `voxtral-mini-transcribe-realtime-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "Voxtral Mini Transcribe Realtime 3 listens and detects when the caller has finished speaking")
