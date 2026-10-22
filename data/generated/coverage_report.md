@@ -9,39 +9,39 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1747; events: 2693
-- Models: curated 55, corroborated 749, single-source 943
-- Event confidence: verified 1187, inferred 1500, disputed 6
+- Models: 1750; events: 2713
+- Models: curated 55, corroborated 755, single-source 940
+- Event confidence: verified 1194, inferred 1513, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 188 | 2 | 71 | 14 | 57% |
+| Alibaba | 87 | 191 | 2 | 73 | 12 | 57% |
 | MBZUAI | 71 | 71 | 0 | 6 | 65 | 8% |
-| OpenAI | 69 | 289 | 19 | 45 | 5 | 73% |
+| OpenAI | 70 | 293 | 19 | 46 | 5 | 73% |
 | Mistral | 57 | 103 | 3 | 31 | 23 | 44% |
-| ByteDance | 55 | 69 | 0 | 23 | 32 | 39% |
+| ByteDance | 55 | 70 | 0 | 23 | 32 | 39% |
 | EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
-| Meta | 55 | 108 | 4 | 24 | 27 | 33% |
+| Meta | 55 | 110 | 4 | 25 | 26 | 35% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
-| Google | 51 | 146 | 7 | 26 | 18 | 44% |
+| Google | 51 | 147 | 7 | 26 | 18 | 44% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 62% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
-| DeepSeek | 43 | 97 | 3 | 26 | 14 | 57% |
-| Cohere | 37 | 49 | 1 | 9 | 27 | 22% |
+| DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
+| Cohere | 39 | 52 | 1 | 9 | 29 | 21% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 37 | 82 | 3 | 27 | 7 | 61% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
-| NVIDIA | 34 | 52 | 0 | 13 | 21 | 25% |
+| NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 31 | 41 | 1 | 19 | 11 | 56% |
-| Baidu | 28 | 34 | 0 | 22 | 6 | 71% |
-| Anthropic | 27 | 131 | 8 | 15 | 4 | 68% |
+| Baidu | 28 | 35 | 0 | 22 | 6 | 69% |
+| Anthropic | 27 | 132 | 8 | 15 | 4 | 67% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
-| Salesforce | 26 | 26 | 0 | 4 | 22 | 15% |
+| Salesforce | 26 | 26 | 0 | 5 | 21 | 19% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
 | Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
@@ -56,11 +56,11 @@ as settled.
 | StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 33 | 1 | 10 | 5 | 52% |
+| MiniMax | 16 | 34 | 1 | 10 | 5 | 50% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| xAI | 16 | 43 | 2 | 9 | 5 | 35% |
+| xAI | 16 | 44 | 2 | 9 | 5 | 34% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
-| Moonshot | 15 | 37 | 0 | 14 | 1 | 59% |
+| Moonshot | 15 | 37 | 0 | 14 | 1 | 57% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
@@ -94,11 +94,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1499 | 494 | 1004 | 1 |
-| platform_availability | 330 | 325 | 3 | 2 |
-| retired | 295 | 159 | 136 | 0 |
-| api_ga | 234 | 61 | 172 | 1 |
-| announced | 227 | 50 | 176 | 1 |
+| weights_released | 1502 | 495 | 1006 | 1 |
+| platform_availability | 331 | 326 | 3 | 2 |
+| retired | 299 | 163 | 136 | 0 |
+| api_ga | 242 | 62 | 179 | 1 |
+| announced | 231 | 50 | 180 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -112,16 +112,18 @@ as settled.
 
 ## Page-reading agent
 
-- Events it wrote: 24 (verified 3, single-source inferred 21)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 8
+- Events it wrote: 27 (verified 3, single-source inferred 24)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-21, by reason:
+Declined in the 7 days to 2026-10-22, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 38 |
-| community_lead | 33 |
-| not_a_model | 5 |
+| no_dated_event | 48 |
+| community_lead | 43 |
+| not_a_model | 10 |
+| already_recorded | 6 |
 | malformed_candidate | 3 |
 | quote_not_on_page | 3 |
-| disagrees_with_record | 1 |
+| disagrees_with_record | 2 |
+| launch_event_required | 1 |

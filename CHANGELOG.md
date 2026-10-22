@@ -379,3 +379,11 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `voxtral-mini-tts-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "The text-to-speech model, Voxtral Mini TTS 3 , introduces new voices that adjust their emotion, pace, and emphasis")
 - `voxtral-mini-transcribe-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "Voxtral Mini Transcribe 3 New Efficient, low-latency speech transcription model.")
 - `voxtral-mini-transcribe-realtime-3-announced-1` 2026-10-20 inferred (vendor_blog; evidence: "Voxtral Mini Transcribe Realtime 3 listens and detects when the caller has finished speaking")
+
+## 2026-10-22
+
+- new model `cohere-transcribe-arabic`
+- new model `cohere-transcribe`
+- `cohere-transcribe-arabic-announced-1` 2026-07-07 inferred (vendor_blog; evidence: "Today, we are releasing Cohere Transcribe Arabic as an open-source model.")
+- `cohere-transcribe-arabic-api_ga-1` 2026-07-07 inferred (vendor_blog; evidence: "Cohere Transcribe Arabic is also available through the Cohere API with free access subject to rate limits.")
+- `cohere-transcribe-announced-1` 2026-03-01 inferred (vendor_blog; evidence: "We started with Cohere Transcribe (launched in March with leading English-language accuracy and broad multilingual coverage)")

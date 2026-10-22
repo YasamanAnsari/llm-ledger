@@ -47,3 +47,9 @@ date,reason,count
 2026-10-21,malformed_candidate,3
 2026-10-21,no_dated_event,16
 2026-10-21,not_a_model,4
+2026-10-22,already_recorded,6
+2026-10-22,community_lead,15
+2026-10-22,disagrees_with_record,1
+2026-10-22,launch_event_required,1
+2026-10-22,no_dated_event,12
+2026-10-22,not_a_model,5

@@ -7,14 +7,14 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=117)
+- median 0d (IQR 0-2d, n=123)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 75 |
-| 1-7d | 15 |
-| 8-30d | 5 |
+| same day | 79 |
+| 1-7d | 16 |
+| 8-30d | 6 |
 | 31-90d | 9 |
 | 91-365d | 12 |
 | >365d | 1 |
@@ -22,33 +22,35 @@ positive means the second event happened after the first.
 Per-organization medians (n>=3):
 
 - alibaba: 8d (n=8)
-- google: 2d (n=17)
+- bytedance: 5d (n=4)
+- google: 2d (n=18)
+- xai: 0d (n=10)
 - amazon: 0d (n=3)
-- anthropic: 0d (n=18)
+- anthropic: 0d (n=19)
 - deepseek: 0d (n=3)
-- bytedance: 0d (n=3)
 - zhipu: 0d (n=4)
-- openai: 0d (n=33)
-- xai: 0d (n=9)
+- openai: 0d (n=34)
 - meta: 0d (n=4)
 - mistral: 0d (n=4)
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=94)
+- median 0d (IQR 0-1d, n=96)
 - range: 0d to 779d
 
 | gap | models |
 |---|---|
-| same day | 67 |
-| 1-7d | 15 |
+| same day | 65 |
+| 1-7d | 18 |
 | 8-30d | 3 |
-| 31-90d | 3 |
+| 31-90d | 4 |
 | 91-365d | 4 |
 | >365d | 2 |
 
 Per-organization medians (n>=3):
 
+- baidu: 1d (n=3)
+- alibaba: 0d (n=12)
 - mistral: 0d (n=6)
 - cohere: 0d (n=3)
 - deepseek: 0d (n=9)
@@ -58,7 +60,6 @@ Per-organization medians (n>=3):
 - meta: 0d (n=9)
 - nvidia: 0d (n=7)
 - minimax: 0d (n=5)
-- alibaba: 0d (n=11)
 
 ## announced -> consumer_rollout
 
@@ -147,5 +148,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1737
-- models with announced + an availability event: 202
+- models with an anchor event: 1744
+- models with announced + an availability event: 209
