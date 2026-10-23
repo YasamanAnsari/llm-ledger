@@ -9,18 +9,18 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1750; events: 2713
-- Models: curated 55, corroborated 755, single-source 940
-- Event confidence: verified 1194, inferred 1513, disputed 6
+- Models: 1751; events: 2722
+- Models: curated 55, corroborated 756, single-source 940
+- Event confidence: verified 1198, inferred 1518, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 191 | 2 | 73 | 12 | 57% |
+| Alibaba | 87 | 193 | 2 | 73 | 12 | 56% |
 | MBZUAI | 71 | 71 | 0 | 6 | 65 | 8% |
 | OpenAI | 70 | 293 | 19 | 46 | 5 | 73% |
-| Mistral | 57 | 103 | 3 | 31 | 23 | 44% |
+| Mistral | 57 | 106 | 3 | 31 | 23 | 43% |
 | ByteDance | 55 | 70 | 0 | 23 | 32 | 39% |
 | EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
 | Meta | 55 | 110 | 4 | 25 | 26 | 35% |
@@ -31,7 +31,7 @@ as settled.
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
-| Cohere | 39 | 52 | 1 | 9 | 29 | 21% |
+| Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 37 | 42 | 0 | 4 | 33 | 10% |
 | Zhipu | 37 | 82 | 3 | 27 | 7 | 61% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
@@ -40,10 +40,10 @@ as settled.
 | Tencent | 31 | 41 | 1 | 19 | 11 | 56% |
 | Baidu | 28 | 35 | 0 | 22 | 6 | 69% |
 | Anthropic | 27 | 132 | 8 | 15 | 4 | 67% |
+| Salesforce | 27 | 27 | 0 | 5 | 22 | 19% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
-| Salesforce | 26 | 26 | 0 | 5 | 21 | 19% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
-| Arcee | 25 | 26 | 0 | 17 | 8 | 69% |
+| Arcee | 25 | 27 | 0 | 17 | 8 | 70% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
@@ -56,7 +56,7 @@ as settled.
 | StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 34 | 1 | 10 | 5 | 50% |
+| MiniMax | 16 | 35 | 1 | 10 | 5 | 51% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 44 | 2 | 9 | 5 | 34% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
@@ -94,10 +94,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1502 | 495 | 1006 | 1 |
+| weights_released | 1508 | 497 | 1010 | 1 |
 | platform_availability | 331 | 326 | 3 | 2 |
-| retired | 299 | 163 | 136 | 0 |
-| api_ga | 242 | 62 | 179 | 1 |
+| retired | 301 | 165 | 136 | 0 |
+| api_ga | 243 | 62 | 180 | 1 |
 | announced | 231 | 50 | 180 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -115,12 +115,12 @@ as settled.
 - Events it wrote: 27 (verified 3, single-source inferred 24)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-22, by reason:
+Declined in the 7 days to 2026-10-23, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 48 |
-| community_lead | 43 |
+| no_dated_event | 59 |
+| community_lead | 52 |
 | not_a_model | 10 |
 | already_recorded | 6 |
 | malformed_candidate | 3 |
