@@ -224,6 +224,7 @@ kimi-k2-6,true,,,,,,262144,262144,text|image|video,text,2025-01,true,,,0.95,4,0.
 kimi-k2-7-code,true,,,,,,262144,262144,text|image|video,text,2025-01,true,,,0.95,4,0.19,2026-09-01,https://models.dev/api.json
 kimi-k2-thinking,true,,,,,,32768,4096,text,text,2024-08,true,,,0.55,2.25,0.275,2026-09-01,https://models.dev/api.json
 kimi-k3,,always_on,,,,,1048576,,text|image|video,text,,true,,,3.00,15.00,,2026-08-25,https://huggingface.co/moonshotai/Kimi-K3
+kimi-k3-1-pro,true,,,,,,1048576,131072,text|image|video,text,,true,,,2,10,0.2,2026-10-24,https://models.dev/api.json
 laguna-s-2-1,true,,,,,,1048576,32768,text,text,,true,,,0,0,0,2026-10-03,https://models.dev/api.json
 laguna-xs-2-1,true,,,,,,262144,32768,text,text,,true,,,0,0,0,2026-10-03,https://models.dev/api.json
 lfm-2-5-24b-a2b,true,,,,,,128000,8192,text,text,,true,,,0.05,0.7,0.025,2026-10-14,https://models.dev/api.json

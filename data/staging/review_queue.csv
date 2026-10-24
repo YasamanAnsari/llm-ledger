@@ -111,6 +111,7 @@ hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-OS-Expert,ledger,meta,,r
 hf_mirror_repo,huggingface,SakanaAI/Llama-3-Karamaru-v1,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,Salesforce/Llama-xLAM-2-8b-fc-r,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/DeepSeek-R1-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,arcee-ai/DeepSeek-V3-0324-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/GLM-4-32B-Base-32K,ledger,zhipu,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/Llama-3-SEC-Base,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/Llama-3.1-SuperNova-Lite,ledger,meta,,re-hosted copy of another lab's weights; not a release

@@ -7,6 +7,7 @@ afm-4-5b-preview,huggingface,arcee-ai/AFM-4.5B-Preview
 ahn-dn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B
+ahn-gdn-for-qwen-2-5-instruct-7b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-7B
 ahn-mamba2-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B
 ahn-mamba2-for-qwen-2-5-instruct-3b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-3B
 ahn-mamba2-for-qwen-2-5-instruct-7b,huggingface,ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-7B
@@ -61,8 +62,10 @@ apriel-nemotron-15b-thinker,huggingface,ServiceNow-AI/Apriel-Nemotron-15b-Thinke
 aprielguard,huggingface,ServiceNow-AI/AprielGuard
 arcee-blitz,huggingface,arcee-ai/Arcee-Blitz
 arcee-lite,huggingface,arcee-ai/arcee-lite
+arcee-maestro-7b-preview,huggingface,arcee-ai/Arcee-Maestro-7B-Preview
 arcee-nova,huggingface,arcee-ai/Arcee-Nova
 arcee-spark,huggingface,arcee-ai/Arcee-Spark
+arcee-supernova-v1,huggingface,arcee-ai/Arcee-SuperNova-v1
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
 armorocr,huggingface,inclusionAI/ArmorOCR
 autoglm-phone-9b,huggingface,zai-org/AutoGLM-Phone-9B
@@ -271,6 +274,7 @@ codegen-6b-mono,huggingface,Salesforce/codegen-6B-mono
 codegen-6b-multi,huggingface,Salesforce/codegen-6B-multi
 codegen2-16b-p,huggingface,Salesforce/codegen2-16B_P
 codegen2-1b-p,huggingface,Salesforce/codegen2-1B_P
+codegen25-7b-instruct-p,huggingface,Salesforce/codegen25-7b-instruct_P
 codegen25-7b-multi-p,huggingface,Salesforce/codegen25-7b-multi_P
 codellama-13b,huggingface,codellama/CodeLlama-13b-hf
 codellama-13b-instruct,huggingface,codellama/CodeLlama-13b-Instruct-hf
@@ -1191,6 +1195,7 @@ granite-3-0-8b-base,huggingface,ibm-granite/granite-3.0-8b-base
 granite-3-0-8b-instruct,huggingface,ibm-granite/granite-3.0-8b-instruct
 granite-3-1-1b-a400m-instruct,huggingface,ibm-granite/granite-3.1-1b-a400m-instruct
 granite-3-1-2b-instruct,huggingface,ibm-granite/granite-3.1-2b-instruct
+granite-3-1-3b-a800m-instruct,huggingface,ibm-granite/granite-3.1-3b-a800m-instruct
 granite-3-1-8b-instruct,huggingface,ibm-granite/granite-3.1-8b-instruct
 granite-3-2-2b-instruct,huggingface,ibm-granite/granite-3.2-2b-instruct
 granite-3-2-8b-instruct,huggingface,ibm-granite/granite-3.2-8b-instruct
@@ -1529,6 +1534,9 @@ kimi-k3,huggingface,moonshotai/Kimi-K3
 kimi-k3,models_dev,cline-pass/cline-pass/kimi-k3
 kimi-k3,openrouter,moonshotai/kimi-k3
 kimi-k3,wikipedia,Kimi (AI)
+kimi-k3-1-pro,epoch,Kimi K3.1 Pro
+kimi-k3-1-pro,models_dev,edenai/moonshot/kimi-k3.1-pro
+kimi-k3-1-pro,openrouter,moonshotai/kimi-k3.1-pro
 kimi-linear-48b-a3b-base,huggingface,moonshotai/Kimi-Linear-48B-A3B-Base
 kimi-linear-48b-a3b-instruct,huggingface,moonshotai/Kimi-Linear-48B-A3B-Instruct
 kimi-vl-a3b-instruct,huggingface,moonshotai/Kimi-VL-A3B-Instruct
@@ -1951,6 +1959,7 @@ minimax-m3,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
 minimax-m3,models_dev,cline-pass/cline-pass/minimax-m3
 minimax-m3,openrouter,minimax/minimax-m3
 minimax-m3-1-flash,huggingface,MiniMaxAI/MiniMax-M3.1-Flash
+minimax-m3-1-flash,models_dev,digitalocean/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,edenai/minimax/MiniMax-M3.1-Flash
 minimax-m3-1-flash,models_dev,venice/minimax-m3-1-flash
 minimax-m3-1-flash,openrouter,minimax/minimax-m3.1-flash
@@ -2271,6 +2280,7 @@ olmo-2-1124-13b-instruct,huggingface,allenai/OLMo-2-1124-13B-Instruct
 olmo-2-1124-7b-instruct,huggingface,allenai/OLMo-2-1124-7B-Instruct
 olmo-2-1124-7b-sft,huggingface,allenai/OLMo-2-1124-7B-SFT
 olmo-3-1-32b-instruct,huggingface,allenai/Olmo-3.1-32B-Instruct
+olmo-3-1-32b-instruct-dpo,huggingface,allenai/Olmo-3.1-32B-Instruct-DPO
 olmo-3-1-32b-think,huggingface,allenai/Olmo-3.1-32B-Think
 olmo-3-1025-7b,huggingface,allenai/Olmo-3-1025-7B
 olmo-3-1125-32b,huggingface,allenai/Olmo-3-1125-32B
@@ -3089,7 +3099,9 @@ v6-finch-14b,huggingface,RWKV/v6-Finch-14B-HF
 v6-finch-1b6,huggingface,RWKV/v6-Finch-1B6-HF
 v6-finch-7b,huggingface,RWKV/v6-Finch-7B-HF
 vicuna-13b-delta-finetuned-langchain-mrkl,huggingface,rinna/vicuna-13b-delta-finetuned-langchain-MRKL
+virtuoso-large,huggingface,arcee-ai/Virtuoso-Large
 virtuoso-lite,huggingface,arcee-ai/Virtuoso-Lite
+virtuoso-medium-v2,huggingface,arcee-ai/Virtuoso-Medium-v2
 virtuoso-small-v2,huggingface,arcee-ai/Virtuoso-Small-v2
 vista-9b,huggingface,inclusionAI/VISTA-9B
 voxtral-mini-3b-2507,huggingface,mistralai/Voxtral-Mini-3B-2507

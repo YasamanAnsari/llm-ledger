@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1751; events: 2722
-- Models: curated 55, corroborated 756, single-source 940
-- Event confidence: verified 1198, inferred 1518, disputed 6
+- Models: 1760; events: 2736
+- Models: curated 55, corroborated 760, single-source 945
+- Event confidence: verified 1202, inferred 1528, disputed 6
 
 ## By organization
 
@@ -21,29 +21,29 @@ as settled.
 | MBZUAI | 71 | 71 | 0 | 6 | 65 | 8% |
 | OpenAI | 70 | 293 | 19 | 46 | 5 | 73% |
 | Mistral | 57 | 106 | 3 | 31 | 23 | 43% |
-| ByteDance | 55 | 70 | 0 | 23 | 32 | 39% |
+| ByteDance | 56 | 71 | 0 | 23 | 33 | 38% |
 | EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
-| Meta | 55 | 110 | 4 | 25 | 26 | 35% |
+| Meta | 55 | 111 | 4 | 26 | 25 | 35% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
-| AI2 | 51 | 51 | 0 | 14 | 37 | 27% |
+| AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
 | Google | 51 | 147 | 7 | 26 | 18 | 44% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 62% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
 | Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
-| IBM | 37 | 42 | 0 | 4 | 33 | 10% |
+| IBM | 38 | 43 | 0 | 4 | 34 | 9% |
 | Zhipu | 37 | 82 | 3 | 27 | 7 | 61% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 31 | 41 | 1 | 19 | 11 | 56% |
+| Arcee | 29 | 31 | 0 | 17 | 12 | 61% |
 | Baidu | 28 | 35 | 0 | 22 | 6 | 69% |
+| Salesforce | 28 | 28 | 0 | 5 | 23 | 18% |
 | Anthropic | 27 | 132 | 8 | 15 | 4 | 67% |
-| Salesforce | 27 | 27 | 0 | 5 | 22 | 19% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
-| Arcee | 25 | 27 | 0 | 17 | 8 | 70% |
 | Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
@@ -57,10 +57,10 @@ as settled.
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 35 | 1 | 10 | 5 | 51% |
+| Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| xAI | 16 | 44 | 2 | 9 | 5 | 34% |
+| xAI | 16 | 46 | 2 | 11 | 3 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
-| Moonshot | 15 | 37 | 0 | 14 | 1 | 57% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
@@ -94,11 +94,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1508 | 497 | 1010 | 1 |
-| platform_availability | 331 | 326 | 3 | 2 |
-| retired | 301 | 165 | 136 | 0 |
-| api_ga | 243 | 62 | 180 | 1 |
-| announced | 231 | 50 | 180 | 1 |
+| weights_released | 1516 | 497 | 1018 | 1 |
+| platform_availability | 332 | 327 | 3 | 2 |
+| retired | 304 | 168 | 136 | 0 |
+| api_ga | 244 | 62 | 181 | 1 |
+| announced | 232 | 50 | 181 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -115,12 +115,12 @@ as settled.
 - Events it wrote: 27 (verified 3, single-source inferred 24)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-23, by reason:
+Declined in the 7 days to 2026-10-24, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 59 |
-| community_lead | 52 |
+| no_dated_event | 63 |
+| community_lead | 61 |
 | not_a_model | 10 |
 | already_recorded | 6 |
 | malformed_candidate | 3 |

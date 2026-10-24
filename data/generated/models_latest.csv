@@ -1,4 +1,5 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-10-23,api_ga,inferred,kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,Kimi K3.1,pro,vlm,api_only,proprietary
 2026-10-17,weights_released,inferred,deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,DeepSeek V4,mini,llm,open_weights,
 2026-10-17,weights_released,inferred,deepseek-v4-flash-vision-exp,deepseek-v4-flash-vision-exp,deepseek,DeepSeek-V4,vision,vlm,open_weights,proprietary
 2026-10-17,weights_released,verified,minimax-m3-1-flash,minimax-m3-1-flash,minimax,minimax-m3-1,mini,vlm,open_weights,
@@ -583,6 +584,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-11-19,weights_released,inferred,zaya1-reasoning-base,ZAYA1-reasoning-base,zyphra,ZAYA1,thinking,llm,open_weights,osi_approved
 2025-11-18,api_ga,inferred,gemini-3-pro,Gemini 3 Pro,google,Gemini 3,pro,vlm,api_only,proprietary
 2025-11-18,weights_released,verified,hunyuanocr,HunyuanOCR,tencent,HunyuanOCR,,vlm,open_weights,
+2025-11-18,weights_released,inferred,olmo-3-1-32b-instruct-dpo,Olmo-3.1-32B-Instruct-DPO,allenai,Olmo-3.1-DPO,instruct,llm,open_weights,osi_approved
 2025-11-18,weights_released,verified,olmo-3-7b-think,Olmo-3-7B-Think,allenai,Olmo-3,thinking,llm,open_weights,osi_approved
 2025-11-18,weights_released,verified,olmo-3-7b-think-dpo,Olmo-3-7B-Think-DPO,allenai,Olmo-3-DPO,thinking,llm,open_weights,osi_approved
 2025-11-17,consumer_rollout,verified,grok-4-1,Grok 4.1,xai,Grok 4,base,llm,api_only,proprietary
@@ -657,6 +659,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-08,weights_released,verified,ahn-dn-for-qwen-2-5-instruct-14b,AHN-DN-for-Qwen-2.5-Instruct-14B,bytedance,AHN-DN-for-Qwen-2.5,instruct,llm,open_weights,osi_approved
 2025-10-08,weights_released,verified,ahn-gdn-for-qwen-2-5-instruct-14b,AHN-GDN-for-Qwen-2.5-Instruct-14B,bytedance,AHN-GDN-for-Qwen-2.5,instruct,llm,open_weights,osi_approved
 2025-10-08,weights_released,verified,ahn-gdn-for-qwen-2-5-instruct-3b,AHN-GDN-for-Qwen-2.5-Instruct-3B,bytedance,AHN-GDN-for-Qwen-2.5,instruct,llm,open_weights,
+2025-10-08,weights_released,inferred,ahn-gdn-for-qwen-2-5-instruct-7b,AHN-GDN-for-Qwen-2.5-Instruct-7B,bytedance,AHN-GDN-for-Qwen-2.5,instruct,llm,open_weights,osi_approved
 2025-10-08,weights_released,verified,ahn-mamba2-for-qwen-2-5-instruct-14b,AHN-Mamba2-for-Qwen-2.5-Instruct-14B,bytedance,AHN-Mamba2-for-Qwen-2.5,instruct,llm,open_weights,osi_approved
 2025-10-08,weights_released,verified,ahn-mamba2-for-qwen-2-5-instruct-3b,AHN-Mamba2-for-Qwen-2.5-Instruct-3B,bytedance,AHN-Mamba2-for-Qwen-2.5,instruct,llm,open_weights,
 2025-10-08,weights_released,verified,ahn-mamba2-for-qwen-2-5-instruct-7b,AHN-Mamba2-for-Qwen-2.5-Instruct-7B,bytedance,AHN-Mamba2-for-Qwen-2.5,instruct,llm,open_weights,osi_approved
@@ -873,7 +876,9 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-06-11,weights_released,inferred,flexolmo-7x7b-1t,FlexOlmo-7x7B-1T,allenai,FlexOlmo,,llm,open_weights,osi_approved
 2025-06-11,weights_released,inferred,kanana-1-5-15-7b-a3b-base,kanana-1.5-15.7b-a3b-base,kakao,kanana-1.5,base,llm,open_weights,
 2025-06-11,weights_released,inferred,skywork-swe-32b,Skywork-SWE-32B,skywork,Skywork-SWE,,llm,open_weights,osi_approved
+2025-06-10,weights_released,inferred,arcee-supernova-v1,Arcee-SuperNova-v1,arcee,Arcee-SuperNova-v1,,llm,open_weights,open_weights_restricted
 2025-06-10,api_ga,verified,o3-pro,o3-pro,openai,o3,pro,vlm,api_only,proprietary
+2025-06-09,weights_released,inferred,virtuoso-large,Virtuoso-Large,arcee,Virtuoso,,llm,open_weights,
 2025-06-06,weights_released,inferred,motif-2-6b,Motif-2.6B,motif-technologies,Motif,,llm,open_weights,osi_approved
 2025-06-05,api_ga,inferred,gemini-2-5-pro-preview,gemini-2.5-pro-preview,google,gemini-2.5,pro,vlm,api_only,proprietary
 2025-06-05,weights_released,verified,minicpm4-0-5b,MiniCPM4-0.5B,openbmb,MiniCPM4,,llm,open_weights,osi_approved
@@ -1061,6 +1066,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-02-12,weights_released,inferred,deephermes-3-llama-3-8b-preview,DeepHermes-3-Llama-3-8B-Preview,nous-research,DeepHermes-3-Llama-3,,llm,open_weights,open_weights_restricted
 2025-02-12,platform_availability_fallback,verified,o3-mini-high,o3-mini-high,openai,o3-high,mini,llm,api_only,proprietary
 2025-02-11,weights_released,inferred,zamba2-7b-instruct-v2,Zamba2-7B-Instruct-v2,zyphra,Zamba2-v2,instruct,llm,open_weights,osi_approved
+2025-02-10,weights_released,inferred,arcee-maestro-7b-preview,Arcee-Maestro-7B-Preview,arcee,Arcee-Maestro,,llm,open_weights,osi_approved
 2025-02-08,weights_released,inferred,smolvlm2-2-2b-instruct,SmolVLM2-2.2B-Instruct,huggingface,SmolVLM2,instruct,vlm,open_weights,osi_approved
 2025-02-07,weights_released,inferred,arcee-blitz,Arcee-Blitz,arcee,Arcee-Blitz,,llm,open_weights,osi_approved
 2025-02-07,weights_released,inferred,plamo-2-8b,plamo-2-8b,pfn,plamo-2,,llm,open_weights,
@@ -1074,6 +1080,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-01-27,weights_released,inferred,olmoe-1b-7b-0125-instruct,OLMoE-1B-7B-0125-Instruct,allenai,OLMoE,instruct,llm,open_weights,osi_approved
 2025-01-27,platform_availability_fallback,verified,sonar,Sonar,perplexity,Sonar,,llm,api_only,proprietary
 2025-01-27,api_ga,inferred,sonar-reasoning,Sonar Reasoning,perplexity,Sonar,thinking,llm,api_only,proprietary
+2025-01-27,weights_released,inferred,virtuoso-medium-v2,Virtuoso-Medium-v2,arcee,Virtuoso-v2,,llm,open_weights,osi_approved
 2025-01-26,weights_released,verified,qwen2-5-vl-3b-instruct,Qwen2.5-VL-3B-Instruct,alibaba,Qwen2.5,instruct,vlm,open_weights,
 2025-01-26,weights_released,inferred,qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,Qwen2.5,vision,vlm,open_weights,
 2025-01-26,weights_released,verified,qwen2-5-vl-7b-instruct,Qwen2.5-VL-7B,alibaba,Qwen2.5,vision,vlm,open_weights,
@@ -1139,6 +1146,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-12-10,weights_released,verified,rwkv-7-world,rwkv-7-world,rwkv,rwkv-7-world,,llm,open_weights,osi_approved
 2024-12-06,weights_released,inferred,granite-3-1-1b-a400m-instruct,granite-3.1-1b-a400m-instruct,ibm,granite-3.1,instruct,llm,open_weights,osi_approved
 2024-12-06,weights_released,inferred,granite-3-1-2b-instruct,granite-3.1-2b-instruct,ibm,granite-3.1,instruct,llm,open_weights,osi_approved
+2024-12-06,weights_released,inferred,granite-3-1-3b-a800m-instruct,granite-3.1-3b-a800m-instruct,ibm,granite-3.1,instruct,llm,open_weights,osi_approved
 2024-12-06,weights_released,inferred,granite-3-1-8b-instruct,granite-3.1-8b-instruct,ibm,granite-3.1,instruct,llm,open_weights,osi_approved
 2024-12-06,weights_released,inferred,llama-3-3-70b-instruct,Llama 3.3 70B,meta,Llama 3.3,,llm,open_weights,
 2024-12-05,api_ga,inferred,nova-lite-v1,nova-lite-v1,amazon,nova-v1,mini,llm,api_only,proprietary
@@ -1600,6 +1608,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-07-11,api_ga,verified,claude-2,Claude 2,anthropic,Claude 2,base,llm,api_only,proprietary
 2023-07-08,weights_released,verified,baichuan-13b-base,Baichuan-13B-Base,baichuan,Baichuan,base,llm,open_weights,
 2023-07-08,weights_released,verified,baichuan-13b-chat,Baichuan-13B-Chat,baichuan,Baichuan,chat,llm,open_weights,
+2023-07-06,weights_released,inferred,codegen25-7b-instruct-p,codegen25-7b-instruct_P,salesforce,codegen25_P,instruct,llm,open_weights,
 2023-07-06,weights_released,inferred,codegen25-7b-multi-p,codegen25-7b-multi_P,salesforce,codegen25-multi_P,,llm,open_weights,osi_approved
 2023-07-06,weights_released,verified,internlm-7b,internlm-7b,shanghai-ai-lab,internlm,,llm,open_weights,
 2023-07-06,weights_released,verified,internlm-chat-7b,internlm-chat-7b,shanghai-ai-lab,internlm,chat,llm,open_weights,

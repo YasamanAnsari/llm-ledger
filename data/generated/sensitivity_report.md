@@ -7,12 +7,12 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=123)
+- median 0d (IQR 0-2d, n=124)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 79 |
+| same day | 80 |
 | 1-7d | 16 |
 | 8-30d | 6 |
 | 31-90d | 9 |
@@ -148,5 +148,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1746
-- models with announced + an availability event: 212
+- models with an anchor event: 1755
+- models with announced + an availability event: 213
