@@ -9,36 +9,36 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1760; events: 2736
-- Models: curated 55, corroborated 760, single-source 945
-- Event confidence: verified 1202, inferred 1528, disputed 6
+- Models: 1762; events: 2738
+- Models: curated 55, corroborated 763, single-source 944
+- Event confidence: verified 1206, inferred 1526, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 87 | 193 | 2 | 73 | 12 | 56% |
-| MBZUAI | 71 | 71 | 0 | 6 | 65 | 8% |
+| MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 70 | 293 | 19 | 46 | 5 | 73% |
 | Mistral | 57 | 106 | 3 | 31 | 23 | 43% |
-| ByteDance | 56 | 71 | 0 | 23 | 33 | 38% |
+| ByteDance | 56 | 71 | 0 | 24 | 32 | 39% |
 | EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
 | Meta | 55 | 111 | 4 | 26 | 25 | 35% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
 | Google | 51 | 147 | 7 | 26 | 18 | 44% |
 | Ant Group | 49 | 58 | 0 | 35 | 14 | 62% |
+| Shanghai AI Lab | 47 | 47 | 0 | 38 | 9 | 81% |
 | TII | 47 | 47 | 0 | 4 | 43 | 9% |
-| Shanghai AI Lab | 46 | 46 | 0 | 37 | 9 | 80% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
-| Zhipu | 37 | 82 | 3 | 27 | 7 | 61% |
+| Zhipu | 37 | 82 | 3 | 27 | 7 | 62% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Tencent | 31 | 41 | 1 | 19 | 11 | 56% |
-| Arcee | 29 | 31 | 0 | 17 | 12 | 61% |
+| Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
 | Baidu | 28 | 35 | 0 | 22 | 6 | 69% |
 | Salesforce | 28 | 28 | 0 | 5 | 23 | 18% |
 | Anthropic | 27 | 132 | 8 | 15 | 4 | 67% |
@@ -94,9 +94,9 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1516 | 497 | 1018 | 1 |
+| weights_released | 1518 | 500 | 1017 | 1 |
 | platform_availability | 332 | 327 | 3 | 2 |
-| retired | 304 | 168 | 136 | 0 |
+| retired | 304 | 169 | 135 | 0 |
 | api_ga | 244 | 62 | 181 | 1 |
 | announced | 232 | 50 | 181 | 1 |
 | consumer_rollout | 30 | 23 | 7 | 0 |
@@ -115,12 +115,12 @@ as settled.
 - Events it wrote: 27 (verified 3, single-source inferred 24)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-24, by reason:
+Declined in the 7 days to 2026-10-25, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 63 |
-| community_lead | 61 |
+| community_lead | 75 |
+| no_dated_event | 64 |
 | not_a_model | 10 |
 | already_recorded | 6 |
 | malformed_candidate | 3 |

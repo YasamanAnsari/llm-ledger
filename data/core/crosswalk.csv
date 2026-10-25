@@ -925,6 +925,7 @@ gpt-3-5-turbo,openai_api,gpt-3.5-turbo
 gpt-3-5-turbo,openai_api,gpt-3.5-turbo-0125
 gpt-3-5-turbo,openai_api,gpt-3.5-turbo-1106
 gpt-3-5-turbo,openrouter,openai/gpt-3.5-turbo
+gpt-3-5-turbo,openrouter,openai/gpt-3.5-turbo-0613
 gpt-3-5-turbo-16k,models_dev,kilo/openai/gpt-3.5-turbo-16k
 gpt-3-5-turbo-16k,openai_api,gpt-3.5-turbo-16k
 gpt-3-5-turbo-16k,openrouter,openai/gpt-3.5-turbo-16k
@@ -1436,6 +1437,7 @@ jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
 januscoder-14b,huggingface,internlm/JanusCoder-14B
 januscoderv-7b,huggingface,internlm/JanusCoderV-7B
+januscoderv-8b,huggingface,internlm/JanusCoderV-8B
 japanese-gpt-neox-3-6b-instruction-ppo,huggingface,rinna/japanese-gpt-neox-3.6b-instruction-ppo
 japanese-gpt-neox-3-6b-instruction-sft-v2,huggingface,rinna/japanese-gpt-neox-3.6b-instruction-sft-v2
 japanese-gpt-neox-small,huggingface,rinna/japanese-gpt-neox-small
@@ -1595,7 +1597,9 @@ lfm2-5-1-2b-jp,huggingface,LiquidAI/LFM2.5-1.2B-JP
 lfm2-5-1-2b-jp-202606,huggingface,LiquidAI/LFM2.5-1.2B-JP-202606
 lfm2-5-1-2b-thinking,huggingface,LiquidAI/LFM2.5-1.2B-Thinking
 lfm2-5-2-6b,huggingface,LiquidAI/LFM2.5-2.6B
+lfm2-5-2-6b,models_dev,kilo/liquid/lfm-2.5-2.6b
 lfm2-5-2-6b,models_dev,kilo/liquid/lfm-2.5-2.6b:free
+lfm2-5-2-6b,openrouter,liquid/lfm-2.5-2.6b
 lfm2-5-2-6b,openrouter,liquid/lfm-2.5-2.6b:free
 lfm2-5-2-6b-base,huggingface,LiquidAI/LFM2.5-2.6B-Base
 lfm2-5-2-6b-dspark,huggingface,LiquidAI/LFM2.5-2.6B-DSpark
@@ -1821,6 +1825,7 @@ magistral-small-2506,huggingface,mistralai/Magistral-Small-2506
 magistral-small-2509,huggingface,mistralai/Magistral-Small-2509
 mamba-codestral-7b-v0-1,huggingface,mistralai/Mamba-Codestral-7B-v0.1
 mbzuai-ain,huggingface,MBZUAI/AIN
+mbzuai-k2,huggingface,IFM/K2
 medgemma-1-5-4b-it,huggingface,google/medgemma-1.5-4b-it
 medgemma-27b-it,huggingface,google/medgemma-27b-it
 medgemma-4b-it,huggingface,google/medgemma-4b-it
@@ -1959,6 +1964,7 @@ minimax-m3,huggingface,MiniMaxAI/MiniMax-M3-MXFP8
 minimax-m3,models_dev,cline-pass/cline-pass/minimax-m3
 minimax-m3,openrouter,minimax/minimax-m3
 minimax-m3-1-flash,huggingface,MiniMaxAI/MiniMax-M3.1-Flash
+minimax-m3-1-flash,models_dev,cortecs/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,digitalocean/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,edenai/minimax/MiniMax-M3.1-Flash
 minimax-m3-1-flash,models_dev,venice/minimax-m3-1-flash
@@ -2371,6 +2377,7 @@ palo-7b,huggingface,MBZUAI/PALO-7B
 paralleltubedecoding-qwen3-vl-4b,huggingface,MBZUAI/ParallelTubeDecoding-Qwen3-VL-4B
 perceptron-mk1,models_dev,kilo/perceptron/perceptron-mk1
 perceptron-mk1,openrouter,perceptron/perceptron-mk1
+perceptron-mk1-5,models_dev,aimlapi/perceptron/perceptron-mk1.5
 perceptron-mk1-5,models_dev,kilo/perceptron/perceptron-mk1.5
 perceptron-mk1-5,openrouter,perceptron/perceptron-mk1.5
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control
