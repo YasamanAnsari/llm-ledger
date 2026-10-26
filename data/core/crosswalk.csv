@@ -140,6 +140,7 @@ c4ai-command-r7b-arabic-02-2025,huggingface,CohereLabs/c4ai-command-r7b-arabic-0
 cadd-base-7b,huggingface,apple/CADD-Base-7B
 camel-5b,huggingface,Writer/camel-5b-hf
 caprl-3b,huggingface,internlm/CapRL-3B
+caprl-eval-3b,huggingface,internlm/CapRL-Eval-3B
 caprl-internvl3-5-8b,huggingface,internlm/CapRL-InternVL3.5-8B
 caprl-qwen3vl-2b,huggingface,internlm/CapRL-Qwen3VL-2B
 caprl-qwen3vl-4b,huggingface,internlm/CapRL-Qwen3VL-4B
@@ -197,6 +198,7 @@ claude-haiku-4-5,models_dev,302ai/claude-haiku-4-5
 claude-haiku-4-5,models_dev,helicone/claude-haiku-4-5-20251001
 claude-haiku-4-5,openrouter,anthropic/claude-haiku-4.5
 claude-haiku-5-5,anthropic_api,claude-haiku-5-5
+claude-haiku-5-5,epoch,Claude Haiku 5.5
 claude-haiku-5-5,models_dev,302ai/claude-haiku-5-5
 claude-haiku-5-5,models_dev,amazon-bedrock/anthropic.claude-haiku-5-5
 claude-haiku-5-5,openrouter,anthropic/claude-haiku-5.5
@@ -560,6 +562,7 @@ falcon-7b-instruct,huggingface,tiiuae/falcon-7b-instruct
 falcon-e-1b-base,huggingface,tiiuae/Falcon-E-1B-Base
 falcon-e-1b-instruct,huggingface,tiiuae/Falcon-E-1B-Instruct
 falcon-e-3b-base,huggingface,tiiuae/Falcon-E-3B-Base
+falcon-e-3b-base-prequantized,huggingface,tiiuae/Falcon-E-3B-Base-prequantized
 falcon-e-3b-instruct,huggingface,tiiuae/Falcon-E-3B-Instruct
 falcon-h1-0-5b-base,huggingface,tiiuae/Falcon-H1-0.5B-Base
 falcon-h1-0-5b-instruct,huggingface,tiiuae/Falcon-H1-0.5B-Instruct
@@ -1466,6 +1469,7 @@ k2-horizon-mova-36b-a4b,huggingface,IFM/K2-Horizon-MoVA-36B-A4B
 k2-horizon-mova-36b-a4b,huggingface,IFM/K2-Horizon-MoVA-36B-A4B-FP8
 k2-merged-3-5t,huggingface,NousResearch/k2-merged-3.5T-bf16
 k2-think,epoch,K2 Think
+k2-think,huggingface,IFM/K2-Think
 k2-think,models_dev,nano-gpt/LLM360/K2-Think
 k2-think-v2,huggingface,IFM/K2-Think-V2
 k2-type-0-9b,huggingface,IFM/K2-Type-0.9B
@@ -1840,6 +1844,7 @@ mercury-2,models_dev,aimlapi/inception/mercury-2
 mercury-2,models_dev,nano-gpt/mercury-2
 mercury-2,models_dev,venice/mercury-2
 mercury-2,openrouter,inception/mercury-2
+mercury-2-5,epoch,Mercury 2.5
 mercury-2-5,models_dev,aimlapi/inception/mercury-2.5
 mercury-2-5,models_dev,inception/mercury-2.5
 mercury-2-5,openrouter,inception/mercury-2.5
@@ -1982,6 +1987,7 @@ ministral-14b-2512,models_dev,302ai/ministral-14b-2512
 ministral-14b-2512,models_dev,aimlapi/mistralai/ministral-14b-2512
 ministral-14b-2512,models_dev,kilo/mistralai/ministral-14b-2512
 ministral-14b-2512,openrouter,mistralai/ministral-14b-2512
+ministral-3-14b-base-2512,huggingface,mistralai/Ministral-3-14B-Base-2512
 ministral-3-14b-reasoning-2512,huggingface,mistralai/Ministral-3-14B-Reasoning-2512
 ministral-3-3b-base-2512,huggingface,mistralai/Ministral-3-3B-Base-2512
 ministral-3-3b-reasoning-2512,huggingface,mistralai/Ministral-3-3B-Reasoning-2512
@@ -2155,6 +2161,7 @@ muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 muse-spark-open,epoch,Muse Spark Open
 muse-spark-open,models_dev,cloudflare-ai-gateway/meta/muse-spark-open
 muse-spark-open,openrouter,meta/muse-spark-open
+muse-wonder,epoch,Muse Wonder
 muse-wonder,models_dev,kilo/meta/muse-wonder
 muse-wonder,openrouter,meta/muse-wonder
 nanowhale-100m,huggingface,HuggingFaceTB/nanowhale-100m
@@ -2345,6 +2352,7 @@ openreasoning-nemotron-32b,epoch,OpenReasoning-Nemotron-32B
 openreasoning-nemotron-32b,models_dev,nano-gpt/pamanseau/OpenReasoning-Nemotron-32B
 opt-125m,huggingface,facebook/opt-125m
 opt-350m,huggingface,facebook/opt-350m
+oreal-deepseek-r1-distill-qwen-7b,huggingface,internlm/OREAL-DeepSeek-R1-Distill-Qwen-7B
 ouro-1-4b,huggingface,ByteDance/Ouro-1.4B
 ouro-1-4b-thinking,huggingface,ByteDance/Ouro-1.4B-Thinking
 ouro-2-6b,huggingface,ByteDance/Ouro-2.6B
@@ -2384,6 +2392,7 @@ pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control
 pharia-1-llm-7b-control,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-hf
 pharia-1-llm-7b-control-aligned,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-aligned
 pharia-1-llm-7b-control-aligned,huggingface,Aleph-Alpha/Pharia-1-LLM-7B-control-aligned-hf
+phi-1-5,huggingface,microsoft/phi-1_5
 phi-2,huggingface,microsoft/phi-2
 phi-3-5-mini-instruct,huggingface,microsoft/Phi-3.5-mini-instruct
 phi-3-5-moe-instruct,huggingface,microsoft/Phi-3.5-MoE-instruct
@@ -3114,6 +3123,8 @@ vista-9b,huggingface,inclusionAI/VISTA-9B
 voxtral-mini-3b-2507,huggingface,mistralai/Voxtral-Mini-3B-2507
 voxtral-small-24b-2507,models_dev,evroc/mistralai/Voxtral-Small-24B-2507
 voxtral-small-24b-2507,openrouter,mistralai/voxtral-small-24b-2507
+wevisone-vl-2b,huggingface,tencent/WeVisOne-VL-2B
+wevisone-vl-4b,huggingface,tencent/WeVisOne-VL-4B
 wildguard,huggingface,allenai/wildguard
 wizardlm-2-8x22b,epoch,WizardLM-2 8x22B
 wizardlm-2-8x22b,models_dev,kilo/microsoft/wizardlm-2-8x22b

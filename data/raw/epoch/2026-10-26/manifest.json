@@ -1,0 +1,8 @@
+{
+  "all_ai_models.csv": {
+    "bytes": 6835396,
+    "fetched_at": "2026-10-26T13:08:43+00:00",
+    "sha256": "b8d55512966b52e09474abe6c8326aa73d5bb41e038b5a383b94f93c41951ade",
+    "url": "https://epoch.ai/data/all_ai_models.csv"
+  }
+}
