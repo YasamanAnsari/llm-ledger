@@ -41,6 +41,7 @@ gpt-audio-mini-api_ga-1,gpt-audio-mini,api_ga,,models.dev,https://models.dev/api
 gpt-audio-mini-retired-2,gpt-audio-mini,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-04-06,2027-06-15,70,2026-10-03
 gpt-oss-120b-retired-1,gpt-oss-120b,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-07-01,2027-09-15,76,2026-10-23
 gpt-oss-20b-retired-1,gpt-oss-20b,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-14,2026-09-15,1,2026-10-03
+granite-4-0-h-micro-weights_released-1,granite-4-0-h-micro,weights_released,,models.dev,https://models.dev/api.json,false,2025-10-20,2025-10-02,-18,2026-10-27
 granite-4-2-8b-weights_released-1,granite-4-2-8b,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-31,2026-08-25,-6,2026-10-21
 hy-mt2-1-8b-weights_released-1,hy-mt2-1-8b,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-20,2026-05-21,-91,2026-10-20
 hy-mt2-30b-a3b-weights_released-1,hy-mt2-30b-a3b,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-20,2026-05-21,-91,2026-10-20

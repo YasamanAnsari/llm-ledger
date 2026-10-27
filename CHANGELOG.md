@@ -387,3 +387,9 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `cohere-transcribe-arabic-announced-1` 2026-07-07 inferred (vendor_blog; evidence: "Today, we are releasing Cohere Transcribe Arabic as an open-source model.")
 - `cohere-transcribe-arabic-api_ga-1` 2026-07-07 inferred (vendor_blog; evidence: "Cohere Transcribe Arabic is also available through the Cohere API with free access subject to rate limits.")
 - `cohere-transcribe-announced-1` 2026-03-01 inferred (vendor_blog; evidence: "We started with Cohere Transcribe (launched in March with leading English-language accuracy and broad multilingual coverage)")
+
+## 2026-10-27
+
+- `gpt-6-1-terra-announced-1` 2026-10-26 inferred (vendor_blog; evidence: "We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more na)
+- `gpt-6-1-terra-consumer_rollout-1` 2026-10-26 inferred (vendor_blog; evidence: "Starting today, GPT-6.1 Terra is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.")
+- `gpt-6-1-terra-system_card-1` 2026-10-26 inferred (vendor_blog; evidence: "More detail is available in the system card")

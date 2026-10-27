@@ -449,6 +449,7 @@ deepseek-v4-flash-vision-exp,models_dev,above/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,models_dev,aihubmix/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,models_dev,crossmodel/deepseek/deepseek-v4-flash-vision-exp
 deepseek-v4-flash-vision-exp,openrouter,deepseek/deepseek-v4-flash-vision-exp
+deepseek-v4-pro,epoch,DeepSeek V4 Pro 0813
 deepseek-v4-pro,epoch,DeepSeek-V4-Pro
 deepseek-v4-pro,huggingface,deepseek-ai/DeepSeek-V4-Pro
 deepseek-v4-pro,huggingface,deepseek-ai/DeepSeek-V4-Pro-0813
@@ -489,10 +490,22 @@ dots-ocr-base,huggingface,dots-studio/dots.ocr.base
 dots-vlm1-inst,huggingface,dots-studio/dots.vlm1.inst
 dots3-note-prev,huggingface,dots-studio/dots3-note-prev
 dots3-note-prev,huggingface,dots-studio/dots3-note-prev-fp8
+doubao-seed-1-6,epoch,Doubao-Seed-1.6
+doubao-seed-1-6,models_dev,qiniu-ai/doubao-seed-1.6
+doubao-seed-1-6-flash,epoch,Doubao-Seed-1.6 Flash
+doubao-seed-1-6-flash,models_dev,qiniu-ai/doubao-seed-1.6-flash
 doubao-seed-1-8,epoch,Doubao Seed 1.8
 doubao-seed-1-8,models_dev,ofox/volcengine/doubao-seed-1-8
 doubao-seed-1-8,models_dev,zenmux/bytedance/doubao-seed-1.8
 doubao-seed-1-8,models_dev,zenmux/volcengine/doubao-seed-1.8
+doubao-seed-2-0-code,epoch,Doubao Seed 2.0 Code
+doubao-seed-2-0-code,models_dev,ofox/volcengine/doubao-seed-2.0-code
+doubao-seed-2-0-lite,epoch,Doubao Seed 2.0 Lite
+doubao-seed-2-0-lite,models_dev,ofox/volcengine/doubao-seed-2.0-lite
+doubao-seed-2-0-mini,epoch,Doubao Seed 2.0 Mini
+doubao-seed-2-0-mini,models_dev,ofox/volcengine/doubao-seed-2.0-mini
+doubao-seed-2-0-pro,epoch,Doubao-Seed-2.0 Pro
+doubao-seed-2-0-pro,models_dev,aihubmix/doubao-seed-2-0-pro
 doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
@@ -582,6 +595,7 @@ falcon-h1-tiny-multilingual-100m-base,huggingface,tiiuae/Falcon-H1-Tiny-Multilin
 falcon-h1-tiny-multilingual-100m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Instruct
 falcon-h1-tiny-r-0-6b,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B
 falcon-h1-tiny-r-90m,huggingface,tiiuae/Falcon-H1-Tiny-R-90M
+falcon-h1-tiny-tool-calling-90m,huggingface,tiiuae/Falcon-H1-Tiny-Tool-Calling-90M
 falcon-h1r-7b,huggingface,tiiuae/Falcon-H1R-7B
 falcon-mamba-7b,huggingface,tiiuae/falcon-mamba-7b
 falcon-mamba-7b-instruct,huggingface,tiiuae/falcon-mamba-7b-instruct
@@ -774,8 +788,13 @@ gemma-4-31b-it,huggingface,google/gemma-4-31B-it
 gemma-4-31b-it,models_dev,abacus/google/gemma-4-31b-it
 gemma-4-31b-it,openrouter,google/gemma-4-31b-it
 gemma-4-31b-it-qat-q4-0-unquantized,huggingface,google/gemma-4-31B-it-qat-q4_0-unquantized
+gemma-4-e2b,epoch,Gemma 4 E2B
+gemma-4-e2b,models_dev,amazon-bedrock/google.gemma-4-e2b
+gemma-4-e4b-it,epoch,Gemma 4 E4B
+gemma-4-e4b-it,models_dev,deepinfra/google/gemma-4-E4B-it
 gemma-sea-lion-v4-27b-it,epoch,Gemma-SEA-LION-v4-27B-IT
 gemma-sea-lion-v4-27b-it,models_dev,nano-gpt/aisingapore/Gemma-SEA-LION-v4-27B-IT
+gemma-sea-lion-v4-27b-it,models_dev,nano-gpt/aisingapore/gemma-sea-lion-v4-27b-it
 generrna,huggingface,pfnet/GenerRNA
 geochat-7b,huggingface,MBZUAI/geochat-7B
 gfusion-10b-a1-8b,huggingface,ai-sage/GFusion-10B-A1.8B
@@ -924,6 +943,7 @@ gpt-3-5,text_surface_forms,chatgpt
 gpt-3-5-turbo,epoch,GPT-3.5 Turbo
 gpt-3-5-turbo,models_dev,aimlapi/openai/gpt-3.5-turbo
 gpt-3-5-turbo,models_dev,edenai/openai/gpt-3.5-turbo
+gpt-3-5-turbo,models_dev,impossibl/openai/gpt-3.5-turbo
 gpt-3-5-turbo,openai_api,gpt-3.5-turbo
 gpt-3-5-turbo,openai_api,gpt-3.5-turbo-0125
 gpt-3-5-turbo,openai_api,gpt-3.5-turbo-1106
@@ -938,6 +958,7 @@ gpt-3-5-turbo-instruct,openai_api,gpt-3.5-turbo-instruct
 gpt-3-5-turbo-instruct,openai_api,gpt-3.5-turbo-instruct-0914
 gpt-3-5-turbo-instruct,openrouter,openai/gpt-3.5-turbo-instruct
 gpt-4,models_dev,aimlapi/openai/gpt-4
+gpt-4,models_dev,edenai/microsoft/gpt-4
 gpt-4,models_dev,edenai/openai/gpt-4
 gpt-4,openai_api,gpt-4
 gpt-4,openai_api,gpt-4-0613
@@ -965,6 +986,7 @@ gpt-4-1-nano,openrouter,openai/gpt-4.1-nano
 gpt-4-5,openai_api,gpt-4.5-preview
 gpt-4-5,wikipedia,GPT-4.5
 gpt-4-turbo,models_dev,aimlapi/openai/gpt-4-turbo
+gpt-4-turbo,models_dev,azure/gpt-4-turbo
 gpt-4-turbo,models_dev,poe/openai/gpt-4-turbo
 gpt-4-turbo,openai_api,gpt-4-turbo
 gpt-4-turbo,openai_api,gpt-4-turbo-2024-04-09
@@ -1142,6 +1164,12 @@ gpt-6-1-sol,openai_api,gpt-6.1-sol
 gpt-6-1-sol,openrouter,openai/gpt-6.1-sol
 gpt-6-1-sol-pro,models_dev,kilo/openai/gpt-6.1-sol-pro
 gpt-6-1-sol-pro,openrouter,openai/gpt-6.1-sol-pro
+gpt-6-1-terra,epoch,GPT-6.1 Terra
+gpt-6-1-terra,models_dev,aimlapi/openai/gpt-6.1-terra
+gpt-6-1-terra,openai_api,gpt-6.1-terra
+gpt-6-1-terra,openrouter,openai/gpt-6.1-terra
+gpt-6-1-terra-pro,models_dev,kilo/openai/gpt-6.1-terra-pro
+gpt-6-1-terra-pro,openrouter,openai/gpt-6.1-terra-pro
 gpt-6-astra,epoch,GPT-6 Astra
 gpt-6-astra,models_dev,infer/infer/gpt-6-astra:official
 gpt-6-astra,models_dev,llmgateway/gpt-6-astra
@@ -1644,6 +1672,7 @@ ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,models_dev,kilo/inclusionai/ling-3.0-flash-fin:free
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin
 ling-3-0-flash-fin,openrouter,inclusionai/ling-3.0-flash-fin:free
+ling-3-0-flash-sante,huggingface,inclusionAI/Ling-3.0-flash-Sante
 ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante
 ling-3-0-flash-sante,models_dev,kilo/inclusionai/ling-3.0-flash-sante:free
 ling-3-0-flash-sante,openrouter,inclusionai/ling-3.0-flash-sante
@@ -1665,6 +1694,7 @@ ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
 ling-lite,huggingface,inclusionAI/Ling-lite
 ling-lite-1-5,huggingface,inclusionAI/Ling-lite-1.5
+ling-lite-1-5-2507,huggingface,inclusionAI/Ling-lite-1.5-2507
 ling-mini-2-0,huggingface,inclusionAI/Ling-mini-2.0
 ling-plus,huggingface,inclusionAI/Ling-plus
 llada-moe-7b-a1b-base,huggingface,inclusionAI/LLaDA-MoE-7B-A1B-Base
@@ -2477,6 +2507,7 @@ pythia-410m-seed2,huggingface,EleutherAI/pythia-410m-seed2
 pythia-410m-seed3,huggingface,EleutherAI/pythia-410m-seed3
 pythia-410m-seed4,huggingface,EleutherAI/pythia-410m-seed4
 pythia-410m-seed5,huggingface,EleutherAI/pythia-410m-seed5
+pythia-410m-seed6,huggingface,EleutherAI/pythia-410m-seed6
 pythia-410m-seed7,huggingface,EleutherAI/pythia-410m-seed7
 pythia-410m-seed8,huggingface,EleutherAI/pythia-410m-seed8
 pythia-410m-seed9,huggingface,EleutherAI/pythia-410m-seed9
@@ -2904,6 +2935,7 @@ sensenova-si-1-3-qwen3-vl-8b,huggingface,sensenova/SenseNova-SI-1.3-Qwen3-VL-8B
 sensenova-si-1-4-internvl3-8b,huggingface,sensenova/SenseNova-SI-1.4-InternVL3-8B
 sensenova-si-1-5-internvl3-8b,huggingface,sensenova/SenseNova-SI-1.5-InternVL3-8B
 sequential-helium-6b,huggingface,kyutai/Sequential_Helium_6B
+shieldgemma-9b,huggingface,google/shieldgemma-9b
 shieldstral-1-0-3b,huggingface,mistralai/Shieldstral-1.0-3B
 simplesd-30b-instruct,huggingface,apple/SimpleSD-30B-instruct
 simplesd-4b-instruct,huggingface,apple/SimpleSD-4B-instruct
@@ -3110,6 +3142,7 @@ umup-research-3b,huggingface,Aleph-Alpha/umup-research-3b-fp8
 umup-research-7b,huggingface,Aleph-Alpha/umup-research-7b-bf16
 umup-research-7b,huggingface,Aleph-Alpha/umup-research-7b-fp8
 unlimited-ocr,huggingface,baidu/Unlimited-OCR
+unlimited-ocr-2,huggingface,baidu/Unlimited-OCR-2
 v5-eagle-7b,huggingface,RWKV/v5-Eagle-7B-HF
 v6-finch-14b,huggingface,RWKV/v6-Finch-14B-HF
 v6-finch-1b6,huggingface,RWKV/v6-Finch-1B6-HF

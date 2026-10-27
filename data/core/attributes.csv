@@ -64,7 +64,13 @@ devstral-2512,false,none,,,,,262144,262144,text,text,2025-12,true,,,,,,2026-09-0
 devstral-small-2,false,none,,,,,256000,256000,text|image,text,2024-10,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
 diffusiongemma-26b-a4b-it,true,,,,,,262144,131072,text,text,,true,,,0.5,0.5,0.5,2026-09-01,https://models.dev/api.json
 dots-3-note-preview,true,,,,,,512000,460800,text|image,text,,true,,,0,0,,2026-10-15,https://models.dev/api.json
+doubao-seed-1-6,true,,,,,,256000,32000,text|image|video,text,,true,,,0.11594203,1.15942029,,2026-10-27,https://models.dev/api.json
+doubao-seed-1-6-flash,true,,,,,,256000,32000,text|image|video,text,,true,,,0.02173913,0.2173913,,2026-10-27,https://models.dev/api.json
 doubao-seed-1-8,true,,,,,,256000,64000,text|image|video,text,2025-01-01,true,,,0.11,0.28,0.02,2026-09-01,https://models.dev/api.json
+doubao-seed-2-0-code,true,,,,,,256000,128000,text|image|video,text,,true,,,0.67,3.36,0.14,2026-10-27,https://models.dev/api.json
+doubao-seed-2-0-lite,true,,,,,,256000,32000,text|image|video,text,,true,,,0.13,0.76,0.03,2026-10-27,https://models.dev/api.json
+doubao-seed-2-0-mini,true,,,,,,256000,32000,text|image|video,text,,true,,,0.06,0.56,0.02,2026-10-27,https://models.dev/api.json
+doubao-seed-2-0-pro,true,,,,,,256000,128000,text|image|video|pdf,text,,true,,,0.4958,2.479,0.09916,2026-10-27,https://models.dev/api.json
 doubao-seed-2-1-pro,false,none,,,,,256000,128000,text,text,,false,,,1,5,0.5,2026-09-01,https://models.dev/api.json
 doubao-seed-2-1-turbo,false,none,,,,,256000,128000,text,text,,false,,,0.5,2.5,0.25,2026-09-01,https://models.dev/api.json
 ernie-4-5-21b-a3b,false,none,,,,,120000,8000,text,text,2025-03,true,,,0.07,0.28,,2026-09-01,https://models.dev/api.json
@@ -109,6 +115,8 @@ gemma-3-4b-it,false,none,,,,,128000,8192,text|pdf,text,,false,,,0.2006,0.2006,0.
 gemma-4-12b-it,true,,,,,,32768,32768,text,text,,true,,,0.25,0.25,0.25,2026-09-01,https://models.dev/api.json
 gemma-4-26b-a4b-it,true,,,,,,256000,16384,text|image,text,2025-04,true,,,0.25,0.5,,2026-09-01,https://models.dev/api.json
 gemma-4-31b-it,,none,,,,,262144,,text|image,text,,,,,,,,,https://huggingface.co/google/gemma-4-31B-it
+gemma-4-e2b,true,,,,,,131072,8192,text|image|audio|video,text,,true,,,0.04,0.08,,2026-10-27,https://models.dev/api.json
+gemma-4-e4b-it,true,,,,,,131072,8192,text|image|audio,text,,true,,,0.02,0.1,,2026-10-27,https://models.dev/api.json
 gemma-sea-lion-v4-27b-it,false,none,,,,,131072,128000,text,text,,false,,,0.24,0.48,,2026-10-19,https://models.dev/api.json
 glm-4-32b,false,none,,,,,128000,65536,text,text,,false,,,0.2,0.2,0.1,2026-09-01,https://models.dev/api.json
 glm-4-5,,toggleable,,,,false,131072,,text,text,,true,,,0.60,2.20,,2026-08-25,https://z.ai/blog/glm-4.5
@@ -173,6 +181,8 @@ gpt-5-nano,false,none,,,,,400000,128000,text|image,text,2025-01,true,,,0.0499999
 gpt-5-pro,false,none,,,,,128000,32768,text,text,2025-01,false,,,15,120,,2026-09-01,https://models.dev/api.json
 gpt-6-1-sol,true,,,,,,1050000,128000,text|image|pdf,text,2026-04-30,true,,,2.2,11,0.11,2026-10-03,https://models.dev/api.json
 gpt-6-1-sol-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,2,10,0.1,2026-10-03,https://models.dev/api.json
+gpt-6-1-terra,true,,,,,,1050000,128000,text|image|pdf,text,2026-06-01,true,,,1,5,0.05,2026-10-27,https://models.dev/api.json
+gpt-6-1-terra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,1,5,0.05,2026-10-27,https://models.dev/api.json
 gpt-6-astra,true,,,,,,1050000,1050000,text|image,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-6-astra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-6-luna,true,,,,,,1050000,128000,text|image|pdf,text,2026-05-18,true,,,0.1,0.5,0.01,2026-09-23,https://models.dev/api.json

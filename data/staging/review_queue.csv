@@ -48,6 +48,7 @@ fuzzy_match,epoch,qwen2-5-vl-3b,ledger_cluster,qwen2-5-vl-32b-instruct,96.3,92-9
 fuzzy_match,epoch,qwen2-5-vl-7b,ledger_cluster,qwen2-5-vl-72b-instruct,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-vl-72b,ledger_cluster,qwen2-5-vl-72b-instruct,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,ring-flash-2-0,ledger_cluster,ling-flash-2-0,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,solar-pro,ledger_cluster,solar-pro4,94.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,tencent-hy4-preview,ledger_cluster,tencent/hy4-preview,94.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,whisper,ledger_cluster,whisper-1,93.3,92-97 band: confirm or reject before crosswalking
@@ -109,6 +110,7 @@ hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-CycleQD-CS,ledger,meta,,
 hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-DB-Expert,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,SakanaAI/Llama-3-8B-Instruct-OS-Expert,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,SakanaAI/Llama-3-Karamaru-v1,ledger,meta,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,Salesforce/Llama-xLAM-2-70b-fc-r,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,Salesforce/Llama-xLAM-2-8b-fc-r,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/DeepSeek-R1-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/DeepSeek-V3-0324-bf16,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
@@ -172,7 +174,6 @@ hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-s
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_unmapped_namespace,huggingface,0xSero,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,DavidAU,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RadixArk,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -183,6 +184,7 @@ hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,empero-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,failspy,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss

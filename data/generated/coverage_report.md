@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1769; events: 2747
-- Models: curated 55, corroborated 764, single-source 950
-- Event confidence: verified 1208, inferred 1533, disputed 6
+- Models: 1784; events: 2776
+- Models: curated 55, corroborated 769, single-source 960
+- Event confidence: verified 1223, inferred 1547, disputed 6
 
 ## By organization
 
@@ -19,27 +19,27 @@ as settled.
 |---|---|---|---|---|---|---|
 | Alibaba | 87 | 193 | 2 | 73 | 12 | 56% |
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
-| OpenAI | 70 | 293 | 19 | 46 | 5 | 73% |
+| OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
+| ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
 | Mistral | 58 | 107 | 3 | 31 | 24 | 43% |
-| ByteDance | 56 | 71 | 0 | 24 | 32 | 39% |
-| EleutherAI | 55 | 55 | 0 | 1 | 54 | 2% |
-| Meta | 55 | 112 | 4 | 26 | 25 | 35% |
+| EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
+| Meta | 55 | 113 | 4 | 26 | 25 | 35% |
+| Google | 54 | 150 | 7 | 26 | 21 | 43% |
 | RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
-| Google | 51 | 147 | 7 | 26 | 18 | 44% |
-| Ant Group | 49 | 58 | 0 | 35 | 14 | 62% |
+| Ant Group | 50 | 60 | 0 | 36 | 14 | 63% |
 | Shanghai AI Lab | 49 | 49 | 0 | 39 | 10 | 80% |
-| TII | 48 | 48 | 0 | 4 | 44 | 8% |
+| TII | 49 | 49 | 0 | 4 | 45 | 8% |
 | DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
 | Zhipu | 37 | 82 | 3 | 27 | 7 | 62% |
 | OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
-| Tencent | 33 | 43 | 1 | 19 | 13 | 53% |
+| Tencent | 33 | 43 | 1 | 20 | 12 | 56% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
-| Baidu | 28 | 35 | 0 | 22 | 6 | 69% |
+| Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
 | Salesforce | 28 | 28 | 0 | 5 | 23 | 18% |
 | Anthropic | 27 | 132 | 8 | 15 | 4 | 68% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
@@ -49,7 +49,7 @@ as settled.
 | 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
-| Microsoft | 22 | 35 | 0 | 12 | 10 | 40% |
+| Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
@@ -64,7 +64,7 @@ as settled.
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
 | Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
-| Upstage | 14 | 17 | 0 | 6 | 8 | 35% |
+| Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
@@ -94,35 +94,35 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1525 | 501 | 1023 | 1 |
-| platform_availability | 332 | 327 | 3 | 2 |
-| retired | 304 | 169 | 135 | 0 |
-| api_ga | 244 | 62 | 181 | 1 |
-| announced | 234 | 51 | 182 | 1 |
-| consumer_rollout | 30 | 23 | 7 | 0 |
+| weights_released | 1533 | 505 | 1027 | 1 |
+| platform_availability | 334 | 329 | 3 | 2 |
+| retired | 306 | 178 | 128 | 0 |
+| api_ga | 252 | 62 | 189 | 1 |
+| announced | 241 | 51 | 189 | 1 |
+| consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
 | free_tier | 10 | 9 | 0 | 1 |
 | api_preview | 8 | 8 | 0 | 0 |
 | price_changed | 8 | 7 | 1 | 0 |
-| system_card | 6 | 6 | 0 | 0 |
+| system_card | 7 | 6 | 1 | 0 |
 | alias_repointed | 3 | 2 | 1 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 27 (verified 4, single-source inferred 23)
+- Events it wrote: 30 (verified 4, single-source inferred 26)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-26, by reason:
+Declined in the 7 days to 2026-10-27, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 71 |
-| no_dated_event | 53 |
+| community_lead | 80 |
+| no_dated_event | 54 |
 | not_a_model | 9 |
 | already_recorded | 6 |
 | malformed_candidate | 3 |
-| disagrees_with_record | 1 |
+| disagrees_with_record | 2 |
 | launch_event_required | 1 |
