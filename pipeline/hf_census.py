@@ -37,8 +37,8 @@ import match as matchmod
 import orgs_seed
 import schema
 from confidence import (
-    Claim, curated_announcement, flatten_claims, group_claims, index_events,
-    upsert_machine_event, withdraw_machine_announced_after,
+    Claim, curated_announcement, curated_model_ids, flatten_claims, group_claims,
+    index_events, upsert_machine_event, withdraw_machine_announced_after,
 )
 from schema import CLAIMS, CROSSWALK, EVENTS, MODELS, ORGANIZATIONS
 
@@ -153,6 +153,7 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
     events = tables["events"]
     event_index = index_events(events)
     claims_by_event = group_claims(tables["claims"])
+    curated = curated_model_ids(events)
 
     review_rows = unmapped_namespace_leads(repos)
     outcomes: Counter = Counter()
@@ -245,6 +246,16 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
             outcomes["crosswalk"] += 1
             touched.add(model_id)
 
+        # reconcile drafts a catalog-only model as api_only/proprietary; once
+        # its weights are on the Hub, the repo's tag states the terms.
+        model = models_by_id[model_id]
+        if model_id not in curated and model["license"] in ("", "proprietary") \
+                and model["license"] != row["license"]:
+            model["license"] = row["license"]
+            model["license_family"] = schema.license_family(row["license"])
+            outcomes["license_from_hub"] += 1
+            touched.add(model_id)
+
         if not row["created_at"]:
             continue
         if row["created_at"] == HF_BACKFILL_DATE:
@@ -286,7 +297,7 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
                 f"https://web.archive.org/web/{captures[repo_id].replace('-', '')}/{repo_url}",
                 "wayback", bound=True, label="first public capture"))
         # The same lab's twin repo on ModelScope: an independent creation
-        # timestamp. Two creations within AGREE_DAYS corroborate.
+        # timestamp, but another lower bound; it never verifies alone.
         twin = modelscope.get((models_by_id[model_id]["developer_org_id"],
                                repo_id.split("/")[-1].lower()))
         if twin:
@@ -355,6 +366,7 @@ def main() -> int:
           f"{outcomes['capped']} after per-org cap; +{outcomes['models']} models, "
           f"+{outcomes['added']} weights events ({outcomes['updated']} refreshed, "
           f"{outcomes['skipped']} curated left alone), +{outcomes['crosswalk']} crosswalk rows, "
+          f"{outcomes['license_from_hub']} licenses taken from the Hub, "
           f"{len(captures)} Wayback captures and {len(twins)} ModelScope twins available, "
           f"{len(review_rows)} queued for review")
     return 0

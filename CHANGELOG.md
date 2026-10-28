@@ -15,6 +15,19 @@ Data corrections update rows in place; this file preserves the history.
   Flash read `verified` 2026-10-17 while its weights were still private on
   2026-10-22. 110 `weights_released` rows move from `verified` to
   `inferred`; no date changes.
+- Validation rule 15: an `open_weights` model with `license_family =
+  proprietary` is an error; open-weight models with no family are counted
+  as a warning and in `coverage_report.md`. 64 models broke the rule. The
+  cause: a catalog-only model is drafted `api_only` with license
+  `proprietary`, and when its weights later appear the build flipped the
+  access type but kept the default license. The Hub census now takes the
+  repo's license tag for such machine-owned rows, and the build clears the
+  default when no repo states the terms. Of the 64, 35 now carry the
+  repo's license (the DeepSeek R1 distills MIT, gpt-oss-safeguard
+  Apache-2.0, Hermes 3 the Llama 3 license) and 29 are blank (no Hub repo,
+  or the tag is `other`). The same pass gave 93 machine-owned models with
+  no license on record their repo's tag. Open-weight models with no
+  family: 484 before, 434 after.
 
 ## 2026-10-14
 

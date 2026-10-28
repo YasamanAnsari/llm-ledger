@@ -80,6 +80,26 @@ def test_modelscope_twin_is_a_second_lower_bound_not_a_verification():
     assert t["events"][0]["confidence"] == "inferred"
 
 
+def test_hub_license_replaces_the_catalog_default_on_machine_rows_only():
+    t = _tables()
+    drafted = {c: "" for c in schema.MODELS.columns} | {
+        "model_id": "qwen3-8b", "developer_org_id": "alibaba", "access_type": "api_only",
+        "license": "proprietary", "license_family": "proprietary"}
+    t["models"].append(drafted)
+    census([_repo("Qwen/Qwen3-8B", "alibaba", "2025-04-28")], t, {}, TODAY, NOW)
+    assert (drafted["license"], drafted["license_family"]) == ("apache-2.0", "osi_approved")
+    # A person's reading stands.
+    t = _tables()
+    curated = drafted | {"license": "proprietary", "license_family": "proprietary"}
+    t["models"].append(curated)
+    t["events"].append({c: "" for c in schema.EVENTS.columns} | {
+        "event_id": "qwen3-8b-announced-1", "model_id": "qwen3-8b", "event_type": "announced",
+        "date": "2025-04-28", "precision": "day", "confidence": "verified",
+        "source_type": "vendor_blog", "verified_by": "Yasaman Ansari"})
+    census([_repo("Qwen/Qwen3-8B", "alibaba", "2025-04-28")], t, {}, TODAY, NOW)
+    assert curated["license"] == "proprietary"
+
+
 def test_unmapped_namespaces_become_one_lead_each():
     repos = [_repo("newlab/NewLab-7B", "", "2026-01-01"),
              _repo("newlab/NewLab-70B", "", "2026-01-02"),

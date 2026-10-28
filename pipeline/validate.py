@@ -394,6 +394,18 @@ def check_rule13_access_type_events(tables: dict) -> list:
     return errors
 
 
+def check_rule15_open_weight_licenses(tables: dict) -> tuple:
+    """Open weights cannot carry a proprietary license family (error); an
+    open-weight model with no family is a coverage gap (one warning)."""
+    open_weight = [m for m in tables["models"] if m.get("access_type") == "open_weights"]
+    errors = [f"rule15: model {m['model_id']} is open_weights but license_family is proprietary"
+              for m in open_weight if m.get("license_family") == "proprietary"]
+    blank = sum(1 for m in open_weight if not m.get("license_family"))
+    warnings = ([f"rule15: {blank} of {len(open_weight)} open-weight models have no license_family"]
+                if blank else [])
+    return errors, warnings
+
+
 def check_rule14_claim_history(tables: dict) -> list:
     """A superseded claim is what a source said before it moved its date:
     the same source must still have a live claim on that event."""
@@ -439,6 +451,9 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     errors += check_rule12_identifier_uniqueness(tables)
     errors += check_rule13_access_type_events(tables)
     errors += check_rule14_claim_history(tables)
+    e15, w15 = check_rule15_open_weight_licenses(tables)
+    errors += e15
+    warnings += w15
     return errors, warnings
 
 

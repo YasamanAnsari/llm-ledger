@@ -263,6 +263,15 @@ def test_rule13_api_only_cannot_have_weights():
     assert not any("rule13" in e for e in _errors(ok))
 
 
+def test_rule15_open_weights_cannot_be_proprietary_and_blank_is_a_warning():
+    bad = _tables(models=[_model(access_type="open_weights")])
+    assert any("rule15" in e for e in _errors(bad))
+    blank = [_model(access_type="open_weights", license="other", license_family="")]
+    errors, warnings = validate.check_rule15_open_weight_licenses(_tables(models=blank))
+    assert errors == [] and warnings == ["rule15: 1 of 1 open-weight models have no license_family"]
+    assert validate.check_rule15_open_weight_licenses(_tables()) == ([], [])
+
+
 def test_churn_guard_trips_on_mass_removal_or_redating():
     previous = [{"event_id": f"m-{i}-api_ga-1", "date": "2025-01-01"} for i in range(100)]
     assert validate.check_churn(previous, previous) == []

@@ -35,6 +35,13 @@ def test_min_availability_wins():
     assert row["first_availability_via"] == "api_ga"
 
 
+def test_weights_on_a_drafted_api_row_clear_the_proprietary_default():
+    model = _model() | {"access_type": "api_only", "license": "proprietary",
+                        "license_family": "proprietary"}
+    (row,) = compute_derived([model], [_event("m1", "weights_released", "2025-03-01")])
+    assert (row["access_type"], row["license"], row["license_family"]) == ("open_weights", "", "")
+
+
 def test_tie_priority_weights_over_api():
     events = [
         _event("m1", "api_ga", "2025-03-01"),

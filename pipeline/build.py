@@ -164,6 +164,11 @@ def compute_derived(models: list, events: list) -> list:
         if (not curated and row.get("access_type") == "api_only"
                 and _earliest_global(events, mid, {"weights_released"})):
             row["access_type"] = "open_weights"
+        # "proprietary" on a machine row is reconcile's api_only default, not
+        # a reading of the weights' terms; unknown until a source states them.
+        if not curated and row.get("access_type") == "open_weights" \
+                and row.get("license_family") == "proprietary":
+            row["license"] = row["license_family"] = ""
 
         # family / variant_role come from the name unless a person reviewed
         # the model, in which case the curated values stand and only blanks
@@ -465,6 +470,9 @@ def build_coverage_report(models: list, events: list, organizations: list,
         "- Event confidence: " + ", ".join(
             f"{c} {sum(1 for e in events if e['confidence'] == c)}"
             for c in ("verified", "inferred", "disputed")),
+        f"- Open-weight models with no `license_family` (license tag missing or "
+        f"`other`): {sum(1 for m in models if m['access_type'] == 'open_weights' and not m['license_family'])}"
+        f" of {sum(1 for m in models if m['access_type'] == 'open_weights')}",
         "",
         "## By organization",
         "",
