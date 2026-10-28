@@ -564,6 +564,11 @@ def build_market_bytes() -> bytes:
                                schema.read_table(MODELS), observations)
 
 
+def build_price_changes_bytes() -> bytes:
+    """Every observed price change on a ledger model, by source and provider."""
+    return market.price_changes_bytes(schema.read_table(MODELS), market.load_observations())
+
+
 # Every generated artifact, with the function that rebuilds it from the
 # core tables. `main` writes them; validate.py rule 9 byte-compares them.
 GENERATED_ARTIFACTS = (
@@ -574,6 +579,7 @@ GENERATED_ARTIFACTS = (
     ("sensitivity_report.md", build_sensitivity_bytes),
     ("reschedules.csv", build_reschedules_bytes),
     ("market_on_date.csv", build_market_bytes),
+    ("price_changes.csv", build_price_changes_bytes),
 )
 
 

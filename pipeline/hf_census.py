@@ -20,6 +20,9 @@ For each included repo:
   backfill artifact is queued for review, never used.
 - queues one lead per Hub namespace that has in-scope repos but no org
   mapping, so a new lab is noticed rather than skipped.
+- fills a blank `base_model_id` from the repo's own `base_model:` tags
+  (the card's `base_model` field) when they name exactly one other ledger
+  model.
 """
 
 from __future__ import annotations
@@ -131,6 +134,55 @@ def unmapped_namespace_leads(repos: list) -> list:
         "right_source": "", "right_key": "", "score": "",
         "note": f"{n} in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss",
     } for ns, n in sorted(counts.items())]
+
+
+LINEAGE_COLUMNS = ("base_model_id", "parent_model_id", "snapshot_of")
+
+
+def _reaches(models_by_id: dict, start: str, target: str) -> bool:
+    """True when following lineage links from `start` arrives at `target`."""
+    stack, seen = [start], set()
+    while stack:
+        node = stack.pop()
+        if node == target:
+            return True
+        if node in seen or node not in models_by_id:
+            continue
+        seen.add(node)
+        stack.extend(models_by_id[node][c] for c in LINEAGE_COLUMNS if models_by_id[node].get(c))
+    return False
+
+
+def hub_lineage(repos: list, models_by_id: dict, crosswalk: list, curated: set) -> set:
+    """Fill blank `base_model_id`s from the Hub's `base_model:<repo>` tags.
+
+    A model's repos must together name bases that are all ledger models and
+    all one model other than itself; a base outside the ledger leaves the
+    picture incomplete, so nothing is written. Curated models and links
+    that would close a lineage cycle are left alone. Returns the models set.
+    """
+    hf = {r["identifier"]: r["model_id"] for r in crosswalk if r["namespace"] == "huggingface"}
+    named: dict = {}
+    for repo in repos:
+        model_id = hf.get(repo["repo_id"])
+        bases = [t.split(":", 1)[1] for t in repo["tags"].split("|")
+                 if t.startswith("base_model:") and t.count(":") == 1]
+        if model_id and bases:
+            named.setdefault(model_id, set()).update(hf.get(b) for b in bases)
+    touched = set()
+    for model_id, targets in sorted(named.items()):
+        model = models_by_id.get(model_id)
+        if model is None or model_id in curated or model.get("base_model_id") or None in targets:
+            continue
+        targets.discard(model_id)
+        if len(targets) != 1:
+            continue
+        base = targets.pop()
+        if _reaches(models_by_id, base, model_id):
+            continue
+        model["base_model_id"] = base
+        touched.add(model_id)
+    return touched
 
 
 def census(repos: list, tables: dict, captures: dict, today: date, now: str,
@@ -339,6 +391,9 @@ def census(repos: list, tables: dict, captures: dict, today: date, now: str,
         outcomes["models"] -= len(undatable)
         outcomes["crosswalk"] -= n_before - len(tables["crosswalk"])
 
+    linked = hub_lineage(repos, models_by_id, tables["crosswalk"], curated)
+    outcomes["base_from_hub"] = len(linked)
+    touched |= linked
     schema.mark_updated(models_by_id, touched, now)
     tables["models"] = list(models_by_id.values())
     tables["claims"] = flatten_claims(claims_by_event)
@@ -367,6 +422,7 @@ def main() -> int:
           f"+{outcomes['added']} weights events ({outcomes['updated']} refreshed, "
           f"{outcomes['skipped']} curated left alone), +{outcomes['crosswalk']} crosswalk rows, "
           f"{outcomes['license_from_hub']} licenses taken from the Hub, "
+          f"{outcomes['base_from_hub']} base models from Hub tags, "
           f"{len(captures)} Wayback captures and {len(twins)} ModelScope twins available, "
           f"{len(review_rows)} queued for review")
     return 0

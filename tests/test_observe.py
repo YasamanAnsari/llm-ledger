@@ -100,3 +100,26 @@ def test_market_prices_convert_to_per_million_and_drop_the_router_marker() -> No
     assert market.per_1m("0.3", "per_1m_tokens") == "0.3"
     assert market.per_1m("-1", "per_token") == ""
     assert market.per_1m("", "per_token") == ""
+
+
+def test_price_changes_skip_missed_pull_breaks_and_mark_the_makers_own_price() -> None:
+    import market
+
+    def run(provider: str, price_input: str, first: str, last: str) -> dict:
+        return {"model_id": "gpt-x", "source": "models_dev", "provider": provider,
+                "api_id": "gpt-x", "price_input": price_input, "price_output": "8",
+                "price_cached": "", "unit": "per_1m_tokens", "first_observed": first,
+                "last_observed": last, "source_url": "https://models.dev/api.json"}
+    observations = {schema.PRICE_OBSERVATIONS.name: [
+        run("openai", "2", "2026-10-01", "2026-10-03"),
+        run("openai", "2", "2026-10-05", "2026-10-06"),        # missed pull on 10-04
+        run("openai", "1.5", "2026-10-07", "2026-10-09"),
+        run("azure-openai", "2", "2026-10-01", "2026-10-02"),
+        run("azure-openai", "2.2", "2026-10-03", "2026-10-09"),
+    ]}
+    models = [{"model_id": "gpt-x", "developer_org_id": "openai"}]
+    rows = market.price_change_rows(models, observations)
+    assert [(r["provider"], r["first_party"], r["last_old_day"], r["first_new_day"],
+             r["input_old"], r["input_new"]) for r in rows] == [
+        ("azure-openai", "false", "2026-10-02", "2026-10-03", "2", "2.2"),
+        ("openai", "true", "2026-10-06", "2026-10-07", "2", "1.5")]

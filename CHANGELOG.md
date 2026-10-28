@@ -120,6 +120,20 @@ Data corrections update rows in place; this file preserves the history.
   Hub revisions start with the next daily pull; the archived sweeps never
   held them. `observe.py` now tracks the last folded day per table and
   source, so a new table backfills from archives the others already hold.
+- The Hub census fills `base_model_id` from a repo's `base_model:` tags
+  when every tagged base resolves through the crosswalk to one ledger
+  model, the row is not curated, has no base yet, and the link closes no
+  cycle. 275 models gain a base; open-weight models with a base go from 6
+  to 281 of 1,599.
+- New `data/generated/price_changes.csv`: every price change a source
+  showed for a ledger-model id, from successive price runs that differ
+  (a run broken only by a missed pull is not a change), with a
+  `first_party` flag for the maker's own price. These are not written to
+  `events.csv` as `price_changed`: of the 40 first-party changes in the
+  archive window, most are Zhipu, StepFun and Alibaba catalog entries
+  moving together on 2026-10-20/21, which reads as currency conversion
+  or newly listed cached prices in the catalog rather than a price the
+  vendor announced.
 
 ## 2026-10-14
 

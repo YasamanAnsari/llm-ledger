@@ -27,6 +27,9 @@ update it in the same change as any column added to or removed from
 A named trained checkpoint from a lab. GGUF, LoRA, and merges stay
 out unless the thing is famous on its own. If we keep a derivative,
 we set `is_derivative`, `derivative_type`, and `base_model_id`.
+The Hub census also fills `base_model_id` on uncurated rows from a
+repo's `base_model:` tags, only when every tagged base resolves to one
+ledger model and the link closes no cycle.
 
 Also out, enforced by the loaders (`match.is_alias_key`,
 `match.is_out_of_scope_key`, `hf_census.classify`):
@@ -385,6 +388,13 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   same view for any observed day; the site's market page reads the runs
   and shows any day in the browser. Model fields (`access_type`,
   `license_family`) are today's values, not the day's.
+- `data/generated/price_changes.csv` - one row per price change one
+  source showed for one ledger-model id: two successive price runs with
+  different prices (in USD per 1M), the change falling after
+  `last_old_day` and on or before `first_new_day`. `first_party` is true
+  when the provider is the model's developer (cloud resale keys such as
+  `azure-openai` are not). Catalog diffs, not vendor announcements; a
+  `price_changed` event in `events.csv` needs the vendor's own page.
 - `data/generated/sensitivity_report.md` - how far apart the candidate
   "release dates" of one model sit (announced vs api_ga vs
   weights_released ...), for researchers choosing a treatment date.

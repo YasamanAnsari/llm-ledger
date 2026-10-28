@@ -66,6 +66,25 @@ def test_derivative_under_publisher_and_recreated_repo_guard():
     assert [r["kind"] for r in review] == ["hf_recreated_repo"]
 
 
+def test_hub_base_model_tags_fill_lineage_only_when_complete_and_acyclic():
+    from hf_census import hub_lineage
+    models = {m: {"model_id": m, "base_model_id": "", "parent_model_id": "", "snapshot_of": ""}
+              for m in ("qwen3-8b", "qwen3-8b-tuned", "mixed", "qwen3-8b-base")}
+    models["qwen3-8b"]["base_model_id"] = "qwen3-8b-base"
+    xw = [{"model_id": m, "namespace": "huggingface", "identifier": f"o/{m}"} for m in models]
+
+    def repo(model, *bases):
+        return {"repo_id": f"o/{model}", "tags": "|".join(
+            [f"base_model:{b}" for b in bases] + [f"base_model:finetune:{b}" for b in bases])}
+    repos = [repo("qwen3-8b-tuned", "o/qwen3-8b"),
+             repo("mixed", "o/qwen3-8b", "elsewhere/not-in-ledger"),
+             repo("qwen3-8b-base", "o/qwen3-8b")]       # qwen3-8b is built on it: a cycle
+    assert hub_lineage(repos, models, xw, curated=set()) == {"qwen3-8b-tuned"}
+    assert models["qwen3-8b-tuned"]["base_model_id"] == "qwen3-8b"
+    assert models["mixed"]["base_model_id"] == "" and models["qwen3-8b-base"]["base_model_id"] == ""
+    assert hub_lineage([repo("mixed", "o/qwen3-8b")], models, xw, curated={"mixed"}) == set()
+
+
 def test_modelscope_twin_is_a_second_lower_bound_not_a_verification():
     t = _tables()
     repos = [_repo("Qwen/Qwen3-8B", "alibaba", "2025-04-28")]

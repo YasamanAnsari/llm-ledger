@@ -28,7 +28,8 @@ const DOWNLOADS = [
   'data/core/organizations.csv', 'data/core/attributes.csv', 'data/core/crosswalk.csv',
   'data/generated/models_latest.csv', 'data/generated/llm_ledger_wide.csv',
   'data/generated/llm_ledger_enriched.csv', 'data/generated/reschedules.csv',
-  'data/generated/market_on_date.csv', ...Object.values(OBSERVATIONS),
+  'data/generated/market_on_date.csv', 'data/generated/price_changes.csv',
+  ...Object.values(OBSERVATIONS),
   'data/observations/model_versions.csv',
 ];
 
