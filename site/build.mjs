@@ -8,7 +8,13 @@ import {fileURLToPath} from 'node:url';
 const SITE = dirname(fileURLToPath(import.meta.url));
 const REPO = join(SITE, '..');
 const DIST = join(SITE, 'dist');
-const STATIC = ['index.html', 'styles.css', 'app.js', 'ledger-engine.mjs', 'charts.mjs', 'assets'];
+const STATIC = ['index.html', 'market.html', 'styles.css', 'app.js', 'market.js',
+  'ledger-engine.mjs', 'charts.mjs', 'assets'];
+const OBSERVATIONS = {
+  availability: 'data/observations/availability_observations.csv',
+  price: 'data/observations/price_observations.csv',
+  capability: 'data/observations/capability_observations.csv',
+};
 const TABLES = {
   models: 'data/core/models.csv',
   events: 'data/core/events.csv',
@@ -22,6 +28,7 @@ const DOWNLOADS = [
   'data/core/organizations.csv', 'data/core/attributes.csv', 'data/core/crosswalk.csv',
   'data/generated/models_latest.csv', 'data/generated/llm_ledger_wide.csv',
   'data/generated/llm_ledger_enriched.csv', 'data/generated/reschedules.csv',
+  'data/generated/market_on_date.csv', ...Object.values(OBSERVATIONS),
 ];
 
 /** RFC 4180 CSV text -> array of row objects keyed by the header. */
@@ -68,6 +75,29 @@ function commitSha() {
   return execSync('git rev-parse HEAD', {cwd: REPO}).toString().trim();
 }
 
+const subject = r => `${r.source}|${r.provider}|${r.api_id}`;
+
+/** Observation runs for listings that name a ledger model, as arrays
+ * (market.html joins them for any day with marketOn). */
+export function marketPayload(models, observations) {
+  const listed = observations.availability.filter(r => r.model_id);
+  const subjects = new Set(listed.map(subject));
+  const used = new Set(listed.map(r => r.model_id));
+  const runs = rows => rows.filter(r => subjects.has(subject(r)));
+  return {
+    first: listed.map(r => r.first_observed).sort()[0],
+    last: listed.map(r => r.last_observed).sort().at(-1),
+    models: Object.fromEntries(models.filter(m => used.has(m.model_id))
+      .map(m => [m.model_id, [m.canonical_name, m.developer_org_id, m.access_type]])),
+    availability: listed.map(r => [r.source, r.provider, r.api_id, r.model_id,
+      r.first_observed, r.last_observed, r.source_url]),
+    price: runs(observations.price).map(r => [subject(r), r.price_input, r.price_output,
+      r.price_cached, r.unit, r.first_observed, r.last_observed]),
+    capability: runs(observations.capability).map(r => [subject(r), r.context_length,
+      r.max_output, r.modalities_in, r.tool_use, r.first_observed, r.last_observed]),
+  };
+}
+
 function main() {
   const data = Object.fromEntries(Object.entries(TABLES).map(([name, path]) => [name, readTable(path)]));
   const dated = data.models.filter(m => m.first_public_availability_date);
@@ -100,6 +130,11 @@ function main() {
   cpSync(join(REPO, 'assets/orgs'), join(DIST, 'assets/orgs'), {recursive: true, filter: f => !f.endsWith('.md')});
   for (const path of DOWNLOADS) cpSync(join(REPO, path), join(DIST, 'data', path.split('/').at(-1)));
   writeFileSync(join(DIST, 'data/ledger.json'), JSON.stringify(data));
+  const observations = Object.fromEntries(Object.entries(OBSERVATIONS).map(([name, path]) => [name, readTable(path)]));
+  const marketData = {...marketPayload(data.models, observations), commit: data.meta.commit,
+    orgs: Object.fromEntries(data.organizations.map(o => [o.org_id, o.short_name || o.canonical_name])),
+    icons: data.meta.icons};
+  writeFileSync(join(DIST, 'data/market.json'), JSON.stringify(marketData));
   console.log(`site: ${data.meta.models} models, ${data.meta.events} events, snapshot ${snapshot} -> ${DIST}`);
 }
 

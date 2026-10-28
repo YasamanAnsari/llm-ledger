@@ -37,6 +37,7 @@ from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import market
 import schema
 import sensitivity
 from confidence import (AGENT_VERIFIER, PROJECT_VERIFIERS, curated_model_ids, is_machine_row,
@@ -556,6 +557,13 @@ def build_reschedules_bytes() -> bytes:
     return _csv_bytes(list(RESCHEDULE_COLUMNS), rows)
 
 
+def build_market_bytes() -> bytes:
+    """The market view for the newest observed day."""
+    observations = market.load_observations()
+    return market.market_bytes(market.latest_observed_day(observations),
+                               schema.read_table(MODELS), observations)
+
+
 # Every generated artifact, with the function that rebuilds it from the
 # core tables. `main` writes them; validate.py rule 9 byte-compares them.
 GENERATED_ARTIFACTS = (
@@ -565,6 +573,7 @@ GENERATED_ARTIFACTS = (
     ("coverage_report.md", build_coverage_bytes),
     ("sensitivity_report.md", build_sensitivity_bytes),
     ("reschedules.csv", build_reschedules_bytes),
+    ("market_on_date.csv", build_market_bytes),
 )
 
 

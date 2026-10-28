@@ -125,3 +125,5 @@
 @media(max-width:650px){.brand-logo{height:28px}.brand-author{font-size:12px;padding-left:10px}.brand-block{gap:10px}.back-to-top{right:16px;bottom:16px;width:42px;height:42px}}
 @media(max-width:650px){.quality-panel .quality-layout{flex-wrap:wrap;gap:20px}.quality-panel .confidence-breakdown{min-width:200px}}
 @media(max-width:650px){.download-options>div{left:auto;right:0}}
+.date-field:after{display:none}
+.date-field input{background:#fff;border:1px solid var(--line);border-radius:4px;height:42px;font-size:13px;width:100%;padding:0 12px;font-family:inherit}

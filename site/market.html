@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#174c3e">
+<meta name="description" content="Which language models were available on a given day, from which providers, at what price and with what limits, with the source for every listing.">
+<title>The market on a date — LLM Ledger</title>
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="64x64" href="./assets/favicon.png?v=2">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="./styles.css">
+<script type="module" src="./market.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#market">Skip to the market table</a>
+<header class="site-header">
+ <div class="container header-inner">
+  <div class="brand-block"><a class="brand" href="./" aria-label="LLM Ledger home"><img class="brand-logo" src="./assets/logo.svg" alt="" width="142" height="34"></a><a class="brand-author" href="https://yasamanansari.com" target="_blank" rel="noopener noreferrer">by Yasaman Ansari</a></div>
+  <nav aria-label="Main navigation"><a class="nav-link" href="./#findings">What the dates show</a><a class="nav-link" href="./#explore">Explore the data</a><a class="nav-link" href="./market.html" aria-current="page">Market on a date</a><a class="nav-link" href="./#methodology">Methodology</a></nav>
+ </div>
+</header>
+<main>
+<section class="explorer container section-space" id="market" aria-labelledby="market-title">
+ <div class="section-heading"><div><div class="eyebrow section-index">THE MARKET ON A DATE</div><h2 id="market-title">What was on offer, and from whom.</h2></div><p>Pick a day. Every row is a listing a source showed that day: <br>the provider, the price, the limits, and the page it came from.</p></div>
+ <form id="market-filters" role="search" class="filter-bar">
+  <label class="select-field date-field"><span class="sr-only">Date</span><input type="date" id="market-date" required></label>
+  <div class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><label class="sr-only" for="market-search">Search model, developer or provider</label><input type="search" id="market-search" placeholder="Search a model, developer, or provider…" autocomplete="off"></div>
+  <label class="select-field"><span class="sr-only">Provider</span><select id="provider-filter"><option value="">All providers</option></select></label>
+  <label class="select-field"><span class="sr-only">Sort</span><select id="market-sort"><option value="model">Model A–Z</option><option value="output">Cheapest output</option><option value="context">Largest context</option></select></label>
+ </form>
+ <p class="table-note" id="market-summary" role="status" aria-live="polite">Loading observations…</p>
+ <div class="table-scroll"><table class="data-table"><caption class="sr-only">Listings on the chosen day</caption><thead><tr><th scope="col">MODEL</th><th scope="col">PROVIDER</th><th scope="col">INPUT $/1M</th><th scope="col">OUTPUT $/1M</th><th scope="col">CONTEXT</th><th scope="col">LISTED SINCE</th><th scope="col">SOURCE</th></tr></thead><tbody id="market-body"><tr><td colspan="7" class="loading-state">Loading observations…</td></tr></tbody></table></div>
+ <div class="table-footer"><button class="quiet-button" id="market-export"><span aria-hidden="true">↓</span> Export this view</button><div class="pagination"><button id="market-prev" class="page-button" aria-label="Previous page" disabled>←</button><span id="market-page">1 / 1</span><button id="market-next" class="page-button" aria-label="Next page" disabled>→</button></div></div>
+ <p class="table-note"><span aria-hidden="true">ⓘ</span> Observations start <span id="market-first">…</span>, the oldest archived daily pull, so “listed since” never reads earlier than that. Prices are list prices per million tokens as each source states them. A provider missing from a day may simply not have been pulled. <a href="https://github.com/YasamanAnsari/llm-ledger/blob/main/docs/schema.md#dataobservations-what-each-source-listed-day-by-day" target="_blank" rel="noopener noreferrer">How observations work ↗</a></p>
+ <noscript><p class="load-error">Enable JavaScript to browse the market, or <a href="./data/market_on_date.csv" download>download the newest day as CSV</a>.</p></noscript>
+</section>
+</main>
+<footer class="site-footer container"><div><a class="brand footer-brand" href="./" aria-label="LLM Ledger home"><img class="brand-logo" src="./assets/logo.svg" alt="" width="125" height="30"></a><span class="footer-credit">A project by <a href="https://github.com/YasamanAnsari" target="_blank" rel="noopener noreferrer">Yasaman Ansari</a></span></div><div class="footer-links"><a id="market-snapshot" href="https://github.com/YasamanAnsari/llm-ledger" target="_blank" rel="noopener noreferrer">Source data ↗</a><a href="https://github.com/YasamanAnsari/llm-ledger/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></div></footer>
+</body>
+</html>

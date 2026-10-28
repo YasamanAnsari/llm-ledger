@@ -343,6 +343,16 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   `from_date`, `to_date`, signed `days_moved` (positive = slipped
   later), `observed_on` (the pull that saw the change), `first_party`.
   Platform retirement tables are where this happens most.
+- `data/generated/market_on_date.csv` - the market on the newest
+  observed day: one row per listing of a ledger model (availability run
+  covering the day), with that source's price and limits for the same id
+  on the same day. Prices are converted to `*_usd_per_1m` from the
+  source's unit; OpenRouter's negative router marker is left blank.
+  `observed_from` is the start of the unbroken run, never earlier than
+  the first archived day. `python pipeline/market.py --date D` writes the
+  same view for any observed day; the site's market page reads the runs
+  and shows any day in the browser. Model fields (`access_type`,
+  `license_family`) are today's values, not the day's.
 - `data/generated/sensitivity_report.md` - how far apart the candidate
   "release dates" of one model sit (announced vs api_ga vs
   weights_released ...), for researchers choosing a treatment date.

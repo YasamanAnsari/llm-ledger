@@ -50,6 +50,25 @@ export function formatDate(date,precision='day'){
  if(Number.isNaN(value.getTime()))return date;
  return new Intl.DateTimeFormat('en-GB',{...(precision==='month'?{}:{day:'2-digit'}),month:'short',year:'numeric',timeZone:'UTC'}).format(value);
 }
+const PER_MILLION={per_1m_tokens:1,per_token:1e6};
+// USD per 1M tokens; a negative value is OpenRouter's variable-price marker, not a price.
+export function perMillion(value,unit){
+ if(value==='')return null;
+ const n=Number(value);
+ return !Number.isFinite(n)||n<0?null:Number((n*PER_MILLION[unit]).toPrecision(12));
+}
+// Listings on one ISO day from market.json runs, each joined to the same
+// source's price and capability run for that id on that day.
+export function marketOn(market,day){
+ const covers=(first,last)=>first<=day&&day<=last;
+ const price=new Map(),cap=new Map();
+ for(const [key,input,output,cached,unit,first,last] of market.price)if(covers(first,last))price.set(key,{input:perMillion(input,unit),output:perMillion(output,unit),cached:perMillion(cached,unit)});
+ for(const [key,context,maxOutput,modalities,toolUse,first,last] of market.capability)if(covers(first,last))cap.set(key,{context,maxOutput,modalities,toolUse});
+ return market.availability.filter(r=>covers(r[4],r[5])).map(([source,provider,apiId,modelId,first,,url])=>{
+  const key=`${source}|${provider}|${apiId}`;
+  return {source,provider,apiId,modelId,observedFrom:first,url,price:price.get(key)||null,cap:cap.get(key)||null};
+ });
+}
 export function csvEncode(records,columns){
  const escape=value=>{let text=String(value??'');if(/^[=+@\-\t\r]/.test(text))text="'"+text;return /[",\n\r]/.test(text)?'"'+text.replaceAll('"','""')+'"':text;};
  return [columns.map(escape).join(','),...records.map(r=>columns.map(k=>escape(r[k])).join(','))].join('\r\n')+'\r\n';

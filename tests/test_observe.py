@@ -52,3 +52,12 @@ def test_resolver_prefers_the_exact_identifier_and_refuses_an_ambiguous_key() ->
     assert resolve("models_dev", "reseller", "acme-1-0901") == "acme-1-0901"  # snapshot kept apart
     assert resolve("openrouter", "openrouter", "acme/acme-2") == "acme-2-pro"
     assert resolve("models_dev", "reseller", "acme-2") == ""                  # two models share the key
+
+
+def test_market_prices_convert_to_per_million_and_drop_the_router_marker() -> None:
+    import market
+    assert market.per_1m("2.5e-06", "per_token") == "2.5"
+    assert market.per_1m("0.00001", "per_token") == "10"
+    assert market.per_1m("0.3", "per_1m_tokens") == "0.3"
+    assert market.per_1m("-1", "per_token") == ""
+    assert market.per_1m("", "per_token") == ""

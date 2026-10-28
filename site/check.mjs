@@ -1,6 +1,7 @@
 // Self-check for the site's data logic: node site/check.mjs
 import assert from 'node:assert/strict';
-import {parseCsv} from './build.mjs';
+import {marketPayload, parseCsv} from './build.mjs';
+import {marketOn, perMillion} from './ledger-engine.mjs';
 import {gapBins, retirementFates, scatterPoints, yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
@@ -38,5 +39,26 @@ assert.deepEqual(points.map(p => p.id), ['o2', 'a1']);
 const medians = yearlyMedians([1, 2, 3, 10].map((value, i) => ({access: 'api_only', date: `2025-0${i + 1}-01`, value})));
 assert.deepEqual(medians, [{access: 'api_only', year: '2025', n: 4, median: 2.5}]);
 assert.deepEqual(yearlyMedians([{access: 'api_only', date: '2025-01-01', value: 1}]), []);
+
+const observed = {
+  availability: [
+    {source: 'openrouter', provider: 'openrouter', api_id: 'acme/a1', model_id: 'a1', first_observed: '2026-10-01', last_observed: '2026-10-05', source_url: 'https://openrouter.ai/api/v1/models'},
+    {source: 'models_dev', provider: 'x', api_id: 'unmapped', model_id: '', first_observed: '2026-10-01', last_observed: '2026-10-05', source_url: 'https://models.dev/api.json'},
+  ],
+  price: [
+    {source: 'openrouter', provider: 'openrouter', api_id: 'acme/a1', price_input: '0.0000025', price_output: '0.00001', price_cached: '', unit: 'per_token', first_observed: '2026-10-01', last_observed: '2026-10-02'},
+    {source: 'openrouter', provider: 'openrouter', api_id: 'acme/a1', price_input: '-1', price_output: '0.000012', price_cached: '', unit: 'per_token', first_observed: '2026-10-03', last_observed: '2026-10-05'},
+  ],
+  capability: [],
+};
+const payload = marketPayload(models, observed);
+assert.deepEqual(Object.keys(payload.models), ['a1']);
+assert.deepEqual([payload.first, payload.last], ['2026-10-01', '2026-10-05']);
+const [early] = marketOn(payload, '2026-10-02');
+assert.deepEqual(early.price, {input: 2.5, output: 10, cached: null});
+assert.equal(early.cap, null);
+assert.deepEqual(marketOn(payload, '2026-10-04')[0].price, {input: null, output: 12, cached: null});
+assert.deepEqual(marketOn(payload, '2026-10-06'), []);
+assert.equal(perMillion('2', 'per_1m_tokens'), 2);
 
 console.log('site check: ok');

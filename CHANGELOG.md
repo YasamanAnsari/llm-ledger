@@ -83,6 +83,11 @@ Data corrections update rows in place; this file preserves the history.
   history before that day is manifests only and cannot be rebuilt. The
   daily run now appends. Validation rule 16 checks run bounds, model ids
   and overlaps.
+- New generated view `market_on_date.csv` and `pipeline/market.py --date
+  D`: every listing of a ledger model on one day with its provider,
+  price in USD per 1M tokens, limits and source. On 2026-10-27: 6,698
+  listings of 429 models from 203 providers. The site has a market page
+  that rebuilds the view for any observed day.
 
 ## 2026-10-14
 
