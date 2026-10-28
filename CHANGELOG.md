@@ -196,6 +196,16 @@ Data corrections update rows in place; this file preserves the history.
   `weights_released` row. The site's FIG. 08 bins these days by access
   type, and its download menu now lists the observation, capability and
   research files.
+- The site splits models three ways: fully open (OSI-approved or
+  permissive license, training data and code released; 88 models), other
+  open weights, and API only, in every figure and as an explorer filter.
+  New FIG. 09 shows open-weight models by year from fully open to no
+  recorded license (5% fully open, 55% open license without released
+  data and code on record, 13% restricted, 26% unrecorded). New FIG. 10
+  compares US and Chinese developers: models per year (702 US, 77% open
+  weights; 606 Chinese, 91% open weights) and the best ECI score over
+  time (the best Chinese model, Kimi K3, scores what GPT-5.4 Pro first
+  reached 133 days earlier).
 - `docs/erd.svg` shows the columns added this month (`models`: the
   branding and use-restriction flags, `training_data_released`,
   `training_code_released`; `events`: `observed_on`,

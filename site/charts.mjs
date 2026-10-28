@@ -2,9 +2,66 @@
 // renderers that turn those summaries into HTML/SVG strings.
 
 export const ACCESS = [
-  {key: 'open_weights', label: 'Open weights', noun: 'open-weight models', color: '#2f6b52'},
+  {key: 'fully_open', label: 'Fully open', noun: 'fully open models', color: '#2b5f8e'},
+  {key: 'open_weights', label: 'Other open weights', noun: 'other open-weight models', color: '#2f6b52'},
   {key: 'api_only', label: 'API only', noun: 'API-only models', color: '#b57a2c'},
 ];
+export const OPENNESS = [
+  {key: 'fully_open', label: 'Fully open: weights, data and code', noun: 'fully open', color: '#2b5f8e'},
+  {key: 'open_license', label: 'OSI or permissive license', noun: 'open license', color: '#5f9a7a'},
+  {key: 'restricted', label: 'Restricted license', noun: 'restricted license', color: '#d0b27a'},
+  {key: 'unknown', label: 'License not recorded', noun: 'license not recorded', color: '#d4d9d0'},
+];
+export const COUNTRIES = [
+  {key: 'US', label: 'United States', noun: 'US models', color: '#3a5a8c'},
+  {key: 'CN', label: 'China', noun: 'Chinese models', color: '#b0413e'},
+  {key: 'other', label: 'Elsewhere or unstated', noun: 'models from elsewhere', color: '#a7aea6'},
+];
+const OPEN_LICENSES = new Set(['osi_approved', 'permissive']);
+
+/** Fully open: open weights with training data and code released, under
+ * an OSI-approved or permissive license. Blank data/code means not
+ * reviewed, so those models stay with the other open weights. */
+export function accessGroup(m) {
+  if (m.access_type !== 'open_weights') return m.access_type;
+  return OPEN_LICENSES.has(m.license_family) && m.training_data_released === 'true' && m.training_code_released === 'true'
+    ? 'fully_open' : 'open_weights';
+}
+
+/** Where an open-weight model sits between fully open and unlicensed. */
+export function opennessTier(m) {
+  if (accessGroup(m) === 'fully_open') return 'fully_open';
+  if (OPEN_LICENSES.has(m.license_family)) return 'open_license';
+  return m.license_family === 'open_weights_restricted' ? 'restricted' : 'unknown';
+}
+
+/** Adds `access_group` and `country_group` (from the developer's
+ * headquarters) to each model, and copies them onto rows keyed by model_id. */
+export function annotateGroups(models, organizations, keyedRows = []) {
+  const country = new Map(organizations.map(o => [o.org_id, o.country]));
+  const byId = new Map();
+  for (const m of models) {
+    const c = country.get(m.developer_org_id);
+    Object.assign(m, {access_group: accessGroup(m), country_group: c === 'US' || c === 'CN' ? c : 'other'});
+    byId.set(m.model_id, m);
+  }
+  for (const r of keyedRows) {
+    const m = byId.get(r.model_id);
+    if (m) Object.assign(r, {access_group: m.access_group, country_group: m.country_group});
+  }
+}
+
+/** {year: {group key: models}} by year of first public availability. */
+export function annualCounts(models, groupOf) {
+  const out = {};
+  for (const m of models) {
+    if (!m.first_public_availability_date) continue;
+    const year = m.first_public_availability_date.slice(0, 4);
+    out[year] ??= {};
+    out[year][groupOf(m)] = (out[year][groupOf(m)] || 0) + 1;
+  }
+  return out;
+}
 const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const num = n => new Intl.NumberFormat('en-US').format(n);
 const pct = (part, whole) => whole ? Math.round(part / whole * 100) : 0;
@@ -23,7 +80,7 @@ export const GAP_BINS = [
 function dayBins(rows, field) {
   const out = {};
   for (const {key} of ACCESS) {
-    const days = rows.filter(r => r.access_type === key && r[field] !== '').map(r => Number(r[field])).sort((a, b) => a - b);
+    const days = rows.filter(r => r.access_group === key && r[field] !== '').map(r => Number(r[field])).sort((a, b) => a - b);
     const mid = days.length / 2;
     out[key] = {
       n: days.length,
@@ -60,7 +117,7 @@ export function retirementFates(models, events, today) {
   const out = {};
   for (const {key} of ACCESS) {
     const counts = Object.fromEntries(FATES.map(f => [f.key, 0]));
-    const group = models.filter(m => m.access_type === key);
+    const group = models.filter(m => m.access_group === key);
     for (const m of group) {
       const retired = byModel.get(m.model_id) || [];
       const own = retired.filter(e => !e.platform);
@@ -85,9 +142,9 @@ export function scatterPoints(models, attributes, metric) {
   let zero = 0;
   for (const m of models) {
     const raw = attr.get(m.model_id)?.[metric];
-    if (!m.first_public_availability_date || raw === undefined || raw === '' || !ACCESS.some(a => a.key === m.access_type)) continue;
+    if (!m.first_public_availability_date || raw === undefined || raw === '' || !ACCESS.some(a => a.key === m.access_group)) continue;
     const value = Number(raw);
-    if (value > 0) points.push({id: m.model_id, name: m.canonical_name, access: m.access_type, date: m.first_public_availability_date, value});
+    if (value > 0) points.push({id: m.model_id, name: m.canonical_name, access: m.access_group, date: m.first_public_availability_date, value});
     else zero++;
   }
   return {points, zero};
@@ -131,14 +188,14 @@ export function renderGap(gaps, caption = 'Days from announcement to first avail
   return `<div class="gap-chart">${head}${rows}</div>` + table;
 }
 
-export function renderAnnual(annual, partialYear) {
+export function renderAnnual(annual, partialYear, groups = ACCESS, caption = 'Models by year of first public availability and access type') {
   const years = Object.keys(annual).sort();
-  const total = y => ACCESS.reduce((s, a) => s + (annual[y][a.key] || 0), 0);
+  const total = y => groups.reduce((s, a) => s + (annual[y][a.key] || 0), 0);
   const max = Math.max(...years.map(total));
-  const bars = years.map(y => `<div class="annual-bar" title="${y}: ${ACCESS.map(a => `${num(annual[y][a.key] || 0)} ${a.noun}`).join(', ')}${y === partialYear ? ' (year to date)' : ''}"><div class="stack" style="height:${total(y) / max * 85}%"><span class="bar-value">${num(total(y))}</span>${ACCESS.slice().reverse().map(a => `<i style="flex:${annual[y][a.key] || 0};--c:${a.color}"></i>`).join('')}</div><span class="bar-year">${y}${y === partialYear ? '*' : ''}</span></div>`).join('');
-  const table = dataTable('Models by year of first public availability and access type', ['Year', ...ACCESS.map(a => a.label), 'Total'],
-    years.map(y => [y + (y === partialYear ? ' (to date)' : ''), ...ACCESS.map(a => num(annual[y][a.key] || 0)), num(total(y))]));
-  return legend(ACCESS) + `<div class="annual-chart">${bars}</div>` + table;
+  const bars = years.map(y => `<div class="annual-bar" title="${y}: ${groups.map(a => `${num(annual[y][a.key] || 0)} ${a.noun}`).join(', ')}${y === partialYear ? ' (year to date)' : ''}"><div class="stack" style="height:${total(y) / max * 85}%"><span class="bar-value">${num(total(y))}</span>${groups.slice().reverse().map(a => `<i style="flex:${annual[y][a.key] || 0};--c:${a.color}"></i>`).join('')}</div><span class="bar-year">${y}${y === partialYear ? '*' : ''}</span></div>`).join('');
+  const table = dataTable(caption, ['Year', ...groups.map(a => a.label), 'Total'],
+    years.map(y => [y + (y === partialYear ? ' (to date)' : ''), ...groups.map(a => num(annual[y][a.key] || 0)), num(total(y))]));
+  return legend(groups) + `<div class="annual-chart">${bars}</div>` + table;
 }
 
 export function renderFates(fates) {
@@ -169,7 +226,7 @@ export function renderScatter(points, metric, start, end) {
   const mark = (p, color) => {
     const cx = x(p.date).toFixed(1), cy = y(p.value).toFixed(1);
     const label = `${p.name}: ${spec.format(p.value)} · first available ${p.date}`;
-    return p.access === 'open_weights'
+    return p.access !== 'api_only'
       ? `<rect class="pt" data-model="${esc(p.id)}" x="${cx - 3}" y="${cy - 3}" width="6" height="6" transform="rotate(45 ${cx} ${cy})" fill="${color}"><title>${esc(label)}</title></rect>`
       : `<circle class="pt" data-model="${esc(p.id)}" cx="${cx}" cy="${cy}" r="3.2" fill="${color}"><title>${esc(label)}</title></circle>`;
   };
@@ -179,21 +236,21 @@ export function renderScatter(points, metric, start, end) {
     const pts = medians.filter(m => m.access === a.key).map(m => `${x(`${m.year}-07-01`).toFixed(1)},${y(m.median).toFixed(1)}`);
     return pts.length > 1 ? `<polyline class="median" points="${pts.join(' ')}" stroke="${a.color}"/>` : '';
   }).join('');
-  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(spec.label)} by first availability date, log scale, open weights versus API only"><g class="grid">${grid}</g>${dots}${lines}</svg>`;
+  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(spec.label)} by first availability date, log scale, by access group"><g class="grid">${grid}</g>${dots}${lines}</svg>`;
   const table = dataTable(`Median ${spec.label.toLowerCase()} by launch year`, ['Year', ...ACCESS.map(a => `${a.label} median (n)`)],
     [...new Set(medians.map(m => m.year))].sort().map(yr => [yr, ...ACCESS.map(a => {
       const m = medians.find(r => r.access === a.key && r.year === yr);
       return m ? `${spec.format(m.median)} (${m.n})` : '–';
     })]));
-  return legend([...ACCESS.map(a => ({...a, shape: a.key === 'open_weights' ? 'diamond' : 'dot'})), {label: 'Yearly median', color: '#6f7a73', shape: 'line'}]) + svg + table;
+  return legend([...ACCESS.map(a => ({...a, shape: a.key === 'api_only' ? 'dot' : 'diamond'})), {label: 'Yearly median', color: '#6f7a73', shape: 'line'}]) + svg + table;
 }
 
-/** Best ECI score on record per access type as of each ledger release
- * date: the running maximum, one step per model that raised it. */
-export function capabilityFrontier(rows) {
+/** Best ECI score on record per group as of each ledger release date:
+ * the running maximum, one step per model that raised it. */
+export function capabilityFrontier(rows, groups = ACCESS, groupOf = r => r.access_group) {
   const out = {};
-  for (const {key} of ACCESS) {
-    const group = rows.filter(r => r.access_type === key && r.first_public_availability_date && r.eci !== '')
+  for (const {key} of groups) {
+    const group = rows.filter(r => groupOf(r) === key && r.first_public_availability_date && r.eci !== '')
       .sort((a, b) => a.first_public_availability_date.localeCompare(b.first_public_availability_date));
     const steps = [];
     for (const r of group) {
@@ -205,17 +262,17 @@ export function capabilityFrontier(rows) {
   return out;
 }
 
-/** How long before the best open-weights model an API-only model first
- * scored at least as high; null when none has. */
-export function frontierLag(frontier) {
-  const open = frontier.open_weights.at(-1);
-  const closed = open && frontier.api_only.find(s => s.value >= open.value);
-  return closed ? {open, closed, days: Math.round((Date.parse(open.date) - Date.parse(closed.date)) / 864e5)} : null;
+/** How long before the trailing group's best model the leading group
+ * first scored at least as high; null when it never has. */
+export function frontierLag(trailing, leading) {
+  const best = trailing.at(-1);
+  const first = best && leading.find(s => s.value >= best.value);
+  return first ? {best, first, days: Math.round((Date.parse(best.date) - Date.parse(first.date)) / 864e5)} : null;
 }
 
-export function renderFrontier(frontier, start, end) {
+export function renderFrontier(frontier, start, end, groups = ACCESS, subject = 'access group') {
   // The step in force on `start` is drawn from the left edge.
-  const shown = Object.fromEntries(ACCESS.map(a => [a.key,
+  const shown = Object.fromEntries(groups.map(a => [a.key,
     frontier[a.key].filter((p, i, all) => !(all[i + 1]?.date <= start))]));
   const values = Object.values(shown).flat().map(s => s.value);
   const lo = Math.floor(Math.min(...values) / 10) * 10, hi = Math.ceil(Math.max(...values) / 10) * 10;
@@ -227,15 +284,15 @@ export function renderFrontier(frontier, start, end) {
   const yTicks = Array.from({length: (hi - lo) / 10 + 1}, (_, i) => lo + i * 10);
   const grid = yTicks.map(v => `<line x1="${M.left}" x2="${W - M.right}" y1="${y(v)}" y2="${y(v)}"/><text x="${M.left - 8}" y="${y(v) + 3}" text-anchor="end">${v}</text>`).join('')
     + years.map(yr => `<line x1="${x(`${yr}-01-01`)}" x2="${x(`${yr}-01-01`)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${x(`${yr}-01-01`)}" y="${H - M.bottom + 18}" text-anchor="middle">${yr}</text>`).join('');
-  const lines = ACCESS.map(a => {
+  const lines = groups.map(a => {
     const s = shown[a.key];
     if (!s.length) return '';
     const path = s.map((p, i) => `${i ? `H${x(p.date).toFixed(1)}V` : `M${x(p.date).toFixed(1)},`}${y(p.value).toFixed(1)}`).join('') + `H${x(end).toFixed(1)}`;
     const marks = s.map(p => `<circle class="pt" data-model="${esc(p.id)}" cx="${x(p.date).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="3.2" fill="${a.color}"><title>${esc(`${p.name}: ECI ${p.value} · first available ${p.date}`)}</title></circle>`).join('');
     return `<path class="median" d="${path}" stroke="${a.color}"/>${marks}`;
   }).join('');
-  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Best Epoch Capabilities Index score on record by ledger release date, open weights versus API only"><g class="grid">${grid}</g>${lines}</svg>`;
-  const table = dataTable('Models that raised the best ECI score of their access type', ['First available', 'Access', 'Model', 'ECI'],
-    ACCESS.flatMap(a => frontier[a.key].map(s => [s.date, a.label, s.name, s.value])).sort((p, q) => p[0].localeCompare(q[0])));
-  return legend(ACCESS.map(a => ({...a, shape: 'line'}))) + svg + table;
+  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Best Epoch Capabilities Index score on record by ledger release date, by ${esc(subject)}"><g class="grid">${grid}</g>${lines}</svg>`;
+  const table = dataTable(`Models that raised the best ECI score of their ${subject}`, ['First available', 'Group', 'Model', 'ECI'],
+    groups.flatMap(a => frontier[a.key].map(s => [s.date, a.label, s.name, s.value])).sort((p, q) => p[0].localeCompare(q[0])));
+  return legend(groups.filter(a => frontier[a.key].length).map(a => ({...a, shape: 'line'}))) + svg + table;
 }

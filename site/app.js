@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,formatDate,csvEncode} from './ledger-engine.mjs';
-import {gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS} from './charts.mjs';
+import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS,OPENNESS,COUNTRIES} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -83,22 +83,42 @@ function renderFindings(){
  $('snapshot-link').href=`https://github.com/YasamanAnsari/llm-ledger/tree/${encodeURIComponent(meta.commit)}`;$('snapshot-link').textContent=`Data as of ${formatDate(meta.snapshot)} ↗`;
  renderExample();
  const gaps=gapBins(ledger.data.models);
- $('gap-summary').textContent=ACCESS.map(a=>`${Math.round(gaps[a.key].later/gaps[a.key].n*100)}% of ${a.noun} (${number(gaps[a.key].later)} of ${number(gaps[a.key].n)})`).join(' and ')+' became usable only after the day they were announced.';
+ $('gap-summary').textContent=ACCESS.filter(a=>gaps[a.key].n).map(a=>`${Math.round(gaps[a.key].later/gaps[a.key].n*100)}% of ${a.noun} (${number(gaps[a.key].later)} of ${number(gaps[a.key].n)})`).join(' and ')+' became usable only after the day they were announced.';
  $('gap-chart').innerHTML=renderGap(gaps);
  $('fate-chart').innerHTML=renderFates(retirementFates(ledger.data.models,ledger.data.events,meta.snapshot));
- $('annual-chart').innerHTML=renderAnnual(meta.annual,meta.snapshot.slice(0,4));
+ $('annual-chart').innerHTML=renderAnnual(annualCounts(ledger.data.models,m=>m.access_group),meta.snapshot.slice(0,4));
  $('undated-count').textContent=number(meta.undated);
  renderScatterFigure('price_output');
- const frontier=capabilityFrontier(ledger.data.capability),lag=frontierLag(frontier);
+ const frontier=capabilityFrontier(ledger.data.capability);
+ const openOrApi=capabilityFrontier(ledger.data.capability,[{key:'open'},{key:'api_only'}],r=>({fully_open:'open',open_weights:'open',api_only:'api_only'})[r.access_group]);
+ const lag=frontierLag(openOrApi.open,openOrApi.api_only);
  $('frontier-chart').innerHTML=renderFrontier(frontier,'2023-01-01',meta.snapshot);
- $('frontier-summary').textContent=lag?`The best open-weights model, ${lag.open.name} (${formatDate(lag.open.date)}), scores ${lag.open.value}; an API-only model, ${lag.closed.name}, scored that high on ${formatDate(lag.closed.date)}, ${number(lag.days)} days (${(lag.days/30.44).toFixed(1)} months) earlier.`:'No API-only model has matched the best open-weights score.';
+ $('frontier-summary').textContent=lag?.days>0?`The best open-weights model, ${lag.best.name} (${formatDate(lag.best.date)}), scores ${lag.best.value}; an API-only model, ${lag.first.name}, scored that high on ${formatDate(lag.first.date)}, ${number(lag.days)} days (${(lag.days/30.44).toFixed(1)} months) earlier.`:'No API-only model scored as high as the best open-weights model before it.';
+ renderOpenness();
+ renderCountryFigure('annual');
  const mentions=mentionBins(ledger.data.first_mentions);
  $('mention-chart').innerHTML=renderGap(mentions,'Days from first availability to the first arXiv paper naming the model, by access type');
- $('mention-summary').textContent='Half of '+ACCESS.filter(a=>mentions[a.key].n).map(a=>`${a.noun} were named in a paper within ${number(Math.round(mentions[a.key].median))} days of first availability (n=${number(mentions[a.key].n)})`).join('; half of ')+'.';
+ $('mention-summary').textContent='Median days to a first paper: '+ACCESS.filter(a=>mentions[a.key].n).map(a=>`${a.noun} ${number(Math.round(mentions[a.key].median))} (n=${number(mentions[a.key].n)})`).join(', ')+'.';
  const verified=meta.confidence.verified/meta.events*100,inferred=meta.confidence.inferred/meta.events*100;
  $('confidence-ring').style.background=`conic-gradient(#447759 0% ${verified}%,#d5c196 ${verified}% ${verified+inferred}%,#b05a50 ${verified+inferred}% 100%)`;
  $('verified-pct').innerHTML=verified.toFixed(1)+'<span>%</span>';
  $('confidence-breakdown').innerHTML=['verified','inferred','disputed'].map(k=>`<div><span class="confidence-label"><i class="legend-dot ${k}"></i>${title(k)}</span><span class="number">${number(meta.confidence[k]||0)} <span class="share">/ ${((meta.confidence[k]||0)/meta.events*100).toFixed(1)}%</span></span></div>`).join('');
+}
+function renderOpenness(){
+ const open=ledger.data.models.filter(m=>m.access_type==='open_weights');
+ const tiers=Object.fromEntries(OPENNESS.map(t=>[t.key,0]));for(const m of open)tiers[opennessTier(m)]++;
+ $('openness-chart').innerHTML=renderAnnual(annualCounts(open,opennessTier),ledger.data.meta.snapshot.slice(0,4),OPENNESS,'Open-weight models by year of first public availability and openness');
+ $('openness-summary').textContent=`Of ${number(open.length)} open-weight models, ${number(tiers.fully_open)} (${Math.round(tiers.fully_open/open.length*100)}%) are fully open, ${Math.round(tiers.open_license/open.length*100)}% carry an OSI or permissive license without released data and code on record, ${Math.round(tiers.restricted/open.length*100)}% a restricted license, and ${Math.round(tiers.unknown/open.length*100)}% no recorded license.`;
+}
+function renderCountryFigure(view){
+ const {models,capability,meta}=ledger.data;
+ const share=c=>{const group=models.filter(m=>m.country_group===c);return `${number(group.length)} ${c==='US'?'US':'Chinese'} models (${Math.round(group.filter(m=>m.access_type==='open_weights').length/group.length*100)}% open weights)`;};
+ const pair=COUNTRIES.slice(0,2),frontier=capabilityFrontier(capability,pair,r=>r.country_group);
+ const cn=frontierLag(frontier.CN,frontier.US),us=frontierLag(frontier.US,frontier.CN);
+ const [lag,behind,ahead]=cn?.days>0?[cn,'Chinese','US']:us?.days>0?[us,'US','Chinese']:[null];
+ $('country-summary').textContent=`${share('US')} and ${share('CN')}. `+(lag?`The best ${behind} model, ${lag.best.name} (${formatDate(lag.best.date)}), scores ${lag.best.value} on ECI; a ${ahead} model, ${lag.first.name}, scored that high on ${formatDate(lag.first.date)}, ${number(lag.days)} days earlier.`:'');
+ $('country-chart').innerHTML=view==='annual'?renderAnnual(annualCounts(models,m=>m.country_group),meta.snapshot.slice(0,4),COUNTRIES,'Models by year of first public availability and developer country'):renderFrontier(frontier,'2023-01-01',meta.snapshot,pair,'developer country');
+ document.querySelectorAll('[data-country-view]').forEach(b=>{const on=b.dataset.countryView===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
 }
 function renderScatterFigure(metric){
  const {points,zero}=scatterPoints(ledger.data.models,ledger.data.attributes,metric);
@@ -126,7 +146,8 @@ $('reset-filters').addEventListener('click',reset);$('export-filtered').addEvent
 $('table-body').addEventListener('click',e=>{const model=e.target.closest('[data-model]');if(model)openModel(model.dataset.model,model.dataset.event);if(e.target.closest('[data-reset]'))reset();});
 $('open-example').addEventListener('click',()=>{if(ledger)openModel(EXAMPLE_MODEL);else showToast('The dataset is still loading.');});
 document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderScatterFigure(b.dataset.metric);}));
-for(const id of ['scatter-chart','frontier-chart'])$(id).addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
+document.querySelectorAll('[data-country-view]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderCountryFigure(b.dataset.countryView);}));
+for(const id of ['scatter-chart','frontier-chart','country-chart'])$(id).addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
 $('close-dialog').addEventListener('click',()=>$('model-dialog').close());
 $('model-dialog').addEventListener('click',e=>{if(e.target===$('model-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 $('model-dialog').addEventListener('close',()=>{document.body.style.overflow='';selectedModel=null;});
@@ -135,6 +156,7 @@ async function init(){
  try{
   const response=await fetch('./data/ledger.json');if(!response.ok)throw new Error('Dataset request failed');
   ledger=createLedger(await response.json());
+  annotateGroups(ledger.data.models,ledger.data.organizations,[...ledger.data.capability,...ledger.data.first_mentions]);
   const orgCounts=new Map();for(const m of ledger.data.models)orgCounts.set(m.developer_org_id,(orgCounts.get(m.developer_org_id)||0)+1);
   const options=[...ledger.organizations.values()].filter(o=>orgCounts.has(o.org_id)).sort((a,b)=>a.short_name.localeCompare(b.short_name));
   $('org-filter').innerHTML='<option value="">All developers</option>'+options.map(o=>`<option value="${esc(o.org_id)}">${esc(o.short_name||o.canonical_name)} (${orgCounts.get(o.org_id)})</option>`).join('');

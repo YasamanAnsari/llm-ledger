@@ -66,7 +66,7 @@
 .gap-chart{display:grid;gap:9px}
 .gap-row{display:grid;grid-template-columns:110px 1fr;align-items:center;gap:14px}
 .gap-label{font-size:14px;color:#4d5a52;text-align:right}
-.gap-bars{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gap-bars{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:16px}
 .gap-bar{display:flex;align-items:center;gap:8px;min-width:0}
 .gap-bar i{display:block;height:16px;min-width:2px;background:var(--c);border-radius:0 3px 3px 0;flex-shrink:0;max-width:78%}
 .gap-bar span{font-family:var(--mono);font-size:13px;color:#3e4b43;white-space:nowrap}
@@ -107,7 +107,7 @@
 .date-cell small{font-size:12px}
 .muted-date{color:#a9b2a6}
 .chart-footnote{font-size:13px}
-@media(max-width:900px){.figure-grid{grid-template-columns:1fr}.figure-panel{padding:20px}.gap-row{grid-template-columns:80px 1fr;gap:10px}.gap-bars{grid-template-columns:1fr;gap:4px}}
+@media(max-width:900px){.figure-grid{grid-template-columns:1fr}.figure-panel{padding:20px}.gap-row{grid-template-columns:80px 1fr;gap:10px}.gap-bars{grid-auto-flow:row;grid-template-columns:1fr;gap:4px}}
 .gap-head .gap-bars span{font-size:14px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
 .gap-head .gap-bars i{width:10px;height:10px;border-radius:2px;background:var(--c);display:inline-block}
 .gap-head small{font-weight:400;font-family:var(--mono);font-size:13px;color:#8a958c}

@@ -170,6 +170,11 @@ For research:
   people first heard. `platform_availability` (with `platform`) is when
   a cloud started serving it; `retired` with a `platform` is that host's
   shutdown, not the vendor's.
+- **Open weights are not open source.** `access_type = open_weights`
+  only says the weights can be downloaded. A model is fully open when its
+  `license_family` is `osi_approved` or `permissive` and both
+  `training_data_released` and `training_code_released` are `true`
+  (OLMo, Pythia, SmolLM). Blank means not reviewed, not "no".
 - **Know the biases.** Hub-only weights dates are `inferred` on purpose.
   Coverage is deepest for OpenAI and open-weight labs, thinnest for
   closed labs without an API listing. Every machine date's evidence is

@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {marketOn, perMillion} from './ledger-engine.mjs';
-import {capabilityFrontier, frontierLag, gapBins, mentionBins, renderFrontier, retirementFates, scatterPoints,
+import {accessGroup, annotateGroups, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, retirementFates, scatterPoints,
   yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
@@ -16,6 +16,21 @@ const models = [
   {model_id: 'a3', access_type: 'api_only', anticipation_days: '', first_public_availability_date: '', canonical_name: 'A3'},
 ];
 
+annotateGroups(models, [{org_id: 'us-lab', country: 'US'}], []);
+assert.deepEqual(models.map(m => m.access_group), ['open_weights', 'open_weights', 'api_only', 'api_only', 'api_only']);
+assert.deepEqual(models.map(m => m.country_group), ['other', 'other', 'other', 'other', 'other']);
+const olmo = {access_type: 'open_weights', license_family: 'osi_approved', training_data_released: 'true', training_code_released: 'true'};
+assert.equal(accessGroup(olmo), 'fully_open');
+assert.equal(accessGroup({...olmo, training_data_released: 'partial'}), 'open_weights');
+assert.equal(accessGroup({...olmo, license_family: 'open_weights_restricted'}), 'open_weights');
+assert.deepEqual([olmo, {...olmo, training_code_released: ''}, {...olmo, license_family: 'open_weights_restricted'}, {...olmo, license_family: ''}].map(opennessTier),
+  ['fully_open', 'open_license', 'restricted', 'unknown']);
+const rows = [{model_id: 'x', developer_org_id: 'us-lab', access_type: 'api_only', first_public_availability_date: '2025-02-01'}];
+const keyed = [{model_id: 'x'}, {model_id: 'not-in-ledger'}];
+annotateGroups(rows, [{org_id: 'us-lab', country: 'US'}], keyed);
+assert.deepEqual(keyed, [{model_id: 'x', access_group: 'api_only', country_group: 'US'}, {model_id: 'not-in-ledger'}]);
+assert.deepEqual(annualCounts(models, m => m.access_group), {2025: {open_weights: 2, api_only: 2}});
+
 const gaps = gapBins(models);
 assert.equal(gaps.open_weights.n, 2);
 assert.equal(gaps.open_weights.later, 1);
@@ -23,7 +38,7 @@ assert.deepEqual(gaps.open_weights.counts, [0, 1, 0, 0, 1, 0, 0]);
 assert.deepEqual(gaps.api_only.counts, [1, 0, 0, 0, 0, 0, 0]);
 assert.equal(gaps.open_weights.median, 20);
 const firstMentions = mentionBins(['5', '200', '', '-3', '9'].map((days_to_first_mention, i) =>
-  ({access_type: i < 3 ? 'open_weights' : 'api_only', days_to_first_mention})));
+  ({access_group: i < 3 ? 'open_weights' : 'api_only', days_to_first_mention})));
 assert.deepEqual([firstMentions.open_weights.n, firstMentions.open_weights.median, firstMentions.api_only.median], [2, 102.5, 3]);
 assert.deepEqual(firstMentions.api_only.counts, [1, 0, 0, 1, 0, 0, 0]);
 
@@ -49,14 +64,16 @@ assert.deepEqual(yearlyMedians([{access: 'api_only', date: '2025-01-01', value: 
 const scored = [['o1', 'open_weights', '2025-01-10', '120'], ['o2', 'open_weights', '2025-03-01', '110'],
   ['o3', 'open_weights', '2025-06-01', '140'], ['a1', 'api_only', '2024-12-01', '130'],
   ['a2', 'api_only', '2025-02-01', '145'], ['a3', 'api_only', '', '160']]
-  .map(([model_id, access_type, first_public_availability_date, eci]) =>
-    ({model_id, access_type, first_public_availability_date, eci, canonical_name: model_id}));
+  .map(([model_id, access_group, first_public_availability_date, eci]) =>
+    ({model_id, access_group, first_public_availability_date, eci, canonical_name: model_id}));
 const frontier = capabilityFrontier(scored);
 assert.deepEqual(frontier.open_weights.map(s => s.id), ['o1', 'o3']);
 assert.deepEqual(frontier.api_only.map(s => s.id), ['a1', 'a2']);
-const lag = frontierLag(frontier);
-assert.deepEqual([lag.closed.id, lag.days], ['a2', 120]);
-assert.equal(frontierLag(capabilityFrontier(scored.slice(0, 4))), null);
+const lag = frontierLag(frontier.open_weights, frontier.api_only);
+assert.deepEqual([lag.best.id, lag.first.id, lag.days], ['o3', 'a2', 120]);
+const unmatched = capabilityFrontier(scored.slice(0, 4));
+assert.equal(frontierLag(unmatched.open_weights, unmatched.api_only), null);
+assert.deepEqual(frontier.fully_open, []);
 assert.match(renderFrontier(frontier, '2025-01-01', '2025-12-31'), /data-model="a1"/);
 
 const observed = {

@@ -107,12 +107,6 @@ export function marketPayload(models, observations) {
 function main() {
   const data = Object.fromEntries(Object.entries(TABLES).map(([name, path]) => [name, readTable(path)]));
   const dated = data.models.filter(m => m.first_public_availability_date);
-  const annual = {};
-  for (const m of dated) {
-    const year = m.first_public_availability_date.slice(0, 4);
-    annual[year] ??= {};
-    annual[year][m.access_type] = (annual[year][m.access_type] || 0) + 1;
-  }
   // The data's own last-change date, not the build date: a code-only
   // deploy must not make an old snapshot look new.
   const snapshot = data.models.map(m => m.record_updated.slice(0, 10)).sort().at(-1);
@@ -125,7 +119,6 @@ function main() {
     liveClaims: data.claims.filter(c => !c.superseded_on).length,
     confidence: count(data.events, 'confidence'),
     access: count(data.models, 'access_type'),
-    annual,
     undated: data.models.length - dated.length,
     icons: readdirSync(join(REPO, 'assets/orgs')).filter(f => f.endsWith('.svg')).map(f => f.slice(0, -4)),
   };

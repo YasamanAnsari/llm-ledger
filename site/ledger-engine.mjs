@@ -24,7 +24,7 @@ export function createLedger(data){
  function query(state={}){
   const {view='models',query='',org='',event='',confidence='',access='',sort='newest'}=state;
   const words=normalize(query).split(/\s+/).filter(Boolean);
-  const matches=m=>(!org||m.developer_org_id===org)&&(!access||m.access_type===access)&&words.every(w=>searchText.get(m.model_id).includes(w));
+  const matches=m=>(!org||m.developer_org_id===org)&&(!access||(access==='fully_open'?m.access_group==='fully_open':m.access_type===access))&&words.every(w=>searchText.get(m.model_id).includes(w));
   let rows;
   if(view==='events'){
    rows=data.events.filter(e=>(!event||e.event_type===event)&&(!confidence||e.confidence===confidence)).map(e=>({model:models.get(e.model_id),event:e,date:e.date,confidence:e.confidence})).filter(r=>r.model&&matches(r.model));

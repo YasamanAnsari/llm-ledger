@@ -50,7 +50,7 @@
    <figcaption>Gap = first public availability minus announcement (<code>anticipation_days</code>). Open weights count from the weights release; API-only models from API, consumer or platform access. “Before” means the model was usable a day or more before it was announced. Bars show the share within each group.</figcaption>
   </figure>
   <figure class="figure-panel wide">
-   <div class="figure-head"><span class="visual-index">FIG. 03</span><h3>Open weights and API-only models, side by side</h3><p>Each mark is one model, placed at its first public availability date. Lines join each group’s yearly median.</p>
+   <div class="figure-head"><span class="visual-index">FIG. 03</span><h3>Fully open, other open weights and API-only models, side by side</h3><p>Each mark is one model, placed at its first public availability date. Lines join each group’s yearly median.</p>
     <div class="metric-tabs" role="group" aria-label="Measure"><button class="metric-tab active" data-metric="price_output" aria-pressed="true">Output price</button><button class="metric-tab" data-metric="context_length" aria-pressed="false">Context window</button></div></div>
    <div id="scatter-chart" class="figure-body"></div>
    <figcaption id="scatter-caption"></figcaption>
@@ -73,12 +73,23 @@
   <figure class="figure-panel wide">
    <div class="figure-head"><span class="visual-index">FIG. 07</span><h3>How far behind are open weights?</h3><p>The best Epoch Capabilities Index score among models available by each date, open weights against API only. <strong id="frontier-summary"></strong></p></div>
    <div id="frontier-chart" class="figure-body"></div>
-   <figcaption>Each step is a model that beat every earlier model of its kind, placed at its first public availability date in the ledger. Scores are from one ECI snapshot (Epoch AI, CC BY 4.0) and cover only the models ECI rates; <a href="./data/llm_ledger_capability.csv">download the join</a>. Click a mark to open its record.</figcaption>
+   <figcaption>Each step is a model that beat every earlier model of its kind, placed at its first public availability date in the ledger. Scores are from one ECI snapshot (Epoch AI, CC BY 4.0) and cover only the models ECI rates, none of them fully open; <a href="./data/llm_ledger_capability.csv">download the join</a>. Click a mark to open its record.</figcaption>
   </figure>
   <figure class="figure-panel wide">
    <div class="figure-head"><span class="visual-index">FIG. 08</span><h3>How soon does research pick a model up?</h3><p>Days from a model’s first public availability to the first arXiv paper whose title or abstract names it. <strong id="mention-summary"></strong></p></div>
    <div id="mention-chart" class="figure-body"></div>
    <figcaption>Papers in cs.AI, cs.CL, cs.CV, cs.LG and stat.ML since 2023, matched against the ledger’s own spellings of each model (“Qwen2.5-7B-Instruct”, “GPT-4o”); a name needs a version or size, so these are lower bounds. Models available before 2023 are left out. “Before” is a paper dated earlier than the ledger’s availability date: a preview, another model of the same name, or a date to recheck. <a href="./data/research_first_mentions.csv">Download first mentions</a> or <a href="./data/research_mentions_monthly.csv">papers per family per month</a>.</figcaption>
+  </figure>
+  <figure class="figure-panel wide">
+   <div class="figure-head"><span class="visual-index">FIG. 09</span><h3>How open are open weights?</h3><p>Open-weight models by year of first public availability, from fully open to no license on record. <strong id="openness-summary"></strong></p></div>
+   <div id="openness-chart" class="figure-body"></div>
+   <figcaption><strong>Fully open</strong>: the weights, the training data and the training code are all public, under an OSI-approved or permissive license (OLMo, Pythia, SmolLM). <strong>OSI or permissive license</strong>: weights under Apache-2.0, MIT or similar terms whose data and code are not released or not yet reviewed; only fully open labs have been reviewed so far, so some of these may be fully open. <strong>Restricted</strong>: usage thresholds, separate agreements or use limits (the Llama licenses, the Gemma Terms of Use). * year to date.</figcaption>
+  </figure>
+  <figure class="figure-panel wide">
+   <div class="figure-head"><span class="visual-index">FIG. 10</span><h3>United States and China</h3><p>Models by the developer’s headquarters. <strong id="country-summary"></strong></p>
+    <div class="metric-tabs" role="group" aria-label="View"><button class="metric-tab active" data-country-view="annual" aria-pressed="true">Models per year</button><button class="metric-tab" data-country-view="capability" aria-pressed="false">Best capability score</button></div></div>
+   <div id="country-chart" class="figure-body"></div>
+   <figcaption>Country is the developer’s headquarters (<code>organizations.country</code>), not where a model was trained or served. Model counts include every size and checkpoint the Hugging Face sweep records, so labs that publish many variants count high. Capability is the best Epoch Capabilities Index score among each country’s models available by each date; ECI rates fewer Chinese models than US ones. Click a mark to open its record.</figcaption>
   </figure>
  </div>
 </div></section>
@@ -91,7 +102,7 @@
   <label class="select-field"><span class="sr-only">Event type</span><select id="event-filter"><option value="">All milestones</option></select></label>
   <label class="select-field"><span class="sr-only">Confidence</span><select id="confidence-filter"><option value="">All confidence</option><option value="verified">Verified</option><option value="inferred">Inferred</option><option value="disputed">Disputed</option><option value="undated">Undated</option></select></label>
  </form>
- <div class="results-toolbar"><div class="access-pills" aria-label="Filter by access"><button class="access-pill active" data-access="" aria-pressed="true">All access</button><button class="access-pill" data-access="open_weights" aria-pressed="false"><span class="open-symbol" aria-hidden="true">◇</span> Open weights</button><button class="access-pill" data-access="api_only" aria-pressed="false">API only</button></div><label class="sort-field">Sort by <select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Model name A–Z</option></select></label></div>
+ <div class="results-toolbar"><div class="access-pills" aria-label="Filter by access"><button class="access-pill active" data-access="" aria-pressed="true">All access</button><button class="access-pill" data-access="open_weights" aria-pressed="false"><span class="open-symbol" aria-hidden="true">◇</span> Open weights</button><button class="access-pill" data-access="fully_open" aria-pressed="false" title="Weights, training data and training code all released under open terms">Fully open</button><button class="access-pill" data-access="api_only" aria-pressed="false">API only</button></div><label class="sort-field">Sort by <select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Model name A–Z</option></select></label></div>
  <div id="dataset-panel" role="tabpanel" aria-labelledby="models-tab" tabindex="0"><div class="table-scroll"><table class="data-table"><caption class="sr-only" id="table-caption">Models and their first public availability dates</caption><thead id="table-head"><tr><th>MODEL</th><th>DEVELOPER</th><th>ANNOUNCED</th><th>FIRST AVAILABLE ↓</th><th>VIA</th><th>CONFIDENCE</th><th>EVENTS</th><th><span class="sr-only">Details</span></th></tr></thead><tbody id="table-body"><tr><td colspan="8" class="loading-state">Loading the ledger…</td></tr></tbody></table></div></div>
  <div class="table-footer"><span id="result-count" role="status" aria-live="polite">Loading dataset</span><div class="pagination"><button id="reset-filters" class="reset-button" hidden>Clear filters</button><button id="prev-page" class="page-button" aria-label="Previous page" disabled>←</button><span id="page-number">1 / 1</span><button id="next-page" class="page-button" aria-label="Next page" disabled>→</button></div></div>
  <p class="table-note"><span aria-hidden="true">ⓘ</span> “First available” is derived from availability events, with documented fallbacks. Confidence refers to the displayed date. <a href="#methodology">How to read the data ↗</a></p>
