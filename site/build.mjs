@@ -25,13 +25,15 @@ const TABLES = {
   capability: 'data/generated/llm_ledger_capability.csv',
   first_mentions: 'data/generated/research_first_mentions.csv',
 };
+const ARENA_VIEW = 'text_style_control';
 const DOWNLOADS = [
   'data/core/models.csv', 'data/core/events.csv', 'data/core/claims.csv',
   'data/core/organizations.csv', 'data/core/attributes.csv', 'data/core/crosswalk.csv',
   'data/generated/models_latest.csv', 'data/generated/llm_ledger_wide.csv',
   'data/generated/llm_ledger_enriched.csv', 'data/generated/reschedules.csv',
   'data/generated/market_on_date.csv', 'data/generated/price_changes.csv',
-  'data/generated/llm_ledger_capability.csv', 'data/generated/research_mentions_monthly.csv',
+  'data/generated/llm_ledger_capability.csv', 'data/generated/llm_ledger_benchmarks.csv',
+  'data/generated/llm_ledger_arena.csv', 'data/generated/research_mentions_monthly.csv',
   'data/generated/research_first_mentions.csv', 'data/observations/research_mentions.csv',
   ...Object.values(OBSERVATIONS),
   'data/observations/model_versions.csv',
@@ -134,6 +136,10 @@ function main() {
     orgs: Object.fromEntries(data.organizations.map(o => [o.org_id, o.short_name || o.canonical_name])),
     icons: data.meta.icons};
   writeFileSync(join(DIST, 'data/market.json'), JSON.stringify(marketData));
+  // FIG. 10's Arena view loads this on demand: the default (style-controlled) text arena only.
+  const arena = readTable('data/generated/llm_ledger_arena.csv').filter(r => r.arena === ARENA_VIEW)
+    .map(r => [r.model_id, r.publish_date, r.rating, r.arena_model]);
+  writeFileSync(join(DIST, 'data/arena.json'), JSON.stringify(arena));
   console.log(`site: ${data.meta.models} models, ${data.meta.events} events, snapshot ${snapshot} -> ${DIST}`);
 }
 

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import io
 import sys
 import tempfile
 import zipfile
@@ -11,8 +12,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import bundles
 import schema
-from build import (CAPABILITY_COLUMNS, LATEST_COLUMNS, _agent_section, build_reschedule_rows,
-                   capability_rows, compute_derived, first_mention_rows, latest_first,
+from build import (CAPABILITY_COLUMNS, LATEST_COLUMNS, _agent_section, arena_matcher, arena_name_parts,
+                   benchmark_rows, build_reschedule_rows, capability_rows, compute_derived, first_mention_rows, latest_first,
                    latest_pull_date, predecessor_review_rows, research_monthly_rows)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
@@ -282,6 +283,54 @@ def test_capability_joins_by_crosswalk_then_by_undated_name() -> None:
     assert [(r["model_id"], r["matched_by"]) for r in rows] == [
         ("gpt-4o", "crosswalk"), ("qwen3-32b", "name")]
     assert rows[0]["eci_snapshot_date"] == "2026-10-28"
+
+
+def _ledger(*ids):
+    return [{"model_id": i, "canonical_name": i, "developer_org_id": "lab", "access_type": "api_only"}
+            for i in ids]
+
+
+def test_benchmark_rows_join_versions_by_group_and_drop_artificial_analysis_rows() -> None:
+    members = {
+        "benchmark_metadata.csv": "benchmark,in_eci,source_file,score_column\n"
+                                  "GPQA diamond,True,gpqa.csv,Best score\nHLE,False,,\n",
+        "model_metadata.csv": "model_version,model_group\nR1_thinking,DeepSeek-R1\nX-1,X-1\n",
+        "gpqa.csv": "Model version,Best score,Source,id\nR1_thinking,0.71,,a\nX-1,0.5,"
+                    "https://artificialanalysis.ai/evaluations/gpqa,b\nR1_thinking,,,c\n",
+    }
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as archive:
+        for name, text in members.items():
+            archive.writestr(name, text)
+    crosswalk = [{"model_id": "deepseek-r1", "namespace": "epoch", "identifier": "DeepSeek-R1"}]
+    with zipfile.ZipFile(buf) as archive:
+        rows = benchmark_rows(_ledger("deepseek-r1", "x-1"), crosswalk, archive, "2026-10-28")
+    assert [(r["model_id"], r["epoch_model_version"], r["score"], r["matched_by"], r["benchmark_in_eci"])
+            for r in rows] == [("deepseek-r1", "R1_thinking", "0.71", "crosswalk", "true")]
+
+
+def test_arena_names_fold_effort_and_leave_ambiguous_snapshots_unmatched() -> None:
+    assert arena_name_parts("Claude Opus 4.5 (High, 32K, 20251101)") == ("Claude Opus 4.5", "20251101")
+    assert arena_name_parts("Athene 70B (0725 beta)") is None
+    names = {"Claude Opus 4.5 (High, 32K, 20251101)", "Claude Opus 4.5 (20251101)",
+             "Claude 3.5 Sonnet (20240620)", "Claude 3.5 Sonnet (20241022)",
+             "DeepSeek-R1", "DeepSeek-R1 (0528)", "GPT-4o (2024-05-13)", "Kimi K3 (Max)",
+             "claude-opus-4-5-20251101-thinking-32k", "gemini-3-flash (thinking-minimal)", "o3-mini-high"}
+    match = arena_matcher({m["model_id"]: m for m in _ledger(
+        "claude-opus-4-5", "claude-3-5-sonnet", "deepseek-r1", "gpt-4o", "gpt-4o-2024-05-13", "kimi-k3",
+        "gemini-3-flash", "o3-mini", "o3-mini-high") + [
+        {"model_id": "openai-o1", "canonical_name": "o1"}]}, names | {"o1-2024-12-17"})
+    assert match("o1-2024-12-17") == ("openai-o1", "name_one_snapshot")
+    assert {n: match(n) for n in sorted(names)} == {
+        "Claude 3.5 Sonnet (20240620)": ("", ""), "Claude 3.5 Sonnet (20241022)": ("", ""),
+        "Claude Opus 4.5 (20251101)": ("claude-opus-4-5", "name_one_snapshot"),
+        "Claude Opus 4.5 (High, 32K, 20251101)": ("claude-opus-4-5", "name_one_snapshot"),
+        "DeepSeek-R1": ("deepseek-r1", "name"), "DeepSeek-R1 (0528)": ("", ""),
+        "GPT-4o (2024-05-13)": ("gpt-4o-2024-05-13", "name_snapshot"),
+        "Kimi K3 (Max)": ("kimi-k3", "name"),
+        "claude-opus-4-5-20251101-thinking-32k": ("claude-opus-4-5", "name_one_snapshot"),
+        "gemini-3-flash (thinking-minimal)": ("gemini-3-flash", "name"),
+        "o3-mini-high": ("o3-mini-high", "name")}
 
 
 def test_research_views_count_a_paper_once_and_date_from_first_availability() -> None:

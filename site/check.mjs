@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {NO_COUNTRY, createLedger, marketOn, perMillion} from './ledger-engine.mjs';
-import {accessGroup, annotateGroups, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, renderGap, retirementFates, scatterPoints,
+import {ARENA_METRIC, COUNTRIES, accessGroup, annotateGroups, arenaBest, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, renderGap, retirementFates, scatterPoints,
   yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
@@ -76,6 +76,12 @@ const unmatched = capabilityFrontier(scored.slice(0, 4));
 assert.equal(frontierLag(unmatched.open_weights, unmatched.api_only), null);
 assert.deepEqual(frontier.fully_open, []);
 assert.match(renderFrontier(frontier, '2025-01-01', '2025-12-31'), /data-model="a1"/);
+const boards = arenaBest([['u1', 'US', '2025-02-01', 1300], ['u2', 'US', '2025-02-01', 1350], ['c1', 'CN', '2025-02-01', 1320],
+  ['u1', 'US', '2025-01-01', 1290], ['x', 'other', '2025-01-01', 1400]].map(([id, country, date, value]) => ({id, country, date, value})),
+COUNTRIES.slice(0, 2), r => r.country);
+assert.deepEqual(boards.US.map(r => [r.date, r.id]), [['2025-01-01', 'u1'], ['2025-02-01', 'u2']]);
+assert.deepEqual(boards.CN.map(r => r.id), ['c1']);
+assert.match(renderFrontier(boards, '2025-01-01', '2025-03-01', COUNTRIES.slice(0, 2), 'developer country', ARENA_METRIC), /Arena rating/);
 
 const observed = {
   availability: [

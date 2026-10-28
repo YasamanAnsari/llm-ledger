@@ -271,29 +271,47 @@ export function frontierLag(trailing, leading) {
   return first ? {best, first, days: Math.round((Date.parse(best.date) - Date.parse(first.date)) / 864e5)} : null;
 }
 
-export function renderFrontier(frontier, start, end, groups = ACCESS, subject = 'access group') {
+/** Highest LMArena rating per group on each published leaderboard. Ratings
+ * are refit every publication, so a line can fall; it is not a record. */
+export function arenaBest(rows, groups, groupOf) {
+  const out = Object.fromEntries(groups.map(g => [g.key, new Map()]));
+  for (const r of rows) {
+    const best = out[groupOf(r)];
+    if (best && !(best.get(r.date)?.value >= r.value)) best.set(r.date, r);
+  }
+  return Object.fromEntries(Object.entries(out).map(([key, byDate]) =>
+    [key, [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date))]));
+}
+
+const ECI_METRIC = {label: 'ECI', step: 10, when: 'first available', axis: 'Best Epoch Capabilities Index score on record by ledger release date',
+  caption: 'Models that raised the best ECI score of their', dateHead: 'First available'};
+export const ARENA_METRIC = {label: 'Arena rating', step: 50, when: 'leaderboard of', axis: 'Highest LMArena text rating (style control) on each published leaderboard',
+  caption: 'Highest-rated model on each LMArena text leaderboard, per', dateHead: 'Leaderboard'};
+
+export function renderFrontier(frontier, start, end, groups = ACCESS, subject = 'access group', metric = ECI_METRIC) {
   // The step in force on `start` is drawn from the left edge.
   const shown = Object.fromEntries(groups.map(a => [a.key,
     frontier[a.key].filter((p, i, all) => !(all[i + 1]?.date <= start))]));
   const values = Object.values(shown).flat().map(s => s.value);
-  const lo = Math.floor(Math.min(...values) / 10) * 10, hi = Math.ceil(Math.max(...values) / 10) * 10;
+  const {step} = metric;
+  const lo = Math.floor(Math.min(...values) / step) * step, hi = Math.ceil(Math.max(...values) / step) * step;
   const t0 = Date.parse(start), t1 = Date.parse(end);
   const x = d => M.left + (Math.max(Date.parse(d), t0) - t0) / (t1 - t0) * (W - M.left - M.right);
   const y = v => H - M.bottom - (v - lo) / (hi - lo) * (H - M.top - M.bottom);
   const years = [];
   for (let yr = new Date(start).getUTCFullYear() + 1; yr <= new Date(end).getUTCFullYear(); yr++) years.push(yr);
-  const yTicks = Array.from({length: (hi - lo) / 10 + 1}, (_, i) => lo + i * 10);
+  const yTicks = Array.from({length: (hi - lo) / step + 1}, (_, i) => lo + i * step);
   const grid = yTicks.map(v => `<line x1="${M.left}" x2="${W - M.right}" y1="${y(v)}" y2="${y(v)}"/><text x="${M.left - 8}" y="${y(v) + 3}" text-anchor="end">${v}</text>`).join('')
     + years.map(yr => `<line x1="${x(`${yr}-01-01`)}" x2="${x(`${yr}-01-01`)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${x(`${yr}-01-01`)}" y="${H - M.bottom + 18}" text-anchor="middle">${yr}</text>`).join('');
   const lines = groups.map(a => {
     const s = shown[a.key];
     if (!s.length) return '';
     const path = s.map((p, i) => `${i ? `H${x(p.date).toFixed(1)}V` : `M${x(p.date).toFixed(1)},`}${y(p.value).toFixed(1)}`).join('') + `H${x(end).toFixed(1)}`;
-    const marks = s.map(p => `<circle class="pt" data-model="${esc(p.id)}" cx="${x(p.date).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="3.2" fill="${a.color}"><title>${esc(`${p.name}: ECI ${p.value} · first available ${p.date}`)}</title></circle>`).join('');
+    const marks = s.map(p => `<circle class="pt" data-model="${esc(p.id)}" cx="${x(p.date).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="3.2" fill="${a.color}"><title>${esc(`${p.name}: ${metric.label} ${p.value} · ${metric.when} ${p.date}`)}</title></circle>`).join('');
     return `<path class="median" d="${path}" stroke="${a.color}"/>${marks}`;
   }).join('');
-  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Best Epoch Capabilities Index score on record by ledger release date, by ${esc(subject)}"><g class="grid">${grid}</g>${lines}</svg>`;
-  const table = dataTable(`Models that raised the best ECI score of their ${subject}`, ['First available', 'Group', 'Model', 'ECI'],
+  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`${metric.axis}, by ${subject}`)}"><g class="grid">${grid}</g>${lines}</svg>`;
+  const table = dataTable(`${metric.caption} ${subject}`, [metric.dateHead, 'Group', 'Model', metric.label],
     groups.flatMap(a => frontier[a.key].map(s => [s.date, a.label, s.name, s.value])).sort((p, q) => p[0].localeCompare(q[0])));
   return legend(groups.filter(a => frontier[a.key].length).map(a => ({...a, shape: 'line'}))) + svg + table;
 }

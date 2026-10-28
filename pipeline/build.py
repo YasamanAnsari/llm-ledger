@@ -30,7 +30,8 @@ import io
 import json
 import re
 import sys
-from collections import Counter
+import zipfile
+from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
@@ -335,26 +336,35 @@ CAPABILITY_COLUMNS = (
 )
 
 
-def capability_rows(models: list, crosswalk: list, eci_rows: list, snapshot_date: str) -> list:
-    """One row per ECI entry that names a ledger model.
+def epoch_matcher(by_id: dict, crosswalk: list):
+    """Epoch model name -> (ledger model_id, matched_by), or ("", "").
 
-    The Epoch crosswalk id joins first (`matched_by=crosswalk`). An entry
-    the crosswalk does not hold joins by name only when its normalized
-    name is a ledger id that has no Epoch id of its own and the name
+    The Epoch crosswalk id joins first. Otherwise a name joins when its
+    normalized form is a ledger id with no Epoch id of its own and the name
     carries no dated qualifier: ECI scores "GPT-4o (May 2024)" and
     "GPT-4o (Aug 2024)" apart, and the ledger does not split them that way.
     """
-    by_id = {m["model_id"]: m for m in models}
     epoch_ids = {r["identifier"]: r["model_id"] for r in crosswalk if r["namespace"] == "epoch"}
     with_epoch_id = set(epoch_ids.values())
+
+    def match(name: str) -> tuple:
+        if name in epoch_ids:
+            return epoch_ids[name], "crosswalk"
+        if "(" in name:
+            return "", ""
+        key = matchmod.normalize_name(name)["key"]
+        return (key, "name") if key in by_id and key not in with_epoch_id else ("", "")
+    return match
+
+
+def capability_rows(models: list, crosswalk: list, eci_rows: list, snapshot_date: str) -> list:
+    """One row per ECI entry that names a ledger model (see epoch_matcher)."""
+    by_id = {m["model_id"]: m for m in models}
+    epoch_id = epoch_matcher(by_id, crosswalk)
     rows = []
     for entry in eci_rows:
         name = entry["Model"]
-        model_id, matched_by = epoch_ids.get(name, ""), "crosswalk"
-        if not model_id and "(" not in name:
-            key = matchmod.normalize_name(name)["key"]
-            model_id, matched_by = (key, "name") if key in by_id and key not in with_epoch_id \
-                else ("", "")
+        model_id, matched_by = epoch_id(name)
         model = by_id.get(model_id)
         if model is None:
             continue
@@ -377,6 +387,175 @@ def build_capability_bytes() -> bytes:
     rows = capability_rows(schema.read_table(MODELS), schema.read_table(schema.CROSSWALK),
                            eci_rows, schema.snapshot_content_date("epoch_eci", "eci_scores.csv"))
     return _csv_bytes(list(CAPABILITY_COLUMNS), rows)
+
+
+MODEL_COLUMNS = ("model_id", "canonical_name", "developer_org_id", "access_type")
+BENCHMARK_COLUMNS = MODEL_COLUMNS + (
+    "benchmark", "epoch_model_version", "epoch_row_id", "matched_by", "score",
+    "benchmark_in_eci", "epoch_snapshot_date",
+)
+# Epoch republishes some scores from Artificial Analysis, whose terms forbid
+# redistribution; those rows are dropped.
+EXCLUDED_SCORE_SOURCE = "artificialanalysis.ai"
+
+
+def benchmark_rows(models: list, crosswalk: list, archive: zipfile.ZipFile,
+                   snapshot_date: str) -> list:
+    """One row per Epoch benchmark result on a ledger model.
+
+    Benchmarks are the ones `benchmark_metadata.csv` gives a source file and
+    a score column for; the score is that column, unchanged. A result's
+    model version joins through its Epoch model group (the name ECI uses),
+    so reasoning-effort variants land on their model with the version kept.
+    """
+    def table(member: str) -> list:
+        return list(csv.DictReader(io.StringIO(archive.read(member).decode("utf-8"))))
+    by_id = {m["model_id"]: m for m in models}
+    epoch_id = epoch_matcher(by_id, crosswalk)
+    group_of = {m["model_version"]: m["model_group"] for m in table("model_metadata.csv")}
+    rows = []
+    for bench in table("benchmark_metadata.csv"):
+        if not (bench["source_file"] and bench["score_column"]):
+            continue
+        for result in table(bench["source_file"]):
+            score = result[bench["score_column"]]
+            cited = f"{result.get('Source', '')} {result.get('Source link', '')}"
+            if not score or EXCLUDED_SCORE_SOURCE in cited:
+                continue
+            version = result["Model version"]
+            model_id, matched_by = epoch_id(group_of.get(version) or version)
+            model = by_id.get(model_id)
+            if model is None:
+                continue
+            rows.append({
+                **{c: model[c] for c in MODEL_COLUMNS},
+                "benchmark": bench["benchmark"], "epoch_model_version": version,
+                "epoch_row_id": result.get("id", ""), "matched_by": matched_by, "score": score,
+                "benchmark_in_eci": bench["in_eci"].lower(), "epoch_snapshot_date": snapshot_date,
+            })
+    return sorted(rows, key=lambda r: (r["model_id"], r["benchmark"], r["epoch_model_version"],
+                                       r["epoch_row_id"]))
+
+
+def build_benchmark_bytes() -> bytes:
+    """The Epoch benchmark hub join (CC BY 4.0, Epoch AI); generated only, never core."""
+    path = schema.snapshot_file("epoch_benchmarks", "benchmark_data.zip")
+    with zipfile.ZipFile(path) as archive:
+        rows = benchmark_rows(schema.read_table(MODELS), schema.read_table(schema.CROSSWALK),
+                              archive, schema.snapshot_content_date("epoch_benchmarks",
+                                                                    "benchmark_data.zip"))
+    return _csv_bytes(list(BENCHMARK_COLUMNS), rows)
+
+
+ARENA_COLUMNS = MODEL_COLUMNS + (
+    "arena", "arena_model", "matched_by", "publish_date", "rating", "rating_lower",
+    "rating_upper", "votes", "rank",
+)
+_QUALIFIED = re.compile(r"(.*?)\s*\(([^()]*)\)")
+_EFFORT_WORD = re.compile(r"(?:minimal|low|medium|high|xhigh|max|thinking|reasoning|\d+k)", re.I)
+_DATE_WORD = re.compile(r"\d{8}|\d{4}|\d{4}-\d{2}-\d{2}")
+_EFFORT_TAIL = re.compile(r"(?:[-_ ](?:minimal|low|medium|high|xhigh|max|thinking|reasoning|\d+k))+$",
+                          re.I)
+
+
+def arena_name_parts(name: str) -> tuple | None:
+    """("Claude Opus 4.5", "20251101") for "Claude Opus 4.5 (High, 32K, 20251101)".
+
+    A trailing parenthetical may hold reasoning-effort words and at most one
+    date; anything else in it ("Athene 70B (0725 beta)") names a model the
+    ledger cannot place, and the name gets None.
+    """
+    found = _QUALIFIED.fullmatch(name.strip())
+    if not found:
+        return name.strip(), ""
+    words = [w for w in re.split(r"[,\s]+", found[2]) if w]
+    dates = [w for w in words if _DATE_WORD.fullmatch(w)]
+    efforts = [p for w in words if w not in dates for p in w.split("-")]
+    if len(dates) > 1 or not all(_EFFORT_WORD.fullmatch(p) for p in efforts):
+        return None
+    return found[1], dates[0] if dates else ""
+
+
+def arena_matcher(by_id: dict, names: set):
+    """LMArena model name -> (ledger model_id, matched_by), or ("", "").
+
+    Effort qualifiers fold onto their model, in parentheses or as an id
+    tail ("claude-opus-4-6-thinking"); a tail is kept when the whole name
+    is itself a ledger id ("o3-mini-high"). A dated name joins the ledger
+    id that carries the same date ("gpt-4o-2024-05-13"); failing that, the
+    undated ledger id, but only when the arena lists that model under one
+    date and never undated: two Claude 3.5 Sonnet snapshots stay unmatched
+    because the ledger holds them as one model, and "DeepSeek-R1 (0528)"
+    stays off deepseek-r1 because the arena's "DeepSeek-R1" is the January
+    checkpoint. A key is a ledger id or, when no other model shares it, the
+    ledger's own spelling of a name ("o3" is openai-o3).
+    """
+    spelled = {mid: matchmod.normalize_name(m["canonical_name"])["key"] for mid, m in by_id.items()}
+    spellings = Counter(spelled.values())
+    known = {key: mid for mid, key in spelled.items() if spellings[key] == 1} | {mid: mid for mid in by_id}
+    parts = {}
+    for name in names:
+        split = arena_name_parts(name)
+        if split is None:
+            continue
+        normalized = matchmod.normalize_name(split[0])
+        if normalized["key"] not in known:
+            normalized = matchmod.normalize_name(_EFFORT_TAIL.sub("", split[0]))
+        parts[name] = (normalized["key"], split[1] or normalized["snapshot_suffix"])
+    dates_of = defaultdict(set)
+    for key, day in parts.values():
+        dates_of[key].add(day.replace("-", ""))
+
+    def match(name: str) -> tuple:
+        if name not in parts:
+            return "", ""
+        key, day = parts[name]
+        if not day:
+            return (known[key], "name") if key in known else ("", "")
+        compact = day.replace("-", "")
+        for candidate in (f"{key}-{day}", f"{key}-{compact}",
+                          f"{key}-{compact[:4]}-{compact[4:6]}-{compact[6:]}"):
+            if candidate in known:
+                return known[candidate], "name_snapshot"
+        if key in known and dates_of[key] == {compact}:
+            return known[key], "name_one_snapshot"
+        return "", ""
+    return match
+
+
+def _whole(value: str) -> str:
+    """'1234.0' -> '1234': vote counts and ranks are stored as floats upstream."""
+    return value[:-2] if value.endswith(".0") else value
+
+
+def arena_rows(models: list, leaderboard: list) -> list:
+    """One row per overall-category LMArena rating of a ledger model, per
+    arena and leaderboard publish date; ratings are copied unchanged."""
+    by_id = {m["model_id"]: m for m in models}
+    arena_id = arena_matcher(by_id, {r["model_name"] for r in leaderboard})
+    rows = []
+    for entry in leaderboard:
+        model_id, matched_by = arena_id(entry["model_name"])
+        model = by_id.get(model_id)
+        if model is None:
+            continue
+        rows.append({
+            **{c: model[c] for c in MODEL_COLUMNS},
+            "arena": entry["arena"], "arena_model": entry["model_name"], "matched_by": matched_by,
+            "publish_date": entry["leaderboard_publish_date"], "rating": entry["rating"],
+            "rating_lower": entry["rating_lower"], "rating_upper": entry["rating_upper"],
+            "votes": _whole(entry["vote_count"]), "rank": _whole(entry["rank"]),
+        })
+    return sorted(rows, key=lambda r: (r["model_id"], r["arena"], r["publish_date"],
+                                       r["arena_model"]))
+
+
+def build_arena_bytes() -> bytes:
+    """The LMArena leaderboard history join (CC BY 4.0, LMArena); generated only."""
+    path = schema.snapshot_file("lmarena", "leaderboard_overall.csv")
+    with path.open(newline="", encoding="utf-8") as fh:
+        leaderboard = list(csv.DictReader(fh))
+    return _csv_bytes(list(ARENA_COLUMNS), arena_rows(schema.read_table(MODELS), leaderboard))
 
 
 RESEARCH_MONTHLY_COLUMNS = ("month", "family", "papers")
@@ -701,6 +880,8 @@ GENERATED_ARTIFACTS = (
     ("market_on_date.csv", build_market_bytes),
     ("price_changes.csv", build_price_changes_bytes),
     ("llm_ledger_capability.csv", build_capability_bytes),
+    ("llm_ledger_benchmarks.csv", build_benchmark_bytes),
+    ("llm_ledger_arena.csv", build_arena_bytes),
     ("research_mentions_monthly.csv", build_research_monthly_bytes),
     ("research_first_mentions.csv", build_first_mentions_bytes),
 )

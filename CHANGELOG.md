@@ -3,6 +3,32 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-10-28
+
+- New generated file `llm_ledger_benchmarks.csv`: Epoch AI Benchmarking
+  Hub results on ledger models, 3,785 rows for 245 models across 59
+  benchmarks, scores copied unchanged with the evaluated model version.
+  Benchmarks with no declared score column are left out; Epoch rows
+  sourced from Artificial Analysis (226, all SciCode) are dropped because
+  its terms forbid redistribution.
+- New generated file `llm_ledger_arena.csv`: LMArena's overall-category
+  ratings for the text, text with style control, webdev and vision arenas
+  on every published leaderboard from 2023-05-08 to 2026-10-27, 60,449
+  rows for 253 ledger models (541 arena names). Effort qualifiers fold
+  onto their model; names the ledger holds as one model but the arena
+  splits into two snapshots (Claude 3.5 Sonnet) stay out. The dataset is
+  pulled at a pinned revision and only when its card states CC BY 4.0.
+- FIG. 10 gains an Arena rating view: the highest-rated US and Chinese
+  ledger model on each LMArena text leaderboard (style control). Both
+  files are in the Science bundle and the site's downloads.
+- Top-ten arena names since 2025 that stay unjoined: preview and beta
+  tags and version suffixes the matcher does not fold
+  (`gpt-4.5-preview-2025-02-27`, `grok-3-preview-02-24`, `grok-4.20-beta1`,
+  `gemini-1.5-pro-002`), rolling aliases (`chatgpt-4o-latest-20250326`,
+  `gpt-5.2-chat-latest-20260210`), a name with no single ledger model
+  (`muse-spark`; the ledger holds 1.1 to 1.3), and models the ledger does
+  not hold (`o1-mini`, `qwen2.5-max`).
+
 ## 2026-10-27
 
 - Bounds now have a direction in `pipeline/confidence.py`. Hub, ModelScope

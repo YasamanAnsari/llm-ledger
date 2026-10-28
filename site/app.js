@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,NO_COUNTRY,formatDate,csvEncode} from './ledger-engine.mjs';
-import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS,OPENNESS,COUNTRIES} from './charts.mjs';
+import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -112,15 +112,32 @@ function renderOpenness(){
  $('openness-chart').innerHTML=renderAnnual(annualCounts(open,opennessTier),ledger.data.meta.snapshot.slice(0,4),OPENNESS,'Open-weight models by year of first public availability and openness');
  $('openness-summary').textContent=`Of ${number(open.length)} open-weight models, ${number(tiers.fully_open)} (${Math.round(tiers.fully_open/open.length*100)}%) are fully open, ${Math.round(tiers.open_license/open.length*100)}% carry an OSI or permissive license without released data and code on record, ${Math.round(tiers.restricted/open.length*100)}% a restricted license, and ${Math.round(tiers.unknown/open.length*100)}% no recorded license.`;
 }
-function renderCountryFigure(view){
+let arenaRows;
+async function loadArena(){
+ if(!arenaRows){const res=await fetch('./data/arena.json');if(!res.ok)throw new Error(`arena.json: HTTP ${res.status}`);
+  const byId=new Map(ledger.data.models.map(m=>[m.model_id,m]));
+  arenaRows=(await res.json()).map(([id,date,rating,name])=>({id,date,value:Math.round(Number(rating)),name,country:byId.get(id)?.country_group}));}
+ return arenaRows;
+}
+async function renderCountryFigure(view){
  const {models,capability,meta}=ledger.data;
  const share=c=>{const group=models.filter(m=>m.country_group===c);return `${number(group.length)} ${c==='US'?'US':'Chinese'} models (${Math.round(group.filter(m=>m.access_type==='open_weights').length/group.length*100)}% open weights)`;};
- const pair=COUNTRIES.slice(0,2),frontier=capabilityFrontier(capability,pair,r=>r.country_group);
+ const pair=COUNTRIES.slice(0,2);
+ document.querySelectorAll('[data-country-view]').forEach(b=>{const on=b.dataset.countryView===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+ if(view==='arena'){
+  let rows;
+  try{rows=await loadArena();}catch(err){$('country-chart').innerHTML=`<p class="loading-state">Arena data could not be loaded (${esc(err.message)}).</p>`;return;}
+  if(document.querySelector('[data-country-view].active')?.dataset.countryView!=='arena')return;
+  const best=arenaBest(rows,pair,r=>r.country),last=best.US.at(-1),cn=best.CN.at(-1);
+  $('country-summary').textContent=`${share('US')} and ${share('CN')}. `+(last&&cn&&last.date===cn.date?`On LMArena's ${formatDate(last.date)} text leaderboard, the top US model in the ledger, ${last.name}, rates ${number(last.value)}; the top Chinese one, ${cn.name}, ${number(cn.value)}.`:'');
+  $('country-chart').innerHTML=renderFrontier(best,best.US[0]?.date||'2024-01-01',meta.snapshot,pair,'developer country',ARENA_METRIC);
+  return;
+ }
+ const frontier=capabilityFrontier(capability,pair,r=>r.country_group);
  const cn=frontierLag(frontier.CN,frontier.US),us=frontierLag(frontier.US,frontier.CN);
  const [lag,behind,ahead]=cn?.days>0?[cn,'Chinese','US']:us?.days>0?[us,'US','Chinese']:[null];
  $('country-summary').textContent=`${share('US')} and ${share('CN')}. `+(lag?`The best ${behind} model, ${lag.best.name} (${formatDate(lag.best.date)}), scores ${lag.best.value} on ECI; a ${ahead} model, ${lag.first.name}, scored that high on ${formatDate(lag.first.date)}, ${number(lag.days)} days earlier.`:'');
  $('country-chart').innerHTML=view==='annual'?renderAnnual(annualCounts(models,m=>m.country_group),meta.snapshot.slice(0,4),COUNTRIES,'Models by year of first public availability and developer country'):renderFrontier(frontier,'2023-01-01',meta.snapshot,pair,'developer country');
- document.querySelectorAll('[data-country-view]').forEach(b=>{const on=b.dataset.countryView===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
 }
 function renderScatterFigure(metric){
  const {points,zero}=scatterPoints(ledger.data.models,ledger.data.attributes,metric);

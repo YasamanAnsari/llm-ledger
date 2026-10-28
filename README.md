@@ -59,6 +59,8 @@ models on `model_id`.
 | one row per model, dates as columns | [`data/generated/llm_ledger_wide.csv`](data/generated/llm_ledger_wide.csv) |
 | that plus Epoch scale columns | [`data/generated/llm_ledger_enriched.csv`](data/generated/llm_ledger_enriched.csv) |
 | capability scores (Epoch ECI) by model | [`data/generated/llm_ledger_capability.csv`](data/generated/llm_ledger_capability.csv) |
+| benchmark scores (Epoch Benchmarking Hub) by model | [`data/generated/llm_ledger_benchmarks.csv`](data/generated/llm_ledger_benchmarks.csv) |
+| LMArena ratings by model and leaderboard date | [`data/generated/llm_ledger_arena.csv`](data/generated/llm_ledger_arena.csv) |
 | every dated fact with a source | [`data/core/events.csv`](data/core/events.csv) |
 | every source behind a machine-dated fact | [`data/core/claims.csv`](data/core/claims.csv) |
 | who made the model | [`data/core/models.csv`](data/core/models.csv), [`organizations.csv`](data/core/organizations.csv) |
@@ -209,8 +211,10 @@ Count every GGUF and we would have fifty Qwen2.5-72Bs. We want one.
 
 Also out of the core tables: scores, parameter counts, training cost
 (use [Epoch](https://epoch.ai/data/ai-models)), laws, usage stats.
-Epoch's capability scores are joined in a generated file
-(`llm_ledger_capability.csv`), never copied into core.
+Epoch's capability and benchmark scores and LMArena's ratings are joined
+in generated files (`llm_ledger_capability.csv`,
+`llm_ledger_benchmarks.csv`, `llm_ledger_arena.csv`), never copied into
+core.
 
 This is a first cut, not everything. More models can go in. GGUFs
 still will not.
@@ -259,7 +263,9 @@ The source code (`pipeline/`, `tests/`, `Makefile`) is licensed under the
 Upstream data incorporated here: [Epoch AI, "Data on AI Models"](https://epoch.ai/data/ai-models)
 (CC BY 4.0), used in `data/generated/llm_ledger_enriched.csv` and as one
 dating signal among several; [Epoch AI, "Epoch Capabilities Index"](https://epoch.ai/eci)
-(CC BY 4.0), used in `data/generated/llm_ledger_capability.csv`; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
+(CC BY 4.0), used in `data/generated/llm_ledger_capability.csv`; [Epoch AI, "AI Benchmarking Hub"](https://epoch.ai/benchmarks)
+(CC BY 4.0), used in `data/generated/llm_ledger_benchmarks.csv`; [LMArena, "leaderboard-dataset"](https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset)
+(CC BY 4.0), used in `data/generated/llm_ledger_arena.csv`; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
 (MIT), used as a discovery lead for pre-API-era models; [arXiv](https://arxiv.org)
 paper metadata (CC0 1.0, via OAI-PMH), used in `research_mentions.csv`. The terms every
 other source is used under are listed in [`docs/sources.md`](docs/sources.md);

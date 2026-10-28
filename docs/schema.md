@@ -452,6 +452,30 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   day the scores file was first archived) is the only version stamp;
   compare scores within one snapshot. ECI is CC BY 4.0 (Epoch AI,
   "Epoch Capabilities Index") and credited in the README.
+- `data/generated/llm_ledger_benchmarks.csv` - one row per Epoch
+  Benchmarking Hub result on a ledger model: `benchmark`, the evaluated
+  `epoch_model_version` (an API id, often with a reasoning-effort suffix),
+  Epoch's `epoch_row_id` and the `score` copied unchanged from the column
+  `benchmark_metadata.csv` declares for that benchmark. A version joins
+  through its Epoch model group by the same rule as the capability join,
+  so one model carries a row per evaluated version. Benchmarks with no
+  declared score column are left out rather than guessed, and rows whose
+  source is Artificial Analysis are dropped (their terms forbid
+  redistribution). `benchmark_in_eci` is true when ECI uses the benchmark;
+  `epoch_snapshot_date` is the archive day. CC BY 4.0 (Epoch AI).
+- `data/generated/llm_ledger_arena.csv` - one row per overall-category
+  LMArena rating of a ledger model, per `arena` (`text`,
+  `text_style_control`, `webdev`, `vision`) and leaderboard
+  `publish_date`, with `rating`, its interval, `votes` and `rank` copied
+  unchanged and the arena's own `arena_model` name. Ratings are refit at
+  each publication, so compare models within one leaderboard, not one
+  model across dates. `matched_by` is `name` (the name, effort qualifier
+  folded, is a ledger id or a unique ledger spelling), `name_snapshot`
+  (a dated arena name on the ledger id with that date) or
+  `name_one_snapshot` (a dated name on the undated id, only when the arena
+  lists that model under one date and never undated). Ambiguous names stay
+  out. The dataset revision is the sha in the raw manifest URL. CC BY 4.0
+  (LMArena, `lmarena-ai/leaderboard-dataset`).
 - `data/generated/research_mentions_monthly.csv` - papers per family per
   month from `research_mentions.csv`: a paper counts once per family, in
   the month of the earliest version naming the family or a member.

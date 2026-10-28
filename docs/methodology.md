@@ -183,8 +183,11 @@ none of them changes an event:
   which days, as runs of days: provider listings, prices and limits from
   the archived daily catalog pulls, and the Hub commit or API snapshot
   served. A value that changes starts a new run; nothing is averaged.
-- **Capability** scores come from Epoch's ECI and are joined only in
-  `llm_ledger_capability.csv`, never copied into core.
+- **Capability** scores come from Epoch's ECI, Epoch's Benchmarking Hub
+  and LMArena's leaderboard history, and are joined only in
+  `llm_ledger_capability.csv`, `llm_ledger_benchmarks.csv` and
+  `llm_ledger_arena.csv`, never copied into core. Scores and ratings are
+  copied unchanged; a name that could mean two ledger models is left out.
 - **Research mentions** come from arXiv titles and abstracts (cs.AI,
   cs.CL, cs.CV, cs.LG, stat.ML since 2023), matched against the ledger's
   own spellings of each model with no model reading the text, one row per

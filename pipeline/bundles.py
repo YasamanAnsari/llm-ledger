@@ -41,7 +41,8 @@ BUNDLES = {
     "science": (
         (f"{OBS}/research_mentions.csv", f"{GEN}/research_mentions_monthly.csv",
          f"{GEN}/research_first_mentions.csv", f"{OBS}/model_versions.csv",
-         f"{GEN}/llm_ledger_capability.csv"),
+         f"{GEN}/llm_ledger_capability.csv", f"{GEN}/llm_ledger_benchmarks.csv",
+         f"{GEN}/llm_ledger_arena.csv"),
         {"paper_published", "weights_released", "version_observed"},
     ),
     "lineage": (
