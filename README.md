@@ -60,6 +60,8 @@ them by hand.
 | which provider listed a model, at what price and limits, on each day | [`data/observations/`](data/observations/) (availability, price, capability) |
 | which exact version was served: Hub commit, API snapshot id | [`data/observations/model_versions.csv`](data/observations/model_versions.csv) |
 | everything on offer on one day, by provider, with prices | [`data/generated/market_on_date.csv`](data/generated/market_on_date.csv) (newest day; `pipeline/market.py --date D` for any other) |
+| which arXiv papers name a model, and how soon after release | [`data/observations/research_mentions.csv`](data/observations/research_mentions.csv), [`research_mentions_monthly.csv`](data/generated/research_mentions_monthly.csv), [`research_first_mentions.csv`](data/generated/research_first_mentions.csv) |
+| one topic as a ready set of files with its methods page | `make bundles` writes `dist/bundles/llm-ledger-{markets,science,lineage,governance}.zip`; methods in [`docs/bundles/`](docs/bundles/) |
 | lab icons | [`assets/orgs/`](assets/orgs/) (`{org_id}.svg`) |
 | how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |
 | where catalogs disagree | [`data/generated/disagreement_report.md`](data/generated/disagreement_report.md) |

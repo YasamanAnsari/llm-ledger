@@ -379,6 +379,74 @@ def build_capability_bytes() -> bytes:
     return _csv_bytes(list(CAPABILITY_COLUMNS), rows)
 
 
+RESEARCH_MONTHLY_COLUMNS = ("month", "family", "papers")
+FIRST_MENTION_COLUMNS = (
+    "model_id", "canonical_name", "family", "access_type", "weights_released_date",
+    "first_public_availability_date", "first_mention", "first_mention_arxiv_id",
+    "days_to_first_mention",
+)
+
+
+def research_monthly_rows(mentions: list) -> list:
+    """Papers per family per month, a paper counted once per family in the
+    month of the earliest version that names the family or one of its models."""
+    first: dict = {}
+    for r in mentions:
+        key = (r["family"], r["arxiv_id"])
+        first[key] = min(first.get(key, r["submitted"]), r["submitted"])
+    counts: dict = {}
+    for (family, _), day in first.items():
+        counts[(day[:7], family)] = counts.get((day[:7], family), 0) + 1
+    return [{"month": month, "family": family, "papers": str(n)}
+            for (month, family), n in sorted(counts.items())]
+
+
+def first_mention_rows(models: list, events: list, mentions: list, harvested_from: str) -> list:
+    """Each model a paper names by its own spelling, with the first such
+    paper. `days_to_first_mention` counts from first public availability
+    and is blank when the model was available before the harvest began,
+    since earlier papers were not read."""
+    first: dict = {}
+    for r in sorted(mentions, key=lambda r: (r["submitted"], r["arxiv_id"])):
+        if r["model_id"]:
+            first.setdefault(r["model_id"], r)
+    rows = []
+    for m in models:
+        hit = first.get(m["model_id"])
+        if hit is None:
+            continue
+        weights = _earliest_global(events, m["model_id"], {"weights_released"})
+        available = m["first_public_availability_date"]
+        days = ""
+        if available and available >= harvested_from:
+            days = str((date.fromisoformat(hit["submitted"]) - date.fromisoformat(available)).days)
+        rows.append({
+            **{c: m[c] for c in ("model_id", "canonical_name", "family", "access_type")},
+            "weights_released_date": weights[0]["date"] if weights else "",
+            "first_public_availability_date": available,
+            "first_mention": hit["submitted"], "first_mention_arxiv_id": hit["arxiv_id"],
+            "days_to_first_mention": days,
+        })
+    return sorted(rows, key=lambda r: r["model_id"])
+
+
+def _research_inputs() -> tuple:
+    state = json.loads((schema.STAGING_DIR / "research_harvest.json").read_text(encoding="utf-8"))
+    return schema.read_table(schema.RESEARCH_MENTIONS, schema.OBSERVATIONS_DIR), state
+
+
+def build_research_monthly_bytes() -> bytes:
+    mentions, _ = _research_inputs()
+    return _csv_bytes(list(RESEARCH_MONTHLY_COLUMNS), research_monthly_rows(mentions))
+
+
+def build_first_mentions_bytes() -> bytes:
+    mentions, state = _research_inputs()
+    rows = first_mention_rows(schema.read_table(MODELS), schema.read_table(EVENTS), mentions,
+                              state["harvested_from"])
+    return _csv_bytes(list(FIRST_MENTION_COLUMNS), rows)
+
+
 README_STATS_START = "<!-- stats:start -->"
 README_STATS_END = "<!-- stats:end -->"
 
@@ -633,6 +701,8 @@ GENERATED_ARTIFACTS = (
     ("market_on_date.csv", build_market_bytes),
     ("price_changes.csv", build_price_changes_bytes),
     ("llm_ledger_capability.csv", build_capability_bytes),
+    ("research_mentions_monthly.csv", build_research_monthly_bytes),
+    ("research_first_mentions.csv", build_first_mentions_bytes),
 )
 
 

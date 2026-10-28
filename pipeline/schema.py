@@ -269,6 +269,19 @@ VERSION_KINDS = {"hf_revision", "api_snapshot"}
 
 OBSERVATION_TABLES = (AVAILABILITY_OBSERVATIONS, PRICE_OBSERVATIONS, CAPABILITY_OBSERVATIONS,
                       MODEL_VERSIONS)
+
+# A model or family an arXiv paper version names in its title or abstract,
+# written by pipeline/pull_research_mentions.py. Not a run of days: one row
+# per (paper version, model or family); `model_id` is blank for a family.
+RESEARCH_MENTIONS = Table(
+    name="research_mentions",
+    filename="research_mentions.csv",
+    columns=("model_id", "family", "arxiv_id", "version", "submitted", "matched_text",
+             "match_type", "source"),
+    pk=("arxiv_id", "version", "model_id", "family"),
+)
+MENTION_TYPES = {"model", "family"}
+MENTION_SOURCES = {"abstract", "fulltext"}
 TABLES_BY_NAME = {t.name: t for t in CORE_TABLES}
 
 # ---------------------------------------------------------------------------

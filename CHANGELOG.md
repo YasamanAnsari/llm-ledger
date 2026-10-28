@@ -176,6 +176,30 @@ Data corrections update rows in place; this file preserves the history.
   gone, and `announced` and `api_ga` 2024-10-16 now cite the post.
   `reconcile.py` no longer drafts a `weights_released` row for a model a
   person ruled closed; the catalog date folds into `api_ga`.
+- New observation table `research_mentions.csv`
+  (`pull_research_mentions.py`, in the agent's pulls): arXiv titles and
+  abstracts from OAI-PMH (cs.AI, cs.CL, cs.CV, cs.LG, stat.ML, CC0
+  metadata) matched against the ledger's own spellings, one row per paper
+  version and model or family named. The backfill read papers modified
+  since 2023-01-01: 38,227 rows from 23,598 papers (28,553 name a model,
+  9,674 only a family). Matching is deterministic and conservative: a
+  spelling needs a version or size, punctuation breaks it, and "word +
+  number" must be capitalized, so "step 3" and bare "Qwen" are not
+  counted; counts are a floor. Validation rule 17 checks the table.
+- New generated files `research_mentions_monthly.csv` (papers per family
+  per month) and `research_first_mentions.csv` (each model's first paper
+  beside its weights and availability dates). 584 models have a first
+  mention; the median `days_to_first_mention` is 88 for open-weight
+  models (426) and 20 for API-only models (139). Negative values flag
+  dates to review: Llama 3 8B Instruct reads 2024-07-23 (a models.dev
+  date over a 2024-04-17 Hub repo) and Llama 2 70B has no
+  `weights_released` row.
+- `make bundles` (`pipeline/bundles.py`) writes four zips to
+  `dist/bundles/`: Markets, Science, Lineage and Governance. Each holds
+  `models.csv`, `organizations.csv`, its tables, the `events.csv` rows of
+  its event types with their `claims.csv` rows, a methods page
+  (`docs/bundles/<name>.md`) and the license. Bundles copy rows and add
+  no storage, so ids agree across them.
 
 ## 2026-10-14
 

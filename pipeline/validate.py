@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import csv
 import io
+import re
 import subprocess
 import sys
 from datetime import date
@@ -475,6 +476,32 @@ def check_rule16_observation_runs(tables: dict) -> list:
     return errors
 
 
+ARXIV_ID = re.compile(r"^\d{4}\.\d{4,5}$|^[a-z\-]+(\.[A-Z]{2})?/\d{7}$")
+
+
+def check_rule17_research_mentions(tables: dict) -> list:
+    """A research mention is unique per (paper version, model or family),
+    names a known model or else only a family, and carries its version's day."""
+    errors, seen = [], set()
+    model_ids = {m["model_id"] for m in tables["models"]}
+    for r in tables.get(schema.RESEARCH_MENTIONS.name, []):
+        key = tuple(r[c] for c in schema.RESEARCH_MENTIONS.pk)
+        where = f"rule17: research mention {'/'.join(key)}"
+        if key in seen:
+            errors.append(f"{where} is duplicated")
+        seen.add(key)
+        if not (ARXIV_ID.match(r["arxiv_id"]) and re.fullmatch(r"v\d+", r["version"])
+                and date_matches_precision(r["submitted"], "day")):
+            errors.append(f"{where} needs an arXiv id, a vN version and a day")
+        if r["match_type"] not in schema.MENTION_TYPES or r["source"] not in schema.MENTION_SOURCES:
+            errors.append(f"{where} has match_type {r['match_type']!r} / source {r['source']!r}")
+        if not r["family"] or bool(r["model_id"]) != (r["match_type"] == "model"):
+            errors.append(f"{where}: a model row names its model, a family row only its family")
+        if r["model_id"] and r["model_id"] not in model_ids:
+            errors.append(f"{where} names unknown model {r['model_id']}")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -511,6 +538,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     errors += e15
     warnings += w15
     errors += check_rule16_observation_runs(tables)
+    errors += check_rule17_research_mentions(tables)
     return errors, warnings
 
 
@@ -552,7 +580,7 @@ def main() -> int:
                         help="skip the churn guard for an intentional migration")
     args = parser.parse_args()
     tables = schema.load_core()
-    for table in schema.OBSERVATION_TABLES:
+    for table in schema.OBSERVATION_TABLES + (schema.RESEARCH_MENTIONS,):
         tables[table.name] = schema.read_table(table, schema.OBSERVATIONS_DIR)
     errors, warnings = validate_tables(tables, today=date.today())
     if not args.allow_churn:

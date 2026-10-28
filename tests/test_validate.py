@@ -325,3 +325,18 @@ def test_rule16_observation_runs_are_ordered_known_and_disjoint():
                         (dict(later, last_observed="2026-10-04"), "bad bounds")):
         tables["availability_observations"] = [run, bad]
         assert any(needle in e for e in _errors(tables)), needle
+
+
+def test_rule17_research_mentions_are_unique_and_typed():
+    row = {"model_id": "acme-1", "family": "Acme 1", "arxiv_id": "2501.01234", "version": "v2",
+           "submitted": "2025-01-09", "matched_text": "Acme-1", "match_type": "model",
+           "source": "abstract"}
+    family = dict(row, model_id="", match_type="family")
+    tables = _tables()
+    tables["research_mentions"] = [row, family]
+    assert _errors(tables) == []
+    for bad, needle in (([row, row], "duplicated"), ([dict(row, model_id="acme-9")], "unknown model"),
+                        ([dict(family, match_type="model")], "family row"),
+                        ([dict(row, version="2")], "vN version")):
+        tables["research_mentions"] = bad
+        assert any(needle in e for e in _errors(tables)), needle

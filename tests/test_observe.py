@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import observe
+import pull_research_mentions as research
 import schema
 
 PRICE = schema.PRICE_OBSERVATIONS
@@ -123,3 +124,52 @@ def test_price_changes_skip_missed_pull_breaks_and_mark_the_makers_own_price() -
              r["input_old"], r["input_new"]) for r in rows] == [
         ("azure-openai", "false", "2026-10-02", "2026-10-03", "2", "2.2"),
         ("openai", "true", "2026-10-06", "2026-10-07", "2", "1.5")]
+
+
+def _research_index() -> dict:
+    models = [{"model_id": mid, "canonical_name": name, "family": family}
+              for mid, name, family in (("gpt-4o", "GPT-4o", "GPT-4o"),
+                                        ("gpt-4o-mini", "GPT-4o mini", "GPT-4o"),
+                                        ("qwen2-5-7b", "Qwen2.5 7B", "Qwen2.5"),
+                                        ("qwen2-5-72b", "Qwen2.5 72B", "Qwen2.5"),
+                                        ("qwen2-5-14b", "Qwen2.5 14B", "Qwen 2.5"))]
+    crosswalk = [{"model_id": "qwen2-5-72b", "namespace": "text_surface_forms", "identifier": "Qwen2.5"},
+                 {"model_id": "qwen2-5-72b", "namespace": "text_surface_forms", "identifier": "Qwen"},
+                 {"model_id": "qwen2-5-7b", "namespace": "huggingface", "identifier": "Qwen/Qwen2.5-7B-Instruct"}]
+    return research.form_index(models, crosswalk)
+
+
+def test_research_mentions_take_the_longest_spelling_and_keep_families_unattributed() -> None:
+    text = "We fine-tune Qwen2.5-7B-Instruct and Qwen 2.5, compare GPT-4o-mini to GPT-4o and Qwen."
+    index = _research_index()
+    found = {(mid, fam): m for mid, fam, m in research.mentions(text, index)}
+    assert found == {("qwen2-5-7b", "Qwen2.5"): "Qwen2.5-7B-Instruct", ("", "Qwen2.5"): "Qwen 2.5",
+                     ("gpt-4o-mini", "GPT-4o"): "GPT-4o-mini", ("gpt-4o", "GPT-4o"): "GPT-4o"}
+    assert research.mentions("served as qwen2.5:7b", index) == [("qwen2-5-7b", "Qwen2.5", "qwen2.5:7b")]
+    assert research.mentions("the Qwen, 2.5 and qwen 2.5 cases; GPT^{4o}", index) == []
+
+
+def test_research_pages_read_the_latest_version_and_skip_deleted_records() -> None:
+    oai, raw = "http://www.openarchives.org/OAI/2.0/", "http://arxiv.org/OAI/arXivRaw/"
+    page = (f'<OAI-PMH xmlns="{oai}"><ListRecords>'
+            '<record><header status="deleted"><identifier>x</identifier></header></record>'
+            f'<record><header><identifier>y</identifier></header><metadata><arXivRaw xmlns="{raw}">'
+            '<id>2401.00001</id><version version="v1"><date>Mon, 1 Jan 2024 10:00:00 GMT</date></version>'
+            '<version version="v2"><date>Tue, 5 Mar 2024 23:30:00 GMT</date></version>'
+            '<title>A\n  title</title><abstract>An abstract.</abstract></arXivRaw></metadata></record>'
+            '<resumptionToken>next</resumptionToken></ListRecords></OAI-PMH>').encode()
+    assert research.parse_page(page) == (
+        [("2401.00001", "v2", "2024-03-05", "A title", "An abstract.")], "next")
+    empty = f'<OAI-PMH xmlns="{oai}"><error code="noRecordsMatch">none</error></OAI-PMH>'.encode()
+    assert research.parse_page(empty) == ([], "")
+
+
+def test_research_merge_replaces_reread_versions_only() -> None:
+    def row(arxiv_id, version, model_id):
+        return {"arxiv_id": arxiv_id, "version": version, "model_id": model_id, "family": "F"}
+    existing = [row("1", "v1", "a"), row("1", "v2", "a"), row("2", "v1", "gone")]
+    merged = research.merge(existing, [row("1", "v2", "b")], {("1", "v2")}, {"a", "b"})
+    assert merged == [row("1", "v1", "a"), row("1", "v2", "b")]
+    assert research._windows(date(2025, 12, 20), date(2026, 2, 3)) == [
+        (date(2025, 12, 20), date(2025, 12, 31)), (date(2026, 1, 1), date(2026, 1, 31)),
+        (date(2026, 2, 1), date(2026, 2, 3))]

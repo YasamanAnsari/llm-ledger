@@ -1,6 +1,6 @@
 PY := .venv/bin/python
 
-.PHONY: validate pull match reconcile build test all census lifecycle sensitivity observe
+.PHONY: validate pull match reconcile build test all census lifecycle sensitivity observe bundles
 
 validate:
 	$(PY) pipeline/validate.py
@@ -15,6 +15,8 @@ pull:
 	$(PY) pipeline/pull_wayback.py
 	$(PY) pipeline/pull_modelscope.py
 	$(PY) pipeline/pull_nhlocal.py
+	$(PY) pipeline/pull_capability.py
+	$(PY) pipeline/pull_research_mentions.py
 
 census:
 	$(PY) pipeline/hf_census.py
@@ -35,6 +37,9 @@ build:
 
 observe:
 	$(PY) pipeline/observe.py
+
+bundles:
+	$(PY) pipeline/bundles.py
 
 test:
 	$(PY) tests/run_tests.py

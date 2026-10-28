@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 import sys
+import tempfile
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
+import bundles
 import schema
 from build import (CAPABILITY_COLUMNS, LATEST_COLUMNS, _agent_section, build_reschedule_rows,
-                   capability_rows, compute_derived, latest_first, latest_pull_date,
-                   predecessor_review_rows)
+                   capability_rows, compute_derived, first_mention_rows, latest_first,
+                   latest_pull_date, predecessor_review_rows, research_monthly_rows)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -279,3 +282,37 @@ def test_capability_joins_by_crosswalk_then_by_undated_name() -> None:
     assert [(r["model_id"], r["matched_by"]) for r in rows] == [
         ("gpt-4o", "crosswalk"), ("qwen3-32b", "name")]
     assert rows[0]["eci_snapshot_date"] == "2026-10-28"
+
+
+def test_research_views_count_a_paper_once_and_date_from_first_availability() -> None:
+    def mention(arxiv_id, version, submitted, model_id, family="Qwen3"):
+        return {"arxiv_id": arxiv_id, "version": version, "submitted": submitted,
+                "model_id": model_id, "family": family}
+    mentions = [mention("1", "v1", "2025-05-02", ""), mention("1", "v1", "2025-05-02", "qwen3-8b"),
+                mention("1", "v2", "2025-07-01", "qwen3-8b"), mention("2", "v1", "2025-06-10", "old-1", "Old")]
+    assert research_monthly_rows(mentions) == [
+        {"month": "2025-05", "family": "Qwen3", "papers": "1"},
+        {"month": "2025-06", "family": "Old", "papers": "1"}]
+    models = [{"model_id": mid, "canonical_name": mid, "family": fam, "access_type": "open_weights",
+               "first_public_availability_date": day}
+              for mid, fam, day in (("qwen3-8b", "Qwen3", "2025-04-29"), ("old-1", "Old", "2022-01-01"),
+                                    ("unnamed", "X", "2025-01-01"))]
+    events = [_event("qwen3-8b", "weights_released", "2025-04-29")]
+    rows = first_mention_rows(models, events, mentions, harvested_from="2023-01-01")
+    assert [(r["model_id"], r["first_mention"], r["days_to_first_mention"], r["weights_released_date"])
+            for r in rows] == [("old-1", "2025-06-10", "", ""), ("qwen3-8b", "2025-05-02", "3", "2025-04-29")]
+
+
+def test_every_bundle_exports_existing_tables_with_ledger_ids() -> None:
+    model_ids = {m["model_id"] for m in schema.read_table(MODELS)}
+    for name, (tables, event_types) in bundles.BUNDLES.items():
+        assert event_types <= schema.EVENT_TYPES, name
+        assert all((schema.REPO_ROOT / p).exists() for p in bundles.IDENTITY + tables), name
+    with tempfile.TemporaryDirectory() as tmp:
+        path = bundles.write_bundle("governance", Path(tmp))
+        with zipfile.ZipFile(path) as zf:
+            names = {n.split("/", 1)[1] for n in zf.namelist()}
+            events = zf.read("llm-ledger-governance/events.csv").decode().splitlines()[1:]
+    assert {"models.csv", "organizations.csv", "events.csv", "claims.csv", "METHODS.md",
+            "LICENSE", "reschedules.csv"} == names
+    assert events and all(line.split(",")[1] in model_ids for line in events)

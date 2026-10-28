@@ -300,6 +300,50 @@ pulls kept manifests only. The full payloads are archived as
 `raw-YYYY-MM-DD` releases of the agent repository, and
 `agent/backfill_observations.sh` there rebuilds these tables from them.
 
+### research_mentions.csv
+
+Written by `pipeline/pull_research_mentions.py` from arXiv's OAI-PMH feed
+(`arXivRaw`, sets cs.AI, cs.CL, cs.CV, cs.LG, stat.ML). One row per paper
+version and model or family its title or abstract names; not a run of
+days.
+
+| Column | Type | Rules |
+|---|---|---|
+| `model_id` | FK nullable | the model a spelling names; blank for a family mention |
+| `family` | string | the model's `family`, or the family named |
+| `arxiv_id` / `version` | string | the paper and the version (`v3`) whose text was read |
+| `submitted` | ISO date | that version's submission day |
+| `matched_text` | string | the first spelling found, as written |
+| `match_type` | enum | `model` (a spelling one model owns) or `family` |
+| `source` | enum | `abstract` (title and abstract); `fulltext` is reserved |
+
+Primary key: `(arxiv_id, version, model_id, family)`.
+
+Matching is deterministic. Text is lower-cased and split into letter and
+number runs ("Llama3.1-70B" = "Llama 3.1 70B"), then compared with the
+ledger's spellings, longest first, without overlaps. Only spaces,
+hyphens, underscores, `~` or one `:` may sit between the runs of one
+spelling ("gemma3:27b", "Llama~3.3"); other punctuation or markup breaks
+it ("step, (3", "phi^{4"). A word, a space and a bare number must be
+capitalized: "Llama 3" matches, "step 3" and "llama 3" do not. A spelling
+names a model when it is that model's `canonical_name` or an Epoch, Hub
+(repo name), or vendor API identifier of that model alone. A family name,
+or a `text_surface_forms` spelling equal to one, names the family: those
+spellings stand for a whole series. Family values that differ only in
+punctuation ("Llama 3.1", "Llama-3.1") are one family, recorded under the
+spelling most models carry. A spelling needs a version or size digit:
+bare names ("Qwen", "Claude", "GLM", "Phi") collide with ordinary words
+and are skipped, so counts are a floor. Capitalized prose ("Step 3") can
+still match a model name. arXivRaw carries only the
+latest version's text, so a row is dated by that version; a paper's v1
+may have said something else. A re-read of the same version replaces its
+rows; a new version adds its own. `data/staging/research_harvest.json`
+holds the harvested datestamp range (`harvested_from`,
+`harvested_through`); papers submitted before `harvested_from` and not
+revised since were not read. The daily run re-reads the last 30 days so a
+model added to the ledger late is still found in its first month of
+papers. arXiv metadata is CC0 1.0.
+
 ## Derived-field computation rules
 
 - `first_public_availability_date` = MIN over global-region events of type
@@ -407,6 +451,18 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   day the scores file was first archived) is the only version stamp;
   compare scores within one snapshot. ECI is CC BY 4.0 (Epoch AI,
   "Epoch Capabilities Index") and credited in the README.
+- `data/generated/research_mentions_monthly.csv` - papers per family per
+  month from `research_mentions.csv`: a paper counts once per family, in
+  the month of the earliest version naming the family or a member.
+  Counts are not normalized by arXiv's monthly volume.
+- `data/generated/research_first_mentions.csv` - each model a paper names
+  by its own spelling, with the first such paper (`first_mention`,
+  `first_mention_arxiv_id`) beside `weights_released_date` and
+  `first_public_availability_date`. `days_to_first_mention` counts from
+  first public availability and is blank when the model was available
+  before `harvested_from`. A negative value is a paper dated before the
+  ledger's availability date: a pre-release paper, an availability date
+  that is too late, or another model of the same name.
 - `data/generated/sensitivity_report.md` - how far apart the candidate
   "release dates" of one model sit (announced vs api_ga vs
   weights_released ...), for researchers choosing a treatment date.
@@ -496,6 +552,10 @@ rewrite the dataset.
     last_observed`, name a known model when `model_id` is set, and never
     overlap for one `(source, provider, api_id)`; a `model_versions` row
     has a known `version_kind` and a `version_id`.
+17. A research mention is unique per `(arxiv_id, version, model_id,
+    family)`, has an arXiv id, a `vN` version and a day, a known
+    `match_type` and `source`, always a `family`, and a known `model_id`
+    exactly when `match_type = model`.
 
 Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
 run may not remove more than 2% of the events committed at `HEAD`, nor

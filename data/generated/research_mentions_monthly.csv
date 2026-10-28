@@ -1,0 +1,2685 @@
+month,family,papers
+2022-03,GPT-3,1
+2022-05,GPT-3,1
+2022-06,GPT-3,1
+2022-08,codet5,1
+2022-09,GPT-3,1
+2022-10,GPT-3,1
+2022-11,GPT-3,2
+2022-12,GPT-3,6
+2023-01,GPT-3,19
+2023-01,codet5,1
+2023-02,GPT-3,32
+2023-02,codet5,1
+2023-03,GPT-3,35
+2023-03,GPT-4,13
+2023-03,GPT-5,1
+2023-03,bloomz-7b1-mt,1
+2023-03,codet5,3
+2023-04,GPT-3,42
+2023-04,GPT-4,26
+2023-04,codet5,1
+2023-05,GPT-3,111
+2023-05,GPT-4,66
+2023-05,bloom,1
+2023-05,codet5,4
+2023-06,GPT-3,69
+2023-06,GPT-4,50
+2023-06,SAIL,1
+2023-06,pythia,1
+2023-07,GPT-3,58
+2023-07,GPT-4,51
+2023-07,Llama-2,1
+2023-07,codet5,2
+2023-07,opt,2
+2023-08,Claude 2,1
+2023-08,GPT-3,64
+2023-08,GPT-4,61
+2023-08,Llama-2,10
+2023-08,StableBeluga,1
+2023-08,bloomz,1
+2023-08,falcon,1
+2023-09,Claude 2,2
+2023-09,GPT-3,64
+2023-09,GPT-4,64
+2023-09,Llama-2,17
+2023-09,codet5,3
+2023-09,internlm,1
+2023-09,pythia,1
+2023-10,Baichuan2,2
+2023-10,Claude 2,3
+2023-10,GPT-3,111
+2023-10,GPT-3.5,1
+2023-10,GPT-4,165
+2023-10,Llama 2,2
+2023-10,Llama-2,38
+2023-10,Mistral 7B,2
+2023-10,Skywork,1
+2023-10,blip2-opt,1
+2023-10,codet5,2
+2023-10,falcon,5
+2023-10,gpt-neox,1
+2023-11,Claude 2,5
+2023-11,Florence-2,1
+2023-11,GPT-3,82
+2023-11,GPT-3.5,1
+2023-11,GPT-4,96
+2023-11,Llama 2,7
+2023-11,Llama-2,29
+2023-11,falcon,2
+2023-11,pythia,1
+2023-11,tulu-2,1
+2023-12,Claude 2,1
+2023-12,GPT-3,74
+2023-12,GPT-4,88
+2023-12,Llama 2,2
+2023-12,Llama-2,34
+2023-12,Mistral 7B,1
+2023-12,Mixtral,1
+2023-12,codegen-mono,1
+2023-12,codet5,3
+2023-12,pythia,1
+2024-01,Baichuan2,1
+2024-01,Claude 2,2
+2024-01,GPT-3,67
+2024-01,GPT-3.5,3
+2024-01,GPT-4,117
+2024-01,Gemini 1.0,1
+2024-01,Llama 2,8
+2024-01,Llama-2,40
+2024-01,Mistral 7B,2
+2024-01,Mixtral,3
+2024-01,codet5,1
+2024-01,internlm-xcomposer2,1
+2024-01,internlm2,1
+2024-02,Claude 2,1
+2024-02,GLM-4,1
+2024-02,GPT-3,83
+2024-02,GPT-4,169
+2024-02,Llama 2,8
+2024-02,Llama-2,60
+2024-02,Mistral 7B,7
+2024-02,Mixtral,3
+2024-02,falcon,1
+2024-02,opt,2
+2024-02,phi-2,4
+2024-02,pythia,1
+2024-02,stablelm-2,1
+2024-03,Baichuan2,1
+2024-03,Claude 2,4
+2024-03,Claude 3,1
+2024-03,GPT-3,86
+2024-03,GPT-3.5,1
+2024-03,GPT-4,153
+2024-03,Llama 2,6
+2024-03,Llama-2,59
+2024-03,Mistral 7B,6
+2024-03,Mistral-v0.2,1
+2024-03,Mixtral,2
+2024-03,Mixtral-v0.1,1
+2024-03,Step3,1
+2024-03,bloom,1
+2024-03,falcon,1
+2024-03,internlm2,1
+2024-03,phi-2,2
+2024-04,Baichuan,1
+2024-04,Baichuan2,2
+2024-04,Claude 2,4
+2024-04,Claude 3,10
+2024-04,GLM-4,1
+2024-04,GPT-3,79
+2024-04,GPT-3.5,1
+2024-04,GPT-4,169
+2024-04,Gemini 1.0,2
+2024-04,Llama 2,8
+2024-04,Llama 3,2
+2024-04,Llama-2,80
+2024-04,Mistral 7B,16
+2024-04,Mistral-v0.2,1
+2024-04,Mixtral,6
+2024-04,Yi,1
+2024-04,blip2-opt,1
+2024-04,codet5,2
+2024-04,falcon,2
+2024-04,gpt-neox,1
+2024-04,grok-1,1
+2024-04,internlm-xcomposer2,1
+2024-04,opt,1
+2024-04,phi-2,1
+2024-05,Baichuan2,2
+2024-05,Claude 2,1
+2024-05,Claude 3,8
+2024-05,GPT-3,84
+2024-05,GPT-3.5,1
+2024-05,GPT-4,150
+2024-05,GPT-4o,7
+2024-05,Gemini 1.0,1
+2024-05,Gemini 1.5,3
+2024-05,Llama 2,8
+2024-05,Llama 3,19
+2024-05,Llama-2,86
+2024-05,Meta-Llama-3,1
+2024-05,Mistral 7B,12
+2024-05,Mistral-v0.2,1
+2024-05,Mixtral,4
+2024-05,Phi-3,1
+2024-05,aya-23,1
+2024-05,codet5,1
+2024-05,falcon,4
+2024-05,internlm2,1
+2024-05,phi-2,2
+2024-05,pythia,1
+2024-06,Baichuan2,1
+2024-06,Claude 2,2
+2024-06,Claude 3,22
+2024-06,Claude 3.5,3
+2024-06,DeepSeek-V2,3
+2024-06,GPT-3,95
+2024-06,GPT-3.5,2
+2024-06,GPT-4,243
+2024-06,GPT-4o,38
+2024-06,Gemini 1.0,2
+2024-06,Gemini 1.5,14
+2024-06,Llama 2,13
+2024-06,Llama 3,44
+2024-06,Llama-2,119
+2024-06,Mistral 7B,28
+2024-06,Mistral-v0.1,1
+2024-06,Mistral-v0.2,2
+2024-06,Mistral-v0.3,1
+2024-06,Mixtral,9
+2024-06,Phi-3,3
+2024-06,Qwen2,1
+2024-06,Yi,2
+2024-06,codet5,1
+2024-06,falcon,1
+2024-06,grok-1,1
+2024-06,phi-2,6
+2024-06,pythia,4
+2024-06,tulu-2,1
+2024-07,Baichuan2,1
+2024-07,Claude 2,3
+2024-07,Claude 3,16
+2024-07,Claude 3.5,5
+2024-07,GLM-4,2
+2024-07,GPT-3,72
+2024-07,GPT-3.5,2
+2024-07,GPT-4,168
+2024-07,GPT-4o,36
+2024-07,Gemini 1.5,9
+2024-07,Llama 2,9
+2024-07,Llama 3,41
+2024-07,Llama-2,66
+2024-07,Mistral 7B,15
+2024-07,Mistral-v0.1,3
+2024-07,Mistral-v0.3,1
+2024-07,Mixtral,12
+2024-07,Phi-3,2
+2024-07,Qwen2,2
+2024-07,WizardLM-2,1
+2024-07,aya-23,1
+2024-07,codet5,1
+2024-07,falcon,2
+2024-07,gemma-2,1
+2024-07,internlm2,2
+2024-07,phi-2,3
+2024-08,Baichuan2,1
+2024-08,Claude 2,4
+2024-08,Claude 3,9
+2024-08,Claude 3.5,4
+2024-08,GLM-4,1
+2024-08,GPT-3,54
+2024-08,GPT-3.5,1
+2024-08,GPT-4,132
+2024-08,GPT-4o,30
+2024-08,Gemini 1.0,1
+2024-08,Gemini 1.5,7
+2024-08,Gemma 2,2
+2024-08,Llama 2,5
+2024-08,Llama 3,40
+2024-08,Llama 3.1,1
+2024-08,Llama-2,50
+2024-08,Llama-3.1,4
+2024-08,Mistral 7B,15
+2024-08,Mistral-v0.3,1
+2024-08,Mixtral,4
+2024-08,Phi-3,7
+2024-08,Phi-3.5,2
+2024-08,Phi-3.5-MoE,2
+2024-08,Qwen2,4
+2024-08,Yi,1
+2024-08,codet5,1
+2024-08,gemma-2,3
+2024-08,internlm2,2
+2024-08,opt,1
+2024-08,phi-2,2
+2024-08,pythia,1
+2024-08,tulu-2,1
+2024-09,Claude 2,1
+2024-09,Claude 3,11
+2024-09,Claude 3.5,13
+2024-09,GPT-3,58
+2024-09,GPT-3.5,1
+2024-09,GPT-4,120
+2024-09,GPT-4o,49
+2024-09,Gemini 1.5,9
+2024-09,Llama 2,1
+2024-09,Llama 3,47
+2024-09,Llama 3.1,2
+2024-09,Llama-2,45
+2024-09,Llama-3.1,13
+2024-09,Mistral,1
+2024-09,Mistral 7B,13
+2024-09,Mistral-v0.2,1
+2024-09,Mixtral,6
+2024-09,Nous-Hermes-2-Mixtral,1
+2024-09,Phi-3,6
+2024-09,Qwen2,5
+2024-09,Qwen2.5,1
+2024-09,Yi,1
+2024-09,falcon,1
+2024-09,gemma-2,4
+2024-09,gpt-neox,1
+2024-09,internlm-xcomposer2,1
+2024-09,internlm2,3
+2024-09,nekomata-pfn-qfin-inst-merge,1
+2024-09,o1,5
+2024-09,phi-2,3
+2024-10,Claude 2,5
+2024-10,Claude 3,21
+2024-10,Claude 3.5,20
+2024-10,DeepSeek-V2,1
+2024-10,Florence-2,1
+2024-10,GLM-4,4
+2024-10,GPT-3,84
+2024-10,GPT-3.5,2
+2024-10,GPT-4,240
+2024-10,GPT-4o,116
+2024-10,Gemini 1.0,2
+2024-10,Gemini 1.5,23
+2024-10,Llama 2,10
+2024-10,Llama 3,89
+2024-10,Llama 3.1,3
+2024-10,Llama 3.2,1
+2024-10,Llama-2,98
+2024-10,Llama-3.1,31
+2024-10,Llama-3.2,4
+2024-10,Mistral 7B,28
+2024-10,Mistral-v0.2,3
+2024-10,Mistral-v0.3,1
+2024-10,Mixtral,6
+2024-10,Phi-3,5
+2024-10,Pixtral,1
+2024-10,Qwen,2
+2024-10,Qwen2,20
+2024-10,Qwen2.5,1
+2024-10,WizardLM-2,1
+2024-10,codet5,3
+2024-10,falcon,1
+2024-10,falcon-mamba,1
+2024-10,gemma-2,5
+2024-10,o1,14
+2024-10,phi-2,3
+2024-10,plamo,2
+2024-10,pythia,1
+2024-10,v6-Finch,1
+2024-11,Baichuan,1
+2024-11,Baichuan2,1
+2024-11,Claude 2,2
+2024-11,Claude 3,6
+2024-11,Claude 3.5,9
+2024-11,DeepSeek-V2,1
+2024-11,Florence-2,1
+2024-11,GLM-4,4
+2024-11,GPT-3,66
+2024-11,GPT-3.5,1
+2024-11,GPT-4,132
+2024-11,GPT-4o,81
+2024-11,Gemini 1.0,3
+2024-11,Gemini 1.5,9
+2024-11,Gemma 2,2
+2024-11,Llama 2,3
+2024-11,Llama 3,64
+2024-11,Llama 3.1,10
+2024-11,Llama-2,54
+2024-11,Llama-3.1,21
+2024-11,Llama-3.2,7
+2024-11,Llama-Guard-3,4
+2024-11,Mistral 7B,16
+2024-11,Mistral-v0.2,1
+2024-11,Mistral-v0.3,2
+2024-11,Mixtral,10
+2024-11,Phi-3,11
+2024-11,Phi-3.5,2
+2024-11,Qwen2,10
+2024-11,Qwen2.5,5
+2024-11,Zamba2,2
+2024-11,aya-23,1
+2024-11,codet5,2
+2024-11,falcon,1
+2024-11,gemma-2,13
+2024-11,o1,9
+2024-11,opt,1
+2024-11,phi-2,4
+2024-11,pythia,1
+2024-12,Claude 3,7
+2024-12,Claude 3.5,24
+2024-12,DeepSeek-V2,1
+2024-12,Florence-2,1
+2024-12,GLM-4,2
+2024-12,GPT-3,37
+2024-12,GPT-4,118
+2024-12,GPT-4o,98
+2024-12,Gemini 1.0,2
+2024-12,Gemini 1.5,17
+2024-12,Gemma 2,5
+2024-12,Llama 2,2
+2024-12,Llama 3,57
+2024-12,Llama 3.1,9
+2024-12,Llama 3.2,1
+2024-12,Llama-2,41
+2024-12,Llama-3.1,32
+2024-12,Llama-3.2,7
+2024-12,Meta-Llama-3,1
+2024-12,Mistral 7B,14
+2024-12,Mistral-v0.1,1
+2024-12,Mistral-v0.2,1
+2024-12,Mixtral,2
+2024-12,OpenELM,1
+2024-12,Phi-3,6
+2024-12,Phi-3.5,2
+2024-12,Phi-4,1
+2024-12,Qwen,1
+2024-12,Qwen2,10
+2024-12,Qwen2.5,10
+2024-12,SmolLM2,1
+2024-12,aya-23,1
+2024-12,aya-expanse,1
+2024-12,bloomz,1
+2024-12,bloomz-7b1,1
+2024-12,cogvlm2-llama3,1
+2024-12,deepseek-vl2,1
+2024-12,falcon,1
+2024-12,gemma-2,11
+2024-12,ministral,1
+2024-12,o1,13
+2024-12,opt,1
+2024-12,phi-2,4
+2024-12,tulu-2,2
+2025-01,Claude 3,5
+2025-01,Claude 3.5,14
+2025-01,DeepSeek-R1,4
+2025-01,DeepSeek-V2,1
+2025-01,GLM-4,7
+2025-01,GPT-3,34
+2025-01,GPT-4,94
+2025-01,GPT-4o,94
+2025-01,Gemini 1.5,16
+2025-01,Gemini 2.0,3
+2025-01,Gemma 2,2
+2025-01,Llama 2,3
+2025-01,Llama 3,53
+2025-01,Llama 3.1,8
+2025-01,Llama 3.2,1
+2025-01,Llama 3.3,1
+2025-01,Llama-2,25
+2025-01,Llama-3.1,31
+2025-01,Llama-3.2,6
+2025-01,Meta-Llama-3,1
+2025-01,MiniMax-Text-01,1
+2025-01,Mistral 7B,8
+2025-01,Mistral-v0.2,2
+2025-01,Mistral-v0.3,1
+2025-01,Mixtral,3
+2025-01,Phi-3,8
+2025-01,Phi-3.5,2
+2025-01,Phi-3.5-MoE,1
+2025-01,Pixtral,1
+2025-01,QwQ,1
+2025-01,Qwen2,6
+2025-01,Qwen2.5,12
+2025-01,RWKV7,1
+2025-01,SOLAR-v1.0,1
+2025-01,codet5,3
+2025-01,gemma-2,6
+2025-01,instructblip-vicuna,1
+2025-01,minimax-01,1
+2025-01,o1,10
+2025-01,o3,2
+2025-01,opt,2
+2025-01,phi-2,1
+2025-01,pythia,1
+2025-02,AI21-Jamba,1
+2025-02,Claude 3,14
+2025-02,Claude 3.5,24
+2025-02,Claude 3.7,2
+2025-02,DeepSeek-R1,42
+2025-02,DeepSeek-R1-Distill-Qwen,4
+2025-02,DeepSeek-V2,2
+2025-02,DeepSeek-V3,8
+2025-02,Florence-2,2
+2025-02,GPT-3,51
+2025-02,GPT-4,128
+2025-02,GPT-4o,169
+2025-02,Gemini 1.0,1
+2025-02,Gemini 1.5,24
+2025-02,Gemini 2.0,6
+2025-02,Grok 3,1
+2025-02,Llama 2,3
+2025-02,Llama 3,84
+2025-02,Llama 3.1,13
+2025-02,Llama 3.2,3
+2025-02,Llama 3.3,7
+2025-02,Llama-2,46
+2025-02,Llama-3.1,40
+2025-02,Llama-3.2,21
+2025-02,Llama-Guard-3,1
+2025-02,Mistral 7B,17
+2025-02,Mistral-v0.2,1
+2025-02,Mistral-v0.3,2
+2025-02,Mixtral,3
+2025-02,OLMo,1
+2025-02,Phi-3,9
+2025-02,Phi-3.5,4
+2025-02,Phi-4,3
+2025-02,Pixtral,2
+2025-02,QwQ,2
+2025-02,Qwen2,19
+2025-02,Qwen2.5,35
+2025-02,SmolLM2,2
+2025-02,Step3,2
+2025-02,TAID-LLM,1
+2025-02,aya-23,1
+2025-02,codet5,4
+2025-02,falcon,1
+2025-02,gemma-2,12
+2025-02,internlm2-math,1
+2025-02,ministral,1
+2025-02,o1,26
+2025-02,o3,11
+2025-02,o3-high,4
+2025-02,phi-2,2
+2025-02,pythia,2
+2025-03,Claude 2,1
+2025-03,Claude 3,5
+2025-03,Claude 3.5,26
+2025-03,Claude 3.7,2
+2025-03,DeepSeek-R1,43
+2025-03,DeepSeek-R1-Distill-Llama,3
+2025-03,DeepSeek-R1-Distill-Qwen,6
+2025-03,DeepSeek-R1-Zero,1
+2025-03,DeepSeek-V2,4
+2025-03,DeepSeek-V3,8
+2025-03,Florence-2,2
+2025-03,GLM-4,2
+2025-03,GPT-3,53
+2025-03,GPT-4,113
+2025-03,GPT-4.5,3
+2025-03,GPT-4o,173
+2025-03,Gemini 1.0,1
+2025-03,Gemini 1.5,21
+2025-03,Gemini 2.0,10
+2025-03,Gemma 2,4
+2025-03,Gemma 3,1
+2025-03,Llama 2,5
+2025-03,Llama 3,60
+2025-03,Llama 3.1,12
+2025-03,Llama 3.2,4
+2025-03,Llama 3.3,3
+2025-03,Llama-2,29
+2025-03,Llama-3.1,44
+2025-03,Llama-3.1-Nemotron,1
+2025-03,Llama-3.2,15
+2025-03,Llama-Guard-3,1
+2025-03,Mistral,1
+2025-03,Mistral 7B,12
+2025-03,Mistral-v0.1,1
+2025-03,Mistral-v0.2,1
+2025-03,Mistral-v0.3,1
+2025-03,Mixtral,8
+2025-03,Phi-3,8
+2025-03,Phi-3.5,3
+2025-03,Phi-4,5
+2025-03,Phi-4-Multimodal,1
+2025-03,QwQ,4
+2025-03,Qwen,1
+2025-03,Qwen2,21
+2025-03,Qwen2.5,34
+2025-03,Qwen2.5-Omni,1
+2025-03,RWKV7,2
+2025-03,aya-23,1
+2025-03,codet5,2
+2025-03,deepseek-v1.5,1
+2025-03,falcon,1
+2025-03,gemma-2,20
+2025-03,internlm2,1
+2025-03,ministral,1
+2025-03,o1,21
+2025-03,o3,10
+2025-03,o3-high,1
+2025-04,Baichuan2,1
+2025-04,Claude 3,9
+2025-04,Claude 3.5,19
+2025-04,Claude 3.7,8
+2025-04,DeepHermes-3-Mistral,1
+2025-04,DeepSeek-R1,36
+2025-04,DeepSeek-R1-Distill-Llama,2
+2025-04,DeepSeek-R1-Distill-Qwen,6
+2025-04,DeepSeek-R1-Zero,3
+2025-04,DeepSeek-V3,10
+2025-04,EXAONE-3.5,1
+2025-04,Florence-2,2
+2025-04,GLM-4,2
+2025-04,GPT-3,41
+2025-04,GPT-4,95
+2025-04,GPT-4.1,1
+2025-04,GPT-4.5,3
+2025-04,GPT-4o,149
+2025-04,Gemini 1.5,23
+2025-04,Gemini 2.0,13
+2025-04,Gemini 2.5,5
+2025-04,Gemma 3,6
+2025-04,Grok 3,1
+2025-04,Llama 2,2
+2025-04,Llama 3,58
+2025-04,Llama 3.1,6
+2025-04,Llama 3.2,1
+2025-04,Llama 3.3,6
+2025-04,Llama-2,39
+2025-04,Llama-3.1,24
+2025-04,Llama-3.2,15
+2025-04,Llama-Guard-3,2
+2025-04,Meta-Llama-3,1
+2025-04,Mistral 3,1
+2025-04,Mistral 7B,15
+2025-04,Mistral-v0.3,1
+2025-04,Mixtral,1
+2025-04,OLMo,1
+2025-04,OLMo-2,1
+2025-04,Phi-3,7
+2025-04,Phi-3.5,3
+2025-04,Phi-4,3
+2025-04,Preferred-MedLLM-Qwen,1
+2025-04,QwQ,2
+2025-04,Qwen2,12
+2025-04,Qwen2.5,32
+2025-04,Qwen2.5-Omni,1
+2025-04,RWKV7,5
+2025-04,Sa2VA,3
+2025-04,Step3,1
+2025-04,TinySwallow,1
+2025-04,Yi,1
+2025-04,aya-23,1
+2025-04,bloomz,1
+2025-04,codet5,3
+2025-04,deepseek-vl2,1
+2025-04,falcon,1
+2025-04,gemma-2,15
+2025-04,internlm2,1
+2025-04,o1,16
+2025-04,o3,11
+2025-04,phi-2,2
+2025-04,stablelm-2,1
+2025-05,Claude 2,2
+2025-05,Claude 3,10
+2025-05,Claude 3.5,26
+2025-05,Claude 3.7,20
+2025-05,DeepSeek-R1,82
+2025-05,DeepSeek-R1-Distill-Llama,8
+2025-05,DeepSeek-R1-Distill-Qwen,10
+2025-05,DeepSeek-R1-Zero,2
+2025-05,DeepSeek-V3,25
+2025-05,Falcon3,1
+2025-05,Florence-2,1
+2025-05,GLM-4,3
+2025-05,GLM-Z1,1
+2025-05,GPT-3,39
+2025-05,GPT-3.5,1
+2025-05,GPT-4,96
+2025-05,GPT-4.1,9
+2025-05,GPT-4.5,3
+2025-05,GPT-4o,200
+2025-05,Gemini 1.0,4
+2025-05,Gemini 1.5,30
+2025-05,Gemini 2.0,24
+2025-05,Gemini 2.5,16
+2025-05,Gemma 2,4
+2025-05,Gemma 3,8
+2025-05,Grok 3,1
+2025-05,Llama 2,5
+2025-05,Llama 3,78
+2025-05,Llama 3.1,8
+2025-05,Llama 3.2,6
+2025-05,Llama 3.3,6
+2025-05,Llama 4,6
+2025-05,Llama-2,30
+2025-05,Llama-3.1,50
+2025-05,Llama-3.2,14
+2025-05,Llama-Guard-3,1
+2025-05,Meta-Llama-3,2
+2025-05,Mistral 7B,16
+2025-05,Mistral-v0.2,1
+2025-05,Mistral-v0.3,6
+2025-05,Mixtral,4
+2025-05,OLMo,1
+2025-05,OLMo-2,1
+2025-05,Phi-3,5
+2025-05,Phi-4,4
+2025-05,Phi-4-Multimodal,1
+2025-05,Pixtral,1
+2025-05,QwQ,12
+2025-05,Qwen,1
+2025-05,Qwen2,21
+2025-05,Qwen2.5,78
+2025-05,Qwen2.5-Omni,2
+2025-05,Qwen3,19
+2025-05,RWKV7,2
+2025-05,WizardLM-2,1
+2025-05,Yi-1.5,1
+2025-05,aya,1
+2025-05,aya-23,1
+2025-05,codet5,1
+2025-05,gemma-2,13
+2025-05,o1,28
+2025-05,o3,33
+2025-05,o3-high,2
+2025-05,o4,7
+2025-05,o4-high,1
+2025-05,phi-2,3
+2025-05,pythia,6
+2025-06,Claude 2,2
+2025-06,Claude 3,8
+2025-06,Claude 3.5,29
+2025-06,Claude 3.7,11
+2025-06,Claude 4,4
+2025-06,DeepSeek-Prover-V2,1
+2025-06,DeepSeek-R1,66
+2025-06,DeepSeek-R1-Distill-Llama,2
+2025-06,DeepSeek-R1-Distill-Qwen,7
+2025-06,DeepSeek-R1-Zero,3
+2025-06,DeepSeek-V3,15
+2025-06,Falcon3,1
+2025-06,GLM-4,2
+2025-06,GPT-3,37
+2025-06,GPT-4,94
+2025-06,GPT-4.1,17
+2025-06,GPT-4.5,3
+2025-06,GPT-4o,198
+2025-06,Gemini 1.5,17
+2025-06,Gemini 2.0,14
+2025-06,Gemini 2.5,20
+2025-06,Gemma 2,4
+2025-06,Gemma 3,8
+2025-06,Grok 3,4
+2025-06,Llama 2,3
+2025-06,Llama 3,71
+2025-06,Llama 3.1,7
+2025-06,Llama 3.2,3
+2025-06,Llama 3.3,11
+2025-06,Llama 4,5
+2025-06,Llama-2,33
+2025-06,Llama-3.1,53
+2025-06,Llama-3.1-Nemotron,1
+2025-06,Llama-3.2,20
+2025-06,Llama-Guard-3,2
+2025-06,MiMo,2
+2025-06,MiMo-RL,2
+2025-06,MiniMax-M1,1
+2025-06,MiniMax-Text-01,1
+2025-06,Mistral,1
+2025-06,Mistral 3,1
+2025-06,Mistral 7B,32
+2025-06,Mistral-v0.2,1
+2025-06,Mistral-v0.3,4
+2025-06,Mixtral,6
+2025-06,OLMo,5
+2025-06,OLMo-2,1
+2025-06,Phi-3,10
+2025-06,Phi-3.5,3
+2025-06,Phi-3.5-MoE,1
+2025-06,Phi-4,6
+2025-06,Pixtral,1
+2025-06,QwQ,6
+2025-06,Qwen2,24
+2025-06,Qwen2.5,70
+2025-06,Qwen3,14
+2025-06,Sa2VA,1
+2025-06,Skywork-R1V,2
+2025-06,Skywork-R1V2,1
+2025-06,Skywork-SWE,1
+2025-06,Yi-1.5,2
+2025-06,blip2-opt,1
+2025-06,codet5,2
+2025-06,gemini-2.5,1
+2025-06,gemma-2,15
+2025-06,medgemma,2
+2025-06,o1,15
+2025-06,o3,16
+2025-06,o3-high,3
+2025-06,o4,9
+2025-06,o4-high,3
+2025-06,opt,1
+2025-06,phi-2,1
+2025-06,pythia,2
+2025-07,Claude 3,5
+2025-07,Claude 3.5,20
+2025-07,Claude 3.7,10
+2025-07,Claude 4,4
+2025-07,DeepSeek-Prover-V2,2
+2025-07,DeepSeek-R1,44
+2025-07,DeepSeek-R1-Distill-Llama,3
+2025-07,DeepSeek-R1-Distill-Qwen,2
+2025-07,DeepSeek-R1-Zero,1
+2025-07,DeepSeek-V3,16
+2025-07,ERNIE-4.5,1
+2025-07,Falcon-H1,1
+2025-07,Falcon3,1
+2025-07,Florence-2,2
+2025-07,GPT-3,22
+2025-07,GPT-3.5,1
+2025-07,GPT-4,64
+2025-07,GPT-4.1,15
+2025-07,GPT-4.5,3
+2025-07,GPT-4o,129
+2025-07,Gemini 1.5,8
+2025-07,Gemini 2.0,14
+2025-07,Gemini 2.5,21
+2025-07,Gemma 2,2
+2025-07,Gemma 3,7
+2025-07,Grok 3,3
+2025-07,KAT-V1,1
+2025-07,Llama 2,4
+2025-07,Llama 3,59
+2025-07,Llama 3.1,1
+2025-07,Llama 3.2,6
+2025-07,Llama 3.3,9
+2025-07,Llama 4,6
+2025-07,Llama-2,32
+2025-07,Llama-3.1,28
+2025-07,Llama-3.2,18
+2025-07,MiMo-RL,1
+2025-07,Mistral,1
+2025-07,Mistral 7B,19
+2025-07,Mistral-v0.2,1
+2025-07,Mistral-v0.3,1
+2025-07,Mixtral,3
+2025-07,OLMo-2,1
+2025-07,Phi-3,2
+2025-07,Phi-3.5,1
+2025-07,Phi-4,7
+2025-07,QwQ,3
+2025-07,Qwen2,4
+2025-07,Qwen2.5,60
+2025-07,Qwen2.5-Omni,1
+2025-07,Qwen3,22
+2025-07,Skywork-R1V3,1
+2025-07,SmolVLM2,1
+2025-07,Step3,1
+2025-07,UI-TARS-DPO,1
+2025-07,aya-23,1
+2025-07,codet5,4
+2025-07,deepseek-vl2,1
+2025-07,gemma-2,9
+2025-07,internlm2,1
+2025-07,mt0-xl,1
+2025-07,o1,14
+2025-07,o3,14
+2025-07,o4,12
+2025-07,o4-high,1
+2025-07,phi-2,2
+2025-07,pythia,1
+2025-07,xLAM-2-fc-r,1
+2025-08,Apriel-Nemotron-Thinker,1
+2025-08,Claude 3,5
+2025-08,Claude 3.5,15
+2025-08,Claude 3.7,14
+2025-08,Claude 4,20
+2025-08,DeepSeek-Prover-V2,1
+2025-08,DeepSeek-R1,51
+2025-08,DeepSeek-R1-Distill-Llama,1
+2025-08,DeepSeek-R1-Distill-Qwen,2
+2025-08,DeepSeek-V2,4
+2025-08,DeepSeek-V3,20
+2025-08,EXAONE-Deep,1
+2025-08,Falcon3,1
+2025-08,Falcon3-Mamba,1
+2025-08,Florence-2,1
+2025-08,GLM-4,1
+2025-08,GLM-4.5,1
+2025-08,GLM-4.5-Air,1
+2025-08,GPT-3,29
+2025-08,GPT-4,62
+2025-08,GPT-4.1,26
+2025-08,GPT-4.5,3
+2025-08,GPT-4o,139
+2025-08,GPT-5,23
+2025-08,Gemini 1.0,1
+2025-08,Gemini 1.5,14
+2025-08,Gemini 2.0,6
+2025-08,Gemini 2.5,32
+2025-08,Gemma 2,2
+2025-08,Gemma 3,16
+2025-08,Grok 3,4
+2025-08,Grok 4,3
+2025-08,Grok-3,1
+2025-08,Intern-S1,1
+2025-08,Kimi K2,2
+2025-08,Llama 3,46
+2025-08,Llama 3.1,10
+2025-08,Llama 3.2,2
+2025-08,Llama 3.3,8
+2025-08,Llama 4,3
+2025-08,Llama-2,16
+2025-08,Llama-3.1,25
+2025-08,Llama-3.2,20
+2025-08,Mistral 7B,15
+2025-08,Mixtral,1
+2025-08,Motif,1
+2025-08,Phi-3,6
+2025-08,Phi-3.5,3
+2025-08,Phi-4,6
+2025-08,QwQ,5
+2025-08,Qwen2,11
+2025-08,Qwen2.5,79
+2025-08,Qwen3,31
+2025-08,SmolLM2,1
+2025-08,Yi,1
+2025-08,aya,1
+2025-08,falcon,2
+2025-08,gemma-2,7
+2025-08,gemma-3,1
+2025-08,gpt-oss,4
+2025-08,medgemma,1
+2025-08,mistral-3.1,1
+2025-08,o1,13
+2025-08,o3,11
+2025-08,o3-high,1
+2025-08,o4,4
+2025-08,o4-high,3
+2025-08,phi-2,2
+2025-08,pythia,2
+2025-08,ui-tars-1.5,1
+2025-09,Apertus,1
+2025-09,Baichuan-M2,1
+2025-09,CapRL,1
+2025-09,Claude 3,6
+2025-09,Claude 3.5,21
+2025-09,Claude 3.7,11
+2025-09,Claude 4,10
+2025-09,Claude 4.1,3
+2025-09,DeepSeek-R1,46
+2025-09,DeepSeek-R1-Distill-Llama,3
+2025-09,DeepSeek-R1-Distill-Qwen,5
+2025-09,DeepSeek-R1-Zero,2
+2025-09,DeepSeek-V2,1
+2025-09,DeepSeek-V3,20
+2025-09,DeepSeek-V3.1,3
+2025-09,Falcon3-Mamba,1
+2025-09,Florence-2,3
+2025-09,GLM-4,4
+2025-09,GLM-4.5,2
+2025-09,GLM-Z1,1
+2025-09,GPT-3,20
+2025-09,GPT-4,49
+2025-09,GPT-4.1,30
+2025-09,GPT-4.5,2
+2025-09,GPT-4o,180
+2025-09,GPT-5,36
+2025-09,Gemini 1.5,14
+2025-09,Gemini 2.0,13
+2025-09,Gemini 2.5,43
+2025-09,Gemma 2,3
+2025-09,Gemma 3,12
+2025-09,Grok 3,1
+2025-09,Grok 4,6
+2025-09,Grok-3,1
+2025-09,Hermes-4,1
+2025-09,K2,1
+2025-09,Kimi,1
+2025-09,Kimi K2,2
+2025-09,LFM2,1
+2025-09,Llama 3,53
+2025-09,Llama 3.1,14
+2025-09,Llama 3.2,5
+2025-09,Llama 3.3,9
+2025-09,Llama 4,5
+2025-09,Llama-2,22
+2025-09,Llama-3.1,56
+2025-09,Llama-3.1-Nemotron,1
+2025-09,Llama-3.2,17
+2025-09,Llama-Guard-3,1
+2025-09,MiniCPM4,1
+2025-09,MiniCPM4.1,2
+2025-09,Mistral,1
+2025-09,Mistral 7B,13
+2025-09,Mistral NeMo,1
+2025-09,Mistral-v0.2,2
+2025-09,Mistral-v0.3,4
+2025-09,Mixtral,3
+2025-09,OLMoE,1
+2025-09,Phi-3,2
+2025-09,Phi-3.5,4
+2025-09,Phi-4,5
+2025-09,Phi-4-Multimodal,1
+2025-09,Qianfan,1
+2025-09,QwQ,4
+2025-09,Qwen2,17
+2025-09,Qwen2.5,101
+2025-09,Qwen2.5-Omni,4
+2025-09,Qwen3,48
+2025-09,Qwen3-Omni,1
+2025-09,Sa2VA,1
+2025-09,Seed 1.6,1
+2025-09,SmolLM2,3
+2025-09,Step3,1
+2025-09,Yi,1
+2025-09,deepseek-moe,1
+2025-09,deepseek-vl2,2
+2025-09,gemma-2,23
+2025-09,gemma-3,1
+2025-09,gpt-oss,6
+2025-09,granite-3.3,1
+2025-09,medgemma,1
+2025-09,o1,10
+2025-09,o3,9
+2025-09,o3-high,1
+2025-09,o4,8
+2025-09,o4-high,1
+2025-09,opt,1
+2025-09,phi-2,1
+2025-09,plamo-2,1
+2025-09,pythia,3
+2025-09,ui-tars-1.5,1
+2025-10,Apriel-1.5-Thinker,1
+2025-10,BFS-Prover-V1,1
+2025-10,BFS-Prover-V2,1
+2025-10,Claude 3,5
+2025-10,Claude 3.5,13
+2025-10,Claude 3.7,12
+2025-10,Claude 4,25
+2025-10,Claude 4.1,2
+2025-10,Claude 4.5,2
+2025-10,DeepSeek-Prover-V2,2
+2025-10,DeepSeek-R1,60
+2025-10,DeepSeek-R1-Distill-Llama,6
+2025-10,DeepSeek-R1-Distill-Qwen,8
+2025-10,DeepSeek-R1-Qwen3,1
+2025-10,DeepSeek-R1-Zero,1
+2025-10,DeepSeek-V2,3
+2025-10,DeepSeek-V3,22
+2025-10,DeepSeek-V3.1,7
+2025-10,DeepSeek-V3.1-Terminus,1
+2025-10,DeepSeek-V3.2,1
+2025-10,Falcon-H1,1
+2025-10,Florence-2,1
+2025-10,GLM-4,5
+2025-10,GLM-4.1V,3
+2025-10,GLM-4.5,1
+2025-10,GLM-4.5V,2
+2025-10,GPT-3,20
+2025-10,GPT-3.5,1
+2025-10,GPT-4,55
+2025-10,GPT-4.1,36
+2025-10,GPT-4.5,3
+2025-10,GPT-4o,180
+2025-10,GPT-5,59
+2025-10,Gemini 1.5,14
+2025-10,Gemini 2.0,14
+2025-10,Gemini 2.5,73
+2025-10,Gemma 2,1
+2025-10,Gemma 3,21
+2025-10,Grok 3,2
+2025-10,Grok 4,4
+2025-10,Grok-3,1
+2025-10,Hermes-4,1
+2025-10,Kimi,1
+2025-10,Kimi K2,1
+2025-10,Ling-2.0,1
+2025-10,Llama 3,64
+2025-10,Llama 3.1,14
+2025-10,Llama 3.2,10
+2025-10,Llama 3.3,17
+2025-10,Llama 4,5
+2025-10,Llama-2,38
+2025-10,Llama-3.1,59
+2025-10,Llama-3.2,29
+2025-10,Llama-4-128E,1
+2025-10,Llama-4-16E,1
+2025-10,Llama-Guard-3,2
+2025-10,Meta-Llama-3,1
+2025-10,MiniCPM4,1
+2025-10,Mistral 7B,24
+2025-10,Mistral-v0.3,2
+2025-10,Mixtral,7
+2025-10,OLMo,4
+2025-10,OLMo-2,5
+2025-10,Phi-3,5
+2025-10,Phi-3.5,2
+2025-10,Phi-4,7
+2025-10,Phi-4-Multimodal,1
+2025-10,Pixtral,1
+2025-10,QwQ,9
+2025-10,Qwen2,19
+2025-10,Qwen2.5,116
+2025-10,Qwen2.5-Omni,4
+2025-10,Qwen3,60
+2025-10,Qwen3-Next,1
+2025-10,RWKV7,1
+2025-10,Ring,1
+2025-10,Ring-linear-2.0,1
+2025-10,Sa2VA,1
+2025-10,Skywork-R1V3,1
+2025-10,SmolLM2,1
+2025-10,Yi,1
+2025-10,aya-23,1
+2025-10,aya-expanse,2
+2025-10,codet5,2
+2025-10,deepseek-vl2,2
+2025-10,falcon-mamba,1
+2025-10,gemini-2.5,3
+2025-10,gemma-2,21
+2025-10,gpt-oss,8
+2025-10,granite-guardian-3.3,1
+2025-10,ministral,1
+2025-10,o1,12
+2025-10,o3,13
+2025-10,o4,18
+2025-10,o4-high,1
+2025-10,olmOCR-2,1
+2025-10,phi-2,3
+2025-10,pythia,2
+2025-11,Apriel-Nemotron-Thinker,1
+2025-11,Baichuan2,1
+2025-11,BiMediX2,1
+2025-11,Claude 3,2
+2025-11,Claude 3.5,11
+2025-11,Claude 3.7,6
+2025-11,Claude 4,19
+2025-11,Claude 4.1,2
+2025-11,Claude 4.5,2
+2025-11,DeepSeek-R1,50
+2025-11,DeepSeek-R1-Distill-Llama,1
+2025-11,DeepSeek-R1-Distill-Qwen,5
+2025-11,DeepSeek-R1-Qwen3,1
+2025-11,DeepSeek-V2,1
+2025-11,DeepSeek-V3,11
+2025-11,DeepSeek-V3.1,2
+2025-11,DeepSeek-V3.2,2
+2025-11,Doubao-Seed-1.6,1
+2025-11,ERNIE-4.5,2
+2025-11,Falcon3,1
+2025-11,Florence-2,3
+2025-11,GLM-4,1
+2025-11,GLM-4.5,3
+2025-11,GPT-3,21
+2025-11,GPT-4,46
+2025-11,GPT-4.1,19
+2025-11,GPT-4.5,2
+2025-11,GPT-4o,140
+2025-11,GPT-5,46
+2025-11,Gemini 1.0,1
+2025-11,Gemini 1.5,10
+2025-11,Gemini 2.0,10
+2025-11,Gemini 2.5,45
+2025-11,Gemini 3,2
+2025-11,Gemma 3,19
+2025-11,Grok 3,1
+2025-11,Grok 4,8
+2025-11,Kimi K2,4
+2025-11,LFM2,2
+2025-11,Ling,1
+2025-11,Ling-2.0,1
+2025-11,Llama 2,1
+2025-11,Llama 3,50
+2025-11,Llama 3.1,8
+2025-11,Llama 3.2,2
+2025-11,Llama 3.3,12
+2025-11,Llama 4,9
+2025-11,Llama-2,36
+2025-11,Llama-3.1,36
+2025-11,Llama-3.1-Nemotron,2
+2025-11,Llama-3.2,18
+2025-11,Llama-Guard-3,1
+2025-11,Meta-Llama-3,1
+2025-11,Mistral 7B,20
+2025-11,Mixtral,3
+2025-11,Motif,1
+2025-11,Motif-2,1
+2025-11,OLMo-2,2
+2025-11,Phi-3,5
+2025-11,Phi-4,3
+2025-11,Pixtral,1
+2025-11,QwQ,4
+2025-11,Qwen2,9
+2025-11,Qwen2.5,77
+2025-11,Qwen2.5-Omni,4
+2025-11,Qwen3,55
+2025-11,Sa2VA,1
+2025-11,SmolLM2,1
+2025-11,SmolVLM2,1
+2025-11,aya-expanse,2
+2025-11,blip2-opt,1
+2025-11,codet5,2
+2025-11,falcon,1
+2025-11,falcon-rw,1
+2025-11,gemini-2.5-05-06,1
+2025-11,gemma-2,9
+2025-11,gpt-oss,16
+2025-11,granite-3.3,2
+2025-11,medgemma,1
+2025-11,ministral,1
+2025-11,mistral-3.2,1
+2025-11,o1,10
+2025-11,o3,12
+2025-11,o4,6
+2025-11,phi-2,4
+2025-12,Baichuan2,1
+2025-12,Claude 3,3
+2025-12,Claude 3.5,17
+2025-12,Claude 3.7,6
+2025-12,Claude 4,20
+2025-12,Claude 4.1,7
+2025-12,Claude 4.5,8
+2025-12,DeepSeek-R1,29
+2025-12,DeepSeek-R1-Distill-Llama,1
+2025-12,DeepSeek-R1-Distill-Qwen,6
+2025-12,DeepSeek-R1-Qwen3,1
+2025-12,DeepSeek-V2,3
+2025-12,DeepSeek-V3,13
+2025-12,DeepSeek-V3.1,5
+2025-12,DeepSeek-V3.2,4
+2025-12,GLM-4,1
+2025-12,GLM-4.5-Air,1
+2025-12,GLM-4.5V,1
+2025-12,GPT-3,17
+2025-12,GPT-4,50
+2025-12,GPT-4.1,23
+2025-12,GPT-4.5,1
+2025-12,GPT-4o,108
+2025-12,GPT-5,71
+2025-12,Gemini 1.5,5
+2025-12,Gemini 2.0,8
+2025-12,Gemini 2.5,49
+2025-12,Gemini 3,10
+2025-12,Gemma 2,1
+2025-12,Gemma 3,17
+2025-12,Grok 3,1
+2025-12,Grok 4,6
+2025-12,Grok 4 Fast,1
+2025-12,INTELLECT-3,1
+2025-12,Kimi K2,2
+2025-12,LLaDA2.0,1
+2025-12,Llama 3,42
+2025-12,Llama 3.1,9
+2025-12,Llama 3.2,4
+2025-12,Llama 3.3,6
+2025-12,Llama 4,8
+2025-12,Llama-2,23
+2025-12,Llama-3.1,26
+2025-12,Llama-3.2,21
+2025-12,Llama-4-16E,1
+2025-12,Mistral 7B,21
+2025-12,Mistral-Nemo,1
+2025-12,Mixtral,2
+2025-12,Motif-2,1
+2025-12,NVIDIA-Nemotron-3,1
+2025-12,Nemotron 3,2
+2025-12,OLMo-2,2
+2025-12,Phi-3,3
+2025-12,Phi-3.5,1
+2025-12,Phi-4,5
+2025-12,Pixtral,1
+2025-12,QwQ,2
+2025-12,Qwen2,14
+2025-12,Qwen2.5,86
+2025-12,Qwen2.5-Omni,2
+2025-12,Qwen3,71
+2025-12,Qwen3-Omni,1
+2025-12,RWKV7,1
+2025-12,Skywork-R1V,1
+2025-12,StepFun-Formalizer,1
+2025-12,Yi,2
+2025-12,ZAYA1,1
+2025-12,aya-23,2
+2025-12,deepseek-vl2,1
+2025-12,falcon-rw,1
+2025-12,gemini-2.5,1
+2025-12,gemma-2,9
+2025-12,gemma-3,1
+2025-12,gpt-5.2,1
+2025-12,gpt-oss,14
+2025-12,granite-3.0,1
+2025-12,kanana-1.5,1
+2025-12,medgemma,1
+2025-12,ministral,1
+2025-12,o1,3
+2025-12,o3,8
+2025-12,o3-high,1
+2025-12,o4,12
+2025-12,o4-high,1
+2025-12,phi-2,1
+2025-12,pythia,1
+2025-12,ui-tars-1.5,2
+2026-01,Baichuan-M2,1
+2026-01,Baichuan2,1
+2026-01,Claude 2,1
+2026-01,Claude 3,2
+2026-01,Claude 3.5,14
+2026-01,Claude 3.7,5
+2026-01,Claude 4,11
+2026-01,Claude 4.1,1
+2026-01,Claude 4.5,22
+2026-01,DeepSeek-2,1
+2026-01,DeepSeek-Prover-V2,2
+2026-01,DeepSeek-R1,41
+2026-01,DeepSeek-R1-Distill-Llama,2
+2026-01,DeepSeek-R1-Distill-Qwen,8
+2026-01,DeepSeek-V2,2
+2026-01,DeepSeek-V3,13
+2026-01,DeepSeek-V3.1,2
+2026-01,DeepSeek-V3.2,6
+2026-01,EXAONE-3.0,1
+2026-01,EXAONE-3.5,2
+2026-01,EXAONE-4.0,1
+2026-01,EXAONE-Deep,1
+2026-01,Falcon-H1,1
+2026-01,Falcon-H1R,1
+2026-01,Falcon3,2
+2026-01,Florence-2,1
+2026-01,GLM-4,1
+2026-01,GLM-4.1V,2
+2026-01,GLM-4.5V,1
+2026-01,GPT-3,16
+2026-01,GPT-4,35
+2026-01,GPT-4.1,26
+2026-01,GPT-4o,128
+2026-01,GPT-5,81
+2026-01,GPT-5.1-Codex,1
+2026-01,Gemini 1.0,1
+2026-01,Gemini 1.5,8
+2026-01,Gemini 2.0,9
+2026-01,Gemini 2.5,46
+2026-01,Gemini 3,29
+2026-01,Gemma 3,14
+2026-01,Grok 3,2
+2026-01,Grok 4,5
+2026-01,Grok 4 Fast,1
+2026-01,Grok 4.1 Fast,2
+2026-01,Grok-3,1
+2026-01,K2,1
+2026-01,Kimi K2,4
+2026-01,Llama 2,3
+2026-01,Llama 3,38
+2026-01,Llama 3.1,13
+2026-01,Llama 3.2,3
+2026-01,Llama 3.3,11
+2026-01,Llama 4,3
+2026-01,Llama-2,28
+2026-01,Llama-3.1,49
+2026-01,Llama-3.1-Nemotron-v1,1
+2026-01,Llama-3.2,17
+2026-01,Llama-Guard-3,2
+2026-01,MiMo-V2,1
+2026-01,Ministral-3,2
+2026-01,Mistral 3,1
+2026-01,Mistral 7B,21
+2026-01,Mistral-v0.2,1
+2026-01,Mistral-v0.3,1
+2026-01,Mixtral,5
+2026-01,Nemotron 3 Super,1
+2026-01,OLMo-2,4
+2026-01,Phi-3,3
+2026-01,Phi-4,6
+2026-01,QwQ,3
+2026-01,Qwen,2
+2026-01,Qwen2,18
+2026-01,Qwen2.5,87
+2026-01,Qwen2.5-Omni,3
+2026-01,Qwen3,89
+2026-01,Qwen3-Next,1
+2026-01,Qwen3-Omni,1
+2026-01,RWKV7,1
+2026-01,SenseNova-MARS,1
+2026-01,SmolLM2,2
+2026-01,Step3,1
+2026-01,aya-23,1
+2026-01,aya-expanse,1
+2026-01,codet5,2
+2026-01,falcon,1
+2026-01,falcon-rw,1
+2026-01,gemini-3,1
+2026-01,gemma-2,12
+2026-01,glm-4.6v,2
+2026-01,gpt-5.2,1
+2026-01,gpt-oss,12
+2026-01,granite-3.3,1
+2026-01,ministral,1
+2026-01,o1,6
+2026-01,o3,5
+2026-01,o3-high,1
+2026-01,o4,4
+2026-01,o4-high,1
+2026-01,opt,1
+2026-01,phi-2,4
+2026-01,pythia,3
+2026-02,Baichuan-M3,1
+2026-02,Claude 3,5
+2026-02,Claude 3.5,6
+2026-02,Claude 3.7,8
+2026-02,Claude 4,22
+2026-02,Claude 4.1,3
+2026-02,Claude 4.5,20
+2026-02,Claude 4.6,2
+2026-02,DeepSeek-R1,30
+2026-02,DeepSeek-R1-Distill-Llama,6
+2026-02,DeepSeek-R1-Distill-Qwen,7
+2026-02,DeepSeek-R1-Qwen3,1
+2026-02,DeepSeek-R1-Zero,1
+2026-02,DeepSeek-V2,2
+2026-02,DeepSeek-V3,6
+2026-02,DeepSeek-V3.1,4
+2026-02,DeepSeek-V3.2,10
+2026-02,Dolphin-v2,1
+2026-02,Florence-2,2
+2026-02,GLM-4,3
+2026-02,GLM-4.1V,1
+2026-02,GLM-4.5V,1
+2026-02,GLM-4.6,3
+2026-02,GLM-4.7,2
+2026-02,GLM-5,1
+2026-02,GPT-3,12
+2026-02,GPT-4,27
+2026-02,GPT-4.1,13
+2026-02,GPT-4o,78
+2026-02,GPT-5,87
+2026-02,GPT-5.3 Codex,1
+2026-02,Gemini 1.5,1
+2026-02,Gemini 2.0,9
+2026-02,Gemini 2.5,49
+2026-02,Gemini 3,28
+2026-02,Gemma 3,23
+2026-02,Grok 3,1
+2026-02,Grok 4,4
+2026-02,Intern-S1,1
+2026-02,Kimi K2,6
+2026-02,Kimi K2.5,1
+2026-02,LLaDA2.0,1
+2026-02,LLaDA2.1,1
+2026-02,Llama 2,1
+2026-02,Llama 3,34
+2026-02,Llama 3.1,16
+2026-02,Llama 3.2,6
+2026-02,Llama 3.3,11
+2026-02,Llama 4,7
+2026-02,Llama-2,24
+2026-02,Llama-3.1,43
+2026-02,Llama-3.2,18
+2026-02,Llama-Guard-3,2
+2026-02,LongCat,1
+2026-02,MediX-R1,1
+2026-02,Meta-Llama-3,1
+2026-02,MiMo-RL,1
+2026-02,Mistral 7B,16
+2026-02,Mistral-v0.3,2
+2026-02,Mixtral,2
+2026-02,OLMo-2,3
+2026-02,Olmo-3,1
+2026-02,Phi-3,2
+2026-02,Phi-3.5,2
+2026-02,Phi-4,3
+2026-02,Phi-4-Multimodal,1
+2026-02,Pixtral,2
+2026-02,QwQ,5
+2026-02,Qwen2,16
+2026-02,Qwen2.5,101
+2026-02,Qwen2.5-Omni,3
+2026-02,Qwen3,103
+2026-02,Qwen3-Next,3
+2026-02,Qwen3-Omni,1
+2026-02,RWKV7,1
+2026-02,Seed-OSS,1
+2026-02,SmolLM2,3
+2026-02,Step 3.5,1
+2026-02,UI-Venus-1.5,1
+2026-02,Yi,1
+2026-02,aya,1
+2026-02,aya-expanse,2
+2026-02,falcon,1
+2026-02,gemini-3-1,1
+2026-02,gemma-2,9
+2026-02,gemma-3,1
+2026-02,glm-4.6v,1
+2026-02,gpt-oss,12
+2026-02,granite-4.0-h,1
+2026-02,medgemma,1
+2026-02,o1,7
+2026-02,o3,10
+2026-02,o4,7
+2026-02,phi-2,1
+2026-02,pythia,3
+2026-02,ui-tars-1.5,1
+2026-03,Claude 3,3
+2026-03,Claude 3.5,14
+2026-03,Claude 3.7,6
+2026-03,Claude 4,30
+2026-03,Claude 4.1,1
+2026-03,Claude 4.5,18
+2026-03,Claude 4.6,24
+2026-03,DeepSeek-2,1
+2026-03,DeepSeek-Prover-V2,1
+2026-03,DeepSeek-R1,43
+2026-03,DeepSeek-R1-Distill-Llama,1
+2026-03,DeepSeek-R1-Distill-Qwen,4
+2026-03,DeepSeek-R1-Zero,1
+2026-03,DeepSeek-V3,16
+2026-03,DeepSeek-V3.1,3
+2026-03,DeepSeek-V3.1-Terminus,1
+2026-03,DeepSeek-V3.2,8
+2026-03,Falcon3,1
+2026-03,GLM-4,1
+2026-03,GLM-4.5V,2
+2026-03,GLM-4.6,2
+2026-03,GLM-4.7,2
+2026-03,GLM-5,4
+2026-03,GPT-3,13
+2026-03,GPT-4,36
+2026-03,GPT-4.1,23
+2026-03,GPT-4.5,3
+2026-03,GPT-4o,144
+2026-03,GPT-5,120
+2026-03,GPT-5.1-Codex,1
+2026-03,GPT-5.3 Codex,1
+2026-03,GPT-5.4,6
+2026-03,Gemini 1.5,10
+2026-03,Gemini 2.0,11
+2026-03,Gemini 2.5,70
+2026-03,Gemini 3,33
+2026-03,Gemini 3.1,10
+2026-03,Gemma 2,1
+2026-03,Gemma 3,30
+2026-03,Grok 3,3
+2026-03,Grok 4,6
+2026-03,Kimi K2,6
+2026-03,Kimi K2.5,3
+2026-03,Ling-2.0,1
+2026-03,Llama 2,2
+2026-03,Llama 3,43
+2026-03,Llama 3.1,8
+2026-03,Llama 3.2,6
+2026-03,Llama 3.3,16
+2026-03,Llama 4,9
+2026-03,Llama-2,19
+2026-03,Llama-3.1,53
+2026-03,Llama-3.1-Nemotron-v1,1
+2026-03,Llama-3.2,31
+2026-03,Llama-Guard-3,1
+2026-03,MedMO-Next,1
+2026-03,Meta-Llama-3,1
+2026-03,MiniMax M2,1
+2026-03,MiniMax-M2.5,1
+2026-03,MiniMax-M2.7,1
+2026-03,Mistral,1
+2026-03,Mistral 3,3
+2026-03,Mistral 7B,22
+2026-03,Mistral NeMo,1
+2026-03,Mistral-v0.2,1
+2026-03,Mistral-v0.3,2
+2026-03,Mixtral,4
+2026-03,Molmo2,1
+2026-03,Nemotron 3,1
+2026-03,OLMo-2,3
+2026-03,OLMoE,1
+2026-03,Olmo-3,2
+2026-03,Olmo-3.1,1
+2026-03,Phi-3,5
+2026-03,Phi-3.5,2
+2026-03,Phi-4,7
+2026-03,QwQ,1
+2026-03,Qwen,1
+2026-03,Qwen2,16
+2026-03,Qwen2.5,123
+2026-03,Qwen2.5-Omni,2
+2026-03,Qwen3,140
+2026-03,Qwen3-Next,4
+2026-03,Qwen3-Omni,1
+2026-03,Qwen3.5,12
+2026-03,Sa2VA,2
+2026-03,Seed-2.0,2
+2026-03,SmolLM2,4
+2026-03,SmolVLM2,1
+2026-03,Step 3.5,1
+2026-03,Step3,1
+2026-03,aya,1
+2026-03,bloom-1b7,1
+2026-03,deepseek-vl2,1
+2026-03,gemini-3,1
+2026-03,gemini-3-1,4
+2026-03,gemma-2,15
+2026-03,gpt-5.2,1
+2026-03,gpt-oss,10
+2026-03,granite-3.3,1
+2026-03,granite-guardian-3.3,1
+2026-03,grok-1,1
+2026-03,medgemma-1.5,1
+2026-03,ministral,1
+2026-03,nemotron-3-super,1
+2026-03,o1,6
+2026-03,o3,7
+2026-03,o4,6
+2026-03,opt,3
+2026-03,pythia,3
+2026-03,seed-1.6,1
+2026-04,Claude 3,7
+2026-04,Claude 3.5,18
+2026-04,Claude 3.7,11
+2026-04,Claude 4,30
+2026-04,Claude 4.1,2
+2026-04,Claude 4.5,20
+2026-04,Claude 4.6,35
+2026-04,Claude 4.7,4
+2026-04,DeepSeek V4,1
+2026-04,DeepSeek-2,1
+2026-04,DeepSeek-R1,59
+2026-04,DeepSeek-R1-Distill-Llama,2
+2026-04,DeepSeek-R1-Distill-Qwen,6
+2026-04,DeepSeek-R1-Zero,1
+2026-04,DeepSeek-V2,4
+2026-04,DeepSeek-V3,16
+2026-04,DeepSeek-V3.1,2
+2026-04,DeepSeek-V3.2,13
+2026-04,DeepSeek-V4,2
+2026-04,Doubao Seed 1.8,1
+2026-04,EXAONE-4.0,1
+2026-04,EXAONE-4.5,1
+2026-04,Falcon-H1,2
+2026-04,Florence-2,2
+2026-04,GLM 4.7,2
+2026-04,GLM-4,1
+2026-04,GLM-4.5V,1
+2026-04,GLM-4.6,1
+2026-04,GLM-5,5
+2026-04,GPT-3,17
+2026-04,GPT-4,20
+2026-04,GPT-4.1,41
+2026-04,GPT-4.5,2
+2026-04,GPT-4o,159
+2026-04,GPT-5,128
+2026-04,GPT-5.4,37
+2026-04,Gemini 1.5,12
+2026-04,Gemini 2.0,11
+2026-04,Gemini 2.5,69
+2026-04,Gemini 3,45
+2026-04,Gemini 3.1,24
+2026-04,Gemma 2,3
+2026-04,Gemma 3,31
+2026-04,Gemma 4,10
+2026-04,Gemma 4 E2B,1
+2026-04,Gemma 4 E4B,1
+2026-04,Grok 3,1
+2026-04,Grok 4,4
+2026-04,Grok 4 Fast,2
+2026-04,Grok 4.20,2
+2026-04,Grok Fast 1,1
+2026-04,Intern-S1,1
+2026-04,Kimi K2,4
+2026-04,Kimi K2.5,8
+2026-04,LFM2,1
+2026-04,LLaDA2.0,1
+2026-04,LLaDA2.1,1
+2026-04,Llama 2,1
+2026-04,Llama 3,69
+2026-04,Llama 3.1,9
+2026-04,Llama 3.2,4
+2026-04,Llama 3.3,22
+2026-04,Llama 4,7
+2026-04,Llama-2,29
+2026-04,Llama-3.1,59
+2026-04,Llama-3.1-Nemotron,1
+2026-04,Llama-3.2,23
+2026-04,Llama-Guard-3,1
+2026-04,Meta-Llama-3,1
+2026-04,MiMo-V2,1
+2026-04,MiniMax-M2.5,2
+2026-04,Ministral-3,1
+2026-04,Mistral 3,6
+2026-04,Mistral 4,1
+2026-04,Mistral 7B,10
+2026-04,Mistral-v0.1,1
+2026-04,Mistral-v0.3,3
+2026-04,Mixtral,5
+2026-04,Molmo2,2
+2026-04,Nemotron 3,1
+2026-04,Nemotron 3 Super,2
+2026-04,OLMo-2,4
+2026-04,Olmo-3,8
+2026-04,Olmo-3.1,1
+2026-04,Phi-3,7
+2026-04,Phi-3.5,5
+2026-04,Phi-4,13
+2026-04,QwQ,2
+2026-04,Qwen2,17
+2026-04,Qwen2.5,128
+2026-04,Qwen2.5-Omni,4
+2026-04,Qwen3,174
+2026-04,Qwen3-Next,1
+2026-04,Qwen3-Omni,4
+2026-04,Qwen3.5,28
+2026-04,Qwen3.5-Omni,2
+2026-04,RWKV7,1
+2026-04,Sa2VA,1
+2026-04,Seed-2.0,1
+2026-04,SmolLM2,7
+2026-04,SmolLM3,1
+2026-04,SmolVLM2,1
+2026-04,Step3,1
+2026-04,Yi,1
+2026-04,Yi-1.5,1
+2026-04,codet5,1
+2026-04,deepseek-vl2,1
+2026-04,falcon,1
+2026-04,gemini-3-1,2
+2026-04,gemma-2,23
+2026-04,gemma-3,1
+2026-04,gpt-oss,33
+2026-04,grok-1,1
+2026-04,hy3,1
+2026-04,llama-guard-4,1
+2026-04,medgemma-1.5,1
+2026-04,ministral,2
+2026-04,o1,4
+2026-04,o3,9
+2026-04,o4,16
+2026-04,openai.gpt-oss-safeguard,1
+2026-04,opt,1
+2026-04,phi-2,2
+2026-04,plamo-2.1,1
+2026-04,pythia,11
+2026-04,qwen3.6,1
+2026-04,ui-tars-1.5,2
+2026-05,Apertus,2
+2026-05,BFS-Prover-V2,1
+2026-05,Baichuan2,1
+2026-05,Claude 3,6
+2026-05,Claude 3.5,8
+2026-05,Claude 3.7,5
+2026-05,Claude 4,34
+2026-05,Claude 4.5,30
+2026-05,Claude 4.6,65
+2026-05,Claude 4.7,23
+2026-05,Claude 4.8,1
+2026-05,Codestral,1
+2026-05,DeepSeek V4,3
+2026-05,DeepSeek-Prover-V2,2
+2026-05,DeepSeek-R1,36
+2026-05,DeepSeek-R1-Distill-Llama,4
+2026-05,DeepSeek-R1-Distill-Qwen,11
+2026-05,DeepSeek-R1-Zero,1
+2026-05,DeepSeek-V2,2
+2026-05,DeepSeek-V3,14
+2026-05,DeepSeek-V3.1,8
+2026-05,DeepSeek-V3.1-Terminus,1
+2026-05,DeepSeek-V3.2,17
+2026-05,DeepSeek-V4,7
+2026-05,Devstral 2,2
+2026-05,Doubao Seed 1.8,1
+2026-05,Falcon-H1,1
+2026-05,Falcon3,1
+2026-05,Florence-2,3
+2026-05,GLM-4.6,1
+2026-05,GLM-4.7,5
+2026-05,GLM-5,7
+2026-05,GLM-5.1,1
+2026-05,GPT-3,12
+2026-05,GPT-4,29
+2026-05,GPT-4.1,47
+2026-05,GPT-4o,132
+2026-05,GPT-5,148
+2026-05,GPT-5.1-Codex,1
+2026-05,GPT-5.2 Codex,1
+2026-05,GPT-5.3 Codex,2
+2026-05,GPT-5.4,59
+2026-05,GPT-5.5,38
+2026-05,Gemini 1.5,9
+2026-05,Gemini 2.0,8
+2026-05,Gemini 2.5,89
+2026-05,Gemini 3,51
+2026-05,Gemini 3.1,36
+2026-05,Gemini 3.5,2
+2026-05,Gemma 2,4
+2026-05,Gemma 3,45
+2026-05,Gemma 4,16
+2026-05,Gemma 4 E2B,4
+2026-05,Gemma 4 E4B,4
+2026-05,Grok 3,1
+2026-05,Grok 4,3
+2026-05,Grok 4 Fast,1
+2026-05,Grok 4.20,3
+2026-05,Grok-3,2
+2026-05,Kimi K2,7
+2026-05,Kimi K2.5,12
+2026-05,Kimi K2.6,8
+2026-05,LLaDA2.0,5
+2026-05,LLaDA2.1,2
+2026-05,Laguna-XS.2,1
+2026-05,Llama 2,1
+2026-05,Llama 3,56
+2026-05,Llama 3.1,20
+2026-05,Llama 3.2,12
+2026-05,Llama 3.3,19
+2026-05,Llama 4,8
+2026-05,Llama-2,24
+2026-05,Llama-3.1,100
+2026-05,Llama-3.2,31
+2026-05,Llama-4-16E,1
+2026-05,Llama-Guard-3,4
+2026-05,MiMo-V2,2
+2026-05,MiMo-V2.5,2
+2026-05,MiniMax M2,1
+2026-05,Ministral-3,4
+2026-05,Mistral 3,2
+2026-05,Mistral 3.1,2
+2026-05,Mistral 7B,37
+2026-05,Mistral NeMo,1
+2026-05,Mistral-v0.2,1
+2026-05,Mistral-v0.3,2
+2026-05,Mixtral,3
+2026-05,Molmo2,3
+2026-05,Moonlight,3
+2026-05,NVIDIA-Nemotron-3,1
+2026-05,Nemotron 3,6
+2026-05,Nemotron 3 Super,1
+2026-05,OLMo-2,13
+2026-05,Olmo-3,10
+2026-05,Olmo-3.1,1
+2026-05,Ouro,1
+2026-05,Phi-3,3
+2026-05,Phi-3.5,4
+2026-05,Phi-3.5-MoE,2
+2026-05,Phi-4,18
+2026-05,Phi-4-Multimodal,2
+2026-05,QwQ,2
+2026-05,Qwen,1
+2026-05,Qwen2,14
+2026-05,Qwen2.5,222
+2026-05,Qwen2.5-Omni,10
+2026-05,Qwen3,331
+2026-05,Qwen3-Next,5
+2026-05,Qwen3-Omni,6
+2026-05,Qwen3.5,59
+2026-05,RWKV7,2
+2026-05,Seed 1.6,1
+2026-05,Seed-2.0,2
+2026-05,Seed-OSS,1
+2026-05,SenseNova-SI-1.2-InternVL3,1
+2026-05,SmolLM2,7
+2026-05,SmolLM3,1
+2026-05,SmolVLM2,1
+2026-05,ZAYA1,2
+2026-05,Zamba2,1
+2026-05,blip2-opt,1
+2026-05,codet5,4
+2026-05,deepseek-moe,1
+2026-05,gemini-3,2
+2026-05,gemini-3-1,4
+2026-05,gemma-2,47
+2026-05,gemma-3,3
+2026-05,glm-5v,1
+2026-05,gpt-5.2,1
+2026-05,gpt-oss,30
+2026-05,granite-3.3,2
+2026-05,grok-4.3,1
+2026-05,hy-mt2,2
+2026-05,internlm3,1
+2026-05,medgemma-1.5,4
+2026-05,ministral,1
+2026-05,mistral-3.1,1
+2026-05,o1,4
+2026-05,o3,6
+2026-05,o4,6
+2026-05,openai.gpt-oss-safeguard,1
+2026-05,opt,1
+2026-05,phi-2,2
+2026-05,pythia,9
+2026-05,qwen3.6,5
+2026-05,sarvam,1
+2026-05,sarvam-1,1
+2026-05,ui-tars-1.5,1
+2026-06,Apertus,2
+2026-06,Apertus-v1.1,1
+2026-06,Baichuan-M3,1
+2026-06,Baichuan2,1
+2026-06,Claude 3,4
+2026-06,Claude 3.5,5
+2026-06,Claude 4,32
+2026-06,Claude 4.5,23
+2026-06,Claude 4.6,54
+2026-06,Claude 4.7,17
+2026-06,Claude 4.8,11
+2026-06,Claude Fable 5,4
+2026-06,Cosmos-Reason2,1
+2026-06,Cosmos3,4
+2026-06,Cosmos3-Super,1
+2026-06,DeepSeek V4,8
+2026-06,DeepSeek-Prover-V2,5
+2026-06,DeepSeek-R1,24
+2026-06,DeepSeek-R1-Distill-Llama,2
+2026-06,DeepSeek-R1-Distill-Qwen,8
+2026-06,DeepSeek-V2,4
+2026-06,DeepSeek-V3,12
+2026-06,DeepSeek-V3.1,2
+2026-06,DeepSeek-V3.2,16
+2026-06,DeepSeek-V4,11
+2026-06,Devstral 2,1
+2026-06,ERNIE-4.5,1
+2026-06,Falcon-H1,1
+2026-06,Falcon-H1R,1
+2026-06,Falcon3,3
+2026-06,GLM 4.7,2
+2026-06,GLM-4,2
+2026-06,GLM-4.5,1
+2026-06,GLM-4.7,3
+2026-06,GLM-5,5
+2026-06,GLM-5.1,4
+2026-06,GLM-Z1,1
+2026-06,GPT-3,9
+2026-06,GPT-4,24
+2026-06,GPT-4.1,26
+2026-06,GPT-4.5,1
+2026-06,GPT-4o,100
+2026-06,GPT-5,93
+2026-06,GPT-5.2 Codex,2
+2026-06,GPT-5.3 Codex,3
+2026-06,GPT-5.4,44
+2026-06,GPT-5.5,50
+2026-06,Gemini 1.5,1
+2026-06,Gemini 2.0,5
+2026-06,Gemini 2.5,54
+2026-06,Gemini 3,43
+2026-06,Gemini 3.1,29
+2026-06,Gemini 3.5,7
+2026-06,Gemma 2,2
+2026-06,Gemma 3,31
+2026-06,Gemma 4,22
+2026-06,Gemma 4 E2B,4
+2026-06,Gemma 4 E4B,3
+2026-06,Granite 4.1,1
+2026-06,Grok 4,5
+2026-06,Grok 4 Fast,1
+2026-06,Grok 4.1 Fast,1
+2026-06,Keye-2.0,1
+2026-06,Kimi K2,2
+2026-06,Kimi K2.5,4
+2026-06,Kimi K2.6,1
+2026-06,LLaDA2.1,2
+2026-06,Ling-2.0,2
+2026-06,Ling-2.6,1
+2026-06,Llama 2,3
+2026-06,Llama 3,54
+2026-06,Llama 3.1,21
+2026-06,Llama 3.2,3
+2026-06,Llama 3.3,10
+2026-06,Llama 4,12
+2026-06,Llama-2,21
+2026-06,Llama-3.1,63
+2026-06,Llama-3.2,30
+2026-06,Llama-Guard-3,3
+2026-06,Meta-Llama-3,1
+2026-06,MiMo,1
+2026-06,MiMo-V2,1
+2026-06,MiMo-V2.5,1
+2026-06,MiniMax-M2.5,4
+2026-06,MiniMax-M2.7,2
+2026-06,MiniMax-M3,3
+2026-06,Ministral-3,1
+2026-06,Mistral 3,2
+2026-06,Mistral 7B,17
+2026-06,Mistral-v0.1,1
+2026-06,Mistral-v0.3,5
+2026-06,Molmo2,1
+2026-06,NVIDIA-Nemotron-3,1
+2026-06,NVIDIA-Nemotron-3-Super,1
+2026-06,Nemotron 3,5
+2026-06,OLMo,1
+2026-06,OLMo-2,5
+2026-06,OLMoE,2
+2026-06,Olmo-3,7
+2026-06,Phi-3,5
+2026-06,Phi-3.5,2
+2026-06,Phi-3.5-MoE,1
+2026-06,Phi-4,7
+2026-06,Phi-4-Multimodal,1
+2026-06,QwQ,1
+2026-06,Qwen2,14
+2026-06,Qwen2.5,192
+2026-06,Qwen2.5-Omni,7
+2026-06,Qwen3,272
+2026-06,Qwen3-Next,4
+2026-06,Qwen3-Omni,2
+2026-06,Qwen3.5,47
+2026-06,Qwen3.5-Omni,1
+2026-06,Qwen3.7,3
+2026-06,Ring-2.6,1
+2026-06,Seed-2.0,1
+2026-06,Seed-OSS,1
+2026-06,SmolLM2,6
+2026-06,SmolVLM2,1
+2026-06,Step 3.5,1
+2026-06,Yarn-Llama-2,1
+2026-06,Yi,1
+2026-06,Yi-1.5,1
+2026-06,aya-expanse,1
+2026-06,falcon,2
+2026-06,gemini-3,1
+2026-06,gemini-3-1,4
+2026-06,gemini-3.1,1
+2026-06,gemma-2,19
+2026-06,gemma-3,1
+2026-06,glm-4.6v,2
+2026-06,glm-5v,1
+2026-06,gpt-5.2,2
+2026-06,gpt-oss,18
+2026-06,granite-4.0,1
+2026-06,grok-4.3,1
+2026-06,instructblip-vicuna,1
+2026-06,llama-guard-4,1
+2026-06,medgemma,3
+2026-06,medgemma-1.5,2
+2026-06,ministral,1
+2026-06,mistral-3.1,1
+2026-06,o3,9
+2026-06,o4,3
+2026-06,o4-high,1
+2026-06,phi-2,1
+2026-06,pythia,7
+2026-06,pythia-deduped,2
+2026-06,qwen3.6,16
+2026-06,ui-tars-1.5,1
+2026-07,Apertus,2
+2026-07,Claude 3,2
+2026-07,Claude 3.5,8
+2026-07,Claude 3.7,5
+2026-07,Claude 4,15
+2026-07,Claude 4.1,2
+2026-07,Claude 4.5,20
+2026-07,Claude 4.6,26
+2026-07,Claude 4.7,16
+2026-07,Claude 4.8,19
+2026-07,Claude 5,7
+2026-07,Claude Fable 5,7
+2026-07,Cosmos-Reason2,1
+2026-07,Cosmos3,2
+2026-07,DeepSeek V4,10
+2026-07,DeepSeek-2,1
+2026-07,DeepSeek-R1,22
+2026-07,DeepSeek-R1-Distill-Llama,1
+2026-07,DeepSeek-R1-Distill-Qwen,6
+2026-07,DeepSeek-V2,3
+2026-07,DeepSeek-V3,9
+2026-07,DeepSeek-V3.1,6
+2026-07,DeepSeek-V3.2,8
+2026-07,DeepSeek-V4,8
+2026-07,Falcon-H1,1
+2026-07,Florence-2,1
+2026-07,GLM 4.7,2
+2026-07,GLM-4.1V,1
+2026-07,GLM-4.5,1
+2026-07,GLM-4.5-Air,1
+2026-07,GLM-4.7,1
+2026-07,GLM-5,5
+2026-07,GLM-5.1,3
+2026-07,GLM-Z1,1
+2026-07,GPT-3,6
+2026-07,GPT-3.5,1
+2026-07,GPT-4,22
+2026-07,GPT-4.1,27
+2026-07,GPT-4o,98
+2026-07,GPT-5,82
+2026-07,GPT-5.3 Codex,2
+2026-07,GPT-5.4,43
+2026-07,GPT-5.5,45
+2026-07,GPT-5.6 Sol,16
+2026-07,Gemini 1.5,1
+2026-07,Gemini 2.0,9
+2026-07,Gemini 2.5,49
+2026-07,Gemini 3,22
+2026-07,Gemini 3.1,29
+2026-07,Gemini 3.5,7
+2026-07,Gemma 2,3
+2026-07,Gemma 3,34
+2026-07,Gemma 4,22
+2026-07,Gemma 4 E2B,2
+2026-07,Gemma 4 E4B,6
+2026-07,GigaChat3.1-Audio-A1.8B,1
+2026-07,Grok 3,3
+2026-07,Grok 4,2
+2026-07,Grok 4 Fast,1
+2026-07,Grok 4.1 Fast,1
+2026-07,Grok 4.20,1
+2026-07,Grok 4.5,1
+2026-07,Hy-Embodied-VLM-1.0,1
+2026-07,Kimi K2,2
+2026-07,Kimi K2.5,3
+2026-07,Kimi K2.6,2
+2026-07,Kimi K3,1
+2026-07,LFM2,1
+2026-07,LFM2.5,1
+2026-07,LLaDA2.0,1
+2026-07,LLaDA2.1,3
+2026-07,Llama 2,1
+2026-07,Llama 3,39
+2026-07,Llama 3.1,12
+2026-07,Llama 3.2,2
+2026-07,Llama 3.3,18
+2026-07,Llama 4,6
+2026-07,Llama-2,21
+2026-07,Llama-3.1,57
+2026-07,Llama-3.2,43
+2026-07,Llama-4-16E,1
+2026-07,Llama-Guard-3,4
+2026-07,Meta-Llama-3,1
+2026-07,MiMo-V2,1
+2026-07,MiMo-V2.5,2
+2026-07,MiniCPM-V-4.6,1
+2026-07,MiniMax M2,1
+2026-07,MiniMax-M2,2
+2026-07,MiniMax-M2.5,1
+2026-07,MiniMax-M2.7,1
+2026-07,MiniMax-M3,1
+2026-07,Ministral-3,1
+2026-07,Mistral,1
+2026-07,Mistral 3,1
+2026-07,Mistral 4,1
+2026-07,Mistral 7B,19
+2026-07,Mistral-v0.2,1
+2026-07,Mistral-v0.3,1
+2026-07,Molmo2,2
+2026-07,Moonlight,1
+2026-07,Muse Spark 1.1,1
+2026-07,NVIDIA-Nemotron-3-Super,1
+2026-07,Nemotron 3,1
+2026-07,Nemotron 3 Super,2
+2026-07,Nemotron-Labs-Diffusion,1
+2026-07,OLMo,2
+2026-07,OLMo-2,4
+2026-07,Olmo-3,3
+2026-07,Olmo-3.1,1
+2026-07,Ouro,3
+2026-07,Phi-3,2
+2026-07,Phi-3.5,3
+2026-07,Phi-4,6
+2026-07,QwQ,1
+2026-07,Qwen,1
+2026-07,Qwen2,14
+2026-07,Qwen2.5,134
+2026-07,Qwen2.5-Omni,6
+2026-07,Qwen3,206
+2026-07,Qwen3-Next,1
+2026-07,Qwen3-Omni,3
+2026-07,Qwen3.5,57
+2026-07,Qwen3.7,2
+2026-07,RWKV7,1
+2026-07,Ring-2.5,1
+2026-07,Seed-2.0,1
+2026-07,SenseNova-MARS,1
+2026-07,SmolLM2,4
+2026-07,SmolLM3,1
+2026-07,SmolVLM2,1
+2026-07,Solar-Open,1
+2026-07,Solar-Open2,1
+2026-07,Yi,1
+2026-07,Youtu-LLM,1
+2026-07,ZwZ,1
+2026-07,aya-expanse,1
+2026-07,deepseek-moe,1
+2026-07,deepseek-vl2,1
+2026-07,falcon,4
+2026-07,gemini-3,1
+2026-07,gemini-3-1,1
+2026-07,gemma-2,13
+2026-07,gemma-3,4
+2026-07,glm-4.6v,1
+2026-07,gpt-5.6-sol,1
+2026-07,gpt-oss,19
+2026-07,grok-4.3,3
+2026-07,medgemma,1
+2026-07,medgemma-1.5,1
+2026-07,ministral,2
+2026-07,o1,3
+2026-07,o3,11
+2026-07,o4,5
+2026-07,pythia,4
+2026-07,qwen3.6,15
+2026-07,stablelm-2,1
+2026-07,tulu-2,1
+2026-07,ui-tars-1.5,1
+2026-08,Apertus,1
+2026-08,Claude 3,1
+2026-08,Claude 3.5,4
+2026-08,Claude 3.7,5
+2026-08,Claude 4,19
+2026-08,Claude 4.5,22
+2026-08,Claude 4.6,30
+2026-08,Claude 4.7,4
+2026-08,Claude 4.8,14
+2026-08,Claude 5,16
+2026-08,Claude Fable 5,11
+2026-08,Cosmos-Reason2,2
+2026-08,Cosmos3,3
+2026-08,DeepSeek V4,17
+2026-08,DeepSeek-Prover-V2,1
+2026-08,DeepSeek-R1,28
+2026-08,DeepSeek-R1-Distill-Llama,2
+2026-08,DeepSeek-R1-Distill-Qwen,7
+2026-08,DeepSeek-R1-Zero,1
+2026-08,DeepSeek-V2,3
+2026-08,DeepSeek-V3,10
+2026-08,DeepSeek-V3.1,1
+2026-08,DeepSeek-V3.2,7
+2026-08,DeepSeek-V4,14
+2026-08,Falcon3,1
+2026-08,Florence-2,3
+2026-08,GLM-4,5
+2026-08,GLM-4.1V,1
+2026-08,GLM-4.5V,1
+2026-08,GLM-4.7,6
+2026-08,GLM-5,12
+2026-08,GLM-5.1,2
+2026-08,GLM-5.3,1
+2026-08,GPT-3,11
+2026-08,GPT-4,19
+2026-08,GPT-4.1,29
+2026-08,GPT-4o,95
+2026-08,GPT-5,103
+2026-08,GPT-5.3 Codex,1
+2026-08,GPT-5.4,60
+2026-08,GPT-5.5,53
+2026-08,GPT-5.6 Luna,5
+2026-08,GPT-5.6 Sol,29
+2026-08,GPT-5.6 Terra,3
+2026-08,Gemini 1.5,1
+2026-08,Gemini 2.0,5
+2026-08,Gemini 2.5,61
+2026-08,Gemini 3,32
+2026-08,Gemini 3.1,24
+2026-08,Gemini 3.5,8
+2026-08,Gemini 3.6,5
+2026-08,Gemini 3.7,2
+2026-08,Gemma 2,3
+2026-08,Gemma 3,30
+2026-08,Gemma 4,37
+2026-08,Gemma 4 E2B,5
+2026-08,Gemma 4 E4B,6
+2026-08,Granite 4.1,1
+2026-08,Grok 3,2
+2026-08,Grok 4,1
+2026-08,Grok 4.1 Fast,1
+2026-08,Grok 4.5,2
+2026-08,Intern-S1,1
+2026-08,Intern-S2,2
+2026-08,Intern-S2-Mobius,1
+2026-08,K-EXAONE-2.0,1
+2026-08,Kimi K2,3
+2026-08,Kimi K2.5,4
+2026-08,Kimi K2.6,5
+2026-08,Kimi K3,9
+2026-08,LFM2.5,2
+2026-08,LLaDA2.0,4
+2026-08,LLaDA2.1,2
+2026-08,Llama 2,2
+2026-08,Llama 3,52
+2026-08,Llama 3.1,28
+2026-08,Llama 3.2,5
+2026-08,Llama 3.3,20
+2026-08,Llama 4,3
+2026-08,Llama-2,22
+2026-08,Llama-3.1,67
+2026-08,Llama-3.2,29
+2026-08,Llama-Guard-3,3
+2026-08,LocateAnything,1
+2026-08,LongCat-2.0,2
+2026-08,Meta-Llama-3,1
+2026-08,MiniCPM4.1,1
+2026-08,MiniMax M2,1
+2026-08,MiniMax-M2.5,4
+2026-08,MiniMax-M2.7,1
+2026-08,Mistral 3,2
+2026-08,Mistral 4,1
+2026-08,Mistral 7B,30
+2026-08,Mistral-v0.3,11
+2026-08,Mixtral,2
+2026-08,Molmo2-ER,1
+2026-08,Motif-3,1
+2026-08,NVIDIA-Nemotron-3,1
+2026-08,Nemotron 3,3
+2026-08,Nex-N2,2
+2026-08,OLMo-2,7
+2026-08,OLMoE,1
+2026-08,Olmo-3,8
+2026-08,Phi-3,4
+2026-08,Phi-3.5,7
+2026-08,Phi-4,10
+2026-08,Pixtral,3
+2026-08,QwQ,3
+2026-08,Qwen,2
+2026-08,Qwen2,26
+2026-08,Qwen2.5,199
+2026-08,Qwen2.5-Omni,11
+2026-08,Qwen3,309
+2026-08,Qwen3-Next,2
+2026-08,Qwen3-Omni,8
+2026-08,Qwen3.5,80
+2026-08,Qwen3.7,6
+2026-08,Qwen3.8-Next,1
+2026-08,RWKV7,1
+2026-08,Sa2VA,1
+2026-08,SmolLM2,5
+2026-08,SmolLM3,2
+2026-08,SmolVLM2,1
+2026-08,Step 3.7,1
+2026-08,TinySwallow,1
+2026-08,UI-Mate,1
+2026-08,UI-Venus-2,1
+2026-08,aya-23,1
+2026-08,aya-expanse,2
+2026-08,codet5,2
+2026-08,deepseek,1
+2026-08,deepseek-moe,1
+2026-08,falcon,2
+2026-08,gemini-3,1
+2026-08,gemini-3-1,5
+2026-08,gemma-2,19
+2026-08,gemma-3,1
+2026-08,gpt-5.6-sol,2
+2026-08,gpt-oss,35
+2026-08,granite-4.0-micro,1
+2026-08,grok-4.3,1
+2026-08,hy-mt2,1
+2026-08,medgemma,3
+2026-08,medgemma-1.5,1
+2026-08,ministral,1
+2026-08,mt0-xl,1
+2026-08,nemotron-3-omni,1
+2026-08,o1,2
+2026-08,o3,6
+2026-08,o4,8
+2026-08,opt,2
+2026-08,pythia,9
+2026-08,qwen3.6,29
+2026-08,qwen3.8,6
+2026-08,sarvam,2
+2026-08,sarvam-1,1
+2026-08,ui-tars-1.5,1
+2026-09,Claude 3,6
+2026-09,Claude 3.5,5
+2026-09,Claude 3.7,1
+2026-09,Claude 4,23
+2026-09,Claude 4.5,16
+2026-09,Claude 4.6,40
+2026-09,Claude 4.7,12
+2026-09,Claude 4.8,12
+2026-09,Claude 5,32
+2026-09,Claude Fable 5,4
+2026-09,Claude Mythos 5,1
+2026-09,Cosmos-Reason2,2
+2026-09,Cosmos3,10
+2026-09,Cosmos3-Super,2
+2026-09,DeepSeek V4,29
+2026-09,DeepSeek-Prover-V2,1
+2026-09,DeepSeek-R1,17
+2026-09,DeepSeek-R1-Distill-Llama,5
+2026-09,DeepSeek-R1-Distill-Qwen,7
+2026-09,DeepSeek-R1-Qwen3,1
+2026-09,DeepSeek-V2,3
+2026-09,DeepSeek-V3,10
+2026-09,DeepSeek-V3.1,5
+2026-09,DeepSeek-V3.2,15
+2026-09,DeepSeek-V4,21
+2026-09,Doubao-Seed-2.0,1
+2026-09,Fable 5.1,3
+2026-09,Falcon-H1,1
+2026-09,FastVLM,2
+2026-09,Florence-2,2
+2026-09,GLM 4.7,4
+2026-09,GLM-4,4
+2026-09,GLM-4.5,2
+2026-09,GLM-4.5-Air,1
+2026-09,GLM-4.6,1
+2026-09,GLM-5,15
+2026-09,GLM-5.1,3
+2026-09,GLM-5.3,6
+2026-09,GPT-3,8
+2026-09,GPT-4,23
+2026-09,GPT-4.1,34
+2026-09,GPT-4.5,1
+2026-09,GPT-4o,80
+2026-09,GPT-5,104
+2026-09,GPT-5.1-Codex,1
+2026-09,GPT-5.2 Codex,1
+2026-09,GPT-5.3 Codex,1
+2026-09,GPT-5.4,53
+2026-09,GPT-5.5,60
+2026-09,GPT-5.6 Luna,15
+2026-09,GPT-5.6 Sol,44
+2026-09,GPT-5.6 Terra,3
+2026-09,GPT-6 Astra,37
+2026-09,Gemini 1.5,3
+2026-09,Gemini 2.0,5
+2026-09,Gemini 2.5,40
+2026-09,Gemini 3,24
+2026-09,Gemini 3.1,39
+2026-09,Gemini 3.5,9
+2026-09,Gemini 3.6,5
+2026-09,Gemini 3.7,5
+2026-09,Gemini 3.8,11
+2026-09,Gemma 2,5
+2026-09,Gemma 3,51
+2026-09,Gemma 4,36
+2026-09,Gemma 4 E2B,2
+2026-09,Gemma 4 E4B,12
+2026-09,Grok 3,1
+2026-09,Grok 4,2
+2026-09,Grok 4 Fast,1
+2026-09,Grok 4.5,1
+2026-09,Grok 4.6,3
+2026-09,K2-Horizon,2
+2026-09,K2-V2,1
+2026-09,Kimi K2,2
+2026-09,Kimi K2.5,5
+2026-09,Kimi K2.6,8
+2026-09,Kimi K2.7,1
+2026-09,Kimi K3,10
+2026-09,Kimi-Linear,1
+2026-09,LLaDA2.0,2
+2026-09,Ling-2.0,1
+2026-09,Llama 3,53
+2026-09,Llama 3.1,29
+2026-09,Llama 3.2,6
+2026-09,Llama 3.3,20
+2026-09,Llama 4,4
+2026-09,Llama-2,29
+2026-09,Llama-3.1,85
+2026-09,Llama-3.2,40
+2026-09,Llama-Guard-3,2
+2026-09,Meta-Llama-3,1
+2026-09,MiMo,1
+2026-09,MiMo-RL,1
+2026-09,MiMo-V2,1
+2026-09,MiMo-V2.5,3
+2026-09,MiniCPM-V-4.6,1
+2026-09,MiniCPM4,1
+2026-09,MiniCPM5,2
+2026-09,MiniMax-M2.5,4
+2026-09,MiniMax-M2.7,3
+2026-09,MiniMax-M3,3
+2026-09,Ministral-3,5
+2026-09,Mistral,2
+2026-09,Mistral 3,1
+2026-09,Mistral 4,1
+2026-09,Mistral 7B,33
+2026-09,Mistral-v0.3,6
+2026-09,Mixtral,1
+2026-09,Mixtral-v0.1,1
+2026-09,Molmo2,1
+2026-09,Moonlight,3
+2026-09,Muse Spark 1.1,1
+2026-09,Muse-Glimmer,1
+2026-09,NVIDIA-Nemotron-3,2
+2026-09,Nemotron 3,9
+2026-09,OLMo-2,11
+2026-09,Olmo-3,9
+2026-09,Olmo-Hybrid,1
+2026-09,Ouro,5
+2026-09,Phi-3,5
+2026-09,Phi-3.5,6
+2026-09,Phi-4,12
+2026-09,QwQ,4
+2026-09,Qwen2,15
+2026-09,Qwen2.5,257
+2026-09,Qwen2.5-Omni,16
+2026-09,Qwen3,468
+2026-09,Qwen3-Next,1
+2026-09,Qwen3-Omni,13
+2026-09,Qwen3.5,121
+2026-09,Qwen3.7,5
+2026-09,Qwen3.8-Next,2
+2026-09,RWKV7,1
+2026-09,Sa2VA,1
+2026-09,Seed 1.6,1
+2026-09,Seed-2.0,1
+2026-09,SmolLM2,9
+2026-09,SmolLM3,7
+2026-09,SmolVLM2,1
+2026-09,Yi-1.5,1
+2026-09,Zamba2,1
+2026-09,aya-23,1
+2026-09,aya-expanse,1
+2026-09,aya-l2-thinker,1
+2026-09,claude-5-5,2
+2026-09,claude-fable-5-1,5
+2026-09,cosmo,1
+2026-09,deepseek-v4.1,5
+2026-09,deepseek-vl2,1
+2026-09,diffusiongemma,1
+2026-09,falcon,1
+2026-09,gemini-3,1
+2026-09,gemini-3-1,2
+2026-09,gemma-2,32
+2026-09,gemma-3,1
+2026-09,geochat,1
+2026-09,gpt-6-luna,2
+2026-09,gpt-oss,27
+2026-09,granite-3.1,1
+2026-09,granite-4.1,1
+2026-09,grok-4.3,3
+2026-09,hy4,1
+2026-09,medgemma-1.5,1
+2026-09,mercury-2,1
+2026-09,mimo-v2.6,1
+2026-09,ministral,5
+2026-09,mistral-3.1,1
+2026-09,mistral-3.2,1
+2026-09,o1,2
+2026-09,o4,2
+2026-09,opt,3
+2026-09,phi-2,5
+2026-09,pythia,15
+2026-09,qwen3.6,45
+2026-09,qwen3.8,24
+2026-09,qwen3.8-omni,1
+2026-09,rwkv-4-raven,1
+2026-09,sarvam,1
+2026-09,stablelm-2,2
+2026-09,ui-tars-1.5,1
+2026-09,z-ai-glm-5-3,5
+2026-10,BitCPM-CANN,1
+2026-10,Claude 3,1
+2026-10,Claude 3.5,10
+2026-10,Claude 4,29
+2026-10,Claude 4.5,29
+2026-10,Claude 4.6,30
+2026-10,Claude 4.7,7
+2026-10,Claude 4.8,31
+2026-10,Claude 5,40
+2026-10,Claude 5.5,4
+2026-10,Claude Fable 5,7
+2026-10,Cosmos3,8
+2026-10,Cosmos3-Super,1
+2026-10,DeepSeek V4,32
+2026-10,DeepSeek V4.1,1
+2026-10,DeepSeek-Prover-V2,3
+2026-10,DeepSeek-R1,20
+2026-10,DeepSeek-R1-Distill-Llama,5
+2026-10,DeepSeek-R1-Distill-Qwen,9
+2026-10,DeepSeek-R1-Qwen3,1
+2026-10,DeepSeek-V2,5
+2026-10,DeepSeek-V3,10
+2026-10,DeepSeek-V3.1,2
+2026-10,DeepSeek-V3.2,15
+2026-10,DeepSeek-V4,21
+2026-10,Doubao-Seed-1.6,1
+2026-10,ERNIE-4.5,1
+2026-10,Fable 5.1,3
+2026-10,Falcon-E,1
+2026-10,Falcon-H1R,1
+2026-10,Florence-2,1
+2026-10,GLM 4.7,1
+2026-10,GLM-4,2
+2026-10,GLM-4.5,1
+2026-10,GLM-4.5-Air,4
+2026-10,GLM-4.7,3
+2026-10,GLM-5,21
+2026-10,GLM-5.1,3
+2026-10,GLM-5.3,18
+2026-10,GLM-Z1,1
+2026-10,GPT-3,7
+2026-10,GPT-4,14
+2026-10,GPT-4.1,37
+2026-10,GPT-4o,99
+2026-10,GPT-5,71
+2026-10,GPT-5.1-Codex,1
+2026-10,GPT-5.3 Codex,2
+2026-10,GPT-5.4,68
+2026-10,GPT-5.5,53
+2026-10,GPT-5.6 Luna,12
+2026-10,GPT-5.6 Sol,64
+2026-10,GPT-5.6 Terra,8
+2026-10,GPT-6 Astra,84
+2026-10,GPT-6.1 Sol,10
+2026-10,Gemini 1.5,1
+2026-10,Gemini 2.0,7
+2026-10,Gemini 2.5,36
+2026-10,Gemini 3,22
+2026-10,Gemini 3.1,38
+2026-10,Gemini 3.5,15
+2026-10,Gemini 3.6,4
+2026-10,Gemini 3.7,10
+2026-10,Gemini 3.8,20
+2026-10,Gemini 4 Argon,6
+2026-10,Gemma 2,3
+2026-10,Gemma 3,51
+2026-10,Gemma 4,58
+2026-10,Gemma 4 E2B,3
+2026-10,Gemma 4 E4B,15
+2026-10,Granite 4.1,1
+2026-10,Grok 3,2
+2026-10,Grok 4,2
+2026-10,Grok 4.1 Fast,1
+2026-10,Grok 4.5,2
+2026-10,Grok 4.6,2
+2026-10,Grok 4.7,3
+2026-10,Hy-Memory,1
+2026-10,Kimi K2,3
+2026-10,Kimi K2.5,4
+2026-10,Kimi K2.6,7
+2026-10,Kimi K2.7,2
+2026-10,Kimi K3,24
+2026-10,LFM2.5,1
+2026-10,LLaDA2.0,2
+2026-10,LLaDA2.1,3
+2026-10,Llama 2,1
+2026-10,Llama 3,62
+2026-10,Llama 3.1,40
+2026-10,Llama 3.2,12
+2026-10,Llama 3.3,21
+2026-10,Llama 4,8
+2026-10,Llama-2,25
+2026-10,Llama-3.1,98
+2026-10,Llama-3.2,47
+2026-10,Llama-Guard-3,3
+2026-10,LongCat-2.0,1
+2026-10,MiniCPM5,1
+2026-10,MiniMax-M2,1
+2026-10,MiniMax-M2.5,2
+2026-10,MiniMax-M2.7,2
+2026-10,MiniMax-M3,4
+2026-10,Ministral-3,7
+2026-10,Mistral 4,2
+2026-10,Mistral 7B,30
+2026-10,Mistral-v0.2,1
+2026-10,Mistral-v0.3,4
+2026-10,Mixtral,5
+2026-10,Molmo2,2
+2026-10,Moonlight,1
+2026-10,Muse-Glimmer,4
+2026-10,NVIDIA-Nemotron-3,1
+2026-10,NVIDIA-Nemotron-3.5-Lightning,1
+2026-10,Nemotron 3,7
+2026-10,Nemotron 3 Super,2
+2026-10,Nemotron 3.5 Lightning,1
+2026-10,OLMo,1
+2026-10,OLMo-2,23
+2026-10,Olmo-3,29
+2026-10,Olmo-3-DPO,1
+2026-10,Olmo-3.1,1
+2026-10,Ouro,10
+2026-10,Phi-3,5
+2026-10,Phi-3.5,5
+2026-10,Phi-3.5-MoE,1
+2026-10,Phi-4,15
+2026-10,Phi-4-Multimodal,1
+2026-10,QwQ,1
+2026-10,Qwen2,26
+2026-10,Qwen2.5,263
+2026-10,Qwen2.5-Omni,14
+2026-10,Qwen3,555
+2026-10,Qwen3-Next,1
+2026-10,Qwen3-Omni,11
+2026-10,Qwen3.5,186
+2026-10,Qwen3.5-Omni,1
+2026-10,Qwen3.7,3
+2026-10,Qwen3.8-Next,11
+2026-10,RWKV7,1
+2026-10,Sa2VA,1
+2026-10,Seed 1.6,1
+2026-10,Seed-2.0,2
+2026-10,Shieldstral-1.0,1
+2026-10,SmolLM2,10
+2026-10,SmolLM3,7
+2026-10,SmolVLM2,1
+2026-10,UI-Venus-2,1
+2026-10,UI-Venus-Ground,1
+2026-10,anthropic.claude-5-5,5
+2026-10,aya-expanse,1
+2026-10,claude-5-5,32
+2026-10,claude-fable-5-1,6
+2026-10,codet5,1
+2026-10,deepseek-llm,1
+2026-10,deepseek-moe,1
+2026-10,deepseek-v4.1,16
+2026-10,dots3-note-prev,1
+2026-10,gemini-3,2
+2026-10,gemini-3-1,5
+2026-10,gemma-2,26
+2026-10,gemma-3,1
+2026-10,glm-4.6v,1
+2026-10,gpt-6-astra,1
+2026-10,gpt-6-luna,16
+2026-10,gpt-6-sol,12
+2026-10,gpt-oss,28
+2026-10,granite-3.3,2
+2026-10,granite-4.0-h,1
+2026-10,granite-4.2,3
+2026-10,grok-4.3,1
+2026-10,hy-mt2,1
+2026-10,hy4,1
+2026-10,llama-guard-4,1
+2026-10,medgemma,1
+2026-10,medgemma-1.5,1
+2026-10,mimo-v2.6,1
+2026-10,ministral,2
+2026-10,mistral-3.2,1
+2026-10,muse-spark-1.3,1
+2026-10,nemotron-3.5-super,2
+2026-10,o1,3
+2026-10,o3,3
+2026-10,o4,5
+2026-10,o4-high,1
+2026-10,openai.gpt-oss-safeguard,1
+2026-10,opt,1
+2026-10,pythia,7
+2026-10,qwen3.6,47
+2026-10,qwen3.8,59
+2026-10,qwen3.8-omni,1
+2026-10,sarvam-1,1
+2026-10,ui-tars-1.5,1
+2026-10,z-ai-glm-5-3,10

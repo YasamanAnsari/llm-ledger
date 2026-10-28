@@ -25,6 +25,7 @@ we keep only facts (identifiers, timestamps) and the URL they came from.
 | Epoch AI ECI | `https://epoch.ai/data/eci_scores.csv` (`pull_capability.py`) | ECI score and interval, Epoch's release date, accessibility group | `llm_ledger_capability.csv` only, never core | CC BY 4.0, credited in the README. Artificial Analysis is not used: its terms allow personal, noncommercial use only and forbid redistribution |
 | ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | second lower bound beside the Hub `createdAt`; never verifies a release without a stated date or a Wayback capture (no token) | ModelScope site terms; public search API, repo metadata only |
 | arXiv | export API | paper v1 date, title | lookup tool for `paper_published`; the daily sweep (`pull_arxiv.py`, no argument) searches titles of families with no paper, 40 a day at one request per 3 s, and queues `paper_lead` rows | descriptive metadata is CC0 1.0 (arXiv API terms of use) |
+| arXiv OAI-PMH | `https://oaipmh.arxiv.org/oai`, `arXivRaw`, sets cs.AI, cs.CL, cs.CV, cs.LG, stat.ML (`pull_research_mentions.py`) | latest version's title, abstract and date | `research_mentions.csv` (models and families named); never an event | metadata CC0 1.0; one request per 3 s, honouring `Retry-After` |
 
 Pullers with no key just skip. No fake rows. Every machine claim a row
 rests on is kept in `data/core/claims.csv`.
