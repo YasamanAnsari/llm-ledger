@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1834; events: 2831
-- Models: curated 55, corroborated 666, single-source 1113
-- Event confidence: verified 1121, inferred 1704, disputed 6
+- Models: 1834; events: 2832
+- Models: curated 55, corroborated 667, single-source 1112
+- Event confidence: verified 1122, inferred 1704, disputed 6
 - Open-weight models with no `license_family` (license tag missing or `other`): 422 of 1599
 
 ## By organization
@@ -31,7 +31,7 @@ as settled.
 | Ant Group | 50 | 60 | 0 | 25 | 25 | 43% |
 | Shanghai AI Lab | 49 | 49 | 0 | 12 | 37 | 24% |
 | TII | 49 | 49 | 0 | 4 | 45 | 8% |
-| DeepSeek | 45 | 101 | 3 | 24 | 18 | 52% |
+| DeepSeek | 45 | 102 | 3 | 25 | 17 | 53% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | Marin | 39 | 39 | 0 | 0 | 39 | 0% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
@@ -100,7 +100,7 @@ as settled.
 |---|---|---|---|---|
 | weights_released | 1583 | 400 | 1182 | 1 |
 | platform_availability | 337 | 332 | 3 | 2 |
-| retired | 306 | 178 | 128 | 0 |
+| retired | 307 | 179 | 128 | 0 |
 | api_ga | 252 | 62 | 189 | 1 |
 | announced | 241 | 51 | 189 | 1 |
 | consumer_rollout | 31 | 23 | 8 | 0 |

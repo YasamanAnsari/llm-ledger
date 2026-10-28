@@ -699,6 +699,7 @@ deepseek-v4-1-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/
 deepseek-v4-1-flash-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash,hf_hub,2026-09-10,day,hub repo created,true,false,,2026-09-11
 deepseek-v4-1-flash-weights_released-1,https://models.dev/api.json,api_metadata,2026-09-10,day,models.dev (majority),false,false,,2026-09-10
 deepseek-v4-1-flash-weights_released-1,https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash,modelscope,2026-09-10,day,modelscope repo created,true,false,,2026-09-11
+deepseek-v4-flash-0731-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-12-03,day,azure_lifecycle (DeepSeek-V4-Flash-0731-2026-07-31),false,true,,2026-10-27
 deepseek-v4-flash-0731-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731,hf_hub,2026-07-31,day,hub repo created,true,false,,2026-10-27
 deepseek-v4-flash-0731-weights_released-1,https://modelscope.cn/models/deepseek-ai/DeepSeek-V4-Flash-0731,modelscope,2026-07-31,day,modelscope repo created,true,false,,2026-10-27
 deepseek-v4-flash-dspark-weights_released-1,https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-DSpark,hf_hub,2026-06-27,day,hub repo created,true,false,,2026-09-01
@@ -706,7 +707,7 @@ deepseek-v4-flash-dspark-weights_released-1,https://modelscope.cn/models/deepsee
 deepseek-v4-flash-dspark-weights_released-1,https://web.archive.org/web/20260627/https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-DSpark,wayback,2026-06-27,day,first public capture,true,false,,2026-09-06
 deepseek-v4-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-24,day,openrouter,false,true,,2026-09-01
 deepseek-v4-flash-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-02-20,day,azure_lifecycle (DeepSeek-V4-Flash-2026-04-23),false,true,,2026-09-01
-deepseek-v4-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-20,day,"litellm (azure_ai/DeepSeek-V4-Flash-0731, azure_ai/deepseek-v4-flash)",false,false,,2026-09-01
+deepseek-v4-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-02-20,day,litellm (azure_ai/deepseek-v4-flash),false,false,,2026-09-01
 deepseek-v4-flash-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-09-29,day,litellm (together_ai/deepseek-ai/DeepSeek-V4-Flash-0731),false,false,2026-10-10,2026-09-18
 deepseek-v4-flash-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-22,day,litellm (together_ai/deepseek-ai/DeepSeek-V4-Flash-0731),false,false,,2026-10-10
 deepseek-v4-flash-retired-3,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-09-25,day,"litellm (fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731, fireworks_ai/deepseek-v4-flash-0731)",false,false,,2026-09-24

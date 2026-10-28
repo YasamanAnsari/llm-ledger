@@ -97,3 +97,20 @@ def test_id_shared_by_a_model_and_its_snapshot_resolves_by_name():
     rows = {"azure_lifecycle": [_row("azure_lifecycle", "gpt-4o-2024-05-13", "azure", "2026-03-31")]}
     outcomes = load(rows, t, TODAY, NOW)
     assert outcomes["added"] == 1 and t["events"][0]["model_id"] == "gpt-4o"
+
+
+def test_the_schedules_one_named_replacement_for_the_last_version_is_kept():
+    t = _tables()
+    t["models"] += [_model("gpt-5-1", "openai"), _model("gpt-5-6-sol", "openai"),
+                    _model("grok-3", "xai"), _model("grok-4", "xai")]
+
+    def azure(ref, retire, replacement):
+        return _row("azure_lifecycle", ref, "azure", retire) | {"replacement": replacement}
+    rows = {"azure_lifecycle": [
+        azure("gpt-4o-2024-05-13", "2026-03-31", "gpt-5.6-sol"),
+        azure("gpt-4o-2024-11-20", "2026-06-30", "gpt-5.1 (Standard)"),   # retires last
+        azure("grok-3", "2026-05-01", "grok-4, gpt-5.1"),                  # several: none kept
+    ]}
+    load(rows, t, TODAY, NOW)
+    assert {e["model_id"]: e["replacement_model_id"] for e in t["events"]} == {
+        "gpt-4o": "gpt-5-1", "grok-3": ""}

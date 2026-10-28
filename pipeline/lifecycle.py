@@ -139,6 +139,22 @@ def _platform_for(row: dict, developer_org: str) -> str | None:
 SOURCES = ("azure_lifecycle", "bedrock_lifecycle", "litellm")
 
 
+def _replacement(by_source: dict, models_by_id: dict, xw_index: dict) -> str:
+    """The ledger model a schedule names as the replacement for the version
+    that retires last; "" when it names none, several ("fp8, bf16"), or one
+    that resolves to no model or ambiguously."""
+    named = set()
+    for entries in by_source.values():
+        last = max(e[0] for e in entries)
+        named |= {row.get("replacement", "") for when, _, row in entries if when == last}
+    named.discard("")
+    if len(named) != 1 or "," in next(iter(named)):
+        return ""
+    ref = re.sub(r"\s*\(.*?\)", "", named.pop())  # "(Foundry Managed Compute)"
+    model_id, conflict = _resolve(ref, models_by_id, xw_index)
+    return "" if conflict else model_id
+
+
 def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
     """Upsert `retired` events into `tables` (mutated in place) from the
     normalized lifecycle rows of each source; `now` stamps record_updated
@@ -202,6 +218,11 @@ def load(rows_by_source: dict, tables: dict, today: date, now: str) -> Counter:
             if row["detail"] != detail:
                 row["detail"] = detail
                 touched.add(model_id)
+        replacement = _replacement(by_source, models_by_id, xw_index)
+        if row is not None and outcome != "skipped" and replacement not in ("", model_id) \
+                and row["replacement_model_id"] != replacement:
+            row["replacement_model_id"] = replacement
+            touched.add(model_id)
 
     schema.mark_updated(models_by_id, touched, now)
     tables["claims"] = flatten_claims(claims_by_event)

@@ -134,6 +134,16 @@ Data corrections update rows in place; this file preserves the history.
   moving together on 2026-10-20/21, which reads as currency conversion
   or newly listed cached prices in the catalog rather than a price the
   vendor announced.
+- Retirements carry their replacement. `pull_lifecycle.py` now keeps the
+  Azure schedule's `Replacement` column, and `lifecycle.py` writes it to
+  `replacement_model_id` when it names exactly one ledger model for the
+  version that retires last: 14 Azure `retired` rows (o1, o3, o3-pro and
+  o1-pro to GPT-5.6 Sol; o3-mini and o4-mini to GPT-5.6 Terra; GPT-4o to
+  GPT-5.1; Grok 3 to Grok 4; DeepSeek R1 to V4 Pro). The agent's page
+  extractor asks for the named replacement on deprecation and retirement
+  events and keeps it only when it resolves to a ledger model.
+- `build.py` queues `predecessor_lead` review rows from family version
+  order (115 today); `predecessor_id` stays a person's call.
 
 ## 2026-10-14
 

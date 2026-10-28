@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import schema
 from build import (LATEST_COLUMNS, _agent_section, build_reschedule_rows, compute_derived,
-                   latest_first, latest_pull_date)
+                   latest_first, latest_pull_date, predecessor_review_rows)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -243,3 +243,21 @@ def test_data_as_of_is_the_newest_pull_that_stored_a_payload() -> None:
         assert latest_pull_date() == "2026-10-02"
     finally:
         schema.RAW_DIR = saved
+
+
+def test_predecessor_leads_follow_family_versions_within_one_name_shape() -> None:
+    def model(model_id: str, family: str, day: str, predecessor: str = "") -> dict:
+        return {"model_id": model_id, "family": family, "developer_org_id": "zai",
+                "first_public_availability_date": day, "predecessor_id": predecessor,
+                "successor_id": ""}
+    models = [
+        model("glm-4-6", "GLM-4.6", "2025-09-30"),
+        model("glm-4-7", "GLM-4.7", "2025-12-22"),
+        model("glm-5", "GLM-5", "2026-02-11", predecessor="glm-4-5"),
+        model("glm-4-6-flash", "GLM-4.6", "2025-10-01"),
+        model("glm-4-7-flash", "GLM-4.7", "2025-09-01"),     # dates run backwards
+        model("bloomz-1b1", "bloomz-1b1", "2022-10-08"),     # "1b1" is a size
+        model("bloomz-1b7", "bloomz-1b7", "2022-10-08"),
+    ]
+    assert [(r["left_key"], r["right_key"]) for r in predecessor_review_rows(models)] == [
+        ("glm-4-7", "glm-4-6")]

@@ -597,6 +597,58 @@ def long_gap_review_rows(models: list) -> list:
         and m["first_availability_confidence"] != "verified"]
 
 
+_VERSIONED_FAMILY = re.compile(r"^(.*?[a-z])-?(\d+(?:-\d+)*)$")  # "qwen3-5" -> qwen, 3-5
+_SIZE_END = re.compile(r"\d+[bmk]$")  # "bloomz-1b7": the trailing number is a size
+
+
+def predecessor_review_rows(models: list) -> list:
+    """Predecessor leads from `family` version order, for a person to accept.
+
+    Models of one developer whose family is a stem plus a version
+    ("GLM-4.6", "GLM-4.7") and whose ids carry the same rest after the
+    family ("-flash", "-8b-instruct") form a line; each model's lead is
+    the one model at the next lower version. No lead when that version
+    holds several models, the newer model already has a predecessor, the
+    older one a different successor, or the dates run backwards (GPT-4.5
+    shipped before GPT-4.1).
+    """
+    lines: dict = {}
+    for m in models:
+        family = re.sub(r"[^a-z0-9]+", "-", m["family"].lower()).strip("-")
+        hit = _VERSIONED_FAMILY.match(family)
+        if not hit or _SIZE_END.search(hit.group(1)) or not m["model_id"].startswith(family):
+            continue
+        rest = m["model_id"][len(family):]
+        if rest and not rest.startswith("-"):
+            continue
+        version = tuple(int(n) for n in hit.group(2).split("-"))
+        line = lines.setdefault((m["developer_org_id"], hit.group(1), rest), {})
+        line.setdefault(version, []).append(m)
+    rows = []
+    for line in lines.values():
+        versions = sorted(line)
+        for lower, higher in zip(versions, versions[1:]):
+            if len(line[lower]) != 1:
+                continue
+            old = line[lower][0]
+            for new in line[higher]:
+                if new["predecessor_id"] or old["successor_id"] not in ("", new["model_id"]):
+                    continue
+                old_day, new_day = (old["first_public_availability_date"],
+                                    new["first_public_availability_date"])
+                if old_day and new_day and new_day < old_day:
+                    continue
+                rows.append({
+                    "kind": "predecessor_lead", "left_source": "ledger",
+                    "left_key": new["model_id"], "right_source": "ledger",
+                    "right_key": old["model_id"], "score": "",
+                    "note": (f"{old['family']} ({old_day or 'undated'}) -> "
+                             f"{new['family']} ({new_day or 'undated'}); set predecessor_id "
+                             "/ successor_id in models.csv, or reject"),
+                })
+    return sorted(rows, key=lambda r: r["left_key"])
+
+
 def stamp_observed(rows: list, today: str) -> int:
     """Give rows written without an `observed_on` (hand edits, agent merges)
     the day the ledger first saw them: today. Returns how many were stamped."""
@@ -618,6 +670,9 @@ def main() -> int:
     gaps = long_gap_review_rows(models)
     schema.merge_review_queue(gaps, replace_kinds=("long_announce_gap",))
     print(f"build: {len(gaps)} long announce-to-availability gap(s) queued for review")
+    leads = predecessor_review_rows(models)
+    schema.merge_review_queue(leads, replace_kinds=("predecessor_lead",))
+    print(f"build: {len(leads)} predecessor lead(s) queued for review")
 
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
     for filename, regenerate in GENERATED_ARTIFACTS:

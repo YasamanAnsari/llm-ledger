@@ -126,7 +126,7 @@ never rewrite its `family`, `variant_role` or `access_type`
 | `verified_date` | date | required when `confidence=verified` |
 | `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
 | `observed_on` | ISO date | REQUIRED; the day the ledger first recorded this event (the pull, feed read or edit that added it), not the day the event happened. Kept when the row is re-assessed or re-dated |
-| `replacement_model_id` | FK nullable | the model the vendor tells users to move to; only on `deprecation_announced` and `retired`, never the model itself |
+| `replacement_model_id` | FK nullable | the model the vendor tells users to move to; only on `deprecation_announced` and `retired`, never the model itself. Machine-filled from the Azure schedule's `Replacement` column (one named model for the version that retires last; a list such as "fp8, bf16" is left blank) and from vendor deprecation pages the agent reads |
 
 `date` says when something happened; `observed_on` says when the ledger
 knew. The gap between them is how late a release was noticed, and
@@ -413,8 +413,13 @@ rewrite the dataset.
   `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
   `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
   `hf_unmapped_namespace`, `catalog_unmapped_vendor`, `vendor_alias_group`, `nhlocal_lead`,
-  `lifecycle_ambiguous`, `long_announce_gap`, ...),
+  `lifecycle_ambiguous`, `long_announce_gap`, `predecessor_lead`, ...),
   the two keys involved, a score and a note. Rewritten by every run.
+  A `predecessor_lead` (build.py) pairs a model with the one model at the
+  next lower version of its family, same developer and same rest of the
+  id (`glm-4-6` before `glm-4-7`, `gemini-3-flash` before
+  `gemini-3-5-flash`); a person sets `predecessor_id` / `successor_id` or
+  rejects it. Nothing writes these columns automatically.
 - `data/staging/review_decisions.csv` - append-only, hand-edited:
   `kind,left_key,right_key,decision,decided_by,decided_on,note` with
   `decision` in `accept` / `reject` / `dismiss`. A decided item is never

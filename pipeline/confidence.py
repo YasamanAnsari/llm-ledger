@@ -397,7 +397,7 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
             "model_id": model_id, "event_type": event_type,
             "region": "global", "platform": platform, "detail": "",
             "verified_date": today.isoformat() if a.confidence == "verified" else "",
-            "observed_on": today.isoformat(),
+            "observed_on": today.isoformat(), "replacement_model_id": "",
             **fields,
         }
         events.append(row)

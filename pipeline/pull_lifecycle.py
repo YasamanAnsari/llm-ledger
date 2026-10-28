@@ -44,7 +44,7 @@ AZURE_URL = "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/mod
 BEDROCK_URL = "https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html"
 LITELLM_URL = "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json"
 
-COLUMNS = ["source", "model_ref", "platform", "retire_date", "detail", "url"]
+COLUMNS = ["source", "model_ref", "platform", "retire_date", "detail", "url", "replacement"]
 
 ISO_DATE_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2})\b")
 
@@ -90,6 +90,7 @@ def parse_azure(html: bytes) -> list:
     for table in _tables(html):
         if not table or table[0][:4] != ["Model", "Version", "Lifecycle", "Retirement date"]:
             continue
+        replacement_col = table[0].index("Replacement") if "Replacement" in table[0] else None
         for cells in table[1:]:
             if len(cells) < 4:
                 continue
@@ -97,11 +98,14 @@ def parse_azure(html: bytes) -> list:
             m = ISO_DATE_RE.search(retirement)
             if not m:
                 continue  # "—": no retirement scheduled
+            replacement = cells[replacement_col] if replacement_col is not None \
+                and len(cells) > replacement_col else ""
             rows.append({
                 "source": "azure_lifecycle",
                 "model_ref": f"{model}-{version}" if ISO_DATE_RE.fullmatch(version) else model,
                 "platform": "azure", "retire_date": m.group(1),
                 "detail": f"lifecycle={lifecycle}; version={version}", "url": AZURE_URL,
+                "replacement": "" if replacement == "—" else replacement,
             })
     if not rows:
         raise ValueError("Azure retirement page: no Model/Version/Lifecycle tables found; layout changed?")
