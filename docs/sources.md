@@ -23,7 +23,7 @@ we keep only facts (identifiers, timestamps) and the URL they came from.
 | LiteLLM | `model_prices_and_context_window.json` | `deprecation_date` | corroborates retirements | MIT ([BerriAI/litellm](https://github.com/BerriAI/litellm), outside `enterprise/`) |
 | Epoch AI | `https://epoch.ai/data/all_ai_models.csv` | publication date; scale columns | `announced` claim; enrichment join | CC BY 4.0, credited in the README and in `llm_ledger_enriched.csv` |
 | ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | second lower bound beside the Hub `createdAt`; never verifies a release without a stated date or a Wayback capture (no token) | ModelScope site terms; public search API, repo metadata only |
-| arXiv | export API | paper v1 date | lookup tool for `paper_published` | descriptive metadata is CC0 1.0 (arXiv API terms of use) |
+| arXiv | export API | paper v1 date, title | lookup tool for `paper_published`; the daily sweep (`pull_arxiv.py`, no argument) searches titles of families with no paper, 40 a day at one request per 3 s, and queues `paper_lead` rows | descriptive metadata is CC0 1.0 (arXiv API terms of use) |
 
 Pullers with no key just skip. No fake rows. Every machine claim a row
 rests on is kept in `data/core/claims.csv`.
@@ -55,7 +55,7 @@ Appendix calendars. `source_type=published_paper`.
 |---|---|---|
 | `announced` | vendor blog | Wayback, vendor post |
 | `paper_published` | arXiv v1 | proceedings |
-| `system_card` | vendor site | Wayback |
+| `system_card` | vendor site (Anthropic's system-card index states a month per card) | Wayback. Google DeepMind's model-card index shows only "Updated" dates, which bound the card from above and do not date it |
 | `api_preview` / `api_ga` | vendor changelog | models.dev, corroborated by the vendor API `created` |
 | `weights_released` | vendor announcement | models.dev open-weights date; HF `createdAt` corroborated by Wayback |
 | `consumer_rollout` / `free_tier` | vendor blog | Wikipedia, then check |

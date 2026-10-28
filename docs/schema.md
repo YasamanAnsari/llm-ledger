@@ -413,13 +413,20 @@ rewrite the dataset.
   `kind` (`fuzzy_match`, `md_no_consensus`, `hf_mirror_repo`,
   `hf_precreated_repo`, `hf_recreated_repo`, `hf_backfill_date`,
   `hf_unmapped_namespace`, `catalog_unmapped_vendor`, `vendor_alias_group`, `nhlocal_lead`,
-  `lifecycle_ambiguous`, `long_announce_gap`, `predecessor_lead`, ...),
+  `lifecycle_ambiguous`, `long_announce_gap`, `predecessor_lead`,
+  `announce_lead`, `paper_lead`, ...),
   the two keys involved, a score and a note. Rewritten by every run.
   A `predecessor_lead` (build.py) pairs a model with the one model at the
   next lower version of its family, same developer and same rest of the
   id (`glm-4-6` before `glm-4-7`, `gemini-3-flash` before
   `gemini-3-5-flash`); a person sets `predecessor_id` / `successor_id` or
-  rejects it. Nothing writes these columns automatically.
+  rejects it. Nothing writes these columns automatically. An
+  `announce_lead` (pull_nhlocal.py) names a model with no `announced`
+  event that the community timeline mentions, with the month as a hint
+  for finding the maker's post; a `paper_lead` (pull_arxiv.py) is an
+  arXiv paper whose title names a family with no `paper_published`
+  event, submitted within 180 days before to 365 days after the
+  family's first availability.
 - `data/staging/review_decisions.csv` - append-only, hand-edited:
   `kind,left_key,right_key,decision,decided_by,decided_on,note` with
   `decision` in `accept` / `reject` / `dismiss`. A decided item is never

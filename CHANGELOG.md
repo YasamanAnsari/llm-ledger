@@ -144,6 +144,20 @@ Data corrections update rows in place; this file preserves the history.
   events and keeps it only when it resolves to a ledger model.
 - `build.py` queues `predecessor_lead` review rows from family version
   order (115 today); `predecessor_id` stays a person's call.
+- Coverage of the dated disclosures. 25 `system_card` rows (7 before)
+  from Anthropic's system-card index, at month precision, for the 22
+  cards whose name maps to ledger models: Claude 2 through Haiku 5.5
+  (the Claude 3 card covers Opus, Sonnet and Haiku). Not mapped: Mythos
+  5.1 (not in the ledger), "Mythos Preview" and "Sonnet 3.5 (new)". The
+  agent now watches that index for new cards. `pull_arxiv.py` with no
+  argument is a daily sweep (in the agent's pulls) that searches arXiv
+  titles for the 1,025 dated families with no `paper_published` event,
+  40 a day in rotation, and queues `paper_lead` rows for titles that name
+  the family ("Gemma 3 Technical Report", "Kimi K2: Open Agentic
+  Intelligence") inside the release window; the first run queued one
+  (SenseNova-MARS). `pull_nhlocal.py` also queues an `announce_lead` for
+  each ledger model with no `announced` event that the timeline names
+  (19 today).
 
 ## 2026-10-14
 

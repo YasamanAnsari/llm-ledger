@@ -80,12 +80,31 @@ def main() -> int:
                     f"{lead['context']}",
         })
 
-    if new_rows:
-        schema.merge_review_queue(new_rows)
+    announce_rows = announce_leads(leads, tables["models"], tables["events"])
+    schema.merge_review_queue(new_rows + announce_rows, replace_kinds=("announce_lead",))
 
     print(f"pull_nhlocal: {len(leads)} timeline mentions, "
-          f"{len(new_rows)} new lead(s) queued for review")
+          f"{len(new_rows)} new lead(s) and {len(announce_rows)} announce lead(s) queued for review")
     return 0
+
+
+def announce_leads(leads: list, models: list, events: list) -> list:
+    """One review row per ledger model with no `announced` event that the
+    timeline names exactly, at its earliest mention: where to look for the
+    maker's post. The month is a community hint, never the event date."""
+    announced = {e["model_id"] for e in events if e["event_type"] == "announced"}
+    missing = {m["model_id"] for m in models} - announced
+    earliest: dict = {}
+    for lead in leads:
+        key = matchmod.normalize_name(lead["name"])["key"]
+        if key in missing and (key not in earliest or lead["date"] < earliest[key]["date"]):
+            earliest[key] = lead
+    return [{
+        "kind": "announce_lead", "left_source": "ledger", "left_key": model_id,
+        "right_source": "nhlocal_aitimeline", "right_key": lead["date"][:7], "score": "",
+        "note": f"no announced event; the timeline names it in {lead['date'][:7]}: "
+                f"{lead['context']}",
+    } for model_id, lead in sorted(earliest.items())]
 
 
 if __name__ == "__main__":

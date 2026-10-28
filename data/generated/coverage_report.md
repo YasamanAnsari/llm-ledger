@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1834; events: 2832
-- Models: curated 55, corroborated 667, single-source 1112
-- Event confidence: verified 1122, inferred 1704, disputed 6
+- Models: 1834; events: 2857
+- Models: curated 72, corroborated 652, single-source 1110
+- Event confidence: verified 1147, inferred 1704, disputed 6
 - Open-weight models with no `license_family` (license tag missing or `other`): 422 of 1599
 
 ## By organization
@@ -43,7 +43,7 @@ as settled.
 | Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
 | Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
 | Salesforce | 28 | 28 | 0 | 5 | 23 | 18% |
-| Anthropic | 27 | 132 | 8 | 15 | 4 | 68% |
+| Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
@@ -103,6 +103,7 @@ as settled.
 | retired | 307 | 179 | 128 | 0 |
 | api_ga | 252 | 62 | 189 | 1 |
 | announced | 241 | 51 | 189 | 1 |
+| system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
@@ -110,7 +111,6 @@ as settled.
 | free_tier | 10 | 9 | 0 | 1 |
 | api_preview | 8 | 8 | 0 | 0 |
 | price_changed | 8 | 7 | 1 | 0 |
-| system_card | 7 | 6 | 1 | 0 |
 | alias_repointed | 5 | 2 | 3 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
