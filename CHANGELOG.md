@@ -206,6 +206,9 @@ Data corrections update rows in place; this file preserves the history.
   weights; 606 Chinese, 91% open weights) and the best ECI score over
   time (the best Chinese model, Kimi K3, scores what GPT-5.4 Pro first
   reached 133 days earlier).
+- The explorer filters by developer country (headquarters, from
+  `organizations.country`; "Not recorded" for BigScience, Nex AGI and
+  RWKV), and its CSV export carries a `developer_country` column.
 - `docs/erd.svg` shows the columns added this month (`models`: the
   branding and use-restriction flags, `training_data_released`,
   `training_code_released`; `events`: `observed_on`,

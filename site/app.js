@@ -1,4 +1,4 @@
-import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,formatDate,csvEncode} from './ledger-engine.mjs';
+import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,NO_COUNTRY,formatDate,csvEncode} from './ledger-engine.mjs';
 import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS,OPENNESS,COUNTRIES} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -6,7 +6,9 @@ const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(
 const number=n=>new Intl.NumberFormat('en-US').format(n);
 const title=value=>String(value||'').split('_').map(s=>s.charAt(0).toUpperCase()+s.slice(1)).join(' ');
 let ledger, rows=[], selectedModel=null, toastTimer;
-const state={view:'models',query:'',org:'',event:'',confidence:'',access:'',sort:'newest',page:1};
+const state={view:'models',query:'',org:'',country:'',event:'',confidence:'',access:'',sort:'newest',page:1};
+const regionName=new Intl.DisplayNames(['en'],{type:'region'});
+const countryName=code=>code===NO_COUNTRY?'Not recorded':regionName.of(code);
 const badge=(confidence,undated=false)=>`<span class="badge ${esc(undated?'undated':confidence)}" title="${esc(undated?'No qualifying availability date recorded.':confidence==='verified'?'Verified under ledger policy; may be automated or project-assisted, not necessarily human-reviewed.':confidence==='inferred'?'Single-source or insufficiently corroborated date.':'Conflicting source dates are retained in the event notes.')} ">${esc(undated?'Undated':title(confidence))}</span>`;
 function orgIcon(id){const org=ledger.organizations.get(id);return ledger.data.meta.icons.includes(id)?`<img class="org-icon" src="./assets/orgs/${encodeURIComponent(id)}.svg" alt="" loading="lazy" width="17" height="17">`:`<span class="org-fallback" aria-hidden="true">${esc((org?.short_name||id).slice(0,2).toUpperCase())}</span>`;}
 function orgName(model){const org=ledger.organizations.get(model.developer_org_id);return org?.short_name||org?.canonical_name||model.developer_org_id;}
@@ -44,13 +46,13 @@ function render(){
  const first=rows.length?(state.page-1)*PAGE_SIZE+1:0,last=Math.min(state.page*PAGE_SIZE,rows.length);
  $('result-count').textContent=`Showing ${number(first)}–${number(last)} of ${number(rows.length)} ${modelView?'models':'events'}`;
  $('page-number').textContent=`${state.page} / ${pages}`;$('prev-page').disabled=state.page===1;$('next-page').disabled=state.page===pages||!rows.length;
- $('reset-filters').hidden=!['query','org','event','confidence','access'].some(k=>state[k]);
+ $('reset-filters').hidden=!['query','org','country','event','confidence','access'].some(k=>state[k]);
  $('export-filtered').disabled=!rows.length;
  document.querySelectorAll('[data-view]').forEach(b=>{const active=b.dataset.view===state.view;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;});
  document.querySelectorAll('[data-access]').forEach(b=>{const active=b.dataset.access===state.access;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
  const undated=$('confidence-filter').querySelector('[value="undated"]');undated.disabled=!modelView||Boolean(state.event);
 }
-function reset(){Object.assign(state,{query:'',org:'',event:'',confidence:'',access:'',sort:'newest',page:1});for(const id of ['search','org-filter','event-filter','confidence-filter'])$(id).value='';$('sort').value='newest';render();}
+function reset(){Object.assign(state,{query:'',org:'',country:'',event:'',confidence:'',access:'',sort:'newest',page:1});for(const id of ['search','org-filter','country-filter','event-filter','confidence-filter'])$(id).value='';$('sort').value='newest';render();}
 function openModel(id,eventId=''){
  const m=ledger.models.get(id);if(!m)return;selectedModel=id;
  const events=ledger.eventsByModel.get(id)||[];const anchor=ledger.anchorEvent(m);const attr=ledger.attributesByModel.get(id);
@@ -133,12 +135,12 @@ async function copyCitation(){
 }
 function exportView(){
  if(!rows.length)return;
- const exported=rows.map(r=>({model_id:r.model.model_id,model_name:r.model.canonical_name,developer:orgName(r.model),family:r.model.family,access_type:r.model.access_type,date:r.date,precision:r.event?.precision||'',event_type:r.event?.event_type||'',platform:r.event?.platform||'',confidence:r.confidence,source_url:r.event?.source_url||'',...(state.view==='events'?{event_id:r.event.event_id,region:r.event.region,verified_by:r.event.verified_by,notes:r.event.notes}:{first_availability_via:r.model.first_availability_via}),snapshot_date:ledger.data.meta.snapshot}));
+ const exported=rows.map(r=>({model_id:r.model.model_id,model_name:r.model.canonical_name,developer:orgName(r.model),developer_country:ledger.organizations.get(r.model.developer_org_id)?.country||'',family:r.model.family,access_type:r.model.access_type,date:r.date,precision:r.event?.precision||'',event_type:r.event?.event_type||'',platform:r.event?.platform||'',confidence:r.confidence,source_url:r.event?.source_url||'',...(state.view==='events'?{event_id:r.event.event_id,region:r.event.region,verified_by:r.event.verified_by,notes:r.event.notes}:{first_availability_via:r.model.first_availability_via}),snapshot_date:ledger.data.meta.snapshot}));
  const blob=new Blob(['\ufeff',csvEncode(exported,Object.keys(exported[0]))],{type:'text/csv;charset=utf-8;'});const href=URL.createObjectURL(blob);const a=document.createElement('a');a.href=href;a.download=`llm-ledger-${state.view}-${ledger.data.meta.snapshot}.csv`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),1000);showToast(`Exported ${number(rows.length)} ${state.view}`);
 }
 $('filters').addEventListener('submit',e=>e.preventDefault());
 $('search').addEventListener('input',e=>setState({query:e.target.value}));
-for(const [id,key] of [['org-filter','org'],['event-filter','event'],['confidence-filter','confidence'],['sort','sort']])$(id).addEventListener('change',e=>{const next={[key]:e.target.value};if(key==='event'&&state.confidence==='undated'){next.confidence='';$('confidence-filter').value='';}setState(next);});
+for(const [id,key] of [['org-filter','org'],['country-filter','country'],['event-filter','event'],['confidence-filter','confidence'],['sort','sort']])$(id).addEventListener('change',e=>{const next={[key]:e.target.value};if(key==='event'&&state.confidence==='undated'){next.confidence='';$('confidence-filter').value='';}setState(next);});
 document.querySelectorAll('[data-view]').forEach(button=>{button.addEventListener('click',()=>{const next={view:button.dataset.view};if(next.view==='events'&&state.confidence==='undated'){next.confidence='';$('confidence-filter').value='';}setState(next);});button.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const target=e.key==='Home'?$('models-tab'):e.key==='End'?$('events-tab'):button.dataset.view==='models'?$('events-tab'):$('models-tab');target.click();target.focus();}});});
 document.querySelectorAll('[data-access]').forEach(button=>button.addEventListener('click',()=>setState({access:button.dataset.access})));
 $('prev-page').addEventListener('click',()=>{state.page--;render();});$('next-page').addEventListener('click',()=>{state.page++;render();});
@@ -160,6 +162,8 @@ async function init(){
   const orgCounts=new Map();for(const m of ledger.data.models)orgCounts.set(m.developer_org_id,(orgCounts.get(m.developer_org_id)||0)+1);
   const options=[...ledger.organizations.values()].filter(o=>orgCounts.has(o.org_id)).sort((a,b)=>a.short_name.localeCompare(b.short_name));
   $('org-filter').innerHTML='<option value="">All developers</option>'+options.map(o=>`<option value="${esc(o.org_id)}">${esc(o.short_name||o.canonical_name)} (${orgCounts.get(o.org_id)})</option>`).join('');
+  const countryCounts=new Map();for(const m of ledger.data.models){const c=ledger.organizations.get(m.developer_org_id)?.country||NO_COUNTRY;countryCounts.set(c,(countryCounts.get(c)||0)+1);}
+  $('country-filter').innerHTML='<option value="">All countries</option>'+[...countryCounts].sort((a,b)=>b[1]-a[1]||countryName(a[0]).localeCompare(countryName(b[0]))).map(([c,n])=>`<option value="${esc(c)}">${esc(countryName(c))} (${number(n)})</option>`).join('');
   const eventTypes=new Set(ledger.data.events.map(e=>e.event_type));
   $('event-filter').innerHTML='<option value="">All milestones</option>'+Object.entries(EVENT_LABELS).filter(([k])=>eventTypes.has(k)).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('');
   renderFindings();render();

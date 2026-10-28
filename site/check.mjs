@@ -1,7 +1,7 @@
 // Self-check for the site's data logic: node site/check.mjs
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
-import {marketOn, perMillion} from './ledger-engine.mjs';
+import {NO_COUNTRY, createLedger, marketOn, perMillion} from './ledger-engine.mjs';
 import {accessGroup, annotateGroups, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, retirementFates, scatterPoints,
   yearlyMedians} from './charts.mjs';
 
@@ -96,5 +96,15 @@ assert.equal(early.cap, null);
 assert.deepEqual(marketOn(payload, '2026-10-04')[0].price, {input: null, output: 12, cached: null});
 assert.deepEqual(marketOn(payload, '2026-10-06'), []);
 assert.equal(perMillion('2', 'per_1m_tokens'), 2);
+
+const explorer = createLedger({
+  organizations: [{org_id: 'us-lab', country: 'US'}, {org_id: 'cn-lab', country: 'CN'}, {org_id: 'no-hq', country: ''}],
+  models: ['us-lab', 'cn-lab', 'no-hq'].map(org => ({model_id: `${org}-m`, canonical_name: org, family: '', developer_org_id: org,
+    access_type: 'open_weights', first_public_availability_date: '2025-01-01', first_availability_via: '', first_availability_confidence: ''})),
+  events: [], claims: [], crosswalk: [], attributes: [],
+});
+assert.deepEqual(explorer.query({country: 'CN'}).map(r => r.model.model_id), ['cn-lab-m']);
+assert.deepEqual(explorer.query({country: NO_COUNTRY}).map(r => r.model.model_id), ['no-hq-m']);
+assert.equal(explorer.query({}).length, 3);
 
 console.log('site check: ok');
