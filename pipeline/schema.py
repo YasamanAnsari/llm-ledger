@@ -41,7 +41,12 @@ VARIANT_ROLES = {
 
 ACCESS_TYPES = {"open_weights", "api_only", "consumer_only", "internal", "never_released"}
 
-LICENSE_FAMILIES = {"proprietary", "open_weights_restricted", "osi_approved"}
+LICENSE_FAMILIES = {"proprietary", "open_weights_restricted", "osi_approved", "permissive"}
+
+# training_data_released / training_code_released cover every stage that
+# produced the checkpoint, the base model's included. "partial": only some
+# stages or subsets are public, or the data sits behind a gate.
+RELEASE_VALUES = {"true", "false", "partial"}
 
 DERIVATIVE_TYPES = {"finetune", "distill", "quantization", "merge", "continued_pretrain"}
 
@@ -50,7 +55,11 @@ EVENT_TYPES = {
     "api_ga", "weights_released", "consumer_rollout", "free_tier",
     "platform_availability", "price_changed", "feature_added",
     "alias_repointed", "renamed", "deprecation_announced", "retired",
+    "license_changed", "version_observed",
 }
+
+# Event types that may name the model a vendor recommends moving to.
+REPLACEMENT_EVENT_TYPES = {"deprecation_announced", "retired"}
 
 AVAILABILITY_EVENT_TYPES = {"api_ga", "weights_released", "consumer_rollout"}
 FALLBACK_AVAILABILITY_EVENT_TYPES = {"api_preview", "free_tier"}
@@ -84,12 +93,15 @@ PLATFORMS = {
     "fireworks", "deepinfra", "sagemaker", "github_models", "huggingface",
 }
 
-# License tags that are OSI-approved. Any other tag that names terms is
+# License tags that are OSI-approved. Permissive tags grant use without
+# restriction but are not OSI-approved (OpenMDW covers weights and data;
+# OSI never approved CC0). Any other tag that names terms is
 # open_weights_restricted; tags that name nothing get no family at all.
 LICENSE_OSI = {
-    "apache-2.0", "mit", "bsd-3-clause", "bsd-2-clause", "cc0-1.0", "gpl-3.0",
+    "apache-2.0", "mit", "bsd-3-clause", "bsd-2-clause", "gpl-3.0",
     "agpl-3.0", "mpl-2.0", "isc", "lgpl-3.0", "unlicense",
 }
+LICENSE_PERMISSIVE = {"openmdw-1.0", "openmdw-1.1", "cc0-1.0", "cc-by-4.0"}
 # Tags that say nothing about terms. No family is assigned; a person fills it.
 LICENSE_UNKNOWN = {"", "other", "unknown"}
 
@@ -150,6 +162,8 @@ MODELS = Table(
         "developer_org_id",
         "model_type", "access_type", "license", "license_family",
         "license_has_usage_thresholds", "license_requires_separate_agreement",
+        "license_has_branding_clause", "license_has_use_restrictions",
+        "training_data_released", "training_code_released",
         "is_derivative", "derivative_type", "base_model_id",
         "parent_model_id", "snapshot_of", "predecessor_id", "successor_id",
         "first_public_availability_date", "first_availability_via",
@@ -167,6 +181,7 @@ EVENTS = Table(
         "event_id", "model_id", "event_type", "date", "precision", "region",
         "platform", "detail", "source_url", "source_type", "confidence",
         "verified_by", "verified_date", "notes", "observed_on",
+        "replacement_model_id",
     ),
     pk=("event_id",),
 )
@@ -551,6 +566,8 @@ def license_family(license_tag: str) -> str:
         return ""
     if key == "proprietary":
         return "proprietary"
+    if key in LICENSE_PERMISSIVE:
+        return "permissive"
     return "osi_approved" if key in LICENSE_OSI else "open_weights_restricted"
 
 

@@ -173,6 +173,31 @@ def test_rule8_vocab_and_platform_contract():
     assert not any("rule8" in e for e in _errors(scoped_retirement))
 
 
+def test_rule8_openness_columns_and_new_event_types() -> None:
+    partial = _model(training_data_released="partial", training_code_released="true",
+                     license_has_branding_clause="false", license_has_use_restrictions="true")
+    assert _errors(_tables(models=[partial])) == []
+    assert any("training_data_released" in e
+               for e in _errors(_tables(models=[_model(training_data_released="yes")])))
+
+    def event(event_type, **kw):
+        return _event(event_id=f"acme-1-{event_type}-1", event_type=event_type, **kw)
+    assert _errors(_tables(events=[_event(), event("license_changed",
+                                                   detail="llama3.1->apache-2.0")])) == []
+    assert any("old->new" in e for e in _errors(_tables(events=[event("license_changed")])))
+    assert any("version id" in e for e in _errors(_tables(events=[event("version_observed")])))
+
+    models = [_model(), _model(model_id="acme-2")]
+    deprecation = event("deprecation_announced", replacement_model_id="acme-2",
+                        source_type="deprecation_page")
+    assert _errors(_tables(models=models, events=[_event(), deprecation, _event(
+        event_id="acme-2-api_ga-1", model_id="acme-2")])) == []
+    assert any("replacement_model_id 'ghost' unresolved" in e for e in _errors(_tables(
+        events=[dict(deprecation, replacement_model_id="ghost")])))
+    assert any("only allowed on" in e for e in _errors(_tables(
+        events=[_event(replacement_model_id="acme-1")])))
+
+
 def test_rule4_availability_long_before_announcement_is_an_error() -> None:
     def events(gap_days):
         return [

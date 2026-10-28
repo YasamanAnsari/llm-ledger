@@ -71,9 +71,13 @@ A base checkpoint and its instruct or chat checkpoint are two models.
 | `model_type` | enum | `llm, vlm, multimodal, image_gen, video_gen, audio, embedding` |
 | `access_type` | enum | `open_weights, api_only, consumer_only, internal, never_released` |
 | `license` | string | exact SPDX identifier or license name |
-| `license_family` | enum | `proprietary, open_weights_restricted, osi_approved` |
+| `license_family` | enum | `proprietary, open_weights_restricted, osi_approved, permissive`. `permissive` grants use without restriction but is not OSI-approved (`openmdw-1.0`, `openmdw-1.1`, `cc0-1.0`, `cc-by-4.0`; `schema.LICENSE_PERMISSIVE`) |
 | `license_has_usage_thresholds` | bool | revenue/user-count clauses |
 | `license_requires_separate_agreement` | bool | commercial licence required |
+| `license_has_branding_clause` | bool nullable | the license makes derivatives display the licensor's mark ("Built with Llama", a `Llama` name prefix). Notice-retention (Apache `NOTICE`, Llama 2's notice file) and trademark reservations are not branding |
+| `license_has_use_restrictions` | bool nullable | the license forbids named uses (an acceptable-use policy, RAIL Attachment A, non-commercial terms) |
+| `training_data_released` | enum nullable | `true, false, partial`: whether the data of every stage that produced the checkpoint is public, the base model's included. `partial`: some stages or subsets only, or behind a gate (BLOOM's ROOTS, Marin's `bigcode/starcoderdata`) |
+| `training_code_released` | enum nullable | `true, false, partial`, same scope as `training_data_released` |
 | `is_derivative` | bool | |
 | `derivative_type` | enum nullable | `finetune, distill, quantization, merge, continued_pretrain` |
 | `base_model_id` | FK nullable | |
@@ -85,7 +89,12 @@ A base checkpoint and its instruct or chat checkpoint are two models.
 | `first_availability_confidence` | enum DERIVED | `confidence` of the event that set the date; empty when undated |
 | `anticipation_days` | int DERIVED | first availability minus announced |
 | `record_created` / `record_updated` | ISO datetime | |
-| `notes` | string | |
+| `notes` | string | ends with `openness: <urls>` when the four openness columns are filled: the model card and license text they were read from |
+
+The four openness columns are blank until a person has read the license
+and the release's data and code statements; blank means unchecked, not
+`false`. They are filled for the fully open families (OLMo, OLMo 2, OLMoE,
+Olmo 3, Pythia, SmolLM2, SmolLM3, BLOOM/BLOOMZ, Marin, Tulu 2 and Tulu 3).
 
 Derived columns are recomputed by `pipeline/build.py` on every run and must
 never be hand-edited. Filter on `events.confidence` (or
@@ -114,6 +123,7 @@ never rewrite its `family`, `variant_role` or `access_type`
 | `verified_date` | date | required when `confidence=verified` |
 | `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
 | `observed_on` | ISO date | REQUIRED; the day the ledger first recorded this event (the pull, feed read or edit that added it), not the day the event happened. Kept when the row is re-assessed or re-dated |
+| `replacement_model_id` | FK nullable | the model the vendor tells users to move to; only on `deprecation_announced` and `retired`, never the model itself |
 
 `date` says when something happened; `observed_on` says when the ledger
 knew. The gap between them is how late a release was noticed, and
@@ -133,7 +143,11 @@ will ever modify.
   web_browsing, file_upload, structured_output`.
 - `price_changed`: `input:old->new;output:old->new` in USD per 1M tokens.
 - `renamed`: `old->new`.
-- `retired`: optional `migration_target_id=<model_id>`; `served_by=<partner> (<sku>)`
+- `license_changed`: `old->new` license tags, required. `date` is the day
+  the new terms took effect; `models.license` holds the current tag.
+- `version_observed`: the new version id, required: a Hub commit sha for
+  `hf_hub` rows, the API snapshot id for `api_metadata` rows.
+- `retired`: optional `served_by=<partner> (<sku>)`
   when a platform's schedule lists the model under a serving partner (Azure
   Foundry's `FW-` SKUs are served by Fireworks AI; the event stays on
   `platform=azure`).
@@ -158,6 +172,8 @@ will ever modify.
 | `renamed` | Public product/model renamed |
 | `deprecation_announced` | Vendor announces future retirement |
 | `retired` | Model actually turned off / removed |
+| `license_changed` | The terms the weights are distributed under changed |
+| `version_observed` | A new Hub revision or API snapshot id was first seen for the model |
 
 Why events, not a single "release date": GPT-3's paper went to arXiv on
 May 28, 2020 but the API beta opened June 11, 2020. o3 was announced
@@ -384,7 +400,7 @@ rewrite the dataset.
 `pipeline/validate.py` enforces, and exits nonzero on failure:
 
 1. PK uniqueness on all tables; all FKs resolve (including
-   `claims.event_id`).
+   `claims.event_id` and `events.replacement_model_id`).
 2. Every event has a valid `source_url`, plus `precision` and `confidence`.
 3. `date` is consistent with `precision` (month precision means day == 01,
    quarter means the first day of Jan/Apr/Jul/Oct, year means Jan 1).
@@ -404,7 +420,10 @@ rewrite the dataset.
 8. Controlled-vocabulary columns contain only allowed values; `platform` is
    present on every `platform_availability` row; every event and claim has
    an ISO `observed_on`, and a superseded claim was not superseded before
-   it was observed.
+   it was observed; `license_changed` carries `old->new` and
+   `version_observed` a version id in `detail`; `replacement_model_id`
+   appears only on `deprecation_announced` and `retired` and never names
+   the event's own model.
 9. Wide/enriched artifacts, `models_latest.csv`, the coverage and
    sensitivity reports and the README stats block regenerate
    byte-identically from core tables.

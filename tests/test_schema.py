@@ -17,6 +17,8 @@ def test_license_family_does_not_guess():
     assert license_family("llama3.1") == "open_weights_restricted"
     assert license_family("cc-by-nc-4.0") == "open_weights_restricted"
     assert license_family("proprietary") == "proprietary"
+    assert license_family("openmdw-1.1") == "permissive"   # permissive, not OSI-approved
+    assert license_family("cc0-1.0") == "permissive"
     for unknown in ("", "other", "unknown"):
         assert license_family(unknown) == ""
 

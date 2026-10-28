@@ -31,7 +31,8 @@ from schema import (
     FALLBACK_AVAILABILITY_EVENT_TYPES, FEATURE_ADDED_DETAILS,
     FIRST_AVAILABILITY_VIA, IDENTITY_NAMESPACES, LICENSE_FAMILIES, MODALITIES,
     MODEL_TYPES, ORG_TYPES, PLATFORMS, PRECISIONS, REASONING_TYPES,
-    REASONING_VISIBILITY, SOURCE_TYPES, VARIANT_ROLES,
+    REASONING_VISIBILITY, RELEASE_VALUES, REPLACEMENT_EVENT_TYPES, SOURCE_TYPES,
+    VARIANT_ROLES,
     date_matches_precision,
 )
 
@@ -87,6 +88,10 @@ def check_rule1_keys(tables: dict) -> list:
         for row in tables[name]:
             if row["model_id"] not in model_ids:
                 errors.append(f"rule1: {name} references unknown model_id '{row['model_id']}'")
+    for row in tables["events"]:
+        ref = row.get("replacement_model_id", "")
+        if ref and ref not in model_ids:
+            errors.append(f"rule1: event {row['event_id']} replacement_model_id '{ref}' unresolved")
 
     event_ids = {r["event_id"] for r in tables["events"]}
     for row in tables.get("claims", []):
@@ -278,8 +283,11 @@ def check_rule8_vocabularies(tables: dict) -> list:
         check(key, "derivative_type", row.get("derivative_type", ""), DERIVATIVE_TYPES)
         check(key, "first_availability_via", row.get("first_availability_via", ""), FIRST_AVAILABILITY_VIA)
         check(key, "first_availability_confidence", row.get("first_availability_confidence", ""), CONFIDENCES)
-        for col in ("license_has_usage_thresholds", "license_requires_separate_agreement"):
+        for col in ("license_has_usage_thresholds", "license_requires_separate_agreement",
+                    "license_has_branding_clause", "license_has_use_restrictions"):
             check(key, col, row.get(col, ""), BOOL_VALUES)
+        for col in ("training_data_released", "training_code_released"):
+            check(key, col, row.get(col, ""), RELEASE_VALUES)
         if row.get("is_derivative") == "true" and not row.get("derivative_type"):
             errors.append(f"rule8: model {row['model_id']} is_derivative without derivative_type")
 
@@ -296,6 +304,17 @@ def check_rule8_vocabularies(tables: dict) -> list:
         check(key, "platform", row.get("platform", ""), PLATFORMS)
         if row.get("event_type") == "feature_added":
             check(key, "detail", row.get("detail", ""), FEATURE_ADDED_DETAILS, required=True)
+        if row.get("event_type") == "license_changed":
+            old, sep, new = row.get("detail", "").partition("->")
+            if not (sep and old.strip() and new.strip()):
+                errors.append(f"rule8: {key} license_changed detail must be 'old->new'")
+        if row.get("event_type") == "version_observed" and not row.get("detail"):
+            errors.append(f"rule8: {key} version_observed requires the version id in detail")
+        if row.get("replacement_model_id") and row.get("event_type") not in REPLACEMENT_EVENT_TYPES:
+            errors.append(f"rule8: {key} replacement_model_id is only allowed on "
+                          f"{sorted(REPLACEMENT_EVENT_TYPES)}")
+        if row.get("replacement_model_id") == row.get("model_id"):
+            errors.append(f"rule8: {key} names itself as its replacement")
         expected_prefix = f"{row.get('model_id', '')}-{row.get('event_type', '')}-"
         if not (row["event_id"].startswith(expected_prefix)
                 and row["event_id"][len(expected_prefix):].isdigit()):

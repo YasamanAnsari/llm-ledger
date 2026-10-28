@@ -12,7 +12,7 @@ as settled.
 - Models: 1834; events: 2831
 - Models: curated 55, corroborated 666, single-source 1113
 - Event confidence: verified 1121, inferred 1704, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 423 of 1599
+- Open-weight models with no `license_family` (license tag missing or `other`): 422 of 1599
 
 ## By organization
 

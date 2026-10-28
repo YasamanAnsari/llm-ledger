@@ -88,6 +88,30 @@ Data corrections update rows in place; this file preserves the history.
   price in USD per 1M tokens, limits and source. On 2026-10-27: 6,698
   listings of 429 models from 203 providers. The site has a market page
   that rebuilds the view for any observed day.
+- New `license_family` value `permissive`: terms that grant use without
+  restriction but are not OSI-approved. OpenMDW-1.1 (Laguna S 2.1,
+  Laguna S 2.1 Base, Laguna XS 2.1, Nemotron Parse 2.0) and CC-BY-4.0
+  (Helium 1 Preview 2B) move there from `open_weights_restricted`; CC0-1.0
+  moves out of the OSI set, which never approved it (no model carries it).
+- New `models.csv` columns `license_has_branding_clause`,
+  `license_has_use_restrictions`, `training_data_released` and
+  `training_code_released`, blank until read from the card and license
+  text. Filled for 109 models of the fully open families: OLMo, OLMo 2,
+  OLMoE, Olmo 3 and Olmo Hybrid, Pythia, SmolLM2 and SmolLM3 (data and
+  code `true`); Marin (data `partial`: `bigcode/starcoderdata` is gated);
+  BLOOM and BLOOMZ (data `partial`: the 224 ROOTS datasets are gated; RAIL
+  use restrictions); Tulu 3 on Llama 3.1 and Tulu 2 on Llama 2 (data and
+  code `partial`, as the base models' are unreleased; Llama 3.1 has a
+  branding clause, both have an acceptable-use policy). Tulu 2 7B gains
+  the license its card states, AI2 ImpACT Low-risk. The sources are in
+  each row's `notes`.
+- New event types `license_changed` (`old->new` in `detail`) and
+  `version_observed` (the Hub revision or API snapshot id). New
+  `events.csv` column `replacement_model_id`, allowed on
+  `deprecation_announced` and `retired`: the 12 `retired` rows that held
+  `migration_target_id=` in `detail` move it to the column, and their
+  `deprecation_announced` rows from the same deprecation page take the
+  same replacement.
 
 ## 2026-10-14
 
