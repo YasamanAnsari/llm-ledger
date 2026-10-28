@@ -54,6 +54,23 @@ Data corrections update rows in place; this file preserves the history.
 - MiMo-V2.6 lineage from the report (arXiv:2610.11959, figure 13): each RL
   checkpoint is the base of its MOPD checkpoint, which is the base of the
   released model.
+- New column `observed_on` on `events.csv` and `claims.csv`: the day the
+  ledger first recorded the row, separate from the date the row states.
+  Backfilled by replaying the 64 commits that touched either table: each
+  row takes the day of the first commit holding its key (`event_id`; for
+  claims `event_id, source_url, date`). Daily pulls commit on the day they
+  fetch, so for machine rows this is the manifest's `fetched_at` day; rows
+  present at the first publication read 2026-08-25 (events) or 2026-09-01
+  (claims, when that table was introduced). A row whose model was renamed
+  or merged carries the day of the rename. Eight claims were committed
+  after the day they were read (the o1 and o3 Azure retirements,
+  reconstructed from raw snapshots on 2026-09-14): their 10-21 statements
+  read 2026-09-11, the pull before the move, and the 11-19 statements
+  read on the day each source moved (Azure 09-12, LiteLLM 09-13).
+  Validation rule 8 now requires `observed_on` and rejects a claim
+  superseded before it was observed. Loaders keep the first day
+  while a source repeats a statement; agent rows carry the day the feed
+  was read. No date or confidence changes.
 
 ## 2026-10-14
 

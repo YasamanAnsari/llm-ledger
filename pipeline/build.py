@@ -582,7 +582,21 @@ def long_gap_review_rows(models: list) -> list:
         and m["first_availability_confidence"] != "verified"]
 
 
+def stamp_observed(rows: list, today: str) -> int:
+    """Give rows written without an `observed_on` (hand edits, agent merges)
+    the day the ledger first saw them: today. Returns how many were stamped."""
+    blank = [r for r in rows if not r["observed_on"]]
+    for r in blank:
+        r["observed_on"] = today
+    return len(blank)
+
+
 def main() -> int:
+    today = date.today().isoformat()
+    for table in (EVENTS, schema.CLAIMS):
+        rows = schema.read_table(table)
+        if stamp_observed(rows, today):
+            schema.write_table(table, rows)
     models = compute_derived(schema.read_table(MODELS), schema.read_table(EVENTS))
     schema.write_table(MODELS, models)
     print("build: derived fields recomputed on data/core/models.csv")

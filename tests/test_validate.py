@@ -50,7 +50,7 @@ def _event(**overrides):
         "region": "global", "platform": "", "detail": "",
         "source_url": "https://example.com/blog", "source_type": "vendor_blog",
         "confidence": "inferred", "verified_by": "", "verified_date": "",
-        "notes": "",
+        "notes": "", "observed_on": "2026-09-01",
     }
     row.update(overrides)
     return row
@@ -233,11 +233,15 @@ def test_rule14_superseded_claim_needs_a_live_sibling():
     machine = _event(source_type="api_metadata", source_url="https://models.dev/api.json")
     live = {"event_id": "acme-1-api_ga-1", "source_url": "https://models.dev/api.json",
             "source_type": "api_metadata", "date": "2025-01-15", "precision": "day",
-            "label": "models.dev", "bound": "false", "first_party": "false", "superseded_on": ""}
+            "label": "models.dev", "bound": "false", "first_party": "false", "superseded_on": "",
+            "observed_on": "2026-09-01"}
     old = dict(live, date="2025-01-10", superseded_on="2026-09-12")
     assert not any("rule14" in e for e in _errors(_tables(events=[machine], claims=[live, old])))
     assert any("rule14" in e for e in _errors(_tables(events=[machine], claims=[old])))
     assert any("superseded_on" in e for e in _errors(_tables(events=[machine], claims=[live, dict(old, superseded_on="soon")])))
+    assert any("precedes observed_on" in e for e in _errors(_tables(
+        events=[machine], claims=[live, dict(old, observed_on="2026-09-13")])))
+    assert any("observed_on" in e for e in _errors(_tables(events=[machine], claims=[dict(live, observed_on="")])))
 
 
 def test_rule12_one_model_per_machine_identifier():

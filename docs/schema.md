@@ -113,6 +113,14 @@ never rewrite its `family`, `variant_role` or `access_type`
 | `verified_by` | string | required when `confidence=verified`; a person's name, `llm-ledger` for a machine corroboration or a project-curated row, or `llm-ledger-agent` when the project's LLM agent read the page (set on every agent row, `inferred` ones included, to name the writer) |
 | `verified_date` | date | required when `confidence=verified` |
 | `notes` | string | REQUIRED when `confidence=disputed`: all conflicting values and sources. Machine rows carry the policy verdict (`single source: ...`, `corroborated within Nd: ...`) |
+| `observed_on` | ISO date | REQUIRED; the day the ledger first recorded this event (the pull, feed read or edit that added it), not the day the event happened. Kept when the row is re-assessed or re-dated |
+
+`date` says when something happened; `observed_on` says when the ledger
+knew. The gap between them is how late a release was noticed, and
+`observed_on` is what a point-in-time query ("what did the record say on
+day D") filters on. Rows that predate the column carry the day of the
+first commit that held their `event_id` (2026-08-25 for the initial
+publication); `build.py` stamps today on any row written without one.
 
 Rows with `source_type` in `{hf_hub, api_metadata, lifecycle_table}` are
 **machine-owned**: the loaders re-assess them on every run from the claims
@@ -170,6 +178,7 @@ datasets disagree with each other.
 | `bound` | bool | the timestamp brackets the event (repo or model-registry creation, first crawl) rather than stating it |
 | `first_party` | bool | the source reports its own event (OpenRouter listing on OpenRouter, Azure retirement on Azure) |
 | `superseded_on` | ISO date or empty | empty: what the source says now. Set: what it said until that day, when a pull found it stating a different date |
+| `observed_on` | ISO date | the day a pull first read this statement; unchanged while the source keeps saying it, so `observed_on`..`superseded_on` is the span the source stood behind the date |
 
 Primary key: `(event_id, source_url, date)`.
 
@@ -347,7 +356,9 @@ rewrite the dataset.
    `announced`, availability, or `platform_availability` event.
 7. `snapshot_of` / `base_model_id` / `parent_model_id` links are acyclic.
 8. Controlled-vocabulary columns contain only allowed values; `platform` is
-   present on every `platform_availability` row.
+   present on every `platform_availability` row; every event and claim has
+   an ISO `observed_on`, and a superseded claim was not superseded before
+   it was observed.
 9. Wide/enriched artifacts, `models_latest.csv`, the coverage and
    sensitivity reports and the README stats block regenerate
    byte-identically from core tables.
@@ -364,6 +375,8 @@ rewrite the dataset.
     event; `build.py` sets `open_weights` on machine rows that gain one.
 14. A claim with `superseded_on` set has a live claim from the same
     source host on the same event: history hangs off a current statement.
+15. An `open_weights` model may not carry `license_family=proprietary`;
+    open-weight models with no `license_family` are a counted warning.
 
 Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
 run may not remove more than 2% of the events committed at `HEAD`, nor

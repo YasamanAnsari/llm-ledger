@@ -300,6 +300,8 @@ def check_rule8_vocabularies(tables: dict) -> list:
         if not (row["event_id"].startswith(expected_prefix)
                 and row["event_id"][len(expected_prefix):].isdigit()):
             errors.append(f"rule8: {key} id does not follow {{model_id}}-{{event_type}}-{{seq}}")
+        if not date_matches_precision(row.get("observed_on", ""), "day"):
+            errors.append(f"rule8: {key} observed_on '{row.get('observed_on', '')}' is not ISO")
 
     for row in tables["crosswalk"]:
         key = f"crosswalk {row['model_id']}/{row['namespace']}"
@@ -316,6 +318,11 @@ def check_rule8_vocabularies(tables: dict) -> list:
             errors.append(f"rule8: {key} date '{row.get('date', '')}' is not ISO")
         if row.get("superseded_on") and not date_matches_precision(row["superseded_on"], "day"):
             errors.append(f"rule8: {key} superseded_on '{row['superseded_on']}' is not ISO")
+        observed = row.get("observed_on", "")
+        if not date_matches_precision(observed, "day"):
+            errors.append(f"rule8: {key} observed_on '{observed}' is not ISO")
+        elif row.get("superseded_on") and row["superseded_on"] < observed:
+            errors.append(f"rule8: {key} superseded_on precedes observed_on {observed}")
 
     for row in tables["attributes"]:
         key = f"attributes {row['model_id']}"

@@ -161,6 +161,11 @@ def test_upsert_keeps_a_moved_date_as_superseded_history() -> None:
     assert {(r["source_url"], r["date"]) for r in live} == {(azure, "2026-11-19"), (mirror, "2026-10-01")}
     assert [(r["source_url"], r["date"], r["superseded_on"]) for r in gone] == [(azure, "2026-10-01", "2026-09-12")]
     assert (events[0]["date"], events[0]["confidence"]) == ("2026-11-19", "verified")
+    # observed_on: the day each statement was first read, not the run day.
+    assert {(r["source_url"], r["date"]): r["observed_on"] for r in rows} == {
+        (azure, "2026-10-01"): "2026-09-01", (azure, "2026-11-19"): "2026-09-12",
+        (mirror, "2026-10-01"): "2026-09-01"}
+    assert events[0]["observed_on"] == "2026-09-01"
     # Same statements again: nothing moves, history stays.
     assert upsert_machine_event(events, index, claims, "m", "retired", day2, date(2026, 9, 13),
                                 platform="azure") == "unchanged"
@@ -172,6 +177,8 @@ def test_upsert_keeps_a_moved_date_as_superseded_history() -> None:
     hist = sorted((r["date"], r["superseded_on"]) for r in claims["m-retired-1"] if r["superseded_on"])
     assert hist == [("2026-11-19", "2026-09-14")]
     assert events[0]["date"] == "2026-10-01"
+    back = [r for r in claims["m-retired-1"] if r["source_url"] == azure and not r["superseded_on"]]
+    assert [r["observed_on"] for r in back] == ["2026-09-01"]
 
 
 def test_upsert_withdraws_claims_before_curated_announcement() -> None:

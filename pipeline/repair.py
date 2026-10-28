@@ -135,5 +135,5 @@ def backfill_single_claim(tables: dict, event_id: str, label: str) -> None:
     (e,) = [e for e in tables["events"] if e["event_id"] == event_id]
     claim = Claim(date.fromisoformat(e["date"]), e["source_url"], e["source_type"],
                   precision=e["precision"], label=label)
-    tables["claims"].append(claim_to_row(event_id, claim))
+    tables["claims"].append(claim_to_row(event_id, claim, e.get("observed_on", "")))
     e["notes"] = f"single source: {label} {e['date']}"

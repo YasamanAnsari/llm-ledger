@@ -205,13 +205,14 @@ def curated_model_ids(events: list) -> set:
     return {e["model_id"] for e in events if is_person_verified(e)}
 
 
-def claim_to_row(event_id: str, c: Claim) -> dict:
+def claim_to_row(event_id: str, c: Claim, observed_on: str) -> dict:
+    """A claim row; `observed_on` is the day the ledger first read it."""
     return {
         "event_id": event_id, "source_url": c.source_url,
         "source_type": c.source_type, "date": c.date.isoformat(),
         "precision": c.precision, "label": c.label,
         "bound": str(c.bound).lower(), "first_party": str(c.first_party).lower(),
-        "superseded_on": "",
+        "superseded_on": "", "observed_on": observed_on,
     }
 
 
@@ -396,14 +397,25 @@ def upsert_machine_event(events: list, index: dict, claims_by_event: dict,
             "model_id": model_id, "event_type": event_type,
             "region": "global", "platform": platform, "detail": "",
             "verified_date": today.isoformat() if a.confidence == "verified" else "",
+            "observed_on": today.isoformat(),
             **fields,
         }
         events.append(row)
         index[key] = row
-        claims_by_event[row["event_id"]] = [claim_to_row(row["event_id"], c) for c in merged]
+        claims_by_event[row["event_id"]] = [claim_to_row(row["event_id"], c, today.isoformat())
+                                             for c in merged]
         return "added"
 
-    live_rows = [claim_to_row(existing["event_id"], c) for c in merged]
+    # A statement keeps the day it was first read, also when its source
+    # returns to a date it once left.
+    first_read: dict = {}
+    for r in claims_by_event.get(existing["event_id"], []):
+        key = (r["source_url"], r["date"])
+        if r.get("observed_on") and r["observed_on"] < first_read.get(key, "9999"):
+            first_read[key] = r["observed_on"]
+    live_rows = [claim_to_row(existing["event_id"], c,
+                              first_read.get((c.source_url, c.date.isoformat())) or today.isoformat())
+                 for c in merged]
     # A source that returns to a date it once left: the live row takes the
     # key (event, source, date) and the history row for it goes.
     live_keys = {(r["source_url"], r["date"]) for r in live_rows}
