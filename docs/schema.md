@@ -1,6 +1,7 @@
 # llm-ledger schema
 
-Six core tables plus generated files. CSVs are UTF-8, LF, sorted by
+Six core tables, observation tables (`data/observations/`) and
+generated files. CSVs are UTF-8, LF, sorted by
 primary key, ISO dates. The code of record is `pipeline/schema.py`.
 
 ![Entity-relationship diagram of the six core tables](erd.svg)

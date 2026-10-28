@@ -19,19 +19,28 @@ export const GAP_BINS = [
   {label: 'Over a year', test: d => d > 365},
 ];
 
-/** Days from announcement to first availability (models.anticipation_days), binned per access type. */
-export function gapBins(models) {
+/** A day-count column binned per access type, with the group median. */
+function dayBins(rows, field) {
   const out = {};
   for (const {key} of ACCESS) {
-    const gaps = models.filter(m => m.access_type === key && m.anticipation_days !== '').map(m => Number(m.anticipation_days));
+    const days = rows.filter(r => r.access_type === key && r[field] !== '').map(r => Number(r[field])).sort((a, b) => a - b);
+    const mid = days.length / 2;
     out[key] = {
-      n: gaps.length,
-      counts: GAP_BINS.map(b => gaps.filter(b.test).length),
-      later: gaps.filter(d => d > 0).length,
+      n: days.length,
+      counts: GAP_BINS.map(b => days.filter(b.test).length),
+      later: days.filter(d => d > 0).length,
+      median: !days.length ? null : days.length % 2 ? days[Math.floor(mid)] : (days[mid - 1] + days[mid]) / 2,
     };
   }
   return out;
 }
+
+/** Days from announcement to first availability (models.anticipation_days). */
+export const gapBins = models => dayBins(models, 'anticipation_days');
+
+/** Days from first availability to the first arXiv paper naming the model
+ * (research_first_mentions.days_to_first_mention). */
+export const mentionBins = rows => dayBins(rows, 'days_to_first_mention');
 
 export const FATES = [
   {key: 'retired', label: 'Shut down by the developer', color: '#7b3a33'},
@@ -111,12 +120,12 @@ export function legend(items) {
   return `<div class="figure-legend">${items.map(i => `<span><i class="${esc(i.shape || 'square')}" style="--c:${i.color}"></i>${esc(i.label)}</span>`).join('')}</div>`;
 }
 
-export function renderGap(gaps) {
+export function renderGap(gaps, caption = 'Days from announcement to first availability, by access type') {
   const rows = GAP_BINS.map((b, i) => `<div class="gap-row"><span class="gap-label">${esc(b.label)}</span><div class="gap-bars">${ACCESS.map(a => {
     const g = gaps[a.key], share = pct(g.counts[i], g.n);
     return `<div class="gap-bar"><i style="width:${g.n ? g.counts[i] / g.n * 100 : 0}%;--c:${a.color}"></i><span>${share}% <small>(${num(g.counts[i])})</small></span></div>`;
   }).join('')}</div></div>`).join('');
-  const table = dataTable('Days from announcement to first availability, by access type', ['Gap', ...ACCESS.map(a => `${a.label} (n=${gaps[a.key].n})`)],
+  const table = dataTable(caption, ['Gap', ...ACCESS.map(a => `${a.label} (n=${gaps[a.key].n})`)],
     GAP_BINS.map((b, i) => [b.label, ...ACCESS.map(a => `${gaps[a.key].counts[i]} (${pct(gaps[a.key].counts[i], gaps[a.key].n)}%)`)]));
   const head = `<div class="gap-row gap-head"><span></span><div class="gap-bars">${ACCESS.map(a => `<span style="--c:${a.color}"><i></i>${esc(a.label)} <small>n=${num(gaps[a.key].n)}</small></span>`).join('')}</div></div>`;
   return `<div class="gap-chart">${head}${rows}</div>` + table;

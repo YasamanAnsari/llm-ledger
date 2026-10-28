@@ -174,6 +174,27 @@ when the prompt or model changes.
 Fixes edit the row. `record_created` / `record_updated` and the
 changelog keep history.
 
+## Beyond dated events
+
+Three layers sit beside the events, keyed by the same `model_id`, and
+none of them changes an event:
+
+- **Observations** (`data/observations/`) record what a source said on
+  which days, as runs of days: provider listings, prices and limits from
+  the archived daily catalog pulls, and the Hub commit or API snapshot
+  served. A value that changes starts a new run; nothing is averaged.
+- **Capability** scores come from Epoch's ECI and are joined only in
+  `llm_ledger_capability.csv`, never copied into core.
+- **Research mentions** come from arXiv titles and abstracts (cs.AI,
+  cs.CL, cs.CV, cs.LG, stat.ML since 2023), matched against the ledger's
+  own spellings of each model with no model reading the text, one row per
+  paper version in `data/observations/research_mentions.csv`. Counts are
+  a floor: a name needs a version or size, and full text is not read.
+
+`make bundles` exports these with the events they relate to as four
+topic bundles; each has a methods page in `docs/bundles/`. Column rules
+for all of them are in `docs/schema.md`.
+
 ## Name matching
 
 `pipeline/match.py` cleans names, then exact-matches, then fuzzy

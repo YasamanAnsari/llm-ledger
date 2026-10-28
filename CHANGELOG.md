@@ -193,7 +193,13 @@ Data corrections update rows in place; this file preserves the history.
   models (426) and 20 for API-only models (139). Negative values flag
   dates to review: Llama 3 8B Instruct reads 2024-07-23 (a models.dev
   date over a 2024-04-17 Hub repo) and Llama 2 70B has no
-  `weights_released` row.
+  `weights_released` row. The site's FIG. 08 bins these days by access
+  type, and its download menu now lists the observation, capability and
+  research files.
+- `docs/erd.svg` shows the columns added this month (`models`: the
+  branding and use-restriction flags, `training_data_released`,
+  `training_code_released`; `events`: `observed_on`,
+  `replacement_model_id`; `claims`: `observed_on`).
 - `make bundles` (`pipeline/bundles.py`) writes four zips to
   `dist/bundles/`: Markets, Science, Lineage and Governance. Each holds
   `models.csv`, `organizations.csv`, its tables, the `events.csv` rows of

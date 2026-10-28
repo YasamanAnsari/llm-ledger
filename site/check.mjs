@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {marketOn, perMillion} from './ledger-engine.mjs';
-import {capabilityFrontier, frontierLag, gapBins, renderFrontier, retirementFates, scatterPoints,
+import {capabilityFrontier, frontierLag, gapBins, mentionBins, renderFrontier, retirementFates, scatterPoints,
   yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
@@ -21,6 +21,11 @@ assert.equal(gaps.open_weights.n, 2);
 assert.equal(gaps.open_weights.later, 1);
 assert.deepEqual(gaps.open_weights.counts, [0, 1, 0, 0, 1, 0, 0]);
 assert.deepEqual(gaps.api_only.counts, [1, 0, 0, 0, 0, 0, 0]);
+assert.equal(gaps.open_weights.median, 20);
+const firstMentions = mentionBins(['5', '200', '', '-3', '9'].map((days_to_first_mention, i) =>
+  ({access_type: i < 3 ? 'open_weights' : 'api_only', days_to_first_mention})));
+assert.deepEqual([firstMentions.open_weights.n, firstMentions.open_weights.median, firstMentions.api_only.median], [2, 102.5, 3]);
+assert.deepEqual(firstMentions.api_only.counts, [1, 0, 0, 1, 0, 0, 0]);
 
 const events = [
   {model_id: 'a1', event_type: 'retired', platform: '', date: '2026-01-01'},

@@ -23,6 +23,7 @@ const TABLES = {
   attributes: 'data/core/attributes.csv',
   crosswalk: 'data/core/crosswalk.csv',
   capability: 'data/generated/llm_ledger_capability.csv',
+  first_mentions: 'data/generated/research_first_mentions.csv',
 };
 const DOWNLOADS = [
   'data/core/models.csv', 'data/core/events.csv', 'data/core/claims.csv',

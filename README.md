@@ -46,6 +46,13 @@ table re-arranged for convenience. Dates on `models.csv` such as
 `first_public_availability_date` are computed from events; do not edit
 them by hand.
 
+Beside the core sits **observations** (`data/observations/`): what a
+source said and when, kept as stated rather than judged. Which
+providers listed a model at what price and limits, and which Hub commit
+or API snapshot was served, are runs of days; which arXiv papers named a
+model is one row per paper version. Generated views join them back to
+models on `model_id`.
+
 | I want | Open this |
 |---|---|
 | newest releases at the top | [`data/generated/models_latest.csv`](data/generated/models_latest.csv) |
@@ -195,8 +202,10 @@ Opus, Llama 3 70B).
 
 Count every GGUF and we would have fifty Qwen2.5-72Bs. We want one.
 
-Also out: scores, parameter counts, training cost (use
-[Epoch](https://epoch.ai/data/ai-models)), laws, usage stats.
+Also out of the core tables: scores, parameter counts, training cost
+(use [Epoch](https://epoch.ai/data/ai-models)), laws, usage stats.
+Epoch's capability scores are joined in a generated file
+(`llm_ledger_capability.csv`), never copied into core.
 
 This is a first cut, not everything. More models can go in. GGUFs
 still will not.
@@ -214,7 +223,7 @@ neither of which belongs in a dataset.
 
 ```bash
 python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
-make all   # pull match reconcile census lifecycle build validate test
+make all   # pull match reconcile census lifecycle observe build validate test
 ```
 
 Generated files rebuild the same way every time. We do not commit raw
@@ -228,6 +237,8 @@ the run: nothing is committed on a day a source could not be read.
 - [`docs/schema.md`](docs/schema.md): tables and allowed values
 - [`docs/sources.md`](docs/sources.md): where dates come from
 - [`docs/methodology.md`](docs/methodology.md): inclusion and checks
+- [`docs/bundles/`](docs/bundles/): methods for the Markets, Science,
+  Lineage and Governance bundles (`make bundles`)
 
 ## License
 
@@ -244,7 +255,8 @@ Upstream data incorporated here: [Epoch AI, "Data on AI Models"](https://epoch.a
 (CC BY 4.0), used in `data/generated/llm_ledger_enriched.csv` and as one
 dating signal among several; [Epoch AI, "Epoch Capabilities Index"](https://epoch.ai/eci)
 (CC BY 4.0), used in `data/generated/llm_ledger_capability.csv`; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
-(MIT), used as a discovery lead for pre-API-era models. The terms every
+(MIT), used as a discovery lead for pre-API-era models; [arXiv](https://arxiv.org)
+paper metadata (CC0 1.0, via OAI-PMH), used in `research_mentions.csv`. The terms every
 other source is used under are listed in [`docs/sources.md`](docs/sources.md);
 from them we keep individual facts and their URLs, not copies of content.
 

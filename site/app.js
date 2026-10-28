@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,formatDate,csvEncode} from './ledger-engine.mjs';
-import {gapBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS} from './charts.mjs';
+import {gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -92,6 +92,9 @@ function renderFindings(){
  const frontier=capabilityFrontier(ledger.data.capability),lag=frontierLag(frontier);
  $('frontier-chart').innerHTML=renderFrontier(frontier,'2023-01-01',meta.snapshot);
  $('frontier-summary').textContent=lag?`The best open-weights model, ${lag.open.name} (${formatDate(lag.open.date)}), scores ${lag.open.value}; an API-only model, ${lag.closed.name}, scored that high on ${formatDate(lag.closed.date)}, ${number(lag.days)} days (${(lag.days/30.44).toFixed(1)} months) earlier.`:'No API-only model has matched the best open-weights score.';
+ const mentions=mentionBins(ledger.data.first_mentions);
+ $('mention-chart').innerHTML=renderGap(mentions,'Days from first availability to the first arXiv paper naming the model, by access type');
+ $('mention-summary').textContent='Half of '+ACCESS.filter(a=>mentions[a.key].n).map(a=>`${a.noun} were named in a paper within ${number(Math.round(mentions[a.key].median))} days of first availability (n=${number(mentions[a.key].n)})`).join('; half of ')+'.';
  const verified=meta.confidence.verified/meta.events*100,inferred=meta.confidence.inferred/meta.events*100;
  $('confidence-ring').style.background=`conic-gradient(#447759 0% ${verified}%,#d5c196 ${verified}% ${verified+inferred}%,#b05a50 ${verified+inferred}% 100%)`;
  $('verified-pct').innerHTML=verified.toFixed(1)+'<span>%</span>';
