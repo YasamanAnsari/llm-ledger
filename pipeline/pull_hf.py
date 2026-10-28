@@ -107,7 +107,7 @@ PER_NAMESPACE_LIMIT = 60
 GLOBAL_TOP_LIMIT = 300
 
 COLUMNS = ["repo_id", "namespace", "org_id", "created_at", "downloads",
-           "pipeline_tag", "license", "tags"]
+           "pipeline_tag", "license", "tags", "sha", "last_modified"]
 
 
 def _rows_from(models, org_id: str = "") -> list:
@@ -128,13 +128,16 @@ def _rows_from(models, org_id: str = "") -> list:
             "pipeline_tag": getattr(m, "pipeline_tag", "") or "",
             "license": license_tag,
             "tags": "|".join(m.tags or []),
+            "sha": getattr(m, "sha", "") or "",
+            "last_modified": m.last_modified.date().isoformat()
+            if getattr(m, "last_modified", None) else "",
         })
     return rows
 
 
 def main() -> int:
     api = HfApi()
-    expand = ["createdAt", "downloads", "tags", "pipeline_tag"]
+    expand = ["createdAt", "downloads", "tags", "pipeline_tag", "sha", "lastModified"]
     all_rows: dict = {}
 
     for namespace, org_id in NAMESPACE_TO_ORG.items():

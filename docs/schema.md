@@ -261,10 +261,10 @@ Shared columns:
 
 | Column | Type | Rules |
 |---|---|---|
-| `source` | enum | `models_dev, openrouter, litellm, openai_api, anthropic_api, google_api, mistral_api` |
-| `provider` | string | who serves the id: the models.dev provider key, `openrouter`, LiteLLM's `litellm_provider`, or the vendor |
-| `api_id` | string | the id exactly as the source lists it |
-| `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model; blank when no ledger model matches |
+| `source` | enum | `models_dev, openrouter, litellm, openai_api, anthropic_api, google_api, mistral_api, hf` |
+| `provider` | string | who serves the id: the models.dev provider key, `openrouter`, LiteLLM's `litellm_provider`, the vendor, or `huggingface` |
+| `api_id` | string | the id exactly as the source lists it (a Hub repo id for `hf`) |
+| `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model (Hub repos resolve only exactly); blank when no ledger model matches |
 | `first_observed` / `last_observed` | ISO date | the run's first and last day |
 | `source_url` | URL | the payload URL from that day's manifest |
 
@@ -275,6 +275,22 @@ Primary key: `(source, provider, api_id, first_observed)`.
 | `availability_observations.csv` | none: a run is a span of days the id was listed. LiteLLM is a client library's price table, not a listing, and contributes none |
 | `price_observations.csv` | `price_input`, `price_output`, `price_cached`, `currency`, `unit` (`per_1m_tokens` for models.dev, `per_token` for OpenRouter and LiteLLM) |
 | `capability_observations.csv` | `context_length`, `max_output`, `modalities_in`, `modalities_out` (pipe-lists), `tool_use`, `structured_output`, `reasoning` (bool, blank when the source does not say) |
+| `model_versions.csv` | `version_kind`, `version_id`, `stated_date` (below) |
+
+`model_versions.csv` holds the version a source states for an id, so a
+result can name what was served:
+
+| `version_kind` | Source | `version_id` | `stated_date` |
+|---|---|---|---|
+| `hf_revision` | `hf` | the repo's head commit sha | the commit day (Hub `lastModified`) |
+| `api_snapshot` | `openai_api`, `anthropic_api` | the id itself, when it carries a snapshot date (`gpt-4o-2024-08-06`, `claude-haiku-4-5-20251001`) | the registry's created date |
+| `api_snapshot` | `google_api` | the registry's `version` field, verbatim (`001`, `3.5-flash-05-2026`; for `-latest` aliases Google returns a display name there) | blank: the registry gives none |
+
+A new sha is a new commit, which may change only the model card, not the
+weights; no `version_observed` event is drawn from it. Mistral's dated
+ids (`codestral-2508`) are not yet recognised as snapshots. Hub revisions
+start with the first daily pull after `pull_hf.py` began recording `sha`;
+the archived sweeps before it carry none.
 
 Coverage starts 2026-10-03, the oldest archived raw snapshot; earlier
 pulls kept manifests only. The full payloads are archived as
@@ -444,7 +460,8 @@ rewrite the dataset.
     open-weight models with no `license_family` are a counted warning.
 16. Observation runs have ISO bounds with `first_observed <=
     last_observed`, name a known model when `model_id` is set, and never
-    overlap for one `(source, provider, api_id)`.
+    overlap for one `(source, provider, api_id)`; a `model_versions` row
+    has a known `version_kind` and a `version_id`.
 
 Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
 run may not remove more than 2% of the events committed at `HEAD`, nor

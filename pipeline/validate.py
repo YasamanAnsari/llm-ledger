@@ -461,6 +461,10 @@ def check_rule16_observation_runs(tables: dict) -> list:
                 continue
             if r["model_id"] and r["model_id"] not in model_ids:
                 errors.append(f"rule16: {key} names unknown model {r['model_id']}")
+            if table is schema.MODEL_VERSIONS and (
+                    r["version_kind"] not in schema.VERSION_KINDS or not r["version_id"]):
+                errors.append(f"rule16: {key} needs a version_kind in "
+                              f"{sorted(schema.VERSION_KINDS)} and a version_id")
             runs.setdefault((r["source"], r["provider"], r["api_id"]), []).append(r)
         for subject, group in runs.items():
             group.sort(key=lambda r: r["first_observed"])

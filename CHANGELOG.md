@@ -112,6 +112,14 @@ Data corrections update rows in place; this file preserves the history.
   `migration_target_id=` in `detail` move it to the column, and their
   `deprecation_announced` rows from the same deprecation page take the
   same replacement.
+- New `data/observations/model_versions.csv`: the version a source states
+  for an id, as runs of days. Backfilled from the 25 archives: 104 runs
+  (OpenAI and Anthropic dated snapshot ids, Google's `version` field), 53
+  of them on a ledger model; no id changed version in that window. The
+  Hub puller now records each repo's commit `sha` and `lastModified`, so
+  Hub revisions start with the next daily pull; the archived sweeps never
+  held them. `observe.py` now tracks the last folded day per table and
+  source, so a new table backfills from archives the others already hold.
 
 ## 2026-10-14
 

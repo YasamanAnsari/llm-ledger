@@ -54,6 +54,45 @@ def test_resolver_prefers_the_exact_identifier_and_refuses_an_ambiguous_key() ->
     assert resolve("models_dev", "reseller", "acme-2") == ""                  # two models share the key
 
 
+def test_versions_backfill_days_the_other_tables_already_hold() -> None:
+    import json
+    import tempfile
+    root = Path(tempfile.mkdtemp())
+    vendor_header = "id,created_date,shutdown_date,display_name,max_input_tokens,max_output_tokens,aliases\n"
+    for day in ("2026-10-01", "2026-10-02"):
+        d = root / "openai_api" / day
+        d.mkdir(parents=True)
+        (d / "normalized.csv").write_text(vendor_header + "acme-1,2025-01-01,,,,,\n"
+                                          "acme-1-2025-06-01,2025-06-01,,,,,\n")
+        (d / "manifest.json").write_text(json.dumps(
+            {"models.json": {"url": "https://api.openai.com/v1/models", "sha256": "x"}}))
+        h = root / "hf" / day
+        h.mkdir(parents=True)
+        sha = "" if day == "2026-10-01" else ",sha,last_modified"
+        rows = "acme/acme-1,acme,acme,2025-01-01,1,text-generation,mit,"
+        (h / "normalized.csv").write_text(
+            "repo_id,namespace,org_id,created_at,downloads,pipeline_tag,license,tags" + sha + "\n"
+            + rows + (",abc123,2026-09-30" if sha else "") + "\n")
+        (h / "manifest.json").write_text(json.dumps(
+            {"normalized.csv": {"url": "https://huggingface.co/api/models", "sha256": "y"}}))
+    tables = {t.name: [] for t in schema.OBSERVATION_TABLES}
+    crosswalk = [{"model_id": "acme-1", "namespace": "openai_api", "identifier": "acme-1"},
+                 {"model_id": "acme-1", "namespace": "huggingface", "identifier": "acme/acme-1"}]
+    observe.observe(root, tables, crosswalk)
+    tables[schema.MODEL_VERSIONS.name].clear()
+    before = [dict(r) for r in tables[schema.AVAILABILITY_OBSERVATIONS.name]]
+    observe.observe(root, tables, crosswalk)
+    assert tables[schema.AVAILABILITY_OBSERVATIONS.name] == before
+    versions = {(r["source"], r["api_id"]): (r["version_id"], r["stated_date"], r["model_id"],
+                                             r["first_observed"], r["last_observed"])
+                for r in tables[schema.MODEL_VERSIONS.name]}
+    # Only the dated id is a snapshot; the sweep without `sha` adds nothing.
+    assert versions == {
+        ("openai_api", "acme-1-2025-06-01"): ("acme-1-2025-06-01", "2025-06-01", "",
+                                              "2026-10-01", "2026-10-02"),
+        ("hf", "acme/acme-1"): ("abc123", "2026-09-30", "acme-1", "2026-10-02", "2026-10-02")}
+
+
 def test_market_prices_convert_to_per_million_and_drop_the_router_marker() -> None:
     import market
     assert market.per_1m("2.5e-06", "per_token") == "2.5"

@@ -29,6 +29,7 @@ const DOWNLOADS = [
   'data/generated/models_latest.csv', 'data/generated/llm_ledger_wide.csv',
   'data/generated/llm_ledger_enriched.csv', 'data/generated/reschedules.csv',
   'data/generated/market_on_date.csv', ...Object.values(OBSERVATIONS),
+  'data/observations/model_versions.csv',
 ];
 
 /** RFC 4180 CSV text -> array of row objects keyed by the header. */

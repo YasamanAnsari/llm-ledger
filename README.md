@@ -57,6 +57,7 @@ them by hand.
 | other names for the same model | [`data/core/crosswalk.csv`](data/core/crosswalk.csv) |
 | context / prices / modalities | [`data/core/attributes.csv`](data/core/attributes.csv) |
 | which provider listed a model, at what price and limits, on each day | [`data/observations/`](data/observations/) (availability, price, capability) |
+| which exact version was served: Hub commit, API snapshot id | [`data/observations/model_versions.csv`](data/observations/model_versions.csv) |
 | everything on offer on one day, by provider, with prices | [`data/generated/market_on_date.csv`](data/generated/market_on_date.csv) (newest day; `pipeline/market.py --date D` for any other) |
 | lab icons | [`assets/orgs/`](assets/orgs/) (`{org_id}.svg`) |
 | how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |

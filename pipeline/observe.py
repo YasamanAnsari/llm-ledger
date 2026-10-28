@@ -2,7 +2,9 @@
 
 For each day a source was pulled, every id it lists becomes an
 availability observation, and the price and serving limits it shows for
-that id become price and capability observations. Values are copied as the
+that id become price and capability observations. The version a source
+states for an id (a Hub commit sha, a dated API snapshot id, Google's
+`version` field) becomes a model_versions row. Values are copied as the
 source states them, in the source's own unit. A row is a run: the source
 showed these values on every day from `first_observed` to `last_observed`.
 A day the source was not pulled ends every run; an id missing from a day
@@ -12,8 +14,9 @@ Usage:
     python pipeline/observe.py                 # payloads under data/raw
     python pipeline/observe.py --raw-root DIR  # an extracted raw-YYYY-MM-DD archive
 
-A day at or before the last one observed for a source is skipped, so days
-must arrive in order and a re-run changes nothing. `model_id` is re-resolved
+A day at or before the last one a table holds for a source is skipped for
+that table, so days must arrive in order, a re-run changes nothing, and a
+new table backfills from archives the other tables already hold. `model_id` is re-resolved
 from the crosswalk on every run.
 """
 
@@ -34,15 +37,16 @@ from match import normalize_name
 AVAILABILITY = schema.AVAILABILITY_OBSERVATIONS.name
 PRICE = schema.PRICE_OBSERVATIONS.name
 CAPABILITY = schema.CAPABILITY_OBSERVATIONS.name
+VERSIONS = schema.MODEL_VERSIONS.name
 
 VENDOR_APIS = ("openai_api", "anthropic_api", "google_api", "mistral_api")
 # source -> the payload file its observations are read from
 PAYLOADS = {"models_dev": "normalized.csv", "openrouter": "normalized.csv",
-            "litellm": "model_prices_and_context_window.json",
+            "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
             **{s: "normalized.csv" for s in VENDOR_APIS}}
 # The manifest entry whose URL is the evidence for the day.
 MANIFEST_PAYLOAD = {"models_dev": "api.json", "openrouter": "models.json",
-                    "litellm": "model_prices_and_context_window.json",
+                    "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
                     **{s: "models.json" for s in VENDOR_APIS}}
 # Namespaces whose identifiers name serving ids; the key fallback reads them.
 SERVING_NAMESPACES = ("models_dev", "openrouter") + VENDOR_APIS
@@ -88,8 +92,11 @@ def _openrouter(rows: list, url: str) -> dict:
     return out
 
 
-def _vendor_api(source: str, rows: list, url: str) -> dict:
-    out = {AVAILABILITY: [], PRICE: [], CAPABILITY: []}
+def _vendor_api(source: str, rows: list, url: str, google_versions: dict) -> dict:
+    """`google_versions` maps a Gemini API id to the `version` its registry
+    states; the other vendors state none, so only an id that carries a
+    snapshot date is a version."""
+    out = {AVAILABILITY: [], PRICE: [], CAPABILITY: [], VERSIONS: []}
     provider = source.removesuffix("_api")
     for r in rows:
         base = {"source": source, "provider": provider, "api_id": r["id"], "source_url": url}
@@ -99,7 +106,34 @@ def _vendor_api(source: str, rows: list, url: str) -> dict:
                 "context_length": r["max_input_tokens"], "max_output": r["max_output_tokens"],
                 "modalities_in": "", "modalities_out": "", "tool_use": "",
                 "structured_output": "", "reasoning": ""})
+        # ponytail: snapshot dates are read by match.normalize_name, which knows
+        # OpenAI's and Anthropic's date forms but not Mistral's YYMM suffix
+        # (codestral-2508); teach it that before counting Mistral snapshots.
+        version = google_versions.get(r["id"]) or (
+            r["id"] if normalize_name(r["id"])["snapshot_suffix"] else "")
+        if version:
+            out[VERSIONS].append(base | {"version_kind": "api_snapshot", "version_id": version,
+                                         "stated_date": r["created_date"]})
     return out
+
+
+def _hf(rows: list, url: str) -> dict | None:
+    """Hub commit per repo. Sweeps before the puller recorded `sha` hold
+    none and yield nothing."""
+    if not rows or "sha" not in rows[0]:
+        return None
+    return {VERSIONS: [
+        {"source": "hf", "provider": "huggingface", "api_id": r["repo_id"],
+         "version_kind": "hf_revision", "version_id": r["sha"],
+         "stated_date": r["last_modified"], "source_url": url}
+        for r in rows if r["sha"]]}
+
+
+def _google_versions(models_json: Path) -> dict:
+    """Gemini API id -> the `version` field its registry entry states."""
+    payload = json.loads(models_json.read_text(encoding="utf-8"))
+    entries = payload["models"] if isinstance(payload, dict) else payload
+    return {m["name"].removeprefix("models/"): m["version"] for m in entries if m.get("version")}
 
 
 def _flag(entry: dict, key: str) -> str:
@@ -153,7 +187,10 @@ def day_observations(source: str, day_dir: Path) -> dict | None:
         return _models_dev(rows, url)
     if source == "openrouter":
         return _openrouter(rows, url)
-    return _vendor_api(source, rows, url)
+    if source == "hf":
+        return _hf(rows, url)
+    google = _google_versions(day_dir / "models.json") if source == "google_api" else {}
+    return _vendor_api(source, rows, url, google)
 
 
 def _values(row: dict, table: schema.Table) -> tuple:
@@ -201,7 +238,8 @@ def _key(identifier: str) -> str:
 
 def model_resolver(crosswalk: list):
     """(source, provider, api_id) -> model_id. An exact crosswalk identifier
-    wins; else the normalized key, when it names exactly one model."""
+    wins; else the normalized key, when it names exactly one model. A Hub
+    repo resolves only exactly: the census decides which repos a model has."""
     exact = {(r["namespace"], r["identifier"]): r["model_id"] for r in crosswalk}
     by_key: dict = {}
     for r in crosswalk:
@@ -209,6 +247,8 @@ def model_resolver(crosswalk: list):
             by_key.setdefault(_key(r["identifier"]), set()).add(r["model_id"])
 
     def resolve(source: str, provider: str, api_id: str) -> str:
+        if source == "hf":
+            return exact.get(("huggingface", api_id), "")
         identifier = f"{provider}/{api_id}" if source == "models_dev" else api_id
         if (source, identifier) in exact:
             return exact[(source, identifier)]
@@ -232,19 +272,26 @@ def observe(raw_root: Path, tables: dict, crosswalk: list) -> list:
     last_seen: dict = {}
     for name, rows in tables.items():
         for r in rows:
-            last_seen[r["source"]] = max(last_seen.get(r["source"], ""), r["last_observed"])
+            key = (name, r["source"])
+            last_seen[key] = max(last_seen.get(key, ""), r["last_observed"])
     log = []
     for day, source, day_dir in _day_dirs(raw_root):
-        if day.isoformat() <= last_seen.get(source, ""):
+        pending = [t for t in schema.OBSERVATION_TABLES
+                   if day.isoformat() > last_seen.get((t.name, source), "")]
+        if not pending:
             continue
         obs = day_observations(source, day_dir)
         if obs is None:
             continue
         counts = []
-        for table in schema.OBSERVATION_TABLES:
-            started = extend_runs(tables[table.name], obs[table.name], table, day)
-            counts.append(f"{table.name.split('_')[0]} {len(obs[table.name])} ({started} new runs)")
-        log.append(f"observe: {source} {day}: " + ", ".join(counts))
+        for table in pending:
+            records = obs.get(table.name, [])
+            if not records:
+                continue
+            started = extend_runs(tables[table.name], records, table, day)
+            counts.append(f"{table.name.split('_')[0]} {len(records)} ({started} new runs)")
+        if counts:
+            log.append(f"observe: {source} {day}: " + ", ".join(counts))
     resolve = model_resolver(crosswalk)
     for rows in tables.values():
         for r in rows:

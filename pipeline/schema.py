@@ -256,7 +256,19 @@ CAPABILITY_OBSERVATIONS = Table(
     pk=_OBS_PK,
 )
 
-OBSERVATION_TABLES = (AVAILABILITY_OBSERVATIONS, PRICE_OBSERVATIONS, CAPABILITY_OBSERVATIONS)
+# The version a source states for an id: a Hub commit sha, or a vendor
+# API's snapshot id or version field. `stated_date` is the source's own
+# date for that version (the commit time, the snapshot's created date).
+MODEL_VERSIONS = Table(
+    name="model_versions",
+    filename="model_versions.csv",
+    columns=_OBS_KEY + ("version_kind", "version_id", "stated_date") + _OBS_SPAN,
+    pk=_OBS_PK,
+)
+VERSION_KINDS = {"hf_revision", "api_snapshot"}
+
+OBSERVATION_TABLES = (AVAILABILITY_OBSERVATIONS, PRICE_OBSERVATIONS, CAPABILITY_OBSERVATIONS,
+                      MODEL_VERSIONS)
 TABLES_BY_NAME = {t.name: t for t in CORE_TABLES}
 
 # ---------------------------------------------------------------------------
