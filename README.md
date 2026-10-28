@@ -56,6 +56,7 @@ them by hand.
 | who made the model | [`data/core/models.csv`](data/core/models.csv), [`organizations.csv`](data/core/organizations.csv) |
 | other names for the same model | [`data/core/crosswalk.csv`](data/core/crosswalk.csv) |
 | context / prices / modalities | [`data/core/attributes.csv`](data/core/attributes.csv) |
+| which provider listed a model, at what price and limits, on each day | [`data/observations/`](data/observations/) (availability, price, capability) |
 | lab icons | [`assets/orgs/`](assets/orgs/) (`{org_id}.svg`) |
 | how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |
 | where catalogs disagree | [`data/generated/disagreement_report.md`](data/generated/disagreement_report.md) |

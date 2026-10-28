@@ -71,6 +71,18 @@ Data corrections update rows in place; this file preserves the history.
   superseded before it was observed. Loaders keep the first day
   while a source repeats a statement; agent rows carry the day the feed
   was read. No date or confidence changes.
+- New `data/observations/`: `availability_observations.csv`,
+  `price_observations.csv` and `capability_observations.csv`, written by
+  `pipeline/observe.py`. Each row is a run of days on which one source
+  listed one id with the same values (models.dev per provider, OpenRouter,
+  LiteLLM, and the OpenAI, Anthropic, Google and Mistral model APIs).
+  Backfilled from the 25 archived daily snapshots, 2026-10-03 to
+  2026-10-27: 10,472 availability, 16,428 price and 15,928 capability
+  runs; 7,231, 10,728 and 9,974 of them resolve to a ledger model. The
+  plan counted 53 archives; releases exist only from 2026-10-03, so
+  history before that day is manifests only and cannot be rebuilt. The
+  daily run now appends. Validation rule 16 checks run bounds, model ids
+  and overlaps.
 
 ## 2026-10-14
 

@@ -1,6 +1,6 @@
 PY := .venv/bin/python
 
-.PHONY: validate pull match reconcile build test all census lifecycle sensitivity
+.PHONY: validate pull match reconcile build test all census lifecycle sensitivity observe
 
 validate:
 	$(PY) pipeline/validate.py
@@ -33,7 +33,10 @@ reconcile:
 build:
 	$(PY) pipeline/build.py
 
+observe:
+	$(PY) pipeline/observe.py
+
 test:
 	$(PY) tests/run_tests.py
 
-all: pull match reconcile census lifecycle build validate test
+all: pull match reconcile census lifecycle observe build validate test

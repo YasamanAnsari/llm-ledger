@@ -285,3 +285,18 @@ def test_churn_guard_trips_on_mass_removal_or_redating():
     assert any("removed" in e for e in validate.check_churn(previous, previous[3:]))
     redated = [dict(e, date="2025-02-01") if i < 6 else e for i, e in enumerate(previous)]
     assert any("re-dated" in e for e in validate.check_churn(previous, redated))
+
+
+def test_rule16_observation_runs_are_ordered_known_and_disjoint():
+    run = {"source": "openrouter", "provider": "openrouter", "api_id": "acme/acme-1",
+           "model_id": "acme-1", "first_observed": "2026-10-01", "last_observed": "2026-10-03",
+           "source_url": "https://openrouter.ai/api/v1/models"}
+    later = dict(run, first_observed="2026-10-05", last_observed="2026-10-05")
+    tables = _tables()
+    tables["availability_observations"] = [run, later]
+    assert _errors(tables) == []
+    for bad, needle in ((dict(later, first_observed="2026-10-03"), "overlap"),
+                        (dict(later, model_id="acme-9"), "unknown model"),
+                        (dict(later, last_observed="2026-10-04"), "bad bounds")):
+        tables["availability_observations"] = [run, bad]
+        assert any(needle in e for e in _errors(tables)), needle

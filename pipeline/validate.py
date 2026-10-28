@@ -426,6 +426,32 @@ def check_rule14_claim_history(tables: dict) -> list:
     return errors
 
 
+def check_rule16_observation_runs(tables: dict) -> list:
+    """Observation runs have ISO bounds in order, resolve to a known model
+    when they name one, and never overlap for one (source, provider, id)."""
+    errors = []
+    model_ids = {m["model_id"] for m in tables["models"]}
+    for table in schema.OBSERVATION_TABLES:
+        runs: dict = {}
+        for r in tables.get(table.name, []):
+            key = f"{table.name} {r['source']}/{r['provider']}/{r['api_id']} {r['first_observed']}"
+            if not (date_matches_precision(r["first_observed"], "day")
+                    and date_matches_precision(r["last_observed"], "day")
+                    and r["first_observed"] <= r["last_observed"]):
+                errors.append(f"rule16: {key} has bad bounds ..{r['last_observed']}")
+                continue
+            if r["model_id"] and r["model_id"] not in model_ids:
+                errors.append(f"rule16: {key} names unknown model {r['model_id']}")
+            runs.setdefault((r["source"], r["provider"], r["api_id"]), []).append(r)
+        for subject, group in runs.items():
+            group.sort(key=lambda r: r["first_observed"])
+            for prev, nxt in zip(group, group[1:]):
+                if nxt["first_observed"] <= prev["last_observed"]:
+                    errors.append(f"rule16: {table.name} {'/'.join(subject)} runs overlap "
+                                  f"at {nxt['first_observed']}")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -461,6 +487,7 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     e15, w15 = check_rule15_open_weight_licenses(tables)
     errors += e15
     warnings += w15
+    errors += check_rule16_observation_runs(tables)
     return errors, warnings
 
 
@@ -502,6 +529,8 @@ def main() -> int:
                         help="skip the churn guard for an intentional migration")
     args = parser.parse_args()
     tables = schema.load_core()
+    for table in schema.OBSERVATION_TABLES:
+        tables[table.name] = schema.read_table(table, schema.OBSERVATIONS_DIR)
     errors, warnings = validate_tables(tables, today=date.today())
     if not args.allow_churn:
         previous = committed_events()

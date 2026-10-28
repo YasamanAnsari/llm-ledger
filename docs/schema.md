@@ -229,6 +229,42 @@ holds only the latest observed snapshot. Rows with `source_url` =
 models.dev were filled from that catalog by `reconcile.py` and are only
 added for models without a hand-written row.
 
+## data/observations/ (what each source listed, day by day)
+
+Written by `pipeline/observe.py` from the daily pull payloads; never
+hand-edited. Observations are facts about a source on a day, kept apart
+from events (conclusions) and claims (statements about one event).
+
+A row is a **run**: the source showed these values on every day from
+`first_observed` to `last_observed`, inclusive. A day the source was not
+pulled ends every run, so a run never spans a day nobody looked. An id
+absent from a day the source was pulled was not listed that day. Values
+are copied as the source states them; prices keep the source's unit.
+
+Shared columns:
+
+| Column | Type | Rules |
+|---|---|---|
+| `source` | enum | `models_dev, openrouter, litellm, openai_api, anthropic_api, google_api, mistral_api` |
+| `provider` | string | who serves the id: the models.dev provider key, `openrouter`, LiteLLM's `litellm_provider`, or the vendor |
+| `api_id` | string | the id exactly as the source lists it |
+| `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model; blank when no ledger model matches |
+| `first_observed` / `last_observed` | ISO date | the run's first and last day |
+| `source_url` | URL | the payload URL from that day's manifest |
+
+Primary key: `(source, provider, api_id, first_observed)`.
+
+| Table | Extra columns |
+|---|---|
+| `availability_observations.csv` | none: a run is a span of days the id was listed. LiteLLM is a client library's price table, not a listing, and contributes none |
+| `price_observations.csv` | `price_input`, `price_output`, `price_cached`, `currency`, `unit` (`per_1m_tokens` for models.dev, `per_token` for OpenRouter and LiteLLM) |
+| `capability_observations.csv` | `context_length`, `max_output`, `modalities_in`, `modalities_out` (pipe-lists), `tool_use`, `structured_output`, `reasoning` (bool, blank when the source does not say) |
+
+Coverage starts 2026-10-03, the oldest archived raw snapshot; earlier
+pulls kept manifests only. The full payloads are archived as
+`raw-YYYY-MM-DD` releases of the agent repository, and
+`agent/backfill_observations.sh` there rebuilds these tables from them.
+
 ## Derived-field computation rules
 
 - `first_public_availability_date` = MIN over global-region events of type
@@ -377,6 +413,9 @@ rewrite the dataset.
     source host on the same event: history hangs off a current statement.
 15. An `open_weights` model may not carry `license_family=proprietary`;
     open-weight models with no `license_family` are a counted warning.
+16. Observation runs have ISO bounds with `first_observed <=
+    last_observed`, name a known model when `model_id` is set, and never
+    overlap for one `(source, provider, api_id)`.
 
 Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
 run may not remove more than 2% of the events committed at `HEAD`, nor

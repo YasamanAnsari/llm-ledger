@@ -21,6 +21,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CORE_DIR = REPO_ROOT / "data" / "core"
 GENERATED_DIR = REPO_ROOT / "data" / "generated"
+OBSERVATIONS_DIR = REPO_ROOT / "data" / "observations"
 RAW_DIR = REPO_ROOT / "data" / "raw"
 STAGING_DIR = REPO_ROOT / "data" / "staging"
 
@@ -207,6 +208,40 @@ CLAIMS = Table(
 )
 
 CORE_TABLES = (ORGANIZATIONS, MODELS, EVENTS, CLAIMS, CROSSWALK, ATTRIBUTES)
+
+# Observations (data/observations/): what a source listed on each day it was
+# pulled, written by pipeline/observe.py. A row is a run of days: the source
+# showed these values on every day from first_observed to last_observed.
+# `api_id` is the source's own id; `model_id` is resolved from the crosswalk
+# and blank when the id maps to no ledger model.
+_OBS_KEY = ("source", "provider", "api_id", "model_id")
+_OBS_SPAN = ("first_observed", "last_observed", "source_url")
+_OBS_PK = ("source", "provider", "api_id", "first_observed")
+
+AVAILABILITY_OBSERVATIONS = Table(
+    name="availability_observations",
+    filename="availability_observations.csv",
+    columns=_OBS_KEY + _OBS_SPAN,
+    pk=_OBS_PK,
+)
+
+PRICE_OBSERVATIONS = Table(
+    name="price_observations",
+    filename="price_observations.csv",
+    columns=_OBS_KEY + ("price_input", "price_output", "price_cached", "currency", "unit")
+    + _OBS_SPAN,
+    pk=_OBS_PK,
+)
+
+CAPABILITY_OBSERVATIONS = Table(
+    name="capability_observations",
+    filename="capability_observations.csv",
+    columns=_OBS_KEY + ("context_length", "max_output", "modalities_in", "modalities_out",
+                        "tool_use", "structured_output", "reasoning") + _OBS_SPAN,
+    pk=_OBS_PK,
+)
+
+OBSERVATION_TABLES = (AVAILABILITY_OBSERVATIONS, PRICE_OBSERVATIONS, CAPABILITY_OBSERVATIONS)
 TABLES_BY_NAME = {t.name: t for t in CORE_TABLES}
 
 # ---------------------------------------------------------------------------
