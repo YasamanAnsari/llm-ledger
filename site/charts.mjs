@@ -178,3 +178,55 @@ export function renderScatter(points, metric, start, end) {
     })]));
   return legend([...ACCESS.map(a => ({...a, shape: a.key === 'open_weights' ? 'diamond' : 'dot'})), {label: 'Yearly median', color: '#6f7a73', shape: 'line'}]) + svg + table;
 }
+
+/** Best ECI score on record per access type as of each ledger release
+ * date: the running maximum, one step per model that raised it. */
+export function capabilityFrontier(rows) {
+  const out = {};
+  for (const {key} of ACCESS) {
+    const group = rows.filter(r => r.access_type === key && r.first_public_availability_date && r.eci !== '')
+      .sort((a, b) => a.first_public_availability_date.localeCompare(b.first_public_availability_date));
+    const steps = [];
+    for (const r of group) {
+      const value = Number(r.eci);
+      if (!steps.length || value > steps.at(-1).value) steps.push({date: r.first_public_availability_date, value, id: r.model_id, name: r.canonical_name});
+    }
+    out[key] = steps;
+  }
+  return out;
+}
+
+/** How long before the best open-weights model an API-only model first
+ * scored at least as high; null when none has. */
+export function frontierLag(frontier) {
+  const open = frontier.open_weights.at(-1);
+  const closed = open && frontier.api_only.find(s => s.value >= open.value);
+  return closed ? {open, closed, days: Math.round((Date.parse(open.date) - Date.parse(closed.date)) / 864e5)} : null;
+}
+
+export function renderFrontier(frontier, start, end) {
+  // The step in force on `start` is drawn from the left edge.
+  const shown = Object.fromEntries(ACCESS.map(a => [a.key,
+    frontier[a.key].filter((p, i, all) => !(all[i + 1]?.date <= start))]));
+  const values = Object.values(shown).flat().map(s => s.value);
+  const lo = Math.floor(Math.min(...values) / 10) * 10, hi = Math.ceil(Math.max(...values) / 10) * 10;
+  const t0 = Date.parse(start), t1 = Date.parse(end);
+  const x = d => M.left + (Math.max(Date.parse(d), t0) - t0) / (t1 - t0) * (W - M.left - M.right);
+  const y = v => H - M.bottom - (v - lo) / (hi - lo) * (H - M.top - M.bottom);
+  const years = [];
+  for (let yr = new Date(start).getUTCFullYear() + 1; yr <= new Date(end).getUTCFullYear(); yr++) years.push(yr);
+  const yTicks = Array.from({length: (hi - lo) / 10 + 1}, (_, i) => lo + i * 10);
+  const grid = yTicks.map(v => `<line x1="${M.left}" x2="${W - M.right}" y1="${y(v)}" y2="${y(v)}"/><text x="${M.left - 8}" y="${y(v) + 3}" text-anchor="end">${v}</text>`).join('')
+    + years.map(yr => `<line x1="${x(`${yr}-01-01`)}" x2="${x(`${yr}-01-01`)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${x(`${yr}-01-01`)}" y="${H - M.bottom + 18}" text-anchor="middle">${yr}</text>`).join('');
+  const lines = ACCESS.map(a => {
+    const s = shown[a.key];
+    if (!s.length) return '';
+    const path = s.map((p, i) => `${i ? `H${x(p.date).toFixed(1)}V` : `M${x(p.date).toFixed(1)},`}${y(p.value).toFixed(1)}`).join('') + `H${x(end).toFixed(1)}`;
+    const marks = s.map(p => `<circle class="pt" data-model="${esc(p.id)}" cx="${x(p.date).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="3.2" fill="${a.color}"><title>${esc(`${p.name}: ECI ${p.value} · first available ${p.date}`)}</title></circle>`).join('');
+    return `<path class="median" d="${path}" stroke="${a.color}"/>${marks}`;
+  }).join('');
+  const svg = `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="Best Epoch Capabilities Index score on record by ledger release date, open weights versus API only"><g class="grid">${grid}</g>${lines}</svg>`;
+  const table = dataTable('Models that raised the best ECI score of their access type', ['First available', 'Access', 'Model', 'ECI'],
+    ACCESS.flatMap(a => frontier[a.key].map(s => [s.date, a.label, s.name, s.value])).sort((p, q) => p[0].localeCompare(q[0])));
+  return legend(ACCESS.map(a => ({...a, shape: 'line'}))) + svg + table;
+}

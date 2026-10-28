@@ -2,7 +2,8 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {marketOn, perMillion} from './ledger-engine.mjs';
-import {gapBins, retirementFates, scatterPoints, yearlyMedians} from './charts.mjs';
+import {capabilityFrontier, frontierLag, gapBins, renderFrontier, retirementFates, scatterPoints,
+  yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
 assert.throws(() => parseCsv('a,b\n1\n'), /field/);
@@ -39,6 +40,19 @@ assert.deepEqual(points.map(p => p.id), ['o2', 'a1']);
 const medians = yearlyMedians([1, 2, 3, 10].map((value, i) => ({access: 'api_only', date: `2025-0${i + 1}-01`, value})));
 assert.deepEqual(medians, [{access: 'api_only', year: '2025', n: 4, median: 2.5}]);
 assert.deepEqual(yearlyMedians([{access: 'api_only', date: '2025-01-01', value: 1}]), []);
+
+const scored = [['o1', 'open_weights', '2025-01-10', '120'], ['o2', 'open_weights', '2025-03-01', '110'],
+  ['o3', 'open_weights', '2025-06-01', '140'], ['a1', 'api_only', '2024-12-01', '130'],
+  ['a2', 'api_only', '2025-02-01', '145'], ['a3', 'api_only', '', '160']]
+  .map(([model_id, access_type, first_public_availability_date, eci]) =>
+    ({model_id, access_type, first_public_availability_date, eci, canonical_name: model_id}));
+const frontier = capabilityFrontier(scored);
+assert.deepEqual(frontier.open_weights.map(s => s.id), ['o1', 'o3']);
+assert.deepEqual(frontier.api_only.map(s => s.id), ['a1', 'a2']);
+const lag = frontierLag(frontier);
+assert.deepEqual([lag.closed.id, lag.days], ['a2', 120]);
+assert.equal(frontierLag(capabilityFrontier(scored.slice(0, 4))), null);
+assert.match(renderFrontier(frontier, '2025-01-01', '2025-12-31'), /data-model="a1"/);
 
 const observed = {
   availability: [

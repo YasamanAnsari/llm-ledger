@@ -440,6 +440,23 @@ def write_disagreement_report(matched: list) -> Path:
     return path
 
 
+def without_weights_release(events: list) -> list:
+    """Fold a drafted `weights_released` into `api_ga`: a person ruled the
+    model closed, so the catalogs' open-weights vote cannot date a weights
+    release for it."""
+    api = next((e for e in events if e["event_type"] == "api_ga"), None)
+    out = []
+    for ev in events:
+        if ev["event_type"] != "weights_released":
+            out.append(ev)
+        elif api is None:
+            api = {**ev, "event_type": "api_ga"}
+            out.append(api)
+        else:
+            api["claims"] = api["claims"] + ev["claims"]
+    return out
+
+
 def main() -> int:
     matched = _read_matched()
     today = date.today()
@@ -525,6 +542,8 @@ def main() -> int:
             outcomes["attributes"] += 1
             touched.add(model_id)
 
+        if model_id in curated_ids and models_by_id[model_id]["access_type"] != "open_weights":
+            draft["events"] = without_weights_release(draft["events"])
         floor = curated_announcement(event_index, model_id)
         # models.dev's open-weights verdict decides whether its date is a
         # weights or an API event; a row of the other type that rests on

@@ -51,6 +51,7 @@ them by hand.
 | newest releases at the top | [`data/generated/models_latest.csv`](data/generated/models_latest.csv) |
 | one row per model, dates as columns | [`data/generated/llm_ledger_wide.csv`](data/generated/llm_ledger_wide.csv) |
 | that plus Epoch scale columns | [`data/generated/llm_ledger_enriched.csv`](data/generated/llm_ledger_enriched.csv) |
+| capability scores (Epoch ECI) by model | [`data/generated/llm_ledger_capability.csv`](data/generated/llm_ledger_capability.csv) |
 | every dated fact with a source | [`data/core/events.csv`](data/core/events.csv) |
 | every source behind a machine-dated fact | [`data/core/claims.csv`](data/core/claims.csv) |
 | who made the model | [`data/core/models.csv`](data/core/models.csv), [`organizations.csv`](data/core/organizations.csv) |
@@ -169,9 +170,9 @@ For research:
 ## How much is in it
 
 <!-- stats:start -->
-Data as of 2026-10-28, the latest source pull. Exact counts: 1834 models from 75 organizations, 2857 dated events, backed by 4501 live source claims. First availability runs from 2021-11-18 to 2026-10-26. 87% of the models are open-weight; Chinese labs make up 34% of those.
+Data as of 2026-10-28, the latest source pull. Exact counts: 1834 models from 75 organizations, 2857 dated events, backed by 4499 live source claims. First availability runs from 2021-11-18 to 2026-10-26. 87% of the models are open-weight; Chinese labs make up 34% of those.
 
-Read the counts together with their confidence labels. 40% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 29% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 4% have a verified event a person read from a primary page such as a vendor blog or deprecation table, 36% have only machine-corroborated events, and the remaining 61% rest on a single source. Filter on `events.confidence` before treating a date as settled.
+Read the counts together with their confidence labels. 40% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 29% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 4% have a verified event a person read from a primary page such as a vendor blog or deprecation table, 35% have only machine-corroborated events, and the remaining 61% rest on a single source. Filter on `events.confidence` before treating a date as settled.
 <!-- stats:end -->
 
 Per-lab detail is in [`coverage_report.md`](data/generated/coverage_report.md),
@@ -239,7 +240,8 @@ The source code (`pipeline/`, `tests/`, `Makefile`) is licensed under the
 
 Upstream data incorporated here: [Epoch AI, "Data on AI Models"](https://epoch.ai/data/ai-models)
 (CC BY 4.0), used in `data/generated/llm_ledger_enriched.csv` and as one
-dating signal among several; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
+dating signal among several; [Epoch AI, "Epoch Capabilities Index"](https://epoch.ai/eci)
+(CC BY 4.0), used in `data/generated/llm_ledger_capability.csv`; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
 (MIT), used as a discovery lead for pre-API-era models. The terms every
 other source is used under are listed in [`docs/sources.md`](docs/sources.md);
 from them we keep individual facts and their URLs, not copies of content.

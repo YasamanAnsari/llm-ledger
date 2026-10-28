@@ -395,6 +395,18 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   when the provider is the model's developer (cloud resale keys such as
   `azure-openai` are not). Catalog diffs, not vendor announcements; a
   `price_changed` event in `events.csv` needs the vendor's own page.
+- `data/generated/llm_ledger_capability.csv` - one row per Epoch
+  Capabilities Index entry that names a ledger model, with the model's
+  `access_type`, `license_family` and `first_public_availability_date`
+  beside `eci` and its interval. The Epoch crosswalk id joins first
+  (`matched_by=crosswalk`); otherwise the normalized ECI name must equal a
+  ledger id that has no Epoch id of its own, and dated names such as
+  "GPT-4o (Aug 2024)" never join by name (`matched_by=name`). One model can
+  carry two entries when ECI scores two checkpoints. ECI publishes no index
+  version and no per-model evaluation date, so `eci_snapshot_date` (the
+  day the scores file was first archived) is the only version stamp;
+  compare scores within one snapshot. ECI is CC BY 4.0 (Epoch AI,
+  "Epoch Capabilities Index") and credited in the README.
 - `data/generated/sensitivity_report.md` - how far apart the candidate
   "release dates" of one model sit (announced vs api_ga vs
   weights_released ...), for researchers choosing a treatment date.
@@ -466,7 +478,7 @@ rewrite the dataset.
    sensitivity reports and the README stats block regenerate
    byte-identically from core tables.
 10. No Epoch-domain numeric columns (parameters, compute, dataset size,
-    training cost) exist in any core table.
+    training cost, ECI or benchmark scores) exist in any core table.
 11. Every event whose `source_type` is machine-owned (`hf_hub`,
     `modelscope`, `api_metadata`, `lifecycle_table`) has at least one row in
     `claims.csv`; no other event has any.

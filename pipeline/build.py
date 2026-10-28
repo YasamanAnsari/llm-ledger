@@ -38,6 +38,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import market
+import match as matchmod
 import schema
 import sensitivity
 from confidence import (AGENT_VERIFIER, PROJECT_VERIFIERS, curated_model_ids, is_machine_row,
@@ -327,6 +328,57 @@ def build_enriched_bytes() -> bytes:
     return _csv_bytes(columns, rows)
 
 
+CAPABILITY_COLUMNS = (
+    "model_id", "canonical_name", "developer_org_id", "access_type", "license_family",
+    "first_public_availability_date", "eci_model", "matched_by", "eci", "eci_ci_low",
+    "eci_ci_high", "eci_release_date", "eci_accessibility_group", "eci_snapshot_date",
+)
+
+
+def capability_rows(models: list, crosswalk: list, eci_rows: list, snapshot_date: str) -> list:
+    """One row per ECI entry that names a ledger model.
+
+    The Epoch crosswalk id joins first (`matched_by=crosswalk`). An entry
+    the crosswalk does not hold joins by name only when its normalized
+    name is a ledger id that has no Epoch id of its own and the name
+    carries no dated qualifier: ECI scores "GPT-4o (May 2024)" and
+    "GPT-4o (Aug 2024)" apart, and the ledger does not split them that way.
+    """
+    by_id = {m["model_id"]: m for m in models}
+    epoch_ids = {r["identifier"]: r["model_id"] for r in crosswalk if r["namespace"] == "epoch"}
+    with_epoch_id = set(epoch_ids.values())
+    rows = []
+    for entry in eci_rows:
+        name = entry["Model"]
+        model_id, matched_by = epoch_ids.get(name, ""), "crosswalk"
+        if not model_id and "(" not in name:
+            key = matchmod.normalize_name(name)["key"]
+            model_id, matched_by = (key, "name") if key in by_id and key not in with_epoch_id \
+                else ("", "")
+        model = by_id.get(model_id)
+        if model is None:
+            continue
+        rows.append({
+            **{c: model[c] for c in CAPABILITY_COLUMNS[:6]},
+            "eci_model": name, "matched_by": matched_by, "eci": entry["eci"],
+            "eci_ci_low": entry["eci_ci_low"], "eci_ci_high": entry["eci_ci_high"],
+            "eci_release_date": entry["date"],
+            "eci_accessibility_group": entry["Accessibility group"],
+            "eci_snapshot_date": snapshot_date,
+        })
+    return sorted(rows, key=lambda r: (r["model_id"], r["eci_model"]))
+
+
+def build_capability_bytes() -> bytes:
+    """The ECI join (CC BY 4.0, Epoch AI); generated only, never core."""
+    path = schema.snapshot_file("epoch_eci", "eci_scores.csv")
+    with path.open(newline="", encoding="utf-8") as fh:
+        eci_rows = list(csv.DictReader(fh))
+    rows = capability_rows(schema.read_table(MODELS), schema.read_table(schema.CROSSWALK),
+                           eci_rows, schema.snapshot_content_date("epoch_eci", "eci_scores.csv"))
+    return _csv_bytes(list(CAPABILITY_COLUMNS), rows)
+
+
 README_STATS_START = "<!-- stats:start -->"
 README_STATS_END = "<!-- stats:end -->"
 
@@ -580,6 +632,7 @@ GENERATED_ARTIFACTS = (
     ("reschedules.csv", build_reschedules_bytes),
     ("market_on_date.csv", build_market_bytes),
     ("price_changes.csv", build_price_changes_bytes),
+    ("llm_ledger_capability.csv", build_capability_bytes),
 )
 
 

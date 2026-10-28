@@ -8,8 +8,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 
 import schema
-from build import (LATEST_COLUMNS, _agent_section, build_reschedule_rows, compute_derived,
-                   latest_first, latest_pull_date, predecessor_review_rows)
+from build import (CAPABILITY_COLUMNS, LATEST_COLUMNS, _agent_section, build_reschedule_rows,
+                   capability_rows, compute_derived, latest_first, latest_pull_date,
+                   predecessor_review_rows)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -261,3 +262,20 @@ def test_predecessor_leads_follow_family_versions_within_one_name_shape() -> Non
     ]
     assert [(r["left_key"], r["right_key"]) for r in predecessor_review_rows(models)] == [
         ("glm-4-7", "glm-4-6")]
+
+
+def test_capability_joins_by_crosswalk_then_by_undated_name() -> None:
+    models = [{c: "" for c in CAPABILITY_COLUMNS[:6]} | {"model_id": mid}
+              for mid in ("gpt-4o", "qwen3-32b", "acme-2")]
+    crosswalk = [{"model_id": "gpt-4o", "namespace": "epoch", "identifier": "GPT-4o"},
+                 {"model_id": "acme-2", "namespace": "epoch", "identifier": "Acme Two"}]
+
+    def entry(name):
+        return {"Model": name, "eci": "120", "eci_ci_low": "118", "eci_ci_high": "122",
+                "date": "2025-01-01", "Accessibility group": "Closed"}
+
+    rows = capability_rows(models, crosswalk, [entry(n) for n in (
+        "GPT-4o", "GPT-4o (Aug 2024)", "Qwen3-32B", "Acme-2", "Unknown 9")], "2026-10-28")
+    assert [(r["model_id"], r["matched_by"]) for r in rows] == [
+        ("gpt-4o", "crosswalk"), ("qwen3-32b", "name")]
+    assert rows[0]["eci_snapshot_date"] == "2026-10-28"

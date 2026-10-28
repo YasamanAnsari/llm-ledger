@@ -2856,10 +2856,8 @@ ministral-3b-2512-platform_availability-1,https://openrouter.ai/api/v1/models,ap
 ministral-3b-2512-weights_released-1,https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512,hf_hub,2025-10-31,day,hub repo created,true,false,,2026-10-03
 ministral-3b-2512-weights_released-1,https://models.dev/api.json,api_metadata,2025-12-02,day,models.dev (first_party),false,false,,2026-10-08
 ministral-3b-2512-weights_released-1,https://web.archive.org/web/20251203/https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512,wayback,2025-12-03,day,first public capture,true,false,,2026-10-06
-ministral-3b-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2024-10-16,day,epoch.ai,false,false,,2026-09-01
 ministral-3b-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-12-09,day,azure_lifecycle (Ministral-3B),false,true,,2026-10-19
 ministral-3b-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-12-09,day,litellm (azure_ai/ministral-3b),false,false,,2026-10-19
-ministral-3b-weights_released-1,https://models.dev/api.json,api_metadata,2024-10-22,day,models.dev (majority),false,false,,2026-09-01
 ministral-8b-2512-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2025-12-02,day,openrouter,false,true,,2026-09-01
 ministral-8b-2512-weights_released-1,https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512,hf_hub,2025-10-31,day,hub repo created,true,false,,2026-10-03
 ministral-8b-2512-weights_released-1,https://models.dev/api.json,api_metadata,2025-12-02,day,models.dev (first_party),false,false,,2026-10-08

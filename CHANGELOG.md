@@ -158,6 +158,24 @@ Data corrections update rows in place; this file preserves the history.
   (SenseNova-MARS). `pull_nhlocal.py` also queues an `announce_lead` for
   each ledger model with no `announced` event that the timeline names
   (19 today).
+- New generated file `llm_ledger_capability.csv`: the Epoch Capabilities
+  Index (CC BY 4.0, `pull_capability.py`, in the agent's pulls) joined to
+  ledger models, 170 rows (149 by Epoch crosswalk id, 21 by name). ECI
+  has no index version or evaluation date; `eci_snapshot_date` stamps the
+  scores file. Never copied into core: validation rule 10 now also bans
+  `eci_` and `benchmark` columns there. Artificial Analysis is not used;
+  its terms forbid redistribution. The site's FIG. 07 plots the best
+  open-weights and best API-only score by ledger release date: the best
+  open model (Kimi K3, 2026-07-16) scores what an API-only model (GPT-5.4
+  Pro) first reached 133 days earlier.
+- Ministral 3B corrected from `open_weights` to `api_only` (license
+  proprietary). Mistral's launch post (2024-10-16) lists it only as
+  `ministral-3b-latest` under the Mistral Commercial License; the
+  research weights it mentions are Ministral 8B Instruct's. The models.dev
+  reseller vote had dated a `weights_released` 2024-10-22; that row is
+  gone, and `announced` and `api_ga` 2024-10-16 now cite the post.
+  `reconcile.py` no longer drafts a `weights_released` row for a model a
+  person ruled closed; the catalog date folds into `api_ga`.
 
 ## 2026-10-14
 

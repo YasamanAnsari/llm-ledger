@@ -127,7 +127,7 @@ FIRST_AVAILABILITY_VIA = AVAILABILITY_EVENT_TYPES | {
 # (validation rule 10).
 EPOCH_FORBIDDEN_COLUMN_TOKENS = (
     "parameter", "compute", "flop", "dataset_size", "training_cost",
-    "hardware", "training_time", "training_power",
+    "hardware", "training_time", "training_power", "eci_", "benchmark",
 )
 
 # ---------------------------------------------------------------------------

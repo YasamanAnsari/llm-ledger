@@ -189,3 +189,13 @@ def test_no_consensus_yields_no_stated_claim_and_a_review_row() -> None:
     # a single reseller still yields an inferred claim, labelled as such
     ev = _events_by_type(reconcile.reconcile_cluster(_cluster(md_release_dates="poe:2025-01-15"), TODAY))
     assert ev["api_ga"]["claims"][0].label == "models.dev (single)"
+
+
+def test_a_closed_ruling_folds_the_weights_draft_into_api_ga() -> None:
+    draft = reconcile.reconcile_cluster(
+        _cluster(md_release_dates="openai:2025-01-15", md_open_weights_votes="openai:true"), TODAY)
+    assert "weights_released" in _events_by_type(draft)
+    folded = {e["event_type"]: e for e in reconcile.without_weights_release(draft["events"])}
+    assert "weights_released" not in folded
+    assert folded["api_ga"]["claims"][0].date == date(2025, 1, 15)
+    assert "platform_availability" in folded

@@ -5053,9 +5053,9 @@ date,model_id,canonical_name,developer_org_id,access_type,license_family,provide
 2026-10-27,ministral-14b-2512,ministral-14b-2512,mistral,open_weights,osi_approved,nano-gpt,models_dev,mistralai/ministral-14b-2512,0.2,0.2,0.1,262144,32768,text,text,false,,false,2026-10-03,https://models.dev/api.json
 2026-10-27,ministral-14b-2512,ministral-14b-2512,mistral,open_weights,osi_approved,openrouter,models_dev,mistralai/ministral-14b-2512,0.2,0.2,0.02,262144,209715,text|image,text,true,,false,2026-10-03,https://models.dev/api.json
 2026-10-27,ministral-14b-2512,ministral-14b-2512,mistral,open_weights,osi_approved,openrouter,openrouter,mistralai/ministral-14b-2512,0.2,0.2,,262144,,text|image,text,,,,2026-10-03,https://openrouter.ai/api/v1/models
-2026-10-27,ministral-3b,Ministral 3B,mistral,open_weights,,azure,models_dev,ministral-3b,0.04,0.04,,128000,8192,text,text,true,,false,2026-10-03,https://models.dev/api.json
-2026-10-27,ministral-3b,Ministral 3B,mistral,open_weights,,azure-cognitive-services,models_dev,ministral-3b,0.04,0.04,,128000,8192,text,text,true,,false,2026-10-03,https://models.dev/api.json
-2026-10-27,ministral-3b,Ministral 3B,mistral,open_weights,,vercel,models_dev,mistral/ministral-3b,0.1,0.1,0.01,131072,4000,text|image,text,true,,false,2026-10-03,https://models.dev/api.json
+2026-10-27,ministral-3b,Ministral 3B,mistral,api_only,proprietary,azure,models_dev,ministral-3b,0.04,0.04,,128000,8192,text,text,true,,false,2026-10-03,https://models.dev/api.json
+2026-10-27,ministral-3b,Ministral 3B,mistral,api_only,proprietary,azure-cognitive-services,models_dev,ministral-3b,0.04,0.04,,128000,8192,text,text,true,,false,2026-10-03,https://models.dev/api.json
+2026-10-27,ministral-3b,Ministral 3B,mistral,api_only,proprietary,vercel,models_dev,mistral/ministral-3b,0.1,0.1,0.01,131072,4000,text|image,text,true,,false,2026-10-03,https://models.dev/api.json
 2026-10-27,ministral-3b-2512,ministral-3b-2512,mistral,open_weights,osi_approved,mistral,mistral_api,ministral-3b-2512,,,,131072,,,,,,,2026-10-03,https://api.mistral.ai/v1/models
 2026-10-27,ministral-3b-2512,ministral-3b-2512,mistral,open_weights,osi_approved,aimlapi,models_dev,mistralai/ministral-3b-2512,0.1587,0.1587,0.01058,131072,104857,text|image,text,true,,false,2026-10-13,https://models.dev/api.json
 2026-10-27,ministral-3b-2512,ministral-3b-2512,mistral,open_weights,osi_approved,cortecs,models_dev,ministral-3b-2512,0.123,0.123,0.012,256000,256000,text|image,text,true,,false,2026-10-03,https://models.dev/api.json

@@ -1272,7 +1272,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-10-23,weights_released,inferred,llama-3-2-1b-instruct-spinquant-int4-eo8,Llama-3.2-1B-Instruct-SpinQuant_INT4_EO8,meta,Llama-3.2-SpinQuant_EO8,instruct,llm,open_weights,open_weights_restricted
 2024-10-23,weights_released,inferred,sarvam-1,sarvam-1,sarvam,sarvam-1,,llm,open_weights,
 2024-10-22,api_ga,inferred,claude-3-5-haiku,Claude 3.5 Haiku,anthropic,Claude 3.5,mini,vlm,api_only,proprietary
-2024-10-22,weights_released,inferred,ministral-3b,Ministral 3B,mistral,ministral,,llm,open_weights,
+2024-10-16,api_ga,verified,ministral-3b,Ministral 3B,mistral,ministral,,llm,api_only,proprietary
 2024-10-16,weights_released,verified,ministral-8b,Ministral 8B,mistral,ministral,,llm,open_weights,
 2024-10-13,weights_released,inferred,falcon-mamba-tiny-dev,falcon-mamba-tiny-dev,tii,falcon-mamba-dev,mini,llm,open_weights,
 2024-10-10,weights_released,inferred,zamba2-7b-instruct,Zamba2-7B-Instruct,zyphra,Zamba2,instruct,llm,open_weights,osi_approved

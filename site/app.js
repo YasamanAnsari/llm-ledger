@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,formatDate,csvEncode} from './ledger-engine.mjs';
-import {gapBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,METRICS,ACCESS} from './charts.mjs';
+import {gapBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,METRICS,ACCESS} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -89,6 +89,9 @@ function renderFindings(){
  $('annual-chart').innerHTML=renderAnnual(meta.annual,meta.snapshot.slice(0,4));
  $('undated-count').textContent=number(meta.undated);
  renderScatterFigure('price_output');
+ const frontier=capabilityFrontier(ledger.data.capability),lag=frontierLag(frontier);
+ $('frontier-chart').innerHTML=renderFrontier(frontier,'2023-01-01',meta.snapshot);
+ $('frontier-summary').textContent=lag?`The best open-weights model, ${lag.open.name} (${formatDate(lag.open.date)}), scores ${lag.open.value}; an API-only model, ${lag.closed.name}, scored that high on ${formatDate(lag.closed.date)}, ${number(lag.days)} days (${(lag.days/30.44).toFixed(1)} months) earlier.`:'No API-only model has matched the best open-weights score.';
  const verified=meta.confidence.verified/meta.events*100,inferred=meta.confidence.inferred/meta.events*100;
  $('confidence-ring').style.background=`conic-gradient(#447759 0% ${verified}%,#d5c196 ${verified}% ${verified+inferred}%,#b05a50 ${verified+inferred}% 100%)`;
  $('verified-pct').innerHTML=verified.toFixed(1)+'<span>%</span>';
@@ -120,7 +123,7 @@ $('reset-filters').addEventListener('click',reset);$('export-filtered').addEvent
 $('table-body').addEventListener('click',e=>{const model=e.target.closest('[data-model]');if(model)openModel(model.dataset.model,model.dataset.event);if(e.target.closest('[data-reset]'))reset();});
 $('open-example').addEventListener('click',()=>{if(ledger)openModel(EXAMPLE_MODEL);else showToast('The dataset is still loading.');});
 document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderScatterFigure(b.dataset.metric);}));
-$('scatter-chart').addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
+for(const id of ['scatter-chart','frontier-chart'])$(id).addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
 $('close-dialog').addEventListener('click',()=>$('model-dialog').close());
 $('model-dialog').addEventListener('click',e=>{if(e.target===$('model-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 $('model-dialog').addEventListener('close',()=>{document.body.style.overflow='';selectedModel=null;});

@@ -10,9 +10,9 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1834; events: 2857
-- Models: curated 72, corroborated 652, single-source 1110
-- Event confidence: verified 1147, inferred 1704, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 422 of 1599
+- Models: curated 73, corroborated 651, single-source 1110
+- Event confidence: verified 1149, inferred 1702, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 421 of 1598
 
 ## By organization
 
@@ -22,7 +22,7 @@ as settled.
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
-| Mistral | 58 | 107 | 3 | 31 | 24 | 43% |
+| Mistral | 58 | 107 | 4 | 30 | 24 | 45% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 114 | 4 | 26 | 26 | 36% |
 | Google | 54 | 150 | 7 | 26 | 21 | 43% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1583 | 400 | 1182 | 1 |
+| weights_released | 1582 | 400 | 1181 | 1 |
 | platform_availability | 337 | 332 | 3 | 2 |
 | retired | 307 | 179 | 128 | 0 |
-| api_ga | 252 | 62 | 189 | 1 |
-| announced | 241 | 51 | 189 | 1 |
+| api_ga | 253 | 63 | 189 | 1 |
+| announced | 241 | 52 | 188 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |

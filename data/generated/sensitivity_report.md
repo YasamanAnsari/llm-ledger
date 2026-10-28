@@ -7,12 +7,12 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=133)
+- median 0d (IQR 0-2d, n=134)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 87 |
+| same day | 88 |
 | 1-7d | 16 |
 | 8-30d | 6 |
 | 31-90d | 10 |
@@ -31,17 +31,17 @@ Per-organization medians (n>=3):
 - zhipu: 0d (n=4)
 - openai: 0d (n=35)
 - meta: 0d (n=5)
-- mistral: 0d (n=4)
+- mistral: 0d (n=5)
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=99)
+- median 0d (IQR 0-1d, n=98)
 - range: 0d to 870d
 
 | gap | models |
 |---|---|
 | same day | 67 |
-| 1-7d | 19 |
+| 1-7d | 18 |
 | 8-30d | 2 |
 | 31-90d | 4 |
 | 91-365d | 4 |
@@ -51,7 +51,7 @@ Per-organization medians (n>=3):
 
 - baidu: 1d (n=3)
 - alibaba: 0d (n=12)
-- mistral: 0d (n=9)
+- mistral: 0d (n=8)
 - cohere: 0d (n=3)
 - deepseek: 0d (n=9)
 - google: 0d (n=10)
