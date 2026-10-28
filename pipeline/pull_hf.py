@@ -96,6 +96,10 @@ NAMESPACE_TO_ORG = {
     "SakanaAI": "sakana",
     "pfnet": "pfn",
     "rinna": "rinna",
+    "meta-models": "meta",
+    "reflection": "reflection",
+    "marin-community": "marin",
+    "nex-agi": "nex-agi",
 }
 
 IN_SCOPE_PIPELINES = {"text-generation", "image-text-to-text"}

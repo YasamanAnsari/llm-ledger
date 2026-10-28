@@ -23,7 +23,9 @@ deepseek-v3-1-retired-1,deepseek-v3-1,retired,azure,azure_lifecycle,https://lear
 deepseek-v3-2-retired-1,deepseek-v3-2,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-07-01,2027-11-01,123,2026-10-23
 deepseek-v4-flash-retired-2,deepseek-v4-flash,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-09-29,2026-10-22,23,2026-10-10
 deepseek-v4-flash-vision-exp-weights_released-1,deepseek-v4-flash-vision-exp,weights_released,,models.dev,https://models.dev/api.json,false,2026-09-10,2026-10-17,37,2026-10-19
+deepseek-v4-flash-vision-exp-weights_released-1,deepseek-v4-flash-vision-exp,weights_released,,models.dev,https://models.dev/api.json,false,2026-10-17,2026-08-21,-57,2026-10-27
 deepseek-v4-flash-weights_released-1,deepseek-v4-flash,weights_released,,models.dev,https://models.dev/api.json,false,2026-09-10,2026-10-17,37,2026-10-19
+deepseek-v4-flash-weights_released-1,deepseek-v4-flash,weights_released,,models.dev,https://models.dev/api.json,false,2026-10-17,2026-04-24,-176,2026-10-27
 deepseek-v4-pro-retired-2,deepseek-v4-pro,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-29,33,2026-09-18
 deepseek-v4-pro-retired-3,deepseek-v4-pro,retired,fireworks,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-25,29,2026-09-24
 deepseek-v4-pro-weights_released-1,deepseek-v4-pro,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-12,2026-08-13,1,2026-10-20

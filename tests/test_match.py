@@ -18,6 +18,10 @@ def test_stated_release_prefers_vendor_then_majority_then_refuses_to_guess():
     assert stated_release([("poe", "2025-10-22"), ("venice", "2025-11-18")], "google") == ("", "")
     assert stated_release([("sap-ai-core", "2025-12-02")], "amazon") == ("2025-12-02", "single")
     assert stated_release([("poe", ""), ("venice", "1970-01-01")], "x") == ("", "")
+    # DeepSeek's API alias carries its current target's date; resellers decide.
+    alias_votes = [("deepseek", "2026-10-17"), ("a", "2026-04-24"), ("b", "2026-04-24"), ("c", "2026-07-31")]
+    assert stated_release(alias_votes, "deepseek") == ("2026-10-17", "first_party")
+    assert stated_release(alias_votes, "deepseek", "deepseek-v4-flash") == ("2026-04-24", "majority")
     assert open_weights_vote([("deepseek", "false"), ("a", "true"), ("b", "true")], "deepseek") is False
     assert open_weights_vote([("a", "true"), ("b", "true"), ("c", "false")], "zhipu") is True
     assert open_weights_vote([("a", "true"), ("b", "false")], "mistral") is False

@@ -28,6 +28,32 @@ Data corrections update rows in place; this file preserves the history.
   or the tag is `other`). The same pass gave 93 machine-owned models with
   no license on record their repo's tag. Open-weight models with no
   family: 484 before, 434 after.
+- DeepSeek V4 Flash read 2026-10-17 and V4 Flash Vision Exp the same day:
+  DeepSeek's own catalog entries `deepseek-v4-flash` and
+  `deepseek-v4-flash-vision-exp` are serving aliases that now route to
+  V4.1 Flash 1017 (DeepSeek API docs: the legacy names "are still
+  accepted, but the corresponding models have been retired"), and the
+  vendor entry outvoted every reseller. Such vendor entries no longer vote
+  (`match.VENDOR_ALIAS_KEYS`). V4 Flash now reads 2026-04-24 and Vision
+  Exp 2026-08-21; each carries an `alias_repointed` row on 2026-10-17. The
+  dated snapshots the catalogs folded into their parents are split out:
+  `deepseek-v4-flash-0731` (Hub 2026-07-31) and `deepseek-v4-1-flash-1017`
+  (Hub 2026-10-17), each `snapshot_of` its parent.
+- New labs: Reflection AI (Beam 1.0), Nex AGI (Nex-N2 and N2.5; the
+  2026-10-14 dismissal is reversed in `review_decisions.csv`) and Marin
+  (marin-8b, marin-32b and the Delphi scaling suite, kept as the Pythia
+  suite is). Meta's `meta-models` Hub namespace now counts as Meta, which
+  adds the Muse Spark Open repo to the existing model and Muse Glimmer 30B
+  Assistant.
+- Licenses read from Hub cards where the tag said `other`: GLM-5.3
+  `glm-5.3`, MiniMax M3 and M3.1 Flash `minimax-community`, Muse Spark Open
+  `muse-model-license` (usage thresholds and a separate agreement per
+  their terms), Qwen3.8 2.4T `qwen3.8-max` and Qwen3.8-Flash-Next
+  `qwen-community-1.0` (custom, not Apache-2.0), Gemma 4 E2B and E4B
+  Apache-2.0, MiMo-V2.6 Pro and Flash MIT.
+- MiMo-V2.6 lineage from the report (arXiv:2610.11959, figure 13): each RL
+  checkpoint is the base of its MOPD checkpoint, which is the base of the
+  released model.
 
 ## 2026-10-14
 

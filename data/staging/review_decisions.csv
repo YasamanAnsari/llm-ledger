@@ -8,7 +8,7 @@ catalog_unmapped_vendor,inference-net,,dismiss,llm-ledger,2026-10-14,not a model
 catalog_unmapped_vendor,intfloat,,dismiss,llm-ledger,2026-10-14,"not a model lab: embedding models, out of scope"
 catalog_unmapped_vendor,mancer,,dismiss,llm-ledger,2026-10-14,not a model lab: inference provider; role-play fine-tunes
 catalog_unmapped_vendor,morph,,dismiss,llm-ledger,2026-10-14,not a model lab: code-apply tool models
-catalog_unmapped_vendor,nex-agi,,dismiss,llm-ledger,2026-10-14,not a model lab: fine-tunes of Qwen models
+catalog_unmapped_vendor,nex-agi,,accept,llm-ledger,2026-10-27,"reverses the 2026-10-14 dismissal: Nex-N1 were Qwen and DeepSeek fine-tunes, but Nex-N2 and N2.5 ship under Nex's own name and rank among the open models; added as a lab"
 catalog_unmapped_vendor,openrouter,,dismiss,llm-ledger,2026-10-14,not a model lab: router aliases
 catalog_unmapped_vendor,prism-ml,,dismiss,llm-ledger,2026-10-14,not a model lab: compressed Qwen models
 catalog_unmapped_vendor,relace,,dismiss,llm-ledger,2026-10-14,not a model lab: code-apply tool models

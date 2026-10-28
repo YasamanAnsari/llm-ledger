@@ -88,6 +88,10 @@ baichuan2-7b-base,huggingface,baichuan-inc/Baichuan2-7B-Base
 baichuan2-7b-chat,huggingface,baichuan-inc/Baichuan2-7B-Chat
 baichuanmed-ocr-72b,huggingface,baichuan-inc/BaichuanMed-OCR-72B
 baichuanmed-ocr-7b,huggingface,baichuan-inc/BaichuanMed-OCR-7B
+beam-1-0-501b-a23b,huggingface,reflection/Beam-1.0-501B-A23B
+beam-1-0-501b-a23b,huggingface,reflection/Beam-1.0-501B-A23B-FP8
+beam-1-0-501b-a23b,models_dev,cloudflare-ai-gateway/reflection-ai/beam-1.0-501b-a23b
+beam-1-0-501b-a23b,openrouter,reflection/beam-1.0-501b-a23b
 bfs-prover-v1-7b,huggingface,ByteDance-Seed/BFS-Prover-V1-7B
 bfs-prover-v2-32b,huggingface,ByteDance-Seed/BFS-Prover-V2-32B
 bfs-prover-v2-7b,huggingface,ByteDance-Seed/BFS-Prover-V2-7B
@@ -434,15 +438,19 @@ deepseek-v3-2-exp,models_dev,nano-gpt/deepseek-ai/deepseek-v3.2-exp
 deepseek-v3-2-exp,openrouter,deepseek/deepseek-v3.2-exp
 deepseek-v4-1-flash,epoch,DeepSeek V4.1 Flash
 deepseek-v4-1-flash,huggingface,deepseek-ai/DeepSeek-V4.1-Flash
-deepseek-v4-1-flash,huggingface,deepseek-ai/DeepSeek-V4.1-Flash-1017
 deepseek-v4-1-flash,models_dev,cline-pass/cline-pass/deepseek-v4.1-flash
 deepseek-v4-1-flash,models_dev,crossmodel/deepseek/deepseek-v4.1-flash
 deepseek-v4-1-flash,openrouter,deepseek/deepseek-v4.1-flash
+deepseek-v4-1-flash-1017,epoch,DeepSeek V4.1 Flash 1017
+deepseek-v4-1-flash-1017,huggingface,deepseek-ai/DeepSeek-V4.1-Flash-1017
+deepseek-v4-1-flash-1017,openrouter,deepseek/deepseek-v4.1-flash-1017
 deepseek-v4-flash,epoch,DeepSeek V4 Flash 0731
 deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash
-deepseek-v4-flash,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731
 deepseek-v4-flash,models_dev,cline-pass/cline-pass/deepseek-v4-flash
 deepseek-v4-flash,openrouter,deepseek/deepseek-v4-flash
+deepseek-v4-flash-0731,epoch,DeepSeek V4 Flash 0731
+deepseek-v4-flash-0731,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731
+deepseek-v4-flash-0731,openrouter,deepseek/deepseek-v4-flash-0731
 deepseek-v4-flash-dspark,huggingface,deepseek-ai/DeepSeek-V4-Flash-DSpark
 deepseek-v4-flash-vision-exp,huggingface,deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
 deepseek-v4-flash-vision-exp,models_dev,above/deepseek-v4-flash-vision-exp
@@ -458,6 +466,42 @@ deepseek-v4-pro,openrouter,deepseek/deepseek-v4-pro
 deepseek-v4-pro,wikipedia,DeepSeek
 deepseek-v4-pro-dspark,huggingface,deepseek-ai/DeepSeek-V4-Pro-DSpark
 deepseek-vl2-tiny,huggingface,deepseek-ai/deepseek-vl2-tiny
+delphi-1e21-3-4bparams-46-3btokens,huggingface,marin-community/delphi-1e21-3.4Bparams-46.3Btokens
+delphi-1e21-3-4bparams-46-3btokens-seed42,huggingface,marin-community/delphi-1e21-3.4Bparams-46.3Btokens-seed42
+delphi-1e22-9-7bparams-160btokens,huggingface,marin-community/delphi-1e22-9.7Bparams-160Btokens
+delphi-1e23-25bparams-628btokens,huggingface,marin-community/delphi-1e23-25Bparams-628Btokens
+delphi-2e19-1-2bparams-2-5btokens,huggingface,marin-community/delphi-2e19-1.2Bparams-2.5Btokens
+delphi-2e19-157mparams-25-8btokens,huggingface,marin-community/delphi-2e19-157Mparams-25.8Btokens
+delphi-2e19-447mparams-7-3btokens,huggingface,marin-community/delphi-2e19-447Mparams-7.3Btokens
+delphi-2e19-550mparams-5-8btokens,huggingface,marin-community/delphi-2e19-550Mparams-5.8Btokens
+delphi-2e19-669mparams-4-7btokens,huggingface,marin-community/delphi-2e19-669Mparams-4.7Btokens
+delphi-2e19-837mparams-3-6btokens,huggingface,marin-community/delphi-2e19-837Mparams-3.6Btokens
+delphi-2e20-1-4bparams-21-1btokens,huggingface,marin-community/delphi-2e20-1.4Bparams-21.1Btokens
+delphi-2e20-1-9bparams-14-8btokens,huggingface,marin-community/delphi-2e20-1.9Bparams-14.8Btokens
+delphi-2e20-273mparams-134btokens,huggingface,marin-community/delphi-2e20-273Mparams-134Btokens
+delphi-2e20-3-4bparams-8-3btokens,huggingface,marin-community/delphi-2e20-3.4Bparams-8.3Btokens
+delphi-2e20-4-3bparams-6-6btokens,huggingface,marin-community/delphi-2e20-4.3Bparams-6.6Btokens
+delphi-2e20-6-7bparams-4-2btokens,huggingface,marin-community/delphi-2e20-6.7Bparams-4.2Btokens
+delphi-2e20-998mparams-29-9btokens,huggingface,marin-community/delphi-2e20-998Mparams-29.9Btokens
+delphi-3e18-157mparams-4-3btokens,huggingface,marin-community/delphi-3e18-157Mparams-4.3Btokens
+delphi-3e18-210mparams-3btokens,huggingface,marin-community/delphi-3e18-210Mparams-3Btokens
+delphi-3e18-273mparams-2-2btokens,huggingface,marin-community/delphi-3e18-273Mparams-2.2Btokens
+delphi-3e18-358mparams-1-6btokens,huggingface,marin-community/delphi-3e18-358Mparams-1.6Btokens
+delphi-3e18-447mparams-1-2btokens,huggingface,marin-community/delphi-3e18-447Mparams-1.2Btokens
+delphi-3e19-1-4bparams-3-5btokens,huggingface,marin-community/delphi-3e19-1.4Bparams-3.5Btokens
+delphi-3e19-1-9bparams-2-5btokens,huggingface,marin-community/delphi-3e19-1.9Bparams-2.5Btokens
+delphi-3e19-447mparams-12-2btokens,huggingface,marin-community/delphi-3e19-447Mparams-12.2Btokens
+delphi-3e19-998mparams-5btokens,huggingface,marin-community/delphi-3e19-998Mparams-5Btokens
+delphi-3e20-1-4bparams-35-2btokens,huggingface,marin-community/delphi-3e20-1.4Bparams-35.2Btokens
+delphi-3e20-2-5bparams-18-6btokens,huggingface,marin-community/delphi-3e20-2.5Bparams-18.6Btokens
+delphi-3e20-273mparams-223btokens,huggingface,marin-community/delphi-3e20-273Mparams-223Btokens
+delphi-3e20-447mparams-122btokens,huggingface,marin-community/delphi-3e20-447Mparams-122Btokens
+delphi-3e20-998mparams-49-8btokens,huggingface,marin-community/delphi-3e20-998Mparams-49.8Btokens
+delphi-9e18-1-2bparams-1-3btokens,huggingface,marin-community/delphi-9e18-1.2Bparams-1.3Btokens
+delphi-9e18-550mparams-2-9btokens,huggingface,marin-community/delphi-9e18-550Mparams-2.9Btokens
+delphi-9e19-1-4bparams-10-6btokens,huggingface,marin-community/delphi-9e19-1.4Bparams-10.6Btokens
+delphi-9e19-1-9bparams-7-4btokens,huggingface,marin-community/delphi-9e19-1.9Bparams-7.4Btokens
+delphi-9e19-998mparams-14-9btokens,huggingface,marin-community/delphi-9e19-998Mparams-14.9Btokens
 devstral-2512,huggingface,mistralai/Devstral-2-123B-Instruct-2512
 devstral-2512,models_dev,aimlapi/mistralai/devstral-2512
 devstral-2512,models_dev,anyapi/mistralai/devstral-2512
@@ -1858,6 +1902,10 @@ mage-vl,huggingface,microsoft/Mage-VL
 magistral-small-2506,huggingface,mistralai/Magistral-Small-2506
 magistral-small-2509,huggingface,mistralai/Magistral-Small-2509
 mamba-codestral-7b-v0-1,huggingface,mistralai/Mamba-Codestral-7B-v0.1
+marin-32b-base,huggingface,marin-community/marin-32b-base
+marin-8b-base,huggingface,marin-community/marin-8b-base
+marin-8b-instruct,huggingface,marin-community/marin-8b-instruct
+marin-8b-instruct,huggingface,marin-community/marin-8b-instruct-bf16
 mbzuai-ain,huggingface,MBZUAI/AIN
 mbzuai-k2,huggingface,IFM/K2
 medgemma-1-5-4b-it,huggingface,google/medgemma-1.5-4b-it
@@ -2166,10 +2214,12 @@ mt0-xl,huggingface,bigscience/mt0-xl
 mt0-xxl,huggingface,bigscience/mt0-xxl
 mt0-xxl-mt,huggingface,bigscience/mt0-xxl-mt
 mt0-xxl-p3,huggingface,bigscience/mt0-xxl-p3
+muse-glimmer-30b,huggingface,meta-models/Muse-Glimmer-30B
 muse-glimmer-30b,models_dev,aimlapi/meta/muse-glimmer-30b
 muse-glimmer-30b,models_dev,edenai/flexai/Muse-Glimmer-30B
 muse-glimmer-30b,models_dev,empiriolabs/muse-glimmer-30b
 muse-glimmer-30b,openrouter,meta/muse-glimmer-30b
+muse-glimmer-30b-assistant,huggingface,meta-models/Muse-Glimmer-30B-assistant
 muse-spark-1-1,epoch,Muse Spark 1.1
 muse-spark-1-1,models_dev,abacus/muse-spark-1.1
 muse-spark-1-1,openrouter,meta/muse-spark-1.1
@@ -2189,6 +2239,7 @@ muse-spark-1-3-contributor,models_dev,cline-pass/cline-pass/muse-spark-1.3-contr
 muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 muse-spark-open,epoch,Muse Spark Open
+muse-spark-open,huggingface,meta-models/Muse-Spark-Open-816B-A42B
 muse-spark-open,models_dev,cloudflare-ai-gateway/meta/muse-spark-open
 muse-spark-open,openrouter,meta/muse-spark-open
 muse-wonder,epoch,Muse Wonder
@@ -2233,6 +2284,18 @@ nemotron-3-ultra-550b-a55b,models_dev,nvidia/nvidia/nemotron-3-ultra-550b-a55b
 nemotron-3-ultra-550b-a55b,openrouter,nvidia/nemotron-3-ultra-550b-a55b
 nemotron-labs-diffusion-8b,huggingface,nvidia/Nemotron-Labs-Diffusion-8B
 nemotron-labs-diffusion-8b-base,huggingface,nvidia/Nemotron-Labs-Diffusion-8B-Base
+nex-n2-5-max,huggingface,nex-agi/Nex-N2.5-Max
+nex-n2-5-max-dspark,huggingface,nex-agi/Nex-N2.5-Max-DSpark
+nex-n2-5-mini,huggingface,nex-agi/Nex-N2.5-mini
+nex-n2-5-mini,models_dev,kilo/nex-agi/nex-n2.5-mini
+nex-n2-5-mini,openrouter,nex-agi/nex-n2.5-mini
+nex-n2-5-pro,huggingface,nex-agi/Nex-N2.5-Pro
+nex-n2-5-pro,models_dev,kilo/nex-agi/nex-n2.5-pro
+nex-n2-5-pro,openrouter,nex-agi/nex-n2.5-pro
+nex-n2-5-pro-dflash,huggingface,nex-agi/Nex-N2.5-Pro-DFlash
+nex-n2-mini,huggingface,nex-agi/Nex-N2-mini
+nex-n2-pro,huggingface,nex-agi/Nex-N2-Pro
+nex-n2-pro,huggingface,nex-agi/Nex-N2-Pro-fp8
 north-micro-vision-instruct,huggingface,CohereLabs/North-Micro-Vision-Instruct
 north-mini-code,epoch,North Mini Code
 north-mini-code,models_dev,kilo/cohere/north-mini-code:free

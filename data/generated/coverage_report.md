@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1784; events: 2776
-- Models: curated 55, corroborated 663, single-source 1066
-- Event confidence: verified 1113, inferred 1657, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 434 of 1549
+- Models: 1834; events: 2831
+- Models: curated 55, corroborated 666, single-source 1113
+- Event confidence: verified 1121, inferred 1704, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 423 of 1599
 
 ## By organization
 
@@ -24,15 +24,16 @@ as settled.
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
 | Mistral | 58 | 107 | 3 | 31 | 24 | 43% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
-| Meta | 55 | 113 | 4 | 26 | 25 | 35% |
+| Meta | 56 | 114 | 4 | 26 | 26 | 36% |
 | Google | 54 | 150 | 7 | 26 | 21 | 43% |
 | RWKV | 54 | 54 | 0 | 4 | 50 | 7% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
 | Ant Group | 50 | 60 | 0 | 25 | 25 | 43% |
 | Shanghai AI Lab | 49 | 49 | 0 | 12 | 37 | 24% |
 | TII | 49 | 49 | 0 | 4 | 45 | 8% |
-| DeepSeek | 43 | 97 | 3 | 24 | 16 | 54% |
+| DeepSeek | 45 | 101 | 3 | 24 | 18 | 52% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
+| Marin | 39 | 39 | 0 | 0 | 39 | 0% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
 | Zhipu | 37 | 82 | 3 | 15 | 19 | 48% |
 | OpenBMB | 36 | 36 | 0 | 5 | 31 | 14% |
@@ -79,6 +80,7 @@ as settled.
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | Motif | 8 | 9 | 0 | 3 | 5 | 33% |
 | IEIT | 7 | 7 | 0 | 0 | 7 | 0% |
+| Nex | 7 | 9 | 0 | 2 | 5 | 44% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
@@ -89,14 +91,15 @@ as settled.
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
 | Thinking Machines | 2 | 7 | 0 | 2 | 0 | 43% |
+| Reflection | 1 | 2 | 0 | 1 | 0 | 100% |
 | Yandex | 1 | 1 | 0 | 0 | 1 | 0% |
 
 ## By event type
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1533 | 395 | 1137 | 1 |
-| platform_availability | 334 | 329 | 3 | 2 |
+| weights_released | 1583 | 400 | 1182 | 1 |
+| platform_availability | 337 | 332 | 3 | 2 |
 | retired | 306 | 178 | 128 | 0 |
 | api_ga | 252 | 62 | 189 | 1 |
 | announced | 241 | 51 | 189 | 1 |
@@ -108,12 +111,12 @@ as settled.
 | api_preview | 8 | 8 | 0 | 0 |
 | price_changed | 8 | 7 | 1 | 0 |
 | system_card | 7 | 6 | 1 | 0 |
-| alias_repointed | 3 | 2 | 1 | 0 |
+| alias_repointed | 5 | 2 | 3 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 30 (verified 4, single-source inferred 26)
+- Events it wrote: 32 (verified 4, single-source inferred 28)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
 Declined in the 7 days to 2026-10-27, by reason:

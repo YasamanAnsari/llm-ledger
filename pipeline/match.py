@@ -82,6 +82,12 @@ MMDD_SUFFIX_RE = re.compile(r"-(0[1-9]|1[0-2])([0-2]\d|3[01])$")
 # Catalog ids that are moving pointers, not checkpoints.
 ALIAS_TOKENS = {"latest"}
 ALIAS_KEYS = {"deepseek-chat", "deepseek-reasoner", "gemini-exp", "chatgpt-4o-latest"}
+# A model's own name that its vendor's API also uses as a serving alias:
+# the vendor repoints it to newer weights and its catalog entry takes the
+# new release date (DeepSeek's deepseek-v4-flash read 2026-09-10, then
+# 2026-10-17, the V4.1 Flash releases). Resellers still date the model;
+# the vendor entry does not. The repoints are `alias_repointed` events.
+VENDOR_ALIAS_KEYS = {"deepseek-v4-flash", "deepseek-v4-flash-vision-exp"}
 # Products this ledger does not track: embeddings, rerankers, speech
 # utilities, moderation and reward models, protein models, and image /
 # video / music generators named as such. Modalities alone cannot tell an
@@ -191,14 +197,17 @@ def _votes(pairs: list) -> list:
     return [(p, v) for p, v in pairs if v and v != "1970-01-01"]
 
 
-def stated_release(dates: list, org_id: str) -> tuple:
+def stated_release(dates: list, org_id: str, key: str = "") -> tuple:
     """(date, basis) for a model's release date across models.dev providers.
 
-    The vendor's own provider entry wins (`first_party`); else a strict
-    majority of resellers (`majority`); a lone reseller counts (`single`);
-    genuine disagreement yields no date at all ("", "") rather than a guess.
+    The vendor's own provider entry wins (`first_party`), unless `key` is a
+    vendor serving alias; else a strict majority of resellers (`majority`);
+    a lone reseller counts (`single`); genuine disagreement yields no date
+    at all ("", "") rather than a guess.
     """
     dated = _votes(dates)
+    if key in VENDOR_ALIAS_KEYS:
+        dated = [(p, d) for p, d in dated if orgs_seed.resolve_org(p) != org_id]
     if not dated:
         return "", ""
     own = [d for p, d in dated if orgs_seed.resolve_org(p) == org_id]

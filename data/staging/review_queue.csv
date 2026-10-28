@@ -2,7 +2,6 @@ kind,left_source,left_key,right_source,right_key,score,note
 catalog_unmapped_vendor,openrouter,elorian,ledger,,,e.g. glimpse; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,reflection,ledger,,,e.g. beam-1-0-501b-a23b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,xingchen-agi,ledger,,,e.g. xing4-0-29b-a4b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,claude-3-opus,ledger_cluster,claude-4-opus,92.3,92-97 band: confirm or reject before crosswalking
@@ -119,6 +118,10 @@ hf_mirror_repo,huggingface,arcee-ai/Llama-3-SEC-Base,ledger,meta,,re-hosted copy
 hf_mirror_repo,huggingface,arcee-ai/Llama-3.1-SuperNova-Lite,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/Mistral-7B-Instruct-v0.2-sliced-24-layer,ledger,mistral,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,arcee-ai/mistral-sliced,ledger,mistral,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,nex-agi/DeepSeek-V3.1-Nex-N1,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,nex-agi/DeepSeek-V3.1-Nex-N1.1,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,nex-agi/Qwen3-32B-Nex-N1,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,nex-agi/internlm3-8B-Nex-N1,ledger,shanghai-ai-lab,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,nvidia/Qwen3-8B-FP8,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,pfnet/Llama3-Preferred-MedSwallow-70B,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,pfnet/Qwen2.5-1.5B-pfn-qfin,ledger,alibaba,,re-hosted copy of another lab's weights; not a release

@@ -66,7 +66,11 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    entry states it, or a strict majority of resellers agree. A lone
    reseller yields an `inferred` claim; resellers that disagree with no
    majority yield no date and a `md_no_consensus` review row. A Jan-1
-   date is a year placeholder and never becomes the headline date.
+   date is a year placeholder and never becomes the headline date. A
+   vendor entry that is a serving alias (`match.VENDOR_ALIAS_KEYS`: the
+   vendor repoints the name to newer weights and the entry takes the new
+   date) does not vote; resellers date the model and the repoint is an
+   `alias_repointed` event.
 8. Time zones: dates derived from timestamps are UTC calendar dates;
    dates read from a page are as printed. A launch late in the US day or
    early in the Beijing day can land a day apart across sources; the

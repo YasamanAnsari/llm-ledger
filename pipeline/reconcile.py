@@ -258,7 +258,7 @@ def reconcile_cluster(row: dict, today: date, vendor: dict | None = None) -> dic
     model_id = match.slug_for(row["match_key"], org_id)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     md_dates = match.parse_votes(row["md_release_dates"])
-    stated, basis = match.stated_release(md_dates, org_id)
+    stated, basis = match.stated_release(md_dates, org_id, row["match_key"])
     open_weights = match.open_weights_vote(match.parse_votes(row["md_open_weights_votes"]), org_id)
     derivative = schema.derivative_from_name(model_id, org_id)
 

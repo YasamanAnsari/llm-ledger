@@ -4,6 +4,7 @@ amazon-nova-micro,false,none,,,,,128000,8192,text,text,,true,,,0.03,0.1,,2026-09
 amazon-nova-pro,false,none,,,,,300000,8192,text|image|video,text,,true,,,0.56,2.13,,2026-09-01,https://models.dev/api.json
 apertus-70b,true,,,,,,65536,16384,text,text,2025-09,true,,,1.393,2.228,,2026-10-03,https://models.dev/api.json
 apertus-8b-instruct,false,none,,,,,65536,8192,text,text,2025-09,true,,,0.1,0.2,,2026-10-03,https://models.dev/api.json
+beam-1-0-501b-a23b,true,,,,,,262144,131072,text,text,2026-06-30,true,,,0,0,0,2026-10-27,https://models.dev/api.json
 claude-2,,none,,,,,100000,,text,text,,,,,,,,,https://www.anthropic.com/news/claude-2
 claude-3-5-haiku,false,none,,,,,200000,8192,text|image|pdf,text,2024-07-31,true,,,0.8,4,,2026-09-01,https://models.dev/api.json
 claude-3-5-sonnet,,none,,,,,200000,,text|image,text,,true,,,3,15,,2024-06-20,https://www.anthropic.com/news/claude-3-5-sonnet
@@ -327,6 +328,8 @@ nemotron-3-super,true,,,,,,262144,65536,text,text,,true,,,,,,2026-09-01,https://
 nemotron-3-super-120b-a12b,true,,,,,,262144,262144,text,text,2024-04,true,,,0.2,0.8,,2026-09-01,https://models.dev/api.json
 nemotron-3-ultra,true,,,,,,262144,128000,text,text,,true,,,,,,2026-09-01,https://models.dev/api.json
 nemotron-3-ultra-550b-a55b,true,,,,,,1000000,65536,text,text,,true,,,0.5,2.5,0.15,2026-09-01,https://models.dev/api.json
+nex-n2-5-mini,true,,,,,,262144,235929,text|image,text,,false,,,0.025,0.1,0.0025,2026-10-27,https://models.dev/api.json
+nex-n2-5-pro,true,,,,,,262144,235929,text|image,text,,true,,,0.075,0.25,0.015,2026-10-27,https://models.dev/api.json
 north-mini-code,true,,,,,,256000,64000,text,text,2025-09-23,false,,,0.2,0.8,0.1,2026-09-01,https://models.dev/api.json
 nova-2-lite-v1,false,none,,,,,1000000,65535,text,text,,false,,,0.51,4.25,0.255,2026-09-01,https://models.dev/api.json
 nova-lite-v1,false,none,,,,,300000,5120,text,text,,false,,,0.0595,0.238,0.02975,2026-09-01,https://models.dev/api.json
