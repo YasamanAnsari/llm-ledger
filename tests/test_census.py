@@ -66,13 +66,13 @@ def test_derivative_under_publisher_and_recreated_repo_guard():
     assert [r["kind"] for r in review] == ["hf_recreated_repo"]
 
 
-def test_modelscope_creation_corroborates_a_hub_date_within_two_days():
+def test_modelscope_twin_is_a_second_lower_bound_not_a_verification():
     t = _tables()
     repos = [_repo("Qwen/Qwen3-8B", "alibaba", "2025-04-28")]
     ms = {("alibaba", "qwen3-8b"): ("2025-04-28", "https://modelscope.cn/models/Qwen/Qwen3-8B")}
     census(repos, t, {}, TODAY, NOW, modelscope=ms)
     (e,) = t["events"]
-    assert e["confidence"] == "verified" and "modelscope" in e["notes"]
+    assert e["confidence"] == "inferred" and "modelscope" in e["notes"]
     assert {c["source_type"] for c in t["claims"]} == {"hf_hub", "modelscope"}
     # a twin under another lab's org is not this lab's repo
     t = _tables()

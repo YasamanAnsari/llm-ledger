@@ -89,6 +89,18 @@ def _describe(claims: list) -> str:
 # but does not replace it.
 SECONDARY_BOUND_SOURCES = {"modelscope", "wayback"}
 
+# Bounds have a direction. A repo or registry creation timestamp is a lower
+# bound: the artifact existed then, maybe privately, so the release is at or
+# after it. A first public crawl is an upper bound: the page was public then,
+# so the release is at or before it. Two lower bounds that agree only say the
+# private repos were made together; a release needs a stated date or a lower
+# bound closed by an upper one.
+UPPER_BOUND_SOURCES = {"wayback"}
+
+
+def _is_upper_bound(c: Claim) -> bool:
+    return c.bound and c.source_type in UPPER_BOUND_SOURCES
+
 
 def _rank(c: Claim) -> tuple:
     """Preference for the row's date: stated day > bracketing day > year
@@ -165,7 +177,12 @@ def assess(claims: list) -> Assessment:
                                   f"{'first-party' if best.first_party else 'best-evidenced'} "
                                   f"claim: {_describe(independent)}")
     if len(comparable) >= 2 and spread <= AGREE_DAYS:
-        return result("verified", f"corroborated within {spread}d: {_describe(independent)}")
+        closed = (bool(stated_day)
+                  or (any(_is_upper_bound(c) for c in comparable)
+                      and any(c.bound and not _is_upper_bound(c) for c in comparable)))
+        if closed:
+            return result("verified", f"corroborated within {spread}d: {_describe(independent)}")
+        return result("inferred", f"lower bounds only, within {spread}d: {_describe(independent)}")
     if len(comparable) < 2:
         return result("inferred", f"single source, later bounds are lag: {_describe(independent)}")
     return result("inferred", f"claims differ by {spread}d: {_describe(independent)}")

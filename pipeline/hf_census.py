@@ -13,10 +13,11 @@ For each included repo:
   creation is a LOWER BOUND on public release (labs create repos private
   and flip them later), so on its own the claim is `inferred`. When
   pull_wayback.py has recorded the first public Wayback capture of the
-  repo page, or pull_modelscope.py the lab's twin repo on ModelScope, and
-  it agrees within confidence.AGREE_DAYS, the row becomes `verified`
-  by llm-ledger. The 2022-03-02 HF backfill artifact is queued for review,
-  never used.
+  repo page (an UPPER bound) and it agrees within confidence.AGREE_DAYS,
+  the row becomes `verified` by llm-ledger. The lab's twin repo on
+  ModelScope (pull_modelscope.py) is another lower bound: it corroborates
+  the date but two lower bounds alone stay `inferred`. The 2022-03-02 HF
+  backfill artifact is queued for review, never used.
 - queues one lead per Hub namespace that has in-scope repos but no org
   mapping, so a new lab is noticed rather than skipped.
 """

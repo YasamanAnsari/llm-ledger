@@ -22,7 +22,7 @@ we keep only facts (identifiers, timestamps) and the URL they came from.
 | Amazon Bedrock | model lifecycle page | EOL dates | first-party `retired` on `bedrock` | AWS documentation site terms; we keep the dates and the page URL, not the page |
 | LiteLLM | `model_prices_and_context_window.json` | `deprecation_date` | corroborates retirements | MIT ([BerriAI/litellm](https://github.com/BerriAI/litellm), outside `enterprise/`) |
 | Epoch AI | `https://epoch.ai/data/all_ai_models.csv` | publication date; scale columns | `announced` claim; enrichment join | CC BY 4.0, credited in the README and in `llm_ledger_enriched.csv` |
-| ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | bound that corroborates the Hub `createdAt` (no token) | ModelScope site terms; public search API, repo metadata only |
+| ModelScope | `PUT https://modelscope.cn/api/v1/dolphin/models` (public search, `organizations` criterion) | `CreatedTime`, license, task for the Chinese labs' repos | second lower bound beside the Hub `createdAt`; never verifies a release without a stated date or a Wayback capture (no token) | ModelScope site terms; public search API, repo metadata only |
 | arXiv | export API | paper v1 date | lookup tool for `paper_published` | descriptive metadata is CC0 1.0 (arXiv API terms of use) |
 
 Pullers with no key just skip. No fake rows. Every machine claim a row

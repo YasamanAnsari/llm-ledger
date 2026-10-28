@@ -246,10 +246,28 @@ def test_trailing_bound_is_lag_and_leading_bound_is_not() -> None:
     early_twin = _c("2023-04-23", MS, source_type="modelscope", bound=True)
     a = assess([hub, capture, early_twin])
     assert (a.confidence, a.date) == ("inferred", "2023-05-04")
-    # A twin within the window corroborates and the Hub keeps the date.
+    # A twin within the window is another lower bound: the Hub keeps the
+    # date, but two "at or before" timestamps do not verify a release.
     near_twin = _c("2023-05-05", MS, source_type="modelscope", bound=True)
     a = assess([hub, near_twin])
-    assert (a.confidence, a.date, a.source_type) == ("verified", "2023-05-04", "hf_hub")
+    assert (a.confidence, a.date, a.source_type) == ("inferred", "2023-05-04", "hf_hub")
+    assert "lower bounds only" in a.notes
+    assert assess([hub, near_twin, capture]).confidence == "verified"
+
+
+def test_two_lower_bounds_never_verify_minimax_shape() -> None:
+    # MiniMax M3.1 Flash: Hub and ModelScope repos created the same day,
+    # weights still private five days later. No stated date, no crawl.
+    hub = _c("2026-10-17", "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+             source_type="hf_hub", bound=True)
+    twin = _c("2026-10-17", "https://modelscope.cn/models/MiniMax/MiniMax-M3.1-Flash",
+              source_type="modelscope", bound=True)
+    registry = _c("2026-10-18", OAI, bound=True)
+    for claims in ([hub, twin], [hub, twin, registry]):
+        a = assess(claims)
+        assert (a.confidence, a.date, a.verified_by) == ("inferred", "2026-10-17", "")
+    # A stated date closes it.
+    assert assess([hub, twin, _c("2026-10-17", MD)]).confidence == "verified"
 
 
 def test_withdraw_machine_event_only_when_every_claim_is_from_the_named_hosts() -> None:

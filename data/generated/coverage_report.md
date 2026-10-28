@@ -10,14 +10,14 @@ reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
 - Models: 1784; events: 2776
-- Models: curated 55, corroborated 769, single-source 960
-- Event confidence: verified 1223, inferred 1547, disputed 6
+- Models: curated 55, corroborated 663, single-source 1066
+- Event confidence: verified 1113, inferred 1657, disputed 6
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 193 | 2 | 73 | 12 | 56% |
+| Alibaba | 87 | 193 | 2 | 66 | 19 | 52% |
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
@@ -25,18 +25,18 @@ as settled.
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 55 | 113 | 4 | 26 | 25 | 35% |
 | Google | 54 | 150 | 7 | 26 | 21 | 43% |
-| RWKV | 54 | 54 | 0 | 16 | 38 | 30% |
+| RWKV | 54 | 54 | 0 | 4 | 50 | 7% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
-| Ant Group | 50 | 60 | 0 | 36 | 14 | 63% |
-| Shanghai AI Lab | 49 | 49 | 0 | 39 | 10 | 80% |
+| Ant Group | 50 | 60 | 0 | 25 | 25 | 43% |
+| Shanghai AI Lab | 49 | 49 | 0 | 12 | 37 | 24% |
 | TII | 49 | 49 | 0 | 4 | 45 | 8% |
-| DeepSeek | 43 | 97 | 3 | 26 | 14 | 56% |
+| DeepSeek | 43 | 97 | 3 | 24 | 16 | 54% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
-| Zhipu | 37 | 82 | 3 | 27 | 7 | 62% |
-| OpenBMB | 36 | 36 | 0 | 15 | 21 | 42% |
+| Zhipu | 37 | 82 | 3 | 15 | 19 | 48% |
+| OpenBMB | 36 | 36 | 0 | 5 | 31 | 14% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
-| Tencent | 33 | 43 | 1 | 20 | 12 | 56% |
+| Tencent | 33 | 43 | 1 | 12 | 20 | 37% |
 | Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
 | Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
 | Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
@@ -44,31 +44,31 @@ as settled.
 | Anthropic | 27 | 132 | 8 | 15 | 4 | 68% |
 | Nous | 26 | 34 | 0 | 7 | 19 | 26% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
-| Xiaomi | 25 | 35 | 0 | 23 | 2 | 71% |
+| Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
-| 01.AI | 23 | 24 | 1 | 13 | 9 | 58% |
+| 01.AI | 23 | 24 | 1 | 5 | 17 | 25% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
 | Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
 | PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
-| StepFun | 17 | 20 | 0 | 13 | 4 | 65% |
+| StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 35 | 1 | 10 | 5 | 51% |
-| Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
+| MiniMax | 16 | 35 | 1 | 10 | 5 | 49% |
+| Moonshot | 16 | 40 | 0 | 14 | 2 | 52% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
 | SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
-| Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
+| Skywork | 14 | 14 | 0 | 5 | 9 | 36% |
 | Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
-| Baichuan | 11 | 11 | 0 | 7 | 4 | 64% |
+| Baichuan | 11 | 11 | 0 | 5 | 6 | 45% |
 | Meituan | 10 | 13 | 0 | 9 | 1 | 69% |
 | RedNote | 10 | 12 | 0 | 1 | 9 | 17% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
@@ -77,7 +77,7 @@ as settled.
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | Motif | 8 | 9 | 0 | 3 | 5 | 33% |
-| IEIT | 7 | 7 | 0 | 1 | 6 | 14% |
+| IEIT | 7 | 7 | 0 | 0 | 7 | 0% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
@@ -94,7 +94,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1533 | 505 | 1027 | 1 |
+| weights_released | 1533 | 395 | 1137 | 1 |
 | platform_availability | 334 | 329 | 3 | 2 |
 | retired | 306 | 178 | 128 | 0 |
 | api_ga | 252 | 62 | 189 | 1 |

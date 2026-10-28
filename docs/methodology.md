@@ -39,11 +39,17 @@ We care most about LLMs, VLMs, and multimodal models, in this order:
    when the repo was *created*, and labs create repos private and flip
    them public at launch. Across the models where we have both, the repo
    predates the launch in 16 of 20 cases, by up to three weeks. So a Hub
-   timestamp alone is `inferred`; it becomes `verified` only when an
-   independent bound lands within two days of it: the first public
-   Wayback capture of the repo, or the lab's twin repo on ModelScope
-   (swept through its public search; its creation time is a bound like
-   the Hub's). A bound that trails the Hub date by more than two days is
+   timestamp alone is `inferred`. Bounds have a direction: repo and
+   registry creation times are lower bounds (the release is at or after
+   them), a first public crawl is an upper bound (the page was public by
+   then). A Hub row becomes `verified` only when the first public Wayback
+   capture of the repo lands within two days of it, closing the window
+   from above. The lab's twin repo on ModelScope (swept through its
+   public search) is another lower bound: it is recorded and can widen
+   the spread, but two lower bounds alone stay `inferred`, because both
+   repos may have been created privately on the same day (MiniMax M3.1
+   Flash: Hub and ModelScope repos 2026-10-17, weights still private on
+   2026-10-22). A bound that trails the Hub date by more than two days is
    lag (a late crawl, a mirror made months later) and is only noted; one
    that leads it keeps the row `inferred`, because the weights may have
    been public there first. The Hub row keeps the date either way.

@@ -3,6 +3,19 @@
 All notable changes to the llm-ledger dataset and pipeline are recorded here.
 Data corrections update rows in place; this file preserves the history.
 
+## 2026-10-27
+
+- Bounds now have a direction in `pipeline/confidence.py`. Hub, ModelScope
+  and vendor-registry creation times are lower bounds (the release is at
+  or after them); a first public Wayback capture is an upper bound. A row
+  is `verified` by agreement only when a stated date is among the agreeing
+  claims, or a lower bound is closed by an upper bound within two days.
+  Two lower bounds that agree stay `inferred`. Before this, a Hub repo and
+  its ModelScope twin created the same day verified a release: MiniMax M3.1
+  Flash read `verified` 2026-10-17 while its weights were still private on
+  2026-10-22. 110 `weights_released` rows move from `verified` to
+  `inferred`; no date changes.
+
 ## 2026-10-14
 
 - Meta's original `codellama` Hub namespace now counts as Meta. Code Llama
