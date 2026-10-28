@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {NO_COUNTRY, createLedger, marketOn, perMillion} from './ledger-engine.mjs';
-import {accessGroup, annotateGroups, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, retirementFates, scatterPoints,
+import {accessGroup, annotateGroups, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, renderGap, retirementFates, scatterPoints,
   yearlyMedians} from './charts.mjs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
@@ -37,6 +37,7 @@ assert.equal(gaps.open_weights.later, 1);
 assert.deepEqual(gaps.open_weights.counts, [0, 1, 0, 0, 1, 0, 0]);
 assert.deepEqual(gaps.api_only.counts, [1, 0, 0, 0, 0, 0, 0]);
 assert.equal(gaps.open_weights.median, 20);
+assert.ok(!renderGap(gaps).includes('Fully open'), 'a group with no dated models gets no column');
 const firstMentions = mentionBins(['5', '200', '', '-3', '9'].map((days_to_first_mention, i) =>
   ({access_group: i < 3 ? 'open_weights' : 'api_only', days_to_first_mention})));
 assert.deepEqual([firstMentions.open_weights.n, firstMentions.open_weights.median, firstMentions.api_only.median], [2, 102.5, 3]);

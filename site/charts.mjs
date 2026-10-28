@@ -178,13 +178,14 @@ export function legend(items) {
 }
 
 export function renderGap(gaps, caption = 'Days from announcement to first availability, by access type') {
-  const rows = GAP_BINS.map((b, i) => `<div class="gap-row"><span class="gap-label">${esc(b.label)}</span><div class="gap-bars">${ACCESS.map(a => {
+  const groups = ACCESS.filter(a => gaps[a.key].n);
+  const rows = GAP_BINS.map((b, i) => `<div class="gap-row"><span class="gap-label">${esc(b.label)}</span><div class="gap-bars">${groups.map(a => {
     const g = gaps[a.key], share = pct(g.counts[i], g.n);
-    return `<div class="gap-bar"><i style="width:${g.n ? g.counts[i] / g.n * 100 : 0}%;--c:${a.color}"></i><span>${share}% <small>(${num(g.counts[i])})</small></span></div>`;
+    return `<div class="gap-bar"><i style="width:${g.counts[i] / g.n * 100}%;--c:${a.color}"></i><span>${share}% <small>(${num(g.counts[i])})</small></span></div>`;
   }).join('')}</div></div>`).join('');
-  const table = dataTable(caption, ['Gap', ...ACCESS.map(a => `${a.label} (n=${gaps[a.key].n})`)],
-    GAP_BINS.map((b, i) => [b.label, ...ACCESS.map(a => `${gaps[a.key].counts[i]} (${pct(gaps[a.key].counts[i], gaps[a.key].n)}%)`)]));
-  const head = `<div class="gap-row gap-head"><span></span><div class="gap-bars">${ACCESS.map(a => `<span style="--c:${a.color}"><i></i>${esc(a.label)} <small>n=${num(gaps[a.key].n)}</small></span>`).join('')}</div></div>`;
+  const table = dataTable(caption, ['Gap', ...groups.map(a => `${a.label} (n=${gaps[a.key].n})`)],
+    GAP_BINS.map((b, i) => [b.label, ...groups.map(a => `${gaps[a.key].counts[i]} (${pct(gaps[a.key].counts[i], gaps[a.key].n)}%)`)]));
+  const head = `<div class="gap-row gap-head"><span></span><div class="gap-bars">${groups.map(a => `<span style="--c:${a.color}"><i></i>${esc(a.label)} <small>n=${num(gaps[a.key].n)}</small></span>`).join('')}</div></div>`;
   return `<div class="gap-chart">${head}${rows}</div>` + table;
 }
 
