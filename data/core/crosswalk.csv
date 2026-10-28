@@ -353,6 +353,7 @@ deep-ignorance-unfiltered,huggingface,EleutherAI/deep-ignorance-unfiltered
 deephermes-3-llama-3-3b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-3B-Preview
 deephermes-3-llama-3-8b-preview,huggingface,NousResearch/DeepHermes-3-Llama-3-8B-Preview
 deephermes-3-mistral-24b-preview,huggingface,NousResearch/DeepHermes-3-Mistral-24B-Preview
+deephermes-financial-fundamentals-prediction-specialist-atropos,huggingface,NousResearch/DeepHermes-Financial-Fundamentals-Prediction-Specialist-Atropos
 deepseek-chat-v3,models_dev,aimlapi/deepseek/deepseek-chat-v3-0324
 deepseek-chat-v3,models_dev,kilo/deepseek/deepseek-chat-v3-0324
 deepseek-chat-v3,openrouter,deepseek/deepseek-chat-v3-0324
@@ -498,9 +499,12 @@ delphi-3e20-273mparams-223btokens,huggingface,marin-community/delphi-3e20-273Mpa
 delphi-3e20-447mparams-122btokens,huggingface,marin-community/delphi-3e20-447Mparams-122Btokens
 delphi-3e20-998mparams-49-8btokens,huggingface,marin-community/delphi-3e20-998Mparams-49.8Btokens
 delphi-9e18-1-2bparams-1-3btokens,huggingface,marin-community/delphi-9e18-1.2Bparams-1.3Btokens
+delphi-9e18-210mparams-9-1btokens,huggingface,marin-community/delphi-9e18-210Mparams-9.1Btokens
 delphi-9e18-550mparams-2-9btokens,huggingface,marin-community/delphi-9e18-550Mparams-2.9Btokens
+delphi-9e18-998mparams-1-5btokens,huggingface,marin-community/delphi-9e18-998Mparams-1.5Btokens
 delphi-9e19-1-4bparams-10-6btokens,huggingface,marin-community/delphi-9e19-1.4Bparams-10.6Btokens
 delphi-9e19-1-9bparams-7-4btokens,huggingface,marin-community/delphi-9e19-1.9Bparams-7.4Btokens
+delphi-9e19-5-3bparams-2-6btokens,huggingface,marin-community/delphi-9e19-5.3Bparams-2.6Btokens
 delphi-9e19-998mparams-14-9btokens,huggingface,marin-community/delphi-9e19-998Mparams-14.9Btokens
 devstral-2512,huggingface,mistralai/Devstral-2-123B-Instruct-2512
 devstral-2512,models_dev,aimlapi/mistralai/devstral-2512
@@ -554,6 +558,7 @@ doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
 doubao-seed-2-1-turbo,models_dev,nano-gpt/bytedance/doubao-seed-2.1-turbo
+e1-code-14b,huggingface,Salesforce/E1-Code-14B
 ernie-4-5-0-3b,huggingface,baidu/ERNIE-4.5-0.3B-Paddle
 ernie-4-5-0-3b-base,huggingface,baidu/ERNIE-4.5-0.3B-Base-Paddle
 ernie-4-5-0-3b-base-pt,huggingface,baidu/ERNIE-4.5-0.3B-Base-PT
@@ -638,6 +643,7 @@ falcon-h1-tiny-90m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-90M-Instruct
 falcon-h1-tiny-multilingual-100m-base,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Base
 falcon-h1-tiny-multilingual-100m-instruct,huggingface,tiiuae/Falcon-H1-Tiny-Multilingual-100M-Instruct
 falcon-h1-tiny-r-0-6b,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B
+falcon-h1-tiny-r-0-6b-pre-grpo,huggingface,tiiuae/Falcon-H1-Tiny-R-0.6B-pre-GRPO
 falcon-h1-tiny-r-90m,huggingface,tiiuae/Falcon-H1-Tiny-R-90M
 falcon-h1-tiny-tool-calling-90m,huggingface,tiiuae/Falcon-H1-Tiny-Tool-Calling-90M
 falcon-h1r-7b,huggingface,tiiuae/Falcon-H1R-7B
@@ -1613,6 +1619,7 @@ kimi-k3,models_dev,cline-pass/cline-pass/kimi-k3
 kimi-k3,openrouter,moonshotai/kimi-k3
 kimi-k3,wikipedia,Kimi (AI)
 kimi-k3-1-pro,epoch,Kimi K3.1 Pro
+kimi-k3-1-pro,models_dev,302ai/kimi-k3.1-pro
 kimi-k3-1-pro,models_dev,edenai/moonshot/kimi-k3.1-pro
 kimi-k3-1-pro,openrouter,moonshotai/kimi-k3.1-pro
 kimi-linear-48b-a3b-base,huggingface,moonshotai/Kimi-Linear-48B-A3B-Base
@@ -1693,6 +1700,7 @@ lfm2-8b-a1b,huggingface,LiquidAI/LFM2-8B-A1B
 lfm2-vl-1-6b,huggingface,LiquidAI/LFM2-VL-1.6B
 lfm2-vl-3b,huggingface,LiquidAI/LFM2-VL-3B
 lfm2-vl-450m,huggingface,LiquidAI/LFM2-VL-450M
+lfm3-1-7b,huggingface,LiquidAI/LFM3-1.7B
 ling-1t,epoch,Ling-1T
 ling-1t,huggingface,inclusionAI/Ling-1T
 ling-1t,models_dev,bailing/Ling-1T
@@ -1730,6 +1738,7 @@ ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-3-0-tiny-ubtree,huggingface,inclusionAI/Ling-3.0-tiny-UBTree
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash
 ling-3-1-flash,models_dev,commandcode/inclusionai/ling-3.1-flash:free
 ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
@@ -1806,6 +1815,7 @@ llama-3-2-1b-instruct-spinquant-int4-eo8,huggingface,meta-llama/Llama-3.2-1B-Ins
 llama-3-2-3b,huggingface,meta-llama/Llama-3.2-3B
 llama-3-2-3b-instruct,epoch,Llama 3.2 3B
 llama-3-2-3b-instruct,huggingface,meta-llama/Llama-3.2-3B-Instruct
+llama-3-2-3b-instruct,models_dev,kilo/meta-llama/llama-3.2-3b-instruct
 llama-3-2-3b-instruct,models_dev,llmgateway/llama-3.2-3b-instruct
 llama-3-2-3b-instruct,models_dev,nano-gpt/meta-llama/llama-3.2-3b-instruct
 llama-3-2-3b-instruct,models_dev,pioneer/meta-llama/Llama-3.2-3B-Instruct
@@ -1823,6 +1833,7 @@ llama-3-70b,huggingface,meta-llama/Meta-Llama-3-70B
 llama-3-70b-instruct,epoch,Llama 3-70B
 llama-3-70b-instruct,huggingface,NousResearch/Meta-Llama-3-70B-Instruct
 llama-3-70b-instruct,huggingface,meta-llama/Meta-Llama-3-70B-Instruct
+llama-3-70b-instruct,models_dev,llmgateway-providers/novita/llama-3-70b-instruct
 llama-3-70b-instruct,models_dev,llmgateway/llama-3-70b-instruct
 llama-3-70b-instruct,text_surface_forms,Llama 3
 llama-3-70b-instruct,wikipedia,Llama (language model)
@@ -2348,6 +2359,7 @@ o1-preview,models_dev,nano-gpt/openai/o1-preview
 o1-pro,epoch,o1-pro
 o1-pro,models_dev,aimlapi/openai/o1-pro
 o1-pro,models_dev,edenai/openai/o1-pro
+o1-pro,models_dev,kilo/openai/o1-pro
 o1-pro,openai_api,o1-pro
 o1-pro,openai_api,o1-pro-2025-03-19
 o1-pro,openrouter,openai/o1-pro
@@ -2445,6 +2457,7 @@ openreasoning-nemotron-32b,epoch,OpenReasoning-Nemotron-32B
 openreasoning-nemotron-32b,models_dev,nano-gpt/pamanseau/OpenReasoning-Nemotron-32B
 opt-125m,huggingface,facebook/opt-125m
 opt-350m,huggingface,facebook/opt-350m
+oreal-7b,huggingface,internlm/OREAL-7B
 oreal-deepseek-r1-distill-qwen-7b,huggingface,internlm/OREAL-DeepSeek-R1-Distill-Qwen-7B
 ouro-1-4b,huggingface,ByteDance/Ouro-1.4B
 ouro-1-4b-thinking,huggingface,ByteDance/Ouro-1.4B-Thinking
@@ -2661,6 +2674,7 @@ qwen3-235b-a22b,text_surface_forms,Qwen3
 qwen3-235b-a22b,wikipedia,Qwen
 qwen3-235b-a22b-2507,models_dev,kilo/qwen/qwen3-235b-a22b-2507
 qwen3-235b-a22b-2507,openrouter,qwen/qwen3-235b-a22b-2507
+qwen3-235b-a22b-thinking-2507,models_dev,huggingface/Qwen/Qwen3-235B-A22B-Thinking-2507
 qwen3-235b-a22b-thinking-2507,models_dev,iflowcn/qwen3-235b-a22b-thinking-2507
 qwen3-235b-a22b-thinking-2507,models_dev,llmgateway/qwen3-235b-a22b-thinking-2507
 qwen3-235b-a22b-thinking-2507,models_dev,venice/qwen3-235b-a22b-thinking-2507
@@ -2983,6 +2997,7 @@ seed-coder-8b-reasoning,huggingface,ByteDance-Seed/Seed-Coder-8B-Reasoning-bf16
 seed-oss-36b-base,huggingface,ByteDance-Seed/Seed-OSS-36B-Base
 seed-oss-36b-base-wosyn,huggingface,ByteDance-Seed/Seed-OSS-36B-Base-woSyn
 seed-oss-36b-instruct,huggingface,ByteDance-Seed/Seed-OSS-36B-Instruct
+sensenova-6-8-code2video,huggingface,sensenova/SenseNova-6.8-Code2Video
 sensenova-mars-32b,huggingface,sensenova/SenseNova-MARS-32B
 sensenova-mars-8b,huggingface,sensenova/SenseNova-MARS-8B
 sensenova-si-1-1-bagel-7b-mot,huggingface,sensenova/SenseNova-SI-1.1-BAGEL-7B-MoT
@@ -3234,6 +3249,7 @@ xlam-2-1b-fc-r,huggingface,Salesforce/xLAM-2-1b-fc-r
 xlam-2-3b-fc-r,huggingface,Salesforce/xLAM-2-3b-fc-r
 xlam-7b-r,huggingface,Salesforce/xLAM-7b-r
 xlam-8x22b-r,huggingface,Salesforce/xLAM-8x22b-r
+yandex-8b-wmt26,huggingface,yandex/Yandex-8B-WMT26
 yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
 yarn-mistral-7b-128k,huggingface,NousResearch/Yarn-Mistral-7b-128k
 yi-1-5-34b,huggingface,01-ai/Yi-1.5-34B

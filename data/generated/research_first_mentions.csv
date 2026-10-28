@@ -307,7 +307,7 @@ llama-3-2-11b-instruct,Llama 3.2 11B,Llama 3.2,open_weights,,2024-09-25,2024-10-
 llama-3-2-11b-vision,Llama-3.2-11B-Vision,Llama-3.2,open_weights,2024-09-18,2024-09-18,2025-01-31,2411.17426,135
 llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,Llama-3.2,open_weights,2024-09-18,2024-09-18,2025-03-04,2502.00196,167
 llama-3-2-1b-instruct,Llama 3.2 1B,Llama 3.2,open_weights,2024-09-25,2024-09-25,2024-12-19,2412.14771,85
-llama-3-2-3b-instruct,Llama 3.2 3B,Llama 3.2,open_weights,2024-09-18,2024-09-18,2025-02-01,2502.20405,136
+llama-3-2-3b-instruct,Llama 3.2 3B,Llama 3.2,open_weights,2024-09-25,2024-09-25,2025-02-01,2502.20405,129
 llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,Llama-3.2,open_weights,2024-09-19,2024-09-19,2025-07-21,2411.10440,305
 llama-3-3-70b-instruct,Llama 3.3 70B,Llama 3.3,open_weights,2024-12-06,2024-12-06,2025-01-13,2501.07359,38
 llama-3-70b,Meta-Llama-3-70B,Meta-Llama-3,open_weights,2024-04-17,2024-04-17,2024-12-09,2412.06144,236

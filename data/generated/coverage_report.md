@@ -9,46 +9,46 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1834; events: 2857
-- Models: curated 73, corroborated 651, single-source 1110
-- Event confidence: verified 1149, inferred 1702, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 421 of 1598
+- Models: 1845; events: 2871
+- Models: curated 73, corroborated 665, single-source 1107
+- Event confidence: verified 1164, inferred 1701, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 424 of 1609
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 87 | 193 | 2 | 66 | 19 | 52% |
+| Alibaba | 87 | 193 | 2 | 68 | 17 | 53% |
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
 | Mistral | 58 | 107 | 4 | 30 | 24 | 45% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
-| Meta | 56 | 114 | 4 | 26 | 26 | 36% |
+| Meta | 56 | 115 | 4 | 27 | 25 | 36% |
 | Google | 54 | 150 | 7 | 26 | 21 | 43% |
 | RWKV | 54 | 54 | 0 | 4 | 50 | 7% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
-| Ant Group | 50 | 60 | 0 | 25 | 25 | 43% |
-| Shanghai AI Lab | 49 | 49 | 0 | 12 | 37 | 24% |
-| TII | 49 | 49 | 0 | 4 | 45 | 8% |
-| DeepSeek | 45 | 102 | 3 | 25 | 17 | 53% |
+| Ant Group | 51 | 61 | 0 | 26 | 25 | 44% |
+| Shanghai AI Lab | 50 | 50 | 0 | 13 | 37 | 26% |
+| TII | 50 | 50 | 0 | 4 | 46 | 8% |
+| DeepSeek | 45 | 102 | 3 | 25 | 17 | 54% |
+| Marin | 42 | 42 | 0 | 0 | 42 | 0% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
-| Marin | 39 | 39 | 0 | 0 | 39 | 0% |
 | IBM | 38 | 43 | 0 | 4 | 34 | 9% |
-| Zhipu | 37 | 82 | 3 | 15 | 19 | 48% |
-| OpenBMB | 36 | 36 | 0 | 5 | 31 | 14% |
+| Zhipu | 37 | 82 | 3 | 16 | 18 | 49% |
+| OpenBMB | 36 | 36 | 0 | 6 | 30 | 17% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Tencent | 33 | 43 | 1 | 12 | 20 | 37% |
-| Liquid AI | 31 | 34 | 0 | 23 | 8 | 71% |
+| Liquid AI | 32 | 35 | 0 | 23 | 9 | 69% |
 | Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
 | Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
-| Salesforce | 28 | 28 | 0 | 5 | 23 | 18% |
+| Salesforce | 29 | 29 | 0 | 5 | 24 | 17% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
-| Nous | 26 | 34 | 0 | 7 | 19 | 26% |
+| Nous | 27 | 35 | 0 | 7 | 20 | 26% |
 | Stability | 26 | 26 | 0 | 9 | 17 | 35% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
-| 01.AI | 23 | 24 | 1 | 5 | 17 | 25% |
+| 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
 | Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
 | Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
@@ -58,14 +58,14 @@ as settled.
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 35 | 1 | 10 | 5 | 49% |
-| Moonshot | 16 | 40 | 0 | 14 | 2 | 52% |
+| MiniMax | 16 | 36 | 1 | 10 | 5 | 47% |
+| Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
+| SenseTime | 15 | 15 | 0 | 1 | 14 | 7% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
-| SenseTime | 14 | 14 | 0 | 1 | 13 | 7% |
-| Skywork | 14 | 14 | 0 | 5 | 9 | 36% |
+| Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
 | Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
@@ -80,7 +80,7 @@ as settled.
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | Motif | 8 | 9 | 0 | 3 | 5 | 33% |
 | IEIT | 7 | 7 | 0 | 0 | 7 | 0% |
-| Nex | 7 | 9 | 0 | 2 | 5 | 44% |
+| Nex | 7 | 9 | 0 | 4 | 3 | 67% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
@@ -90,19 +90,19 @@ as settled.
 | Inception | 4 | 8 | 0 | 3 | 1 | 38% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
-| Thinking Machines | 2 | 7 | 0 | 2 | 0 | 43% |
+| Thinking Machines | 2 | 8 | 0 | 2 | 0 | 38% |
+| Yandex | 2 | 2 | 0 | 0 | 2 | 0% |
 | Reflection | 1 | 2 | 0 | 1 | 0 | 100% |
-| Yandex | 1 | 1 | 0 | 0 | 1 | 0% |
 
 ## By event type
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1582 | 400 | 1181 | 1 |
+| weights_released | 1593 | 415 | 1177 | 1 |
 | platform_availability | 337 | 332 | 3 | 2 |
-| retired | 307 | 179 | 128 | 0 |
+| retired | 309 | 179 | 130 | 0 |
 | api_ga | 253 | 63 | 189 | 1 |
-| announced | 241 | 52 | 188 | 1 |
+| announced | 242 | 52 | 189 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,14 +119,13 @@ as settled.
 - Events it wrote: 32 (verified 4, single-source inferred 28)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
 
-Declined in the 7 days to 2026-10-27, by reason:
+Declined in the 7 days to 2026-10-28, by reason:
 
 | reason | count |
 |---|---|
 | community_lead | 80 |
-| no_dated_event | 54 |
-| not_a_model | 9 |
+| no_dated_event | 49 |
 | already_recorded | 6 |
-| malformed_candidate | 3 |
+| not_a_model | 5 |
 | disagrees_with_record | 2 |
 | launch_event_required | 1 |
