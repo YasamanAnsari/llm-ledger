@@ -183,6 +183,12 @@ none of them changes an event:
   which days, as runs of days: provider listings, prices and limits from
   the archived daily catalog pulls, and the Hub commit or API snapshot
   served. A value that changes starts a new run; nothing is averaged.
+  Prices before October 2026 come from LiteLLM's git history: the price
+  table as it stood at the end of each day since 2023-09-06. A run there
+  starts on the day LiteLLM committed the value, which can trail the
+  provider's own change by days or weeks (GPT-4o's cut to $2.50 per 1M
+  input tokens appears on 2024-11-13). Read it as an upper bound on when
+  a price changed, and as one client library's record, not the vendor's.
 - **Capability** scores come from Epoch's ECI, Epoch's Benchmarking Hub
   and LMArena's leaderboard history, and are joined only in
   `llm_ledger_capability.csv`, `llm_ledger_benchmarks.csv` and

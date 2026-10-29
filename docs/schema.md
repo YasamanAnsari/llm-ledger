@@ -265,19 +265,19 @@ Shared columns:
 
 | Column | Type | Rules |
 |---|---|---|
-| `source` | enum | `models_dev, openrouter, litellm, openai_api, anthropic_api, google_api, mistral_api, hf` |
+| `source` | enum | `models_dev, openrouter, litellm, litellm_git, openai_api, anthropic_api, google_api, mistral_api, hf` |
 | `provider` | string | who serves the id: the models.dev provider key, `openrouter`, LiteLLM's `litellm_provider`, the vendor, or `huggingface` |
 | `api_id` | string | the id exactly as the source lists it (a Hub repo id for `hf`) |
 | `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model (Hub repos resolve only exactly); blank when no ledger model matches |
 | `first_observed` / `last_observed` | ISO date | the run's first and last day |
-| `source_url` | URL | the payload URL from that day's manifest |
+| `source_url` | URL | the payload URL from the manifest of the run's first day |
 
 Primary key: `(source, provider, api_id, first_observed)`.
 
 | Table | Extra columns |
 |---|---|
 | `availability_observations.csv` | none: a run is a span of days the id was listed. LiteLLM is a client library's price table, not a listing, and contributes none |
-| `price_observations.csv` | `price_input`, `price_output`, `price_cached`, `currency`, `unit` (`per_1m_tokens` for models.dev, `per_token` for OpenRouter and LiteLLM) |
+| `price_observations.csv` | `price_input`, `price_output`, `price_cached`, `currency`, `unit` (`per_1m_tokens` for models.dev, `per_token` for OpenRouter and LiteLLM). A source that rewrites a number's notation (LiteLLM's `0.00003` became `3e-05` on 2025-05-29) starts a new run at the same price; `price_changes.csv` compares converted values and does not count it |
 | `capability_observations.csv` | `context_length`, `max_output`, `modalities_in`, `modalities_out` (pipe-lists), `tool_use`, `structured_output`, `reasoning` (bool, blank when the source does not say) |
 | `model_versions.csv` | `version_kind`, `version_id`, `stated_date` (below) |
 
@@ -297,7 +297,12 @@ start with the first daily pull after `pull_hf.py` began recording `sha`;
 the archived sweeps before it carry none.
 
 Coverage starts 2026-10-03, the oldest archived raw snapshot; earlier
-pulls kept manifests only. The full payloads are archived as
+pulls kept manifests only. The exception is `litellm_git`: LiteLLM's
+price table read from its git history, one copy per day from 2023-09-06
+to 2026-10-02 (the day before the daily `litellm` pull begins), each the
+file at the last commit on `main` that day. A run of it starts on the
+day LiteLLM committed a value, which is on or after the day the provider
+set it. The full payloads are archived as
 `raw-YYYY-MM-DD` releases of the agent repository, and
 `agent/backfill_observations.sh` there rebuilds these tables from them.
 

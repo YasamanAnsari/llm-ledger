@@ -94,6 +94,51 @@ def test_versions_backfill_days_the_other_tables_already_hold() -> None:
         ("hf", "acme/acme-1"): ("abc123", "2026-09-30", "acme-1", "2026-10-02", "2026-10-02")}
 
 
+def test_litellm_history_carries_a_commit_forward_and_breaks_the_run_on_a_price_change() -> None:
+    """LiteLLM's GPT-4o entry as it stood on 2024-11-11..13: one commit
+    covers the first two days, the next one cuts the price."""
+    import gzip
+    import json
+    import tempfile
+    import pull_litellm_history as history
+    old, new = "f59cb46e71401698ae5e40e8277223a76c4905e3", "e7543378b8b7c6ebb08afe28db64700a7b5232d7"
+    by_day = history.commits_by_day(f"{old} 2024-11-11T13:46:35-05:00\n"
+                                    f"{new} 2024-11-12T21:40:52-05:00\n")
+    days = history.day_commits(by_day, date(2024, 11, 13))
+    assert [(d.isoformat(), c) for d, c, _ in days] == [
+        ("2024-11-11", old), ("2024-11-12", old), ("2024-11-13", new)]  # 21:40 EST is 11-13 UTC
+    try:
+        history.commits_by_day(f"{new} 2024-11-13T02:40:52Z\n{old} 2024-11-11T18:46:35Z\n")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("a commit dated before its first parent must fail")
+
+    payloads = {old: '{"gpt-4o": {"input_cost_per_token": 0.000005, "output_cost_per_token": '
+                     '0.000015, "litellm_provider": "openai", "max_input_tokens": 128000}}',
+                new: '{"gpt-4o": {"input_cost_per_token": 0.0000025, "output_cost_per_token": '
+                     '0.000010, "litellm_provider": "openai", "max_input_tokens": 128000}}'}
+    root = Path(tempfile.mkdtemp())
+    for day, commit, _ in days:
+        d = root / "litellm_git" / day.isoformat()
+        d.mkdir(parents=True)
+        (d / "model_prices_and_context_window.json.gz").write_bytes(
+            gzip.compress(payloads[commit].encode()))
+        (d / "manifest.json").write_text(json.dumps({"model_prices_and_context_window.json": {
+            "url": history.RAW_URL.format(commit=commit), "sha256": "x"}}))
+    tables = {t.name: [] for t in schema.OBSERVATION_TABLES}
+    crosswalk = [{"model_id": "gpt-4o", "namespace": "openrouter", "identifier": "openai/gpt-4o"}]
+    observe.observe(root, tables, crosswalk)
+    assert [(r["source"], r["model_id"], r["price_input"], r["first_observed"], r["last_observed"],
+             r["source_url"].split("/")[5]) for r in tables[PRICE.name]] == [
+        ("litellm_git", "gpt-4o", "0.000005", "2024-11-11", "2024-11-12", old),
+        ("litellm_git", "gpt-4o", "0.0000025", "2024-11-13", "2024-11-13", new)]
+    # The limit did not change, so its run spans all three days from the first commit.
+    assert [(r["context_length"], r["first_observed"], r["last_observed"])
+            for r in tables[schema.CAPABILITY_OBSERVATIONS.name]] == [
+        ("128000", "2024-11-11", "2024-11-13")]
+
+
 def test_market_prices_convert_to_per_million_and_drop_the_router_marker() -> None:
     import market
     assert market.per_1m("2.5e-06", "per_token") == "2.5"

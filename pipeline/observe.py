@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import sys
 from datetime import date, timedelta
@@ -43,11 +44,14 @@ VENDOR_APIS = ("openai_api", "anthropic_api", "google_api", "mistral_api")
 # source -> the payload file its observations are read from
 PAYLOADS = {"models_dev": "normalized.csv", "openrouter": "normalized.csv",
             "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
+            "litellm_git": "model_prices_and_context_window.json.gz",
             **{s: "normalized.csv" for s in VENDOR_APIS}}
 # The manifest entry whose URL is the evidence for the day.
 MANIFEST_PAYLOAD = {"models_dev": "api.json", "openrouter": "models.json",
                     "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
+                    "litellm_git": "model_prices_and_context_window.json",
                     **{s: "models.json" for s in VENDOR_APIS}}
+LITELLM_SOURCES = ("litellm", "litellm_git")
 # Namespaces whose identifiers name serving ids; the key fallback reads them.
 SERVING_NAMESPACES = ("models_dev", "openrouter") + VENDOR_APIS
 
@@ -140,14 +144,15 @@ def _flag(entry: dict, key: str) -> str:
     return "" if key not in entry else str(entry[key]).lower()
 
 
-def _litellm(entries: dict, url: str) -> dict:
+def _litellm(entries: dict, url: str, source: str = "litellm") -> dict:
     """LiteLLM's price table is a client library's copy of provider prices,
-    not a provider's listing: it yields prices and limits, never availability."""
+    not a provider's listing: it yields prices and limits, never availability.
+    `litellm_git` is the same table read from a day's commit in its history."""
     out = {AVAILABILITY: [], PRICE: [], CAPABILITY: []}
     for api_id, e in entries.items():
         if api_id == "sample_spec" or not isinstance(e, dict):
             continue
-        base = {"source": "litellm", "provider": e.get("litellm_provider", ""),
+        base = {"source": source, "provider": e.get("litellm_provider", ""),
                 "api_id": api_id, "source_url": url}
         prices = (e.get("input_cost_per_token", ""), e.get("output_cost_per_token", ""),
                   e.get("cache_read_input_token_cost", ""))
@@ -177,11 +182,13 @@ def day_observations(source: str, day_dir: Path) -> dict | None:
     if "sha256" not in entry:
         return None
     url = entry["url"]
-    if source == "litellm":
+    if source in LITELLM_SOURCES:
+        raw = payload.read_bytes()
+        if payload.suffix == ".gz":
+            raw = gzip.decompress(raw)
         # Numbers stay as written: 2.5e-06 is not re-serialized.
-        entries = json.loads(payload.read_text(encoding="utf-8"),
-                             parse_float=str, parse_int=str)
-        return _litellm(entries, url)
+        entries = json.loads(raw.decode("utf-8"), parse_float=str, parse_int=str)
+        return _litellm(entries, url, source)
     rows = _read_csv(payload)
     if source == "models_dev":
         return _models_dev(rows, url)
@@ -194,8 +201,11 @@ def day_observations(source: str, day_dir: Path) -> dict | None:
 
 
 def _values(row: dict, table: schema.Table) -> tuple:
+    """What a run holds constant. `source_url` is not part of it: a run
+    keeps the URL of its first day, which for `litellm_git` names the
+    commit where the values were first read."""
     return tuple(row.get(c, "") for c in table.columns
-                 if c not in ("model_id", "first_observed", "last_observed"))
+                 if c not in ("model_id", "first_observed", "last_observed", "source_url"))
 
 
 def _subject(row: dict) -> tuple:

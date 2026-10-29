@@ -5,6 +5,15 @@ Data corrections update rows in place; this file preserves the history.
 
 ## 2026-10-28
 
+- Price history back to 2023: `pipeline/pull_litellm_history.py` reads
+  LiteLLM's `model_prices_and_context_window.json` at the last commit on
+  `main` of every day from 2023-09-06 to 2026-10-02 (1,123 days, 602
+  commits) and `observe.py` folds them as source `litellm_git`: 6,775
+  price runs and 5,898 limit runs, 529 of them price changes in
+  `price_changes.csv`. Dates are LiteLLM's commit days, an upper bound on
+  the provider's change.
+- An observation run keeps the source URL of its first day; a new URL
+  with the same values no longer starts a run. No existing run changed.
 - New generated file `llm_ledger_benchmarks.csv`: Epoch AI Benchmarking
   Hub results on ledger models, 3,785 rows for 245 models across 59
   benchmarks, scores copied unchanged with the evaluated model version.

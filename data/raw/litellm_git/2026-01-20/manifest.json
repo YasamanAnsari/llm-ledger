@@ -1,0 +1,9 @@
+{
+  "model_prices_and_context_window.json": {
+    "bytes": 1210139,
+    "commit": "961a424069d8c2de4de90a473ea8737783b3724e",
+    "committed_at": "2026-01-20T15:15:12+00:00",
+    "sha256": "89dcee8f4eec15cc931765c76618a7a41263b06bde11bb23642611784b9e9e2c",
+    "url": "https://raw.githubusercontent.com/BerriAI/litellm/961a424069d8c2de4de90a473ea8737783b3724e/model_prices_and_context_window.json"
+  }
+}
