@@ -32,7 +32,7 @@ import re
 import sys
 import zipfile
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -558,6 +558,109 @@ def build_arena_bytes() -> bytes:
     return _csv_bytes(list(ARENA_COLUMNS), arena_rows(schema.read_table(MODELS), leaderboard))
 
 
+# Paper 5's thresholds: a model is technically obsolete once it ranks below
+# the top 30 of every arena and never returns; out of OpenRouter's daily
+# top 50 for this many days through the latest ranking day, its usage is.
+TOP_RANK = 30
+USAGE_EXIT_DAYS = 30
+OBSOLESCENCE_COLUMNS = MODEL_COLUMNS + (
+    "first_public_availability_date", "arena_first_date", "arena_best_rank",
+    "arena_last_top30_date", "technical_obsolete_date", "technical_obsolete_age_days",
+    "openrouter_top50_first_date", "openrouter_top50_last_date", "usage_obsolete_date",
+    "usage_obsolete_age_days", "openrouter_last_listed_date",
+)
+
+
+def technical_obsolescence(best_rank_by_day: dict) -> dict:
+    """From {leaderboard day: the model's best rank across arenas that day}:
+    the first day, the best rank, the last day in the top TOP_RANK, and the
+    first later day it appears ranked below it. A model never in the top
+    TOP_RANK is obsolete on its first day; one whose last appearance is in
+    the top TOP_RANK is not obsolete."""
+    days = sorted(best_rank_by_day)
+    top = [d for d in days if best_rank_by_day[d] <= TOP_RANK]
+    last_top = top[-1] if top else ""
+    after = [d for d in days if d > last_top]
+    return {"arena_first_date": days[0], "arena_best_rank": str(min(best_rank_by_day.values())),
+            "arena_last_top30_date": last_top, "technical_obsolete_date": after[0] if after else ""}
+
+
+def _age_days(start: str, end: str) -> str:
+    return str((date.fromisoformat(end) - date.fromisoformat(start)).days) if start and end else ""
+
+
+def obsolescence_rows(models: list, arena: list, usage: list, availability: list) -> list:
+    """One row per ledger model seen on LMArena, in OpenRouter's daily top 50,
+    or delisted from OpenRouter while observed."""
+    ranks: dict = defaultdict(dict)
+    for r in arena:
+        day, rank = r["publish_date"], int(r["rank"])
+        ranks[r["model_id"]][day] = min(rank, ranks[r["model_id"]].get(day, rank))
+    top50: dict = defaultdict(set)
+    for r in usage:
+        if r["model_id"]:
+            top50[r["model_id"]].add(r["date"])
+    latest_ranking = max((r["date"] for r in usage), default="")
+    listed: dict = {}
+    for r in availability:
+        if r["source"] == "openrouter" and r["model_id"]:
+            listed[r["model_id"]] = max(listed.get(r["model_id"], ""), r["last_observed"])
+    latest_listing = max((r["last_observed"] for r in availability if r["source"] == "openrouter"),
+                         default="")
+    rows = []
+    for m in models:
+        mid = m["model_id"]
+        delisted = listed.get(mid, "") if listed.get(mid, latest_listing) < latest_listing else ""
+        if mid not in ranks and mid not in top50 and not delisted:
+            continue
+        row = {c: m[c] for c in MODEL_COLUMNS} | {
+            "first_public_availability_date": m["first_public_availability_date"],
+            "openrouter_last_listed_date": delisted}
+        row |= technical_obsolescence(ranks[mid]) if mid in ranks else {}
+        if mid in top50:
+            last = date.fromisoformat(max(top50[mid]))
+            days_out = (date.fromisoformat(latest_ranking) - last).days
+            row |= {"openrouter_top50_first_date": min(top50[mid]),
+                    "openrouter_top50_last_date": last.isoformat(),
+                    "usage_obsolete_date": (last + timedelta(days=1)).isoformat()
+                    if days_out >= USAGE_EXIT_DAYS else ""}
+        start = m["first_public_availability_date"]
+        row["technical_obsolete_age_days"] = _age_days(start, row.get("technical_obsolete_date", ""))
+        row["usage_obsolete_age_days"] = _age_days(start, row.get("usage_obsolete_date", ""))
+        rows.append(row)
+    return sorted(rows, key=lambda r: r["model_id"])
+
+
+def build_obsolescence_bytes() -> bytes:
+    """Technical (LMArena rank) and usage (OpenRouter top 50, listing)
+    obsolescence dates per ledger model."""
+    models = schema.read_table(MODELS)
+    path = schema.snapshot_file("lmarena", "leaderboard_overall.csv")
+    with path.open(newline="", encoding="utf-8") as fh:
+        arena = arena_rows(models, list(csv.DictReader(fh)))
+    usage = schema.read_table(schema.USAGE_OBSERVATIONS, schema.OBSERVATIONS_DIR)
+    availability = schema.read_table(schema.AVAILABILITY_OBSERVATIONS, schema.OBSERVATIONS_DIR)
+    return _csv_bytes(list(OBSOLESCENCE_COLUMNS), obsolescence_rows(models, arena, usage, availability))
+
+
+DESCENDANT_COLUMNS = MODEL_COLUMNS + ("repo_id", "relation", "descendants", "hub_stats_date")
+
+
+def build_descendants_bytes() -> bytes:
+    """Hub repos naming each ledger model's repos as a direct base model,
+    by relation, from the newest hub-stats week."""
+    path = schema.snapshot_file("hub_stats", "descendants.csv", max_age_days=None)
+    with path.open(newline="", encoding="utf-8") as fh:
+        counts = list(csv.DictReader(fh))
+    by_id = {m["model_id"]: m for m in schema.read_table(MODELS)}
+    hf = {r["identifier"]: by_id[r["model_id"]] for r in schema.read_table(schema.CROSSWALK)
+          if r["namespace"] == "huggingface"}
+    rows = [{c: hf[r["repo_id"]][c] for c in MODEL_COLUMNS} | r | {"hub_stats_date": path.parent.name}
+            for r in counts if r["repo_id"] in hf]
+    rows.sort(key=lambda r: (r["model_id"], r["repo_id"], r["relation"]))
+    return _csv_bytes(list(DESCENDANT_COLUMNS), rows)
+
+
 RESEARCH_MONTHLY_COLUMNS = ("month", "family", "papers")
 FIRST_MENTION_COLUMNS = (
     "model_id", "canonical_name", "family", "access_type", "weights_released_date",
@@ -882,6 +985,8 @@ GENERATED_ARTIFACTS = (
     ("llm_ledger_capability.csv", build_capability_bytes),
     ("llm_ledger_benchmarks.csv", build_benchmark_bytes),
     ("llm_ledger_arena.csv", build_arena_bytes),
+    ("obsolescence.csv", build_obsolescence_bytes),
+    ("hub_descendants.csv", build_descendants_bytes),
     ("research_mentions_monthly.csv", build_research_monthly_bytes),
     ("research_first_mentions.csv", build_first_mentions_bytes),
 )

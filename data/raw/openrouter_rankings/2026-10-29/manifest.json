@@ -1,0 +1,14 @@
+{
+  "rankings-daily_2025-01-01_2026-01-01.json": {
+    "bytes": 1835657,
+    "fetched_at": "2026-10-29T04:00:08+00:00",
+    "sha256": "9c32d7dc4073526a37952d335ba8850e6c74fc08613933c287eb4584e96414dc",
+    "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2026-01-01"
+  },
+  "rankings-daily_2026-01-02_2026-10-28.json": {
+    "bytes": 1546677,
+    "fetched_at": "2026-10-29T04:00:13+00:00",
+    "sha256": "1e95e62bd81839ab9b436221a3416c952f4dd882e6a842850b83bac135a13848",
+    "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2026-01-02&end_date=2026-10-28"
+  }
+}

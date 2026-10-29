@@ -14,7 +14,8 @@ import bundles
 import schema
 from build import (CAPABILITY_COLUMNS, LATEST_COLUMNS, _agent_section, arena_matcher, arena_name_parts,
                    benchmark_rows, build_reschedule_rows, capability_rows, compute_derived, first_mention_rows, latest_first,
-                   latest_pull_date, predecessor_review_rows, research_monthly_rows)
+                   latest_pull_date, obsolescence_rows, predecessor_review_rows, research_monthly_rows,
+                   technical_obsolescence)
 from confidence import curated_model_ids
 from schema import MODELS, family_and_role
 
@@ -350,6 +351,31 @@ def test_research_views_count_a_paper_once_and_date_from_first_availability() ->
     rows = first_mention_rows(models, events, mentions, harvested_from="2023-01-01")
     assert [(r["model_id"], r["first_mention"], r["days_to_first_mention"], r["weights_released_date"])
             for r in rows] == [("old-1", "2025-06-10", "", ""), ("qwen3-8b", "2025-05-02", "3", "2025-04-29")]
+
+
+def test_obsolescence_follows_the_last_top30_day_and_the_top50_exit() -> None:
+    """Llama 3.1 405B's best LMArena rank on real leaderboard days: 28 on
+    2025-04-16, 33 a week later, never back in the top 30."""
+    llama = {"2024-07-30": 5, "2025-04-09": 29, "2025-04-16": 28, "2025-04-23": 33,
+             "2025-05-05": 35, "2026-10-15": 242}
+    assert technical_obsolescence(llama) == {
+        "arena_first_date": "2024-07-30", "arena_best_rank": "5",
+        "arena_last_top30_date": "2025-04-16", "technical_obsolete_date": "2025-04-23"}
+    assert technical_obsolescence({"2025-01-01": 40, "2025-02-01": 31})["technical_obsolete_date"] \
+        == "2025-01-01"  # never in the top 30
+    assert technical_obsolescence({"2025-01-01": 40, "2025-02-01": 12})["technical_obsolete_date"] == ""
+
+    model = {"model_id": "llama-3-1-405b-instruct", "canonical_name": "Llama 3.1 405B Instruct",
+             "developer_org_id": "meta", "access_type": "open_weights",
+             "first_public_availability_date": "2024-07-23"}
+    arena = [{"model_id": model["model_id"], "publish_date": d, "rank": str(r)} for d, r in llama.items()]
+    usage = [{"model_id": model["model_id"], "date": "2025-03-18"},
+             {"model_id": "", "date": "2025-04-17"}]           # the ranking runs 30 days past the exit
+    row, = obsolescence_rows([model], arena, usage, [])
+    assert (row["technical_obsolete_age_days"], row["usage_obsolete_date"],
+            row["usage_obsolete_age_days"]) == ("274", "2025-03-19", "239")
+    row, = obsolescence_rows([model], arena, usage[:1] + [{"model_id": "", "date": "2025-04-16"}], [])
+    assert row["usage_obsolete_date"] == ""                    # out 29 days: not yet
 
 
 def test_every_bundle_exports_existing_tables_with_ledger_ids() -> None:

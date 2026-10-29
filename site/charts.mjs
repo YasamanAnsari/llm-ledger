@@ -1,5 +1,6 @@
 // Figures for the site: pure functions that summarize the ledger, and
 // renderers that turn those summaries into HTML/SVG strings.
+import {perMillion} from './ledger-engine.mjs';
 
 export const ACCESS = [
   {key: 'fully_open', label: 'Fully open', noun: 'fully open models', color: '#2b5f8e'},
@@ -76,15 +77,24 @@ export const GAP_BINS = [
   {label: 'Over a year', test: d => d > 365},
 ];
 
+export const AGE_BINS = [
+  {label: 'Before', test: d => d < 0},
+  {label: 'Under 3 months', test: d => d >= 0 && d <= 90},
+  {label: '3–6 months', test: d => d >= 91 && d <= 182},
+  {label: '6–12 months', test: d => d >= 183 && d <= 365},
+  {label: '1–2 years', test: d => d >= 366 && d <= 730},
+  {label: 'Over 2 years', test: d => d > 730},
+];
+
 /** A day-count column binned per access type, with the group median. */
-function dayBins(rows, field) {
+function dayBins(rows, field, bins = GAP_BINS) {
   const out = {};
   for (const {key} of ACCESS) {
     const days = rows.filter(r => r.access_group === key && r[field] !== '').map(r => Number(r[field])).sort((a, b) => a - b);
     const mid = days.length / 2;
     out[key] = {
       n: days.length,
-      counts: GAP_BINS.map(b => days.filter(b.test).length),
+      counts: bins.map(b => days.filter(b.test).length),
       later: days.filter(d => d > 0).length,
       median: !days.length ? null : days.length % 2 ? days[Math.floor(mid)] : (days[mid - 1] + days[mid]) / 2,
     };
@@ -98,6 +108,9 @@ export const gapBins = models => dayBins(models, 'anticipation_days');
 /** Days from first availability to the first arXiv paper naming the model
  * (research_first_mentions.days_to_first_mention). */
 export const mentionBins = rows => dayBins(rows, 'days_to_first_mention');
+
+/** Age at technical or usage obsolescence (obsolescence.csv `*_age_days`). */
+export const ageBins = (rows, field) => dayBins(rows, field, AGE_BINS);
 
 export const FATES = [
   {key: 'retired', label: 'Shut down by the developer', color: '#7b3a33'},
@@ -177,14 +190,14 @@ export function legend(items) {
   return `<div class="figure-legend">${items.map(i => `<span><i class="${esc(i.shape || 'square')}" style="--c:${i.color}"></i>${esc(i.label)}</span>`).join('')}</div>`;
 }
 
-export function renderGap(gaps, caption = 'Days from announcement to first availability, by access type') {
+export function renderGap(gaps, caption = 'Days from announcement to first availability, by access type', bins = GAP_BINS) {
   const groups = ACCESS.filter(a => gaps[a.key].n);
-  const rows = GAP_BINS.map((b, i) => `<div class="gap-row"><span class="gap-label">${esc(b.label)}</span><div class="gap-bars">${groups.map(a => {
+  const rows = bins.map((b, i) => `<div class="gap-row"><span class="gap-label">${esc(b.label)}</span><div class="gap-bars">${groups.map(a => {
     const g = gaps[a.key], share = pct(g.counts[i], g.n);
     return `<div class="gap-bar"><i style="width:${g.counts[i] / g.n * 100}%;--c:${a.color}"></i><span>${share}% <small>(${num(g.counts[i])})</small></span></div>`;
   }).join('')}</div></div>`).join('');
   const table = dataTable(caption, ['Gap', ...groups.map(a => `${a.label} (n=${gaps[a.key].n})`)],
-    GAP_BINS.map((b, i) => [b.label, ...groups.map(a => `${gaps[a.key].counts[i]} (${pct(gaps[a.key].counts[i], gaps[a.key].n)}%)`)]));
+    bins.map((b, i) => [b.label, ...groups.map(a => `${gaps[a.key].counts[i]} (${pct(gaps[a.key].counts[i], gaps[a.key].n)}%)`)]));
   const head = `<div class="gap-row gap-head"><span></span><div class="gap-bars">${groups.map(a => `<span style="--c:${a.color}"><i></i>${esc(a.label)} <small>n=${num(gaps[a.key].n)}</small></span>`).join('')}</div></div>`;
   return `<div class="gap-chart">${head}${rows}</div>` + table;
 }
@@ -314,4 +327,237 @@ export function renderFrontier(frontier, start, end, groups = ACCESS, subject = 
   const table = dataTable(`${metric.caption} ${subject}`, [metric.dateHead, 'Group', 'Model', metric.label],
     groups.flatMap(a => frontier[a.key].map(s => [s.date, a.label, s.name, s.value])).sort((p, q) => p[0].localeCompare(q[0])));
   return legend(groups.filter(a => frontier[a.key].length).map(a => ({...a, shape: 'line'}))) + svg + table;
+}
+
+// Price, adoption and obsolescence figures. site/build.mjs runs the
+// summaries at build time and writes each one as the figure's CSV.
+
+export const OPEN_OR_API = [
+  {key: 'open', label: 'Open weights', color: '#2f6b52'},
+  {key: 'api_only', label: 'API only', color: '#b57a2c'},
+];
+const OPEN_OR_API_OF = {fully_open: 'open', open_weights: 'open', api_only: 'api_only'};
+const PALETTE = ['#a7aea6', '#7b3a33', '#b57a2c', '#2f6b52', '#2b5f8e', '#6b4f8e', '#3f8f9a'];
+const PRICE_SOURCES = new Set(['litellm', 'litellm_git']);
+
+/** USD per 1M tokens at three input tokens to one output token; null unless
+ * both prices are positive (a $0 entry is a local runtime or a free tier). */
+export function blendedPrice(run) {
+  const input = perMillion(run.price_input, run.unit), output = perMillion(run.price_output, run.unit);
+  return input > 0 && output > 0 ? Number(((3 * input + output) / 4).toPrecision(12)) : null;
+}
+
+/** The first of each month from `start`'s month until `end`, then `end`. */
+export function sampleDays(start, end) {
+  const days = [];
+  for (const d = new Date(`${start.slice(0, 7)}-01T00:00:00Z`); d.toISOString().slice(0, 10) < end; d.setUTCMonth(d.getUTCMonth() + 1)) days.push(d.toISOString().slice(0, 10));
+  return [...days, end];
+}
+
+/** Map of day -> Map(model_id -> the cheapest blended price any provider in
+ * LiteLLM's price table listed for the model that day). */
+export function cheapestPrices(runs, days) {
+  const out = new Map(days.map(d => [d, new Map()]));
+  for (const r of runs) {
+    const price = r.model_id && PRICE_SOURCES.has(r.source) ? blendedPrice(r) : null;
+    if (price === null) continue;
+    for (const d of days) {
+      const byModel = out.get(d);
+      if (r.first_observed <= d && d <= r.last_observed && !(byModel.get(r.model_id) <= price)) byModel.set(r.model_id, price);
+    }
+  }
+  return out;
+}
+
+/** Map of model_id -> {id, name, group, eci}: the model's highest ECI entry,
+ * grouped open weights or API only. */
+export function eciScores(capability) {
+  const out = new Map();
+  for (const r of capability) {
+    const eci = Number(r.eci), group = OPEN_OR_API_OF[r.access_group];
+    if (r.eci !== '' && group && !(out.get(r.model_id)?.eci >= eci)) out.set(r.model_id, {id: r.model_id, name: r.canonical_name, group, eci});
+  }
+  return out;
+}
+
+const listings = (prices, scores) => [...prices].map(([date, byModel]) =>
+  [date, [...byModel].filter(([id]) => scores.has(id)).map(([id, price]) => ({...scores.get(id), price}))]);
+const cheapest = models => models.reduce((best, m) => !best || m.price < best.price ? m : best, null);
+const topScored = models => models.reduce((best, m) => !best || m.eci > best.eci ? m : best, null);
+const figureRow = (date, m, extra = {}) => ({date, ...extra, model_id: m.id, model: m.name, group: m.group, eci: m.eci, price: m.price});
+
+/** The cheapest listed model scoring at least each ECI threshold, per group and day. */
+export function priceToScore(prices, scores, thresholds) {
+  const rows = [];
+  for (const [date, models] of listings(prices, scores)) for (const threshold of thresholds) for (const {key} of OPEN_OR_API) {
+    const best = cheapest(models.filter(m => m.group === key && m.eci >= threshold));
+    if (best) rows.push(figureRow(date, best, {threshold}));
+  }
+  return rows;
+}
+
+/** On each of `dates`, the listed models no cheaper model matches on ECI, cheapest first. */
+export function priceScoreFrontier(prices, scores, dates) {
+  const rows = [];
+  for (const [date, models] of listings(prices, scores)) {
+    if (!dates.includes(date)) continue;
+    let top = -Infinity;
+    for (const m of models.sort((a, b) => a.price - b.price || b.eci - a.eci)) {
+      if (m.eci > top) { top = m.eci; rows.push(figureRow(date, m)); }
+    }
+  }
+  return rows;
+}
+
+/** The highest-ECI listed model each day, overall and at or under `budget` USD per 1M blended. */
+export function budgetBest(prices, scores, budget) {
+  const rows = [];
+  for (const [date, models] of listings(prices, scores)) {
+    for (const [series, pool] of [['overall', models], ['under_budget', models.filter(m => m.price <= budget)]]) {
+      const best = topScored(pool);
+      if (best) rows.push(figureRow(date, best, {series, budget}));
+    }
+  }
+  return rows;
+}
+
+/** On each weekly hub-stats day, the Hub's 30-day downloads summed over the
+ * repos of ledger models, by the year the model was first available. */
+export function downloadsByCohort(runs, models) {
+  const cohort = new Map(models.filter(m => m.first_public_availability_date).map(m => {
+    const year = m.first_public_availability_date.slice(0, 4);
+    return [m.model_id, year <= '2022' ? '2022 or earlier' : year];
+  }));
+  const hub = runs.filter(r => r.source === 'hub_stats' && r.downloads_30d !== '' && cohort.has(r.model_id));
+  const days = [...new Set(hub.map(r => r.first_observed))].sort();
+  const sums = new Map();
+  for (const r of hub) for (const date of days) {
+    if (date < r.first_observed || date > r.last_observed) continue;
+    const key = `${date}|${cohort.get(r.model_id)}`;
+    if (!sums.has(key)) sums.set(key, {date, cohort: cohort.get(r.model_id), downloads_30d: 0, repos: 0});
+    const s = sums.get(key);
+    s.downloads_30d += Number(r.downloads_30d);
+    s.repos++;
+  }
+  return [...sums.values()].sort((a, b) => a.date.localeCompare(b.date) || a.cohort.localeCompare(b.cohort));
+}
+
+export const USAGE_AGES = [
+  {key: 'under_3m', label: 'Under 3 months old', color: '#2b5f8e'},
+  {key: '3_12m', label: '3–12 months old', color: '#2f6b52'},
+  {key: 'over_1y', label: 'Over a year old', color: '#b57a2c'},
+  {key: 'before', label: 'Used before its ledger date', color: '#7b3a33'},
+  {key: 'unknown', label: 'Not in the ledger or undated', color: '#a7aea6'},
+  {key: 'other', label: 'Outside the daily top 50', color: '#d4d9d0'},
+];
+
+function usageAge(row, released) {
+  if (row.model_permaslug === 'other') return 'other';
+  const day = released.get(row.model_id);
+  if (!day) return 'unknown';
+  const age = (Date.parse(row.date) - Date.parse(day)) / 864e5;
+  return age < 0 ? 'before' : age <= 90 ? 'under_3m' : age <= 365 ? '3_12m' : 'over_1y';
+}
+
+/** Each model-age group's share of a month's OpenRouter tokens; age is days
+ * from first public availability to the day of use. */
+export function tokenShareByAge(usage, models) {
+  const released = new Map(models.filter(m => m.first_public_availability_date).map(m => [m.model_id, m.first_public_availability_date]));
+  const tokens = new Map(), totals = new Map(), seen = new Set();
+  for (const r of usage) {
+    const month = r.date.slice(0, 7), key = `${month}|${usageAge(r, released)}`;
+    tokens.set(key, (tokens.get(key) || 0) + Number(r.total_tokens));
+    if (!seen.has(r.date)) {
+      seen.add(r.date);
+      totals.set(month, (totals.get(month) || 0) + Number(r.day_total_tokens));
+    }
+  }
+  return [...tokens].map(([key, n]) => {
+    const [month, age] = key.split('|');
+    return {month, age, tokens: n, share: n / totals.get(month)};
+  }).sort((a, b) => a.month.localeCompare(b.month) || a.age.localeCompare(b.age));
+}
+
+/** Axis from data values to pixels between `from` and `to`, with labelled ticks. */
+function axis({type, step, format}, values, from, to) {
+  let lo = Math.min(...values), hi = Math.max(...values), ticks;
+  if (type === 'time') {
+    ticks = [];
+    for (let yr = new Date(lo).getUTCFullYear() + 1; Date.UTC(yr, 0, 1) <= hi; yr++) ticks.push([Date.UTC(yr, 0, 1), String(yr)]);
+  } else if (type === 'log') {
+    [lo, hi] = [Math.floor(Math.log10(lo)), Math.ceil(Math.log10(hi))];
+    ticks = Array.from({length: hi - lo + 1}, (_, i) => [10 ** (lo + i), format(10 ** (lo + i))]);
+  } else {
+    [lo, hi] = [Math.floor(lo / step) * step, Math.ceil(hi / step) * step];
+    ticks = Array.from({length: Math.round((hi - lo) / step) + 1}, (_, i) => [lo + i * step, format(lo + i * step)]);
+  }
+  const position = type === 'log' ? v => Math.log10(v) : v => v;
+  return {at: v => from + (position(v) - lo) / (hi - lo || 1) * (to - from), ticks};
+}
+
+/** Lines sharing two axes. `series`: {label, color, points: [{x, y, id?, title}]};
+ * time x values are epoch milliseconds. `step` holds each value until the next point. */
+export function renderLines(series, {x, y, label, step = false}) {
+  const shown = series.filter(s => s.points.length);
+  const points = shown.flatMap(s => s.points);
+  const sx = axis(x, points.map(p => p.x), M.left, W - M.right), sy = axis(y, points.map(p => p.y), H - M.bottom, M.top);
+  const grid = sy.ticks.map(([v, t]) => `<line x1="${M.left}" x2="${W - M.right}" y1="${sy.at(v).toFixed(1)}" y2="${sy.at(v).toFixed(1)}"/><text x="${M.left - 8}" y="${(sy.at(v) + 3).toFixed(1)}" text-anchor="end">${esc(t)}</text>`).join('')
+    + sx.ticks.map(([v, t]) => `<line x1="${sx.at(v).toFixed(1)}" x2="${sx.at(v).toFixed(1)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${sx.at(v).toFixed(1)}" y="${H - M.bottom + 18}" text-anchor="middle">${esc(t)}</text>`).join('');
+  const lines = shown.map(s => {
+    const xy = s.points.map(p => [sx.at(p.x).toFixed(1), sy.at(p.y).toFixed(1)]);
+    const path = xy.map(([px, py], i) => !i ? `M${px},${py}` : step ? `H${px}V${py}` : `L${px},${py}`).join('');
+    const marks = s.points.map((p, i) => `<circle class="pt"${p.id ? ` data-model="${esc(p.id)}"` : ''} cx="${xy[i][0]}" cy="${xy[i][1]}" r="${p.id ? 3.2 : 2.4}" fill="${s.color}"><title>${esc(p.title)}</title></circle>`).join('');
+    return `<path class="median" d="${path}" stroke="${s.color}"/>${marks}`;
+  }).join('');
+  return legend(shown.map(s => ({...s, shape: 'line'}))) + `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}"><g class="grid">${grid}</g>${lines}</svg>`;
+}
+
+const TIME = {type: 'time'};
+export const usd = v => `$${v < 1 ? +v.toPrecision(2) : num(+v.toFixed(2))}`;
+const compact = v => new Intl.NumberFormat('en-US', {notation: 'compact'}).format(v);
+const ECI_AXIS = {type: 'linear', step: 10, format: v => String(v)};
+const at = date => Date.parse(date);
+
+export function renderPriceToScore(rows, threshold) {
+  const picked = rows.filter(r => r.threshold === threshold);
+  const series = OPEN_OR_API.map(g => ({...g, points: picked.filter(r => r.group === g.key)
+    .map(r => ({x: at(r.date), y: r.price, id: r.model_id, title: `${r.model} (ECI ${r.eci}): ${usd(r.price)} per 1M tokens on ${r.date}`}))}));
+  return renderLines(series, {x: TIME, y: {type: 'log', format: usd}, label: `Cheapest price of a model scoring at least ${threshold} on ECI, log scale, open weights and API only`})
+    + dataTable(`Cheapest model scoring at least ECI ${threshold}`, ['Day', 'Group', 'Model', 'ECI', 'USD per 1M tokens'],
+      picked.map(r => [r.date, OPEN_OR_API.find(g => g.key === r.group).label, r.model, r.eci, usd(r.price)]));
+}
+
+export function renderPriceFrontier(rows) {
+  const dates = [...new Set(rows.map(r => r.date))].sort();
+  const series = dates.map((date, i) => ({label: date, color: PALETTE[(i + 1) % PALETTE.length], points: rows.filter(r => r.date === date)
+    .map(r => ({x: r.price, y: r.eci, id: r.model_id, title: `${r.model}: ECI ${r.eci} at ${usd(r.price)} per 1M tokens on ${date}`}))}));
+  return renderLines(series, {x: {type: 'log', format: usd}, y: ECI_AXIS, label: 'Best ECI score available at each price, log price scale, on selected days', step: true})
+    + dataTable('Models on the price-score frontier', ['Day', 'Model', 'ECI', 'USD per 1M tokens'], rows.map(r => [r.date, r.model, r.eci, usd(r.price)]));
+}
+
+export function renderBudgetBest(rows) {
+  const budget = rows.find(r => r.series === 'under_budget')?.budget;
+  const series = [['overall', 'Best listed model', '#2b5f8e'], ['under_budget', `Best at or under ${usd(budget)} per 1M tokens`, '#b57a2c']]
+    .map(([key, label, color]) => ({label, color, points: rows.filter(r => r.series === key)
+      .map(r => ({x: at(r.date), y: r.eci, id: r.model_id, title: `${r.model}: ECI ${r.eci} at ${usd(r.price)} per 1M tokens on ${r.date}`}))}));
+  return renderLines(series, {x: TIME, y: ECI_AXIS, label: 'Best ECI score among listed models, overall and under a budget', step: true})
+    + dataTable('Best listed model overall and under the budget', ['Day', 'Series', 'Model', 'ECI', 'USD per 1M tokens'],
+      rows.map(r => [r.date, r.series === 'overall' ? 'Overall' : 'Under budget', r.model, r.eci, usd(r.price)]));
+}
+
+export function renderCohortDownloads(rows) {
+  const cohorts = [...new Set(rows.map(r => r.cohort))].sort();
+  const series = cohorts.map((cohort, i) => ({label: cohort, color: PALETTE[i % PALETTE.length], points: rows.filter(r => r.cohort === cohort && r.downloads_30d > 0)
+    .map(r => ({x: at(r.date), y: r.downloads_30d, title: `${cohort} models, ${r.date}: ${num(r.downloads_30d)} downloads in 30 days over ${num(r.repos)} repos`}))}));
+  return renderLines(series, {x: TIME, y: {type: 'log', format: compact}, label: 'Hugging Face downloads in the past 30 days by release year of the model, log scale'})
+    + dataTable('Hub downloads in the past 30 days by release year', ['Day', 'Released', 'Downloads (30 days)', 'Repos'],
+      rows.map(r => [r.date, r.cohort, num(r.downloads_30d), num(r.repos)]));
+}
+
+export function renderTokenAge(rows) {
+  const series = USAGE_AGES.map(g => ({...g, points: rows.filter(r => r.age === g.key)
+    .map(r => ({x: at(`${r.month}-01`), y: r.share * 100, title: `${g.label}, ${r.month}: ${(r.share * 100).toFixed(1)}% of tokens`}))}));
+  return renderLines(series, {x: TIME, y: {type: 'linear', step: 20, format: v => `${v}%`}, label: 'Share of OpenRouter tokens by model age, per month'})
+    + dataTable('Share of OpenRouter tokens by model age', ['Month', 'Age', 'Share of tokens'],
+      rows.map(r => [r.month, USAGE_AGES.find(g => g.key === r.age).label, `${(r.share * 100).toFixed(1)}%`]));
 }

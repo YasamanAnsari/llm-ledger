@@ -218,11 +218,14 @@ superseded ones are the dated history of what each source said, and
 | Column | Type | Rules |
 |---|---|---|
 | `model_id` | FK | |
-| `namespace` | enum | `openrouter, models_dev, huggingface, modelscope, openai_api, anthropic_api, google_api, mistral_api, epoch, wikipedia, lmarena, text_surface_forms` |
+| `namespace` | enum | `openrouter, models_dev, huggingface, modelscope, openai_api, anthropic_api, google_api, mistral_api, epoch, wikipedia, lmarena, text_surface_forms, openalex, semantic_scholar` |
 | `identifier` | string | the ID/name in that namespace; for `text_surface_forms`, one row per observed human spelling |
 
 Primary key is the full triple, so a model may carry several identifiers per
-namespace (e.g. many surface forms).
+namespace (e.g. many surface forms). `openalex` and `semantic_scholar`
+name the work id of the model's paper, written by `pull_citations.py`;
+they are not names of the model, so they never resolve an id to a model
+and several models may share one paper.
 
 ## attributes.csv (serving + reasoning snapshot; one row per model)
 
@@ -280,6 +283,7 @@ Primary key: `(source, provider, api_id, first_observed)`.
 | `price_observations.csv` | `price_input`, `price_output`, `price_cached`, `currency`, `unit` (`per_1m_tokens` for models.dev, `per_token` for OpenRouter and LiteLLM). A source that rewrites a number's notation (LiteLLM's `0.00003` became `3e-05` on 2025-05-29) starts a new run at the same price; `price_changes.csv` compares converted values and does not count it |
 | `capability_observations.csv` | `context_length`, `max_output`, `modalities_in`, `modalities_out` (pipe-lists), `tool_use`, `structured_output`, `reasoning` (bool, blank when the source does not say) |
 | `model_versions.csv` | `version_kind`, `version_id`, `stated_date` (below) |
+| `download_observations.csv` | `downloads_30d` (the Hub's rolling 30-day count; blank for ModelScope), `downloads_all_time` (cumulative; blank in hub-stats revisions before the column existed). Sources `hub_stats` (one day a week, the first `hub-stats` upload of the ISO week, since 2024-07-29) and `modelscope` (each daily sweep; `provider` is the ledger org, and a repo resolves through its Hub twin: same org, same repo name). Only repos that resolve to a ledger model get rows |
 
 `model_versions.csv` holds the version a source states for an id, so a
 result can name what was served:
@@ -305,6 +309,59 @@ day LiteLLM committed a value, which is on or after the day the provider
 set it. The full payloads are archived as
 `raw-YYYY-MM-DD` releases of the agent repository, and
 `agent/backfill_observations.sh` there rebuilds these tables from them.
+
+### usage_observations.csv
+
+Written by `pipeline/pull_openrouter_rankings.py` from OpenRouter's Data
+API (`rankings-daily`, CC BY 4.0). One row per day and model among the 50
+public models that processed the most tokens on OpenRouter that day, plus
+one `other` row for all the rest. Each pull re-reads every day since
+2025-01-01 and rewrites the file.
+
+| Column | Type | Rules |
+|---|---|---|
+| `date` | ISO date | the ranking day (UTC) |
+| `model_permaslug` | string | OpenRouter's dated slug as the API states it (`deepseek/deepseek-v4-flash-20260423`, variants keep their `:free` suffix); `other` for the remainder row |
+| `model_id` | FK nullable | the permaslug's model id from OpenRouter's archived `/models` listings (`canonical_slug`), then the crosswalk; blank for `other` and unmatched slugs |
+| `total_tokens` | integer | tokens that day, exactly as stated |
+| `rank` | integer | position among the day's named models by tokens; blank for `other` |
+| `day_total_tokens` | integer | sum of every row of the day, `other` included; a share is `total_tokens / day_total_tokens` |
+| `as_of` | timestamp | the API's `meta.as_of` for the response the row came from |
+| `source_url` | URL | the request, without credentials |
+
+A model missing from a day was not in that day's top 50; it is not zero.
+OpenRouter is one router among many: these are shares of OpenRouter
+traffic, not of the market. Cite as "Source: OpenRouter
+(openrouter.ai/rankings), as of `<as_of>`. Licensed under CC BY 4.0."
+Validation rule 18 checks one `other` row per day and that the day total
+sums the rows.
+
+### citation_observations.csv
+
+Written by `pipeline/pull_citations.py` from OpenAlex (CC0) and Semantic
+Scholar. One row per model, paper, source and citing year; the file is
+rewritten on each run.
+
+| Column | Type | Rules |
+|---|---|---|
+| `model_id` | FK | |
+| `arxiv_id` | string | the model's paper |
+| `linked_by` | enum | `paper_published_event` (the arXiv URL of the model's `paper_published` event), else `epoch_link` (the arXiv link Epoch AI gives the model), else `hf_card_arxiv_tag` (the single `arxiv:` tag across the model's Hub repos; repos tagging several papers are left out) |
+| `source` | enum | `openalex`, `semantic_scholar` |
+| `work_id` | string | the source's id for the paper |
+| `year` | integer nullable | citing year; blank for the total |
+| `citations` | integer | as the source states it |
+| `observed_on` | ISO date | the day the source was read |
+| `source_url` | URL | the work's page in that source |
+
+Primary key: `(model_id, arxiv_id, source, year)`. OpenAlex states a total
+and counts by citing year; Semantic Scholar a total only. The two count
+differently (OpenAlex keeps an arXiv preprint apart from its journal
+version, so its counts run lower) and neither is corrected toward the
+other. A Hub tag can name a method paper or the base model's paper rather
+than the model's own report, so a fine-tune may carry its base model's
+count. Validation rule 19 checks that a row names a ledger model, a
+known link kind and source, and a whole-number count.
 
 ### research_mentions.csv
 
@@ -481,6 +538,34 @@ resellers agree; a lone reseller yields an `inferred` claim labelled
   lists that model under one date and never undated). Ambiguous names stay
   out. The dataset revision is the sha in the raw manifest URL. CC BY 4.0
   (LMArena, `lmarena-ai/leaderboard-dataset`).
+- `data/generated/obsolescence.csv` - one row per ledger model seen on
+  LMArena, in OpenRouter's daily top 50, or dropped from OpenRouter's
+  listing while observed. Technical: on each leaderboard day the model's
+  best `rank` across arenas; `arena_last_top30_date` is its last day at
+  rank 30 or better and `technical_obsolete_date` the next day it appears
+  below that, never to return (a model never in the top 30 is obsolete on
+  `arena_first_date`; blank when its last appearance is still in the top
+  30). Usage: `usage_obsolete_date` is the day after
+  `openrouter_top50_last_date`, set only when the model has been out of
+  the top 50 for at least 30 days through the latest ranking day.
+  `openrouter_last_listed_date` is the last day OpenRouter listed it, set
+  only when that is before the latest observed listing day (from
+  2026-10-03). Ages count from `first_public_availability_date`. The rank
+  and top-50 thresholds follow MIT FutureTech's study of model
+  obsolescence (SSRN 7502833), which used a top-30 rank on LMArena for
+  technical obsolescence. The ranking starts 2025-01-01, so
+  `openrouter_top50_first_date` = 2025-01-01 means "already in the top
+  50"; a negative age means the signal predates the ledger's availability
+  date (a pre-release arena test, a late ledger date, or an arena name
+  matched to the wrong model) and is worth a look.
+- `data/generated/hub_descendants.csv` - one row per Hub repo of a ledger
+  model and relation: `descendants` is how many public Hub repos name that
+  repo as a direct base model with that relation (`finetune`, `quantized`,
+  `merge`, `adapter`, as the Hub states it in `baseModels`), in the newest
+  weekly `hub-stats` copy of the Hub's model list (`hub_stats_date`). A
+  merge counts once toward each base. Counts, not one row per derivative;
+  derivatives of derivatives count toward their own base, and untagged
+  ones are not counted. Apache-2.0 (cfahlgren1, `hub-stats`).
 - `data/generated/research_mentions_monthly.csv` - papers per family per
   month from `research_mentions.csv`: a paper counts once per family, in
   the month of the earliest version naming the family or a member.
@@ -517,8 +602,9 @@ rewrite the dataset.
   A `predecessor_lead` (build.py) pairs a model with the one model at the
   next lower version of its family, same developer and same rest of the
   id (`glm-4-6` before `glm-4-7`, `gemini-3-flash` before
-  `gemini-3-5-flash`); a person sets `predecessor_id` / `successor_id` or
-  rejects it. Nothing writes these columns automatically. An
+  `gemini-3-5-flash`); a person sets `predecessor_id` on the newer model
+  and `successor_id` on the older (rule 20 checks both), or rejects it.
+  Nothing writes these columns automatically. An
   `announce_lead` (pull_nhlocal.py) names a model with no `announced`
   event that the community timeline mentions, with the month as a hint
   for finding the maker's post; a `paper_lead` (pull_arxiv.py) is an
@@ -569,7 +655,8 @@ rewrite the dataset.
     `modelscope`, `api_metadata`, `lifecycle_table`) has at least one row in
     `claims.csv`; no other event has any.
 12. A `(namespace, identifier)` in a machine namespace (everything but
-    `wikipedia`, `text_surface_forms`, `lmarena`) maps to one model, or to
+    `wikipedia`, `text_surface_forms`, `lmarena`, `openalex`,
+    `semantic_scholar`) maps to one model, or to
     a model and models whose `snapshot_of` or `parent_model_id` is that
     model.
 13. `access_type=api_only` is incompatible with a `weights_released`
@@ -586,6 +673,13 @@ rewrite the dataset.
     family)`, has an arXiv id, a `vN` version and a day, a known
     `match_type` and `source`, always a `family`, and a known `model_id`
     exactly when `match_type = model`.
+18. Each `usage_observations` day has whole token counts, exactly one
+    `other` row and a `day_total_tokens` equal to the sum of its rows;
+    a set `model_id` is a known model.
+19. A citation row names a known model, a `linked_by` in the vocabulary,
+    source `openalex` or `semantic_scholar`, and a whole-number count.
+20. `predecessor_id` and `successor_id` mirror each other: when A names B
+    as its predecessor, B names A as its successor, and the reverse.
 
 Churn guard (run by `pipeline/validate.py`, not part of the rule set): one
 run may not remove more than 2% of the events committed at `HEAD`, nor

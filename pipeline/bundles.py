@@ -34,19 +34,21 @@ BUNDLES = {
     "markets": (
         (f"{CORE}/attributes.csv", f"{OBS}/availability_observations.csv",
          f"{OBS}/price_observations.csv", f"{OBS}/capability_observations.csv",
-         f"{GEN}/market_on_date.csv", f"{GEN}/price_changes.csv"),
+         f"{OBS}/download_observations.csv", f"{OBS}/usage_observations.csv",
+         f"{GEN}/market_on_date.csv", f"{GEN}/price_changes.csv", f"{GEN}/obsolescence.csv"),
         {"api_preview", "api_ga", "free_tier", "consumer_rollout", "platform_availability",
          "price_changed", "retired"},
     ),
     "science": (
-        (f"{OBS}/research_mentions.csv", f"{GEN}/research_mentions_monthly.csv",
+        (f"{OBS}/research_mentions.csv", f"{OBS}/citation_observations.csv",
+         f"{GEN}/research_mentions_monthly.csv",
          f"{GEN}/research_first_mentions.csv", f"{OBS}/model_versions.csv",
          f"{GEN}/llm_ledger_capability.csv", f"{GEN}/llm_ledger_benchmarks.csv",
          f"{GEN}/llm_ledger_arena.csv"),
         {"paper_published", "weights_released", "version_observed"},
     ),
     "lineage": (
-        (f"{CORE}/crosswalk.csv",),
+        (f"{CORE}/crosswalk.csv", f"{GEN}/hub_descendants.csv"),
         {"announced", "weights_released", "license_changed", "renamed", "alias_repointed"},
     ),
     "governance": (

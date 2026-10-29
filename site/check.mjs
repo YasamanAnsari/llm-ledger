@@ -2,8 +2,10 @@
 import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {NO_COUNTRY, createLedger, marketOn, perMillion} from './ledger-engine.mjs';
-import {ARENA_METRIC, COUNTRIES, accessGroup, annotateGroups, arenaBest, annualCounts, capabilityFrontier, frontierLag, gapBins, mentionBins, opennessTier, renderFrontier, renderGap, retirementFates, scatterPoints,
+import {ARENA_METRIC, COUNTRIES, accessGroup, ageBins, annotateGroups, arenaBest, annualCounts, blendedPrice, budgetBest, capabilityFrontier, cheapestPrices, downloadsByCohort, eciScores,
+  frontierLag, gapBins, mentionBins, opennessTier, priceScoreFrontier, priceToScore, renderFrontier, renderGap, renderLines, retirementFates, sampleDays, scatterPoints, tokenShareByAge,
   yearlyMedians} from './charts.mjs';
+import {existsSync, readFileSync} from 'node:fs';
 
 assert.deepEqual(parseCsv('a,b\n1,"x, ""y"""\r\n2,\n'), [{a: '1', b: 'x, "y"'}, {a: '2', b: ''}]);
 assert.throws(() => parseCsv('a,b\n1\n'), /field/);
@@ -113,5 +115,49 @@ const explorer = createLedger({
 assert.deepEqual(explorer.query({country: 'CN'}).map(r => r.model.model_id), ['cn-lab-m']);
 assert.deepEqual(explorer.query({country: NO_COUNTRY}).map(r => r.model.model_id), ['no-hq-m']);
 assert.equal(explorer.query({}).length, 3);
+
+assert.equal(blendedPrice({price_input: '0.000003', price_output: '0.000015', unit: 'per_token'}), 6);
+assert.equal(blendedPrice({price_input: '0', price_output: '0.000015', unit: 'per_token'}), null);
+assert.deepEqual(sampleDays('2023-10-06', '2024-01-15'), ['2023-10-01', '2023-11-01', '2023-12-01', '2024-01-01', '2024-01-15']);
+assert.deepEqual(sampleDays('2023-10-01', '2023-12-01'), ['2023-10-01', '2023-11-01', '2023-12-01']);
+const priceRun = (source, model_id, input, output, first_observed, last_observed) =>
+  ({source, model_id, price_input: input, price_output: output, unit: 'per_1m_tokens', first_observed, last_observed});
+const cheapestByDay = cheapestPrices([
+  priceRun('litellm_git', 'o1', '4', '8', '2025-01-01', '2025-02-15'), priceRun('litellm_git', 'o1', '2', '4', '2025-02-01', '2025-03-01'),
+  priceRun('openrouter', 'o1', '0.1', '0.1', '2025-01-01', '2025-03-01'), priceRun('litellm_git', 'a1', '8', '8', '2025-01-01', '2025-03-01'),
+  priceRun('litellm_git', 'a2', '1', '1', '2025-02-01', '2025-03-01'), priceRun('litellm_git', '', '1', '1', '2025-01-01', '2025-03-01'),
+], ['2025-01-01', '2025-02-01']);
+assert.deepEqual([...cheapestByDay].map(([d, m]) => [d, [...m]]), [['2025-01-01', [['o1', 5], ['a1', 8]]], ['2025-02-01', [['o1', 2.5], ['a1', 8], ['a2', 1]]]]);
+const eci = eciScores([['o1', 'open_weights', '130'], ['a1', 'api_only', '150'], ['a2', 'api_only', '120'], ['a2', 'api_only', '135'], ['x', 'consumer_only', '170']]
+  .map(([model_id, access_group, value]) => ({model_id, access_group, eci: value, canonical_name: model_id})));
+assert.deepEqual([...eci.values()].map(s => [s.id, s.group, s.eci]), [['o1', 'open', 130], ['a1', 'api_only', 150], ['a2', 'api_only', 135]]);
+assert.deepEqual(priceToScore(cheapestByDay, eci, [130]).map(r => [r.date, r.group, r.model_id, r.price]),
+  [['2025-01-01', 'open', 'o1', 5], ['2025-01-01', 'api_only', 'a1', 8], ['2025-02-01', 'open', 'o1', 2.5], ['2025-02-01', 'api_only', 'a2', 1]]);
+assert.deepEqual(priceScoreFrontier(cheapestByDay, eci, ['2025-02-01']).map(r => r.model_id), ['a2', 'a1']);
+assert.deepEqual(budgetBest(cheapestByDay, eci, 3).map(r => [r.date, r.series, r.model_id]),
+  [['2025-01-01', 'overall', 'a1'], ['2025-02-01', 'overall', 'a1'], ['2025-02-01', 'under_budget', 'a2']]);
+const cohortModels = [['o1', '2022-06-01'], ['o2', '2025-03-01'], ['o3', '']].map(([model_id, first_public_availability_date]) => ({model_id, first_public_availability_date}));
+const hubRun = (model_id, downloads_30d, first_observed, last_observed, source = 'hub_stats') => ({source, model_id, downloads_30d, first_observed, last_observed});
+assert.deepEqual(downloadsByCohort([hubRun('o1', '100', '2025-01-06', '2025-01-13'), hubRun('o2', '7', '2025-01-13', '2025-01-13'),
+  hubRun('o3', '9', '2025-01-06', '2025-01-06'), hubRun('o2', '', '2025-01-06', '2025-01-06'), hubRun('o2', '50', '2025-01-06', '2025-01-06', 'modelscope')], cohortModels),
+[{date: '2025-01-06', cohort: '2022 or earlier', downloads_30d: 100, repos: 1}, {date: '2025-01-13', cohort: '2022 or earlier', downloads_30d: 100, repos: 1},
+  {date: '2025-01-13', cohort: '2025', downloads_30d: 7, repos: 1}]);
+const usageRow = (date, model_permaslug, model_id, total_tokens, day_total_tokens) => ({date, model_permaslug, model_id, total_tokens, day_total_tokens});
+assert.deepEqual(tokenShareByAge([usageRow('2025-04-01', 'a/o2', 'o2', '60', '100'), usageRow('2025-04-01', 'a/o1', 'o1', '30', '100'),
+  usageRow('2025-04-01', 'other', '', '10', '100'), usageRow('2025-04-02', 'b/x', '', '50', '100'), usageRow('2025-04-02', 'other', '', '50', '100')], cohortModels)
+  .map(r => [r.age, r.share]), [['other', 0.3], ['over_1y', 0.15], ['under_3m', 0.3], ['unknown', 0.25]]);
+const aged = ageBins([['open_weights', '-4'], ['open_weights', '90'], ['open_weights', '400'], ['api_only', '']]
+  .map(([access_group, days]) => ({access_group, technical_obsolete_age_days: days})), 'technical_obsolete_age_days');
+assert.deepEqual([aged.open_weights.counts, aged.open_weights.median, aged.api_only.n], [[1, 1, 0, 0, 1, 0], 90, 0]);
+const drawn = renderLines([{label: 'A', color: '#000', points: [{x: 1, y: 10, id: 'o1', title: 't'}, {x: 2, y: 1000, title: 'u'}]}, {label: 'B', color: '#111', points: []}],
+  {x: {type: 'linear', step: 1, format: String}, y: {type: 'log', format: String}, label: 'L', step: true});
+assert.match(drawn, /data-model="o1"/);
+assert.match(drawn, /d="M[\d.]+,[\d.]+H[\d.]+V[\d.]+"/);
+assert.ok(!drawn.includes('>B<'), 'a series with no points gets no legend entry');
+
+const dist = new URL('./dist/data/', import.meta.url);
+for (const [, file] of readFileSync(new URL('./index.html', import.meta.url), 'utf8').matchAll(/href="\.\/data\/([^"]+)"/g)) {
+  assert.ok(existsSync(new URL(file, dist)), `index.html links ./data/${file}, which the build did not write`);
+}
 
 console.log('site check: ok');

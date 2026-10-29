@@ -10,6 +10,7 @@ exact version was served, and how capable was it?
 | `research_mentions.csv` | one arXiv paper version (cs.AI, cs.CL, cs.CV, cs.LG, stat.ML) and one model or family its title or abstract names |
 | `research_mentions_monthly.csv` | papers per family per month |
 | `research_first_mentions.csv` | each model a paper names, with the first such paper and `days_to_first_mention` from first public availability |
+| `citation_observations.csv` | one model's arXiv paper and its citation count from OpenAlex (total and by citing year) or Semantic Scholar (total) |
 | `model_versions.csv` | a run of days on which a source stated one version of an id: a Hub commit sha or a dated API snapshot |
 | `llm_ledger_capability.csv` | an Epoch Capabilities Index score joined to a ledger model |
 | `llm_ledger_benchmarks.csv` | one Epoch Benchmarking Hub result (benchmark, evaluated version, score) on a ledger model |
@@ -32,8 +33,17 @@ Epoch benchmark results join the same way through each version's model
 group. Arena names join when, with an effort qualifier folded, they are a
 ledger id or a unique ledger spelling; a dated name needs a ledger id
 with the same date or an arena that lists the model under one date only.
+A model's paper is the arXiv link of its `paper_published` event, else
+the one Epoch AI gives, else the single `arxiv:` tag on its Hub repos;
+OpenAlex and Semantic Scholar are asked for that paper by arXiv id.
 
 ## Limits
+
+- Citation counts are copied from each source and disagree (OpenAlex
+  counts an arXiv preprint apart from its journal version, so it runs
+  lower). A Hub tag can name a method or base-model paper, so a
+  fine-tune may carry its base model's count. Models with no arXiv paper
+  have no row.
 
 - Mentions are a floor. A spelling needs a version or size digit, so bare
   names ("Qwen", "Claude", "Phi") are not counted, and only titles and
@@ -58,5 +68,6 @@ with the same date or an arena that lists the model under one date only.
 
 Column definitions: `docs/schema.md`. arXiv metadata is CC0 1.0; ECI and
 the Benchmarking Hub are CC BY 4.0 (Epoch AI); LMArena's leaderboard
-dataset is CC BY 4.0 (LMArena); the ledger is CC BY 4.0
+dataset is CC BY 4.0 (LMArena); OpenAlex is CC0; citation counts from
+Semantic Scholar are credited "Semantic Scholar"; the ledger is CC BY 4.0
 (see `LICENSE`).

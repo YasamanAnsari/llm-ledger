@@ -502,6 +502,52 @@ def check_rule17_research_mentions(tables: dict) -> list:
     return errors
 
 
+def check_rule18_usage(tables: dict) -> list:
+    """Each ranking day holds one `other` row, whole token counts that sum
+    to the day total, and model ids the ledger knows."""
+    errors = []
+    model_ids = {m["model_id"] for m in tables["models"]}
+    days: dict = {}
+    for r in tables.get(schema.USAGE_OBSERVATIONS.name, []):
+        days.setdefault(r["date"], []).append(r)
+        if r["model_id"] and r["model_id"] not in model_ids:
+            errors.append(f"rule18: usage {r['date']}/{r['model_permaslug']} names unknown model "
+                          f"{r['model_id']}")
+    for day, rows in days.items():
+        if not all(r["total_tokens"].isdigit() and r["day_total_tokens"].isdigit() for r in rows):
+            errors.append(f"rule18: usage {day} has a token count that is not a whole number")
+            continue
+        others = [r for r in rows if r["model_permaslug"] == schema.USAGE_OTHER]
+        totals = {r["day_total_tokens"] for r in rows}
+        if len(others) != 1 or totals != {str(sum(int(r["total_tokens"]) for r in rows))}:
+            errors.append(f"rule18: usage {day} needs one `other` row and a day total that sums "
+                          "its rows")
+    return errors
+
+
+def check_rule19_citations(tables: dict) -> list:
+    """Citation rows name a known model, a known link kind and source, and
+    a whole-number count."""
+    model_ids = {m["model_id"] for m in tables["models"]}
+    return [f"rule19: citation {r['model_id']}/{r['arxiv_id']}/{r['source']}/{r['year']} is malformed"
+            for r in tables.get(schema.CITATION_OBSERVATIONS.name, [])
+            if r["model_id"] not in model_ids or r["linked_by"] not in schema.PAPER_LINKS
+            or r["source"] not in ("openalex", "semantic_scholar") or not r["citations"].isdigit()]
+
+
+def check_rule20_succession(tables: dict) -> list:
+    """`predecessor_id` and `successor_id` mirror each other."""
+    by_id = {m["model_id"]: m for m in tables["models"]}
+    errors = []
+    for m in tables["models"]:
+        for col, mirror in (("predecessor_id", "successor_id"), ("successor_id", "predecessor_id")):
+            other = by_id.get(m[col])
+            if other and other[mirror] != m["model_id"]:
+                errors.append(f"rule20: {m['model_id']}.{col} = {m[col]}, but {m[col]}.{mirror} = "
+                              f"{other[mirror] or '(blank)'}")
+    return errors
+
+
 def check_rule10_no_epoch_columns(tables: dict) -> list:
     errors = []
     for table in CORE_TABLES:
@@ -539,6 +585,9 @@ def validate_tables(tables: dict, today: date, core_dir: Path = schema.CORE_DIR,
     warnings += w15
     errors += check_rule16_observation_runs(tables)
     errors += check_rule17_research_mentions(tables)
+    errors += check_rule18_usage(tables)
+    errors += check_rule19_citations(tables)
+    errors += check_rule20_succession(tables)
     return errors, warnings
 
 
@@ -580,7 +629,8 @@ def main() -> int:
                         help="skip the churn guard for an intentional migration")
     args = parser.parse_args()
     tables = schema.load_core()
-    for table in schema.OBSERVATION_TABLES + (schema.RESEARCH_MENTIONS,):
+    for table in schema.OBSERVATION_TABLES + (schema.RESEARCH_MENTIONS, schema.USAGE_OBSERVATIONS,
+                                              schema.CITATION_OBSERVATIONS):
         tables[table.name] = schema.read_table(table, schema.OBSERVATIONS_DIR)
     errors, warnings = validate_tables(tables, today=date.today())
     if not args.allow_churn:

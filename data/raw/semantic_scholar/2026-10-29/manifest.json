@@ -1,0 +1,8 @@
+{
+  "works.json": {
+    "bytes": 50974,
+    "fetched_at": "2026-10-29T04:06:58+00:00",
+    "sha256": "2c0226a25603861a46de548b10ea17a74754118c72f3111b11016f8b32bd2597",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/batch"
+  }
+}

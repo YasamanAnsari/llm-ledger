@@ -39,17 +39,20 @@ AVAILABILITY = schema.AVAILABILITY_OBSERVATIONS.name
 PRICE = schema.PRICE_OBSERVATIONS.name
 CAPABILITY = schema.CAPABILITY_OBSERVATIONS.name
 VERSIONS = schema.MODEL_VERSIONS.name
+DOWNLOADS = schema.DOWNLOAD_OBSERVATIONS.name
 
 VENDOR_APIS = ("openai_api", "anthropic_api", "google_api", "mistral_api")
 # source -> the payload file its observations are read from
 PAYLOADS = {"models_dev": "normalized.csv", "openrouter": "normalized.csv",
             "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
             "litellm_git": "model_prices_and_context_window.json.gz",
+            "hub_stats": "normalized.csv", "modelscope": "normalized.csv",
             **{s: "normalized.csv" for s in VENDOR_APIS}}
 # The manifest entry whose URL is the evidence for the day.
 MANIFEST_PAYLOAD = {"models_dev": "api.json", "openrouter": "models.json",
                     "litellm": "model_prices_and_context_window.json", "hf": "normalized.csv",
                     "litellm_git": "model_prices_and_context_window.json",
+                    "hub_stats": "models.parquet", "modelscope": "normalized.csv",
                     **{s: "models.json" for s in VENDOR_APIS}}
 LITELLM_SOURCES = ("litellm", "litellm_git")
 # Namespaces whose identifiers name serving ids; the key fallback reads them.
@@ -133,6 +136,24 @@ def _hf(rows: list, url: str) -> dict | None:
         for r in rows if r["sha"]]}
 
 
+def _hub_stats(rows: list, url: str) -> dict:
+    return {DOWNLOADS: [
+        {"source": "hub_stats", "provider": "huggingface", "api_id": r["repo_id"],
+         "downloads_30d": r["downloads"], "downloads_all_time": r["downloads_all_time"],
+         "source_url": url}
+        for r in rows]}
+
+
+def _modelscope(rows: list) -> dict:
+    """ModelScope states one cumulative count. `provider` is the ledger org
+    the namespace belongs to, which is how a repo meets its Hub twin."""
+    return {DOWNLOADS: [
+        {"source": "modelscope", "provider": r["org_id"], "api_id": r["repo_id"],
+         "downloads_30d": "", "downloads_all_time": r["downloads"],
+         "source_url": f"https://modelscope.cn/models/{r['repo_id']}"}
+        for r in rows if r["downloads"] != ""]}
+
+
 def _google_versions(models_json: Path) -> dict:
     """Gemini API id -> the `version` field its registry entry states."""
     payload = json.loads(models_json.read_text(encoding="utf-8"))
@@ -196,6 +217,10 @@ def day_observations(source: str, day_dir: Path) -> dict | None:
         return _openrouter(rows, url)
     if source == "hf":
         return _hf(rows, url)
+    if source == "hub_stats":
+        return _hub_stats(rows, url)
+    if source == "modelscope":
+        return _modelscope(rows)
     google = _google_versions(day_dir / "models.json") if source == "google_api" else {}
     return _vendor_api(source, rows, url, google)
 
@@ -246,19 +271,28 @@ def _key(identifier: str) -> str:
     return "-".join(filter(None, (norm["key"], norm["snapshot_suffix"])))
 
 
-def model_resolver(crosswalk: list):
+def model_resolver(crosswalk: list, developer_of: dict | None = None):
     """(source, provider, api_id) -> model_id. An exact crosswalk identifier
     wins; else the normalized key, when it names exactly one model. A Hub
-    repo resolves only exactly: the census decides which repos a model has."""
+    repo resolves only exactly: the census decides which repos a model has.
+    A ModelScope repo resolves through its twin: a Hub repo of the same name
+    whose model the same org (`developer_of`: model_id -> org) developed."""
     exact = {(r["namespace"], r["identifier"]): r["model_id"] for r in crosswalk}
     by_key: dict = {}
+    twins: dict = {}
     for r in crosswalk:
         if r["namespace"] in SERVING_NAMESPACES:
             by_key.setdefault(_key(r["identifier"]), set()).add(r["model_id"])
+        if r["namespace"] == "huggingface" and developer_of:
+            twin = (developer_of.get(r["model_id"], ""), r["identifier"].split("/")[-1].lower())
+            twins.setdefault(twin, set()).add(r["model_id"])
 
     def resolve(source: str, provider: str, api_id: str) -> str:
-        if source == "hf":
+        if source in ("hf", "hub_stats"):
             return exact.get(("huggingface", api_id), "")
+        if source == "modelscope":
+            ids = twins.get((provider, api_id.split("/")[-1].lower()), set())
+            return next(iter(ids)) if len(ids) == 1 else ""
         identifier = f"{provider}/{api_id}" if source == "models_dev" else api_id
         if (source, identifier) in exact:
             return exact[(source, identifier)]
@@ -276,9 +310,11 @@ def _day_dirs(raw_root: Path) -> list:
     return sorted(found)
 
 
-def observe(raw_root: Path, tables: dict, crosswalk: list) -> list:
+def observe(raw_root: Path, tables: dict, crosswalk: list,
+            developer_of: dict | None = None) -> list:
     """Fold every new source-day under `raw_root` into `tables` (name ->
     rows) and re-resolve model ids. Returns one log line per day folded."""
+    resolve = model_resolver(crosswalk, developer_of)
     last_seen: dict = {}
     for name, rows in tables.items():
         for r in rows:
@@ -296,13 +332,18 @@ def observe(raw_root: Path, tables: dict, crosswalk: list) -> list:
         counts = []
         for table in pending:
             records = obs.get(table.name, [])
+            if table.name == DOWNLOADS:
+                # ponytail: counts change daily, so unmapped repos would add a
+                # row per repo per day. A repo the crosswalk gains later starts
+                # from the next day folded; re-fold from the archives to backfill it.
+                records = [r for r in records
+                           if resolve(r["source"], r["provider"], r["api_id"])]
             if not records:
                 continue
             started = extend_runs(tables[table.name], records, table, day)
             counts.append(f"{table.name.split('_')[0]} {len(records)} ({started} new runs)")
         if counts:
             log.append(f"observe: {source} {day}: " + ", ".join(counts))
-    resolve = model_resolver(crosswalk)
     for rows in tables.values():
         for r in rows:
             r["model_id"] = resolve(r["source"], r["provider"], r["api_id"])
@@ -328,7 +369,8 @@ def main() -> int:
     if not args.raw_root.is_dir():
         raise SystemExit(f"observe: no raw root at {args.raw_root}")
     tables = load_observations()
-    for line in observe(args.raw_root, tables, schema.read_table(schema.CROSSWALK)):
+    developer_of = {m["model_id"]: m["developer_org_id"] for m in schema.read_table(schema.MODELS)}
+    for line in observe(args.raw_root, tables, schema.read_table(schema.CROSSWALK), developer_of):
         print(line)
     for table in schema.OBSERVATION_TABLES:
         schema.write_table(table, tables[table.name], schema.OBSERVATIONS_DIR)

@@ -14,6 +14,49 @@ Data corrections update rows in place; this file preserves the history.
   the provider's change.
 - An observation run keeps the source URL of its first day; a new URL
   with the same values no longer starts a run. No existing run changed.
+- New observation table `download_observations.csv`: Hugging Face
+  30-day and all-time downloads for the ledger's Hub repos, one day a
+  week since 2024-07-29, read from the history of `cfahlgren1/hub-stats`
+  (`pull_hub_stats.py`, Apache-2.0), and ModelScope's cumulative
+  downloads for repos with a Hub twin: 110,184 rows, 1,668 of 1,675
+  ledger Hub repos in the latest week. `pull_modelscope.py` now leaves
+  a missing download count blank instead of writing 0.
+- New observation table `usage_observations.csv` from OpenRouter's Data
+  API (`rankings-daily`, CC BY 4.0, `pull_openrouter_rankings.py`):
+  33,864 rows over 664 days from 2025-01-01 to 2026-10-28, the day's top
+  50 plus an `other` row. Permaslugs resolve through the `canonical_slug`
+  of archived `/models` listings, which places 91.7% of named-model
+  tokens on 252 ledger models. Validation rule 18 checks the day totals.
+- New generated file `obsolescence.csv`: for 352 models, the day each
+  left the LMArena top 30 for good (228) and OpenRouter's daily top 50
+  for 30 days or more (181), and the last OpenRouter listing day of 19
+  models delisted since 2026-10-03, with ages from first availability.
+  Thresholds follow SSRN 7502833. Five ages are negative and worth a
+  look: arena or usage signals that predate the ledger's date.
+- New observation table `citation_observations.csv`
+  (`pull_citations.py`, `make citations`): citation counts for the arXiv
+  paper of 754 models (248 papers), from OpenAlex (198 papers, total and
+  by year, CC0) and Semantic Scholar (247 papers, total). The paper is
+  the model's `paper_published` event, else Epoch AI's link, else the
+  single `arxiv:` tag on its Hub repos. The crosswalk gains `openalex`
+  and `semantic_scholar` work ids, which are not model identities.
+  Validation rule 19 checks the rows.
+- `predecessor_id` and `successor_id` now mirror each other: 10
+  one-sided links in `models.csv` were completed, and validation rule 20
+  rejects a link set on one side only.
+- New generated file `hub_descendants.csv`: how many public Hub repos
+  name each ledger repo as their direct base model, by relation
+  (`finetune`, `quantized`, `merge`, `adapter`), from the newest
+  `hub-stats` week (2026-10-26): 2,996 rows for 1,215 models, 191,828
+  direct derivatives in all. In the Lineage bundle.
+- Site: FIG. 11 to 15 show the cheapest model reaching an ECI score
+  over time (open weights against API only, from LiteLLM's price
+  history), the price-score frontier on selected days, the best model
+  under $1 per million tokens against the best overall, Hub downloads by
+  release year and OpenRouter tokens by model age, and age at technical
+  and usage obsolescence. Each links its CSV. A definitions block in the
+  methodology covers access types, what each date means and what each
+  observation table can and cannot show.
 - New generated file `llm_ledger_benchmarks.csv`: Epoch AI Benchmarking
   Hub results on ledger models, 3,785 rows for 245 models across 59
   benchmarks, scores copied unchanged with the evaluated model version.

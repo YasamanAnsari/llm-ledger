@@ -1,0 +1,10 @@
+{
+  "models.parquet": {
+    "bytes": 940908558,
+    "committed_at": "2026-01-12T13:16:43+00:00",
+    "fetched_at": "2026-10-29T04:03:44+00:00",
+    "revision": "b2d918fbf7300e199953bba95e4f2641ae486d92",
+    "sha256": "0b30dd351742714e41d4e3318079b9f86b8cf81ab5ddd66744009dbc25de6c8e",
+    "url": "https://huggingface.co/datasets/cfahlgren1/hub-stats/blob/b2d918fbf7300e199953bba95e4f2641ae486d92/models.parquet"
+  }
+}

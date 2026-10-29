@@ -157,6 +157,15 @@ def test_rule7_lineage_cycle():
     assert any("rule7" in e for e in _errors(_tables(models=models, events=events)))
 
 
+def test_rule20_succession_links_mirror_each_other():
+    events = [_event(event_id="a-api_ga-1", model_id="a"), _event(event_id="b-api_ga-1", model_id="b")]
+    one_sided = [_model(model_id="a", successor_id="b"), _model(model_id="b")]
+    errors = _errors(_tables(models=one_sided, events=events))
+    assert errors == ["rule20: a.successor_id = b, but b.predecessor_id = (blank)"], errors
+    both = [_model(model_id="a", successor_id="b"), _model(model_id="b", predecessor_id="a")]
+    assert _errors(_tables(models=both, events=events)) == []
+
+
 def test_rule8_vocab_and_platform_contract():
     bad_vocab = _tables(events=[_event(event_type="launched", event_id="acme-1-launched-1")])
     assert any("rule8" in e for e in _errors(bad_vocab))

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
@@ -137,6 +137,131 @@ def test_litellm_history_carries_a_commit_forward_and_breaks_the_run_on_a_price_
     assert [(r["context_length"], r["first_observed"], r["last_observed"])
             for r in tables[schema.CAPABILITY_OBSERVATIONS.name]] == [
         ("128000", "2024-11-11", "2024-11-13")]
+
+
+def test_downloads_keep_ledger_repos_and_meet_the_modelscope_twin_by_org_and_name() -> None:
+    """Yi-1.5-34B-Chat in hub-stats on 2024-07-29 and on ModelScope (as
+    01ai/, not 01-ai/) on 2026-10-27; an unmapped repo is dropped."""
+    import json
+    import tempfile
+    import pull_hub_stats
+    root = Path(tempfile.mkdtemp())
+    payloads = {
+        ("hub_stats", "2024-07-29", "models.parquet"):
+            "repo_id,downloads,downloads_all_time\n01-ai/Yi-1.5-34B-Chat,11061,\nsomeone/else,5,\n",
+        ("modelscope", "2026-10-27", "normalized.csv"):
+            "repo_id,namespace,org_id,created_at,last_updated,downloads,task,license\n"
+            "01ai/Yi-1.5-34B-Chat,01ai,01ai,2024-05-12,2024-06-27,20950,text-generation,apache\n"
+            "01ai/Yi-9Z,01ai,01ai,2024-05-12,2024-06-27,,text-generation,apache\n"}
+    for (source, day, manifest_key), text in payloads.items():
+        d = root / source / day
+        d.mkdir(parents=True)
+        (d / "normalized.csv").write_text(text)
+        (d / "manifest.json").write_text(json.dumps({manifest_key: {"url": "u", "sha256": "x"}}))
+    tables = {t.name: [] for t in schema.OBSERVATION_TABLES}
+    crosswalk = [{"model_id": "yi-1-5-34b-chat", "namespace": "huggingface",
+                  "identifier": "01-ai/Yi-1.5-34B-Chat"}]
+    observe.observe(root, tables, crosswalk, {"yi-1-5-34b-chat": "01ai"})
+    assert [(r["source"], r["api_id"], r["model_id"], r["downloads_30d"], r["downloads_all_time"],
+             r["first_observed"]) for r in tables[schema.DOWNLOAD_OBSERVATIONS.name]] == [
+        ("hub_stats", "01-ai/Yi-1.5-34B-Chat", "yi-1-5-34b-chat", "11061", "", "2024-07-29"),
+        ("modelscope", "01ai/Yi-1.5-34B-Chat", "yi-1-5-34b-chat", "", "20950", "2026-10-27")]
+
+    when = datetime(2024, 7, 29, 22, 3, tzinfo=timezone.utc)
+    commits = [("b", when + timedelta(days=1), "Upload models.parquet with huggingface_hub"),
+               ("a", when, "Upload models.parquet with huggingface_hub"),
+               ("c", when, "Upload spaces.parquet with huggingface_hub"),
+               ("d", when + timedelta(days=7), "Upload models.parquet with huggingface_hub")]
+    assert [(d.isoformat(), rev) for d, rev, _ in pull_hub_stats.weekly_uploads(commits)] == [
+        ("2024-07-29", "a"), ("2024-08-05", "d")]
+
+
+def test_descendants_count_direct_children_of_ledger_repos_by_relation() -> None:
+    """baseModels of real repos in hub-stats' models.parquet (2026-10): two
+    GGUFs of DeepSeek-V4.1-Flash-1017, a Qwen3-14B fine-tune, a merge with
+    gemma-4-26B-A4B-it among its bases (4 of its 12 kept), and a repo
+    naming no base."""
+    import pull_hub_stats
+    flash, qwen, gemma = ("deepseek-ai/DeepSeek-V4.1-Flash-1017", "Qwen/Qwen3-14B",
+                          "google/gemma-4-26B-A4B-it")
+    merge_bases = ["ConicCat/Gemma4-Writer-26BA4B", "Naphula/Goetia-26B-A4B-v1.6",
+                   "TheDrummer/Orion-26B-A4B-v1.1", gemma]
+    entries = [{"relation": "quantized", "models": [{"id": flash}]},  # ISTA-DASLab ...-GSQ-RCO-GGUF
+               {"relation": "quantized", "models": [{"id": flash}]},  # orcarouter ...-abliterated-GGUF
+               {"relation": "finetune", "models": [{"id": qwen}]},  # HuggingFaceBio/Carbon-X
+               {"relation": "merge", "models": [{"id": b} for b in merge_bases]},  # Naphula/Goetia-26B-A4B-v1.7
+               None]
+    assert pull_hub_stats.descendant_counts(entries, {flash, qwen, gemma}) == [
+        {"repo_id": qwen, "relation": "finetune", "descendants": "1"},
+        {"repo_id": flash, "relation": "quantized", "descendants": "2"},
+        {"repo_id": gemma, "relation": "merge", "descendants": "1"}]
+
+
+def test_openrouter_ranking_keeps_exact_tokens_and_a_day_total_that_includes_other() -> None:
+    """Four of OpenRouter's rows for 2025-01-01 (the day cut to them)."""
+    import pull_openrouter_rankings as rankings
+    assert rankings.spans(date(2025, 1, 1), date(2026, 10, 28)) == [
+        (date(2025, 1, 1), date(2026, 1, 1)), (date(2026, 1, 2), date(2026, 10, 28))]
+    payload = {"meta": {"as_of": "2026-10-29T03:59:11.480Z"}, "data": [
+        {"date": "2025-01-01", "model_permaslug": "anthropic/claude-3.5-sonnet:beta",
+         "total_tokens": "11646035656"},
+        {"date": "2025-01-01", "model_permaslug": "anthropic/claude-3.5-sonnet",
+         "total_tokens": "7543940725"},
+        {"date": "2025-01-01", "model_permaslug": "deepseek/deepseek-chat-v3-20241226",
+         "total_tokens": "4206734934"},
+        {"date": "2025-01-01", "model_permaslug": "other", "total_tokens": "2241676199"}]}
+    slug_ids = rankings.permaslug_ids([[
+        {"id": "deepseek/deepseek-chat", "canonical_slug": "deepseek/deepseek-chat-v3-20241226"},
+        {"id": "deepseek/deepseek-chat:free", "canonical_slug": "deepseek/deepseek-chat-v3-20241226"}]])
+    resolve = observe.model_resolver([
+        {"model_id": "claude-3-5-sonnet", "namespace": "openrouter",
+         "identifier": "anthropic/claude-3.5-sonnet"},
+        {"model_id": "deepseek-v3", "namespace": "openrouter", "identifier": "deepseek/deepseek-chat"}])
+    rows = rankings.usage_rows(payload, "u", resolve, slug_ids)
+    assert [(r["model_permaslug"].split("/")[-1], r["model_id"], r["rank"]) for r in rows] == [
+        ("claude-3.5-sonnet:beta", "claude-3-5-sonnet", "1"), ("claude-3.5-sonnet", "claude-3-5-sonnet", "2"),
+        ("deepseek-chat-v3-20241226", "deepseek-v3", "3"), ("other", "", "")]
+    assert {r["day_total_tokens"] for r in rows} == {
+        str(sum(int(r["total_tokens"]) for r in payload["data"]))}
+    payload["data"][0]["total_tokens"] = "1.2e10"
+    try:
+        rankings.usage_rows(payload, "u", resolve, slug_ids)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("a token count that is not a whole number must fail")
+
+
+def test_citations_take_the_first_paper_link_and_copy_both_sources_counts() -> None:
+    """DeepSeek-R1's report (2501.12948) as OpenAlex and Semantic Scholar
+    stated it on 2026-10-29."""
+    import pull_citations as citations
+    events = [{"model_id": "deepseek-r1", "event_type": "paper_published",
+               "source_url": "https://arxiv.org/abs/2501.12948"}]
+    crosswalk = [
+        {"model_id": "deepseek-r1", "namespace": "epoch", "identifier": "DeepSeek-R1"},
+        {"model_id": "deepseek-r1-distill-qwen-7b", "namespace": "epoch", "identifier": "R1 Distill"},
+        {"model_id": "yi-34b", "namespace": "huggingface", "identifier": "01-ai/Yi-34B"},
+        {"model_id": "many", "namespace": "huggingface", "identifier": "x/many"}]
+    epoch = {"DeepSeek-R1": "https://arxiv.org/abs/9999.00001",   # the event wins over Epoch
+             "R1 Distill": "https://arxiv.org/abs/2501.12948"}
+    tags = {"01-ai/Yi-34B": "transformers|arxiv:2403.04652|license:other",
+            "x/many": "arxiv:2401.00001|arxiv:2401.00002"}          # several papers: left out
+    papers = citations.model_papers(events, crosswalk, epoch, tags)
+    assert papers == [("deepseek-r1", "2501.12948", "paper_published_event"),
+                      ("deepseek-r1-distill-qwen-7b", "2501.12948", "epoch_link"),
+                      ("yi-34b", "2403.04652", "hf_card_arxiv_tag")]
+    openalex = [{"id": "https://openalex.org/W4406779522", "doi": "https://doi.org/10.48550/arxiv.2501.12948",
+                 "cited_by_count": 540, "counts_by_year": [{"year": 2026, "cited_by_count": 132},
+                                                           {"year": 2025, "cited_by_count": 407}]}]
+    s2 = [{"paperId": "2eed1fad9bbf887d4395de40f20144c4fafefd7f", "citationCount": 5954,
+           "externalIds": {"ArXiv": "2501.12948", "DOI": "10.1038/s41586-025-09422-z"}}]
+    rows, links = citations.citation_rows(papers[:1], openalex, s2, "2026-10-29")
+    assert [(r["source"], r["year"], r["citations"]) for r in rows] == [
+        ("openalex", "", "540"), ("openalex", "2026", "132"), ("openalex", "2025", "407"),
+        ("semantic_scholar", "", "5954")]
+    assert [(link["namespace"], link["identifier"]) for link in links] == [
+        ("openalex", "W4406779522"), ("semantic_scholar", "2eed1fad9bbf887d4395de40f20144c4fafefd7f")]
 
 
 def test_market_prices_convert_to_per_million_and_drop_the_router_marker() -> None:

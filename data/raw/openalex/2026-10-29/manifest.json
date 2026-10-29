@@ -1,0 +1,8 @@
+{
+  "works.json": {
+    "bytes": 41087,
+    "fetched_at": "2026-10-29T04:06:58+00:00",
+    "sha256": "bae475118b8a0fff772d946eeae32b6ebc9a9b476e01e00246a94b3cbb0ba187",
+    "url": "https://api.openalex.org/works"
+  }
+}

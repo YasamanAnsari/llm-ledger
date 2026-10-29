@@ -77,7 +77,7 @@ def sweep(owner: str, org_id: str) -> list:
                 "repo_id": f"{owner}/{m['Name']}", "namespace": owner, "org_id": org_id,
                 "created_at": _unix_date(m.get("CreatedTime")),
                 "last_updated": _unix_date(m.get("LastUpdatedTime")),
-                "downloads": m.get("Downloads", 0),
+                "downloads": m.get("Downloads", ""),
                 "task": next((t for t in IN_SCOPE_TASKS if t in tasks), ""),
                 "license": (m.get("License") or "").lower(),
             })

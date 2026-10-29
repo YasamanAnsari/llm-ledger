@@ -78,13 +78,15 @@ CONFIDENCES = {"verified", "inferred", "disputed"}
 CROSSWALK_NAMESPACES = {
     "openrouter", "models_dev", "huggingface", "modelscope", "openai_api",
     "anthropic_api", "google_api", "mistral_api", "epoch", "wikipedia",
-    "lmarena", "text_surface_forms",
+    "lmarena", "text_surface_forms", "openalex", "semantic_scholar",
 }
 
 # Namespaces whose identifiers name exactly one checkpoint. A collision in
-# these is a duplicate model (validation rule 12); encyclopedia articles and
-# free-text spellings legitimately cover several.
-IDENTITY_NAMESPACES = CROSSWALK_NAMESPACES - {"wikipedia", "text_surface_forms", "lmarena"}
+# these is a duplicate model (validation rule 12); encyclopedia articles,
+# free-text spellings and papers (one report covers a family) legitimately
+# cover several.
+IDENTITY_NAMESPACES = CROSSWALK_NAMESPACES - {"wikipedia", "text_surface_forms", "lmarena",
+                                              "openalex", "semantic_scholar"}
 
 # Hosting platforms an event may be scoped to. One spelling per host; the
 # loaders and curators both use these.
@@ -267,8 +269,18 @@ MODEL_VERSIONS = Table(
 )
 VERSION_KINDS = {"hf_revision", "api_snapshot"}
 
+# Download counts a model hub states for a repo: `downloads_30d` is the
+# Hub's rolling 30-day count, `downloads_all_time` the cumulative total
+# (ModelScope states only that). Rows only for repos that name a ledger model.
+DOWNLOAD_OBSERVATIONS = Table(
+    name="download_observations",
+    filename="download_observations.csv",
+    columns=_OBS_KEY + ("downloads_30d", "downloads_all_time") + _OBS_SPAN,
+    pk=_OBS_PK,
+)
+
 OBSERVATION_TABLES = (AVAILABILITY_OBSERVATIONS, PRICE_OBSERVATIONS, CAPABILITY_OBSERVATIONS,
-                      MODEL_VERSIONS)
+                      MODEL_VERSIONS, DOWNLOAD_OBSERVATIONS)
 
 # A model or family an arXiv paper version names in its title or abstract,
 # written by pipeline/pull_research_mentions.py. Not a run of days: one row
@@ -281,6 +293,34 @@ RESEARCH_MENTIONS = Table(
     pk=("arxiv_id", "version", "model_id", "family"),
 )
 MENTION_TYPES = {"model", "family"}
+
+# OpenRouter's public daily ranking (Data API `rankings-daily`, CC BY 4.0),
+# written by pipeline/pull_openrouter_rankings.py: the top 50 public models
+# by tokens each day plus one `other` row for the rest. `rank` is blank for
+# `other`; `day_total_tokens` sums every row of the day, `other` included,
+# so a share is total_tokens / day_total_tokens. A model below the top 50
+# that day has no row, which means "not in the top 50", not zero.
+USAGE_OBSERVATIONS = Table(
+    name="usage_observations",
+    filename="usage_observations.csv",
+    columns=("date", "model_permaslug", "model_id", "total_tokens", "rank",
+             "day_total_tokens", "as_of", "source_url"),
+    pk=("date", "model_permaslug"),
+)
+USAGE_OTHER = "other"
+
+# Citations of the arXiv paper behind a model, written by
+# pipeline/pull_citations.py. `year` blank is the source's total; otherwise
+# citations made in that year (OpenAlex only). A paper shared by several
+# models repeats once per model.
+CITATION_OBSERVATIONS = Table(
+    name="citation_observations",
+    filename="citation_observations.csv",
+    columns=("model_id", "arxiv_id", "linked_by", "source", "work_id", "year", "citations",
+             "observed_on", "source_url"),
+    pk=("model_id", "arxiv_id", "source", "year"),
+)
+PAPER_LINKS = {"paper_published_event", "epoch_link", "hf_card_arxiv_tag"}
 MENTION_SOURCES = {"abstract", "fulltext"}
 TABLES_BY_NAME = {t.name: t for t in CORE_TABLES}
 

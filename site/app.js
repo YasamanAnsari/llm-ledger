@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,NO_COUNTRY,formatDate,csvEncode} from './ledger-engine.mjs';
-import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES} from './charts.mjs';
+import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,ageBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,renderPriceToScore,renderPriceFrontier,renderBudgetBest,renderCohortDownloads,renderTokenAge,usd,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES,OPEN_OR_API,AGE_BINS} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -101,10 +101,46 @@ function renderFindings(){
  const mentions=mentionBins(ledger.data.first_mentions);
  $('mention-chart').innerHTML=renderGap(mentions,'Days from first availability to the first arXiv paper naming the model, by access type');
  $('mention-summary').textContent='Median days to a first paper: '+ACCESS.filter(a=>mentions[a.key].n).map(a=>`${a.noun} ${number(Math.round(mentions[a.key].median))} (n=${number(mentions[a.key].n)})`).join(', ')+'.';
+ const {figures}=ledger.data;
+ renderPriceFigure();
+ $('price-frontier-chart').innerHTML=renderPriceFrontier(figures.price_frontier);
+ $('budget-chart').innerHTML=renderBudgetBest(figures.budget_best);
+ const lastDay=figures.budget_best.at(-1).date,[best,cheap]=['overall','under_budget'].map(s=>figures.budget_best.find(r=>r.date===lastDay&&r.series===s));
+ $('budget-summary').textContent=best&&cheap?`On ${formatDate(lastDay)} the best listed model, ${best.model}, scores ${best.eci} at ${usd(best.price)} per million tokens; the best at or under ${usd(cheap.budget)}, ${cheap.model}, scores ${cheap.eci}.`:'';
+ $('usage-as-of').textContent=meta.usageAsOf;
+ renderAdoption('downloads');
+ renderObsolescence('technical_obsolete_age_days');
  const verified=meta.confidence.verified/meta.events*100,inferred=meta.confidence.inferred/meta.events*100;
  $('confidence-ring').style.background=`conic-gradient(#447759 0% ${verified}%,#d5c196 ${verified}% ${verified+inferred}%,#b05a50 ${verified+inferred}% 100%)`;
  $('verified-pct').innerHTML=verified.toFixed(1)+'<span>%</span>';
  $('confidence-breakdown').innerHTML=['verified','inferred','disputed'].map(k=>`<div><span class="confidence-label"><i class="legend-dot ${k}"></i>${title(k)}</span><span class="number">${number(meta.confidence[k]||0)} <span class="share">/ ${((meta.confidence[k]||0)/meta.events*100).toFixed(1)}%</span></span></div>`).join('');
+}
+function renderPriceFigure(threshold){
+ const rows=ledger.data.figures.price_to_score,thresholds=[...new Set(rows.map(r=>r.threshold))];
+ threshold??=thresholds[Math.floor(thresholds.length/2)];
+ $('price-tabs').innerHTML=thresholds.map(t=>`<button class="metric-tab${t===threshold?' active':''}" data-threshold="${t}" aria-pressed="${t===threshold}">ECI ${t} or more</button>`).join('');
+ $('price-chart').innerHTML=renderPriceToScore(rows,threshold);
+ const falls=OPEN_OR_API.map(g=>{const r=rows.filter(x=>x.threshold===threshold&&x.group===g.key);return r.length>1?`${g.label.toLowerCase()} from ${usd(r[0].price)} (${r[0].model}, ${formatDate(r[0].date)}) to ${usd(r.at(-1).price)} (${r.at(-1).model}, ${formatDate(r.at(-1).date)})`:'';}).filter(Boolean);
+ $('price-summary').textContent=falls.length?`Cheapest price per million tokens for ECI ${threshold} or more: ${falls.join('; ')}.`:'';
+}
+function renderAdoption(view){
+ const {figures}=ledger.data;
+ document.querySelectorAll('[data-adoption]').forEach(b=>{const on=b.dataset.adoption===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+ if(view==='tokens'){
+  const month=figures.token_age.at(-1).month,young=figures.token_age.find(r=>r.month===month&&r.age==='under_3m');
+  $('adoption-chart').innerHTML=renderTokenAge(figures.token_age);
+  $('adoption-summary').textContent=young?`In ${month}, models under three months old took ${(young.share*100).toFixed(0)}% of OpenRouter’s tokens.`:'';
+  return;
+ }
+ $('adoption-chart').innerHTML=renderCohortDownloads(figures.cohort_downloads);
+ const day=figures.cohort_downloads.at(-1).date,latest=figures.cohort_downloads.filter(r=>r.date===day),total=latest.reduce((s,r)=>s+r.downloads_30d,0);
+ $('adoption-summary').textContent=`On ${formatDate(day)}: `+latest.map(r=>`${r.cohort} models ${Math.round(r.downloads_30d/total*100)}%`).join(', ')+' of the ledger’s Hub downloads in the past 30 days.';
+}
+function renderObsolescence(field){
+ const bins=ageBins(ledger.data.obsolescence,field);
+ document.querySelectorAll('[data-obsolescence]').forEach(b=>{const on=b.dataset.obsolescence===field;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+ $('obsolescence-chart').innerHTML=renderGap(bins,`Age at ${field.startsWith('technical')?'technical':'usage'} obsolescence, by access type`,AGE_BINS);
+ $('obsolescence-summary').textContent='Median age: '+ACCESS.filter(a=>bins[a.key].n).map(a=>`${a.noun} ${number(Math.round(bins[a.key].median))} days (n=${number(bins[a.key].n)})`).join(', ')+'.';
 }
 function renderOpenness(){
  const open=ledger.data.models.filter(m=>m.access_type==='open_weights');
@@ -166,7 +202,10 @@ $('table-body').addEventListener('click',e=>{const model=e.target.closest('[data
 $('open-example').addEventListener('click',()=>{if(ledger)openModel(EXAMPLE_MODEL);else showToast('The dataset is still loading.');});
 document.querySelectorAll('[data-metric]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderScatterFigure(b.dataset.metric);}));
 document.querySelectorAll('[data-country-view]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderCountryFigure(b.dataset.countryView);}));
-for(const id of ['scatter-chart','frontier-chart','country-chart'])$(id).addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
+$('price-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-threshold]');if(b&&ledger)renderPriceFigure(Number(b.dataset.threshold));});
+document.querySelectorAll('[data-adoption]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderAdoption(b.dataset.adoption);}));
+document.querySelectorAll('[data-obsolescence]').forEach(b=>b.addEventListener('click',()=>{if(ledger)renderObsolescence(b.dataset.obsolescence);}));
+for(const id of ['scatter-chart','frontier-chart','country-chart','price-chart','price-frontier-chart','budget-chart'])$(id).addEventListener('click',e=>{const point=e.target.closest('[data-model]');if(point)openModel(point.dataset.model);});
 $('close-dialog').addEventListener('click',()=>$('model-dialog').close());
 $('model-dialog').addEventListener('click',e=>{if(e.target===$('model-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 $('model-dialog').addEventListener('close',()=>{document.body.style.overflow='';selectedModel=null;});
@@ -175,7 +214,7 @@ async function init(){
  try{
   const response=await fetch('./data/ledger.json');if(!response.ok)throw new Error('Dataset request failed');
   ledger=createLedger(await response.json());
-  annotateGroups(ledger.data.models,ledger.data.organizations,[...ledger.data.capability,...ledger.data.first_mentions]);
+  annotateGroups(ledger.data.models,ledger.data.organizations,[...ledger.data.capability,...ledger.data.first_mentions,...ledger.data.obsolescence]);
   const orgCounts=new Map();for(const m of ledger.data.models)orgCounts.set(m.developer_org_id,(orgCounts.get(m.developer_org_id)||0)+1);
   const options=[...ledger.organizations.values()].filter(o=>orgCounts.has(o.org_id)).sort((a,b)=>a.short_name.localeCompare(b.short_name));
   $('org-filter').innerHTML='<option value="">All developers</option>'+options.map(o=>`<option value="${esc(o.org_id)}">${esc(o.short_name||o.canonical_name)} (${orgCounts.get(o.org_id)})</option>`).join('');

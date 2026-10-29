@@ -65,11 +65,17 @@ models on `model_id`.
 | every source behind a machine-dated fact | [`data/core/claims.csv`](data/core/claims.csv) |
 | who made the model | [`data/core/models.csv`](data/core/models.csv), [`organizations.csv`](data/core/organizations.csv) |
 | other names for the same model | [`data/core/crosswalk.csv`](data/core/crosswalk.csv) |
+| how many Hub fine-tunes, quantizations, merges and adapters name a model's repo as their base | [`data/generated/hub_descendants.csv`](data/generated/hub_descendants.csv) |
 | context / prices / modalities | [`data/core/attributes.csv`](data/core/attributes.csv) |
 | which provider listed a model, at what price and limits, on each day | [`data/observations/`](data/observations/) (availability, price, capability) |
+| prices since 2023, from LiteLLM's git history | [`data/observations/price_observations.csv`](data/observations/price_observations.csv) (source `litellm_git`), changes in [`price_changes.csv`](data/generated/price_changes.csv) |
+| weekly Hugging Face downloads since 2024-07 and ModelScope downloads | [`data/observations/download_observations.csv`](data/observations/download_observations.csv) |
+| OpenRouter's daily top-50 models by tokens since 2025 | [`data/observations/usage_observations.csv`](data/observations/usage_observations.csv) |
+| when a model stopped being top-ranked (LMArena top 30) and stopped being used (OpenRouter top 50) | [`data/generated/obsolescence.csv`](data/generated/obsolescence.csv) |
 | which exact version was served: Hub commit, API snapshot id | [`data/observations/model_versions.csv`](data/observations/model_versions.csv) |
 | everything on offer on one day, by provider, with prices | [`data/generated/market_on_date.csv`](data/generated/market_on_date.csv) (newest day; `pipeline/market.py --date D` for any other) |
 | which arXiv papers name a model, and how soon after release | [`data/observations/research_mentions.csv`](data/observations/research_mentions.csv), [`research_mentions_monthly.csv`](data/generated/research_mentions_monthly.csv), [`research_first_mentions.csv`](data/generated/research_first_mentions.csv) |
+| how often a model's paper is cited, by year | [`data/observations/citation_observations.csv`](data/observations/citation_observations.csv) (OpenAlex and Semantic Scholar, counts as each states them) |
 | one topic as a ready set of files with its methods page | `make bundles` writes `dist/bundles/llm-ledger-{markets,science,lineage,governance}.zip`; methods in [`docs/bundles/`](docs/bundles/) |
 | lab icons | [`assets/orgs/`](assets/orgs/) (`{org_id}.svg`) |
 | how well each lab is covered | [`data/generated/coverage_report.md`](data/generated/coverage_report.md) |
@@ -186,7 +192,7 @@ For research:
 ## How much is in it
 
 <!-- stats:start -->
-Data as of 2026-10-28, the latest source pull. Exact counts: 1845 models from 75 organizations, 2871 dated events, backed by 4555 live source claims. First availability runs from 2021-11-18 to 2026-10-27. 87% of the models are open-weight; Chinese labs make up 34% of those.
+Data as of 2026-10-29, the latest source pull. Exact counts: 1845 models from 75 organizations, 2871 dated events, backed by 4555 live source claims. First availability runs from 2021-11-18 to 2026-10-27. 87% of the models are open-weight; Chinese labs make up 34% of those.
 
 Read the counts together with their confidence labels. 41% of events are `verified` (two independent sources agreed within two days, or a platform reported its own listing); 29% of those are a platform's own listing timestamp, and 0 were checked by a named person. Per model: 4% have a verified event a person read from a primary page such as a vendor blog or deprecation table, 36% have only machine-corroborated events, and the remaining 60% rest on a single source. Filter on `events.confidence` before treating a date as settled.
 <!-- stats:end -->
@@ -267,7 +273,14 @@ dating signal among several; [Epoch AI, "Epoch Capabilities Index"](https://epoc
 (CC BY 4.0), used in `data/generated/llm_ledger_benchmarks.csv`; [LMArena, "leaderboard-dataset"](https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset)
 (CC BY 4.0), used in `data/generated/llm_ledger_arena.csv`; [NHLOCAL, "AiTimeline"](https://github.com/nhlocal/AiTimeline)
 (MIT), used as a discovery lead for pre-API-era models; [arXiv](https://arxiv.org)
-paper metadata (CC0 1.0, via OAI-PMH), used in `research_mentions.csv`. The terms every
+paper metadata (CC0 1.0, via OAI-PMH), used in `research_mentions.csv`;
+[BerriAI, "litellm"](https://github.com/BerriAI/litellm) price table history (MIT), used in
+`price_observations.csv`; [cfahlgren1, "hub-stats"](https://huggingface.co/datasets/cfahlgren1/hub-stats)
+(Apache-2.0), used in `download_observations.csv` and `hub_descendants.csv`; [OpenAlex](https://openalex.org)
+(CC0) and [Semantic Scholar](https://www.semanticscholar.org) citation counts, used in
+`citation_observations.csv`; and OpenRouter's daily rankings,
+used in `usage_observations.csv`: "Source: OpenRouter (openrouter.ai/rankings), as of
+the `as_of` date in each row. Licensed under CC BY 4.0." The terms every
 other source is used under are listed in [`docs/sources.md`](docs/sources.md);
 from them we keep individual facts and their URLs, not copies of content.
 
