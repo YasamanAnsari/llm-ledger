@@ -171,6 +171,17 @@ def test_match_clusters_by_identity_variants_and_never_auto_accepts_below_97():
     assert len(rows) == 1  # an Epoch entry alone never seeds a cluster
 
 
+def test_openrouter_role_variant_never_lands_on_the_base_cluster():
+    from match import match
+    # 2026-10-29: models.dev dropped gpt-5.2-chat while OpenRouter still lists it.
+    md = _md("gpt-5-2", "openai", "gpt-5.2", "2025-12-11")
+    orr = {**_or("gpt-5-2", "openai/gpt-5.2", "2025-12-10"),
+           **_or("gpt-5-2-chat", "openai/gpt-5.2-chat", "2025-12-10")}
+    rows, _ = match(md, orr, {})
+    assert {r["match_key"]: r["or_id"] for r in rows} == {
+        "gpt-5-2": "openai/gpt-5.2", "gpt-5-2-chat": "openai/gpt-5.2-chat"}
+
+
 def test_match_applies_review_decisions_to_the_fuzzy_band():
     from match import match
     # 92-97 band pair: queued without a decision, joined once accepted,

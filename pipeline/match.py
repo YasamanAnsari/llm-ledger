@@ -311,11 +311,11 @@ def load_epoch() -> dict:
     return result
 
 
-def _variant_index(records: dict) -> dict:
+def _variant_index(records: dict, identity: bool = False) -> dict:
     """variant key -> canonical key, most specific variant wins."""
     index = {}
     for key in records:
-        for variant in key_variants(key):
+        for variant in key_variants(key, identity):
             index.setdefault(variant, key)
     return index
 
@@ -375,7 +375,9 @@ def match(md: dict, orr: dict, epoch: dict, decisions: dict | None = None,
     metadata carried into the rows.
     """
     decisions = decisions or {}
-    md_index = _variant_index(md)
+    # Both catalogs name checkpoints, so the role suffix stays:
+    # OpenRouter's gpt-5.2-chat is not models.dev's gpt-5.2.
+    md_index = _variant_index(md, identity=True)
 
     # cluster key (models.dev key when present) -> {"md":, "or":, "epoch":, "method":}
     clusters: dict = {}
@@ -390,7 +392,7 @@ def match(md: dict, orr: dict, epoch: dict, decisions: dict | None = None,
     # --- OpenRouter -> models.dev ---
     unmatched_or = []
     for key, record in orr.items():
-        hit = next((md_index[v] for v in key_variants(key) if v in md_index), None)
+        hit = next((md_index[v] for v in key_variants(key, identity=True) if v in md_index), None)
         if hit:
             c = cluster_for(hit)
             c["or"] = record
