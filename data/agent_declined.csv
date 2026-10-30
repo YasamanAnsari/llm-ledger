@@ -66,3 +66,9 @@ date,reason,count
 2026-10-27,no_dated_event,7
 2026-10-28,community_lead,8
 2026-10-28,no_dated_event,11
+2026-10-30,community_lead,17
+2026-10-30,disagrees_with_record,1
+2026-10-30,no_dated_event,14
+2026-10-30,order_violation,1
+2026-10-30,third_party_claim,1
+2026-10-30,validation_failed,1

@@ -20,6 +20,7 @@ announce_lead,ledger,qwen3-coder,nhlocal_aitimeline,2025-07,,"no announced event
 announce_lead,ledger,qwq-32b,nhlocal_aitimeline,2025-03,,"no announced event; the timeline names it in 2025-03: Alibaba released QwQ-32B, an open-source 32B parameter reasoning model with exceptional math and coding performance, rivaling much larger models."
 catalog_unmapped_vendor,openrouter,elorian,ledger,,,e.g. glimpse; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,particle-ai,ledger,,,e.g. particle-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,xingchen-agi,ledger,,,e.g. xing4-0-29b-a4b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
@@ -38,7 +39,6 @@ fuzzy_match,epoch,gemini-3-0-flash-lite,ledger_cluster,gemini-2-0-flash-lite,95.
 fuzzy_match,epoch,gemma-2-2b,ledger_cluster,gemma-2-27b-it,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gemma-3-1b,ledger_cluster,gemma-3-12b-it,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gemma-3n,ledger_cluster,gemma-3,93.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,glm-4v-9b,ledger_cluster,glm-4-9b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gpt-5-5-instant,ledger_cluster,gpt-5-1-instant,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,gpt-realtime,ledger_cluster,gpt-realtime-2,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,granite-3-2-8b,ledger_cluster,granite-4-2-8b,92.9,92-97 band: confirm or reject before crosswalking
@@ -50,8 +50,12 @@ fuzzy_match,epoch,grok-voice-think-fast-1-0,ledger_cluster,grok-voice-think-fast
 fuzzy_match,epoch,hermes-3-405b,ledger_cluster,hermes-4-405b,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hunyuan-turbo,ledger_cluster,hunyuan-turbos,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,imagen,ledger_cluster,imagen-3,92.3,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,llama-3-70b,ledger_cluster,llama-3-3-70b-instruct,95.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mai-code-1-flash,ledger_cluster,mai-code-1-1-flash,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mai-image-2-5,ledger_cluster,mai-image-2-6,92.3,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,mai-image-2-5-flash,ledger_cluster,mai-image-2-6-flash,94.7,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,mai-image-2-7,ledger_cluster,mai-image-2-6,92.3,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,mai-transcribe-1,ledger_cluster,mai-transcribe-2,93.8,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mercury,ledger_cluster,mercury-2,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,minimax-m1-40k,ledger_cluster,minimax-m1-80k,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,ministral-3-14b,ledger_cluster,mistral-3-14b,92.9,92-97 band: confirm or reject before crosswalking
@@ -66,6 +70,7 @@ fuzzy_match,epoch,qwen2-5-vl-3b,ledger_cluster,qwen2-5-vl-32b-instruct,96.3,92-9
 fuzzy_match,epoch,qwen2-5-vl-7b,ledger_cluster,qwen2-5-vl-72b-instruct,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-vl-72b,ledger_cluster,qwen2-5-vl-72b-instruct,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,rerank-3-5,ledger_cluster,rerank-v3-5,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,ring-flash-2-0,ledger_cluster,ling-flash-2-0,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,solar-pro,ledger_cluster,solar-pro4,94.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,tencent-hy4-preview,ledger_cluster,tencent/hy4-preview,94.7,92-97 band: confirm or reject before crosswalking
@@ -212,7 +217,6 @@ hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAM
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,9 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,peft-internal-testing,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -234,7 +238,6 @@ md_no_consensus,models_dev,grok-3,ledger,grok-3,,resellers disagree: helicone:20
 md_no_consensus,models_dev,grok-3-mini,ledger,grok-3-mini,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,inclusionai/ring-2.6-1t,ledger,ring-2-6-1t,,resellers disagree: requesty:2026-05-08|zenmux:2026-05-07
 md_no_consensus,models_dev,mercury-coder-small,ledger,mercury-coder-small,,resellers disagree: nano-gpt:2024-01-01|vercel:2025-02-26
-md_no_consensus,models_dev,openai/o3-mini-high,ledger,o3-mini-high,,resellers disagree: kilo:2025-02-12|nano-gpt:2024-12-20|openrouter:2025-02-12|poe:2024-12-20
 md_no_consensus,models_dev,qwen/qwen3-vl-30b-a3b-thinking,ledger,qwen3-vl-30b-a3b-thinking,,resellers disagree: kilo:2025-10-06|openrouter:2025-10-06|qiniu-ai:2026-02-09|siliconflow:2025-10-11|siliconflow-cn:2025-10-11
 md_no_consensus,models_dev,qwen/qwen3-vl-8b-instruct,ledger,qwen3-vl-8b-instruct,,resellers disagree: kilo:2025-10-14|openrouter:2025-10-14|siliconflow:2025-10-15|siliconflow-cn:2025-10-15
 md_no_consensus,models_dev,tencent/Hunyuan-A13B-Instruct,ledger,hunyuan-a13b-instruct,,resellers disagree: kilo:2025-07-08|openrouter:2025-07-08|siliconflow:2025-06-30|siliconflow-cn:2025-06-30
@@ -544,12 +547,20 @@ paper_lead,ledger,allenai/MolmoPoint,arxiv,https://arxiv.org/abs/2603.28069,,"v1
 paper_lead,ledger,allenai/OLMo,arxiv,https://arxiv.org/abs/2402.00838,,"v1 2024-02-01 'OLMo: Accelerating the Science of Language Models'; family first available 2024-01-09; members: olmo-1b, olmo-1b-0724, olmo-7b, olmo-7b-0724; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,allenai/OLMoE,arxiv,https://arxiv.org/abs/2409.02060,,"v1 2024-09-03 'OLMoE: Open Mixture-of-Experts Language Models'; family first available 2024-07-20; members: olmoe-1b-7b, olmoe-1b-7b-0125-instruct, olmoe-1b-7b-0924-instruct; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,allenai/Olmo-3,arxiv,https://arxiv.org/abs/2512.13961,,"v1 2025-12-15 'Olmo 3'; family first available 2025-09-12; members: olmo-3-1025-7b, olmo-3-1125-32b, olmo-3-32b-think, olmo-3-32b-think-sft, olmo-3-7b-instruct, olmo-3-7b-instruct-sft ...; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,apple/CADD,arxiv,https://arxiv.org/abs/2511.11715,,"v1 2025-11-12 'CADD: A Chinese Traffic Accident Dataset for Statute-Based Liability Attribution'; family first available 2026-04-23; members: cadd-base-7b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,apple/FastVLM,arxiv,https://arxiv.org/abs/2510.22641,,"v1 2025-10-26 'FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference'; family first available 2025-08-25; members: fastvlm-0-5b, fastvlm-1-5b, fastvlm-7b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,apple/LensVLM,arxiv,https://arxiv.org/abs/2605.07019,,"v1 2026-05-07 'LensVLM: Selective Context Expansion for Compressed Visual Representation of Text'; family first available 2026-09-21; members: lensvlm-9b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,apple/OpenELM,arxiv,https://arxiv.org/abs/2404.14619,,"v1 2024-04-22 'OpenELM: An Efficient Language Model Family with Open Training and Inference Framework'; family first available 2024-04-12; members: openelm-270m, openelm-270m-instruct, openelm-3b, openelm-3b-instruct, openelm-450m, openelm-450m-instruct; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,arcee/arcee,arxiv,https://arxiv.org/abs/2411.17596,,"v1 2024-11-26 'Arcee: An OCM-Solver'; family first available 2024-08-01; members: arcee-lite; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,baichuan/Baichuan-M2,arxiv,https://arxiv.org/abs/2509.02208,,"v1 2025-09-02 'Baichuan-M2: Scaling Medical Capability with Large Verifier System'; family first available 2025-08-10; members: baichuan-m2-32b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,baichuan/Baichuan-M3,arxiv,https://arxiv.org/abs/2602.06570,,"v1 2026-02-06 'Baichuan-M3: Modeling Clinical Inquiry for Reliable Medical Decision-Making'; family first available 2026-01-13; members: baichuan-m3-235b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,sensetime/SenseNova-MARS,arxiv,https://arxiv.org/abs/2512.24330,,"v1 2025-12-30 'SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning'; family first available 2025-12-26; members: sensenova-mars-32b, sensenova-mars-8b; add paper_published to the model the paper describes, or reject"
 predecessor_lead,ledger,bfs-prover-v2-7b,ledger,bfs-prover-v1-7b,,"BFS-Prover-V1 (2025-02-23) -> BFS-Prover-V2 (2025-10-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,claude-fable-5-1,ledger,claude-fable-5,,"Claude Fable 5 (2026-06-07) -> claude-fable-5-1 (2026-09-01); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3,ledger,deepseek-v2,,"DeepSeek-V2 (2024-04-22) -> DeepSeek-V3 (2024-12-26); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3-2,ledger,deepseek-v3-1,,"DeepSeek-V3.1 (2025-08-21) -> DeepSeek-V3.2 (2025-12-01); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v4-1-flash,ledger,deepseek-v4-flash,,"DeepSeek V4 (2026-04-24) -> deepseek-v4.1 (2026-09-10); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,delphi-1e21-3-4bparams-46-3btokens-seed62746,ledger,delphi-1e21-3-4bparams-46-3btokens-seed42,,"delphi-1e21-3.4Bparams-46.3Btokens-seed42 (2026-05-05) -> delphi-1e21-3.4Bparams-46.3Btokens-seed62746 (2026-05-05); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,doubao-seed-1-8,ledger,doubao-seed-1-6,,"Doubao-Seed-1.6 (2025-10-15) -> Doubao Seed 1.8 (2025-12-28); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,doubao-seed-2-1-pro,ledger,doubao-seed-2-0-pro,,"Doubao-Seed-2.0 (2026-02-14) -> Doubao Seed 2.1 (2026-06-23); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,exaone-3-5-7-8b-instruct,ledger,exaone-3-0-7-8b-instruct,,"EXAONE-3.0 (2024-07-31) -> EXAONE-3.5 (2024-12-01); set predecessor_id / successor_id in models.csv, or reject"
@@ -585,6 +596,7 @@ predecessor_lead,ledger,granite-3-2-2b-instruct,ledger,granite-3-1-2b-instruct,,
 predecessor_lead,ledger,granite-3-2-8b-instruct,ledger,granite-3-1-8b-instruct,,"granite-3.1 (2024-12-06) -> granite-3.2 (2025-02-17); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,granite-3-3-2b-instruct,ledger,granite-3-2-2b-instruct,,"granite-3.2 (2025-02-17) -> granite-3.3 (2025-04-09); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,granite-3-3-8b-instruct,ledger,granite-3-2-8b-instruct,,"granite-3.2 (2025-02-17) -> granite-3.3 (2025-04-09); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,granite-4-1-8b-base,ledger,granite-3-0-8b-base,,"granite-3.0 (2024-10-02) -> granite-4.1 (2026-04-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,granite-4-2-30b,ledger,granite-4-1-30b,,"granite-4.1 (2026-04-06) -> granite-4.2 (2026-08-07); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,granite-4-2-3b,ledger,granite-4-1-3b,,"granite-4.1 (2026-04-06) -> granite-4.2 (2026-08-07); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,granite-4-2-8b,ledger,granite-4-1-8b,,"Granite 4.1 (2026-04-29) -> granite-4.2 (2026-08-25); set predecessor_id / successor_id in models.csv, or reject"
@@ -657,6 +669,7 @@ predecessor_lead,ledger,ring-2-6-1t,ledger,ring-2-5-1t,,"Ring-2.5 (2026-02-10) -
 predecessor_lead,ledger,skywork-r1v3-38b,ledger,skywork-r1v2-38b,,"Skywork-R1V2 (2025-04-22) -> Skywork-R1V3 (2025-07-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,step-3-7-flash,ledger,step-3-5-flash,,"Step 3.5 (2026-01-29) -> Step 3.7 (2026-05-29); set predecessor_id / successor_id in models.csv, or reject"
 vendor_alias_group,mistral_api,labs-leanstral-1-5,ledger,labs-leanstral-1-5-1,,vendor lists these ids as one model; merge (repair.merge_models) or reject
+vendor_alias_group,mistral_api,mistral-large-4,ledger,mistral-large-4-0,,vendor lists these ids as one model; merge (repair.merge_models) or reject
 vendor_alias_group,mistral_api,mistral-medium,ledger,mistral-medium-2604|mistral-medium-3|mistral-medium-3-5|mistral-vibe-cli-with-tools,,vendor lists these ids as one model; merge (repair.merge_models) or reject
 vendor_alias_group,mistral_api,mistral-ocr-2512,ledger,mistral-ocr-3|mistral-ocr-3-0,,vendor lists these ids as one model; merge (repair.merge_models) or reject
 vendor_alias_group,mistral_api,mistral-ocr-4,ledger,mistral-ocr-4-1,,vendor lists these ids as one model; merge (repair.merge_models) or reject

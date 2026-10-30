@@ -232,6 +232,7 @@ granite-3-3-8b-instruct,granite-3.3-8b-instruct,granite-3.3,open_weights,2025-04
 granite-4-0-h-small,granite-4.0-h-small,granite-4.0-h,open_weights,2025-09-16,2025-09-16,2026-02-06,2602.17691,143
 granite-4-0-micro,granite-4.0-micro,granite-4.0-micro,open_weights,2025-09-16,2025-09-16,2026-08-11,2608.10532,329
 granite-4-1-3b,granite-4.1-3b,granite-4.1,open_weights,2026-04-06,2026-04-06,2026-09-23,2609.28653,170
+granite-4-1-3b-base,granite-4.1-3b-base,granite-4.1,open_weights,2026-04-06,2026-04-06,2026-10-28,2610.38915,205
 granite-4-1-8b,Granite 4.1 8B,Granite 4.1,open_weights,2026-04-29,2026-04-29,2026-06-03,2606.03892,35
 granite-4-2-3b,granite-4.2-3b,granite-4.2,open_weights,2026-08-07,2026-08-07,2026-10-20,2610.27490,74
 granite-4-2-8b,granite-4.2-8b,granite-4.2,open_weights,2026-08-25,2026-08-25,2026-10-07,2604.17502,43
@@ -570,6 +571,7 @@ ui-tars-1-5-7b,ui-tars-1.5-7b,ui-tars-1.5,open_weights,2025-04-16,2025-04-16,202
 ui-tars-72b-dpo,UI-TARS-72B-DPO,UI-TARS-DPO,open_weights,2025-01-22,2025-01-22,2025-07-30,2504.04858,189
 ui-venus-2-9b,UI-Venus-2-9B,UI-Venus-2,open_weights,2026-08-26,2026-08-26,2026-10-22,2610.31274,57
 ui-venus-ground-7b,UI-Venus-Ground-7B,UI-Venus-Ground,open_weights,2025-08-15,2025-08-15,2026-10-13,2610.17792,424
+unlimited-ocr-2,Unlimited-OCR-2,Unlimited-2,open_weights,2026-10-26,2026-10-26,2026-10-29,2610.39308,3
 wizardlm-2-8x22b,WizardLM-2 8x22B,WizardLM-2,open_weights,2024-04-15,2024-04-15,2025-05-14,2505.09056,394
 yi-1-5-9b,Yi-1.5-9B,Yi-1.5,open_weights,2024-05-11,2024-05-11,2025-05-16,2503.16525,370
 yi-34b,Yi-34B,Yi,open_weights,2023-11-02,2023-11-02,2024-04-12,2404.08727,162

@@ -2494,12 +2494,12 @@ month,family,papers
 2026-10,BitCPM-CANN,1
 2026-10,Claude 3,1
 2026-10,Claude 3.5,10
-2026-10,Claude 4,29
-2026-10,Claude 4.5,29
-2026-10,Claude 4.6,30
-2026-10,Claude 4.7,7
+2026-10,Claude 4,30
+2026-10,Claude 4.5,31
+2026-10,Claude 4.6,32
+2026-10,Claude 4.7,8
 2026-10,Claude 4.8,31
-2026-10,Claude 5,40
+2026-10,Claude 5,46
 2026-10,Claude 5.5,4
 2026-10,Claude Fable 5,7
 2026-10,Cosmos3,8
@@ -2514,7 +2514,7 @@ month,family,papers
 2026-10,DeepSeek-V2,5
 2026-10,DeepSeek-V3,10
 2026-10,DeepSeek-V3.1,2
-2026-10,DeepSeek-V3.2,15
+2026-10,DeepSeek-V3.2,16
 2026-10,DeepSeek-V4,21
 2026-10,Doubao-Seed-1.6,1
 2026-10,ERNIE-4.5,1
@@ -2524,40 +2524,41 @@ month,family,papers
 2026-10,Florence-2,1
 2026-10,GLM 4.7,1
 2026-10,GLM-4,2
-2026-10,GLM-4.5,1
+2026-10,GLM-4.5,2
 2026-10,GLM-4.5-Air,4
+2026-10,GLM-4.5V,1
 2026-10,GLM-4.7,3
 2026-10,GLM-5,21
 2026-10,GLM-5.1,3
-2026-10,GLM-5.3,18
+2026-10,GLM-5.3,19
 2026-10,GLM-Z1,1
 2026-10,GPT-3,7
-2026-10,GPT-4,14
+2026-10,GPT-4,15
 2026-10,GPT-4.1,37
-2026-10,GPT-4o,99
-2026-10,GPT-5,71
+2026-10,GPT-4o,106
+2026-10,GPT-5,73
 2026-10,GPT-5.1-Codex,1
 2026-10,GPT-5.3 Codex,2
-2026-10,GPT-5.4,68
-2026-10,GPT-5.5,53
-2026-10,GPT-5.6 Luna,12
-2026-10,GPT-5.6 Sol,64
-2026-10,GPT-5.6 Terra,8
-2026-10,GPT-6 Astra,84
+2026-10,GPT-5.4,71
+2026-10,GPT-5.5,54
+2026-10,GPT-5.6 Luna,13
+2026-10,GPT-5.6 Sol,66
+2026-10,GPT-5.6 Terra,9
+2026-10,GPT-6 Astra,87
 2026-10,GPT-6.1 Sol,10
 2026-10,Gemini 1.5,1
-2026-10,Gemini 2.0,7
-2026-10,Gemini 2.5,36
+2026-10,Gemini 2.0,8
+2026-10,Gemini 2.5,37
 2026-10,Gemini 3,22
-2026-10,Gemini 3.1,38
-2026-10,Gemini 3.5,15
+2026-10,Gemini 3.1,42
+2026-10,Gemini 3.5,17
 2026-10,Gemini 3.6,4
 2026-10,Gemini 3.7,10
-2026-10,Gemini 3.8,20
+2026-10,Gemini 3.8,21
 2026-10,Gemini 4 Argon,6
 2026-10,Gemma 2,3
-2026-10,Gemma 3,51
-2026-10,Gemma 4,58
+2026-10,Gemma 3,55
+2026-10,Gemma 4,63
 2026-10,Gemma 4 E2B,3
 2026-10,Gemma 4 E4B,15
 2026-10,Granite 4.1,1
@@ -2568,6 +2569,7 @@ month,family,papers
 2026-10,Grok 4.6,2
 2026-10,Grok 4.7,3
 2026-10,Hy-Memory,1
+2026-10,Intern-S2,1
 2026-10,Kimi K2,3
 2026-10,Kimi K2.5,4
 2026-10,Kimi K2.6,7
@@ -2577,14 +2579,14 @@ month,family,papers
 2026-10,LLaDA2.0,2
 2026-10,LLaDA2.1,3
 2026-10,Llama 2,1
-2026-10,Llama 3,62
-2026-10,Llama 3.1,40
-2026-10,Llama 3.2,12
-2026-10,Llama 3.3,21
+2026-10,Llama 3,64
+2026-10,Llama 3.1,42
+2026-10,Llama 3.2,13
+2026-10,Llama 3.3,23
 2026-10,Llama 4,8
 2026-10,Llama-2,25
-2026-10,Llama-3.1,98
-2026-10,Llama-3.2,47
+2026-10,Llama-3.1,102
+2026-10,Llama-3.2,49
 2026-10,Llama-Guard-3,3
 2026-10,LongCat-2.0,1
 2026-10,MiniCPM5,1
@@ -2593,38 +2595,38 @@ month,family,papers
 2026-10,MiniMax-M2.7,2
 2026-10,MiniMax-M3,4
 2026-10,Ministral-3,7
-2026-10,Mistral 4,2
-2026-10,Mistral 7B,30
+2026-10,Mistral 4,3
+2026-10,Mistral 7B,32
 2026-10,Mistral-v0.2,1
 2026-10,Mistral-v0.3,4
-2026-10,Mixtral,5
+2026-10,Mixtral,6
 2026-10,Molmo2,2
 2026-10,Moonlight,1
 2026-10,Muse-Glimmer,4
 2026-10,NVIDIA-Nemotron-3,1
 2026-10,NVIDIA-Nemotron-3.5-Lightning,1
-2026-10,Nemotron 3,7
+2026-10,Nemotron 3,8
 2026-10,Nemotron 3 Super,2
-2026-10,Nemotron 3.5 Lightning,1
+2026-10,Nemotron 3.5 Lightning,2
 2026-10,OLMo,1
-2026-10,OLMo-2,23
-2026-10,Olmo-3,29
+2026-10,OLMo-2,28
+2026-10,Olmo-3,30
 2026-10,Olmo-3-DPO,1
 2026-10,Olmo-3.1,1
 2026-10,Ouro,10
 2026-10,Phi-3,5
 2026-10,Phi-3.5,5
 2026-10,Phi-3.5-MoE,1
-2026-10,Phi-4,15
-2026-10,Phi-4-Multimodal,1
+2026-10,Phi-4,16
+2026-10,Phi-4-Multimodal,2
 2026-10,QwQ,1
-2026-10,Qwen2,26
-2026-10,Qwen2.5,263
+2026-10,Qwen2,27
+2026-10,Qwen2.5,273
 2026-10,Qwen2.5-Omni,14
-2026-10,Qwen3,555
+2026-10,Qwen3,586
 2026-10,Qwen3-Next,1
 2026-10,Qwen3-Omni,11
-2026-10,Qwen3.5,186
+2026-10,Qwen3.5,201
 2026-10,Qwen3.5-Omni,1
 2026-10,Qwen3.7,3
 2026-10,Qwen3.8-Next,11
@@ -2638,9 +2640,10 @@ month,family,papers
 2026-10,SmolVLM2,1
 2026-10,UI-Venus-2,1
 2026-10,UI-Venus-Ground,1
+2026-10,Unlimited-2,1
 2026-10,anthropic.claude-5-5,5
 2026-10,aya-expanse,1
-2026-10,claude-5-5,32
+2026-10,claude-5-5,36
 2026-10,claude-fable-5-1,6
 2026-10,codet5,1
 2026-10,deepseek-llm,1
@@ -2649,15 +2652,17 @@ month,family,papers
 2026-10,dots3-note-prev,1
 2026-10,gemini-3,2
 2026-10,gemini-3-1,5
-2026-10,gemma-2,26
+2026-10,gemma-2,28
 2026-10,gemma-3,1
 2026-10,glm-4.6v,1
 2026-10,gpt-6-astra,1
-2026-10,gpt-6-luna,16
-2026-10,gpt-6-sol,12
-2026-10,gpt-oss,28
+2026-10,gpt-6-luna,18
+2026-10,gpt-6-sol,13
+2026-10,gpt-oss,31
+2026-10,granite-3.1,1
 2026-10,granite-3.3,2
 2026-10,granite-4.0-h,1
+2026-10,granite-4.1,2
 2026-10,granite-4.2,3
 2026-10,grok-4.3,1
 2026-10,hy-mt2,1
@@ -2669,7 +2674,7 @@ month,family,papers
 2026-10,ministral,2
 2026-10,mistral-3.2,1
 2026-10,muse-spark-1.3,1
-2026-10,nemotron-3.5-super,2
+2026-10,nemotron-3.5-super,3
 2026-10,o1,3
 2026-10,o3,3
 2026-10,o4,5
@@ -2677,8 +2682,8 @@ month,family,papers
 2026-10,openai.gpt-oss-safeguard,1
 2026-10,opt,1
 2026-10,pythia,7
-2026-10,qwen3.6,47
-2026-10,qwen3.8,59
+2026-10,qwen3.6,50
+2026-10,qwen3.8,60
 2026-10,qwen3.8-omni,1
 2026-10,sarvam-1,1
 2026-10,ui-tars-1.5,1

@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1845; events: 2871
-- Models: curated 73, corroborated 665, single-source 1107
-- Event confidence: verified 1164, inferred 1701, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 424 of 1609
+- Models: 1860; events: 2891
+- Models: curated 73, corroborated 669, single-source 1118
+- Event confidence: verified 1168, inferred 1717, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 426 of 1623
 
 ## By organization
 
@@ -22,30 +22,30 @@ as settled.
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
-| Mistral | 58 | 107 | 4 | 30 | 24 | 45% |
+| Mistral | 58 | 109 | 4 | 31 | 23 | 45% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 115 | 4 | 27 | 25 | 36% |
-| Google | 54 | 150 | 7 | 26 | 21 | 43% |
+| Google | 55 | 151 | 7 | 26 | 22 | 42% |
 | RWKV | 54 | 54 | 0 | 4 | 50 | 7% |
 | AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
 | Ant Group | 51 | 61 | 0 | 26 | 25 | 44% |
-| Shanghai AI Lab | 50 | 50 | 0 | 13 | 37 | 26% |
-| TII | 50 | 50 | 0 | 4 | 46 | 8% |
-| DeepSeek | 45 | 102 | 3 | 25 | 17 | 54% |
-| Marin | 42 | 42 | 0 | 0 | 42 | 0% |
+| Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
+| TII | 51 | 51 | 0 | 4 | 47 | 8% |
+| Marin | 46 | 46 | 0 | 0 | 46 | 0% |
+| DeepSeek | 45 | 102 | 3 | 26 | 16 | 55% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
-| IBM | 38 | 43 | 0 | 4 | 34 | 9% |
+| IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | Zhipu | 37 | 82 | 3 | 16 | 18 | 49% |
 | OpenBMB | 36 | 36 | 0 | 6 | 30 | 17% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
-| Tencent | 33 | 43 | 1 | 12 | 20 | 37% |
-| Liquid AI | 32 | 35 | 0 | 23 | 9 | 69% |
+| Liquid AI | 33 | 36 | 0 | 23 | 10 | 67% |
+| Tencent | 33 | 43 | 1 | 14 | 18 | 42% |
+| Salesforce | 31 | 31 | 0 | 5 | 26 | 16% |
 | Arcee | 29 | 31 | 0 | 18 | 11 | 65% |
 | Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
-| Salesforce | 29 | 29 | 0 | 5 | 24 | 17% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
 | Nous | 27 | 35 | 0 | 7 | 20 | 26% |
-| Stability | 26 | 26 | 0 | 9 | 17 | 35% |
+| Stability | 27 | 27 | 0 | 9 | 18 | 33% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
@@ -61,11 +61,11 @@ as settled.
 | MiniMax | 16 | 36 | 1 | 10 | 5 | 47% |
 | Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
+| SenseTime | 16 | 16 | 0 | 1 | 15 | 6% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
-| SenseTime | 15 | 15 | 0 | 1 | 14 | 7% |
+| Skywork | 15 | 15 | 0 | 6 | 9 | 40% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
-| Skywork | 14 | 14 | 0 | 6 | 8 | 43% |
 | Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
@@ -86,8 +86,8 @@ as settled.
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
+| Inception | 5 | 12 | 0 | 3 | 2 | 25% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
-| Inception | 4 | 8 | 0 | 3 | 1 | 38% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
 | Thinking Machines | 2 | 8 | 0 | 2 | 0 | 38% |
@@ -98,34 +98,34 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1593 | 415 | 1177 | 1 |
+| weights_released | 1607 | 418 | 1188 | 1 |
 | platform_availability | 337 | 332 | 3 | 2 |
 | retired | 309 | 179 | 130 | 0 |
-| api_ga | 253 | 63 | 189 | 1 |
-| announced | 242 | 52 | 189 | 1 |
+| api_ga | 255 | 63 | 191 | 1 |
+| announced | 245 | 53 | 191 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
 | free_tier | 10 | 9 | 0 | 1 |
+| price_changed | 9 | 7 | 2 | 0 |
 | api_preview | 8 | 8 | 0 | 0 |
-| price_changed | 8 | 7 | 1 | 0 |
 | alias_repointed | 5 | 2 | 3 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 32 (verified 4, single-source inferred 28)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 10
+- Events it wrote: 33 (verified 5, single-source inferred 28)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 9
 
-Declined in the 7 days to 2026-10-28, by reason:
+Declined in the 7 days to 2026-10-30, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 80 |
-| no_dated_event | 49 |
-| already_recorded | 6 |
-| not_a_model | 5 |
+| community_lead | 73 |
+| no_dated_event | 40 |
 | disagrees_with_record | 2 |
-| launch_event_required | 1 |
+| order_violation | 1 |
+| third_party_claim | 1 |
+| validation_failed | 1 |

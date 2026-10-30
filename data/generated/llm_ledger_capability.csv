@@ -1,171 +1,173 @@
 model_id,canonical_name,developer_org_id,access_type,license_family,first_public_availability_date,eci_model,matched_by,eci,eci_ci_low,eci_ci_high,eci_release_date,eci_accessibility_group,eci_snapshot_date
-claude-2,Claude 2,anthropic,api_only,proprietary,2023-07-11,Claude 2,name,120.19,113.7,124.02,2023-07-11,Closed weights,2026-10-28
-claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,proprietary,2024-10-22,Claude 3.5 Haiku,crosswalk,127.07,120.92,129.77,2024-10-22,Closed weights,2026-10-28
-claude-3-5-sonnet,Claude 3.5 Sonnet,anthropic,api_only,proprietary,2024-06-20,Claude 3.5 Sonnet,crosswalk,130.0,,,2024-06-20,Closed weights,2026-10-28
-claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,proprietary,2025-02-19,Claude 3.7 Sonnet,crosswalk,141.03,138.98,142.68,2025-02-24,Closed weights,2026-10-28
-claude-3-haiku,Claude 3 Haiku,anthropic,api_only,proprietary,2024-03-13,Claude 3 Haiku,crosswalk,118.85,110.6,121.51,2024-03-07,Closed weights,2026-10-28
-claude-3-opus,Claude 3 Opus,anthropic,api_only,proprietary,2024-03-04,Claude 3 Opus,crosswalk,126.9,122.38,129.96,2024-02-29,Closed weights,2026-10-28
-claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,proprietary,2024-03-04,Claude 3 Sonnet,crosswalk,120.84,113.46,123.98,2024-02-29,Closed weights,2026-10-28
-claude-fable-5,Claude Fable 5,anthropic,api_only,proprietary,2026-06-07,Claude Fable 5,crosswalk,163.42,160.53,168.18,2026-06-09,Closed weights,2026-10-28
-claude-fable-5-1,claude-fable-5-1,anthropic,api_only,proprietary,2026-09-01,Claude Fable 5.1,crosswalk,166.49,163.47,171.35,2026-09-01,Closed weights,2026-10-28
-claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,proprietary,2025-10-15,Claude Haiku 4.5,crosswalk,142.15,139.4,144.06,2025-10-15,Closed weights,2026-10-28
-claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,proprietary,2026-10-07,Claude Haiku 5.5,crosswalk,159.32,156.19,162.47,2026-10-07,Closed weights,2026-10-28
-claude-opus-4,Claude Opus 4,anthropic,api_only,proprietary,2025-05-22,Claude Opus 4,crosswalk,142.52,140.29,144.3,2025-05-22,Closed weights,2026-10-28
-claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,proprietary,2025-08-05,Claude Opus 4.1,crosswalk,144.07,141.75,146.55,2025-08-05,Closed weights,2026-10-28
-claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,proprietary,2025-11-24,Claude Opus 4.5,crosswalk,150.11,147.81,153.01,2025-11-24,Closed weights,2026-10-28
-claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,proprietary,2026-02-04,Claude Opus 4.6,crosswalk,155.66,153.82,158.07,2026-02-05,Closed weights,2026-10-28
-claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,proprietary,2026-04-14,Claude Opus 4.7,crosswalk,156.79,154.91,159.19,2026-04-16,Closed weights,2026-10-28
-claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,proprietary,2026-05-28,Claude Opus 4.8,crosswalk,159.01,156.89,161.95,2026-05-28,Closed weights,2026-10-28
-claude-opus-5,Claude Opus 5,anthropic,api_only,proprietary,2026-07-24,Claude Opus 5,crosswalk,163.94,161.12,168.24,2026-07-24,Closed weights,2026-10-28
-claude-opus-5-5,claude-opus-5-5,anthropic,api_only,proprietary,2026-09-22,Claude Opus 5.5,crosswalk,168.83,165.25,173.95,2026-09-22,Closed weights,2026-10-28
-claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,proprietary,2025-05-22,Claude Sonnet 4,crosswalk,141.56,139.0,143.07,2025-05-22,Closed weights,2026-10-28
-claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,proprietary,2025-09-29,Claude Sonnet 4.5,crosswalk,146.74,145.03,148.31,2025-09-29,Closed weights,2026-10-28
-claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,proprietary,2026-02-17,Claude Sonnet 4.6,crosswalk,152.79,150.2,155.06,2026-02-17,Closed weights,2026-10-28
-claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,proprietary,2026-06-30,Claude Sonnet 5,crosswalk,156.88,154.1,159.65,2026-06-30,Closed weights,2026-10-28
-claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,proprietary,2026-09-28,Claude Sonnet 5.5,crosswalk,166.18,163.06,171.34,2026-09-28,Closed weights,2026-10-28
-deepseek-coder-v2-lite-base,DeepSeek-Coder-V2-Lite-Base,deepseek,open_weights,,2024-06-14,DeepSeek-Coder-V2-Lite-Base,name,108.68,98.16,113.84,2024-06-13,Other,2026-10-28
-deepseek-r1,DeepSeek-R1,deepseek,open_weights,osi_approved,2025-01-20,DeepSeek-R1,crosswalk,138.82,136.04,140.21,2025-01-20,Open weights,2026-10-28
-deepseek-v3,DeepSeek-V3,deepseek,open_weights,open_weights_restricted,2024-12-26,DeepSeek-V3,crosswalk,132.3,128.06,135.23,2024-12-26,Open weights,2026-10-28
-deepseek-v3-1,DeepSeek-V3.1,deepseek,open_weights,osi_approved,2025-08-21,DeepSeek-V3.1,crosswalk,139.79,135.65,143.26,2025-08-21,Open weights,2026-10-28
-deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,osi_approved,2025-12-01,DeepSeek-V3.2,crosswalk,146.09,144.27,147.38,2025-12-01,Open weights,2026-10-28
-deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,osi_approved,2025-09-29,DeepSeek-V3.2-Exp,crosswalk,144.91,142.45,146.81,2025-09-29,Open weights,2026-10-28
-deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,osi_approved,2026-09-10,DeepSeek V4.1 Flash,crosswalk,155.93,153.68,158.59,2026-09-09,Open weights,2026-10-28
-deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-04-24,DeepSeek-V4-Flash,name,146.11,143.82,147.99,2026-04-24,Open weights,2026-10-28
-deepseek-v4-flash-0731,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-07-31,DeepSeek V4 Flash 0731,crosswalk,154.76,152.06,156.86,2026-07-31,Open weights,2026-10-28
-deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek V4 Pro 0813,crosswalk,155.64,153.74,158.04,2026-08-13,Open weights,2026-10-28
-deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek-V4-Pro,crosswalk,149.13,147.63,150.87,2026-04-24,Open weights,2026-10-28
-falcon-40b,falcon-40b,tii,open_weights,osi_approved,2023-05-24,Falcon-40B,name,104.17,93.56,109.76,2023-05-25,Open weights,2026-10-28
-falcon-7b,falcon-7b,tii,open_weights,osi_approved,2023-04-24,Falcon-7B,name,94.7,82.31,102.04,2023-04-24,Open weights,2026-10-28
-gemini-1-0-pro,Gemini 1.0 Pro,google,api_only,proprietary,2023-12-06,Gemini 1.0 Pro,name,117.14,109.33,119.92,2023-12-13,Closed weights,2026-10-28
-gemini-3-1-flash-lite,Gemini 3.1 Flash-Lite,google,api_only,proprietary,2026-05-07,Gemini 3.1 Flash-Lite,crosswalk,144.26,142.31,145.73,2026-03-03,Closed weights,2026-10-28
-gemini-3-1-pro,Gemini 3.1 Pro,google,api_only,proprietary,2026-02-19,Gemini 3.1 Pro,crosswalk,155.34,153.32,158.13,2026-02-19,Closed weights,2026-10-28
-gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,proprietary,2026-05-19,Gemini 3.5 Flash,crosswalk,154.88,152.91,157.41,2026-05-19,Closed weights,2026-10-28
-gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,proprietary,2026-07-21,Gemini 3.5 Flash-Lite,crosswalk,144.91,142.41,146.26,2026-07-21,Closed weights,2026-10-28
-gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,proprietary,2026-07-21,Gemini 3.6 Flash,crosswalk,154.53,152.85,156.58,2026-07-21,Closed weights,2026-10-28
-gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,proprietary,2026-08-13,Gemini 3.7 Flash,crosswalk,157.97,155.92,161.24,2026-08-13,Closed weights,2026-10-28
-gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,proprietary,2026-09-02,Gemini 3.8 Flash,crosswalk,157.44,155.07,161.08,2026-09-02,Closed weights,2026-10-28
-gemini-3-flash,Gemini 3 Flash,google,api_only,proprietary,2025-12-17,Gemini 3 Flash,crosswalk,151.88,150.44,153.64,2025-12-17,Closed weights,2026-10-28
-gemini-3-pro,Gemini 3 Pro,google,api_only,proprietary,2025-11-18,Gemini 3 Pro,crosswalk,153.07,151.06,155.42,2025-11-18,Closed weights,2026-10-28
-gemini-4-argon,Gemini 4 Argon,google,api_only,proprietary,2026-10-13,Gemini 4 Argon,crosswalk,166.45,163.23,171.52,2026-09-30,Other,2026-10-28
-gemma-2-27b-it,Gemma 2 27B,google,open_weights,open_weights_restricted,2024-07-13,Gemma 2 27B,crosswalk,122.12,115.54,124.22,2024-06-24,Open weights,2026-10-28
-gemma-2-9b-it,gemma-2-9b-it,google,open_weights,open_weights_restricted,2024-06-24,Gemma 2 9B,crosswalk,119.81,111.79,122.25,2024-06-24,Open weights,2026-10-28
-gemma-3-12b-it,Gemma 3 12B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 12B,crosswalk,123.54,114.23,128.84,2025-03-12,Open weights,2026-10-28
-gemma-3-27b-it,Gemma 3 27B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 27B,crosswalk,129.97,124.48,132.04,2025-03-12,Open weights,2026-10-28
-gemma-3-4b-it,Gemma 3 4B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 4B,crosswalk,115.88,97.39,123.59,2025-03-12,Open weights,2026-10-28
-gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,osi_approved,2026-04-02,Gemma 4 26B A4B,crosswalk,141.88,138.86,143.43,2026-04-02,Open weights,2026-10-28
-gemma-4-31b-it,Gemma 4 31B,google,open_weights,osi_approved,2026-04-02,Gemma 4 31B IT,crosswalk,142.99,140.34,145.75,2026-04-02,Open weights,2026-10-28
-glm-4-7,GLM-4.7,zhipu,open_weights,osi_approved,2025-12-22,GLM-4.7,crosswalk,143.59,141.38,145.85,2025-12-22,Open weights,2026-10-28
-glm-5,GLM-5,zhipu,open_weights,osi_approved,2026-02-12,GLM-5,crosswalk,145.8,143.77,147.67,2026-02-11,Open weights,2026-10-28
-glm-5-1,GLM-5.1,zhipu,open_weights,osi_approved,2026-04-07,GLM-5.1,crosswalk,149.82,147.66,151.89,2026-04-07,Open weights,2026-10-28
-glm-5-2,GLM-5.2,zhipu,open_weights,osi_approved,2026-06-16,GLM-5.2,crosswalk,151.94,149.99,154.1,2026-06-16,Open weights,2026-10-28
-glm-5-3,GLM-5.3,zhipu,open_weights,open_weights_restricted,2026-08-14,GLM-5.3,crosswalk,155.99,154.17,158.35,2026-08-14,Open weights,2026-10-28
-glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,osi_approved,2026-08-26,GLM-5.3-Flash,crosswalk,153.08,150.76,155.53,2026-08-20,Open weights,2026-10-28
-gpt-4-1,GPT-4.1,openai,api_only,proprietary,2025-04-14,GPT-4.1,crosswalk,136.65,133.57,138.34,2025-04-14,Closed weights,2026-10-28
-gpt-4-1-mini,GPT-4.1 mini,openai,api_only,proprietary,2025-04-14,GPT-4.1 mini,crosswalk,134.89,130.97,136.49,2025-04-14,Closed weights,2026-10-28
-gpt-4-1-nano,GPT-4.1 nano,openai,api_only,proprietary,2025-04-14,GPT-4.1 nano,crosswalk,129.54,123.33,131.82,2025-04-14,Closed weights,2026-10-28
-gpt-4-5,GPT-4.5,openai,api_only,proprietary,2025-02-27,GPT-4.5,name,136.65,133.68,138.72,2025-02-27,Closed weights,2026-10-28
-gpt-4o-mini,GPT-4o mini,openai,api_only,proprietary,2024-07-18,GPT-4o mini,crosswalk,126.46,120.11,128.49,2024-07-18,Closed weights,2026-10-28
-gpt-5,GPT-5,openai,api_only,proprietary,2025-08-07,GPT-5,crosswalk,150.0,,,2025-08-07,Closed weights,2026-10-28
-gpt-5-1,GPT-5.1,openai,api_only,proprietary,2025-11-12,GPT-5.1,crosswalk,149.76,148.36,151.74,2025-11-13,Closed weights,2026-10-28
-gpt-5-2,GPT-5.2,openai,api_only,proprietary,2025-12-11,GPT-5.2,crosswalk,153.66,152.05,155.42,2025-12-11,Closed weights,2026-10-28
-gpt-5-2-pro,GPT-5.2 Pro,openai,api_only,proprietary,2025-12-11,GPT-5.2 Pro,crosswalk,156.33,153.89,159.98,2025-12-11,Closed weights,2026-10-28
-gpt-5-3-codex,GPT-5.3 Codex,openai,api_only,proprietary,2026-02-05,GPT-5.3 Codex,crosswalk,157.09,153.56,161.38,2026-02-05,Closed weights,2026-10-28
-gpt-5-4,GPT-5.4,openai,api_only,proprietary,2026-03-05,GPT-5.4,crosswalk,157.31,155.38,159.8,2026-03-05,Closed weights,2026-10-28
-gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,proprietary,2026-03-17,GPT-5.4 Mini,crosswalk,148.7,146.87,150.47,2026-03-17,Closed weights,2026-10-28
-gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,proprietary,2026-03-17,GPT-5.4 Nano,crosswalk,146.03,143.63,148.15,2026-03-17,Closed weights,2026-10-28
-gpt-5-4-pro,GPT-5.4 Pro,openai,api_only,proprietary,2026-03-05,GPT-5.4 Pro,crosswalk,159.57,157.1,162.7,2026-03-05,Closed weights,2026-10-28
-gpt-5-5,GPT-5.5,openai,api_only,proprietary,2026-04-23,GPT-5.5,crosswalk,159.68,157.33,163.67,2026-04-23,Closed weights,2026-10-28
-gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,proprietary,2026-05-05,GPT-5.5 Instant,crosswalk,142.43,139.73,145.28,2026-05-05,Closed weights,2026-10-28
-gpt-5-5-pro,GPT-5.5 Pro,openai,api_only,proprietary,2026-04-23,GPT-5.5 Pro,crosswalk,162.91,160.04,166.6,2026-04-23,Closed weights,2026-10-28
-gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,proprietary,2026-07-09,GPT-5.6 Luna,crosswalk,156.5,154.19,159.26,2026-07-09,Closed weights,2026-10-28
-gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,proprietary,2026-07-09,GPT-5.6 Sol,crosswalk,162.79,160.15,167.06,2026-07-09,Closed weights,2026-10-28
-gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,proprietary,2026-07-09,GPT-5.6 Terra,crosswalk,160.09,157.3,163.31,2026-07-09,Closed weights,2026-10-28
-gpt-5-mini,GPT-5 mini,openai,api_only,proprietary,2025-08-07,GPT-5 mini,crosswalk,145.34,143.33,147.11,2025-08-07,Closed weights,2026-10-28
-gpt-5-nano,GPT-5 nano,openai,api_only,proprietary,2025-08-07,GPT-5 nano,crosswalk,139.21,134.11,141.2,2025-08-07,Closed weights,2026-10-28
-gpt-5-pro,GPT-5 Pro,openai,api_only,proprietary,2025-10-06,GPT-5 Pro,crosswalk,150.59,148.94,154.18,2025-10-07,Closed weights,2026-10-28
-gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,proprietary,2026-09-29,GPT-6.1 Sol,crosswalk,168.37,165.0,174.43,2026-09-29,Closed weights,2026-10-28
-gpt-6-astra,GPT-6 Astra,openai,api_only,proprietary,2026-09-04,GPT-6 Astra,crosswalk,168.81,165.45,174.51,2026-09-03,Closed weights,2026-10-28
-gpt-6-luna,gpt-6-luna,openai,api_only,proprietary,2026-09-22,GPT-6 Luna,crosswalk,156.75,154.32,159.43,2026-09-22,Closed weights,2026-10-28
-gpt-6-sol,gpt-6-sol,openai,api_only,proprietary,2026-09-22,GPT-6 Sol,crosswalk,163.73,160.92,167.44,2026-09-22,Closed weights,2026-10-28
-gpt-oss-120b,gpt-oss-120b,openai,open_weights,osi_approved,2025-08-05,gpt-oss-120b,crosswalk,139.79,135.57,142.12,2025-08-05,Open weights,2026-10-28
-gpt-oss-20b,gpt-oss-20b,openai,open_weights,osi_approved,2025-08-05,gpt-oss-20b,crosswalk,137.7,132.2,139.58,2025-08-05,Open weights,2026-10-28
-grok-3,Grok 3,xai,api_only,proprietary,2025-02-19,Grok 3,crosswalk,138.21,135.44,139.51,2025-04-09,Closed weights,2026-10-28
-grok-3-mini,Grok-3 mini,xai,api_only,proprietary,,Grok-3 mini,crosswalk,140.2,137.66,141.83,2025-06-24,Closed weights,2026-10-28
-grok-4,Grok 4,xai,api_only,proprietary,2025-07-09,Grok 4,crosswalk,146.24,144.36,148.02,2025-07-09,Closed weights,2026-10-28
-grok-4-20,Grok 4.20,xai,api_only,proprietary,2026-03-31,Grok 4.20,crosswalk,152.11,149.57,154.54,2026-02-17,Closed weights,2026-10-28
-grok-4-5,Grok 4.5,xai,api_only,proprietary,2026-07-08,Grok 4.5,crosswalk,154.07,152.36,156.18,2026-07-08,Closed weights,2026-10-28
-grok-4-6,Grok 4.6,xai,api_only,proprietary,2026-08-12,Grok 4.6,crosswalk,156.57,154.68,159.19,2026-08-12,Closed weights,2026-10-28
-grok-4-7,Grok 4.7,xai,api_only,proprietary,2026-09-21,Grok 4.7,crosswalk,154.37,152.6,157.08,2026-09-21,Closed weights,2026-10-28
-grok-4-fast,Grok 4 Fast,xai,api_only,proprietary,2025-09-20,Grok 4 Fast,crosswalk,144.09,141.61,146.3,2025-09-19,Closed weights,2026-10-28
-inkling,Inkling,thinking-machines,open_weights,osi_approved,2026-07-15,Inkling,crosswalk,148.41,145.96,150.21,2026-07-15,Open weights,2026-10-28
-inkling-small,Inkling-Small,thinking-machines,open_weights,osi_approved,2026-07-30,Inkling-Small,crosswalk,150.32,147.23,152.1,2026-07-15,Open weights,2026-10-28
-intellect-1,INTELLECT-1,prime-intellect,open_weights,osi_approved,2024-11-28,INTELLECT-1,name,100.54,88.72,105.92,2024-11-29,Other,2026-10-28
-internlm-20b,internlm-20b,shanghai-ai-lab,open_weights,osi_approved,2023-09-18,internlm-20b,name,111.92,102.59,116.56,2023-09-18,Other,2026-10-28
-internlm-7b,internlm-7b,shanghai-ai-lab,open_weights,,2023-07-06,internlm-7b,name,102.58,91.1,109.12,2023-07-05,Other,2026-10-28
-kimi-k2-5,Kimi K2.5,moonshot,open_weights,,2026-01-27,Kimi K2.5,crosswalk,148.07,146.55,149.52,2026-01-27,Open weights,2026-10-28
-kimi-k2-6,Kimi K2.6,moonshot,open_weights,,2026-04-20,Kimi K2.6,crosswalk,150.94,149.04,152.72,2026-04-20,Open weights,2026-10-28
-kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,,2026-06-12,Kimi K2.7 Code,crosswalk,150.11,148.17,151.82,2026-06-12,Open weights,2026-10-28
-kimi-k2-thinking,Kimi K2 Thinking,moonshot,open_weights,,2025-11-06,Kimi K2 Thinking,crosswalk,145.82,143.22,147.51,2025-11-06,Open weights,2026-10-28
-kimi-k3,Kimi K3,moonshot,open_weights,open_weights_restricted,2026-07-16,Kimi K3,crosswalk,157.86,155.11,160.63,2026-07-16,Open weights,2026-10-28
-llama-2-13b,Llama-2-13b-hf,meta,open_weights,open_weights_restricted,2023-07-13,Llama 2-13B,name,105.58,94.81,110.87,2023-07-18,Open weights,2026-10-28
-llama-2-70b,Llama 2 70B,meta,open_weights,open_weights_restricted,2023-11-29,Llama 2-70B,name,113.67,104.62,117.19,2023-07-18,Open weights,2026-10-28
-llama-2-7b,Llama-2-7b-hf,meta,open_weights,open_weights_restricted,2023-07-13,Llama 2-7B,name,98.61,87.31,105.58,2023-07-18,Open weights,2026-10-28
-llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-405B,crosswalk,128.77,124.44,130.61,2024-07-23,Open weights,2026-10-28
-llama-3-1-70b-instruct,Llama 3.1-70B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-70B,crosswalk,125.93,120.6,128.23,2024-07-23,Open weights,2026-10-28
-llama-3-1-8b-instruct,Llama 3.1-8B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-8B,crosswalk,116.47,105.92,121.64,2024-07-23,Open weights,2026-10-28
-llama-3-3-70b-instruct,Llama 3.3 70B,meta,open_weights,open_weights_restricted,2024-12-06,Llama 3.3 70B,crosswalk,127.33,122.51,129.38,2024-12-06,Open weights,2026-10-28
-llama-3-70b-instruct,Llama 3 70B Instruct,meta,open_weights,open_weights_restricted,2024-04-18,Llama 3-70B,crosswalk,123.01,117.25,125.75,2024-04-18,Open weights,2026-10-28
-llama-3-8b-instruct,Llama 3-8B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3-8B,crosswalk,116.39,107.51,119.25,2024-04-18,Open weights,2026-10-28
-llama-4-maverick,Llama 4 Maverick,meta,open_weights,open_weights_restricted,2025-04-05,Llama 4 Maverick,crosswalk,132.22,127.72,134.29,2025-04-06,Open weights,2026-10-28
-llama-4-scout,Llama 4 Scout,meta,open_weights,,2025-04-05,Llama 4 Scout,crosswalk,129.63,125.13,131.19,2025-04-05,Open weights,2026-10-28
-minimax-m2-5,MiniMax-M2.5,minimax,open_weights,,2026-02-12,MiniMax-M2.5,crosswalk,146.59,142.21,147.9,2026-02-12,Open weights,2026-10-28
-minimax-m2-7,MiniMax-M2.7,minimax,open_weights,,2026-03-18,MiniMax-M2.7,crosswalk,145.78,138.37,148.18,2026-03-18,Open weights,2026-10-28
-minimax-m3,MiniMax-M3,minimax,open_weights,open_weights_restricted,2026-06-01,MiniMax-M3,crosswalk,146.87,142.34,150.17,2026-06-01,Open weights,2026-10-28
-ministral-3b,Ministral 3B,mistral,api_only,proprietary,2024-10-16,Ministral 3B,crosswalk,118.04,106.31,121.89,2024-10-16,Closed weights,2026-10-28
-mistral-7b-v0-3,Mistral-7B-v0.3,mistral,open_weights,osi_approved,2024-05-22,Mistral 7B v0.3,name,108.88,98.25,112.6,2024-05-27,Open weights,2026-10-28
-mistral-large,Mistral Large,mistral,api_only,proprietary,2024-02-26,Mistral Large,crosswalk,122.12,114.75,124.74,2024-02-26,Closed weights,2026-10-28
-mistral-large-4,Mistral Large 4,mistral,api_only,,,Mistral Large 4,name,150.03,146.94,152.74,2026-10-06,Other,2026-10-28
-mistral-medium-3,Mistral Medium 3,mistral,api_only,proprietary,2025-05-07,Mistral Medium 3,crosswalk,134.02,130.38,135.36,2025-05-07,Closed weights,2026-10-28
-mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,,2026-03-31,Mistral Medium 3.5,crosswalk,141.36,138.5,144.33,2026-04-28,Open weights,2026-10-28
-mistral-nemo,Mistral NeMo,mistral,open_weights,osi_approved,2024-07-18,Mistral NeMo,crosswalk,118.65,111.1,121.37,2024-07-18,Open weights,2026-10-28
-mixtral-8x22b-instruct,Mixtral 8x22B,mistral,open_weights,osi_approved,2024-04-17,Mixtral 8x22B,crosswalk,122.04,115.27,124.38,2024-04-17,Open weights,2026-10-28
-mixtral-8x7b-instruct,Mixtral 8x7B Instruct,mistral,open_weights,osi_approved,,Mixtral 8x7B,crosswalk,118.44,111.29,120.9,2023-12-11,Open weights,2026-10-28
-muse-spark-1-1,Muse Spark 1.1,meta,api_only,proprietary,2026-04-08,Muse Spark 1.1,crosswalk,154.05,151.73,156.18,2026-07-09,Closed weights,2026-10-28
-muse-spark-1-2,Muse Spark 1.2,meta,api_only,proprietary,2026-08-05,Muse Spark 1.2,crosswalk,155.05,152.82,157.56,2026-08-05,Closed weights,2026-10-28
-muse-spark-1-3,muse-spark-1.3,meta,api_only,proprietary,2026-09-02,Muse Spark 1.3,crosswalk,157.21,155.26,159.82,2026-09-02,Closed weights,2026-10-28
-muse-spark-open,Muse Spark Open,meta,open_weights,open_weights_restricted,2026-10-15,Muse Spark Open,crosswalk,155.11,152.66,157.97,2026-10-15,Open weights,2026-10-28
-muse-wonder,muse-wonder,meta,api_only,proprietary,2026-10-12,Muse Wonder,crosswalk,161.85,159.39,165.44,2026-10-12,Closed weights,2026-10-28
-nemotron-3-ultra,Nemotron 3 Ultra,nvidia,open_weights,,2026-06-04,Nemotron 3 Ultra,crosswalk,145.97,143.68,148.22,2026-06-04,Open weights,2026-10-28
-o1-preview,o1-preview,openai,api_only,proprietary,,o1-preview,crosswalk,134.57,130.76,137.92,2024-09-12,Closed weights,2026-10-28
-o3-mini,o3-mini,openai,api_only,proprietary,2025-01-31,o3-mini,crosswalk,140.2,137.03,141.8,2025-01-31,Closed weights,2026-10-28
-o3-pro,o3-pro,openai,api_only,proprietary,2025-06-10,o3-pro,crosswalk,147.33,145.56,150.1,2025-06-10,Closed weights,2026-10-28
-o4-mini,o4-mini,openai,api_only,proprietary,2025-04-16,o4-mini,crosswalk,145.46,142.9,147.21,2025-04-16,Closed weights,2026-10-28
-openai-o1,o1,openai,api_only,proprietary,2024-12-05,o1,crosswalk,141.72,139.71,142.94,2024-12-17,Closed weights,2026-10-28
-openai-o3,o3,openai,api_only,proprietary,2025-04-16,o3,crosswalk,146.73,144.83,148.52,2025-04-16,Closed weights,2026-10-28
-phi-1-5,phi-1_5,microsoft,open_weights,osi_approved,2023-09-10,Phi-1.5,name,91.06,64.55,100.49,2023-09-11,Open weights,2026-10-28
-phi-2,phi-2,microsoft,open_weights,osi_approved,2023-12-13,Phi-2,name,107.73,86.28,113.51,2023-12-12,Open weights,2026-10-28
-phi-4,Phi-4,microsoft,open_weights,osi_approved,2024-12-11,Phi-4,crosswalk,130.48,124.66,132.01,2024-12-12,Open weights,2026-10-28
-qwen2-5-72b-instruct,Qwen2.5 72B Instruct,alibaba,open_weights,open_weights_restricted,2024-09-19,Qwen2.5-72B,crosswalk,128.97,123.48,130.73,2024-09-19,Open weights,2026-10-28
-qwen2-5-7b-instruct,Qwen2.5-7B,alibaba,open_weights,osi_approved,2024-09-18,Qwen2.5-7B,crosswalk,118.54,109.6,121.73,2024-09-19,Open weights,2026-10-28
-qwen2-5-coder-7b-instruct,Qwen2.5-Coder (7B),alibaba,open_weights,osi_approved,2024-09-17,Qwen2.5-Coder (7B),crosswalk,113.01,102.88,119.17,2024-09-18,Open weights,2026-10-28
-qwen3-14b,Qwen3-14B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-14B,crosswalk,138.15,133.24,140.03,2025-04-29,Open weights,2026-10-28
-qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-235B-A22B,crosswalk,139.15,134.62,140.53,2025-04-28,Open weights,2026-10-28
-qwen3-30b-a3b,Qwen3-30B-A3B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-30B-A3B,crosswalk,136.11,130.91,138.67,2025-04-29,Open weights,2026-10-28
-qwen3-32b,Qwen3-32B,alibaba,open_weights,osi_approved,2025-04-27,Qwen3-32B,crosswalk,138.42,134.68,140.22,2025-04-29,Open weights,2026-10-28
-qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-35B-A3B,crosswalk,142.49,140.42,144.98,2026-02-24,Open weights,2026-10-28
-qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,,2026-02-15,Qwen3.5 397B-A17B,crosswalk,146.8,145.24,148.86,2026-02-13,Open weights,2026-10-28
-qwen3-5-9b,Qwen3.5-9B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-9B,crosswalk,139.32,136.13,140.83,2026-02-24,Open weights,2026-10-28
-qwen3-6-27b,Qwen3.6 27B,alibaba,open_weights,osi_approved,2026-04-22,Qwen3.6 27B,crosswalk,146.23,144.13,147.65,2026-04-22,Open weights,2026-10-28
-qwen3-6-plus,qwen3.6-plus,alibaba,api_only,proprietary,2026-04-02,Qwen 3.6 Plus,crosswalk,147.3,145.07,149.26,2026-03-31,Closed weights,2026-10-28
-qwen3-7-flash,Qwen3.7 Flash,alibaba,api_only,proprietary,2026-07-15,Qwen3.7 Flash,crosswalk,144.05,141.89,145.92,2026-07-27,Closed weights,2026-10-28
-qwen3-7-max,Qwen3.7-Max,alibaba,api_only,proprietary,2026-05-21,Qwen3.7-Max,crosswalk,154.04,152.3,156.5,2026-05-19,Closed weights,2026-10-28
-qwen3-7-plus,qwen3.7-plus,alibaba,api_only,proprietary,2026-06-02,Qwen3.7-Plus,crosswalk,147.0,145.25,148.82,2026-06-02,Closed weights,2026-10-28
-qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,osi_approved,2026-08-14,Qwen 3.8 27B,crosswalk,151.69,149.75,153.72,2026-08-14,Open weights,2026-10-28
-qwen3-8-max,qwen3.8-max,alibaba,api_only,proprietary,2026-08-03,Qwen 3.8 Max,crosswalk,157.4,155.33,160.31,2026-08-02,Closed weights,2026-10-28
-qwen3-8b,Qwen3-8B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-8B,crosswalk,136.06,129.92,138.29,2025-04-28,Open weights,2026-10-28
-qwen3-max,Qwen3-Max,alibaba,api_only,proprietary,2025-09-23,Qwen3-Max,crosswalk,142.33,140.11,145.21,2025-09-24,Closed weights,2026-10-28
-qwq-32b,QwQ-32B,alibaba,open_weights,,2025-03-05,QwQ-32B,crosswalk,137.5,132.62,141.76,2025-03-05,Open weights,2026-10-28
-stablelm-tuned-alpha-7b,stablelm-tuned-alpha-7b,stability,open_weights,open_weights_restricted,2023-04-19,stablelm-tuned-alpha-7b,name,54.81,28.52,71.34,2023-04-19,Other,2026-10-28
-yi-34b,Yi-34B,01ai,open_weights,open_weights_restricted,2023-11-02,Yi-34B,name,117.33,108.94,120.6,2023-11-02,Open weights,2026-10-28
-yi-6b,Yi-6B,01ai,open_weights,osi_approved,2023-11-01,Yi 6B,name,104.5,93.95,110.26,2023-11-22,Open weights,2026-10-28
-yi-9b,Yi-9B,01ai,open_weights,osi_approved,2024-03-01,Yi-9B,name,107.39,97.63,114.91,2024-03-01,Other,2026-10-28
+claude-2,Claude 2,anthropic,api_only,proprietary,2023-07-11,Claude 2,name,120.16,114.71,123.98,2023-07-11,Closed weights,2026-10-30
+claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,proprietary,2024-10-22,Claude 3.5 Haiku,crosswalk,127.07,120.88,129.52,2024-10-22,Closed weights,2026-10-30
+claude-3-5-sonnet,Claude 3.5 Sonnet,anthropic,api_only,proprietary,2024-06-20,Claude 3.5 Sonnet,crosswalk,130.0,,,2024-06-20,Closed weights,2026-10-30
+claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,proprietary,2025-02-19,Claude 3.7 Sonnet,crosswalk,141.05,139.09,142.58,2025-02-24,Closed weights,2026-10-30
+claude-3-haiku,Claude 3 Haiku,anthropic,api_only,proprietary,2024-03-13,Claude 3 Haiku,crosswalk,118.83,112.34,121.76,2024-03-07,Closed weights,2026-10-30
+claude-3-opus,Claude 3 Opus,anthropic,api_only,proprietary,2024-03-04,Claude 3 Opus,crosswalk,126.89,122.56,129.54,2024-02-29,Closed weights,2026-10-30
+claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,proprietary,2024-03-04,Claude 3 Sonnet,crosswalk,120.83,113.63,123.94,2024-02-29,Closed weights,2026-10-30
+claude-fable-5,Claude Fable 5,anthropic,api_only,proprietary,2026-06-07,Claude Fable 5,crosswalk,163.12,160.38,167.2,2026-06-09,Closed weights,2026-10-30
+claude-fable-5-1,claude-fable-5-1,anthropic,api_only,proprietary,2026-09-01,Claude Fable 5.1,crosswalk,166.19,163.14,170.06,2026-09-01,Closed weights,2026-10-30
+claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,proprietary,2025-10-15,Claude Haiku 4.5,crosswalk,142.17,139.34,143.92,2025-10-15,Closed weights,2026-10-30
+claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,proprietary,2026-10-07,Claude Haiku 5.5,crosswalk,159.33,156.41,162.43,2026-10-07,Closed weights,2026-10-30
+claude-opus-4,Claude Opus 4,anthropic,api_only,proprietary,2025-05-22,Claude Opus 4,crosswalk,142.55,140.26,144.05,2025-05-22,Closed weights,2026-10-30
+claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,proprietary,2025-08-05,Claude Opus 4.1,crosswalk,144.1,141.83,146.46,2025-08-05,Closed weights,2026-10-30
+claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,proprietary,2025-11-24,Claude Opus 4.5,crosswalk,150.15,148.02,153.22,2025-11-24,Closed weights,2026-10-30
+claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,proprietary,2026-02-04,Claude Opus 4.6,crosswalk,155.68,153.71,157.87,2026-02-05,Closed weights,2026-10-30
+claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,proprietary,2026-04-14,Claude Opus 4.7,crosswalk,156.7,154.86,159.05,2026-04-16,Closed weights,2026-10-30
+claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,proprietary,2026-05-28,Claude Opus 4.8,crosswalk,159.0,156.92,161.6,2026-05-28,Closed weights,2026-10-30
+claude-opus-5,Claude Opus 5,anthropic,api_only,proprietary,2026-07-24,Claude Opus 5,crosswalk,163.83,161.19,167.37,2026-07-24,Closed weights,2026-10-30
+claude-opus-5-5,claude-opus-5-5,anthropic,api_only,proprietary,2026-09-22,Claude Opus 5.5,crosswalk,168.64,165.42,173.49,2026-09-22,Closed weights,2026-10-30
+claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,proprietary,2025-05-22,Claude Sonnet 4,crosswalk,141.58,138.96,143.03,2025-05-22,Closed weights,2026-10-30
+claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,proprietary,2025-09-29,Claude Sonnet 4.5,crosswalk,146.78,145.11,148.51,2025-09-29,Closed weights,2026-10-30
+claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,proprietary,2026-02-17,Claude Sonnet 4.6,crosswalk,152.82,149.98,155.12,2026-02-17,Closed weights,2026-10-30
+claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,proprietary,2026-06-30,Claude Sonnet 5,crosswalk,156.89,154.28,159.22,2026-06-30,Closed weights,2026-10-30
+claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,proprietary,2026-09-28,Claude Sonnet 5.5,crosswalk,165.98,162.56,170.0,2026-09-28,Closed weights,2026-10-30
+deepseek-coder-v2-lite-base,DeepSeek-Coder-V2-Lite-Base,deepseek,open_weights,,2024-06-14,DeepSeek-Coder-V2-Lite-Base,name,108.62,98.58,113.62,2024-06-13,Closed weights,2026-10-30
+deepseek-r1,DeepSeek-R1,deepseek,open_weights,osi_approved,2025-01-20,DeepSeek-R1,crosswalk,138.83,136.51,140.21,2025-01-20,Open weights,2026-10-30
+deepseek-v3,DeepSeek-V3,deepseek,open_weights,open_weights_restricted,2024-12-26,DeepSeek-V3,crosswalk,132.31,128.51,135.2,2024-12-26,Open weights,2026-10-30
+deepseek-v3-1,DeepSeek-V3.1,deepseek,open_weights,osi_approved,2025-08-21,DeepSeek-V3.1,crosswalk,139.81,135.6,142.9,2025-08-21,Open weights,2026-10-30
+deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,osi_approved,2025-12-01,DeepSeek-V3.2,crosswalk,146.1,144.18,147.24,2025-12-01,Open weights,2026-10-30
+deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,osi_approved,2025-09-29,DeepSeek-V3.2-Exp,crosswalk,144.93,142.57,147.02,2025-09-29,Open weights,2026-10-30
+deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,osi_approved,2026-09-10,DeepSeek V4.1 Flash,crosswalk,155.96,153.68,158.14,2026-09-09,Open weights,2026-10-30
+deepseek-v4-1-flash-1017,DeepSeek V4.1 Flash 1017,deepseek,open_weights,osi_approved,2026-10-17,DeepSeek V4.1 Flash 1017,crosswalk,158.65,156.28,161.79,2026-10-17,Open weights,2026-10-30
+deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-04-24,DeepSeek-V4-Flash,name,146.13,143.96,148.06,2026-04-24,Open weights,2026-10-30
+deepseek-v4-flash-0731,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-07-31,DeepSeek V4 Flash 0731,crosswalk,154.82,152.15,156.95,2026-07-31,Open weights,2026-10-30
+deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek V4 Pro 0813,crosswalk,155.68,154.0,158.05,2026-08-13,Open weights,2026-10-30
+deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek-V4-Pro,crosswalk,149.17,147.45,150.72,2026-04-24,Open weights,2026-10-30
+falcon-40b,falcon-40b,tii,open_weights,osi_approved,2023-05-24,Falcon-40B,name,104.1,94.77,109.83,2023-05-25,Open weights,2026-10-30
+falcon-7b,falcon-7b,tii,open_weights,osi_approved,2023-04-24,Falcon-7B,name,94.6,82.48,102.2,2023-04-24,Open weights,2026-10-30
+gemini-1-0-pro,Gemini 1.0 Pro,google,api_only,proprietary,2023-12-06,Gemini 1.0 Pro,name,117.11,110.64,119.92,2023-12-13,Closed weights,2026-10-30
+gemini-3-1-flash-lite,Gemini 3.1 Flash-Lite,google,api_only,proprietary,2026-05-07,Gemini 3.1 Flash-Lite,crosswalk,144.29,142.22,145.67,2026-03-03,Closed weights,2026-10-30
+gemini-3-1-pro,Gemini 3.1 Pro,google,api_only,proprietary,2026-02-19,Gemini 3.1 Pro,crosswalk,155.27,153.28,157.81,2026-02-19,Closed weights,2026-10-30
+gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,proprietary,2026-05-19,Gemini 3.5 Flash,crosswalk,154.91,152.9,157.15,2026-05-19,Closed weights,2026-10-30
+gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,proprietary,2026-07-21,Gemini 3.5 Flash-Lite,crosswalk,144.92,142.58,146.51,2026-07-21,Closed weights,2026-10-30
+gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,proprietary,2026-07-21,Gemini 3.6 Flash,crosswalk,154.56,152.82,156.69,2026-07-21,Closed weights,2026-10-30
+gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,proprietary,2026-08-13,Gemini 3.7 Flash,crosswalk,158.17,156.09,161.4,2026-08-13,Closed weights,2026-10-30
+gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,proprietary,2026-09-02,Gemini 3.8 Flash,crosswalk,157.44,155.0,160.81,2026-09-02,Closed weights,2026-10-30
+gemini-3-flash,Gemini 3 Flash,google,api_only,proprietary,2025-12-17,Gemini 3 Flash,crosswalk,151.92,150.47,153.83,2025-12-17,Closed weights,2026-10-30
+gemini-3-pro,Gemini 3 Pro,google,api_only,proprietary,2025-11-18,Gemini 3 Pro,crosswalk,153.11,150.96,155.56,2025-11-18,Closed weights,2026-10-30
+gemini-4-argon,Gemini 4 Argon,google,api_only,proprietary,2026-10-13,Gemini 4 Argon,crosswalk,166.32,163.2,170.44,2026-09-30,Other,2026-10-30
+gemma-2-27b-it,Gemma 2 27B,google,open_weights,open_weights_restricted,2024-07-13,Gemma 2 27B,crosswalk,122.1,115.76,124.22,2024-06-24,Open weights,2026-10-30
+gemma-2-9b-it,gemma-2-9b-it,google,open_weights,open_weights_restricted,2024-06-24,Gemma 2 9B,crosswalk,119.78,112.04,122.45,2024-06-24,Open weights,2026-10-30
+gemma-3-12b-it,Gemma 3 12B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 12B,crosswalk,123.53,115.83,128.49,2025-03-12,Open weights,2026-10-30
+gemma-3-27b-it,Gemma 3 27B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 27B,crosswalk,129.97,124.52,132.13,2025-03-12,Open weights,2026-10-30
+gemma-3-4b-it,Gemma 3 4B,google,open_weights,open_weights_restricted,2025-03-12,Gemma 3 4B,crosswalk,115.86,98.6,123.43,2025-03-12,Open weights,2026-10-30
+gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,osi_approved,2026-04-02,Gemma 4 26B A4B,crosswalk,141.9,138.94,143.49,2026-04-02,Open weights,2026-10-30
+gemma-4-31b-it,Gemma 4 31B,google,open_weights,osi_approved,2026-04-02,Gemma 4 31B IT,crosswalk,143.03,140.44,145.77,2026-04-02,Open weights,2026-10-30
+glm-4-7,GLM-4.7,zhipu,open_weights,osi_approved,2025-12-22,GLM-4.7,crosswalk,143.62,141.35,145.67,2025-12-22,Open weights,2026-10-30
+glm-5,GLM-5,zhipu,open_weights,osi_approved,2026-02-12,GLM-5,crosswalk,145.84,143.89,147.82,2026-02-11,Open weights,2026-10-30
+glm-5-1,GLM-5.1,zhipu,open_weights,osi_approved,2026-04-07,GLM-5.1,crosswalk,149.82,147.78,151.87,2026-04-07,Open weights,2026-10-30
+glm-5-2,GLM-5.2,zhipu,open_weights,osi_approved,2026-06-16,GLM-5.2,crosswalk,152.0,150.08,154.25,2026-06-16,Open weights,2026-10-30
+glm-5-3,GLM-5.3,zhipu,open_weights,open_weights_restricted,2026-08-14,GLM-5.3,crosswalk,156.01,154.22,158.4,2026-08-14,Open weights,2026-10-30
+glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,osi_approved,2026-08-26,GLM-5.3-Flash,crosswalk,153.1,150.61,155.4,2026-08-20,Open weights,2026-10-30
+gpt-4-1,GPT-4.1,openai,api_only,proprietary,2025-04-14,GPT-4.1,crosswalk,136.65,133.93,138.24,2025-04-14,Closed weights,2026-10-30
+gpt-4-1-mini,GPT-4.1 mini,openai,api_only,proprietary,2025-04-14,GPT-4.1 mini,crosswalk,134.9,131.12,136.54,2025-04-14,Closed weights,2026-10-30
+gpt-4-1-nano,GPT-4.1 nano,openai,api_only,proprietary,2025-04-14,GPT-4.1 nano,crosswalk,129.54,123.74,131.92,2025-04-14,Closed weights,2026-10-30
+gpt-4-5,GPT-4.5,openai,api_only,proprietary,2025-02-27,GPT-4.5,name,136.66,133.99,138.21,2025-02-27,Closed weights,2026-10-30
+gpt-4o-mini,GPT-4o mini,openai,api_only,proprietary,2024-07-18,GPT-4o mini,crosswalk,126.44,120.66,128.38,2024-07-18,Closed weights,2026-10-30
+gpt-5,GPT-5,openai,api_only,proprietary,2025-08-07,GPT-5,crosswalk,150.0,,,2025-08-07,Closed weights,2026-10-30
+gpt-5-1,GPT-5.1,openai,api_only,proprietary,2025-11-12,GPT-5.1,crosswalk,149.8,148.48,151.62,2025-11-13,Closed weights,2026-10-30
+gpt-5-2,GPT-5.2,openai,api_only,proprietary,2025-12-11,GPT-5.2,crosswalk,153.7,152.03,155.7,2025-12-11,Closed weights,2026-10-30
+gpt-5-2-pro,GPT-5.2 Pro,openai,api_only,proprietary,2025-12-11,GPT-5.2 Pro,crosswalk,156.4,153.79,160.18,2025-12-11,Closed weights,2026-10-30
+gpt-5-3-codex,GPT-5.3 Codex,openai,api_only,proprietary,2026-02-05,GPT-5.3 Codex,crosswalk,157.09,153.37,160.8,2026-02-05,Closed weights,2026-10-30
+gpt-5-4,GPT-5.4,openai,api_only,proprietary,2026-03-05,GPT-5.4,crosswalk,157.21,155.42,159.55,2026-03-05,Closed weights,2026-10-30
+gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,proprietary,2026-03-17,GPT-5.4 Mini,crosswalk,148.76,146.97,150.59,2026-03-17,Closed weights,2026-10-30
+gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,proprietary,2026-03-17,GPT-5.4 Nano,crosswalk,146.09,143.98,148.2,2026-03-17,Closed weights,2026-10-30
+gpt-5-4-pro,GPT-5.4 Pro,openai,api_only,proprietary,2026-03-05,GPT-5.4 Pro,crosswalk,159.63,156.93,162.76,2026-03-05,Closed weights,2026-10-30
+gpt-5-5,GPT-5.5,openai,api_only,proprietary,2026-04-23,GPT-5.5,crosswalk,159.57,157.04,162.66,2026-04-23,Closed weights,2026-10-30
+gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,proprietary,2026-05-05,GPT-5.5 Instant,crosswalk,142.46,139.94,145.37,2026-05-05,Closed weights,2026-10-30
+gpt-5-5-pro,GPT-5.5 Pro,openai,api_only,proprietary,2026-04-23,GPT-5.5 Pro,crosswalk,162.91,159.82,166.43,2026-04-23,Closed weights,2026-10-30
+gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,proprietary,2026-07-09,GPT-5.6 Luna,crosswalk,156.53,153.8,159.19,2026-07-09,Closed weights,2026-10-30
+gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,proprietary,2026-07-09,GPT-5.6 Sol,crosswalk,162.74,160.05,166.26,2026-07-09,Closed weights,2026-10-30
+gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,proprietary,2026-07-09,GPT-5.6 Terra,crosswalk,160.1,157.59,163.19,2026-07-09,Closed weights,2026-10-30
+gpt-5-mini,GPT-5 mini,openai,api_only,proprietary,2025-08-07,GPT-5 mini,crosswalk,145.38,143.29,146.91,2025-08-07,Closed weights,2026-10-30
+gpt-5-nano,GPT-5 nano,openai,api_only,proprietary,2025-08-07,GPT-5 nano,crosswalk,139.22,134.95,141.26,2025-08-07,Closed weights,2026-10-30
+gpt-5-pro,GPT-5 Pro,openai,api_only,proprietary,2025-10-06,GPT-5 Pro,crosswalk,150.66,148.75,154.11,2025-10-07,Closed weights,2026-10-30
+gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,proprietary,2026-09-29,GPT-6.1 Sol,crosswalk,168.2,164.7,172.9,2026-09-29,Closed weights,2026-10-30
+gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,proprietary,2026-10-26,GPT-6.1 Terra,crosswalk,168.05,164.6,172.89,2026-10-26,Closed weights,2026-10-30
+gpt-6-astra,GPT-6 Astra,openai,api_only,proprietary,2026-09-04,GPT-6 Astra,crosswalk,168.92,165.27,173.93,2026-09-03,Closed weights,2026-10-30
+gpt-6-luna,gpt-6-luna,openai,api_only,proprietary,2026-09-22,GPT-6 Luna,crosswalk,156.79,154.32,159.65,2026-09-22,Closed weights,2026-10-30
+gpt-6-sol,gpt-6-sol,openai,api_only,proprietary,2026-09-22,GPT-6 Sol,crosswalk,163.64,160.92,167.12,2026-09-22,Closed weights,2026-10-30
+gpt-oss-120b,gpt-oss-120b,openai,open_weights,osi_approved,2025-08-05,gpt-oss-120b,crosswalk,139.79,135.22,142.42,2025-08-05,Open weights,2026-10-30
+gpt-oss-20b,gpt-oss-20b,openai,open_weights,osi_approved,2025-08-05,gpt-oss-20b,crosswalk,137.72,133.06,139.52,2025-08-05,Open weights,2026-10-30
+grok-3,Grok 3,xai,api_only,proprietary,2025-02-19,Grok 3,crosswalk,138.22,135.45,139.65,2025-04-09,Closed weights,2026-10-30
+grok-3-mini,Grok-3 mini,xai,api_only,proprietary,,Grok-3 mini,crosswalk,140.22,137.5,141.79,2025-06-24,Closed weights,2026-10-30
+grok-4,Grok 4,xai,api_only,proprietary,2025-07-09,Grok 4,crosswalk,146.27,144.33,147.9,2025-07-09,Closed weights,2026-10-30
+grok-4-20,Grok 4.20,xai,api_only,proprietary,2026-03-31,Grok 4.20,crosswalk,152.16,149.42,154.44,2026-02-17,Closed weights,2026-10-30
+grok-4-5,Grok 4.5,xai,api_only,proprietary,2026-07-08,Grok 4.5,crosswalk,154.27,152.63,156.48,2026-07-08,Closed weights,2026-10-30
+grok-4-6,Grok 4.6,xai,api_only,proprietary,2026-08-12,Grok 4.6,crosswalk,156.84,154.93,159.88,2026-08-12,Closed weights,2026-10-30
+grok-4-7,Grok 4.7,xai,api_only,proprietary,2026-09-21,Grok 4.7,crosswalk,154.4,152.65,156.97,2026-09-21,Closed weights,2026-10-30
+grok-4-fast,Grok 4 Fast,xai,api_only,proprietary,2025-09-20,Grok 4 Fast,crosswalk,144.12,141.77,146.07,2025-09-19,Closed weights,2026-10-30
+inkling,Inkling,thinking-machines,open_weights,osi_approved,2026-07-15,Inkling,crosswalk,148.43,145.54,150.5,2026-07-15,Open weights,2026-10-30
+inkling-small,Inkling-Small,thinking-machines,open_weights,osi_approved,2026-07-30,Inkling-Small,crosswalk,150.38,148.09,152.2,2026-07-15,Open weights,2026-10-30
+intellect-1,INTELLECT-1,prime-intellect,open_weights,osi_approved,2024-11-28,INTELLECT-1,name,100.46,90.39,106.16,2024-11-29,Other,2026-10-30
+internlm-20b,internlm-20b,shanghai-ai-lab,open_weights,osi_approved,2023-09-18,internlm-20b,name,111.87,104.01,117.02,2023-09-18,Closed weights,2026-10-30
+internlm-7b,internlm-7b,shanghai-ai-lab,open_weights,,2023-07-06,internlm-7b,name,102.5,91.53,108.5,2023-07-05,Closed weights,2026-10-30
+kimi-k2-5,Kimi K2.5,moonshot,open_weights,,2026-01-27,Kimi K2.5,crosswalk,148.1,146.34,149.48,2026-01-27,Open weights,2026-10-30
+kimi-k2-6,Kimi K2.6,moonshot,open_weights,,2026-04-20,Kimi K2.6,crosswalk,151.0,149.06,152.73,2026-04-20,Open weights,2026-10-30
+kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,,2026-06-12,Kimi K2.7 Code,crosswalk,150.12,147.93,151.86,2026-06-12,Open weights,2026-10-30
+kimi-k2-thinking,Kimi K2 Thinking,moonshot,open_weights,,2025-11-06,Kimi K2 Thinking,crosswalk,145.84,143.3,147.47,2025-11-06,Open weights,2026-10-30
+kimi-k3,Kimi K3,moonshot,open_weights,open_weights_restricted,2026-07-16,Kimi K3,crosswalk,157.86,155.29,160.95,2026-07-16,Open weights,2026-10-30
+llama-2-13b,Llama-2-13b-hf,meta,open_weights,open_weights_restricted,2023-07-13,Llama 2-13B,name,105.52,96.43,111.16,2023-07-18,Open weights,2026-10-30
+llama-2-70b,Llama 2 70B,meta,open_weights,open_weights_restricted,2023-11-29,Llama 2-70B,name,113.62,106.32,117.4,2023-07-18,Open weights,2026-10-30
+llama-2-7b,Llama-2-7b-hf,meta,open_weights,open_weights_restricted,2023-07-13,Llama 2-7B,name,98.52,88.47,105.43,2023-07-18,Open weights,2026-10-30
+llama-3-1-405b-instruct,Llama 3.1 405B Instruct,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-405B,crosswalk,128.77,124.47,130.74,2024-07-23,Open weights,2026-10-30
+llama-3-1-70b-instruct,Llama 3.1-70B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-70B,crosswalk,125.92,121.1,128.4,2024-07-23,Open weights,2026-10-30
+llama-3-1-8b-instruct,Llama 3.1-8B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3.1-8B,crosswalk,116.44,106.02,121.78,2024-07-23,Open weights,2026-10-30
+llama-3-3-70b-instruct,Llama 3.3 70B,meta,open_weights,open_weights_restricted,2024-12-06,Llama 3.3 70B,crosswalk,127.32,122.69,129.59,2024-12-06,Open weights,2026-10-30
+llama-3-70b-instruct,Llama 3 70B Instruct,meta,open_weights,open_weights_restricted,2024-04-18,Llama 3-70B,crosswalk,123.0,117.91,126.13,2024-04-18,Open weights,2026-10-30
+llama-3-8b-instruct,Llama 3-8B,meta,open_weights,open_weights_restricted,2024-07-23,Llama 3-8B,crosswalk,116.35,108.96,119.17,2024-04-18,Open weights,2026-10-30
+llama-4-maverick,Llama 4 Maverick,meta,open_weights,open_weights_restricted,2025-04-05,Llama 4 Maverick,crosswalk,132.22,128.12,134.13,2025-04-06,Open weights,2026-10-30
+llama-4-scout,Llama 4 Scout,meta,open_weights,,2025-04-05,Llama 4 Scout,crosswalk,129.63,124.91,131.31,2025-04-05,Open weights,2026-10-30
+minimax-m2-5,MiniMax-M2.5,minimax,open_weights,,2026-02-12,MiniMax-M2.5,crosswalk,146.63,140.98,147.84,2026-02-12,Open weights,2026-10-30
+minimax-m2-7,MiniMax-M2.7,minimax,open_weights,,2026-03-18,MiniMax-M2.7,crosswalk,145.82,138.37,148.03,2026-03-18,Open weights,2026-10-30
+minimax-m3,MiniMax-M3,minimax,open_weights,open_weights_restricted,2026-06-01,MiniMax-M3,crosswalk,146.84,142.27,149.95,2026-06-01,Open weights,2026-10-30
+ministral-3b,Ministral 3B,mistral,api_only,proprietary,2024-10-16,Ministral 3B,crosswalk,118.01,106.94,121.48,2024-10-16,Closed weights,2026-10-30
+mistral-7b-v0-3,Mistral-7B-v0.3,mistral,open_weights,osi_approved,2024-05-22,Mistral 7B v0.3,name,108.82,97.77,112.48,2024-05-27,Open weights,2026-10-30
+mistral-large,Mistral Large,mistral,api_only,proprietary,2024-02-26,Mistral Large,crosswalk,122.11,115.61,125.0,2024-02-26,Closed weights,2026-10-30
+mistral-large-4,Mistral Large 4,mistral,api_only,,2026-10-06,Mistral Large 4,crosswalk,150.48,147.08,153.2,2026-10-06,Other,2026-10-30
+mistral-medium-3,Mistral Medium 3,mistral,api_only,proprietary,2025-05-07,Mistral Medium 3,crosswalk,134.03,130.53,135.34,2025-05-07,Closed weights,2026-10-30
+mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,,2026-03-31,Mistral Medium 3.5,crosswalk,141.39,138.84,143.83,2026-04-28,Open weights,2026-10-30
+mistral-nemo,Mistral NeMo,mistral,open_weights,osi_approved,2024-07-18,Mistral NeMo,crosswalk,118.62,111.89,121.72,2024-07-18,Open weights,2026-10-30
+mixtral-8x22b-instruct,Mixtral 8x22B,mistral,open_weights,osi_approved,2024-04-17,Mixtral 8x22B,crosswalk,122.02,115.73,124.59,2024-04-17,Open weights,2026-10-30
+mixtral-8x7b-instruct,Mixtral 8x7B Instruct,mistral,open_weights,osi_approved,,Mixtral 8x7B,crosswalk,118.41,110.81,121.16,2023-12-11,Open weights,2026-10-30
+muse-spark-1-1,Muse Spark 1.1,meta,api_only,proprietary,2026-04-08,Muse Spark 1.1,crosswalk,154.05,151.41,156.34,2026-07-09,Closed weights,2026-10-30
+muse-spark-1-2,Muse Spark 1.2,meta,api_only,proprietary,2026-08-05,Muse Spark 1.2,crosswalk,155.04,152.86,157.37,2026-08-05,Closed weights,2026-10-30
+muse-spark-1-3,muse-spark-1.3,meta,api_only,proprietary,2026-09-02,Muse Spark 1.3,crosswalk,157.2,155.21,159.55,2026-09-02,Closed weights,2026-10-30
+muse-spark-open,Muse Spark Open,meta,open_weights,open_weights_restricted,2026-10-15,Muse Spark Open,crosswalk,154.94,153.1,157.11,2026-10-15,Open weights,2026-10-30
+muse-wonder,muse-wonder,meta,api_only,proprietary,2026-10-12,Muse Wonder,crosswalk,161.84,159.25,164.88,2026-10-12,Closed weights,2026-10-30
+nemotron-3-ultra,Nemotron 3 Ultra,nvidia,open_weights,,2026-06-04,Nemotron 3 Ultra,crosswalk,145.94,143.52,148.16,2026-06-04,Open weights,2026-10-30
+o1-preview,o1-preview,openai,api_only,proprietary,,o1-preview,crosswalk,134.58,131.12,137.8,2024-09-12,Closed weights,2026-10-30
+o3-mini,o3-mini,openai,api_only,proprietary,2025-01-31,o3-mini,crosswalk,140.22,137.08,141.45,2025-01-31,Closed weights,2026-10-30
+o3-pro,o3-pro,openai,api_only,proprietary,2025-06-10,o3-pro,crosswalk,147.37,145.73,150.05,2025-06-10,Closed weights,2026-10-30
+o4-mini,o4-mini,openai,api_only,proprietary,2025-04-16,o4-mini,crosswalk,145.5,142.9,147.15,2025-04-16,Closed weights,2026-10-30
+openai-o1,o1,openai,api_only,proprietary,2024-12-05,o1,crosswalk,141.74,139.87,142.82,2024-12-17,Closed weights,2026-10-30
+openai-o3,o3,openai,api_only,proprietary,2025-04-16,o3,crosswalk,146.76,144.85,148.43,2025-04-16,Closed weights,2026-10-30
+phi-1-5,phi-1_5,microsoft,open_weights,osi_approved,2023-09-10,Phi-1.5,name,90.95,68.58,100.27,2023-09-11,Open weights,2026-10-30
+phi-2,phi-2,microsoft,open_weights,osi_approved,2023-12-13,Phi-2,name,107.68,86.3,113.16,2023-12-12,Open weights,2026-10-30
+phi-4,Phi-4,microsoft,open_weights,osi_approved,2024-12-11,Phi-4,crosswalk,130.48,125.27,132.18,2024-12-12,Open weights,2026-10-30
+qwen2-5-72b-instruct,Qwen2.5 72B Instruct,alibaba,open_weights,open_weights_restricted,2024-09-19,Qwen2.5-72B,crosswalk,128.97,123.84,130.61,2024-09-19,Open weights,2026-10-30
+qwen2-5-7b-instruct,Qwen2.5-7B,alibaba,open_weights,osi_approved,2024-09-18,Qwen2.5-7B,crosswalk,118.52,111.06,121.47,2024-09-19,Open weights,2026-10-30
+qwen2-5-coder-7b-instruct,Qwen2.5-Coder (7B),alibaba,open_weights,osi_approved,2024-09-17,Qwen2.5-Coder (7B),crosswalk,112.96,103.1,118.94,2024-09-18,Open weights,2026-10-30
+qwen3-14b,Qwen3-14B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-14B,crosswalk,138.17,133.45,139.86,2025-04-29,Open weights,2026-10-30
+qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-235B-A22B,crosswalk,139.17,135.3,140.64,2025-04-28,Open weights,2026-10-30
+qwen3-30b-a3b,Qwen3-30B-A3B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-30B-A3B,crosswalk,136.12,130.69,138.49,2025-04-29,Open weights,2026-10-30
+qwen3-32b,Qwen3-32B,alibaba,open_weights,osi_approved,2025-04-27,Qwen3-32B,crosswalk,138.44,135.15,140.16,2025-04-29,Open weights,2026-10-30
+qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-35B-A3B,crosswalk,142.52,140.42,145.06,2026-02-24,Open weights,2026-10-30
+qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,,2026-02-15,Qwen3.5 397B-A17B,crosswalk,146.78,145.13,148.7,2026-02-13,Open weights,2026-10-30
+qwen3-5-9b,Qwen3.5-9B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-9B,crosswalk,139.34,136.24,141.06,2026-02-24,Open weights,2026-10-30
+qwen3-6-27b,Qwen3.6 27B,alibaba,open_weights,osi_approved,2026-04-22,Qwen3.6 27B,crosswalk,146.26,144.3,147.56,2026-04-22,Open weights,2026-10-30
+qwen3-6-plus,qwen3.6-plus,alibaba,api_only,proprietary,2026-04-02,Qwen 3.6 Plus,crosswalk,147.32,144.91,149.23,2026-03-31,Closed weights,2026-10-30
+qwen3-7-flash,Qwen3.7 Flash,alibaba,api_only,proprietary,2026-07-15,Qwen3.7 Flash,crosswalk,144.09,141.93,146.16,2026-07-27,Closed weights,2026-10-30
+qwen3-7-max,Qwen3.7-Max,alibaba,api_only,proprietary,2026-05-21,Qwen3.7-Max,crosswalk,154.08,152.35,156.69,2026-05-19,Closed weights,2026-10-30
+qwen3-7-plus,qwen3.7-plus,alibaba,api_only,proprietary,2026-06-02,Qwen3.7-Plus,crosswalk,147.04,145.23,148.48,2026-06-02,Closed weights,2026-10-30
+qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,osi_approved,2026-08-14,Qwen 3.8 27B,crosswalk,151.71,149.93,153.51,2026-08-14,Open weights,2026-10-30
+qwen3-8-max,qwen3.8-max,alibaba,api_only,proprietary,2026-08-03,Qwen 3.8 Max,crosswalk,157.4,155.26,159.78,2026-08-02,Closed weights,2026-10-30
+qwen3-8b,Qwen3-8B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-8B,crosswalk,136.07,130.28,138.04,2025-04-28,Open weights,2026-10-30
+qwen3-max,Qwen3-Max,alibaba,api_only,proprietary,2025-09-23,Qwen3-Max,crosswalk,142.34,139.93,144.52,2025-09-24,Closed weights,2026-10-30
+qwq-32b,QwQ-32B,alibaba,open_weights,,2025-03-05,QwQ-32B,crosswalk,137.52,132.33,141.45,2025-03-05,Open weights,2026-10-30
+stablelm-tuned-alpha-7b,stablelm-tuned-alpha-7b,stability,open_weights,open_weights_restricted,2023-04-19,stablelm-tuned-alpha-7b,name,54.59,30.25,73.02,2023-04-19,Closed weights,2026-10-30
+yi-34b,Yi-34B,01ai,open_weights,open_weights_restricted,2023-11-02,Yi-34B,name,117.3,110.21,120.55,2023-11-02,Open weights,2026-10-30
+yi-6b,Yi-6B,01ai,open_weights,osi_approved,2023-11-01,Yi 6B,name,104.43,94.58,110.34,2023-11-22,Open weights,2026-10-30
+yi-9b,Yi-9B,01ai,open_weights,osi_approved,2024-03-01,Yi-9B,name,107.32,97.3,114.87,2024-03-01,Closed weights,2026-10-30

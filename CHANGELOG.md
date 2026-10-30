@@ -688,3 +688,7 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `gpt-6-1-terra-announced-1` 2026-10-26 inferred (vendor_blog; evidence: "We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more na)
 - `gpt-6-1-terra-consumer_rollout-1` 2026-10-26 inferred (vendor_blog; evidence: "Starting today, GPT-6.1 Terra is available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex.")
 - `gpt-6-1-terra-system_card-1` 2026-10-26 inferred (vendor_blog; evidence: "More detail is available in the system card")
+
+## 2026-10-30
+
+- `mistral-large-4-price_changed-1` 2026-10-29 inferred (vendor_blog; evidence: "Starting today, Mistral Large 4 is priced at $0.70 input / M, $0.07 cached input / M, and $2.10 output / M tokens.")

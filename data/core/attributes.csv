@@ -267,6 +267,7 @@ mercury-2,true,,,,,,128000,50000,text,text,,true,,,0.25,0.75,0.025,2026-10-03,ht
 mercury-2-5,true,,,,,,260000,65536,text,text,2025-11-01,true,,,0.04,0.15,0.004,2026-10-03,https://models.dev/api.json
 mercury-3,true,,,,,,1000000,131072,text,text,,true,,,0.1,0.35,0.01,2026-10-20,https://models.dev/api.json
 mercury-coder-small,false,none,,,,,32768,16384,text,text,,false,,,0.25,1,0.125,2026-10-03,https://models.dev/api.json
+mercury-edit-2,false,none,,,,,32000,8192,text,text,,false,,,0.25,0.75,0.025,2026-10-30,https://models.dev/api.json
 mimo-v2-5,true,,,,,,1048576,131072,text|image|audio|video,text,2024-12,true,,,0.14,0.28,0.0028,2026-09-01,https://models.dev/api.json
 mimo-v2-5-pro,true,,,,,,1048576,131072,text,text,2024-12,true,,,1.74,3.48,0.0145,2026-09-01,https://models.dev/api.json
 mimo-v2-6-flash,true,,,,,,1048576,131072,text|image|audio|video,text,2026-09-22,true,,,0.16,0.32,0.004,2026-09-22,https://models.dev/api.json
@@ -296,6 +297,7 @@ mistral-large,,none,,,,,32768,,text,text,,true,true,,,,,,https://mistral.ai/news
 mistral-large-2407,false,none,,,,,131072,104857,text|pdf,text,,true,,,2,6,0.2,2026-09-01,https://models.dev/api.json
 mistral-large-2512,false,none,,,,,262144,262144,text|image,text,2024-11,true,,,,,,2026-09-01,https://models.dev/api.json
 mistral-large-3,false,none,,,,,256000,131072,text|image,text,2024-11,true,,,0.5,1.5,0.5,2026-09-01,https://models.dev/api.json
+mistral-large-4,true,,,,,,524288,262144,text|image,text,,true,,,1.36,4.18,0.14,2026-10-30,https://models.dev/api.json
 mistral-large-4-0,true,,,,,,524288,262144,text|image,text,,true,,,1.36,4.18,0.14,2026-10-07,https://models.dev/api.json
 mistral-medium,false,none,,,,,128000,64000,text|image,text,2024-10,true,,,0.4,2,,2026-09-01,https://models.dev/api.json
 mistral-medium-3,false,none,,,,,131072,104857,text|image|pdf,text,,true,,,0.4,2,0.04,2026-09-01,https://models.dev/api.json

@@ -1,0 +1,8 @@
+{
+  "models.json": {
+    "bytes": 24505,
+    "fetched_at": "2026-10-30T13:00:13+00:00",
+    "sha256": "ae99f84b21c418e285ff78cd651a1a3e421817ae85e1c23c73a3f64daf2c4997",
+    "url": "https://generativelanguage.googleapis.com/v1beta/models"
+  }
+}
