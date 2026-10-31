@@ -524,7 +524,7 @@ qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,Qwen3,open_weights,2025-
 qwen3-vl-2b-instruct,Qwen3-VL-2B-Instruct,Qwen3,open_weights,2025-10-19,2025-10-19,2026-04-23,2604.22062,186
 qwen3-vl-30b-a3b-instruct,Qwen3-VL-30B-A3B-Instruct,Qwen3,open_weights,2025-10-04,2025-10-04,2026-04-09,2606.15693,187
 qwen3-vl-30b-a3b-thinking,qwen3-vl-30b-a3b-thinking,Qwen3,api_only,,2025-10-06,2026-01-29,2601.21821,115
-qwen3-vl-32b-instruct,Qwen3-VL-32B-Instruct,Qwen3,api_only,,2025-10-23,2026-01-29,2601.22055,98
+qwen3-vl-32b-instruct,Qwen3-VL-32B-Instruct,Qwen3,open_weights,2025-10-21,2025-10-21,2026-01-29,2601.22055,100
 qwen3-vl-4b-instruct,Qwen3-VL-4B-Instruct,Qwen3,open_weights,2025-10-11,2025-10-11,2026-03-06,2603.06024,146
 qwen3-vl-8b-instruct,qwen3-vl-8b-instruct,Qwen3,open_weights,2025-10-11,2025-10-11,2026-02-09,2602.10146,121
 qwen3-vl-8b-thinking,qwen3-vl-8b-thinking,Qwen3,api_only,,2025-10-14,2026-01-29,2601.21821,107

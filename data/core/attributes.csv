@@ -422,8 +422,10 @@ qwen3-next-80b-a3b-instruct,false,none,,,,,262144,16384,text,text,2024-12,true,,
 qwen3-next-80b-a3b-thinking,true,,,,,,131072,32768,text,text,2025-04,true,,,0.5,6,,2026-09-01,https://models.dev/api.json
 qwen3-omni-30b-a3b-instruct,false,none,,,,,65536,16384,text|video|audio|image,text|audio,2024-04,true,,,0.25,0.97,,2026-09-01,https://models.dev/api.json
 qwen3-omni-flash,true,,,,,,65536,16384,text|image|audio|video,text|audio,2024-04,true,,,0.43,1.66,,2026-09-01,https://models.dev/api.json
+qwen3-vl-235b-a22b,true,,,,,,131072,32768,text|image,text,2025-04,true,,,0.7,2.8,,2026-10-31,https://models.dev/api.json
 qwen3-vl-235b-a22b-instruct,false,none,,,,,262144,8192,text|image,text,,true,,,0.2,0.88,0.11,2026-09-01,https://models.dev/api.json
 qwen3-vl-235b-a22b-thinking,true,,,,,,131072,8192,text|image,text,,true,,,0.98,3.95,,2026-09-01,https://models.dev/api.json
+qwen3-vl-30b-a3b,true,,,,,,131072,32768,text|image,text,2025-04,true,,,0.2,0.8,,2026-10-31,https://models.dev/api.json
 qwen3-vl-30b-a3b-instruct,false,none,,,,,256000,32768,text|image,text,,true,,,0.15,0.55,,2026-09-01,https://models.dev/api.json
 qwen3-vl-30b-a3b-thinking,true,,,,,,131072,32768,text|image,text,,true,,,0.2,2.4,,2026-09-01,https://models.dev/api.json
 qwen3-vl-32b-instruct,false,none,,,,,262000,262000,text|image,text,,true,,,0.2,0.6,,2026-09-01,https://models.dev/api.json

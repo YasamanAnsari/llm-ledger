@@ -72,3 +72,5 @@ date,reason,count
 2026-10-30,order_violation,1
 2026-10-30,third_party_claim,1
 2026-10-30,validation_failed,1
+2026-10-31,community_lead,11
+2026-10-31,no_dated_event,10

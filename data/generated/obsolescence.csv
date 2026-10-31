@@ -333,7 +333,7 @@ qwen3-next-80b-a3b-instruct,Qwen3-Next-80B-A3B,alibaba,api_only,2025-09-11,2025-
 qwen3-next-80b-a3b-thinking,qwen3-next-80b-a3b-thinking,alibaba,open_weights,2025-09-11,2025-09-17,33,,2025-09-17,6,2025-09-29,2026-01-29,2026-01-30,141,2026-10-28
 qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,2025-09-23,2025-09-30,2,2026-05-07,2026-05-12,231,2025-10-04,2026-03-08,2026-03-09,167,
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,2025-09-23,2025-09-30,9,2026-03-13,2026-03-16,174,2026-03-06,2026-03-07,2026-03-08,166,2026-10-09
-qwen3-vl-32b-instruct,Qwen3-VL-32B-Instruct,alibaba,api_only,2025-10-23,,,,,,2026-05-14,2026-05-14,2026-05-15,204,2026-10-09
+qwen3-vl-32b-instruct,Qwen3-VL-32B-Instruct,alibaba,open_weights,2025-10-21,,,,,,2026-05-14,2026-05-14,2026-05-15,206,2026-10-09
 qwen3-vl-8b-instruct,qwen3-vl-8b-instruct,alibaba,open_weights,2025-10-11,,,,,,2025-12-04,2026-03-29,2026-03-30,170,
 qwen3-vl-8b-thinking,qwen3-vl-8b-thinking,alibaba,api_only,2025-10-14,,,,,,,,,,2026-10-09
 qwq-32b,QwQ-32B,alibaba,open_weights,2025-03-05,2025-03-15,11,2025-07-07,2025-07-15,132,2025-03-06,2025-09-24,2025-09-25,204,
