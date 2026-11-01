@@ -20927,8 +20927,8 @@ llama-4-scout,Llama 4,2512.23024,v1,2025-12-28,Llama 4 Scout,model,abstract
 llama-4-scout-17b-16e-instruct,Llama-4-16E,2512.23028,v1,2025-12-28,Llama-4-Scout-17B-16E-Instruct,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2512.23028,v1,2025-12-28,Qwen2.5-VL-7B-Instruct,model,abstract
 ,Qwen3,2512.23029,v1,2025-12-28,Qwen3,family,abstract
-,Qwen3,2512.23044,v3,2026-10-13,Qwen3,family,abstract
 gemini-3-1-pro,Gemini 3.1,2512.23044,v3,2026-10-13,Gemini-3.1-Pro,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2512.23044,v3,2026-10-13,Qwen3-VL-8B,model,abstract
 deepseek-r1,DeepSeek-R1,2512.23128,v3,2026-07-02,DeepSeek-R1,model,abstract
 gpt-5,GPT-5,2512.23128,v3,2026-07-02,GPT-5,model,abstract
 deepseek-r1,DeepSeek-R1,2512.23165,v2,2025-12-30,DeepSeek-R1,model,abstract
@@ -21422,6 +21422,7 @@ qwen3-32b,Qwen3,2601.07891,v2,2026-02-03,Qwen3-32B,model,abstract
 qwen3-8b,Qwen3,2601.07891,v2,2026-02-03,Qwen3-8B,model,abstract
 ,Llama-3.2,2601.07892,v1,2026-01-12,LLaMA-3.2,family,abstract
 ,Qwen3,2601.08010,v4,2026-10-13,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2601.08010,v4,2026-10-13,Qwen3-VL-8B,model,abstract
 ,Gemma 3,2601.08017,v1,2026-01-12,Gemma 3,family,abstract
 ,Qwen3,2601.08026,v5,2026-09-05,Qwen3,family,abstract
 gpt-3-5,GPT-3,2601.08128,v1,2026-01-13,GPT-3.5,model,abstract
@@ -26639,7 +26640,7 @@ mistral-7b-instruct-v0-3,Mistral-v0.3,2605.08137,v1,2026-05-02,Mistral-7B-Instru
 phi-3-5-mini-instruct,Phi-3.5,2605.08137,v1,2026-05-02,Phi-3.5-mini-instruct,model,abstract
 ,gemma-2,2605.08149,v1,2026-05-03,Gemma-2,family,abstract
 qwen3-235b-a22b,Qwen3,2605.08151,v2,2026-05-12,Qwen3-235B-A22B,model,abstract
-,Qwen3,2605.08158,v3,2026-10-15,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2605.08158,v3,2026-10-15,Qwen3-VL-8B,model,abstract
 deepseek-v3,DeepSeek-V3,2605.08171,v2,2026-06-08,DeepSeek-V3,model,abstract
 ,Llama-2,2605.08177,v1,2026-05-05,LLaMA2,family,abstract
 llama-3-8b-instruct,Llama 3,2605.08177,v1,2026-05-05,LLaMA3-8B,model,abstract
@@ -27020,6 +27021,7 @@ deepseek-r1-distill-qwen-7b,DeepSeek-R1-Distill-Qwen,2605.13165,v2,2026-09-20,De
 qwen3-4b,Qwen3,2605.13255,v1,2026-05-13,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2605.13255,v1,2026-05-13,Qwen3-8B,model,abstract
 ,Qwen3,2605.13322,v3,2026-10-28,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2605.13322,v3,2026-10-28,Qwen3-VL-8B,model,abstract
 ,Olmo-3,2605.13329,v1,2026-05-13,OLMo-3,family,abstract
 apertus-8b-instruct,Apertus,2605.13329,v1,2026-05-13,Apertus-8B,model,abstract
 ,Qwen3.5,2605.13334,v1,2026-05-13,Qwen3.5,family,abstract
@@ -27501,6 +27503,7 @@ qwen3-8b,Qwen3,2605.20643,v1,2026-05-20,Qwen3-8B,model,abstract
 claude-opus-4-5,Claude 4.5,2605.20668,v1,2026-05-20,Claude Opus 4.5,model,abstract
 gpt-5-2,GPT-5,2605.20668,v1,2026-05-20,GPT-5.2,model,abstract
 ,Qwen3,2605.20682,v3,2026-10-20,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2605.20682,v3,2026-10-20,Qwen3-VL-8B,model,abstract
 gpt-4o-mini,GPT-4o,2605.20704,v1,2026-05-20,GPT-4o-mini,model,abstract
 gemma-2-9b-it,gemma-2,2605.20722,v1,2026-05-20,Gemma-2-9B,model,abstract
 llama-3-8b-instruct,Llama 3,2605.20722,v1,2026-05-20,Llama-3-8B,model,abstract
@@ -28387,8 +28390,8 @@ qwen2-5-7b-instruct,Qwen2.5,2606.01682,v1,2026-06-01,Qwen2.5-7B,model,abstract
 qwen3-4b,Qwen3,2606.01779,v1,2026-06-01,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2606.01779,v1,2026-06-01,Qwen3-8B,model,abstract
 ui-tars-1-5-7b,ui-tars-1.5,2606.01790,v1,2026-06-01,UI-TARS-1.5-7B,model,abstract
-,Qwen3,2606.01810,v5,2026-10-19,Qwen3,family,abstract
 gpt-6-astra,GPT-6 Astra,2606.01810,v5,2026-10-19,GPT-6-astra,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2606.01810,v5,2026-10-19,Qwen3-VL-8B,model,abstract
 ,OLMo-2,2606.01811,v1,2026-06-01,OLMo-2,family,abstract
 qwen3-4b,Qwen3,2606.01813,v1,2026-06-01,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2606.01813,v1,2026-06-01,Qwen3-8B,model,abstract
@@ -28638,7 +28641,7 @@ qwen3-4b,Qwen3,2606.05682,v2,2026-06-05,Qwen3-4B,model,abstract
 gpt-5-5,GPT-5.5,2606.05729,v1,2026-06-04,GPT-5.5,model,abstract
 gpt-4o,GPT-4o,2606.05744,v1,2026-06-04,GPT-4o,model,abstract
 qwen3-6-plus,qwen3.6,2606.05744,v1,2026-06-04,Qwen3.6-Plus,model,abstract
-,Qwen3,2606.05769,v2,2026-10-15,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2606.05769,v2,2026-10-15,Qwen3-VL-8B,model,abstract
 ,Llama-3.1,2606.05781,v2,2026-06-06,LLaMA 3.1,family,abstract
 deepseek-r1,DeepSeek-R1,2606.05792,v1,2026-06-04,DeepSeek r1,model,abstract
 qwen3-8b,Qwen3,2606.05816,v2,2026-06-05,Qwen3-8B,model,abstract
@@ -28701,7 +28704,7 @@ o3-mini,o3,2606.07157,v4,2026-08-04,o3-mini,model,abstract
 gemini-3-5-flash,Gemini 3.5,2606.07167,v2,2026-09-11,Gemini-3.5-Flash,model,abstract
 ,Qwen2.5,2606.07175,v1,2026-06-05,Qwen2.5,family,abstract
 ,Qwen3,2606.07175,v1,2026-06-05,Qwen3,family,abstract
-,Qwen3,2606.07235,v3,2026-10-02,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2606.07235,v3,2026-10-02,Qwen3-VL-32B,model,abstract
 ,Llama 3,2606.07237,v1,2026-06-05,Llama3,family,abstract
 gpt-3-5,GPT-3,2606.07237,v1,2026-06-05,GPT-3.5,model,abstract
 ,Gemma 4,2606.07342,v1,2026-06-05,Gemma-4,family,abstract
@@ -31166,6 +31169,7 @@ gpt-5-6-sol,GPT-5.6 Sol,2607.21518,v1,2026-07-23,gpt-5.6-sol,model,abstract
 ,Qwen3,2607.21556,v2,2026-10-15,Qwen3,family,abstract
 ,Qwen3.5,2607.21556,v2,2026-10-15,Qwen3.5,family,abstract
 qwen3-5-9b,Qwen3.5,2607.21556,v2,2026-10-15,Qwen3.5-9B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2607.21556,v2,2026-10-15,Qwen3-VL-8B,model,abstract
 gpt-4o-mini,GPT-4o,2607.21596,v2,2026-08-20,GPT-4o-mini,model,abstract
 ,SmolLM2,2607.21602,v1,2026-05-11,SmolLM2,family,abstract
 ,Qwen3,2607.21617,v2,2026-09-02,Qwen3,family,abstract
@@ -31960,9 +31964,9 @@ gpt-5-4,GPT-5.4,2608.05519,v1,2026-08-06,GPT-5.4,model,abstract
 ,Qwen2.5,2608.05541,v1,2026-08-06,Qwen2.5,family,abstract
 deepseek-r1,DeepSeek-R1,2608.05541,v1,2026-08-06,DeepSeek-R1,model,abstract
 ,Qwen3,2608.05569,v1,2026-08-06,Qwen3,family,abstract
-,Qwen3,2608.05587,v2,2026-10-15,Qwen3,family,abstract
 claude-haiku-4-5,Claude 4.5,2608.05587,v2,2026-10-15,Claude Haiku 4.5,model,abstract
 gpt-5-2,GPT-5,2608.05587,v2,2026-10-15,GPT-5.2,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2608.05587,v2,2026-10-15,Qwen3-VL-8B,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2608.05616,v1,2026-08-06,Qwen2.5-VL-7B,model,abstract
 claude-opus-4-7,Claude 4.7,2608.05628,v1,2026-08-06,Claude Opus 4.7,model,abstract
 gpt-5-3-codex,GPT-5.3 Codex,2608.05628,v1,2026-08-06,GPT-5.3-Codex,model,abstract
@@ -32423,7 +32427,7 @@ gpt-5,GPT-5,2608.14065,v2,2026-08-17,GPT-5,model,abstract
 ,Qwen3,2608.14144,v1,2026-08-14,Qwen3,family,abstract
 gpt-5-4,GPT-5.4,2608.14144,v1,2026-08-14,GPT-5.4,model,abstract
 qwen3-5-4b,Qwen3.5,2608.14144,v1,2026-08-14,Qwen3.5-4B,model,abstract
-,Qwen3,2608.14148,v3,2026-10-17,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2608.14148,v3,2026-10-17,Qwen3-VL-8B,model,abstract
 qwen3-omni-30b-a3b-instruct,Qwen3-Omni,2608.14150,v1,2026-08-14,Qwen3-Omni-30B-A3B,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2608.14191,v1,2026-08-14,Llama-3.1-8B-Instruct,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2608.14191,v1,2026-08-14,Qwen-2.5-7B-Instruct,model,abstract
@@ -33775,6 +33779,7 @@ qwen3-5-4b,Qwen3.5,2609.05871,v1,2026-09-05,Qwen3.5-4B,model,abstract
 gemma-4-e4b-it,Gemma 4 E4B,2609.05880,v1,2026-09-05,Gemma-4-E4B,model,abstract
 ,Qwen3,2609.05880,v2,2026-10-29,Qwen3,family,abstract
 gemma-4-e4b-it,Gemma 4 E4B,2609.05880,v2,2026-10-29,Gemma-4-E4B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2609.05880,v2,2026-10-29,Qwen3-VL-8B,model,abstract
 ,Qwen2.5,2609.05881,v2,2026-10-25,Qwen2.5,family,abstract
 ,Qwen2.5,2609.05881,v3,2026-10-29,Qwen2.5,family,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2609.05889,v2,2026-10-17,Qwen2.5-VL-7B,model,abstract
@@ -34773,7 +34778,7 @@ gpt-5,GPT-5,2609.25755,v1,2026-09-22,GPT-5,model,abstract
 mistral-7b,Mistral 7B,2609.25755,v1,2026-09-22,Mistral-7B,model,abstract
 ,Llama-3.1,2609.25760,v1,2026-09-22,Llama~3.1,family,abstract
 qwen3-5-9b,Qwen3.5,2609.25760,v1,2026-09-22,Qwen~3.5 9B,model,abstract
-,Qwen3,2609.25773,v2,2026-10-14,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2609.25773,v2,2026-10-14,Qwen3-VL-8B,model,abstract
 qwen2-5-0-5b-instruct,Qwen2.5,2609.26035,v1,2026-09-22,Qwen2.5-0.5B-Instruct,model,abstract
 ,Qwen3,2609.26093,v1,2026-08-04,Qwen3,family,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2609.26097,v1,2026-08-04,Qwen2.5-VL-7B,model,abstract
@@ -35643,6 +35648,7 @@ gemma-2-9b-it,gemma-2,2609.38389,v1,2026-09-29,Gemma-2-9B-it,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2609.38389,v1,2026-09-29,Llama-3.1-8B-Instruct,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2609.38389,v1,2026-09-29,Qwen2.5-7B-Instruct,model,abstract
 ,Qwen3,2609.38391,v1,2026-09-29,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2609.38391,v1,2026-09-29,Qwen3-VL-32B,model,abstract
 gpt-5-2,GPT-5,2609.38392,v1,2026-09-29,GPT-5.2,model,abstract
 ,gemma-2,2609.38406,v1,2026-09-29,Gemma-2,family,abstract
 llama-3-3-70b-instruct,Llama 3.3,2609.38406,v1,2026-09-29,LLaMA-3.3-70B,model,abstract
@@ -35812,7 +35818,7 @@ qwen3-5-9b,Qwen3.5,2609.40340,v1,2026-09-30,Qwen3.5-9B,model,abstract
 cosmos3-nano,Cosmos3,2609.40358,v1,2026-09-30,Cosmos3-Nano,model,abstract
 qwen3-1-7b-base,Qwen3,2609.40360,v1,2026-09-30,Qwen3-1.7B-Base,model,abstract
 qwen3-4b-base,Qwen3,2609.40360,v1,2026-09-30,Qwen3-4B-Base,model,abstract
-,Qwen3,2609.40361,v1,2026-09-30,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2609.40361,v1,2026-09-30,Qwen3-VL-8B,model,abstract
 deepseek-r1,DeepSeek-R1,2610.00007,v1,2026-07-09,DeepSeek-R1,model,abstract
 qwen3-0-6b,Qwen3,2610.00007,v1,2026-07-09,Qwen3-0.6B,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.00024,v1,2026-09-01,Qwen2.5-VL-7B,model,abstract
@@ -35903,7 +35909,7 @@ gpt-oss-120b,gpt-oss,2610.01046,v1,2026-10-01,GPT-OSS-120B,model,abstract
 gpt-5-6-luna,GPT-5.6 Luna,2610.01079,v1,2026-10-01,GPT-5.6 Luna,model,abstract
 claude-opus-5-5,claude-5-5,2610.01110,v2,2026-10-06,Claude Opus 5.5,model,abstract
 ,OLMo-2,2610.01165,v1,2026-10-01,OLMo-2,family,abstract
-,Qwen3,2610.01166,v2,2026-10-05,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.01166,v2,2026-10-05,Qwen3-VL-8B,model,abstract
 qwen3-5-35b-a3b,Qwen3.5,2610.01215,v1,2026-10-01,Qwen3.5-35B-A3B,model,abstract
 gpt-4-1-nano,GPT-4.1,2610.01218,v1,2026-10-01,gpt-4.1-nano,model,abstract
 gpt-4o,GPT-4o,2610.01218,v1,2026-10-01,gpt-4o,model,abstract
@@ -36027,7 +36033,7 @@ qwen3-4b,Qwen3,2610.03063,v1,2026-10-02,Qwen3-4B,model,abstract
 claude-opus-5-5,claude-5-5,2610.03080,v1,2026-10-02,Claude Opus 5.5,model,abstract
 qwen3-vl-8b-instruct,Qwen3,2610.03099,v1,2026-10-02,Qwen3-VL-8B-Instruct,model,abstract
 mistral-7b,Mistral 7B,2610.03110,v1,2026-10-02,Mistral-7B,model,abstract
-,Qwen3,2610.03123,v1,2026-10-02,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.03123,v1,2026-10-02,Qwen3-VL-8B,model,abstract
 ,GLM-4,2610.03125,v1,2026-10-02,GLM-4,family,abstract
 qwen2-5-1-5b-instruct,Qwen2.5,2610.03135,v1,2026-10-02,Qwen2.5-1.5B-Instruct,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.03141,v1,2026-10-02,Qwen2.5-VL-7B-Instruct,model,abstract
@@ -36058,9 +36064,9 @@ gpt-5-6-terra,GPT-5.6 Terra,2610.03675,v1,2026-10-02,GPT-5.6 Terra,model,abstrac
 gpt-5-6-sol,GPT-5.6 Sol,2610.03695,v1,2026-10-02,GPT-5.6-Sol,model,abstract
 ,Qwen3,2610.03741,v1,2026-09-22,Qwen3,family,abstract
 qwen3-30b-a3b-instruct-2507,Qwen3,2610.03741,v1,2026-09-22,Qwen3-30B-A3B-Instruct-2507,model,abstract
-,Qwen3,2610.03792,v2,2026-10-21,Qwen3,family,abstract
 gemma-3-12b-it,Gemma 3,2610.03792,v2,2026-10-21,Gemma-3-12B,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.03792,v2,2026-10-21,Qwen2.5-VL-7B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.03792,v2,2026-10-21,Qwen3-VL-8B,model,abstract
 ,Qwen3,2610.03839,v1,2026-10-02,Qwen3,family,abstract
 qwen3-8b,Qwen3,2610.03839,v1,2026-10-02,Qwen3-8B,model,abstract
 claude-opus-4-6,Claude 4.6,2610.03971,v1,2026-10-02,Claude Opus 4.6,model,abstract
@@ -36081,7 +36087,7 @@ gemini-3-5-flash,Gemini 3.5,2610.04137,v1,2026-10-02,Gemini 3.5 Flash,model,abst
 claude-sonnet-4-5,Claude 4,2610.04195,v1,2026-10-03,Claude Sonnet~4.5,model,abstract
 ,Gemma 4,2610.04206,v2,2026-10-06,Gemma-4,family,abstract
 qwen3-7-plus,Qwen3.7,2610.04215,v1,2026-10-03,Qwen3.7-Plus,model,abstract
-,Qwen3,2610.04225,v1,2026-10-03,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.04225,v1,2026-10-03,Qwen3-VL-8B,model,abstract
 gemma-3-27b-it,Gemma 3,2610.04246,v1,2026-10-03,Gemma-3-27B,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2610.04269,v1,2026-10-03,Llama-3.1-8B-Instruct,model,abstract
 qwen3-8b,Qwen3,2610.04269,v1,2026-10-03,Qwen3-8B,model,abstract
@@ -36097,7 +36103,7 @@ llama-4-maverick,Llama 4,2610.04401,v1,2026-10-03,Llama 4 Maverick,model,abstrac
 gemma-4-31b-it,Gemma 4,2610.04429,v1,2026-10-03,gemma-4-31B-it,model,abstract
 gpt-5-4,GPT-5.4,2610.04429,v1,2026-10-03,gpt-5.4,model,abstract
 claude-opus-5,Claude 5,2610.04432,v3,2026-10-09,Claude Opus 5,model,abstract
-,Qwen3,2610.04469,v1,2026-10-03,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.04469,v1,2026-10-03,Qwen3-VL-8B,model,abstract
 deepseek-v2-lite,DeepSeek-V2,2610.04473,v1,2026-10-03,DeepSeek-V2-Lite,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2610.04473,v1,2026-10-03,Qwen2.5-7B,model,abstract
 ,SmolLM3,2610.04518,v1,2026-10-03,SmolLM3,family,abstract
@@ -36164,11 +36170,11 @@ qwen3-14b,Qwen3,2610.05533,v2,2026-10-24,Qwen3-14B,model,abstract
 ,Olmo-3,2610.05564,v1,2026-10-04,OLMo 3,family,abstract
 ,Qwen3,2610.05564,v1,2026-10-04,Qwen3,family,abstract
 deepseek-r1-distill-qwen-14b,DeepSeek-R1-Distill-Qwen,2610.05584,v1,2026-10-04,DeepSeek-R1-Distill-Qwen-14B,model,abstract
-,Qwen3,2610.05637,v1,2026-10-05,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.05637,v1,2026-10-05,Qwen3-VL-8B,model,abstract
 gpt-oss-20b,gpt-oss,2610.05671,v3,2026-10-09,GPT-OSS-20B,model,abstract
 qwen3-8b,Qwen3,2610.05685,v2,2026-10-07,Qwen3-8B,model,abstract
 deepseek-v4-pro,DeepSeek-V4,2610.05744,v1,2026-10-05,DeepSeek-V4-Pro,model,abstract
-,Qwen3,2610.05775,v1,2026-10-05,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.05775,v1,2026-10-05,Qwen3-VL-8B,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2610.05793,v1,2026-10-05,Qwen2.5-7B-Instruct,model,abstract
 deepseek-v4-flash,DeepSeek V4,2610.05830,v1,2026-10-05,DeepSeek-V4-Flash,model,abstract
 gpt-4-1,GPT-4.1,2610.05830,v1,2026-10-05,GPT-4.1,model,abstract
@@ -36190,14 +36196,15 @@ qwen3-8b,Qwen3,2610.06011,v1,2026-10-05,Qwen3-8B,model,abstract
 ,qwen3.6,2610.06345,v1,2026-10-05,Qwen-3.6,family,abstract
 ,Llama-3.2,2610.06360,v1,2026-10-05,Llama-3.2,family,abstract
 ,Phi-3,2610.06360,v1,2026-10-05,Phi-3,family,abstract
-,Qwen3,2610.06413,v1,2026-10-05,Qwen3,family,abstract
 claude-sonnet-4-6,Claude 4.6,2610.06413,v1,2026-10-05,Claude Sonnet 4.6,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.06413,v1,2026-10-05,Qwen3-VL-8B,model,abstract
 qwen3-8b,Qwen3,2610.06439,v1,2026-10-05,Qwen3-8B,model,abstract
 claude-opus-4-8,Claude 4.8,2610.06446,v1,2026-10-05,Claude Opus 4.8,model,abstract
 gemini-3-1-pro,Gemini 3.1,2610.06446,v1,2026-10-05,Gemini-3.1-Pro,model,abstract
 ,Qwen3.5,2610.06452,v1,2026-10-05,Qwen3.5,family,abstract
 deepseek-v4-flash,DeepSeek V4,2610.06481,v2,2026-10-18,DeepSeek-V4-Flash,model,abstract
-,Qwen3,2610.06616,v1,2026-10-05,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.06616,v1,2026-10-05,Qwen3-VL-32B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.06616,v1,2026-10-05,Qwen3-VL-8B,model,abstract
 ,Qwen2.5,2610.06621,v1,2026-10-05,Qwen2.5,family,abstract
 gpt-6-luna,gpt-6-luna,2610.06625,v2,2026-10-06,GPT-6 Luna,model,abstract
 qwen3-8-27b,qwen3.8,2610.06625,v2,2026-10-06,Qwen3.8-27B,model,abstract
@@ -36222,7 +36229,7 @@ gemini-3-1-pro,Gemini 3.1,2610.06852,v1,2026-10-05,Gemini 3.1 Pro,model,abstract
 qwen3-8b,Qwen3,2610.06963,v1,2026-10-03,Qwen3-8B,model,abstract
 llada2-0-mini,LLaDA2.0,2610.06996,v1,2026-10-04,LLaDA2.0-mini,model,abstract
 ,Qwen2,2610.07005,v1,2026-10-04,Qwen2,family,abstract
-,Qwen3,2610.07009,v1,2026-10-04,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.07009,v1,2026-10-04,Qwen3-VL-8B,model,abstract
 gemma-4-31b-it,Gemma 4,2610.07019,v2,2026-10-15,Gemma 4 31B-it,model,abstract
 qwen3-4b-base,Qwen3,2610.07019,v2,2026-10-15,Qwen3-4B-Base,model,abstract
 gemma-4-e2b,Gemma 4 E2B,2610.07026,v1,2026-10-04,gemma-4-E2B,model,abstract
@@ -36346,9 +36353,9 @@ qwen3-5-4b,Qwen3.5,2610.09328,v1,2026-10-07,Qwen3.5-4B,model,abstract
 qwen3-1-7b,Qwen3,2610.09346,v1,2026-10-07,Qwen3-1.7B,model,abstract
 qwen3-4b,Qwen3,2610.09384,v1,2026-10-07,Qwen3-4B,model,abstract
 gpt-6-sol,gpt-6-sol,2610.09396,v2,2026-10-14,gpt-6-sol,model,abstract
-,Qwen3,2610.09418,v1,2026-10-07,Qwen3,family,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.09418,v1,2026-10-07,Qwen2.5-VL-7B,model,abstract
 qwen3-5-4b,Qwen3.5,2610.09418,v1,2026-10-07,Qwen3.5-4B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.09418,v1,2026-10-07,Qwen3-VL-8B,model,abstract
 ,Cosmos3,2610.09455,v1,2026-10-07,Cosmos 3,family,abstract
 claude-sonnet-5-5,Claude 5.5,2610.09458,v2,2026-10-12,Claude Sonnet 5.5,model,abstract
 gpt-5-6-sol,GPT-5.6 Sol,2610.09458,v2,2026-10-12,GPT-5.6 Sol,model,abstract
@@ -36517,11 +36524,11 @@ qwen3-4b,Qwen3,2610.12367,v1,2026-10-08,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2610.12367,v1,2026-10-08,Qwen3-8B,model,abstract
 cosmos3-nano,Cosmos3,2610.12386,v1,2026-10-08,Cosmos3-Nano,model,abstract
 ,Qwen3,2610.12402,v2,2026-10-16,Qwen3,family,abstract
-,Qwen3,2610.12417,v1,2026-10-08,Qwen3,family,abstract
 gpt-5-4,GPT-5.4,2610.12417,v1,2026-10-08,GPT-5.4,model,abstract
-,Qwen3,2610.12419,v1,2026-10-08,Qwen3,family,abstract
-,Qwen3,2610.12427,v1,2026-10-08,Qwen3,family,abstract
+qwen3-vl-235b-a22b,Qwen3,2610.12417,v1,2026-10-08,Qwen3-VL-235B-A22B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.12419,v1,2026-10-08,Qwen3-VL-8B,model,abstract
 gemini-3-5-flash,Gemini 3.5,2610.12427,v1,2026-10-08,Gemini-3.5-Flash,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.12427,v1,2026-10-08,Qwen3-VL-8B,model,abstract
 claude-opus-4-8,Claude 4.8,2610.12569,v1,2026-10-08,Claude Opus 4.8,model,abstract
 gpt-5-5,GPT-5.5,2610.12569,v1,2026-10-08,GPT-5.5,model,abstract
 qwen3-5-4b,Qwen3.5,2610.12582,v1,2026-10-08,Qwen3.5-4B,model,abstract
@@ -36547,6 +36554,7 @@ qwen3-1-7b,Qwen3,2610.12830,v1,2026-10-09,Qwen3-1.7B,model,abstract
 ,Qwen2.5,2610.12837,v1,2026-10-09,Qwen2.5,family,abstract
 ,RWKV7,2610.12883,v1,2026-10-09,RWKV-7,family,abstract
 ,Qwen3,2610.12942,v3,2026-10-20,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.12942,v3,2026-10-20,Qwen3-VL 32B,model,abstract
 claude-fable-5,Claude Fable 5,2610.12954,v1,2026-10-09,Claude Fable 5,model,abstract
 gemini-3-1-pro-preview,gemini-3-1,2610.12954,v1,2026-10-09,Gemini 3.1 Pro Preview,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.12954,v1,2026-10-09,GPT-6-Astra,model,abstract
@@ -36579,7 +36587,7 @@ qwen3-4b,Qwen3,2610.13238,v1,2026-10-09,Qwen3-4B,model,abstract
 mistral-7b,Mistral 7B,2610.13257,v1,2026-10-09,Mistral-7B,model,abstract
 qwen3-1-7b,Qwen3,2610.13257,v1,2026-10-09,Qwen3-1.7B,model,abstract
 qwen3-8b,Qwen3,2610.13257,v1,2026-10-09,Qwen3-8B,model,abstract
-,Qwen3,2610.13268,v1,2026-10-09,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.13268,v1,2026-10-09,Qwen3-VL-8B,model,abstract
 ,Qwen3,2610.13277,v1,2026-10-09,Qwen3,family,abstract
 qwen3-5-4b,Qwen3.5,2610.13285,v1,2026-10-09,Qwen3.5-4B,model,abstract
 ,Gemma 3,2610.13325,v1,2026-10-09,Gemma 3,family,abstract
@@ -36626,7 +36634,7 @@ qwen3-8-flash-next,Qwen3.8-Next,2610.14018,v2,2026-10-16,Qwen3.8-Flash-Next,mode
 ,Qwen3,2610.14071,v1,2026-10-07,Qwen3,family,abstract
 qwen2-5-32b-instruct,Qwen2.5,2610.14101,v1,2026-10-08,Qwen2.5-32B,model,abstract
 qwen3-32b,Qwen3,2610.14101,v1,2026-10-08,Qwen3-32B,model,abstract
-,Qwen3,2610.14106,v1,2026-10-08,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.14106,v1,2026-10-08,Qwen3-VL 8B,model,abstract
 qwen3-5-4b,Qwen3.5,2610.14118,v1,2026-10-09,Qwen3.5-4B,model,abstract
 qwen3-6-27b,qwen3.6,2610.14118,v1,2026-10-09,Qwen3.6-27B,model,abstract
 gpt-5-6-sol,GPT-5.6 Sol,2610.14146,v1,2026-10-09,GPT-5.6-sol,model,abstract
@@ -36793,7 +36801,7 @@ qwen3-8-flash-next,Qwen3.8-Next,2610.16717,v3,2026-10-19,Qwen3.8-Flash-Next,mode
 gpt-6-astra,GPT-6 Astra,2610.16733,v1,2026-10-09,GPT-6-Astra,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.16735,v1,2026-10-12,Qwen2.5-VL-7B-Instruct,model,abstract
 qwen3-vl-8b-instruct,Qwen3,2610.16735,v1,2026-10-12,Qwen3-VL-8B-Instruct,model,abstract
-,Qwen3,2610.16744,v1,2026-10-12,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.16744,v1,2026-10-12,Qwen3-VL-8B,model,abstract
 ,GLM-Z1,2610.16745,v1,2026-10-12,GLM-Z1,family,abstract
 ,Qwen2.5,2610.16745,v1,2026-10-12,Qwen2.5,family,abstract
 qwen3-0-6b,Qwen3,2610.16790,v1,2026-10-12,Qwen3-0.6B,model,abstract
@@ -36802,7 +36810,7 @@ qwen3-4b,Qwen3,2610.16794,v1,2026-10-12,Qwen3-4B,model,abstract
 qwen3-4b-base,Qwen3,2610.16794,v1,2026-10-12,Qwen3-4B-Base,model,abstract
 qwen3-5-9b,Qwen3.5,2610.16794,v1,2026-10-12,Qwen3.5-9B,model,abstract
 qwen3-8b,Qwen3,2610.16794,v1,2026-10-12,Qwen3-8B,model,abstract
-,Qwen3,2610.16811,v1,2026-10-12,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.16811,v1,2026-10-12,Qwen3-VL-8B,model,abstract
 ,Llama 3,2610.16839,v1,2026-10-12,Llama-3,family,abstract
 ,Qwen3.5,2610.16839,v1,2026-10-12,Qwen3.5,family,abstract
 claude-opus-4-8,Claude 4.8,2610.16859,v2,2026-10-14,Claude Opus 4.8,model,abstract
@@ -36829,9 +36837,9 @@ gpt-5-1,GPT-5,2610.17256,v1,2026-10-12,GPT-5.1,model,abstract
 ,qwen3.6,2610.17306,v2,2026-10-27,Qwen 3.6,family,abstract
 gpt-5-4,GPT-5.4,2610.17310,v1,2026-10-12,GPT-5.4,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2610.17310,v1,2026-10-12,Qwen2.5-7B-Instruct,model,abstract
-,Qwen3,2610.17318,v1,2026-10-12,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.17318,v1,2026-10-12,Qwen3-VL-8B,model,abstract
 gemini-3-8-flash,Gemini 3.8,2610.17331,v1,2026-10-12,Gemini 3.8 Flash,model,abstract
-,Qwen3,2610.17355,v1,2026-10-12,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.17355,v1,2026-10-12,Qwen3-VL-8B,model,abstract
 olmo-3-7b-instruct,Olmo-3,2610.17365,v1,2026-10-12,OLMo-3-7B-Instruct,model,abstract
 gpt-5-5,GPT-5.5,2610.17370,v1,2026-10-12,GPT-5.5,model,abstract
 qwen3-14b,Qwen3,2610.17397,v1,2026-10-12,Qwen3-14B,model,abstract
@@ -36881,8 +36889,8 @@ qwen3-4b,Qwen3,2610.17893,v1,2026-10-13,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2610.17893,v1,2026-10-13,Qwen3-8B,model,abstract
 gpt-5-4,GPT-5.4,2610.17894,v1,2026-10-13,GPT-5.4,model,abstract
 qwen3-8b,Qwen3,2610.17953,v1,2026-10-13,Qwen3-8B,model,abstract
-,Qwen3,2610.17989,v1,2026-10-13,Qwen3,family,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.17989,v1,2026-10-13,Qwen2.5-VL-7B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.17989,v1,2026-10-13,Qwen3-VL-8B,model,abstract
 ,Qwen3,2610.18011,v1,2026-10-13,Qwen-3,family,abstract
 phi-4,Phi-4,2610.18011,v1,2026-10-13,Phi-4,model,abstract
 llama-3-1-70b-instruct,Llama 3.1,2610.18026,v1,2026-10-13,Llama3.1-70B-Instruct,model,abstract
@@ -36997,7 +37005,7 @@ llama-3-8b-instruct,Llama 3,2610.19232,v1,2026-10-13,Llama-3-8B,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2610.19232,v1,2026-10-13,Qwen2.5-7B,model,abstract
 phi-4,Phi-4,2610.19262,v1,2026-10-13,Phi-4,model,abstract
 qwen3-14b,Qwen3,2610.19262,v1,2026-10-13,Qwen3-14B,model,abstract
-,Qwen3,2610.19266,v1,2026-10-13,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.19266,v1,2026-10-13,Qwen3-VL-8B,model,abstract
 ,Qwen2.5-Omni,2610.19290,v1,2026-10-13,Qwen2.5-Omni,family,abstract
 ,Qwen3,2610.19294,v1,2026-10-13,Qwen3,family,abstract
 ,Qwen3,2610.19298,v1,2026-10-13,Qwen3,family,abstract
@@ -37228,7 +37236,7 @@ gpt-5-6-sol,GPT-5.6 Sol,2610.22298,v1,2026-10-15,GPT-5.6-Sol,model,abstract
 gemini-4-argon,Gemini 4 Argon,2610.22319,v1,2026-10-15,Gemini 4 Argon,model,abstract
 claude-opus-4-8,Claude 4.8,2610.22324,v1,2026-10-15,Claude Opus 4.8,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.22324,v1,2026-10-15,GPT-6 Astra,model,abstract
-,Qwen3,2610.22327,v1,2026-10-15,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.22327,v1,2026-10-15,Qwen3-VL-8B,model,abstract
 claude-opus-5-5,claude-5-5,2610.22341,v1,2026-10-15,Claude Opus 5.5,model,abstract
 glm-5-3,GLM-5.3,2610.22344,v1,2026-10-15,GLM-5.3,model,abstract
 kimi-k3,Kimi K3,2610.22344,v1,2026-10-15,Kimi-K3,model,abstract
@@ -37257,7 +37265,7 @@ kimi-k3,Kimi K3,2610.22599,v1,2026-10-15,Kimi K3,model,abstract
 claude-opus-4-5,Claude 4.5,2610.22668,v1,2026-10-15,Claude Opus 4.5,model,abstract
 qwen3-8-27b,qwen3.8,2610.22671,v2,2026-10-21,Qwen3.8-27B,model,abstract
 ui-tars-1-5-7b,ui-tars-1.5,2610.22672,v1,2026-10-15,UI-TARS-1.5-7B,model,abstract
-,Qwen3,2610.22681,v1,2026-10-15,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.22681,v1,2026-10-15,Qwen3-VL-8B,model,abstract
 glm-4-5-air,GLM-4.5-Air,2610.22684,v1,2026-10-15,GLM-4.5-Air,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.22686,v1,2026-10-15,GPT-6-Astra,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.22686,v2,2026-10-28,GPT-6-Astra,model,abstract
@@ -37265,7 +37273,7 @@ gpt-6-astra,GPT-6 Astra,2610.22686,v2,2026-10-28,GPT-6-Astra,model,abstract
 qwen3-6-27b,qwen3.6,2610.22698,v1,2026-10-15,Qwen3.6-27B,model,abstract
 ,Qwen3,2610.22703,v1,2026-10-15,Qwen3,family,abstract
 gpt-6-astra,GPT-6 Astra,2610.22708,v1,2026-10-15,GPT-6 Astra,model,abstract
-,Qwen3,2610.22751,v1,2026-10-15,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.22751,v1,2026-10-15,Qwen3-VL-8B,model,abstract
 ,Llama-3.2,2610.22771,v1,2026-10-16,Llama-3.2,family,abstract
 qwen3-1-7b,Qwen3,2610.22771,v1,2026-10-16,Qwen3-1.7B,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2610.22788,v1,2026-10-16,Llama-3.1-8B-Instruct,model,abstract
@@ -37339,7 +37347,8 @@ qwen3-4b,Qwen3,2610.23935,v1,2026-10-07,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2610.23935,v1,2026-10-07,Qwen3-8B,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2610.23939,v1,2026-10-08,Llama-3.1-8B-Instruct,model,abstract
 qwen2-5-vl-7b-instruct,Qwen2.5,2610.23959,v1,2026-10-09,Qwen2.5-VL-7B,model,abstract
-,Qwen3,2610.23969,v1,2026-10-12,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.23969,v1,2026-10-12,Qwen3-VL-32B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.23969,v1,2026-10-12,Qwen3-VL-8B,model,abstract
 ,Qwen3,2610.23974,v1,2026-10-13,Qwen3,family,abstract
 gemma-4-e4b-it,Gemma 4 E4B,2610.23974,v1,2026-10-13,Gemma~4 E4B,model,abstract
 claude-haiku-4-5,Claude 4.5,2610.23977,v1,2026-10-13,Claude Haiku 4.5,model,abstract
@@ -37526,7 +37535,8 @@ qwen3-5-9b,Qwen3.5,2610.26444,v1,2026-10-19,Qwen3.5-9B,model,abstract
 gemma-2-9b-it,gemma-2,2610.26461,v1,2026-10-19,Gemma-2-9B-it,model,abstract
 qwen2-5-7b-instruct,Qwen2.5,2610.26461,v1,2026-10-19,Qwen2.5-7B-Instruct,model,abstract
 gpt-5-4,GPT-5.4,2610.26469,v1,2026-10-19,GPT-5.4,model,abstract
-,Qwen3,2610.26503,v1,2026-10-19,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.26503,v1,2026-10-19,Qwen3-VL-32B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.26503,v1,2026-10-19,Qwen3-VL-8B,model,abstract
 gemma-4-12b-it,Gemma 4,2610.26531,v1,2026-10-19,Gemma 4-12B,model,abstract
 gemini-3-8-flash,Gemini 3.8,2610.26538,v2,2026-10-20,Gemini 3.8 Flash,model,abstract
 gpt-6-luna,gpt-6-luna,2610.26538,v2,2026-10-20,GPT-6 luna,model,abstract
@@ -37552,10 +37562,10 @@ gpt-5-2,GPT-5,2610.26836,v1,2026-10-19,GPT-5.2,model,abstract
 gpt-5-4,GPT-5.4,2610.26836,v1,2026-10-19,GPT-5.4,model,abstract
 qwen3-32b,Qwen3,2610.26847,v2,2026-10-20,Qwen3-32B,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.26850,v1,2026-10-19,GPT-6 Astra,model,abstract
-,Qwen3,2610.26860,v1,2026-10-19,Qwen3,family,abstract
 gpt-6-astra,GPT-6 Astra,2610.26860,v1,2026-10-19,GPT-6 Astra,model,abstract
 gpt-6-luna,gpt-6-luna,2610.26860,v1,2026-10-19,GPT-6 Luna,model,abstract
 kimi-k3,Kimi K3,2610.26860,v1,2026-10-19,Kimi K3,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.26860,v1,2026-10-19,Qwen3-VL-8B,model,abstract
 qwen3-6-35b-a3b,qwen3.6,2610.26887,v1,2026-10-13,Qwen3.6-35B-A3B,model,abstract
 ,Qwen3-Omni,2610.26891,v1,2026-10-15,Qwen3-Omni,family,abstract
 ,Qwen3.5-Omni,2610.26891,v1,2026-10-15,Qwen3.5-Omni,family,abstract
@@ -37710,7 +37720,7 @@ qwen3-8-flash-next,Qwen3.8-Next,2610.28998,v1,2026-10-20,Qwen3.8-Flash-Next,mode
 glm-5-2,GLM-5,2610.29005,v1,2026-10-21,GLM-5.2,model,abstract
 qwen3-14b,Qwen3,2610.29010,v1,2026-10-21,Qwen3-14B,model,abstract
 gemini-3-1-flash-lite,Gemini 3.1,2610.29023,v1,2026-10-21,gemini-3.1-flash-lite,model,abstract
-,Qwen3,2610.29025,v1,2026-10-21,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.29025,v1,2026-10-21,Qwen3-VL-32B,model,abstract
 qwen2-5-32b-instruct,Qwen2.5,2610.29054,v1,2026-10-21,Qwen2.5-32B,model,abstract
 ,granite-3.3,2610.29073,v1,2026-10-21,Granite3.3,family,abstract
 ,Qwen3-Omni,2610.29093,v1,2026-10-21,Qwen3-Omni,family,abstract
@@ -37835,8 +37845,8 @@ qwen3-6-27b,qwen3.6,2610.30858,v1,2026-10-22,Qwen3.6-27B,model,abstract
 glm-5-2,GLM-5,2610.30888,v1,2026-10-22,GLM-5.2,model,abstract
 qwen3-6-27b,qwen3.6,2610.30888,v1,2026-10-22,Qwen-3.6-27B,model,abstract
 qwen3-6-35b-a3b,qwen3.6,2610.30888,v1,2026-10-22,Qwen-3.6-35B-A3B,model,abstract
-,Qwen3,2610.30913,v1,2026-10-22,Qwen3,family,abstract
 claude-opus-5,Claude 5,2610.30913,v1,2026-10-22,Claude Opus 5,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.30913,v1,2026-10-22,Qwen3-VL-8B,model,abstract
 ,Phi-3.5-MoE,2610.30923,v1,2026-10-22,Phi-3.5-MoE,family,abstract
 mixtral-8x7b-instruct,Mixtral,2610.30923,v1,2026-10-22,Mixtral-8x7B,model,abstract
 ,Qwen3,2610.30946,v1,2026-10-22,Qwen3,family,abstract
@@ -37870,7 +37880,7 @@ qwen3-1-7b,Qwen3,2610.31412,v1,2026-10-22,Qwen3-1.7B,model,abstract
 qwen3-4b,Qwen3,2610.31412,v1,2026-10-22,Qwen3-4B,model,abstract
 ,Qwen2,2610.31433,v1,2026-10-22,Qwen2,family,abstract
 ,Qwen3,2610.31433,v1,2026-10-22,Qwen3,family,abstract
-,Qwen3,2610.31471,v1,2026-10-22,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.31471,v1,2026-10-22,Qwen3-VL-32B,model,abstract
 llama-4-maverick,Llama 4,2610.31483,v1,2026-10-22,Llama-4-Maverick,model,abstract
 qwen3-8b,Qwen3,2610.31483,v1,2026-10-22,Qwen3-8B,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.31511,v1,2026-10-22,gpt-6-astra,model,abstract
@@ -37951,12 +37961,12 @@ qwen3-8-omni-flash,qwen3.8-omni,2610.32268,v1,2026-10-23,Qwen3.8-Omni-Flash,mode
 ,Gemma 4,2610.32309,v1,2026-10-23,Gemma 4,family,abstract
 qwen3-32b,Qwen3,2610.32309,v1,2026-10-23,Qwen3-32B,model,abstract
 gpt-4o,GPT-4o,2610.32382,v1,2026-10-23,GPT-4o,model,abstract
-,Qwen3,2610.32411,v1,2026-10-23,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.32411,v1,2026-10-23,Qwen3-VL-8B,model,abstract
 qwen3-5-27b,Qwen3.5,2610.32412,v1,2026-10-23,Qwen3.5-27B,model,abstract
 gpt-6-astra,GPT-6 Astra,2610.32441,v1,2026-10-23,GPT-6 Astra,model,abstract
 ,Qwen3.5,2610.32448,v1,2026-10-23,Qwen3.5,family,abstract
 ,medgemma-1.5,2610.32478,v1,2026-10-23,MedGemma-1.5,family,abstract
-,Qwen3,2610.32481,v1,2026-10-23,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.32481,v1,2026-10-23,Qwen3-VL-8B,model,abstract
 deepseek-v4-flash,DeepSeek V4,2610.32483,v1,2026-10-23,DeepSeek V4 Flash,model,abstract
 ,Qwen3,2610.32536,v1,2026-10-23,Qwen3,family,abstract
 gpt-5-5,GPT-5.5,2610.32536,v1,2026-10-23,GPT-5.5,model,abstract
@@ -38036,9 +38046,9 @@ gemma-3-27b-it,Gemma 3,2610.33764,v1,2026-10-24,Gemma-3-27B,model,abstract
 ,Llama-3.1,2610.33766,v1,2026-10-24,Llama-3.1,family,abstract
 qwen3-4b,Qwen3,2610.33776,v1,2026-10-24,Qwen3-4B,model,abstract
 qwen3-8b,Qwen3,2610.33776,v1,2026-10-24,Qwen3-8B,model,abstract
-,Qwen3,2610.33799,v1,2026-10-24,Qwen3,family,abstract
 gpt-5,GPT-5,2610.33799,v1,2026-10-24,GPT-5,model,abstract
 qwen3-6-27b,qwen3.6,2610.33799,v1,2026-10-24,Qwen3.6-27B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.33799,v1,2026-10-24,Qwen3-VL-8B,model,abstract
 claude-haiku-4-5,Claude 4.5,2610.33876,v1,2026-10-24,Claude Haiku 4.5,model,abstract
 qwen3-8-max,qwen3.8,2610.33929,v1,2026-10-24,Qwen3.8-Max,model,abstract
 ,Gemma 4,2610.33958,v1,2026-10-25,Gemma 4,family,abstract
@@ -38073,8 +38083,8 @@ claude-sonnet-5,Claude 5,2610.34435,v1,2026-10-25,Claude Sonnet 5,model,abstract
 glm-5-3,GLM-5.3,2610.34435,v1,2026-10-25,GLM 5.3,model,abstract
 gpt-6-sol,gpt-6-sol,2610.34435,v1,2026-10-25,GPT-6-Sol,model,abstract
 deepseek-v2-lite,DeepSeek-V2,2610.34440,v1,2026-10-25,DeepSeek-V2-Lite,model,abstract
-,Qwen3,2610.34561,v1,2026-10-25,Qwen3,family,abstract
 gemma-3-4b-it,Gemma 3,2610.34561,v1,2026-10-25,Gemma 3-4B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.34561,v1,2026-10-25,Qwen3-VL-8B,model,abstract
 ,Llama-3.1,2610.34589,v1,2026-10-25,Llama~3.1,family,abstract
 ,Llama-3.2,2610.34589,v1,2026-10-25,Llama~3.2,family,abstract
 gemma-3-27b-it,Gemma 3,2610.34589,v1,2026-10-25,Gemma~3 27B,model,abstract
@@ -38222,7 +38232,7 @@ cosmos3-nano,Cosmos3,2610.36624,v1,2026-10-27,Cosmos3-Nano,model,abstract
 qwen3-4b-instruct-2507,Qwen3,2610.36652,v1,2026-10-27,Qwen3-4B-Instruct-2507,model,abstract
 ,Qwen3.5,2610.36689,v1,2026-10-27,Qwen3.5,family,abstract
 qwen3-8b,Qwen3,2610.36734,v1,2026-10-27,Qwen3-8B,model,abstract
-,Qwen3,2610.36759,v1,2026-10-27,Qwen3,family,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.36759,v1,2026-10-27,Qwen3-VL-8B,model,abstract
 llama-3-1-8b-instruct,Llama 3.1,2610.36805,v1,2026-10-27,Llama-3.1-8B-Instruct,model,abstract
 qwen2-5-3b-instruct,Qwen2.5,2610.36805,v1,2026-10-27,Qwen2.5-3B-Instruct,model,abstract
 ,Llama-3.2,2610.36807,v1,2026-10-27,Llama3.2,family,abstract
@@ -38261,6 +38271,8 @@ qwen2-5-1-5b-instruct,Qwen2.5,2610.37195,v1,2026-10-27,Qwen2.5-1.5B-Instruct,mod
 ,Llama-3.1,2610.37206,v1,2026-10-27,Llama 3.1,family,abstract
 qwen3-8b,Qwen3,2610.37206,v1,2026-10-27,Qwen3-8B,model,abstract
 ,Qwen3,2610.37216,v1,2026-10-27,Qwen3,family,abstract
+qwen3-vl-32b-instruct,Qwen3,2610.37216,v1,2026-10-27,Qwen3-VL-32B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.37216,v1,2026-10-27,Qwen3-VL-8B,model,abstract
 gemini-3-8-flash,Gemini 3.8,2610.37224,v1,2026-10-27,Gemini 3.8 Flash,model,abstract
 gpt-5-6-sol,GPT-5.6 Sol,2610.37224,v1,2026-10-27,GPT-5.6 Sol,model,abstract
 qwen3-8-27b,qwen3.8,2610.37224,v1,2026-10-27,Qwen 3.8 27B,model,abstract
@@ -38416,8 +38428,8 @@ gpt-5-5,GPT-5.5,2610.39433,v1,2026-10-29,GPT-5.5,model,abstract
 glm-5-3,GLM-5.3,2610.39438,v1,2026-10-29,GLM-5.3,model,abstract
 gpt-6-luna,gpt-6-luna,2610.39438,v1,2026-10-29,GPT-6-Luna,model,abstract
 ,Qwen3,2610.39439,v1,2026-10-29,Qwen3,family,abstract
-,Qwen3,2610.39562,v1,2026-10-29,Qwen3,family,abstract
 qwen3-5-9b,Qwen3.5,2610.39562,v1,2026-10-29,Qwen3.5-9B,model,abstract
+qwen3-vl-8b-instruct,Qwen3,2610.39562,v1,2026-10-29,Qwen3-VL-8B,model,abstract
 gemini-2-0-flash,Gemini 2.0,2610.39590,v1,2026-10-29,Gemini 2.0 Flash,model,abstract
 gpt-4o-mini,GPT-4o,2610.39590,v1,2026-10-29,GPT-4o Mini,model,abstract
 qwen3-5-27b,Qwen3.5,2610.39639,v1,2026-10-29,Qwen3.5-27B,model,abstract

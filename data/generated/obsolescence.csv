@@ -178,9 +178,9 @@ kimi-k2-thinking,Kimi K2 Thinking,moonshot,open_weights,2025-11-06,,,,,,2025-11-
 kimi-k3,Kimi K3,moonshot,open_weights,2026-07-16,2026-07-16,1,2026-10-28,,,2026-07-17,2026-10-28,,,
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,api_only,2026-10-23,2026-10-23,8,2026-10-28,,,2026-10-23,2026-10-28,,,
 laguna-m-1,Laguna-M.1,poolside,open_weights,2026-04-24,2026-06-15,59,,2026-06-15,52,,,,,
-laguna-s-2-1,laguna-s-2.1,poolside,open_weights,2026-07-21,,,,,,2026-07-21,2026-10-28,,,
+laguna-s-2-1,laguna-s-2.1,poolside,open_weights,2026-07-21,,,,,,2026-07-21,2026-10-28,,,2026-10-31
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,2026-04-23,2026-06-15,69,,2026-06-15,53,,,,,
-laguna-xs-2-1,laguna-xs-2.1,poolside,open_weights,2026-07-02,,,,,,2026-07-03,2026-08-16,2026-08-17,46,
+laguna-xs-2-1,laguna-xs-2.1,poolside,open_weights,2026-07-02,,,,,,2026-07-03,2026-08-16,2026-08-17,46,2026-10-31
 ling-3-0-flash,ling-3.0-flash,ant-group,open_weights,2026-07-23,,,,,,2026-07-24,2026-08-06,2026-08-07,15,
 ling-3-0-flash-fin,ling-3.0-flash-fin:free,ant-group,open_weights,2026-08-27,,,,,,2026-08-28,2026-09-28,2026-09-29,33,2026-10-13
 ling-3-0-flash-sante,ling-3.0-flash-sante:free,ant-group,open_weights,2026-09-04,,,,,,2026-09-05,2026-10-08,,,2026-10-13

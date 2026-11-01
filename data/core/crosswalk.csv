@@ -238,6 +238,7 @@ bloomz-mt,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
 bloomz-p3,huggingface,bigscience/bloomz-p3
 bloomz-p3,openalex,W4308244210
 bloomz-p3,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
+bolmo-1b-stage1,huggingface,allenai/Bolmo-1B-Stage1
 c4ai-command-a-03-2025,huggingface,CohereLabs/c4ai-command-a-03-2025
 c4ai-command-a-03-2025,openalex,W4417228580
 c4ai-command-a-03-2025,semantic_scholar,f1f07a37d4cd44daab987ff19c0bcd185910f50c
@@ -557,6 +558,7 @@ deepseek-coder-v2-lite-base,semantic_scholar,16d6e1ed1cf72212f6154644f3aa59d18bc
 deepseek-coder-v2-lite-instruct,huggingface,deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct
 deepseek-coder-v2-lite-instruct,openalex,W4390833687
 deepseek-coder-v2-lite-instruct,semantic_scholar,16d6e1ed1cf72212f6154644f3aa59d18bc95fda
+deepseek-llm-67b-base,huggingface,deepseek-ai/deepseek-llm-67b-base
 deepseek-llm-7b-base,huggingface,deepseek-ai/deepseek-llm-7b-base
 deepseek-llm-7b-chat,huggingface,deepseek-ai/deepseek-llm-7b-chat
 deepseek-moe-16b-base,huggingface,deepseek-ai/deepseek-moe-16b-base
@@ -739,6 +741,7 @@ delphi-3e20-1-9bparams-24-7btokens,huggingface,marin-community/delphi-3e20-1.9Bp
 delphi-3e20-11-8bparams-4btokens,huggingface,marin-community/delphi-3e20-11.8Bparams-4Btokens
 delphi-3e20-2-5bparams-18-6btokens,huggingface,marin-community/delphi-3e20-2.5Bparams-18.6Btokens
 delphi-3e20-273mparams-223btokens,huggingface,marin-community/delphi-3e20-273Mparams-223Btokens
+delphi-3e20-3-4bparams-13-9btokens,huggingface,marin-community/delphi-3e20-3.4Bparams-13.9Btokens
 delphi-3e20-447mparams-122btokens,huggingface,marin-community/delphi-3e20-447Mparams-122Btokens
 delphi-3e20-998mparams-49-8btokens,huggingface,marin-community/delphi-3e20-998Mparams-49.8Btokens
 delphi-9e18-1-2bparams-1-3btokens,huggingface,marin-community/delphi-9e18-1.2Bparams-1.3Btokens
@@ -798,6 +801,7 @@ dots3-note-prev,huggingface,dots-studio/dots3-note-prev
 dots3-note-prev,huggingface,dots-studio/dots3-note-prev-fp8
 doubao-seed-1-6,epoch,Doubao-Seed-1.6
 doubao-seed-1-6,models_dev,qiniu-ai/doubao-seed-1.6
+doubao-seed-1-6-flash,epoch,Doubao Seed 1.6 Flash
 doubao-seed-1-6-flash,epoch,Doubao-Seed-1.6 Flash
 doubao-seed-1-6-flash,models_dev,qiniu-ai/doubao-seed-1.6-flash
 doubao-seed-1-8,epoch,Doubao Seed 1.8
@@ -1359,6 +1363,7 @@ glm-z1-32b,semantic_scholar,c7f9706898bdfa3241601e075b1305649b174ff1
 glm-z1-9b,huggingface,zai-org/GLM-Z1-9B-0414
 glm-z1-9b,openalex,W4399837985
 glm-z1-9b,semantic_scholar,c7f9706898bdfa3241601e075b1305649b174ff1
+glm-z1-rumination-32b,huggingface,zai-org/GLM-Z1-Rumination-32B-0414
 got-ocr-2-0,huggingface,stepfun-ai/GOT-OCR-2.0-hf
 got-ocr2-0,huggingface,stepfun-ai/GOT-OCR2_0
 gpt-3,openai_api,davinci
@@ -3911,6 +3916,7 @@ qwen3-coder,models_dev,kilo/qwen/qwen3-coder
 qwen3-coder,models_dev,pendra/qwen3-coder:30b
 qwen3-coder,models_dev,vercel/alibaba/qwen3-coder
 qwen3-coder,openrouter,qwen/qwen3-coder
+qwen3-coder-30b-a3b-instruct,huggingface,Qwen/Qwen3-Coder-30B-A3B-Instruct
 qwen3-coder-30b-a3b-instruct,huggingface,Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8
 qwen3-coder-30b-a3b-instruct,models_dev,alibaba/qwen3-coder-30b-a3b-instruct
 qwen3-coder-30b-a3b-instruct,openalex,W4414939355
@@ -4080,6 +4086,9 @@ rwkv7-g1k-2-9b,huggingface,RWKV/RWKV7-G1k-2.9B-20260930
 rwkv7-g1k-2-9b,semantic_scholar,42b2027f68035845f599f43f85ed26b237a8b832
 rwkv7-g1k-7-2b,huggingface,RWKV/RWKV7-G1k-7.2B-20260930
 rwkv7-g1k-7-2b,semantic_scholar,42b2027f68035845f599f43f85ed26b237a8b832
+rwkv7-g1l-1-5b,huggingface,RWKV/RWKV7-G1l-1.5B-20261031
+rwkv7-g1l-13-3b,huggingface,RWKV/RWKV7-G1l-13.3B-20261031
+rwkv7-g1l-7-2b,huggingface,RWKV/RWKV7-G1l-7.2B-20261031
 rwkv7-goose-pile-1-47b,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
 rwkv7-goose-pile-1-47b,semantic_scholar,42b2027f68035845f599f43f85ed26b237a8b832
 rwkv7-goose-pile-421m,huggingface,RWKV/RWKV7-Goose-Pile-421M-HF
@@ -4589,6 +4598,7 @@ xgen-7b-8k-inst,semantic_scholar,d9d84f8b9e6bf4839f43ab865158d79a3b9bb1e9
 xgen-mm-phi3-mini-instruct-interleave-r-v1-5,huggingface,Salesforce/xgen-mm-phi3-mini-instruct-interleave-r-v1.5
 xgen-mm-phi3-mini-instruct-interleave-r-v1-5,openalex,W4402703549
 xgen-mm-phi3-mini-instruct-interleave-r-v1-5,semantic_scholar,63de44b8f4bcfe994d259bc581aa7e121aeaca2e
+xgen-small-4b-base-r,huggingface,Salesforce/xgen-small-4B-base-r
 xlam-1b-fc-r,huggingface,Salesforce/xLAM-1b-fc-r
 xlam-2-1b-fc-r,huggingface,Salesforce/xLAM-2-1b-fc-r
 xlam-2-3b-fc-r,huggingface,Salesforce/xLAM-2-3b-fc-r

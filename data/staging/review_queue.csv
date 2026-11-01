@@ -206,7 +206,6 @@ hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RadixArk,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -217,7 +216,7 @@ hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAM
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ornith-ai,,,,9 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ornith-ai,,,,10 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss

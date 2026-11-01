@@ -9,38 +9,38 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1866; events: 2900
-- Models: curated 73, corroborated 672, single-source 1121
-- Event confidence: verified 1171, inferred 1723, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 429 of 1630
+- Models: 1874; events: 2909
+- Models: curated 73, corroborated 672, single-source 1129
+- Event confidence: verified 1171, inferred 1732, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 430 of 1638
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 89 | 197 | 2 | 68 | 19 | 52% |
+| Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
 | ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
 | Mistral | 58 | 109 | 4 | 31 | 23 | 45% |
+| RWKV | 57 | 57 | 0 | 4 | 53 | 7% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 115 | 4 | 27 | 25 | 36% |
 | Google | 55 | 151 | 7 | 26 | 22 | 42% |
-| RWKV | 54 | 54 | 0 | 4 | 50 | 7% |
-| AI2 | 52 | 52 | 0 | 14 | 38 | 27% |
+| AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Ant Group | 52 | 62 | 0 | 27 | 25 | 45% |
 | Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
-| Marin | 48 | 48 | 0 | 0 | 48 | 0% |
-| DeepSeek | 45 | 102 | 3 | 26 | 16 | 55% |
+| Marin | 49 | 49 | 0 | 0 | 49 | 0% |
+| DeepSeek | 46 | 103 | 3 | 26 | 17 | 54% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
-| Zhipu | 37 | 82 | 3 | 16 | 18 | 49% |
+| Zhipu | 38 | 83 | 3 | 16 | 19 | 48% |
 | OpenBMB | 36 | 36 | 0 | 6 | 30 | 17% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Liquid AI | 33 | 36 | 0 | 23 | 10 | 67% |
 | Tencent | 33 | 43 | 1 | 14 | 18 | 42% |
-| Salesforce | 31 | 31 | 0 | 6 | 25 | 19% |
+| Salesforce | 32 | 32 | 0 | 6 | 26 | 19% |
 | Arcee | 29 | 32 | 0 | 18 | 11 | 62% |
 | Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
@@ -98,9 +98,9 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1612 | 421 | 1190 | 1 |
+| weights_released | 1620 | 421 | 1198 | 1 |
 | platform_availability | 337 | 332 | 3 | 2 |
-| retired | 309 | 179 | 130 | 0 |
+| retired | 310 | 179 | 131 | 0 |
 | api_ga | 255 | 63 | 191 | 1 |
 | announced | 249 | 53 | 195 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
@@ -119,12 +119,12 @@ as settled.
 - Events it wrote: 33 (verified 5, single-source inferred 28)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 9
 
-Declined in the 7 days to 2026-10-31, by reason:
+Declined in the 7 days to 2026-11-01, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 75 |
-| no_dated_event | 46 |
+| community_lead | 72 |
+| no_dated_event | 49 |
 | disagrees_with_record | 2 |
 | order_violation | 1 |
 | third_party_claim | 1 |
