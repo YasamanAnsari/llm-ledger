@@ -135,6 +135,7 @@ glm-5-2,,toggleable,high|max,,,false,1048576,,text,text,,true,,,1.19,3.74,,2026-
 glm-5-3,true,,,,,,1000000,131072,text,text,,true,,,1.4,4.4,0.26,2026-09-01,https://models.dev/api.json
 glm-5-3-flash,true,,,,,,1048576,131072,text|image|video,text,,true,,,0.15,0.5,0.03,2026-09-01,https://models.dev/api.json
 glm-5-3-flashx,true,,,,,,1000000,131072,text|image,text,,true,,,0.37,1.25,0.075,2026-09-19,https://models.dev/api.json
+glm-5-3-flashx-legal,true,,,,,,1048576,131072,text|image|video,text,,true,,,0.37,1.25,0.075,2026-11-02,https://models.dev/api.json
 glm-5-3-prime,true,,,,,,1000000,131072,text,text,,true,,,2.8,8.8,0.56,2026-09-24,https://models.dev/api.json
 glm-5-turbo,true,,,,,,200000,32768,text,text,,true,,,1.2,4,0.24,2026-09-01,https://models.dev/api.json
 glm-5v-turbo,true,,,,,,202752,202752,text|image,text,,true,,,1.186,3.955,0.296,2026-09-01,https://models.dev/api.json

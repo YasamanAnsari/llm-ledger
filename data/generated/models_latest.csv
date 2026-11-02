@@ -1,6 +1,8 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-11-02,api_ga,inferred,glm-5-3-flashx-legal,glm-5.3-flashx-legal,zhipu,glm-5.3-flashx-legal,,vlm,api_only,proprietary
 2026-10-31,weights_released,inferred,rwkv7-g1l-1-5b,RWKV7-G1l-1.5B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
 2026-10-31,weights_released,inferred,rwkv7-g1l-13-3b,RWKV7-G1l-13.3B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
+2026-10-31,weights_released,inferred,rwkv7-g1l-2-9b,RWKV7-G1l-2.9B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
 2026-10-31,weights_released,inferred,rwkv7-g1l-7-2b,RWKV7-G1l-7.2B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
 2026-10-28,weights_released,verified,sensenova-loop-9b-preview,SenseNova-Loop-9B-Preview,sensetime,SenseNova-Loop,,vlm,open_weights,osi_approved
 2026-10-27,weights_released,inferred,yandex-8b-wmt26,Yandex-8B-WMT26,yandex,Yandex-WMT26,,llm,open_weights,
@@ -336,6 +338,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-05-05,weights_released,inferred,delphi-3e18-358mparams-1-6btokens,delphi-3e18-358Mparams-1.6Btokens,marin,delphi-3e18-358Mparams-1.6Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e19-1-4bparams-3-5btokens,delphi-3e19-1.4Bparams-3.5Btokens,marin,delphi-3e19-1.4Bparams-3.5Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e19-1-9bparams-2-5btokens,delphi-3e19-1.9Bparams-2.5Btokens,marin,delphi-3e19-1.9Bparams-2.5Btokens,,llm,open_weights,osi_approved
+2026-05-05,weights_released,inferred,delphi-3e19-273mparams-22-3btokens,delphi-3e19-273Mparams-22.3Btokens,marin,delphi-3e19-273Mparams-22.3Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e19-447mparams-12-2btokens,delphi-3e19-447Mparams-12.2Btokens,marin,delphi-3e19-447Mparams-12.2Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e19-998mparams-5btokens,delphi-3e19-998Mparams-5Btokens,marin,delphi-3e19-998Mparams-5Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e20-1-4bparams-35-2btokens,delphi-3e20-1.4Bparams-35.2Btokens,marin,delphi-3e20-1.4Bparams-35.2Btokens,,llm,open_weights,osi_approved
@@ -1626,7 +1629,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-12-06,consumer_rollout,verified,gemini-1-0-pro,Gemini 1.0 Pro,google,Gemini 1.0,pro,multimodal,api_only,proprietary
 2023-12-05,weights_released,inferred,llamaguard-7b,LlamaGuard-7b,meta,LlamaGuard,,llm,open_weights,open_weights_restricted
 2023-12-01,weights_released,inferred,mixtral-8x7b-v0-1,Mixtral-8x7B-v0.1,mistral,Mixtral-v0.1,,llm,open_weights,osi_approved
-2023-11-29,weights_released,inferred,deepseek-llm-67b-base,deepseek-llm-67b-base,deepseek,deepseek-llm,base,llm,open_weights,
+2023-11-29,weights_released,verified,deepseek-llm-67b-base,deepseek-llm-67b-base,deepseek,deepseek-llm,base,llm,open_weights,
 2023-11-29,weights_released,inferred,deepseek-llm-7b-base,deepseek-llm-7b-base,deepseek,deepseek-llm,base,llm,open_weights,
 2023-11-29,weights_released,inferred,deepseek-llm-7b-chat,deepseek-llm-7b-chat,deepseek,deepseek-llm,chat,llm,open_weights,
 2023-11-29,platform_availability_fallback,verified,llama-2-70b,Llama 2 70B,meta,Llama 2,base,llm,open_weights,open_weights_restricted
@@ -1647,6 +1650,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-11-06,weights_released,verified,yi-34b-200k,Yi-34B-200K,01ai,Yi,,llm,open_weights,osi_approved
 2023-11-06,weights_released,verified,yi-6b-200k,Yi-6B-200K,01ai,Yi,,llm,open_weights,osi_approved
 2023-11-02,weights_released,inferred,yi-34b,Yi-34B,01ai,Yi,base,llm,open_weights,open_weights_restricted
+2023-11-01,weights_released,inferred,deepseek-coder-33b-instruct,deepseek-coder-33b-instruct,deepseek,deepseek,instruct,llm,open_weights,
 2023-11-01,weights_released,inferred,yi-6b,Yi-6B,01ai,Yi,,llm,open_weights,osi_approved
 2023-10-31,weights_released,inferred,rwkv-5-world-1b5,rwkv-5-world-1b5,rwkv,rwkv-5-world-1b5,,llm,open_weights,
 2023-10-31,weights_released,inferred,yarn-mistral-7b-128k,Yarn-Mistral-7b-128k,nous-research,Yarn-Mistral,,llm,open_weights,osi_approved
@@ -1684,6 +1688,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2023-08-31,weights_released,inferred,yarn-llama-2-7b-128k,Yarn-Llama-2-7b-128k,nous-research,Yarn-Llama-2,,llm,open_weights,
 2023-08-30,weights_released,inferred,baichuan2-13b-base,Baichuan2-13B-Base,baichuan,Baichuan2,base,llm,open_weights,
 2023-08-30,weights_released,inferred,baichuan2-7b-base,Baichuan2-7B-Base,baichuan,Baichuan2,base,llm,open_weights,
+2023-08-30,weights_released,inferred,yarn-llama-2-7b-64k,Yarn-Llama-2-7b-64k,nous-research,Yarn-Llama-2,,llm,open_weights,
 2023-08-29,weights_released,inferred,baichuan2-13b-chat,Baichuan2-13B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-29,weights_released,inferred,baichuan2-7b-chat,Baichuan2-7B-Chat,baichuan,Baichuan2,chat,llm,open_weights,
 2023-08-28,api_ga,inferred,gpt-3-5-turbo-16k,gpt-3.5-turbo-16k,openai,GPT-3.5,,llm,api_only,proprietary

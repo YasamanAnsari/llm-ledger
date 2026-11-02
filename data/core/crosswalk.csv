@@ -546,6 +546,7 @@ deepseek-chat-v3-1,models_dev,kilo/deepseek/deepseek-chat-v3.1
 deepseek-chat-v3-1,openrouter,deepseek/deepseek-chat-v3.1
 deepseek-coder-1-3b-base,huggingface,deepseek-ai/deepseek-coder-1.3b-base
 deepseek-coder-1-3b-instruct,huggingface,deepseek-ai/deepseek-coder-1.3b-instruct
+deepseek-coder-33b-instruct,huggingface,deepseek-ai/deepseek-coder-33b-instruct
 deepseek-coder-6-7b-base,huggingface,deepseek-ai/deepseek-coder-6.7b-base
 deepseek-coder-6-7b-instruct,huggingface,deepseek-ai/deepseek-coder-6.7b-instruct
 deepseek-coder-7b-instruct-v1-5,huggingface,deepseek-ai/deepseek-coder-7b-instruct-v1.5
@@ -734,6 +735,7 @@ delphi-3e18-358mparams-1-6btokens,huggingface,marin-community/delphi-3e18-358Mpa
 delphi-3e18-447mparams-1-2btokens,huggingface,marin-community/delphi-3e18-447Mparams-1.2Btokens
 delphi-3e19-1-4bparams-3-5btokens,huggingface,marin-community/delphi-3e19-1.4Bparams-3.5Btokens
 delphi-3e19-1-9bparams-2-5btokens,huggingface,marin-community/delphi-3e19-1.9Bparams-2.5Btokens
+delphi-3e19-273mparams-22-3btokens,huggingface,marin-community/delphi-3e19-273Mparams-22.3Btokens
 delphi-3e19-447mparams-12-2btokens,huggingface,marin-community/delphi-3e19-447Mparams-12.2Btokens
 delphi-3e19-998mparams-5btokens,huggingface,marin-community/delphi-3e19-998Mparams-5Btokens
 delphi-3e20-1-4bparams-35-2btokens,huggingface,marin-community/delphi-3e20-1.4Bparams-35.2Btokens
@@ -1341,6 +1343,8 @@ glm-5-3-flash,semantic_scholar,e0db747ad65d72559e583ff92f729d68949e9daf
 glm-5-3-flashx,models_dev,commandcode/z-ai/glm-5.3-flashx
 glm-5-3-flashx,models_dev,vercel/zai/glm-5.3-flashx
 glm-5-3-flashx,openrouter,z-ai/glm-5.3-flashx
+glm-5-3-flashx-legal,models_dev,kilo/z-ai/glm-5.3-flashx-legal
+glm-5-3-flashx-legal,openrouter,z-ai/glm-5.3-flashx-legal
 glm-5-3-prime,models_dev,kilo/z-ai/glm-5.3-prime
 glm-5-3-prime,openrouter,z-ai/glm-5.3-prime
 glm-5-turbo,models_dev,302ai/glm-5-turbo
@@ -4088,6 +4092,7 @@ rwkv7-g1k-7-2b,huggingface,RWKV/RWKV7-G1k-7.2B-20260930
 rwkv7-g1k-7-2b,semantic_scholar,42b2027f68035845f599f43f85ed26b237a8b832
 rwkv7-g1l-1-5b,huggingface,RWKV/RWKV7-G1l-1.5B-20261031
 rwkv7-g1l-13-3b,huggingface,RWKV/RWKV7-G1l-13.3B-20261031
+rwkv7-g1l-2-9b,huggingface,RWKV/RWKV7-G1l-2.9B-20261031
 rwkv7-g1l-7-2b,huggingface,RWKV/RWKV7-G1l-7.2B-20261031
 rwkv7-goose-pile-1-47b,huggingface,RWKV/RWKV7-Goose-Pile-1.47B-HF
 rwkv7-goose-pile-1-47b,semantic_scholar,42b2027f68035845f599f43f85ed26b237a8b832
@@ -4608,6 +4613,7 @@ yandex-8b-wmt26,huggingface,yandex/Yandex-8B-WMT26
 yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
 yarn-llama-2-7b-128k,openalex,W4386435778
 yarn-llama-2-7b-128k,semantic_scholar,819bbdc2dac9e13d9ca3e2508a6e063186ce5e40
+yarn-llama-2-7b-64k,huggingface,NousResearch/Yarn-Llama-2-7b-64k
 yarn-mistral-7b-128k,huggingface,NousResearch/Yarn-Mistral-7b-128k
 yarn-mistral-7b-128k,openalex,W4386435778
 yarn-mistral-7b-128k,semantic_scholar,819bbdc2dac9e13d9ca3e2508a6e063186ce5e40
