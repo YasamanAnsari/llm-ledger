@@ -271,7 +271,7 @@ Shared columns:
 | `source` | enum | `models_dev, openrouter, litellm, litellm_git, openai_api, anthropic_api, google_api, mistral_api, hf` |
 | `provider` | string | who serves the id: the models.dev provider key, `openrouter`, LiteLLM's `litellm_provider`, the vendor, or `huggingface` |
 | `api_id` | string | the id exactly as the source lists it (a Hub repo id for `hf`) |
-| `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model (Hub repos resolve only exactly); blank when no ledger model matches |
+| `model_id` | FK nullable | resolved on every run: an exact crosswalk identifier, else the normalized key when it names one model, else for a dated id (`deepseek-v4-pro-0813`) the key without its date (Hub repos resolve only exactly); blank when no ledger model matches |
 | `first_observed` / `last_observed` | ISO date | the run's first and last day |
 | `source_url` | URL | the payload URL from the manifest of the run's first day |
 

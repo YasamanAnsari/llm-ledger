@@ -51,7 +51,9 @@ def test_resolver_prefers_the_exact_identifier_and_refuses_an_ambiguous_key() ->
     assert resolve("models_dev", "acme", "acme-1") == "acme-1"
     assert resolve("models_dev", "reseller", "acme/acme-1") == "acme-1"      # key fallback
     assert resolve("models_dev", "reseller", "acme-1-0901") == "acme-1-0901"  # snapshot kept apart
+    assert resolve("openrouter", "openrouter", "acme/acme-1-0813") == "acme-1"  # unlisted snapshot folds
     assert resolve("openrouter", "openrouter", "acme/acme-2") == "acme-2-pro"
+    assert resolve("models_dev", "reseller", "acme-2-0813") == ""             # still ambiguous undated
     assert resolve("models_dev", "reseller", "acme-2") == ""                  # two models share the key
 
 
@@ -87,9 +89,9 @@ def test_versions_backfill_days_the_other_tables_already_hold() -> None:
     versions = {(r["source"], r["api_id"]): (r["version_id"], r["stated_date"], r["model_id"],
                                              r["first_observed"], r["last_observed"])
                 for r in tables[schema.MODEL_VERSIONS.name]}
-    # Only the dated id is a snapshot; the sweep without `sha` adds nothing.
+    # Only the dated id is a snapshot, of acme-1; the sweep without `sha` adds nothing.
     assert versions == {
-        ("openai_api", "acme-1-2025-06-01"): ("acme-1-2025-06-01", "2025-06-01", "",
+        ("openai_api", "acme-1-2025-06-01"): ("acme-1-2025-06-01", "2025-06-01", "acme-1",
                                               "2026-10-01", "2026-10-02"),
         ("hf", "acme/acme-1"): ("abc123", "2026-09-30", "acme-1", "2026-10-02", "2026-10-02")}
 

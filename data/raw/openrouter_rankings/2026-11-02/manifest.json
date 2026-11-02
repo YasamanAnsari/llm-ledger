@@ -1,158 +1,158 @@
 {
   "rankings-daily_2025-01-01_2026-01-01.json": {
     "bytes": 1835657,
-    "fetched_at": "2026-11-02T03:35:34+00:00",
-    "sha256": "e89514652577bfdb7eba6e0b0d65d65afd894760a9363777eb60fbaf882c837c",
+    "fetched_at": "2026-11-02T06:04:51+00:00",
+    "sha256": "30e67e9ca673add77741cfc299679f6518144f683d53e052db2fbadfa4cb2ea2",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2026-01-01"
   },
   "rankings-daily_2026-01-02_2026-11-01.json": {
     "bytes": 1567883,
-    "fetched_at": "2026-11-02T03:35:43+00:00",
-    "sha256": "0ce3eff7355c6e97e2c357e41b6e31726e333a9461e87301f3e4b78069a49f30",
+    "fetched_at": "2026-11-02T06:04:56+00:00",
+    "sha256": "5e33344f4f9f3186b9fb2c8f8f68e6826aa6783429cb13d344fc3d90d7c1c7b5",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2026-01-02&end_date=2026-11-01"
   },
   "rankings-daily_academia_2025-01-01_2025-12-28.json": {
     "bytes": 158885,
-    "fetched_at": "2026-11-02T03:37:00+00:00",
-    "sha256": "fdacab97d751f48bc7f51a87a16e65d1054d201161335246fa14910348cf82ea",
+    "fetched_at": "2026-11-02T06:06:10+00:00",
+    "sha256": "2415ad0a35d5e189d6c590b24d7cdbf4dc7523b3190744d56ff33f73fb00bbcd",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=academia"
   },
   "rankings-daily_academia_2025-12-29_2026-11-01.json": {
     "bytes": 224587,
-    "fetched_at": "2026-11-02T03:37:03+00:00",
-    "sha256": "6efd463a96bcad48093b9c02ed4d983c9945bc0d2e863651133260c09dce84e3",
+    "fetched_at": "2026-11-02T06:06:13+00:00",
+    "sha256": "3fc0b86edcc1dc18e5c12eb3bab5cadfbccac32d5abe95c12643ac29afe131fe",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=academia"
   },
   "rankings-daily_finance_2025-01-01_2025-12-28.json": {
     "bytes": 158106,
-    "fetched_at": "2026-11-02T03:36:40+00:00",
-    "sha256": "cbcb154280aeafa981c2a67f6325de00bcb80bbf609e968044e747c9b7db87bf",
+    "fetched_at": "2026-11-02T06:05:51+00:00",
+    "sha256": "118722c2f7023de3d592b57b0df29d83f6e8927991d0fe56269595b50d1b2ef9",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=finance"
   },
   "rankings-daily_finance_2025-12-29_2026-11-01.json": {
     "bytes": 224470,
-    "fetched_at": "2026-11-02T03:36:43+00:00",
-    "sha256": "fbc66b3090e7558f8b2e7eaed7da8fde2be23d744438ddb897ee3ac671115432",
+    "fetched_at": "2026-11-02T06:05:54+00:00",
+    "sha256": "0443608ace07d165dd82d0405789b66303d7ad321e85b07eb9fd5f0bc49418f5",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=finance"
   },
   "rankings-daily_health_2025-01-01_2025-12-28.json": {
     "bytes": 157961,
-    "fetched_at": "2026-11-02T03:36:46+00:00",
-    "sha256": "16ab6385b219b0723aed84f8df3b8618be2eb51beae058dccbaa15b2aa7a8d8a",
+    "fetched_at": "2026-11-02T06:05:58+00:00",
+    "sha256": "9044cdfc601cf9ac81e82aeeca267523447fe94086b11fd8d0360b3b9af1ec60",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=health"
   },
   "rankings-daily_health_2025-12-29_2026-11-01.json": {
     "bytes": 222830,
-    "fetched_at": "2026-11-02T03:36:49+00:00",
-    "sha256": "2cc08228bc2b4f28accd29ce781c5a150e8e665c00af818da964f95e92170b6e",
+    "fetched_at": "2026-11-02T06:06:01+00:00",
+    "sha256": "4466da23a43b41574e9235ff9cb51048b069fc833bbee5b80cc2914719d8a7d7",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=health"
   },
   "rankings-daily_legal_2025-01-01_2025-12-28.json": {
     "bytes": 158172,
-    "fetched_at": "2026-11-02T03:36:33+00:00",
-    "sha256": "802972ad0afe54ab0ce1612992f338a8737e74a05726c33988b66c63b78ee3ad",
+    "fetched_at": "2026-11-02T06:05:45+00:00",
+    "sha256": "95a29e6dcb24f818d916a7b350a0b6619576af2a12469cb8a6536244bf7737b6",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=legal"
   },
   "rankings-daily_legal_2025-12-29_2026-11-01.json": {
     "bytes": 222834,
-    "fetched_at": "2026-11-02T03:36:36+00:00",
-    "sha256": "854137cff5e9851dfd9234ae7b335521b2043a4e78c333eba5433497c48badf1",
+    "fetched_at": "2026-11-02T06:05:48+00:00",
+    "sha256": "dea91fd1e03a45c93808e3188929e5effd90520701a41d02ab474aeb69c9c1b1",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=legal"
   },
   "rankings-daily_marketing-seo_2025-01-01_2025-12-28.json": {
     "bytes": 155662,
-    "fetched_at": "2026-11-02T03:36:07+00:00",
-    "sha256": "b669fee4f6911ed08185a94921c603921179cc9c4d29b536ef261a9d5b066594",
+    "fetched_at": "2026-11-02T06:05:19+00:00",
+    "sha256": "ac1a77e7fff346228064bb490c4f0f863b7c152f9f594fa15eca931167aa4cd0",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=marketing/seo"
   },
   "rankings-daily_marketing-seo_2025-12-29_2026-11-01.json": {
     "bytes": 222734,
-    "fetched_at": "2026-11-02T03:36:10+00:00",
-    "sha256": "4b1bf355200e4303409f4a814b5735580b16fdc5f890bde65336dfa9ab05ac51",
+    "fetched_at": "2026-11-02T06:05:22+00:00",
+    "sha256": "5b8bb7032cb25131a217ca0fc3ea4d6bb2930b4ccd361a59ca80ab82cd98da20",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=marketing/seo"
   },
   "rankings-daily_marketing_2025-01-01_2025-12-28.json": {
     "bytes": 157460,
-    "fetched_at": "2026-11-02T03:36:01+00:00",
-    "sha256": "a7a04a35a1dcc98edb9122162532e9816b2ea9a6de92b9136678309bbb0bf40d",
+    "fetched_at": "2026-11-02T06:05:13+00:00",
+    "sha256": "825af1ecbd1fd7917dff193f6350107d102fb722e79ce6cd2d44007f6c8d338c",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=marketing"
   },
   "rankings-daily_marketing_2025-12-29_2026-11-01.json": {
     "bytes": 223085,
-    "fetched_at": "2026-11-02T03:36:04+00:00",
-    "sha256": "674cb1fbb2ea91918329e6201c0f289676c69c4edc4ee8634fe5f4aaf56e7f20",
+    "fetched_at": "2026-11-02T06:05:16+00:00",
+    "sha256": "016a46f80d68e7c8bb22adfcc14309621ef9a4e1dbff99460d553a85ec23ffff",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=marketing"
   },
   "rankings-daily_programming_2025-01-01_2025-12-28.json": {
     "bytes": 159547,
-    "fetched_at": "2026-11-02T03:35:47+00:00",
-    "sha256": "42c191c3cab22f09711112fafd93dbbd20ec5bfda4a3c261adae1581d81b793b",
+    "fetched_at": "2026-11-02T06:05:00+00:00",
+    "sha256": "ca11b85e5bd370f001dffd285f7f4ae11aaa273474c14d15694c4baaba204a2c",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=programming"
   },
   "rankings-daily_programming_2025-12-29_2026-11-01.json": {
     "bytes": 228463,
-    "fetched_at": "2026-11-02T03:35:51+00:00",
-    "sha256": "275649a07b0ca1b26273e04c7ec140ab8e151601197dfc5ec433e0f4b92fda6b",
+    "fetched_at": "2026-11-02T06:05:03+00:00",
+    "sha256": "13d6e4ae9fcdfa77a65128b5d5e7b66722431d1c4279785b69e7ba272622cf96",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=programming"
   },
   "rankings-daily_roleplay_2025-01-01_2025-12-28.json": {
     "bytes": 160364,
-    "fetched_at": "2026-11-02T03:35:54+00:00",
-    "sha256": "c2b58133a03d13b630f969d2309c2d8e90508f121beed037333586354a5adeae",
+    "fetched_at": "2026-11-02T06:05:07+00:00",
+    "sha256": "04d0c8ab76a8fc705c19f1273121e197ff95755afd48b83e65d5a73becad5596",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=roleplay"
   },
   "rankings-daily_roleplay_2025-12-29_2026-11-01.json": {
     "bytes": 225659,
-    "fetched_at": "2026-11-02T03:35:58+00:00",
-    "sha256": "6deef6533aa3320e04478683fa5804e504c4600100a0dbf742156781f69d84ba",
+    "fetched_at": "2026-11-02T06:05:10+00:00",
+    "sha256": "ad940adfae71faf842650065e8221ce43fd4b5476e2b9aab2200eb8f7b88a520",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=roleplay"
   },
   "rankings-daily_science_2025-01-01_2025-12-28.json": {
     "bytes": 158737,
-    "fetched_at": "2026-11-02T03:36:20+00:00",
-    "sha256": "4ff9649f348754d14ed56c266beaef6453ed0f14a8c068b4a692a997555951b2",
+    "fetched_at": "2026-11-02T06:05:32+00:00",
+    "sha256": "989950949d5ed89bda093d7683704eae4a59ab84daab6134f45bcb545e6cacb3",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=science"
   },
   "rankings-daily_science_2025-12-29_2026-11-01.json": {
     "bytes": 226534,
-    "fetched_at": "2026-11-02T03:36:24+00:00",
-    "sha256": "bad9a54b52e5658c1632d5c53153916dd6f89831d4c03c6b85ae11a341511ba2",
+    "fetched_at": "2026-11-02T06:05:36+00:00",
+    "sha256": "d258a4aa7f43c9182719f3dbc7a577161c8680c2a0cdcb22fea3bb37f4ba09c3",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=science"
   },
   "rankings-daily_technology_2025-01-01_2025-12-28.json": {
     "bytes": 159822,
-    "fetched_at": "2026-11-02T03:36:14+00:00",
-    "sha256": "2507a5737c71c9e04f498be986e6791584ecb6d5e57d8b706941f149cd2363b6",
+    "fetched_at": "2026-11-02T06:05:26+00:00",
+    "sha256": "4d9930a33acbec78b8f96bb4f21fc166d13c6865fcbe090dc1b3c2ceeda629bb",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=technology"
   },
   "rankings-daily_technology_2025-12-29_2026-11-01.json": {
     "bytes": 227054,
-    "fetched_at": "2026-11-02T03:36:17+00:00",
-    "sha256": "a03085f8bc04f619d8034063c3affffffd9354632991171cbece98d521f7e04e",
+    "fetched_at": "2026-11-02T06:05:29+00:00",
+    "sha256": "c5bdb378a8c32f8dc088da90090c87768fd8b5fc245af90625d853fe3c9fa45c",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=technology"
   },
   "rankings-daily_translation_2025-01-01_2025-12-28.json": {
     "bytes": 158258,
-    "fetched_at": "2026-11-02T03:36:27+00:00",
-    "sha256": "4d4becf001bbe63aaa1e7ffaea7b20147e7ce3c922edba56aad8bd427101afd7",
+    "fetched_at": "2026-11-02T06:05:39+00:00",
+    "sha256": "55918faafe41b7ede893ca7249dd842e7d946a5e71fb4b5b16ae1c736ae1131d",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=translation"
   },
   "rankings-daily_translation_2025-12-29_2026-11-01.json": {
     "bytes": 222935,
-    "fetched_at": "2026-11-02T03:36:30+00:00",
-    "sha256": "0749eefbe808dd258fc7072e1386f5ab04df3bed40c2c623ea18af18c39e5f05",
+    "fetched_at": "2026-11-02T06:05:42+00:00",
+    "sha256": "4b400833f890caca755a7169cb12da13ead2e4b2f66d35c08255caf09d3e10fa",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=translation"
   },
   "rankings-daily_trivia_2025-01-01_2025-12-28.json": {
     "bytes": 156652,
-    "fetched_at": "2026-11-02T03:36:52+00:00",
-    "sha256": "ba66d3263f6dcfc1f7a5af22a682f185602f33637f7ff066bf2912ad31ad04d3",
+    "fetched_at": "2026-11-02T06:06:04+00:00",
+    "sha256": "d003f5bfe3930732a4842c2ee44d0be88a99ea92f627c51b9f4f74da644b9c97",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-01-01&end_date=2025-12-28&category=trivia"
   },
   "rankings-daily_trivia_2025-12-29_2026-11-01.json": {
     "bytes": 221923,
-    "fetched_at": "2026-11-02T03:36:56+00:00",
-    "sha256": "8be95897ee548f0b34ec90c6fafa31ac53f76ca2b7d86de710b40813a9b4a19c",
+    "fetched_at": "2026-11-02T06:06:07+00:00",
+    "sha256": "87442f7d0c484d26aa0ba74becc5511d7a1acfcfa134111e31e2c859cac4f000",
     "url": "https://openrouter.ai/api/v1/datasets/rankings-daily?start_date=2025-12-29&end_date=2026-11-01&category=trivia"
   }
 }

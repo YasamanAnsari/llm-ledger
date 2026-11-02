@@ -273,7 +273,9 @@ def _key(identifier: str) -> str:
 
 def model_resolver(crosswalk: list, developer_of: dict | None = None):
     """(source, provider, api_id) -> model_id. An exact crosswalk identifier
-    wins; else the normalized key, when it names exactly one model. A Hub
+    wins; else the normalized key, when it names exactly one model; else,
+    for a dated id, the key without its date (the matcher folds a snapshot
+    the crosswalk does not list onto the undated model). A Hub
     repo resolves only exactly: the census decides which repos a model has.
     A ModelScope repo resolves through its twin: a Hub repo of the same name
     whose model the same org (`developer_of`: model_id -> org) developed."""
@@ -296,7 +298,8 @@ def model_resolver(crosswalk: list, developer_of: dict | None = None):
         identifier = f"{provider}/{api_id}" if source == "models_dev" else api_id
         if (source, identifier) in exact:
             return exact[(source, identifier)]
-        ids = by_key.get(_key(api_id), set())
+        ids = by_key.get(_key(api_id)) or by_key.get(
+            normalize_name(api_id.rsplit("/", 1)[-1])["key"], set())
         return next(iter(ids)) if len(ids) == 1 else ""
     return resolve
 
