@@ -4,7 +4,7 @@ import {execSync} from 'node:child_process';
 import {cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {annotateGroups, budgetBest, categoryShares, cheapestPrices, downloadsByCohort, eciScores, priceScoreFrontier, priceToScore,
+import {annotateGroups, budgetBest, categoryMix, categoryShares, cheapestPrices, downloadsByCohort, eciScores, priceScoreFrontier, priceToScore,
   sampleDays, tokenShareByAge} from './charts.mjs';
 import {csvEncode} from './ledger-engine.mjs';
 
@@ -132,6 +132,7 @@ export function figureTables(data, prices, downloads, usage, usageByCategory) {
     budget_best: budgetBest(cheapest, scores, BUDGET_USD_PER_1M),
     cohort_downloads: downloadsByCohort(downloads, models),
     token_age: tokenShareByAge(usage, models),
+    category_mix: categoryMix(usageByCategory),
     category_share: categoryShares(usageByCategory, models),
   };
 }

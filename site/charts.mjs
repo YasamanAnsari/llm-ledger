@@ -1,6 +1,6 @@
 // Figures for the site: pure functions that summarize the ledger, and
 // renderers that turn those summaries into HTML/SVG strings.
-import {perMillion} from './ledger-engine.mjs';
+import {formatDate, perMillion} from './ledger-engine.mjs';
 
 export const ACCESS = [
   {key: 'fully_open', label: 'Fully open', noun: 'fully open models', color: '#2b5f8e'},
@@ -337,7 +337,6 @@ export const OPEN_OR_API = [
   {key: 'api_only', label: 'API only', color: '#b57a2c'},
 ];
 const OPEN_OR_API_OF = {fully_open: 'open', open_weights: 'open', api_only: 'api_only'};
-const PALETTE = ['#a7aea6', '#7b3a33', '#b57a2c', '#2f6b52', '#2b5f8e', '#6b4f8e', '#3f8f9a'];
 const PRICE_SOURCES = new Set(['litellm', 'litellm_git']);
 
 /** USD per 1M tokens at three input tokens to one output token; null unless
@@ -472,7 +471,10 @@ export function tokenShareByAge(usage, models) {
       totals.set(month, (totals.get(month) || 0) + Number(r.day_total_tokens));
     }
   }
-  return [...tokens].map(([key, n]) => {
+  // A trailing month the ranking has not finished would pass for a whole month.
+  const lastDay = [...seen].sort().at(-1), next = new Date(Date.parse(lastDay) + 864e5).toISOString().slice(0, 10);
+  const partial = next.slice(0, 7) === lastDay.slice(0, 7) ? lastDay.slice(0, 7) : null;
+  return [...tokens].filter(([key]) => !key.startsWith(`${partial}|`)).map(([key, n]) => {
     const [month, age] = key.split('|');
     return {month, age, tokens: n, share: n / totals.get(month)};
   }).sort((a, b) => a.month.localeCompare(b.month) || a.age.localeCompare(b.age));
@@ -487,8 +489,7 @@ export const USAGE_GROUPS = [...OPEN_OR_API,
  * bucket can still be in progress on the `as_of` day), with the week's
  * leading model. */
 export function categoryShares(rows, models) {
-  const asOf = Date.parse(rows.map(r => r.as_of).sort().at(-1).slice(0, 10));
-  const week = rows.map(r => r.week_start).filter(w => Date.parse(w) + 7 * 864e5 <= asOf).sort().at(-1);
+  const week = completeWeeks(rows).at(-1);
   const byId = new Map(models.map(m => [m.model_id, m]));
   const out = [];
   for (const category of [...new Set(rows.map(r => r.category))].sort()) {
@@ -507,7 +508,53 @@ export function categoryShares(rows, models) {
   return out;
 }
 
-const categoryLabel = c => c === 'marketing/seo' ? 'Marketing (SEO)' : c[0].toUpperCase() + c.slice(1);
+/** Weeks of usage_category_observations that had ended by the `as_of` day
+ * of the pull; OpenRouter's trailing bucket can still be filling. */
+function completeWeeks(rows) {
+  const asOf = Date.parse(rows.map(r => r.as_of).sort().at(-1).slice(0, 10));
+  return [...new Set(rows.map(r => r.week_start))].filter(w => Date.parse(w) + 7 * 864e5 <= asOf).sort();
+}
+
+/** Each use-case category's share of the tokens OpenRouter tagged with any
+ * of the twelve categories, per complete week. Fails when a week lacks a
+ * category, since its shares would then be inflated. */
+export function categoryMix(rows) {
+  const totals = new Map();
+  for (const r of rows) totals.set(`${r.week_start}|${r.category}`, Number(r.week_total_tokens));
+  const categories = [...new Set(rows.map(r => r.category))].sort();
+  return completeWeeks(rows).flatMap(week => {
+    const tokens = categories.map(c => {
+      if (!totals.has(`${week}|${c}`)) throw new Error(`usage_category_observations: week ${week} has no ${c} rows`);
+      return totals.get(`${week}|${c}`);
+    });
+    const sum = tokens.reduce((a, b) => a + b, 0);
+    return categories.map((category, i) => ({week_start: week, category, tokens: tokens[i], share: tokens[i] / sum}));
+  });
+}
+
+export const CATEGORY_COLORS = {
+  programming: '#174c3e', technology: '#2f6b52', science: '#7fa37a', roleplay: '#2b5f8e', finance: '#8fb3d1',
+  health: '#b57a2c', academia: '#e0b872', legal: '#7b3a33', marketing: '#c98b80', 'marketing/seo': '#e6c4bd',
+  translation: '#6b4f8e', trivia: '#b9a8cf',
+};
+export const categoryLabel = c => c === 'marketing/seo' ? 'Marketing (SEO)' : c[0].toUpperCase() + c.slice(1);
+
+/** Pie of the latest complete week beside the weekly shares over time;
+ * categories ordered by their latest share, largest first. */
+export function renderCategoryMix(rows) {
+  const weeks = [...new Set(rows.map(r => r.week_start))].sort(), last = weeks.at(-1);
+  const latest = rows.filter(r => r.week_start === last).sort((a, b) => b.share - a.share);
+  const groups = latest.map(r => {
+    if (!CATEGORY_COLORS[r.category]) throw new Error(`no colour for OpenRouter category ${r.category}`);
+    return {key: r.category, label: categoryLabel(r.category), color: CATEGORY_COLORS[r.category]};
+  });
+  const frames = weeks.map(w => ({x: at(w), values: Object.fromEntries(rows.filter(r => r.week_start === w).map(r => [r.category, r.tokens]))}));
+  const pie = renderPie(latest.map((r, i) => ({...groups[i], value: r.tokens})), `Share of OpenRouter tokens by use case, week of ${last}`);
+  const area = renderShareArea(frames, groups, 'Weekly share of OpenRouter tokens by use case', {showLegend: false});
+  return `<div class="mix-grid"><div><h4 class="mix-title">Week of ${esc(formatDate(last))}</h4>${pie}</div><div><h4 class="mix-title">Every week since ${esc(formatDate(weeks[0]))}</h4>${area}</div></div>`
+    + dataTable('Weekly share of OpenRouter tokens by use case', ['Week', ...groups.map(g => g.label)],
+      weeks.map(w => [w, ...groups.map(g => `${(rows.find(r => r.week_start === w && r.category === g.key).share * 100).toFixed(1)}%`)]));
+}
 
 export function renderCategoryShares(rows) {
   const open = Object.fromEntries(rows.filter(r => r.group === 'open').map(r => [r.category, r.share]));
@@ -531,6 +578,15 @@ function axis({type, step, format}, values, from, to) {
   if (type === 'time') {
     ticks = [];
     for (let yr = new Date(lo).getUTCFullYear() + 1; Date.UTC(yr, 0, 1) <= hi; yr++) ticks.push([Date.UTC(yr, 0, 1), String(yr)]);
+    if (ticks.length < 2) {
+      // Under two year marks the axis would be unreadable: mark quarters instead.
+      ticks = [];
+      const first = new Date(lo), year = first.getUTCFullYear();
+      for (let m = Math.ceil((first.getUTCMonth() + (first.getUTCDate() > 1)) / 3) * 3; Date.UTC(year, m, 1) <= hi; m += 3) {
+        const t = new Date(Date.UTC(year, m, 1));
+        ticks.push([t.getTime(), `${MONTHS[t.getUTCMonth()]} ${t.getUTCFullYear()}`]);
+      }
+    }
   } else if (type === 'log') {
     [lo, hi] = [Math.floor(Math.log10(lo)), Math.ceil(Math.log10(hi))];
     ticks = Array.from({length: hi - lo + 1}, (_, i) => [10 ** (lo + i), format(10 ** (lo + i))]);
@@ -544,12 +600,16 @@ function axis({type, step, format}, values, from, to) {
 
 /** Lines sharing two axes. `series`: {label, color, points: [{x, y, id?, title}]};
  * time x values are epoch milliseconds. `step` holds each value until the next point. */
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const gridLines = (sx, sy) => sy.ticks.map(([v, t]) => `<line x1="${M.left}" x2="${W - M.right}" y1="${sy.at(v).toFixed(1)}" y2="${sy.at(v).toFixed(1)}"/><text x="${M.left - 8}" y="${(sy.at(v) + 3).toFixed(1)}" text-anchor="end">${esc(t)}</text>`).join('')
+  + sx.ticks.map(([v, t]) => `<line x1="${sx.at(v).toFixed(1)}" x2="${sx.at(v).toFixed(1)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${sx.at(v).toFixed(1)}" y="${H - M.bottom + 18}" text-anchor="middle">${esc(t)}</text>`).join('');
+
 export function renderLines(series, {x, y, label, step = false}) {
   const shown = series.filter(s => s.points.length);
   const points = shown.flatMap(s => s.points);
   const sx = axis(x, points.map(p => p.x), M.left, W - M.right), sy = axis(y, points.map(p => p.y), H - M.bottom, M.top);
-  const grid = sy.ticks.map(([v, t]) => `<line x1="${M.left}" x2="${W - M.right}" y1="${sy.at(v).toFixed(1)}" y2="${sy.at(v).toFixed(1)}"/><text x="${M.left - 8}" y="${(sy.at(v) + 3).toFixed(1)}" text-anchor="end">${esc(t)}</text>`).join('')
-    + sx.ticks.map(([v, t]) => `<line x1="${sx.at(v).toFixed(1)}" x2="${sx.at(v).toFixed(1)}" y1="${M.top}" y2="${H - M.bottom}"/><text x="${sx.at(v).toFixed(1)}" y="${H - M.bottom + 18}" text-anchor="middle">${esc(t)}</text>`).join('');
+  const grid = gridLines(sx, sy);
   const lines = shown.map(s => {
     const xy = s.points.map(p => [sx.at(p.x).toFixed(1), sy.at(p.y).toFixed(1)]);
     const path = xy.map(([px, py], i) => !i ? `M${px},${py}` : step ? `H${px}V${py}` : `L${px},${py}`).join('');
@@ -559,9 +619,44 @@ export function renderLines(series, {x, y, label, step = false}) {
   return legend(shown.map(s => ({...s, shape: 'line'}))) + `<svg class="scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}"><g class="grid">${grid}</g>${lines}</svg>`;
 }
 
+/** 100% stacked areas over time. `frames`: [{x: epoch ms, values: {group key: amount}}];
+ * `groups` [{key, label, color}] are stacked bottom first. */
+export function renderShareArea(frames, groups, label, {showLegend = true} = {}) {
+  const totals = frames.map(f => groups.reduce((s, g) => s + (f.values[g.key] || 0), 0));
+  const shown = frames.filter((_, i) => totals[i] > 0), sums = totals.filter(t => t > 0);
+  const sx = axis(TIME, shown.map(f => f.x), M.left, W - M.right);
+  const sy = axis({type: 'linear', step: 25, format: v => `${v}%`}, [0, 100], H - M.bottom, M.top);
+  let below = shown.map(() => 0);
+  const bands = groups.map(g => {
+    const top = shown.map((f, i) => below[i] + (f.values[g.key] || 0) / sums[i] * 100);
+    const edge = (ys, order) => order.map(i => `${sx.at(shown[i].x).toFixed(1)},${sy.at(ys[i]).toFixed(1)}`);
+    const index = shown.map((_, i) => i), latest = top.at(-1) - below.at(-1);
+    const path = `<path d="M${[...edge(top, index), ...edge(below, [...index].reverse())].join('L')}Z" fill="${g.color}"><title>${esc(g.label)}: ${latest.toFixed(1)}% at the latest point</title></path>`;
+    below = top;
+    return path;
+  }).join('');
+  return (showLegend ? legend(groups) : '') + `<svg class="scatter share-area" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)}">${bands}<g class="grid">${gridLines(sx, sy)}</g></svg>`;
+}
+
+const inkOn = hex => (parseInt(hex.slice(1, 3), 16) * 299 + parseInt(hex.slice(3, 5), 16) * 587 + parseInt(hex.slice(5, 7), 16) * 114) / 1000 > 150 ? '#202c27' : '#fff';
+
+/** A pie of `slices` [{label, color, value}] in the given order, with a
+ * legend that lists every slice's share. */
+export function renderPie(slices, label) {
+  const total = slices.reduce((s, x) => s + x.value, 0), R = 120, C = 125;
+  const at = a => `${(C + R * Math.cos(a)).toFixed(2)},${(C + R * Math.sin(a)).toFixed(2)}`;
+  let angle = -Math.PI / 2;
+  const arcs = slices.map(s => {
+    const a0 = angle, a1 = angle += s.value / total * 2 * Math.PI, share = s.value / total * 100, mid = (a0 + a1) / 2;
+    const text = share >= 4 ? `<text x="${(C + R * .66 * Math.cos(mid)).toFixed(1)}" y="${(C + R * .66 * Math.sin(mid) + 4).toFixed(1)}" text-anchor="middle" fill="${inkOn(s.color)}">${Math.round(share)}%</text>` : '';
+    return `<path d="M${C},${C}L${at(a0)}A${R},${R} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${at(a1)}Z" fill="${s.color}"><title>${esc(s.label)}: ${share.toFixed(1)}%</title></path>${text}`;
+  }).join('');
+  const key = slices.map(s => `<li><i style="--c:${s.color}"></i>${esc(s.label)}<span>${(s.value / total * 100).toFixed(1)}%</span></li>`).join('');
+  return `<div class="pie"><svg viewBox="0 0 ${2 * C} ${2 * C}" role="img" aria-label="${esc(label)}">${arcs}</svg><ol class="pie-key">${key}</ol></div>`;
+}
+
 const TIME = {type: 'time'};
 export const usd = v => `$${v < 1 ? +v.toPrecision(2) : num(+v.toFixed(2))}`;
-const compact = v => new Intl.NumberFormat('en-US', {notation: 'compact'}).format(v);
 const ECI_AXIS = {type: 'linear', step: 10, format: v => String(v)};
 const at = date => Date.parse(date);
 
@@ -574,17 +669,19 @@ export function renderPriceToScore(rows, threshold) {
       picked.map(r => [r.date, OPEN_OR_API.find(g => g.key === r.group).label, r.model, r.eci, usd(r.price)]));
 }
 
+const SEQUENCE = ['#d3dccb', '#a9c09f', '#6f9a78', '#3f7559', '#174c3e'];
+
 export function renderPriceFrontier(rows) {
   const dates = [...new Set(rows.map(r => r.date))].sort();
-  const series = dates.map((date, i) => ({label: date, color: PALETTE[(i + 1) % PALETTE.length], points: rows.filter(r => r.date === date)
-    .map(r => ({x: r.price, y: r.eci, id: r.model_id, title: `${r.model}: ECI ${r.eci} at ${usd(r.price)} per 1M tokens on ${date}`}))}));
+  const series = dates.map((date, i) => ({label: formatDate(date), color: SEQUENCE[Math.round(i / Math.max(dates.length - 1, 1) * (SEQUENCE.length - 1))], points: rows.filter(r => r.date === date)
+    .map(r => ({x: r.price, y: r.eci, id: r.model_id, title: `${r.model}: ECI ${r.eci} at ${usd(r.price)} per 1M tokens on ${formatDate(date)}`}))}));
   return renderLines(series, {x: {type: 'log', format: usd}, y: ECI_AXIS, label: 'Best ECI score available at each price, log price scale, on selected days', step: true})
     + dataTable('Models on the price-score frontier', ['Day', 'Model', 'ECI', 'USD per 1M tokens'], rows.map(r => [r.date, r.model, r.eci, usd(r.price)]));
 }
 
 export function renderBudgetBest(rows) {
   const budget = rows.find(r => r.series === 'under_budget')?.budget;
-  const series = [['overall', 'Best listed model', '#2b5f8e'], ['under_budget', `Best at or under ${usd(budget)} per 1M tokens`, '#b57a2c']]
+  const series = [['overall', 'Best model at any price', '#2b5f8e'], ['under_budget', `Best model at ${usd(budget)} or less per million tokens`, '#b57a2c']]
     .map(([key, label, color]) => ({label, color, points: rows.filter(r => r.series === key)
       .map(r => ({x: at(r.date), y: r.eci, id: r.model_id, title: `${r.model}: ECI ${r.eci} at ${usd(r.price)} per 1M tokens on ${r.date}`}))}));
   return renderLines(series, {x: TIME, y: ECI_AXIS, label: 'Best ECI score among listed models, overall and under a budget', step: true})
@@ -592,19 +689,22 @@ export function renderBudgetBest(rows) {
       rows.map(r => [r.date, r.series === 'overall' ? 'Overall' : 'Under budget', r.model, r.eci, usd(r.price)]));
 }
 
+const COHORT_COLORS = ['#7b3a33', '#b57a2c', '#e0b872', '#8fb3d1', '#2b5f8e', '#174c3e'];
+
 export function renderCohortDownloads(rows) {
   const cohorts = [...new Set(rows.map(r => r.cohort))].sort();
-  const series = cohorts.map((cohort, i) => ({label: cohort, color: PALETTE[i % PALETTE.length], points: rows.filter(r => r.cohort === cohort && r.downloads_30d > 0)
-    .map(r => ({x: at(r.date), y: r.downloads_30d, title: `${cohort} models, ${r.date}: ${num(r.downloads_30d)} downloads in 30 days over ${num(r.repos)} repos`}))}));
-  return renderLines(series, {x: TIME, y: {type: 'log', format: compact}, label: 'Hugging Face downloads in the past 30 days by release year of the model, log scale'})
+  const groups = cohorts.map((cohort, i) => ({key: cohort, label: `Released ${cohort}`, color: COHORT_COLORS[i % COHORT_COLORS.length]}));
+  const dates = [...new Set(rows.map(r => r.date))].sort();
+  const frames = dates.map(d => ({x: at(d), values: Object.fromEntries(rows.filter(r => r.date === d).map(r => [r.cohort, r.downloads_30d]))}));
+  return renderShareArea(frames, groups, 'Share of Hugging Face downloads in the past 30 days, by the year the model was released')
     + dataTable('Hub downloads in the past 30 days by release year', ['Day', 'Released', 'Downloads (30 days)', 'Repos'],
       rows.map(r => [r.date, r.cohort, num(r.downloads_30d), num(r.repos)]));
 }
 
 export function renderTokenAge(rows) {
-  const series = USAGE_AGES.map(g => ({...g, points: rows.filter(r => r.age === g.key)
-    .map(r => ({x: at(`${r.month}-01`), y: r.share * 100, title: `${g.label}, ${r.month}: ${(r.share * 100).toFixed(1)}% of tokens`}))}));
-  return renderLines(series, {x: TIME, y: {type: 'linear', step: 20, format: v => `${v}%`}, label: 'Share of OpenRouter tokens by model age, per month'})
+  const months = [...new Set(rows.map(r => r.month))].sort();
+  const frames = months.map(m => ({x: at(`${m}-01`), values: Object.fromEntries(rows.filter(r => r.month === m).map(r => [r.age, r.tokens]))}));
+  return renderShareArea(frames, USAGE_AGES, 'Share of OpenRouter tokens by model age, per month')
     + dataTable('Share of OpenRouter tokens by model age', ['Month', 'Age', 'Share of tokens'],
       rows.map(r => [r.month, USAGE_AGES.find(g => g.key === r.age).label, `${(r.share * 100).toFixed(1)}%`]));
 }

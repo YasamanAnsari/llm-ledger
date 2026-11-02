@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,NO_COUNTRY,formatDate,csvEncode} from './ledger-engine.mjs';
-import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,ageBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,renderPriceToScore,renderPriceFrontier,renderBudgetBest,renderCohortDownloads,renderTokenAge,renderCategoryShares,usd,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES,OPEN_OR_API,AGE_BINS} from './charts.mjs';
+import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,ageBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,renderPriceToScore,renderPriceFrontier,renderBudgetBest,renderCohortDownloads,renderTokenAge,renderCategoryShares,renderCategoryMix,categoryLabel,usd,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES,OPEN_OR_API,AGE_BINS} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -106,9 +106,20 @@ function renderFindings(){
  $('price-frontier-chart').innerHTML=renderPriceFrontier(figures.price_frontier);
  $('budget-chart').innerHTML=renderBudgetBest(figures.budget_best);
  const lastDay=figures.budget_best.at(-1).date,[best,cheap]=['overall','under_budget'].map(s=>figures.budget_best.find(r=>r.date===lastDay&&r.series===s));
- $('budget-summary').textContent=best&&cheap?`On ${formatDate(lastDay)} the best listed model, ${best.model}, scores ${best.eci} at ${usd(best.price)} per million tokens; the best at or under ${usd(cheap.budget)}, ${cheap.model}, scores ${cheap.eci}.`:'';
- $('usage-as-of').textContent=meta.usageAsOf;
- $('category-as-of').textContent=meta.categoryAsOf;
+ const budget=cheap?.budget,frontierDays=[...new Set(figures.price_frontier.map(r=>r.date))].sort();
+ const buys=d=>figures.price_frontier.filter(r=>r.date===d&&r.price<=budget).reduce((a,b)=>!a||b.eci>a.eci?b:a,null);
+ const [thenBuy,nowBuy]=[buys(frontierDays[0]),buys(frontierDays.at(-1))];
+ $('frontier-buy-summary').textContent=thenBuy&&nowBuy?`At ${usd(budget)} per million tokens, the best score rose from ${Math.round(thenBuy.eci)} on ${formatDate(frontierDays[0])} to ${Math.round(nowBuy.eci)} on ${formatDate(frontierDays.at(-1))}.`:'';
+ const overall=figures.budget_best.filter(r=>r.series==='overall'),caught=cheap&&overall.find(r=>r.eci>=cheap.eci);
+ const behind=caught&&Math.round((Date.parse(lastDay)-Date.parse(caught.date))/(30.44*864e5));
+ $('budget-summary').textContent=caught?`Today the best model at ${usd(budget)} or less scores ${Math.round(cheap.eci)}, against ${Math.round(best.eci)} at any price. The best model first reached ${Math.round(cheap.eci)} ${caught===overall[0]?'by':'in'} ${formatDate(caught.date,'month')}: cheap models are about ${behind} months behind.`:'';
+ $('mix-as-of').textContent=formatDate(meta.categoryAsOf.slice(0,10));
+ $('mix-chart').innerHTML=renderCategoryMix(figures.category_mix);
+ const mixWeeks=[...new Set(figures.category_mix.map(r=>r.week_start))].sort(),mixTop=figures.category_mix.filter(r=>r.week_start===mixWeeks.at(-1)).sort((a,b)=>b.share-a.share)[0];
+ const mixFirst=figures.category_mix.find(r=>r.week_start===mixWeeks[0]&&r.category===mixTop.category);
+ $('mix-summary').textContent=`${categoryLabel(mixTop.category)} is the biggest use: ${Math.round(mixTop.share*100)}% of tokens in the week of ${formatDate(mixWeeks.at(-1))}, against ${Math.round(mixFirst.share*100)}% in the first week on record (${formatDate(mixWeeks[0])}).`;
+ $('usage-as-of').textContent=formatDate(meta.usageAsOf.slice(0,10));
+ $('category-as-of').textContent=formatDate(meta.categoryAsOf.slice(0,10));
  $('category-week').textContent=formatDate(figures.category_share[0].week_start);
  $('category-chart').innerHTML=renderCategoryShares(figures.category_share);
  const openShares=figures.category_share.filter(r=>r.group==='open').sort((a,b)=>b.share-a.share),[mostOpen,leastOpen]=[openShares[0],openShares.at(-1)];
@@ -120,26 +131,32 @@ function renderFindings(){
  $('verified-pct').innerHTML=verified.toFixed(1)+'<span>%</span>';
  $('confidence-breakdown').innerHTML=['verified','inferred','disputed'].map(k=>`<div><span class="confidence-label"><i class="legend-dot ${k}"></i>${title(k)}</span><span class="number">${number(meta.confidence[k]||0)} <span class="share">/ ${((meta.confidence[k]||0)/meta.events*100).toFixed(1)}%</span></span></div>`).join('');
 }
+// Epoch fixes the ECI scale at these two models.
+const ECI_ANCHORS={130:'Claude 3.5 Sonnet',150:'GPT-5'};
 function renderPriceFigure(threshold){
  const rows=ledger.data.figures.price_to_score,thresholds=[...new Set(rows.map(r=>r.threshold))];
  threshold??=thresholds[Math.floor(thresholds.length/2)];
- $('price-tabs').innerHTML=thresholds.map(t=>`<button class="metric-tab${t===threshold?' active':''}" data-threshold="${t}" aria-pressed="${t===threshold}">ECI ${t} or more</button>`).join('');
+ $('price-tabs').innerHTML=thresholds.map(t=>`<button class="metric-tab${t===threshold?' active':''}" data-threshold="${t}" aria-pressed="${t===threshold}">ECI ${t}+${ECI_ANCHORS[t]?` · ${ECI_ANCHORS[t]} level`:''}</button>`).join('');
  $('price-chart').innerHTML=renderPriceToScore(rows,threshold);
- const falls=OPEN_OR_API.map(g=>{const r=rows.filter(x=>x.threshold===threshold&&x.group===g.key);return r.length>1?`${g.label.toLowerCase()} from ${usd(r[0].price)} (${r[0].model}, ${formatDate(r[0].date)}) to ${usd(r.at(-1).price)} (${r.at(-1).model}, ${formatDate(r.at(-1).date)})`:'';}).filter(Boolean);
- $('price-summary').textContent=falls.length?`Cheapest price per million tokens for ECI ${threshold} or more: ${falls.join('; ')}.`:'';
+ const picked=rows.filter(r=>r.threshold===threshold),days=[...new Set(picked.map(r=>r.date))].sort();
+ const cheapestOn=d=>picked.filter(r=>r.date===d).reduce((a,b)=>b.price<a.price?b:a);
+ const [first,last]=[cheapestOn(days[0]),cheapestOn(days.at(-1))],fall=first.price/last.price;
+ $('price-summary').textContent=`At ECI ${threshold} or more, the cheapest model cost ${usd(first.price)} per million tokens in ${formatDate(first.date,'month')} and ${usd(last.price)} on ${formatDate(last.date)}`+(fall>=1.5?`: ${number(Math.round(fall))} times cheaper.`:'.');
 }
 function renderAdoption(view){
  const {figures}=ledger.data;
- document.querySelectorAll('[data-adoption]').forEach(b=>{const on=b.dataset.adoption===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+ document.addEventListener('click',e=>{if(e.target.closest('a[href="#eci"]'))$('eci').open=true;});
+document.querySelectorAll('[data-adoption]').forEach(b=>{const on=b.dataset.adoption===view;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
  if(view==='tokens'){
   const month=figures.token_age.at(-1).month,young=figures.token_age.find(r=>r.month===month&&r.age==='under_3m');
   $('adoption-chart').innerHTML=renderTokenAge(figures.token_age);
-  $('adoption-summary').textContent=young?`In ${month}, models under three months old took ${(young.share*100).toFixed(0)}% of OpenRouter’s tokens.`:'';
+  $('adoption-summary').textContent=young?`In ${formatDate(`${month}-01`,'month')}, models under three months old took ${(young.share*100).toFixed(0)}% of OpenRouter’s tokens.`:'';
   return;
  }
  $('adoption-chart').innerHTML=renderCohortDownloads(figures.cohort_downloads);
  const day=figures.cohort_downloads.at(-1).date,latest=figures.cohort_downloads.filter(r=>r.date===day),total=latest.reduce((s,r)=>s+r.downloads_30d,0);
- $('adoption-summary').textContent=`On ${formatDate(day)}: `+latest.map(r=>`${r.cohort} models ${Math.round(r.downloads_30d/total*100)}%`).join(', ')+' of the ledger’s Hub downloads in the past 30 days.';
+ const newest=latest.reduce((a,b)=>b.cohort>a.cohort?b:a);
+ $('adoption-summary').textContent=`On ${formatDate(day)}, models released before ${newest.cohort} still took ${Math.round((1-newest.downloads_30d/total)*100)}% of the ledger’s Hub downloads in the past 30 days.`;
 }
 function renderObsolescence(field){
  const bins=ageBins(ledger.data.obsolescence,field);

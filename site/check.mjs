@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {marketPayload, parseCsv} from './build.mjs';
 import {NO_COUNTRY, createLedger, marketOn, perMillion} from './ledger-engine.mjs';
 import {ARENA_METRIC, COUNTRIES, accessGroup, ageBins, annotateGroups, arenaBest, annualCounts, blendedPrice, budgetBest, capabilityFrontier, cheapestPrices, downloadsByCohort, eciScores,
-  categoryShares, frontierLag, gapBins, mentionBins, opennessTier, priceScoreFrontier, priceToScore, renderFrontier, renderGap, renderLines, retirementFates, sampleDays, scatterPoints, tokenShareByAge,
+  categoryMix, categoryShares, frontierLag, gapBins, mentionBins, opennessTier, priceScoreFrontier, priceToScore, renderFrontier, renderGap, renderLines, renderShareArea, retirementFates, sampleDays, scatterPoints, tokenShareByAge,
   yearlyMedians} from './charts.mjs';
 import {existsSync, readFileSync} from 'node:fs';
 
@@ -144,7 +144,8 @@ assert.deepEqual(downloadsByCohort([hubRun('o1', '100', '2025-01-06', '2025-01-1
   {date: '2025-01-13', cohort: '2025', downloads_30d: 7, repos: 1}]);
 const usageRow = (date, model_permaslug, model_id, total_tokens, day_total_tokens) => ({date, model_permaslug, model_id, total_tokens, day_total_tokens});
 assert.deepEqual(tokenShareByAge([usageRow('2025-04-01', 'a/o2', 'o2', '60', '100'), usageRow('2025-04-01', 'a/o1', 'o1', '30', '100'),
-  usageRow('2025-04-01', 'other', '', '10', '100'), usageRow('2025-04-02', 'b/x', '', '50', '100'), usageRow('2025-04-02', 'other', '', '50', '100')], cohortModels)
+  usageRow('2025-04-01', 'other', '', '10', '100'), usageRow('2025-04-02', 'b/x', '', '50', '100'), usageRow('2025-04-02', 'other', '', '50', '100'),
+  usageRow('2025-04-30', 'other', '', '0', '0'), usageRow('2025-05-01', 'other', '', '9', '9')], cohortModels)
   .map(r => [r.age, r.share]), [['other', 0.3], ['over_1y', 0.15], ['under_3m', 0.3], ['unknown', 0.25]]);
 const weekRow = (week_start, category, model_permaslug, model_id, total_tokens, rank) =>
   ({week_start, category, model_permaslug, model_id, total_tokens, rank, week_total_tokens: '100', as_of: '2025-04-14T03:00:00Z'});
@@ -154,6 +155,11 @@ const weekly = categoryShares([weekRow('2025-04-07', 'legal', 'a/o1', 'o1', '60'
 assert.deepEqual(weekly.map(r => [r.week_start, r.group, r.share, r.leader]),
   [['2025-04-07', 'open', 0.6, 'O1'], ['2025-04-07', 'api_only', 0, 'O1'], ['2025-04-07', 'unknown', 0.3, 'O1'], ['2025-04-07', 'other', 0.1, 'O1']],
   'the week still in progress on the as_of day is skipped');
+const mixRows = [weekRow('2025-04-07', 'legal', 'other', '', '100', ''), {...weekRow('2025-04-07', 'trivia', 'other', '', '300', ''), week_total_tokens: '300'}];
+assert.deepEqual(categoryMix(mixRows).map(r => [r.category, r.share]), [['legal', 0.25], ['trivia', 0.75]]);
+assert.throws(() => categoryMix([...mixRows, weekRow('2025-03-31', 'legal', 'other', '', '100', '')]), /2025-03-31 has no trivia/);
+assert.match(renderShareArea([{x: Date.UTC(2025, 4, 19), values: {a: 1}}, {x: Date.UTC(2025, 9, 6), values: {a: 1}}], [{key: 'a', label: 'A', color: '#000'}], 'L'),
+  />Jul 2025<\/text>.*>Oct 2025</, 'a span under two years is marked by quarter');
 const aged = ageBins([['open_weights', '-4'], ['open_weights', '90'], ['open_weights', '400'], ['api_only', '']]
   .map(([access_group, days]) => ({access_group, technical_obsolete_age_days: days})), 'technical_obsolete_age_days');
 assert.deepEqual([aged.open_weights.counts, aged.open_weights.median, aged.api_only.n], [[1, 1, 0, 0, 1, 0], 90, 0]);

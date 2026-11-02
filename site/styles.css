@@ -90,6 +90,20 @@
 .scatter .pt{opacity:.62;cursor:pointer;stroke:#fff;stroke-width:.6}
 .scatter .pt:hover{opacity:1;stroke:var(--ink);stroke-width:1.2}
 .scatter .median{fill:none;stroke-width:2.4;stroke-linejoin:round;pointer-events:none}
+.share-area path{stroke:#fff;stroke-width:.6}
+.share-area .grid line{stroke:rgba(255,255,255,.45)}
+.mix-grid{display:grid;grid-template-columns:minmax(400px,1fr) 1.4fr;gap:32px;align-items:start}
+.mix-title{font-size:14px;font-weight:600;color:var(--ink);margin:0 0 12px}
+.pie{display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:center}
+.pie svg{width:100%;height:auto;display:block}
+.pie svg text{font-family:var(--mono);font-size:14px;font-weight:600}
+.pie svg path{stroke:#fff;stroke-width:1}
+.pie-key{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13.5px;color:#4d5a52}
+.pie-key li{display:grid;grid-template-columns:12px 1fr auto;gap:8px;align-items:center}
+.pie-key i{width:10px;height:10px;border-radius:2px;background:var(--c)}
+.pie-key span{font-family:var(--mono);font-size:12.5px;color:var(--ink)}
+.eci-link{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
+@media (max-width:900px){.mix-grid{grid-template-columns:1fr}}
 .metric-tabs{display:inline-flex;margin-top:14px;border:1px solid #d6dfcc;border-radius:5px;overflow:hidden}
 .metric-tab{padding:7px 14px;font-size:14px;color:#4d5a52;background:#fff}
 .metric-tab+.metric-tab{border-left:1px solid #d6dfcc}
