@@ -116,8 +116,8 @@ function renderFindings(){
  $('mix-as-of').textContent=formatDate(meta.categoryAsOf.slice(0,10));
  $('mix-chart').innerHTML=renderCategoryMix(figures.category_mix);
  const mixWeeks=[...new Set(figures.category_mix.map(r=>r.week_start))].sort(),mixTop=figures.category_mix.filter(r=>r.week_start===mixWeeks.at(-1)).sort((a,b)=>b.share-a.share)[0];
- const mixFirst=figures.category_mix.find(r=>r.week_start===mixWeeks[0]&&r.category===mixTop.category);
- $('mix-summary').textContent=`${categoryLabel(mixTop.category)} is the biggest use: ${Math.round(mixTop.share*100)}% of tokens in the week of ${formatDate(mixWeeks.at(-1))}, against ${Math.round(mixFirst.share*100)}% in the first week on record (${formatDate(mixWeeks[0])}).`;
+ const yearAgo=new Date(Date.parse(mixWeeks.at(-1))-364*864e5).toISOString().slice(0,10),mixThen=figures.category_mix.find(r=>r.week_start===yearAgo&&r.category===mixTop.category);
+ $('mix-summary').textContent=`${categoryLabel(mixTop.category)} is the biggest use: ${Math.round(mixTop.share*100)}% of tokens in the week of ${formatDate(mixWeeks.at(-1))}`+(mixThen?`, against ${Math.round(mixThen.share*100)}% a year earlier.`:'.');
  $('usage-as-of').textContent=formatDate(meta.usageAsOf.slice(0,10));
  $('category-as-of').textContent=formatDate(meta.categoryAsOf.slice(0,10));
  $('category-week').textContent=formatDate(figures.category_share[0].week_start);

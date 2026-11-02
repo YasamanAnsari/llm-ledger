@@ -96,7 +96,7 @@
 .mix-title{font-size:14px;font-weight:600;color:var(--ink);margin:0 0 12px}
 .pie{display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:center}
 .pie svg{width:100%;height:auto;display:block}
-.pie svg text{font-family:var(--mono);font-size:14px;font-weight:600}
+.pie svg text{font-family:var(--mono);font-size:14px;font-weight:600;stroke:none}
 .pie svg path{stroke:#fff;stroke-width:1}
 .pie-key{list-style:none;margin:0;padding:0;display:grid;gap:5px;font-size:13.5px;color:#4d5a52}
 .pie-key li{display:grid;grid-template-columns:12px 1fr auto;gap:8px;align-items:center}
