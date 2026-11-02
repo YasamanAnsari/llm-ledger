@@ -478,6 +478,53 @@ export function tokenShareByAge(usage, models) {
   }).sort((a, b) => a.month.localeCompare(b.month) || a.age.localeCompare(b.age));
 }
 
+export const USAGE_GROUPS = [...OPEN_OR_API,
+  {key: 'unknown', label: 'Not in the ledger', color: '#a7aea6'},
+  {key: 'other', label: 'Outside the weekly top 50', color: '#d4d9d0'}];
+
+/** Open-weight, API-only, unknown and long-tail shares of each OpenRouter
+ * use-case category's tokens in the latest complete week (the trailing
+ * bucket can still be in progress on the `as_of` day), with the week's
+ * leading model. */
+export function categoryShares(rows, models) {
+  const asOf = Date.parse(rows.map(r => r.as_of).sort().at(-1).slice(0, 10));
+  const week = rows.map(r => r.week_start).filter(w => Date.parse(w) + 7 * 864e5 <= asOf).sort().at(-1);
+  const byId = new Map(models.map(m => [m.model_id, m]));
+  const out = [];
+  for (const category of [...new Set(rows.map(r => r.category))].sort()) {
+    const weekRows = rows.filter(r => r.week_start === week && r.category === category);
+    const total = Number(weekRows[0].week_total_tokens), lead = weekRows.find(r => r.rank === '1');
+    const tokens = new Map(USAGE_GROUPS.map(g => [g.key, 0]));
+    for (const r of weekRows) {
+      const key = r.model_permaslug === 'other' ? 'other' : OPEN_OR_API_OF[byId.get(r.model_id)?.access_group] || 'unknown';
+      tokens.set(key, tokens.get(key) + Number(r.total_tokens));
+    }
+    for (const [group, n] of tokens) {
+      out.push({week_start: week, category, group, tokens: n, share: n / total,
+        leader: byId.get(lead.model_id)?.canonical_name || lead.model_permaslug, leader_share: Number(lead.total_tokens) / total});
+    }
+  }
+  return out;
+}
+
+const categoryLabel = c => c === 'marketing/seo' ? 'Marketing (SEO)' : c[0].toUpperCase() + c.slice(1);
+
+export function renderCategoryShares(rows) {
+  const open = Object.fromEntries(rows.filter(r => r.group === 'open').map(r => [r.category, r.share]));
+  const categories = Object.keys(open).sort((a, b) => open[b] - open[a]);
+  const bars = categories.map(c => {
+    const parts = USAGE_GROUPS.map(g => rows.find(r => r.category === c && r.group === g.key)).filter(r => r.tokens);
+    const lead = parts[0];
+    return `<div class="fate-row"><span class="fate-label">${esc(categoryLabel(c))} <small>leader: ${esc(lead.leader)}, ${Math.round(lead.leader_share * 100)}%</small></span><div class="fate-bar">${parts.map(r => {
+      const g = USAGE_GROUPS.find(x => x.key === r.group), p = Math.round(r.share * 100);
+      return `<i style="flex:${r.share.toFixed(4)};--c:${g.color}" title="${esc(g.label)}: ${p}% of ${esc(categoryLabel(c))} tokens">${p >= 6 ? `${p}%` : ''}</i>`;
+    }).join('')}</div></div>`;
+  }).join('');
+  const table = dataTable('Share of OpenRouter tokens by access group and use case', ['Use case', 'Leading model', ...USAGE_GROUPS.map(g => g.label)],
+    categories.map(c => [categoryLabel(c), rows.find(r => r.category === c).leader, ...USAGE_GROUPS.map(g => `${Math.round((rows.find(r => r.category === c && r.group === g.key)?.share || 0) * 100)}%`)]));
+  return legend(USAGE_GROUPS) + `<div class="fate-chart">${bars}</div>` + table;
+}
+
 /** Axis from data values to pixels between `from` and `to`, with labelled ticks. */
 function axis({type, step, format}, values, from, to) {
   let lo = Math.min(...values), hi = Math.max(...values), ticks;

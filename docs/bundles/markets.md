@@ -13,6 +13,7 @@ start or stop offering one?
 | `capability_observations.csv` | a run of days with one context length, output limit, modality set and tool flag |
 | `download_observations.csv` | a Hub repo's 30-day and all-time downloads on one weekly `hub-stats` day since 2024-07-29, or a ModelScope repo's cumulative downloads on a sweep day |
 | `usage_observations.csv` | one model's tokens on OpenRouter on one day, for the day's top 50 plus an `other` row (CC BY 4.0, OpenRouter) |
+| `usage_category_observations.csv` | the same by ISO week within one of OpenRouter's twelve use-case categories (programming, roleplay, legal, ...); token counts are OpenRouter's estimates from a sampled dataset (CC BY 4.0, OpenRouter) |
 | `market_on_date.csv` | every listing of a ledger model on the newest observed day, with that day's price and limits (USD per 1M tokens) |
 | `price_changes.csv` | two successive price runs of one id with different prices |
 | `obsolescence.csv` | per model: when it fell out of LMArena's top 30 for good (technical) and out of OpenRouter's daily top 50 (usage), with ages from first availability |

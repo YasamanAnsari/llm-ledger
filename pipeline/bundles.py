@@ -35,7 +35,7 @@ BUNDLES = {
         (f"{CORE}/attributes.csv", f"{OBS}/availability_observations.csv",
          f"{OBS}/price_observations.csv", f"{OBS}/capability_observations.csv",
          f"{OBS}/download_observations.csv", f"{OBS}/usage_observations.csv",
-         f"{GEN}/market_on_date.csv", f"{GEN}/price_changes.csv", f"{GEN}/obsolescence.csv"),
+         f"{OBS}/usage_category_observations.csv", f"{GEN}/market_on_date.csv", f"{GEN}/price_changes.csv", f"{GEN}/obsolescence.csv"),
         {"api_preview", "api_ga", "free_tier", "consumer_rollout", "platform_availability",
          "price_changed", "retired"},
     ),

@@ -4,7 +4,7 @@ import {execSync} from 'node:child_process';
 import {cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {annotateGroups, budgetBest, cheapestPrices, downloadsByCohort, eciScores, priceScoreFrontier, priceToScore,
+import {annotateGroups, budgetBest, categoryShares, cheapestPrices, downloadsByCohort, eciScores, priceScoreFrontier, priceToScore,
   sampleDays, tokenShareByAge} from './charts.mjs';
 import {csvEncode} from './ledger-engine.mjs';
 
@@ -31,6 +31,7 @@ const TABLES = {
 };
 const DOWNLOAD_OBSERVATIONS = 'data/observations/download_observations.csv';
 const USAGE_OBSERVATIONS = 'data/observations/usage_observations.csv';
+const USAGE_CATEGORY_OBSERVATIONS = 'data/observations/usage_category_observations.csv';
 // The first full month of LiteLLM's price history (from 2023-09-06).
 const PRICE_START = '2023-10-01';
 const ECI_THRESHOLDS = [130, 140, 150];
@@ -45,7 +46,7 @@ const DOWNLOADS = [
   'data/generated/llm_ledger_capability.csv', 'data/generated/llm_ledger_benchmarks.csv',
   'data/generated/llm_ledger_arena.csv', 'data/generated/research_mentions_monthly.csv',
   'data/generated/research_first_mentions.csv', 'data/observations/research_mentions.csv',
-  'data/generated/obsolescence.csv',
+  'data/generated/obsolescence.csv', USAGE_CATEGORY_OBSERVATIONS,
   ...Object.values(OBSERVATIONS),
   'data/observations/model_versions.csv',
 ];
@@ -119,7 +120,7 @@ export function marketPayload(models, observations) {
 
 /** The tables behind the price, adoption and usage figures; each is written
  * as dist/data/fig-<name>.csv and drawn from ledger.json. */
-export function figureTables(data, prices, downloads, usage) {
+export function figureTables(data, prices, downloads, usage, usageByCategory) {
   const models = data.models.map(m => ({...m})), capability = data.capability.map(r => ({...r}));
   annotateGroups(models, data.organizations, capability);
   const last = prices.map(r => r.last_observed).sort().at(-1);
@@ -131,6 +132,7 @@ export function figureTables(data, prices, downloads, usage) {
     budget_best: budgetBest(cheapest, scores, BUDGET_USD_PER_1M),
     cohort_downloads: downloadsByCohort(downloads, models),
     token_age: tokenShareByAge(usage, models),
+    category_share: categoryShares(usageByCategory, models),
   };
 }
 
@@ -159,13 +161,14 @@ function main() {
   cpSync(join(REPO, 'assets/orgs'), join(DIST, 'assets/orgs'), {recursive: true, filter: f => !f.endsWith('.md')});
   for (const path of DOWNLOADS) cpSync(join(REPO, path), join(DIST, 'data', path.split('/').at(-1)));
   const observations = Object.fromEntries(Object.entries(OBSERVATIONS).map(([name, path]) => [name, readTable(path)]));
-  const usage = readTable(USAGE_OBSERVATIONS);
-  data.figures = figureTables(data, observations.price, readTable(DOWNLOAD_OBSERVATIONS), usage);
+  const usage = readTable(USAGE_OBSERVATIONS), usageByCategory = readTable(USAGE_CATEGORY_OBSERVATIONS);
+  data.figures = figureTables(data, observations.price, readTable(DOWNLOAD_OBSERVATIONS), usage, usageByCategory);
   for (const [name, rows] of Object.entries(data.figures)) {
     if (!rows.length) throw new Error(`figure table ${name} is empty`);
     writeFileSync(join(DIST, `data/fig-${name.replaceAll('_', '-')}.csv`), csvEncode(rows, Object.keys(rows[0])));
   }
   data.meta.usageAsOf = usage.map(r => r.as_of).sort().at(-1);
+  data.meta.categoryAsOf = usageByCategory.map(r => r.as_of).sort().at(-1);
   writeFileSync(join(DIST, 'data/ledger.json'), JSON.stringify(data));
   const marketData = {...marketPayload(data.models, observations), commit: data.meta.commit,
     orgs: Object.fromEntries(data.organizations.map(o => [o.org_id, o.short_name || o.canonical_name])),

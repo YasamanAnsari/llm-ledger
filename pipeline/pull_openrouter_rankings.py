@@ -9,6 +9,11 @@ OpenRouter plus one `other` row for everything else. The dataset is CC BY
 data/observations/usage_observations.csv from it; the payloads go under
 data/raw/openrouter_rankings/<day>/ with their `meta` block.
 
+The same endpoint takes a `category` filter (programming, roleplay, legal,
+...). That slice is a sampled, upsampled dataset served by ISO week only,
+so it goes to usage_category_observations.csv with `week_start` in place
+of `date`; its token counts are estimates.
+
 Needs OPENROUTER_API_KEY; without it the puller skips. Spans are at most
 366 days (the API's limit); the API allows 30 requests a minute.
 
@@ -38,12 +43,16 @@ FIRST_DAY = date(2025, 1, 1)
 MAX_SPAN_DAYS = 366
 
 
-def spans(first: date, last: date) -> list:
+def spans(first: date, last: date, whole_weeks: bool = False) -> list:
     """(start, end) pairs covering first..last, each at most MAX_SPAN_DAYS
-    days inclusive."""
+    days inclusive. With `whole_weeks` every span but the last ends on a
+    Sunday, so a weekly bucket is never cut by a span boundary and asked
+    for twice."""
     out, start = [], first
     while start <= last:
         end = min(start + timedelta(days=MAX_SPAN_DAYS - 1), last)
+        if whole_weeks and end < last:
+            end -= timedelta(days=(end.weekday() + 1) % 7)
         out.append((start, end))
         start = end + timedelta(days=1)
     return out
@@ -72,7 +81,9 @@ def usage_rows(payload: dict, url: str, resolve, slug_ids: dict) -> list:
     """Rows of usage_observations for one API response. Token counts stay
     the exact integers the API states (as strings); `rank` orders a day's
     named models by tokens, ties sharing the higher rank. A permaslug the
-    listings do not know is looked up as an id itself."""
+    listings do not know is looked up as an id itself. The API omits the
+    `other` row when nothing fell outside the top 50 (a thin sampled week),
+    so a day carries at most one."""
     by_day: dict = defaultdict(list)
     for r in payload["data"]:
         if not r["total_tokens"].isdigit():
@@ -81,8 +92,8 @@ def usage_rows(payload: dict, url: str, resolve, slug_ids: dict) -> list:
         by_day[r["date"]].append(r)
     rows = []
     for day, entries in by_day.items():
-        if sum(1 for r in entries if r["model_permaslug"] == schema.USAGE_OTHER) != 1:
-            raise ValueError(f"{SOURCE}: {day} does not carry exactly one `other` row")
+        if sum(1 for r in entries if r["model_permaslug"] == schema.USAGE_OTHER) > 1:
+            raise ValueError(f"{SOURCE}: {day} carries more than one `other` row")
         total = sum(int(r["total_tokens"]) for r in entries)
         named = sorted((int(r["total_tokens"]) for r in entries
                         if r["model_permaslug"] != schema.USAGE_OTHER), reverse=True)
@@ -101,6 +112,14 @@ def usage_rows(payload: dict, url: str, resolve, slug_ids: dict) -> list:
     return rows
 
 
+def category_rows(payload: dict, url: str, resolve, slug_ids: dict, category: str) -> list:
+    """Rows of usage_category_observations for one `category` response:
+    the daily rows with the week's Monday as `week_start`."""
+    return [{"week_start": r.pop("date"), "category": category,
+             "week_total_tokens": r.pop("day_total_tokens"), **r}
+            for r in usage_rows(payload, url, resolve, slug_ids)]
+
+
 def main() -> int:
     key = os.environ.get("OPENROUTER_API_KEY", "")
     if not key:
@@ -109,16 +128,24 @@ def main() -> int:
     yesterday = datetime.now(timezone.utc).date() - timedelta(days=1)
     resolve = observe.model_resolver(schema.read_table(schema.CROSSWALK))
     slug_ids = permaslug_ids(archived_listings())
-    rows = []
-    for i, (start, end) in enumerate(spans(FIRST_DAY, yesterday)):
-        if i:
-            time.sleep(2.5)
-        url = f"{ENDPOINT}?start_date={start}&end_date={end}"
+
+    def pull(start: date, end: date, category: str = "") -> tuple:
+        """Fetch and archive one span; (payload, url). Sleeps after the
+        call to stay under the API's 30 requests a minute."""
+        query = f"start_date={start}&end_date={end}" + (f"&category={category}" if category else "")
+        url = f"{ENDPOINT}?{query}"
         raw = fetch.get_bytes(url, headers={"Authorization": f"Bearer {key}"})
-        schema.write_snapshot(SOURCE, f"rankings-daily_{start}_{end}.json", raw, url)
+        slice_name = f"_{category.replace('/', '-')}" if category else ""
+        schema.write_snapshot(SOURCE, f"rankings-daily{slice_name}_{start}_{end}.json", raw, url)
         payload = json.loads(raw)
-        rows += usage_rows(payload, url, resolve, slug_ids)
-        print(f"{SOURCE}: {start}..{end}: {len(payload['data'])} rows, as of {payload['meta']['as_of']}")
+        print(f"{SOURCE}: {category or 'all'} {start}..{end}: {len(payload['data'])} rows, "
+              f"as of {payload['meta']['as_of']}")
+        time.sleep(2.5)
+        return payload, url
+
+    rows = []
+    for start, end in spans(FIRST_DAY, yesterday):
+        rows += usage_rows(*pull(start, end), resolve, slug_ids)
     days = {r["date"] for r in rows}
     missing = (yesterday - FIRST_DAY).days + 1 - len(days)
     if missing:
@@ -126,6 +153,14 @@ def main() -> int:
     schema.write_table(schema.USAGE_OBSERVATIONS, rows, schema.OBSERVATIONS_DIR)
     mapped = sum(1 for r in rows if r["model_id"])
     print(f"{SOURCE}: {len(rows)} rows over {len(days)} days, {mapped} mapped to a ledger model")
+
+    by_category = []
+    for category in schema.USAGE_CATEGORIES:
+        for start, end in spans(FIRST_DAY, yesterday, whole_weeks=True):
+            by_category += category_rows(*pull(start, end, category), resolve, slug_ids, category)
+    weeks = {r["week_start"] for r in by_category}
+    schema.write_table(schema.USAGE_CATEGORY_OBSERVATIONS, by_category, schema.OBSERVATIONS_DIR)
+    print(f"{SOURCE}: {len(by_category)} category rows over {len(weeks)} weeks")
     return 0
 
 

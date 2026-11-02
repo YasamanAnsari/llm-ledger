@@ -333,8 +333,23 @@ A model missing from a day was not in that day's top 50; it is not zero.
 OpenRouter is one router among many: these are shares of OpenRouter
 traffic, not of the market. Cite as "Source: OpenRouter
 (openrouter.ai/rankings), as of `<as_of>`. Licensed under CC BY 4.0."
-Validation rule 18 checks one `other` row per day and that the day total
-sums the rows.
+Validation rule 18 checks at most one `other` row per day (the API omits
+it when nothing fell outside the top 50) and that the day total sums the
+rows.
+
+### usage_category_observations.csv
+
+The same ranking filtered by OpenRouter's use-case `category`
+(`programming`, `roleplay`, `marketing`, `marketing/seo`, `technology`,
+`science`, `translation`, `legal`, `finance`, `health`, `trivia`,
+`academia`), written by the same puller. OpenRouter serves that slice
+from a sampled, upsampled dataset by ISO week only, so each row is one
+week, category and model, and `total_tokens` is OpenRouter's estimate,
+not an exact count. Columns are those of `usage_observations` with
+`week_start` (a Monday) for `date`, `category` added, and
+`week_total_tokens` for `day_total_tokens`; the primary key is
+`(week_start, category, model_permaslug)`. The latest week may still be
+in progress when pulled. Rule 18 applies per week and category.
 
 ### citation_observations.csv
 
@@ -673,9 +688,10 @@ rewrite the dataset.
     family)`, has an arXiv id, a `vN` version and a day, a known
     `match_type` and `source`, always a `family`, and a known `model_id`
     exactly when `match_type = model`.
-18. Each `usage_observations` day has whole token counts, exactly one
-    `other` row and a `day_total_tokens` equal to the sum of its rows;
-    a set `model_id` is a known model.
+18. Each `usage_observations` day, and each `usage_category_observations`
+    week and category, has whole token counts, at most one `other` row
+    and a period total equal to the sum of its rows; a set `model_id` is
+    a known model.
 19. A citation row names a known model, a `linked_by` in the vocabulary,
     source `openalex` or `semantic_scholar`, and a whole-number count.
 20. `predecessor_id` and `successor_id` mirror each other: when A names B

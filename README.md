@@ -71,6 +71,7 @@ models on `model_id`.
 | prices since 2023, from LiteLLM's git history | [`data/observations/price_observations.csv`](data/observations/price_observations.csv) (source `litellm_git`), changes in [`price_changes.csv`](data/generated/price_changes.csv) |
 | weekly Hugging Face downloads since 2024-07 and ModelScope downloads | [`data/observations/download_observations.csv`](data/observations/download_observations.csv) |
 | OpenRouter's daily top-50 models by tokens since 2025 | [`data/observations/usage_observations.csv`](data/observations/usage_observations.csv) |
+| which models each use case runs on (programming, roleplay, legal, ...), weekly on OpenRouter | [`data/observations/usage_category_observations.csv`](data/observations/usage_category_observations.csv) |
 | when a model stopped being top-ranked (LMArena top 30) and stopped being used (OpenRouter top 50) | [`data/generated/obsolescence.csv`](data/generated/obsolescence.csv) |
 | which exact version was served: Hub commit, API snapshot id | [`data/observations/model_versions.csv`](data/observations/model_versions.csv) |
 | everything on offer on one day, by provider, with prices | [`data/generated/market_on_date.csv`](data/generated/market_on_date.csv) (newest day; `pipeline/market.py --date D` for any other) |

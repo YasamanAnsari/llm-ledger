@@ -1,5 +1,5 @@
 import {createLedger,EVENT_LABELS,ACCESS_LABELS,PAGE_SIZE,NO_COUNTRY,formatDate,csvEncode} from './ledger-engine.mjs';
-import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,ageBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,renderPriceToScore,renderPriceFrontier,renderBudgetBest,renderCohortDownloads,renderTokenAge,usd,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES,OPEN_OR_API,AGE_BINS} from './charts.mjs';
+import {annotateGroups,annualCounts,opennessTier,gapBins,mentionBins,ageBins,retirementFates,scatterPoints,renderGap,renderFates,renderAnnual,renderScatter,capabilityFrontier,frontierLag,renderFrontier,arenaBest,renderPriceToScore,renderPriceFrontier,renderBudgetBest,renderCohortDownloads,renderTokenAge,renderCategoryShares,usd,ARENA_METRIC,METRICS,ACCESS,OPENNESS,COUNTRIES,OPEN_OR_API,AGE_BINS} from './charts.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const url=value=>{try{const u=new URL(value);return ['http:','https:'].includes(u.protocol)?esc(u.href):'#';}catch{return '#';}};
@@ -108,6 +108,11 @@ function renderFindings(){
  const lastDay=figures.budget_best.at(-1).date,[best,cheap]=['overall','under_budget'].map(s=>figures.budget_best.find(r=>r.date===lastDay&&r.series===s));
  $('budget-summary').textContent=best&&cheap?`On ${formatDate(lastDay)} the best listed model, ${best.model}, scores ${best.eci} at ${usd(best.price)} per million tokens; the best at or under ${usd(cheap.budget)}, ${cheap.model}, scores ${cheap.eci}.`:'';
  $('usage-as-of').textContent=meta.usageAsOf;
+ $('category-as-of').textContent=meta.categoryAsOf;
+ $('category-week').textContent=formatDate(figures.category_share[0].week_start);
+ $('category-chart').innerHTML=renderCategoryShares(figures.category_share);
+ const openShares=figures.category_share.filter(r=>r.group==='open').sort((a,b)=>b.share-a.share),[mostOpen,leastOpen]=[openShares[0],openShares.at(-1)];
+ $('category-summary').textContent=`Open-weight models took ${Math.round(mostOpen.share*100)}% of ${mostOpen.category} tokens and ${Math.round(leastOpen.share*100)}% of ${leastOpen.category} tokens.`;
  renderAdoption('downloads');
  renderObsolescence('technical_obsolete_age_days');
  const verified=meta.confidence.verified/meta.events*100,inferred=meta.confidence.inferred/meta.events*100;

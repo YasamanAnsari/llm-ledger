@@ -296,8 +296,9 @@ MENTION_TYPES = {"model", "family"}
 
 # OpenRouter's public daily ranking (Data API `rankings-daily`, CC BY 4.0),
 # written by pipeline/pull_openrouter_rankings.py: the top 50 public models
-# by tokens each day plus one `other` row for the rest. `rank` is blank for
-# `other`; `day_total_tokens` sums every row of the day, `other` included,
+# by tokens each day plus one `other` row for the rest (omitted when nothing
+# fell outside the top 50). `rank` is blank for `other`; `day_total_tokens`
+# sums every row of the day, `other` included,
 # so a share is total_tokens / day_total_tokens. A model below the top 50
 # that day has no row, which means "not in the top 50", not zero.
 USAGE_OBSERVATIONS = Table(
@@ -308,6 +309,20 @@ USAGE_OBSERVATIONS = Table(
     pk=("date", "model_permaslug"),
 )
 USAGE_OTHER = "other"
+
+# The same ranking sliced by OpenRouter's use-case `category` filter. That
+# slice comes from a sampled, upsampled dataset: `total_tokens` is an
+# estimate and the API only serves it by ISO week, so `week_start` is a
+# Monday and `week_total_tokens` plays the part of `day_total_tokens`.
+USAGE_CATEGORIES = ("programming", "roleplay", "marketing", "marketing/seo", "technology",
+                    "science", "translation", "legal", "finance", "health", "trivia", "academia")
+USAGE_CATEGORY_OBSERVATIONS = Table(
+    name="usage_category_observations",
+    filename="usage_category_observations.csv",
+    columns=("week_start", "category", "model_permaslug", "model_id", "total_tokens", "rank",
+             "week_total_tokens", "as_of", "source_url"),
+    pk=("week_start", "category", "model_permaslug"),
+)
 
 # Citations of the arXiv paper behind a model, written by
 # pipeline/pull_citations.py. `year` blank is the source's total; otherwise

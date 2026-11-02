@@ -202,6 +202,9 @@ def test_openrouter_ranking_keeps_exact_tokens_and_a_day_total_that_includes_oth
     import pull_openrouter_rankings as rankings
     assert rankings.spans(date(2025, 1, 1), date(2026, 10, 28)) == [
         (date(2025, 1, 1), date(2026, 1, 1)), (date(2026, 1, 2), date(2026, 10, 28))]
+    # Weekly slices: the first span ends on the Sunday before 2026-01-01.
+    assert rankings.spans(date(2025, 1, 1), date(2026, 10, 28), whole_weeks=True) == [
+        (date(2025, 1, 1), date(2025, 12, 28)), (date(2025, 12, 29), date(2026, 10, 28))]
     payload = {"meta": {"as_of": "2026-10-29T03:59:11.480Z"}, "data": [
         {"date": "2025-01-01", "model_permaslug": "anthropic/claude-3.5-sonnet:beta",
          "total_tokens": "11646035656"},
@@ -223,6 +226,10 @@ def test_openrouter_ranking_keeps_exact_tokens_and_a_day_total_that_includes_oth
         ("deepseek-chat-v3-20241226", "deepseek-v3", "3"), ("other", "", "")]
     assert {r["day_total_tokens"] for r in rows} == {
         str(sum(int(r["total_tokens"]) for r in payload["data"]))}
+    weekly = rankings.category_rows(payload, "u", resolve, slug_ids, "legal")
+    assert set(weekly[0]) == set(rankings.schema.USAGE_CATEGORY_OBSERVATIONS.columns)
+    assert (weekly[0]["week_start"], weekly[0]["category"], weekly[0]["week_total_tokens"]) == (
+        "2025-01-01", "legal", rows[0]["day_total_tokens"])
     payload["data"][0]["total_tokens"] = "1.2e10"
     try:
         rankings.usage_rows(payload, "u", resolve, slug_ids)

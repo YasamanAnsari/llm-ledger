@@ -503,25 +503,29 @@ def check_rule17_research_mentions(tables: dict) -> list:
 
 
 def check_rule18_usage(tables: dict) -> list:
-    """Each ranking day holds one `other` row, whole token counts that sum
-    to the day total, and model ids the ledger knows."""
+    """Each ranking period (a day, or a week per category) holds at most
+    one `other` row, whole token counts that sum to the period total, and
+    model ids the ledger knows."""
     errors = []
     model_ids = {m["model_id"] for m in tables["models"]}
-    days: dict = {}
+    periods: dict = {}
     for r in tables.get(schema.USAGE_OBSERVATIONS.name, []):
-        days.setdefault(r["date"], []).append(r)
-        if r["model_id"] and r["model_id"] not in model_ids:
-            errors.append(f"rule18: usage {r['date']}/{r['model_permaslug']} names unknown model "
-                          f"{r['model_id']}")
-    for day, rows in days.items():
-        if not all(r["total_tokens"].isdigit() and r["day_total_tokens"].isdigit() for r in rows):
-            errors.append(f"rule18: usage {day} has a token count that is not a whole number")
+        periods.setdefault((r["date"], "day_total_tokens"), []).append(r)
+    for r in tables.get(schema.USAGE_CATEGORY_OBSERVATIONS.name, []):
+        periods.setdefault((f"{r['week_start']} {r['category']}", "week_total_tokens"), []).append(r)
+    for (period, total_column), rows in periods.items():
+        for r in rows:
+            if r["model_id"] and r["model_id"] not in model_ids:
+                errors.append(f"rule18: usage {period}/{r['model_permaslug']} names unknown model "
+                              f"{r['model_id']}")
+        if not all(r["total_tokens"].isdigit() and r[total_column].isdigit() for r in rows):
+            errors.append(f"rule18: usage {period} has a token count that is not a whole number")
             continue
         others = [r for r in rows if r["model_permaslug"] == schema.USAGE_OTHER]
-        totals = {r["day_total_tokens"] for r in rows}
-        if len(others) != 1 or totals != {str(sum(int(r["total_tokens"]) for r in rows))}:
-            errors.append(f"rule18: usage {day} needs one `other` row and a day total that sums "
-                          "its rows")
+        totals = {r[total_column] for r in rows}
+        if len(others) > 1 or totals != {str(sum(int(r["total_tokens"]) for r in rows))}:
+            errors.append(f"rule18: usage {period} needs at most one `other` row and a total "
+                          "that sums its rows")
     return errors
 
 
@@ -630,6 +634,7 @@ def main() -> int:
     args = parser.parse_args()
     tables = schema.load_core()
     for table in schema.OBSERVATION_TABLES + (schema.RESEARCH_MENTIONS, schema.USAGE_OBSERVATIONS,
+                                              schema.USAGE_CATEGORY_OBSERVATIONS,
                                               schema.CITATION_OBSERVATIONS):
         tables[table.name] = schema.read_table(table, schema.OBSERVATIONS_DIR)
     errors, warnings = validate_tables(tables, today=date.today())
