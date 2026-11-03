@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1879; events: 2916
-- Models: curated 73, corroborated 674, single-source 1132
-- Event confidence: verified 1173, inferred 1737, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 432 of 1642
+- Models: 1884; events: 2920
+- Models: curated 73, corroborated 675, single-source 1136
+- Event confidence: verified 1175, inferred 1739, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 432 of 1647
 
 ## By organization
 
@@ -27,22 +27,22 @@ as settled.
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 115 | 4 | 27 | 25 | 36% |
 | Google | 55 | 151 | 7 | 26 | 22 | 42% |
+| Ant Group | 54 | 64 | 0 | 27 | 27 | 44% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
-| Ant Group | 52 | 62 | 0 | 27 | 25 | 45% |
+| Marin | 51 | 51 | 0 | 0 | 51 | 0% |
 | Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
-| Marin | 50 | 50 | 0 | 0 | 50 | 0% |
 | DeepSeek | 47 | 105 | 3 | 27 | 17 | 54% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | Zhipu | 39 | 85 | 3 | 17 | 19 | 48% |
-| OpenBMB | 36 | 36 | 0 | 6 | 30 | 17% |
+| OpenBMB | 37 | 37 | 0 | 6 | 31 | 16% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Liquid AI | 33 | 36 | 0 | 23 | 10 | 67% |
+| Salesforce | 33 | 33 | 0 | 6 | 27 | 18% |
 | Tencent | 33 | 43 | 1 | 14 | 18 | 42% |
-| Salesforce | 32 | 32 | 0 | 6 | 26 | 19% |
 | Arcee | 29 | 32 | 0 | 18 | 11 | 62% |
-| Baidu | 29 | 36 | 0 | 22 | 7 | 67% |
+| Baidu | 29 | 36 | 0 | 23 | 6 | 69% |
 | Nous | 28 | 36 | 0 | 7 | 21 | 25% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
@@ -58,7 +58,7 @@ as settled.
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 36 | 1 | 10 | 5 | 47% |
+| MiniMax | 16 | 35 | 1 | 10 | 5 | 51% |
 | Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
@@ -98,10 +98,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1624 | 422 | 1201 | 1 |
+| weights_released | 1629 | 424 | 1204 | 1 |
 | platform_availability | 338 | 333 | 3 | 2 |
 | retired | 311 | 179 | 132 | 0 |
-| api_ga | 256 | 63 | 192 | 1 |
+| api_ga | 255 | 63 | 191 | 1 |
 | announced | 249 | 53 | 195 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
@@ -119,13 +119,13 @@ as settled.
 - Events it wrote: 33 (verified 5, single-source inferred 28)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 9
 
-Declined in the 7 days to 2026-11-02, by reason:
+Declined in the 7 days to 2026-11-03, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 75 |
-| no_dated_event | 47 |
-| disagrees_with_record | 2 |
+| community_lead | 72 |
+| no_dated_event | 45 |
+| disagrees_with_record | 1 |
 | order_violation | 1 |
 | third_party_claim | 1 |
 | validation_failed | 1 |

@@ -1,0 +1,8 @@
+{
+  "eci_scores.csv": {
+    "bytes": 33596,
+    "fetched_at": "2026-11-03T14:33:45+00:00",
+    "sha256": "01dc8746fa5638e7c01e86dea1d332e98e0b3c22e33e8fa251e2c9422fd17ba5",
+    "url": "https://epoch.ai/data/eci_scores.csv"
+  }
+}

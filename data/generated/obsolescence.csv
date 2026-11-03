@@ -227,7 +227,7 @@ minimax-m2-1,MiniMax M2.1,minimax,open_weights,2025-12-23,,,,,,2025-12-23,2026-0
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,2026-02-12,2026-02-16,7,2026-04-14,2026-04-17,64,2026-02-12,2026-06-11,2026-06-12,120,
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,2026-03-18,2026-03-18,8,2026-05-14,2026-05-18,61,2026-03-18,2026-09-07,2026-09-08,174,
 minimax-m3,MiniMax-M3,minimax,open_weights,2026-06-01,2026-06-03,9,2026-08-02,2026-08-03,63,2026-06-01,2026-11-01,,,
-minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,2026-10-17,2026-10-19,33,,2026-10-19,2,2026-10-19,2026-11-01,,,
+minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,2026-10-19,2026-10-19,33,,2026-10-19,0,2026-10-19,2026-11-01,,,
 ministral-14b-2512,ministral-14b-2512,mistral,open_weights,2025-12-02,,,,,,2026-02-23,2026-02-23,2026-02-24,84,
 ministral-3b,Ministral 3B,mistral,api_only,2024-10-16,,,,,,2025-04-17,2025-09-18,2025-09-19,338,
 ministral-8b,Ministral 8B,mistral,open_weights,2024-10-16,2026-10-20,325,,2026-10-20,734,2025-01-01,2025-02-18,2025-02-19,126,

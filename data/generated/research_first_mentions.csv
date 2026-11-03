@@ -19,6 +19,7 @@ bitcpm-cann-0-5b,BitCPM-CANN-0.5B,BitCPM-CANN,open_weights,2026-05-15,2026-05-15
 blip2-opt-2-7b,blip2-opt-2.7b,blip2-opt,open_weights,2023-02-06,2023-02-06,2024-04-02,2404.01911,421
 bloom-1b7,bloom-1b7,bloom-1b7,open_weights,2022-05-19,2022-05-19,2026-03-10,2603.09616,
 bloom-3b,bloom-3b,bloom,open_weights,2022-05-19,2022-05-19,2023-05-05,2305.03573,
+bloom-7b1,bloom-7b1,bloom-7b1,open_weights,2022-05-19,2022-05-19,2026-10-31,2611.01116,
 bloomz-3b,bloomz-3b,bloomz,open_weights,2022-10-08,2022-10-08,2023-08-24,2308.12674,
 bloomz-560m,bloomz-560m,bloomz,open_weights,2022-10-08,2022-10-08,2025-04-18,2504.13730,
 bloomz-7b1,bloomz-7b1,bloomz-7b1,open_weights,2022-09-27,2022-09-27,2024-12-31,2405.15453,
@@ -56,6 +57,7 @@ cosmos-reason2-2b,Cosmos-Reason2-2B,Cosmos-Reason2,open_weights,2025-12-12,2025-
 cosmos-reason2-8b,Cosmos-Reason2-8B,Cosmos-Reason2,open_weights,2025-12-12,2025-12-12,2026-07-08,2605.21917,208
 cosmos3-nano,Cosmos3-Nano,Cosmos3,open_weights,2026-03-10,2026-03-10,2026-06-26,2606.28128,108
 cosmos3-super,Cosmos3-Super,Cosmos3-Super,open_weights,2026-03-10,2026-03-10,2026-06-24,2606.23743,106
+d1-3b,d1-3B,d1,open_weights,2026-10-05,2026-10-05,2026-11-01,2611.01631,27
 deepseek-chat-v3-1,deepseek-chat-v3.1,DeepSeek-V3.1,open_weights,2025-08-21,2025-08-21,2025-11-25,2511.19874,96
 deepseek-coder-6-7b-instruct,deepseek-coder-6.7b-instruct,deepseek,open_weights,2023-10-29,2023-10-29,2026-08-31,2508.04865,1037
 deepseek-coder-7b-instruct-v1-5,deepseek-coder-7b-instruct-v1.5,deepseek-v1.5,open_weights,2024-01-25,2024-01-25,2025-03-20,2503.11921,420
@@ -91,6 +93,7 @@ deepseek-v4-flash,DeepSeek V4 Flash 0731,DeepSeek V4,open_weights,2026-04-24,202
 deepseek-v4-pro,DeepSeek-V4-Pro,DeepSeek-V4,open_weights,2026-08-13,2026-08-13,2026-04-26,2606.19348,-109
 deepseek-vl2-tiny,deepseek-vl2-tiny,deepseek-vl2,open_weights,2024-12-13,2024-12-13,2024-12-13,2412.10302,0
 devstral-small-2,Devstral Small 2,Devstral 2,open_weights,2025-12-09,2025-12-09,2026-05-29,2601.20789,171
+devstral-small-2507,Devstral-Small-2507,devstral,open_weights,2025-07-04,2025-07-04,2026-11-02,2611.02368,486
 diffusiongemma-26b-a4b-it,diffusiongemma-26B-A4B-it,diffusiongemma,open_weights,2026-06-09,2026-06-09,2026-09-16,2609.19242,99
 dolphin-v2,Dolphin-v2,Dolphin-v2,open_weights,2025-12-01,2025-12-01,2026-02-05,2602.05384,66
 dots3-note-prev,dots3-note-prev,dots3-note-prev,open_weights,2026-08-09,2026-08-09,2026-10-14,2610.19948,66
@@ -280,6 +283,7 @@ kimi-k3,Kimi K3,Kimi K3,open_weights,2026-07-16,2026-07-16,2026-07-30,2607.28568
 kimi-linear-48b-a3b-instruct,Kimi-Linear-48B-A3B-Instruct,Kimi-Linear,open_weights,2025-10-30,2025-10-30,2026-09-29,2609.38169,334
 kimi-vl-a3b-thinking-2506,Kimi-VL-A3B-Thinking-2506,Kimi,open_weights,2025-06-21,2025-06-21,2025-09-02,2508.21113,73
 laguna-xs-2,Laguna-XS.2,Laguna-XS.2,open_weights,2026-04-23,2026-04-23,2026-05-26,2605.27605,33
+lensvlm-9b,LensVLM-9B,LensVLM,open_weights,2026-09-21,2026-09-21,2026-11-01,2611.01517,41
 lfm2-1-2b,LFM2-1.2B,LFM2,open_weights,2025-07-10,2025-07-10,2025-09-17,2509.14008,69
 lfm2-2-6b,LFM2-2.6B,LFM2,open_weights,2025-09-22,2025-09-22,2025-11-28,2511.23404,67
 lfm2-350m,LFM2-350M,LFM2,open_weights,2025-07-10,2025-07-10,2025-11-12,2511.09748,125
@@ -288,6 +292,7 @@ lfm2-5-350m,LFM2.5-350M,LFM2.5,open_weights,2026-03-31,2026-03-31,2026-08-25,260
 lfm2-5-8b-a1b,LFM2.5-8B-A1B,LFM2.5,open_weights,2026-05-28,2026-05-28,2026-07-16,2607.15232,49
 lfm2-8b-a1b,LFM2-8B-A1B,LFM2,open_weights,2025-10-07,2025-10-07,2026-07-16,2607.15232,282
 ling-1t,Ling-1T,Ling,open_weights,2025-10-09,2025-10-09,2025-11-07,2510.22115,29
+ling-3-0-flash-base,Ling-3.0-flash-base,Ling-3.0,open_weights,2026-08-11,2026-08-11,2026-11-01,2611.02074,82
 ling-flash-2-0,Ling-flash-2.0,Ling-2.0,open_weights,2025-09-17,2025-09-17,2025-11-07,2510.22115,51
 ling-mini-2-0,Ling-mini-2.0,Ling-2.0,open_weights,2025-09-08,2025-09-08,2025-11-07,2510.22115,60
 llada2-0-flash,LLaDA2.0-flash,LLaDA2.0,open_weights,2025-11-25,2025-11-25,2025-12-24,2512.15745,29
