@@ -70,10 +70,12 @@ doubao-seed-1-6-flash,true,,,,,,256000,32000,text|image|video,text,,true,,,0.021
 doubao-seed-1-8,true,,,,,,256000,64000,text|image|video,text,2025-01-01,true,,,0.11,0.28,0.02,2026-09-01,https://models.dev/api.json
 doubao-seed-2-0-code,true,,,,,,256000,128000,text|image|video,text,,true,,,0.67,3.36,0.14,2026-10-27,https://models.dev/api.json
 doubao-seed-2-0-lite,true,,,,,,256000,32000,text|image|video,text,,true,,,0.13,0.76,0.03,2026-10-27,https://models.dev/api.json
+doubao-seed-2-0-lite-260428,true,,,,,,256000,131072,text|image|video,text,,true,,,0.08906,0.53436,0.01781,2026-11-04,https://models.dev/api.json
 doubao-seed-2-0-mini,true,,,,,,256000,32000,text|image|video,text,,true,,,0.06,0.56,0.02,2026-10-27,https://models.dev/api.json
 doubao-seed-2-0-pro,true,,,,,,256000,128000,text|image|video|pdf,text,,true,,,0.4958,2.479,0.09916,2026-10-27,https://models.dev/api.json
 doubao-seed-2-1-pro,false,none,,,,,256000,128000,text,text,,false,,,1,5,0.5,2026-09-01,https://models.dev/api.json
 doubao-seed-2-1-turbo,false,none,,,,,256000,128000,text,text,,false,,,0.5,2.5,0.25,2026-09-01,https://models.dev/api.json
+doubao-seed-evolving,true,,,,,,256000,256000,text|image|video,text,,true,,,0.884,4.42,0.177,2026-11-04,https://models.dev/api.json
 ernie-4-5-21b-a3b,false,none,,,,,120000,8000,text,text,2025-03,true,,,0.07,0.28,,2026-09-01,https://models.dev/api.json
 ernie-4-5-300b-a47b,false,none,,,,,131000,131000,text,text,,true,,,0.28,1.1,,2026-09-01,https://models.dev/api.json
 ernie-4-5-vl-28b-a3b,true,,,,,,30000,8000,text|image,text,,true,,,0.14,0.56,,2026-09-01,https://models.dev/api.json
@@ -458,6 +460,7 @@ step-3-5-flash,true,,,,,,256000,131072,text,text,2025-01,true,,,0.1,0.3,0.02,202
 step-3-7-flash,true,,,,,,256000,16384,text|image,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 step-5-preview,true,,,,,,1024000,131072,text|image|video,text,,true,,,1,2.7,0.05,2026-09-22,https://models.dev/api.json
 tencent-hy3,true,,,,,,262144,131072,text,text,,true,,,0.16,0.64,0.04,2026-09-01,https://models.dev/api.json
+tencent-hy4,true,,,,,,1024000,64000,text|image,text,,true,,,0.417,1.2505,0.021,2026-11-04,https://models.dev/api.json
 trinity-large-thinking,true,,,,,,262144,262144,text,text,,true,,,0.25,0.8,0.06,2026-10-03,https://models.dev/api.json
 ui-tars-1-5-7b,false,none,,,,,128000,2048,image|text,text,,false,,,0.1,0.2,0.1,2026-09-01,https://models.dev/api.json
 voxtral-small-24b-2507,false,none,,,,,32000,32000,audio|text,text,,false,,,0.0023,0.0023,,2026-09-01,https://models.dev/api.json

@@ -1,4 +1,5 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-11-04,api_ga,inferred,tencent-hy4,hy4,tencent,hy4,,vlm,api_only,proprietary
 2026-11-02,api_ga,inferred,glm-5-3-flashx-legal,glm-5.3-flashx-legal,zhipu,glm-5.3-flashx-legal,,vlm,api_only,proprietary
 2026-10-31,weights_released,inferred,rwkv7-g1l-1-5b,RWKV7-G1l-1.5B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
 2026-10-31,weights_released,inferred,rwkv7-g1l-13-3b,RWKV7-G1l-13.3B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
@@ -12,6 +13,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-10-24,weights_released,inferred,sensenova-6-8-code2video,SenseNova-6.8-Code2Video,sensetime,SenseNova-6.8-Code2Video,,vlm,open_weights,osi_approved
 2026-10-23,api_ga,inferred,kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,Kimi K3.1,pro,vlm,api_only,proprietary
 2026-10-23,weights_released,inferred,lfm3-1-7b,LFM3-1.7B,liquid-ai,LFM3,,llm,open_weights,
+2026-10-23,weights_released,inferred,minicpm-ocr-jev,MiniCPM-OCR-Jev,openbmb,MiniCPM-Jev,vision,vlm,open_weights,osi_approved
 2026-10-22,weights_released,verified,wevisone-vl-2b,WeVisOne-VL-2B,tencent,WeVisOne,vision,vlm,open_weights,osi_approved
 2026-10-22,weights_released,verified,wevisone-vl-4b,WeVisOne-VL-4B,tencent,WeVisOne,vision,vlm,open_weights,osi_approved
 2026-10-21,weights_released,verified,ling-3-0-tiny-ubtree,Ling-3.0-tiny-UBTree,ant-group,Ling-3.0-UBTree,mini,llm,open_weights,osi_approved
@@ -40,6 +42,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-10-05,weights_released,verified,d1-3b,d1-3B,liquid-ai,d1,,vlm,open_weights,
 2026-10-05,weights_released,inferred,d1-omni-600m,d1-omni-600M,liquid-ai,d1-omni,,vlm,open_weights,
 2026-10-02,weights_released,verified,kolibri-1,Kolibri-1,aleph-alpha,Kolibri-1,,llm,open_weights,osi_approved
+2026-09-30,weights_released,inferred,mistral-large-4-1t-a52b,Mistral-Large-4-1T-A52B,mistral,Mistral-4,,vlm,open_weights,
 2026-09-30,weights_released,inferred,rwkv7-g1k-1-5b,RWKV7-G1k-1.5B-20260930,rwkv,RWKV7-G1k,,llm,open_weights,osi_approved
 2026-09-30,weights_released,inferred,rwkv7-g1k-13-3b,RWKV7-G1k-13.3B-20260930,rwkv,RWKV7-G1k,,llm,open_weights,osi_approved
 2026-09-30,weights_released,inferred,rwkv7-g1k-2-9b,RWKV7-G1k-2.9B-20260930,rwkv,RWKV7-G1k,,llm,open_weights,osi_approved
@@ -255,6 +258,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-06-24,weights_released,verified,lfm2-5-230m,LFM2.5-230M,liquid-ai,LFM2.5,,llm,open_weights,
 2026-06-23,api_ga,inferred,doubao-seed-2-1-pro,Doubao Seed 2.1 Pro,bytedance,Doubao Seed 2.1,pro,llm,api_only,proprietary
 2026-06-23,api_ga,inferred,doubao-seed-2-1-turbo,Doubao Seed 2.1 Turbo,bytedance,Doubao Seed 2.1,,llm,api_only,proprietary
+2026-06-23,api_ga,inferred,doubao-seed-evolving,Doubao Seed Evolving,bytedance,Doubao Seed Evolving,,vlm,api_only,proprietary
 2026-06-23,api_ga,inferred,seed-2-1-turbo,seed-2-1-turbo,bytedance,seed-2-1,,vlm,api_only,proprietary
 2026-06-19,weights_released,inferred,unlimited-ocr,Unlimited-OCR,baidu,Unlimited,vision,vlm,open_weights,osi_approved
 2026-06-16,weights_released,verified,glm-5-2,GLM-5.2,zhipu,GLM-5,base,llm,open_weights,osi_approved
@@ -350,6 +354,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-05-05,weights_released,inferred,delphi-3e20-273mparams-223btokens,delphi-3e20-273Mparams-223Btokens,marin,delphi-3e20-273Mparams-223Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e20-3-4bparams-13-9btokens,delphi-3e20-3.4Bparams-13.9Btokens,marin,delphi-3e20-3.4Bparams-13.9Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e20-447mparams-122btokens,delphi-3e20-447Mparams-122Btokens,marin,delphi-3e20-447Mparams-122Btokens,,llm,open_weights,osi_approved
+2026-05-05,weights_released,inferred,delphi-3e20-669mparams-77-9btokens,delphi-3e20-669Mparams-77.9Btokens,marin,delphi-3e20-669Mparams-77.9Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-3e20-998mparams-49-8btokens,delphi-3e20-998Mparams-49.8Btokens,marin,delphi-3e20-998Mparams-49.8Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-9e18-1-2bparams-1-3btokens,delphi-9e18-1.2Bparams-1.3Btokens,marin,delphi-9e18-1.2Bparams-1.3Btokens,,llm,open_weights,osi_approved
 2026-05-05,weights_released,inferred,delphi-9e18-157mparams-12-9btokens,delphi-9e18-157Mparams-12.9Btokens,marin,delphi-9e18-157Mparams-12.9Btokens,,llm,open_weights,osi_approved
@@ -507,6 +512,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-02-15,weights_released,inferred,qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,Qwen3.5,,llm,open_weights,
 2026-02-14,api_ga,inferred,doubao-seed-2-0-code,Doubao Seed 2.0 Code,bytedance,Doubao Seed 2.0,coder,vlm,api_only,proprietary
 2026-02-14,api_ga,inferred,doubao-seed-2-0-lite,Doubao Seed 2.0 Lite,bytedance,Doubao Seed 2.0,mini,vlm,api_only,proprietary
+2026-02-14,api_ga,inferred,doubao-seed-2-0-lite-260428,Doubao Seed 2.0 Lite 260428,bytedance,Doubao Seed 2.0 260428,mini,vlm,api_only,proprietary
 2026-02-14,api_ga,inferred,doubao-seed-2-0-mini,Doubao Seed 2.0 Mini,bytedance,Doubao Seed 2.0,mini,vlm,api_only,proprietary
 2026-02-14,api_ga,inferred,doubao-seed-2-0-pro,Doubao-Seed-2.0 Pro,bytedance,Doubao-Seed-2.0,pro,vlm,api_only,proprietary
 2026-02-14,weights_released,verified,ling-2-5-1t,Ling-2.5-1T,ant-group,Ling-2.5,,llm,open_weights,osi_approved
@@ -706,6 +712,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-10-30,weights_released,verified,kimi-linear-48b-a3b-instruct,Kimi-Linear-48B-A3B-Instruct,moonshot,Kimi-Linear,instruct,llm,open_weights,osi_approved
 2025-10-30,weights_released,inferred,motif-2-12-7b-instruct,Motif-2-12.7B-Instruct,motif-technologies,Motif-2,instruct,llm,open_weights,osi_approved
 2025-10-30,api_ga,inferred,sonar-pro-search,sonar-pro-search,perplexity,sonar-search,pro,vlm,api_only,proprietary
+2025-10-30,weights_released,inferred,xrouter,xRouter,salesforce,xRouter,,llm,open_weights,open_weights_restricted
 2025-10-29,weights_released,inferred,falcon-h1r-7b,Falcon-H1R-7B,tii,Falcon-H1R,,llm,open_weights,
 2025-10-29,weights_released,inferred,gpt-oss-safeguard-20b,openai.gpt-oss-safeguard-20b,openai,openai.gpt-oss-safeguard,,llm,open_weights,osi_approved
 2025-10-29,weights_released,inferred,spatial-ssrl-7b,Spatial-SSRL-7B,shanghai-ai-lab,Spatial-SSRL,,vlm,open_weights,osi_approved
@@ -1141,6 +1148,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-03-11,weights_released,inferred,c4ai-command-a-03-2025,c4ai-command-a-03-2025,cohere,c4ai-command-a-03,,llm,open_weights,open_weights_restricted
 2025-03-10,weights_released,verified,gemma-3-1b-it,gemma-3-1b-it,google,gemma-3,instruct,llm,open_weights,open_weights_restricted
 2025-03-10,weights_released,inferred,reka-flash-3,Reka Flash 3,reka,Reka 3,mini,llm,open_weights,
+2025-03-08,weights_released,inferred,ling-coder-lite,Ling-Coder-lite,ant-group,Ling,coder,llm,open_weights,osi_approved
 2025-03-07,weights_released,verified,rwkv7-g1,rwkv7-g1,rwkv,rwkv7-g1,,llm,open_weights,osi_approved
 2025-03-07,platform_availability_fallback,verified,sonar-pro,Sonar Pro,perplexity,Sonar,pro,vlm,api_only,proprietary
 2025-03-07,platform_availability_fallback,verified,sonar-reasoning-pro,Sonar Reasoning Pro,perplexity,Sonar,thinking,vlm,api_only,proprietary
@@ -1527,6 +1535,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2024-04-04,weights_released,inferred,rwkv-5-world-all,rwkv-5-world-all-pth,rwkv,rwkv-5-world-all,,llm,open_weights,osi_approved
 2024-04-04,weights_released,inferred,stablelm-2-12b-chat,stablelm-2-12b-chat,stability,stablelm-2,chat,llm,open_weights,
 2024-03-28,weights_released,verified,jamba-v0-1,Jamba-v0.1,ai21,Jamba-v0.1,,llm,open_weights,osi_approved
+2024-03-25,weights_released,inferred,arcee-sec-mistral-7b,arcee-sec-mistral-7b,arcee,arcee-sec-mistral,,llm,open_weights,
 2024-03-25,weights_released,inferred,palo-7b,PALO-7B,mbzuai,PALO,,llm,open_weights,osi_approved
 2024-03-21,weights_released,inferred,rwkv-6-world-1b6,rwkv-6-world-1b6,rwkv,rwkv-6-world-1b6,,llm,open_weights,
 2024-03-21,weights_released,inferred,stablelm-2-12b,stablelm-2-12b,stability,stablelm-2,,llm,open_weights,

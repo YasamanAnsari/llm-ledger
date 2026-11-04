@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1884; events: 2920
-- Models: curated 73, corroborated 675, single-source 1136
-- Event confidence: verified 1175, inferred 1739, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 432 of 1647
+- Models: 1893; events: 2940
+- Models: curated 73, corroborated 676, single-source 1144
+- Event confidence: verified 1183, inferred 1751, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 434 of 1653
 
 ## By organization
 
@@ -21,27 +21,27 @@ as settled.
 | Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
 | MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
 | OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
-| ByteDance | 62 | 83 | 0 | 24 | 38 | 34% |
-| Mistral | 58 | 109 | 4 | 31 | 23 | 45% |
+| ByteDance | 64 | 86 | 0 | 24 | 40 | 33% |
+| Mistral | 59 | 110 | 4 | 31 | 24 | 45% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 115 | 4 | 27 | 25 | 36% |
-| Google | 55 | 151 | 7 | 26 | 22 | 42% |
-| Ant Group | 54 | 64 | 0 | 27 | 27 | 44% |
+| Ant Group | 55 | 65 | 0 | 27 | 28 | 43% |
+| Google | 55 | 153 | 7 | 26 | 22 | 42% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
-| Marin | 51 | 51 | 0 | 0 | 51 | 0% |
+| Marin | 52 | 52 | 0 | 0 | 52 | 0% |
 | Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
 | DeepSeek | 47 | 105 | 3 | 27 | 17 | 54% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | Zhipu | 39 | 85 | 3 | 17 | 19 | 48% |
-| OpenBMB | 37 | 37 | 0 | 6 | 31 | 16% |
+| OpenBMB | 38 | 38 | 0 | 6 | 32 | 16% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
+| Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
+| Tencent | 34 | 45 | 1 | 15 | 18 | 42% |
 | Liquid AI | 33 | 36 | 0 | 23 | 10 | 67% |
-| Salesforce | 33 | 33 | 0 | 6 | 27 | 18% |
-| Tencent | 33 | 43 | 1 | 14 | 18 | 42% |
-| Arcee | 29 | 32 | 0 | 18 | 11 | 62% |
+| Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Baidu | 29 | 36 | 0 | 23 | 6 | 69% |
 | Nous | 28 | 36 | 0 | 7 | 21 | 25% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
@@ -58,7 +58,7 @@ as settled.
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 35 | 1 | 10 | 5 | 51% |
+| MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
 | Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
@@ -86,7 +86,7 @@ as settled.
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
-| Inception | 5 | 12 | 0 | 3 | 2 | 25% |
+| Inception | 5 | 15 | 0 | 3 | 2 | 40% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1629 | 424 | 1204 | 1 |
-| platform_availability | 338 | 333 | 3 | 2 |
-| retired | 311 | 179 | 132 | 0 |
-| api_ga | 255 | 63 | 191 | 1 |
-| announced | 249 | 53 | 195 | 1 |
+| weights_released | 1635 | 424 | 1210 | 1 |
+| platform_availability | 339 | 334 | 3 | 2 |
+| retired | 320 | 186 | 134 | 0 |
+| api_ga | 258 | 63 | 194 | 1 |
+| announced | 250 | 53 | 196 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,12 +119,13 @@ as settled.
 - Events it wrote: 33 (verified 5, single-source inferred 28)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 9
 
-Declined in the 7 days to 2026-11-03, by reason:
+Declined in the 7 days to 2026-11-04, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 72 |
-| no_dated_event | 45 |
+| community_lead | 74 |
+| no_dated_event | 40 |
+| malformed_candidate | 4 |
 | disagrees_with_record | 1 |
 | order_violation | 1 |
 | third_party_claim | 1 |

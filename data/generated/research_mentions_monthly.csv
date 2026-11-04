@@ -2528,7 +2528,7 @@ month,family,papers
 2026-10,GLM-4.5-Air,4
 2026-10,GLM-4.5V,1
 2026-10,GLM-4.7,3
-2026-10,GLM-5,22
+2026-10,GLM-5,23
 2026-10,GLM-5.1,3
 2026-10,GLM-5.3,20
 2026-10,GLM-Z1,1
@@ -2541,11 +2541,11 @@ month,family,papers
 2026-10,GPT-5.2 Codex,1
 2026-10,GPT-5.3 Codex,2
 2026-10,GPT-5.4,72
-2026-10,GPT-5.5,60
+2026-10,GPT-5.5,61
 2026-10,GPT-5.6 Luna,15
 2026-10,GPT-5.6 Sol,67
 2026-10,GPT-5.6 Terra,9
-2026-10,GPT-6 Astra,89
+2026-10,GPT-6 Astra,90
 2026-10,GPT-6.1 Sol,13
 2026-10,Gemini 1.5,1
 2026-10,Gemini 2.0,8
@@ -2628,7 +2628,7 @@ month,family,papers
 2026-10,Qwen3,618
 2026-10,Qwen3-Next,1
 2026-10,Qwen3-Omni,11
-2026-10,Qwen3.5,208
+2026-10,Qwen3.5,209
 2026-10,Qwen3.5-Omni,1
 2026-10,Qwen3.7,4
 2026-10,Qwen3.8-Next,12
@@ -2686,70 +2686,88 @@ month,family,papers
 2026-10,openai.gpt-oss-safeguard,1
 2026-10,opt,2
 2026-10,pythia,9
-2026-10,qwen3.6,51
+2026-10,qwen3.6,52
 2026-10,qwen3.8,62
 2026-10,qwen3.8-omni,1
 2026-10,sarvam-1,1
 2026-10,ui-tars-1.5,1
 2026-10,z-ai-glm-5-3,11
+2026-11,Claude 4.6,2
+2026-11,Claude 4.7,1
 2026-11,Claude 4.8,3
-2026-11,Claude 5,2
+2026-11,Claude 5,4
+2026-11,Claude 5.5,1
 2026-11,DeepSeek V4,3
 2026-11,DeepSeek-R1,1
+2026-11,DeepSeek-V3.1,1
+2026-11,DeepSeek-V3.2,1
 2026-11,DeepSeek-V4,2
-2026-11,GLM-5,1
+2026-11,GLM-4,1
+2026-11,GLM-5,6
 2026-11,GLM-5.1,1
-2026-11,GLM-5.3,3
+2026-11,GLM-5.3,4
+2026-11,GPT-3,1
 2026-11,GPT-4,1
-2026-11,GPT-4.1,3
-2026-11,GPT-4o,2
-2026-11,GPT-5,5
-2026-11,GPT-5.4,5
-2026-11,GPT-5.5,2
-2026-11,GPT-5.6 Sol,1
-2026-11,GPT-6 Astra,1
-2026-11,GPT-6.1 Sol,1
-2026-11,Gemini 3.1,1
+2026-11,GPT-4.1,4
+2026-11,GPT-4o,4
+2026-11,GPT-5,6
+2026-11,GPT-5.4,6
+2026-11,GPT-5.5,3
+2026-11,GPT-5.6 Sol,2
+2026-11,GPT-5.6 Terra,1
+2026-11,GPT-6 Astra,2
+2026-11,GPT-6.1 Sol,3
+2026-11,Gemini 2.5,2
+2026-11,Gemini 3.1,3
 2026-11,Gemini 3.5,1
 2026-11,Gemini 3.8,1
-2026-11,Gemma 3,4
-2026-11,Gemma 4,2
+2026-11,Gemma 3,5
+2026-11,Gemma 4,3
 2026-11,Gemma 4 E2B,1
+2026-11,Grok 4,1
+2026-11,K2-Horizon,1
+2026-11,Kimi K3,1
 2026-11,LensVLM,1
 2026-11,Ling-3.0,1
-2026-11,Llama 3,2
-2026-11,Llama 3.3,1
-2026-11,Llama-3.1,2
-2026-11,Llama-3.2,2
+2026-11,Llama 3,5
+2026-11,Llama 3.1,1
+2026-11,Llama 3.3,3
+2026-11,Llama-2,3
+2026-11,Llama-3.1,6
+2026-11,Llama-3.2,4
 2026-11,MiniMax-M2.7,1
-2026-11,Mistral 7B,3
+2026-11,Mistral 7B,8
+2026-11,Mistral-v0.1,1
 2026-11,Molmo2,1
 2026-11,NVIDIA-Nemotron-3,1
-2026-11,Nemotron 3,1
-2026-11,OLMo-2,1
+2026-11,Nemotron 3,2
+2026-11,OLMo-2,2
 2026-11,Olmo-3,1
-2026-11,Ouro,1
+2026-11,Ouro,2
 2026-11,Phi-3,1
 2026-11,Phi-3.5,1
 2026-11,Phi-4,2
+2026-11,Pixtral,1
 2026-11,QwQ,1
 2026-11,Qwen2,2
-2026-11,Qwen2.5,16
-2026-11,Qwen3,27
+2026-11,Qwen2.5,25
+2026-11,Qwen3,44
 2026-11,Qwen3-Next,1
-2026-11,Qwen3.5,9
+2026-11,Qwen3.5,17
 2026-11,Qwen3.7,1
 2026-11,Qwen3.8-Next,1
-2026-11,anthropic.claude-5-5,1
-2026-11,claude-5-5,2
+2026-11,anthropic.claude-5-5,2
+2026-11,claude-5-5,5
 2026-11,d1,1
-2026-11,deepseek-v4.1,1
+2026-11,deepseek-v4.1,3
 2026-11,devstral,1
+2026-11,falcon,1
 2026-11,gemma-2,1
-2026-11,gpt-oss,1
+2026-11,gpt-6-luna,1
+2026-11,gpt-oss,2
 2026-11,granite-3.1,1
 2026-11,granite-4.0,1
 2026-11,medgemma-1.5,1
-2026-11,opt,1
-2026-11,qwen3.6,4
-2026-11,qwen3.8,5
+2026-11,opt,2
+2026-11,qwen3.6,7
+2026-11,qwen3.8,7

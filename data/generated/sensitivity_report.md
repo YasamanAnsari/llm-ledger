@@ -7,12 +7,12 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=138)
+- median 0d (IQR 0-2d, n=139)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 91 |
+| same day | 92 |
 | 1-7d | 17 |
 | 8-30d | 6 |
 | 31-90d | 10 |
@@ -27,7 +27,7 @@ Per-organization medians (n>=3):
 - amazon: 0d (n=3)
 - anthropic: 0d (n=19)
 - deepseek: 0d (n=3)
-- bytedance: 0d (n=10)
+- bytedance: 0d (n=11)
 - zhipu: 0d (n=4)
 - openai: 0d (n=35)
 - meta: 0d (n=5)
@@ -149,5 +149,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1880
-- models with announced + an availability event: 229
+- models with an anchor event: 1889
+- models with announced + an availability event: 230

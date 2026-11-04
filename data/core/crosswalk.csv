@@ -116,6 +116,7 @@ arcee-blitz,huggingface,arcee-ai/Arcee-Blitz
 arcee-lite,huggingface,arcee-ai/arcee-lite
 arcee-maestro-7b-preview,huggingface,arcee-ai/Arcee-Maestro-7B-Preview
 arcee-nova,huggingface,arcee-ai/Arcee-Nova
+arcee-sec-mistral-7b,huggingface,arcee-ai/arcee-sec-mistral-7b
 arcee-spark,huggingface,arcee-ai/Arcee-Spark
 arcee-supernova-v1,huggingface,arcee-ai/Arcee-SuperNova-v1
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
@@ -749,6 +750,7 @@ delphi-3e20-2-5bparams-18-6btokens,huggingface,marin-community/delphi-3e20-2.5Bp
 delphi-3e20-273mparams-223btokens,huggingface,marin-community/delphi-3e20-273Mparams-223Btokens
 delphi-3e20-3-4bparams-13-9btokens,huggingface,marin-community/delphi-3e20-3.4Bparams-13.9Btokens
 delphi-3e20-447mparams-122btokens,huggingface,marin-community/delphi-3e20-447Mparams-122Btokens
+delphi-3e20-669mparams-77-9btokens,huggingface,marin-community/delphi-3e20-669Mparams-77.9Btokens
 delphi-3e20-998mparams-49-8btokens,huggingface,marin-community/delphi-3e20-998Mparams-49.8Btokens
 delphi-9e18-1-2bparams-1-3btokens,huggingface,marin-community/delphi-9e18-1.2Bparams-1.3Btokens
 delphi-9e18-157mparams-12-9btokens,huggingface,marin-community/delphi-9e18-157Mparams-12.9Btokens
@@ -818,6 +820,8 @@ doubao-seed-2-0-code,epoch,Doubao Seed 2.0 Code
 doubao-seed-2-0-code,models_dev,ofox/volcengine/doubao-seed-2.0-code
 doubao-seed-2-0-lite,epoch,Doubao Seed 2.0 Lite
 doubao-seed-2-0-lite,models_dev,ofox/volcengine/doubao-seed-2.0-lite
+doubao-seed-2-0-lite-260428,epoch,Doubao Seed 2.0 Lite 260428
+doubao-seed-2-0-lite-260428,models_dev,volcengine/doubao-seed-2-0-lite-260428
 doubao-seed-2-0-mini,epoch,Doubao Seed 2.0 Mini
 doubao-seed-2-0-mini,models_dev,ofox/volcengine/doubao-seed-2.0-mini
 doubao-seed-2-0-pro,epoch,Doubao-Seed-2.0 Pro
@@ -826,6 +830,8 @@ doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
 doubao-seed-2-1-turbo,models_dev,nano-gpt/bytedance/doubao-seed-2.1-turbo
+doubao-seed-evolving,epoch,Doubao Seed Evolving
+doubao-seed-evolving,models_dev,ofox/volcengine/doubao-seed-evolving
 e1-acereason-14b,huggingface,Salesforce/E1-AceReason-14B
 e1-code-14b,huggingface,Salesforce/E1-Code-14B
 ernie-4-5-0-3b,huggingface,baidu/ERNIE-4.5-0.3B-Paddle
@@ -2387,6 +2393,7 @@ ling-3-1-flash,models_dev,commandcode/inclusionai/ling-3.1-flash:free
 ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
 ling-3-1-flash,models_dev,nano-gpt/inclusionai/ling-3.1-flash
 ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
+ling-coder-lite,huggingface,inclusionAI/Ling-Coder-lite
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
 ling-flash-2-0,openalex,W4415203133
 ling-flash-2-0,semantic_scholar,fe100060a35c19a6c538e0453cdf3662ec015199
@@ -2794,6 +2801,7 @@ minicpm-2b-sft,huggingface,openbmb/MiniCPM-2B-sft-bf16
 minicpm-llama3-v-2-5,huggingface,openbmb/MiniCPM-Llama3-V-2_5
 minicpm-moe-8x2b,huggingface,openbmb/MiniCPM-MoE-8x2B
 minicpm-ocr-1-0,huggingface,openbmb/MiniCPM-OCR-1.0
+minicpm-ocr-jev,huggingface,openbmb/MiniCPM-OCR-Jev
 minicpm-sala,huggingface,openbmb/MiniCPM-SALA
 minicpm-v-2-6,huggingface,openbmb/MiniCPM-V-2_6
 minicpm-v-2-6,huggingface,openbmb/MiniCPM-V-2_6-int4
@@ -2982,6 +2990,7 @@ mistral-large-4-0,mistral_api,mistral-large-4-0
 mistral-large-4-0,models_dev,cortecs/mistral-large-4-0
 mistral-large-4-0,models_dev,kilo/mistralai/mistral-large-4-0
 mistral-large-4-0,openrouter,mistralai/mistral-large-4-0
+mistral-large-4-1t-a52b,huggingface,mistralai/Mistral-Large-4-1T-A52B
 mistral-large-instruct-2407,huggingface,mistralai/Mistral-Large-Instruct-2407
 mistral-large-instruct-2411,huggingface,mistralai/Mistral-Large-Instruct-2411
 mistral-medium,epoch,Mistral Medium
@@ -4318,6 +4327,7 @@ solar-open2-250b,semantic_scholar,c1924c48a72cb283f0ee149bc5252796cb38e37f
 solar-pro-3,epoch,Solar Pro 3
 solar-pro-3,models_dev,aimlapi/upstage/solar-pro-3
 solar-pro-3,models_dev,kilo/upstage/solar-pro-3
+solar-pro-3,models_dev,nano-gpt/upstage/solar-pro-3
 solar-pro-3,openrouter,upstage/solar-pro-3
 solar-pro-preview-instruct,huggingface,upstage/solar-pro-preview-instruct
 solar-pro-preview-pretrained,huggingface,upstage/solar-pro-preview-pretrained
@@ -4442,6 +4452,8 @@ tencent-hy3,huggingface,tencent/Hy3-FP8
 tencent-hy3,models_dev,aihubmix/hy3
 tencent-hy3,models_dev,crossmodel/tencent/hy3
 tencent-hy3,openrouter,tencent/hy3
+tencent-hy4,models_dev,vercel/tencent/hy4
+tencent-hy4,openrouter,tencent/hy4
 test-bloomd,huggingface,bigscience/test-bloomd
 test-bloomd-6b3,huggingface,bigscience/test-bloomd-6b3
 thyme-rl,huggingface,Kwai-Keye/Thyme-RL
@@ -4615,6 +4627,7 @@ xlam-2-1b-fc-r,huggingface,Salesforce/xLAM-2-1b-fc-r
 xlam-2-3b-fc-r,huggingface,Salesforce/xLAM-2-3b-fc-r
 xlam-7b-r,huggingface,Salesforce/xLAM-7b-r
 xlam-8x22b-r,huggingface,Salesforce/xLAM-8x22b-r
+xrouter,huggingface,Salesforce/xRouter
 yandex-8b-wmt26,huggingface,yandex/Yandex-8B-WMT26
 yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
 yarn-llama-2-7b-128k,openalex,W4386435778

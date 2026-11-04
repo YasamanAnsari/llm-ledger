@@ -22,6 +22,7 @@ catalog_unmapped_vendor,openrouter,elorian,ledger,,,e.g. glimpse; add to orgs_se
 catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,particle-ai,ledger,,,e.g. particle-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,stealth,ledger,,,e.g. crouton-alpha; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,xingchen-agi,ledger,,,e.g. xing4-0-29b-a4b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,claude-3-opus,ledger_cluster,claude-4-opus,92.3,92-97 band: confirm or reject before crosswalking
@@ -202,7 +203,6 @@ hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7
 hf_recreated_repo,huggingface,tencent/Hunyuan-7B-Instruct,ledger,hunyuan-7b-instruct,,first archive capture 2025-01-24 predates repo creation 2025-07-30; weights date needs a primary source
 hf_unmapped_namespace,huggingface,0xSero,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,FastFlowLM,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RadixArk,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -211,6 +211,7 @@ hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.N
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,empero-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,erwanf,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,failspy,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -219,7 +220,7 @@ hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_
 hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,10 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,trl-internal-testing,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,4 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 lifecycle_ambiguous,litellm,azure_ai/DeepSeek-V4-Flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
@@ -567,6 +568,12 @@ paper_lead,ledger,mbzuai/PALO,arxiv,https://arxiv.org/abs/2402.14818,,"v1 2024-0
 paper_lead,ledger,mbzuai/geochat,arxiv,https://arxiv.org/abs/2311.15826,,"v1 2023-11-24 'GeoChat: Grounded Large Vision-Language Model for Remote Sensing'; family first available 2024-02-26; members: geochat-7b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,rednote/dots.ocr,arxiv,https://arxiv.org/abs/2512.02498,,"v1 2025-12-02 'dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model'; family first available 2025-07-30; members: dots-ocr; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,sensetime/SenseNova-MARS,arxiv,https://arxiv.org/abs/2512.24330,,"v1 2025-12-30 'SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning'; family first available 2025-12-26; members: sensenova-mars-32b, sensenova-mars-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,skywork/Skywork-R1V2,arxiv,https://arxiv.org/abs/2504.16656,,"v1 2025-04-23 'Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning'; family first available 2025-04-22; members: skywork-r1v2-38b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,skywork/Skywork-R1V3,arxiv,https://arxiv.org/abs/2507.06167,,"v1 2025-07-08 'Skywork-R1V3 Technical Report'; family first available 2025-07-06; members: skywork-r1v3-38b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,skywork/Skywork-SWE,arxiv,https://arxiv.org/abs/2506.19290,,"v1 2025-06-24 'Skywork-SWE: Unveiling Data Scaling Laws for Software Engineering in LLMs'; family first available 2025-06-11; members: skywork-swe-32b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,stepfun/PaCoRe,arxiv,https://arxiv.org/abs/2601.05593,,"v1 2026-01-09 'PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning'; family first available 2025-12-09; members: pacore-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,stepfun/StepFun-Formalizer,arxiv,https://arxiv.org/abs/2508.04440,,"v1 2025-08-06 'StepFun-Formalizer: Unlocking the Autoformalization Potential of LLMs through Knowledge-Reasoning Fusion'; family first available 2025-08-19; members: stepfun-formalizer-32b, stepfun-formalizer-7b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,swiss-ai/Apertus,arxiv,https://arxiv.org/abs/2509.14233,,"v1 2025-09-17 'Apertus: Democratizing Open and Compliant LLMs for Global Language Environments'; family first available 2025-08-13; members: apertus-70b, apertus-70b-2509, apertus-70b-instruct-2509, apertus-8b-2509, apertus-8b-instruct, apertus-8b-instruct-2509; add paper_published to the model the paper describes, or reject"
 predecessor_lead,ledger,bfs-prover-v2-7b,ledger,bfs-prover-v1-7b,,"BFS-Prover-V1 (2025-02-23) -> BFS-Prover-V2 (2025-10-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,claude-fable-5-1,ledger,claude-fable-5,,"Claude Fable 5 (2026-06-07) -> claude-fable-5-1 (2026-09-01); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3,ledger,deepseek-v2,,"DeepSeek-V2 (2024-04-22) -> DeepSeek-V3 (2024-12-26); set predecessor_id / successor_id in models.csv, or reject"

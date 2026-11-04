@@ -62,6 +62,7 @@ kimi-k2-7-code-retired-1,kimi-k2-7-code,retired,azure,litellm,https://raw.github
 llama-3-2-3b-instruct-weights_released-1,llama-3-2-3b-instruct,weights_released,,models.dev,https://models.dev/api.json,false,2024-09-18,2024-09-25,7,2026-10-28
 llama-3-3-nemotron-super-49b-v1-5-weights_released-1,llama-3-3-nemotron-super-49b-v1-5,weights_released,,hub repo created,https://huggingface.co/nvidia/Llama-3_3-Nemotron-Super-49B-v1_5-FP8,false,2025-07-31,2025-07-25,-6,2026-10-11
 llama-guard-4-12b-weights_released-1,llama-guard-4-12b,weights_released,,models.dev,https://models.dev/api.json,false,2025-04-30,2025-04-29,-1,2026-10-22
+minimax-m2-1-retired-1,minimax-m2-1,retired,openrouter,openrouter expiration,https://openrouter.ai/api/v1/models,true,2026-10-08,2026-11-05,28,2026-11-04
 ministral-8b-weights_released-1,ministral-8b,weights_released,,models.dev,https://models.dev/api.json,false,2024-10-01,2024-10-16,15,2026-10-20
 mistral-medium-3-1-api_ga-1,mistral-medium-3-1,api_ga,,models.dev,https://models.dev/api.json,false,2025-08-13,2025-08-12,-1,2026-10-20
 mistral-nemo-weights_released-1,mistral-nemo,weights_released,,models.dev,https://models.dev/api.json,false,2024-07-01,2024-07-18,17,2026-10-23
