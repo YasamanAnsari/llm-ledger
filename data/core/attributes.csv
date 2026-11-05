@@ -249,6 +249,7 @@ ling-3-0-flash,true,,,,,,262144,32768,text,text,,true,,,0.06,0.18,0.012,2026-09-
 ling-3-0-flash-fin,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
 ling-3-0-flash-sante,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-09-05,https://models.dev/api.json
 ling-3-0-flash-vl,true,,,,,,262144,32768,text|image|video,text,,true,,,0.06,0.18,0.012,2026-09-10,https://models.dev/api.json
+ling-3-0-tiny,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-11-05,https://models.dev/api.json
 ling-3-1-flash,true,,,,,,262144,32768,text,text,,true,,,0.075,0.22,0.015,2026-10-03,https://models.dev/api.json
 llama-2-70b,,none,,,,,4096,,text,text,2022-09-01,,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md
 llama-3-1-405b-instruct,,none,,,,,131072,,text,text,2023-12-01,true,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md

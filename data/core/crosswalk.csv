@@ -527,6 +527,7 @@ ctm-imagenet,semantic_scholar,3dbd7498fe5d6b0eb6db113b1ceafb654dc55378
 ctm-maze-large,huggingface,SakanaAI/ctm-maze-large
 ctm-maze-large,semantic_scholar,3dbd7498fe5d6b0eb6db113b1ceafb654dc55378
 cudallm-8b,huggingface,ByteDance-Seed/cudaLLM-8B
+d1-2b,huggingface,LiquidAI/d1-2B
 d1-3b,huggingface,LiquidAI/d1-3B
 d1-3b,openalex,W4416982472
 d1-3b,semantic_scholar,dcedb2b0f21d5731144d6475363b37deaf634ce0
@@ -873,6 +874,8 @@ ernie-4-5-vl-424b-a47b-base-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-Base-PT
 ernie-4-5-vl-424b-a47b-pt,huggingface,baidu/ERNIE-4.5-VL-424B-A47B-PT
 ernie-5-1,epoch,ERNIE 5.1
 ernie-5-1,models_dev,nano-gpt/ernie-5.1
+ernie-5-5-flash-base,huggingface,baidu/ERNIE-5.5-Flash-Base
+ernie-5-5-flash-base,huggingface,baidu/ERNIE-5.5-Flash-Base-BF16
 evollm-jp-a-v1-7b,huggingface,SakanaAI/EvoLLM-JP-A-v1-7B
 evollm-jp-a-v1-7b,semantic_scholar,828f98e0feba2baa55a5486f354fd074cca0880c
 evollm-jp-v1-10b,huggingface,SakanaAI/EvoLLM-JP-v1-10B
@@ -2021,6 +2024,7 @@ isaac-0-1,huggingface,PerceptronAI/Isaac-0.1
 isaac-0-1-base,huggingface,PerceptronAI/Isaac-0.1-Base
 isaac-0-2-1b,huggingface,PerceptronAI/Isaac-0.2-1B
 isaac-0-2-2b-preview,huggingface,PerceptronAI/Isaac-0.2-2B-Preview
+jais-3-32b,huggingface,IFM/Jais-3-32B-FP8
 jais-3-mova-36b-a4b,huggingface,IFM/Jais-3-MoVA-36B-A4B-FP8
 jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
@@ -2165,6 +2169,7 @@ kimi-k3,models_dev,cline-pass/cline-pass/kimi-k3
 kimi-k3,openrouter,moonshotai/kimi-k3
 kimi-k3,wikipedia,Kimi (AI)
 kimi-k3-1-pro,epoch,Kimi K3.1 Pro
+kimi-k3-1-pro,huggingface,moonshotai/Kimi-K3.1-Pro
 kimi-k3-1-pro,models_dev,302ai/kimi-k3.1-pro
 kimi-k3-1-pro,models_dev,edenai/moonshot/kimi-k3.1-pro
 kimi-k3-1-pro,openrouter,moonshotai/kimi-k3.1-pro
@@ -2386,6 +2391,8 @@ ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-3-0-tiny,models_dev,requesty/ling-3.0-tiny
+ling-3-0-tiny,openrouter,inclusionai/ling-3.0-tiny
 ling-3-0-tiny-ubtree,huggingface,inclusionAI/Ling-3.0-tiny-UBTree
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash-1019
@@ -2623,6 +2630,7 @@ longcat-flash-thinking-zigzag,semantic_scholar,81c7741c3ec9f9cb1a2660b2b006fd47a
 longcat-heavymode-summary,huggingface,meituan-longcat/LongCat-HeavyMode-Summary
 longcite-glm4-9b,huggingface,zai-org/LongCite-glm4-9b
 longcite-glm4-9b,semantic_scholar,842f253e29ce9ce445e7cd1dd093fb505da2b25f
+loopedlm-p1-moe-ff112-500b,huggingface,IFM/LoopedLM-P1-moe-ff112-500b
 loopedlm-p2-d4-m,huggingface,IFM/LoopedLM-P2-d4-m
 loopedlm-p2-d4-m,openalex,W7220743811
 loopedlm-p2-d4-m,semantic_scholar,115f31acf6bfbbbb76a51ff96e2f39cecee75f53
@@ -4452,6 +4460,7 @@ tencent-hy3,huggingface,tencent/Hy3-FP8
 tencent-hy3,models_dev,aihubmix/hy3
 tencent-hy3,models_dev,crossmodel/tencent/hy3
 tencent-hy3,openrouter,tencent/hy3
+tencent-hy4,models_dev,chutes/tencent/Hy4
 tencent-hy4,models_dev,vercel/tencent/hy4
 tencent-hy4,openrouter,tencent/hy4
 test-bloomd,huggingface,bigscience/test-bloomd

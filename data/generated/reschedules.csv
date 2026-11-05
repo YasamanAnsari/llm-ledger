@@ -40,8 +40,10 @@ gpt-4-1-nano-retired-2,gpt-4-1-nano,retired,azure,litellm,https://raw.githubuser
 gpt-4o-retired-1,gpt-4o,retired,,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-23,2027-01-14,83,2026-10-19
 gpt-5-1-instant-api_ga-1,gpt-5-1-instant,api_ga,,models.dev,https://models.dev/api.json,false,2025-11-12,2025-11-13,1,2026-10-22
 gpt-5-1-retired-1,gpt-5-1,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-05-15,2027-07-13,59,2026-10-31
+gpt-5-1-retired-1,gpt-5-1,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-05-15,2027-07-13,59,2026-11-05
 gpt-5-2-chat-api_ga-1,gpt-5-2-chat,api_ga,,models.dev,https://models.dev/api.json,false,2025-12-10,2025-12-11,1,2026-10-20
 gpt-5-mini-retired-2,gpt-5-mini,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-02-09,2027-07-13,154,2026-10-31
+gpt-5-mini-retired-2,gpt-5-mini,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-02-09,2027-07-13,154,2026-11-05
 gpt-audio-api_ga-1,gpt-audio,api_ga,,models.dev,https://models.dev/api.json,false,2026-01-19,2025-08-28,-144,2026-10-20
 gpt-audio-mini-api_ga-1,gpt-audio-mini,api_ga,,models.dev,https://models.dev/api.json,false,2026-01-19,2025-10-06,-105,2026-10-20
 gpt-audio-mini-retired-2,gpt-audio-mini,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-04-06,2027-06-15,70,2026-10-03

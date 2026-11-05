@@ -83,3 +83,8 @@ date,reason,count
 2026-11-04,community_lead,10
 2026-11-04,malformed_candidate,4
 2026-11-04,no_dated_event,6
+2026-11-05,community_lead,10
+2026-11-05,launch_event_required,2
+2026-11-05,malformed_candidate,2
+2026-11-05,no_dated_event,4
+2026-11-05,not_a_model,1

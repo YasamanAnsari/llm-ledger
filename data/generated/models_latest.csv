@@ -1,4 +1,6 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-11-04,api_ga,inferred,gpt‑image‑2-6-flare,GPT‑Image‑2.6 Flare,openai,GPT‑Image‑2.6 Flare,,llm,api_only,
+2026-11-04,api_ga,inferred,gpt‑image‑2-6-sunburst,GPT‑Image‑2.6 Sunburst,openai,GPT‑Image‑2.6 Sunburst,,llm,api_only,
 2026-11-04,api_ga,inferred,tencent-hy4,hy4,tencent,hy4,,vlm,api_only,proprietary
 2026-11-02,api_ga,inferred,glm-5-3-flashx-legal,glm-5.3-flashx-legal,zhipu,glm-5.3-flashx-legal,,vlm,api_only,proprietary
 2026-10-31,weights_released,inferred,rwkv7-g1l-1-5b,RWKV7-G1l-1.5B-20261031,rwkv,RWKV7-G1l,,llm,open_weights,osi_approved
@@ -10,12 +12,14 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-10-26,api_ga,inferred,gpt-6-1-terra,GPT-6.1 Terra,openai,GPT-6.1 Terra,,vlm,api_only,proprietary
 2026-10-26,api_ga,inferred,gpt-6-1-terra-pro,gpt-6.1-terra-pro,openai,gpt-6.1-terra,pro,vlm,api_only,proprietary
 2026-10-26,weights_released,verified,unlimited-ocr-2,Unlimited-OCR-2,baidu,Unlimited-2,vision,vlm,open_weights,osi_approved
+2026-10-24,weights_released,inferred,d1-2b,d1-2B,liquid-ai,d1,,vlm,open_weights,
 2026-10-24,weights_released,inferred,sensenova-6-8-code2video,SenseNova-6.8-Code2Video,sensetime,SenseNova-6.8-Code2Video,,vlm,open_weights,osi_approved
-2026-10-23,api_ga,inferred,kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,Kimi K3.1,pro,vlm,api_only,proprietary
+2026-10-23,api_ga,inferred,kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,Kimi K3.1,pro,vlm,open_weights,
 2026-10-23,weights_released,inferred,lfm3-1-7b,LFM3-1.7B,liquid-ai,LFM3,,llm,open_weights,
 2026-10-23,weights_released,inferred,minicpm-ocr-jev,MiniCPM-OCR-Jev,openbmb,MiniCPM-Jev,vision,vlm,open_weights,osi_approved
 2026-10-22,weights_released,verified,wevisone-vl-2b,WeVisOne-VL-2B,tencent,WeVisOne,vision,vlm,open_weights,osi_approved
 2026-10-22,weights_released,verified,wevisone-vl-4b,WeVisOne-VL-4B,tencent,WeVisOne,vision,vlm,open_weights,osi_approved
+2026-10-21,weights_released,inferred,ernie-5-5-flash-base,ERNIE-5.5-Flash-Base,baidu,ERNIE-5.5,base,llm,open_weights,
 2026-10-21,weights_released,verified,ling-3-0-tiny-ubtree,Ling-3.0-tiny-UBTree,ant-group,Ling-3.0-UBTree,mini,llm,open_weights,osi_approved
 2026-10-21,weights_released,inferred,minicpm-ocr-1-0,MiniCPM-OCR-1.0,openbmb,MiniCPM-1.0,vision,vlm,open_weights,osi_approved
 2026-10-19,weights_released,inferred,lfm3-vl-2b,LFM3-VL-2B,liquid-ai,LFM3,vision,vlm,open_weights,
@@ -49,9 +53,11 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-09-30,weights_released,inferred,rwkv7-g1k-7-2b,RWKV7-G1k-7.2B-20260930,rwkv,RWKV7-G1k,,llm,open_weights,osi_approved
 2026-09-29,api_ga,verified,gpt-6-1-sol,GPT-6.1 Sol,openai,GPT-6.1 Sol,,vlm,api_only,proprietary
 2026-09-29,api_ga,inferred,gpt-6-1-sol-pro,gpt-6.1-sol-pro,openai,gpt-6.1-sol,pro,vlm,api_only,proprietary
+2026-09-29,weights_released,inferred,jais-3-32b,Jais-3-32B-FP8,mbzuai,Jais-3,,llm,open_weights,osi_approved
 2026-09-29,weights_released,inferred,jais-3-mova-36b-a4b,Jais-3-MoVA-36B-A4B-FP8,mbzuai,Jais-3-MoVA,,llm,open_weights,osi_approved
 2026-09-29,weights_released,inferred,ling-3-1-flash,ling-3.1-flash,ant-group,ling-3.1,mini,llm,open_weights,osi_approved
 2026-09-28,api_ga,verified,claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,Claude 5.5,,vlm,api_only,proprietary
+2026-09-28,weights_released,inferred,loopedlm-p1-moe-ff112-500b,LoopedLM-P1-moe-ff112-500b,mbzuai,LoopedLM-P1-moe-ff112,,llm,open_weights,osi_approved
 2026-09-28,weights_released,inferred,loopedlm-p2-d4-m,LoopedLM-P2-d4-m,mbzuai,LoopedLM-P2-d4-m,,llm,open_weights,osi_approved
 2026-09-28,weights_released,inferred,loopedlm-p2-d4-s,LoopedLM-P2-d4-s,mbzuai,LoopedLM-P2-d4-s,,llm,open_weights,osi_approved
 2026-09-28,weights_released,inferred,loopedlm-p2-huginn-l-fixed-r5,LoopedLM-P2-huginn-l-fixed-r5,mbzuai,LoopedLM-P2-huginn-l-fixed-r5,,llm,open_weights,osi_approved
@@ -178,7 +184,6 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-08-11,weights_released,inferred,nemotron-3-5-lightning,Nemotron 3.5 Lightning,nvidia,Nemotron 3.5 Lightning,,llm,open_weights,
 2026-08-10,weights_released,inferred,lfm2-5-2-6b-dspark,LFM2.5-2.6B-DSpark,liquid-ai,LFM2.5-DSpark,,llm,open_weights,
 2026-08-10,weights_released,inferred,lfm2-5-8b-a1b-dspark,LFM2.5-8B-A1B-DSpark,liquid-ai,LFM2.5-DSpark,,llm,open_weights,
-2026-08-10,weights_released,verified,ling-3-0-tiny,Ling-3.0-tiny,ant-group,Ling-3.0,mini,llm,open_weights,osi_approved
 2026-08-10,weights_released,verified,muse-glimmer-30b,Muse-Glimmer-30B,meta,Muse-Glimmer,,vlm,open_weights,osi_approved
 2026-08-10,weights_released,verified,north-micro-vision-instruct,North-Micro-Vision-Instruct,cohere,North-Micro,instruct,vlm,open_weights,osi_approved
 2026-08-09,weights_released,inferred,dots3-note-prev,dots3-note-prev,rednote,dots3-note-prev,,vlm,open_weights,osi_approved
@@ -188,6 +193,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2026-08-07,weights_released,inferred,granite-4-2-30b,granite-4.2-30b,ibm,granite-4.2,,llm,open_weights,osi_approved
 2026-08-07,weights_released,inferred,granite-4-2-3b,granite-4.2-3b,ibm,granite-4.2,,llm,open_weights,osi_approved
 2026-08-07,weights_released,verified,motif-3,Motif-3,motif-technologies,Motif-3,,llm,open_weights,osi_approved
+2026-08-06,api_ga,inferred,ling-3-0-tiny,Ling-3.0-tiny,ant-group,Ling-3.0,mini,llm,open_weights,osi_approved
 2026-08-06,weights_released,inferred,rwkv7-1-5b,RWKV7-1.5B-20260805,rwkv,RWKV7,,llm,open_weights,osi_approved
 2026-08-06,weights_released,inferred,rwkv7-13-3b,RWKV7-13.3B-20260805,rwkv,RWKV7,,llm,open_weights,osi_approved
 2026-08-06,weights_released,inferred,rwkv7-2-9b,RWKV7-2.9B-20260805,rwkv,RWKV7,,llm,open_weights,osi_approved
@@ -1879,6 +1885,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 ,,,fable-5-1,Fable 5.1,anthropic,Fable 5.1,,llm,api_only,
 ,,,grok-3-mini,Grok-3 mini,xai,Grok-3,mini,llm,api_only,proprietary
 ,,,grok-4-1-fast,Grok 4.1 Fast,xai,Grok 4.1 Fast,,vlm,api_only,proprietary
+,,,images-2-6,Images 2.6,openai,Images 2.6,,llm,api_only,
 ,,,mercury-coder-small,Mercury Coder Small,inception-labs,Mercury,coder,llm,api_only,proprietary
 ,,,mistral-7b,Mistral 7B,mistral,Mistral 7B,base,llm,open_weights,osi_approved
 ,,,mixtral-8x7b-instruct,Mixtral 8x7B Instruct,mistral,Mixtral,instruct,llm,open_weights,osi_approved

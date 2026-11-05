@@ -9,24 +9,24 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1893; events: 2940
-- Models: curated 73, corroborated 676, single-source 1144
-- Event confidence: verified 1183, inferred 1751, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 434 of 1653
+- Models: 1900; events: 2951
+- Models: curated 73, corroborated 676, single-source 1151
+- Event confidence: verified 1184, inferred 1761, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 437 of 1658
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
-| MBZUAI | 72 | 72 | 0 | 6 | 66 | 8% |
-| OpenAI | 72 | 300 | 19 | 48 | 5 | 74% |
+| OpenAI | 75 | 304 | 19 | 48 | 8 | 73% |
+| MBZUAI | 74 | 74 | 0 | 6 | 68 | 8% |
 | ByteDance | 64 | 86 | 0 | 24 | 40 | 33% |
 | Mistral | 59 | 110 | 4 | 31 | 24 | 45% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 115 | 4 | 27 | 25 | 36% |
-| Ant Group | 55 | 65 | 0 | 27 | 28 | 43% |
+| Ant Group | 55 | 67 | 0 | 27 | 28 | 43% |
 | Google | 55 | 153 | 7 | 26 | 22 | 42% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Marin | 52 | 52 | 0 | 0 | 52 | 0% |
@@ -37,12 +37,12 @@ as settled.
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | Zhipu | 39 | 85 | 3 | 17 | 19 | 48% |
 | OpenBMB | 38 | 38 | 0 | 6 | 32 | 16% |
+| Liquid AI | 34 | 37 | 0 | 23 | 11 | 65% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
 | Tencent | 34 | 45 | 1 | 15 | 18 | 42% |
-| Liquid AI | 33 | 36 | 0 | 23 | 10 | 67% |
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
-| Baidu | 29 | 36 | 0 | 23 | 6 | 69% |
+| Baidu | 30 | 37 | 0 | 23 | 7 | 68% |
 | Nous | 28 | 36 | 0 | 7 | 21 | 25% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
@@ -59,7 +59,7 @@ as settled.
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
-| Moonshot | 16 | 40 | 0 | 15 | 1 | 55% |
+| Moonshot | 16 | 41 | 0 | 15 | 1 | 54% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1635 | 424 | 1210 | 1 |
-| platform_availability | 339 | 334 | 3 | 2 |
+| weights_released | 1640 | 424 | 1215 | 1 |
+| platform_availability | 340 | 335 | 3 | 2 |
 | retired | 320 | 186 | 134 | 0 |
-| api_ga | 258 | 63 | 194 | 1 |
-| announced | 250 | 53 | 196 | 1 |
+| api_ga | 261 | 63 | 197 | 1 |
+| announced | 252 | 53 | 198 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -116,17 +116,19 @@ as settled.
 
 ## Page-reading agent
 
-- Events it wrote: 33 (verified 5, single-source inferred 28)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 9
+- Events it wrote: 37 (verified 5, single-source inferred 32)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 12
 
-Declined in the 7 days to 2026-11-04, by reason:
+Declined in the 7 days to 2026-11-05, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 74 |
-| no_dated_event | 40 |
-| malformed_candidate | 4 |
+| community_lead | 84 |
+| no_dated_event | 44 |
+| malformed_candidate | 6 |
+| launch_event_required | 2 |
 | disagrees_with_record | 1 |
+| not_a_model | 1 |
 | order_violation | 1 |
 | third_party_claim | 1 |
 | validation_failed | 1 |

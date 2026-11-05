@@ -22,6 +22,7 @@ catalog_unmapped_vendor,openrouter,elorian,ledger,,,e.g. glimpse; add to orgs_se
 catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,particle-ai,ledger,,,e.g. particle-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,ricursiveai,ledger,,,e.g. ripple-65b-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,stealth,ledger,,,e.g. crouton-alpha; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,xingchen-agi,ledger,,,e.g. xing4-0-29b-a4b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
@@ -47,7 +48,6 @@ fuzzy_match,epoch,granite-4-0-h-small,ledger_cluster,granite-4-h-small,94.4,92-9
 fuzzy_match,epoch,granite-4-1-8b,ledger_cluster,granite-4-2-8b,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,grok-1,ledger_cluster,grok-4-1,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,grok-4-3-beta,ledger_cluster,grok-4-2-beta,92.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,grok-voice-think-fast-1-0,ledger_cluster,grok-voice-think-fast-2-0,96.0,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hermes-3-405b,ledger_cluster,hermes-4-405b,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hunyuan-turbo,ledger_cluster,hunyuan-turbos,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,imagen,ledger_cluster,imagen-3,92.3,92-97 band: confirm or reject before crosswalking
@@ -82,6 +82,7 @@ hf_backfill_date,huggingface,EleutherAI/gpt-neo-125m,,,,createdAt is the HF back
 hf_backfill_date,huggingface,EleutherAI/gpt-neo-2.7B,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,Salesforce/ctrl,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,microsoft/DialoGPT-medium,,,,createdAt is the HF backfill artifact; weights date needs another primary source
+hf_backfill_date,huggingface,microsoft/DialoGPT-small,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,rinna/japanese-gpt-1b,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,rinna/japanese-gpt2-medium,,,,createdAt is the HF backfill artifact; weights date needs another primary source
 hf_backfill_date,huggingface,rinna/japanese-gpt2-small,,,,createdAt is the HF backfill artifact; weights date needs another primary source
@@ -206,7 +207,6 @@ hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RadixArk,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -219,6 +219,7 @@ hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,10 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,roneneldan,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,4 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -574,6 +575,9 @@ paper_lead,ledger,skywork/Skywork-SWE,arxiv,https://arxiv.org/abs/2506.19290,,"v
 paper_lead,ledger,stepfun/PaCoRe,arxiv,https://arxiv.org/abs/2601.05593,,"v1 2026-01-09 'PaCoRe: Learning to Scale Test-Time Compute with Parallel Coordinated Reasoning'; family first available 2025-12-09; members: pacore-8b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,stepfun/StepFun-Formalizer,arxiv,https://arxiv.org/abs/2508.04440,,"v1 2025-08-06 'StepFun-Formalizer: Unlocking the Autoformalization Potential of LLMs through Knowledge-Reasoning Fusion'; family first available 2025-08-19; members: stepfun-formalizer-32b, stepfun-formalizer-7b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,swiss-ai/Apertus,arxiv,https://arxiv.org/abs/2509.14233,,"v1 2025-09-17 'Apertus: Democratizing Open and Compliant LLMs for Global Language Environments'; family first available 2025-08-13; members: apertus-70b, apertus-70b-2509, apertus-70b-instruct-2509, apertus-8b-2509, apertus-8b-instruct, apertus-8b-instruct-2509; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,xiaomi/MiMo-Embodied,arxiv,https://arxiv.org/abs/2511.16518,,"v1 2025-11-20 'MiMo-Embodied: X-Embodied Foundation Model Technical Report'; family first available 2025-11-19; members: mimo-embodied-7b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,xiaomi/mimo-v2.6,arxiv,https://arxiv.org/abs/2610.11959,,"v1 2026-10-08 'MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement'; family first available 2026-09-22; members: mimo-v2-6-flash, mimo-v2-6-pro; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,zhipu/GLM-4.5,arxiv,https://arxiv.org/abs/2508.06471,,"v1 2025-08-08 'GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models'; family first available 2025-07-28; members: glm-4-5; add paper_published to the model the paper describes, or reject"
 predecessor_lead,ledger,bfs-prover-v2-7b,ledger,bfs-prover-v1-7b,,"BFS-Prover-V1 (2025-02-23) -> BFS-Prover-V2 (2025-10-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,claude-fable-5-1,ledger,claude-fable-5,,"Claude Fable 5 (2026-06-07) -> claude-fable-5-1 (2026-09-01); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3,ledger,deepseek-v2,,"DeepSeek-V2 (2024-04-22) -> DeepSeek-V3 (2024-12-26); set predecessor_id / successor_id in models.csv, or reject"

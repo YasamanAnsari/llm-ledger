@@ -692,3 +692,13 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 ## 2026-10-30
 
 - `mistral-large-4-price_changed-1` 2026-10-29 inferred (vendor_blog; evidence: "Starting today, Mistral Large 4 is priced at $0.70 input / M, $0.07 cached input / M, and $2.10 output / M tokens.")
+
+## 2026-11-05
+
+- new model `images-2-6`
+- new model `gpt‑image‑2-6-flare`
+- new model `gpt‑image‑2-6-sunburst`
+- `images-2-6-announced-1` 2026-11-04 inferred (vendor_blog; evidence: "We’re introducing Images 2.6 in ChatGPT, Codex, and the API, bringing your ideas to life faster.")
+- `gpt‑image‑2-6-flare-announced-1` 2026-11-04 inferred (vendor_blog; evidence: "In the API, we offer GPT‑Image‑2.6 Flare and Sunburst for developers to choose from.")
+- `gpt‑image‑2-6-flare-api_ga-1` 2026-11-04 inferred (vendor_blog; evidence: "GPT‑Image‑2.6 Sunburst and GPT‑Image‑2.6 Flare are available in the API.")
+- `gpt‑image‑2-6-sunburst-api_ga-1` 2026-11-04 inferred (vendor_blog; evidence: "GPT‑Image‑2.6 Sunburst and GPT‑Image‑2.6 Flare are available in the API.")

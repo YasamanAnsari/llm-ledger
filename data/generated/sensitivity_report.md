@@ -7,12 +7,12 @@ positive means the second event happened after the first.
 
 ## announced -> api_ga
 
-- median 0d (IQR 0-2d, n=139)
+- median 0d (IQR 0-2d, n=140)
 - range: 0d to 539d
 
 | gap | models |
 |---|---|
-| same day | 92 |
+| same day | 93 |
 | 1-7d | 17 |
 | 8-30d | 6 |
 | 31-90d | 10 |
@@ -29,21 +29,21 @@ Per-organization medians (n>=3):
 - deepseek: 0d (n=3)
 - bytedance: 0d (n=11)
 - zhipu: 0d (n=4)
-- openai: 0d (n=35)
+- openai: 0d (n=36)
 - meta: 0d (n=5)
 - inception-labs: 0d (n=4)
 - mistral: 0d (n=6)
 
 ## announced -> weights_released
 
-- median 0d (IQR 0-1d, n=101)
+- median 0d (IQR 0-1d, n=102)
 - range: 0d to 870d
 
 | gap | models |
 |---|---|
 | same day | 69 |
 | 1-7d | 19 |
-| 8-30d | 2 |
+| 8-30d | 3 |
 | 31-90d | 4 |
 | 91-365d | 4 |
 | >365d | 3 |
@@ -56,7 +56,7 @@ Per-organization medians (n>=3):
 - deepseek: 0d (n=9)
 - google: 0d (n=10)
 - zhipu: 0d (n=9)
-- moonshot: 0d (n=5)
+- moonshot: 0d (n=6)
 - meta: 0d (n=10)
 - nvidia: 0d (n=7)
 - minimax: 0d (n=5)
@@ -149,5 +149,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1889
-- models with announced + an availability event: 230
+- models with an anchor event: 1896
+- models with announced + an availability event: 231
