@@ -702,3 +702,10 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `gpt‑image‑2-6-flare-announced-1` 2026-11-04 inferred (vendor_blog; evidence: "In the API, we offer GPT‑Image‑2.6 Flare and Sunburst for developers to choose from.")
 - `gpt‑image‑2-6-flare-api_ga-1` 2026-11-04 inferred (vendor_blog; evidence: "GPT‑Image‑2.6 Sunburst and GPT‑Image‑2.6 Flare are available in the API.")
 - `gpt‑image‑2-6-sunburst-api_ga-1` 2026-11-04 inferred (vendor_blog; evidence: "GPT‑Image‑2.6 Sunburst and GPT‑Image‑2.6 Flare are available in the API.")
+
+## 2026-11-06
+
+- new model `gpt‑6-cyber`
+- `gpt‑6-cyber-announced-1` 2026-11-05 inferred (vendor_blog; evidence: "We’re introducing GPT‑6 Cyber, a major leap in security research: more capable at finding and fixing vulnerabilities" (read via wayback))
+- `gpt‑6-cyber-api_preview-1` 2026-11-05 inferred (vendor_blog; evidence: "GPT‑6 Cyber is initially available through the API and Codex to a select group of approved Daybreak Red customers." (read via wayback))
+- `gemini-omni-1-2-flash-price_changed-1` 2026-11-05 inferred (vendor_blog; evidence: "We have dropped the price 30% from Gemini Omni 1.1 making it available at $0.07 per second for 720p video.")

@@ -207,6 +207,7 @@ hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RadixArk,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -218,7 +219,7 @@ hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAM
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,ornith-ai,,,,10 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,ornith-ai,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,roneneldan,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,4 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -557,6 +558,13 @@ paper_lead,ledger,apple/OpenELM,arxiv,https://arxiv.org/abs/2404.14619,,"v1 2024
 paper_lead,ledger,arcee/arcee,arxiv,https://arxiv.org/abs/2411.17596,,"v1 2024-11-26 'Arcee: An OCM-Solver'; family first available 2024-08-01; members: arcee-lite; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,baichuan/Baichuan-M2,arxiv,https://arxiv.org/abs/2509.02208,,"v1 2025-09-02 'Baichuan-M2: Scaling Medical Capability with Large Verifier System'; family first available 2025-08-10; members: baichuan-m2-32b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,baichuan/Baichuan-M3,arxiv,https://arxiv.org/abs/2602.06570,,"v1 2026-02-06 'Baichuan-M3: Modeling Clinical Inquiry for Reliable Medical Decision-Making'; family first available 2026-01-13; members: baichuan-m3-235b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kakao/kanana,arxiv,https://arxiv.org/abs/2502.18934,,"v1 2025-02-26 'Kanana: Compute-efficient Bilingual Language Models'; family first available 2025-02-26; members: kanana-nano-2-1b-base, kanana-nano-2-1b-instruct; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/HiPO,arxiv,https://arxiv.org/abs/2603.16152,,"v1 2026-03-17 'HIPO: Instruction Hierarchy via Constrained Reinforcement Learning'; family first available 2025-09-26; members: hipo-1-7b, hipo-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/HiPO,arxiv,https://arxiv.org/abs/2604.20140,,"v1 2026-04-22 'HiPO: Hierarchical Preference Optimization for Adaptive Reasoning in LLMs'; family first available 2025-09-26; members: hipo-1-7b, hipo-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/HiPO,arxiv,https://arxiv.org/abs/2509.23967,,"v1 2025-09-28 'HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs'; family first available 2025-09-26; members: hipo-1-7b, hipo-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/KAT-V1,arxiv,https://arxiv.org/abs/2507.08297,,"v1 2025-07-11 'KAT-V1: Kwai-AutoThink Technical Report'; family first available 2025-07-20; members: kat-v1-40b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/Thyme,arxiv,https://arxiv.org/abs/2508.11630,,"v1 2025-08-15 'Thyme: Think Beyond Images'; family first available 2025-08-15; members: thyme-sft; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,kuaishou/Thyme,arxiv,https://arxiv.org/abs/2507.09200,,"v1 2025-07-12 'THYME: Temporal Hierarchical-Cyclic Interactivity Modeling for Video Scene Graphs in Aerial Footage'; family first available 2025-08-15; members: thyme-sft; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/AIN,arxiv,https://arxiv.org/abs/2502.00094,,"v1 2025-01-31 'AIN: The Arabic INclusive Large Multimodal Model'; family first available 2025-01-07; members: mbzuai-ain; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/BiMediX2,arxiv,https://arxiv.org/abs/2412.07769,,"v1 2024-12-10 'BiMediX2: Bio-Medical EXpert LMM for Diverse Medical Modalities'; family first available 2024-12-15; members: bimedix2-4b, bimedix2-8b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/K2-V2,arxiv,https://arxiv.org/abs/2512.06201,,"v1 2025-12-05 'K2-V2: A 360-Open, Reasoning-Enhanced LLM'; family first available 2026-01-08; members: k2-think-v2; add paper_published to the model the paper describes, or reject"
@@ -600,6 +608,7 @@ predecessor_lead,ledger,gemini-3-7-flash,ledger,gemini-3-6-flash,,"Gemini 3.6 (2
 predecessor_lead,ledger,gemini-3-8-flash,ledger,gemini-3-7-flash,,"Gemini 3.7 (2026-08-13) -> Gemini 3.8 (2026-09-02); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,gemini-3-flash,ledger,gemini-2-5-flash,,"Gemini 2.5 (2025-06-17) -> Gemini 3 (2025-12-17); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,gemini-3-pro,ledger,gemini-2-5-pro,,"Gemini 2.5 (2025-06-17) -> Gemini 3 (2025-11-18); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,gemini-omni-1-2-flash,ledger,gemini-omni-1-1-flash,,"gemini-omni-1.1 (2026-08-27) -> gemini-omni-1.2 (2026-11-05); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,gemma-3-27b-it,ledger,gemma-2-27b-it,,"Gemma 2 (2024-07-13) -> Gemma 3 (2025-03-12); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,gemma-4-12b-it,ledger,gemma-3-12b-it,,"Gemma 3 (2025-03-12) -> Gemma 4 (2026-06-09); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,glm-4-7,ledger,glm-4-6,,"GLM-4.6 (2025-09-30) -> GLM-4.7 (2025-12-22); set predecessor_id / successor_id in models.csv, or reject"

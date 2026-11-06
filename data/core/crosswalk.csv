@@ -122,6 +122,7 @@ arcee-supernova-v1,huggingface,arcee-ai/Arcee-SuperNova-v1
 arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
 areal-boba-2-14b,huggingface,inclusionAI/AReaL-boba-2-14B
 areal-boba-2-32b,huggingface,inclusionAI/AReaL-boba-2-32B
+areal-boba-2-8b,huggingface,inclusionAI/AReaL-boba-2-8B
 armorocr,huggingface,inclusionAI/ArmorOCR
 armorocr,openalex,W7203889917
 armorocr,semantic_scholar,6a040ec08543a333852cc3422b5fd327ee5d88a4
@@ -1124,6 +1125,12 @@ gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,openrouter,google/gemini-nano-banana-2.1
+gemini-omni-1-1-flash,google_api,gemini-omni-1.1-flash
+gemini-omni-1-1-flash,models_dev,kilo/google/gemini-omni-1.1-flash
+gemini-omni-1-1-flash,openrouter,google/gemini-omni-1.1-flash
+gemini-omni-1-2-flash,google_api,gemini-omni-1.2-flash
+gemini-omni-1-2-flash,models_dev,kilo/google/gemini-omni-1.2-flash
+gemini-omni-1-2-flash,openrouter,google/gemini-omni-1.2-flash
 gemma-2-27b-it,epoch,Gemma 2 27B
 gemma-2-27b-it,huggingface,google/gemma-2-27b-it
 gemma-2-27b-it,models_dev,aimlapi/google/gemma-2-27b-it
@@ -1381,6 +1388,7 @@ glm-z1-9b,huggingface,zai-org/GLM-Z1-9B-0414
 glm-z1-9b,openalex,W4399837985
 glm-z1-9b,semantic_scholar,c7f9706898bdfa3241601e075b1305649b174ff1
 glm-z1-rumination-32b,huggingface,zai-org/GLM-Z1-Rumination-32B-0414
+glyph,huggingface,zai-org/Glyph
 got-ocr-2-0,huggingface,stepfun-ai/GOT-OCR-2.0-hf
 got-ocr2-0,huggingface,stepfun-ai/GOT-OCR2_0
 gpt-3,openai_api,davinci
@@ -2339,6 +2347,7 @@ lfm2-vl-450m,huggingface,LiquidAI/LFM2-VL-450M
 lfm2-vl-450m,openalex,W4416982472
 lfm2-vl-450m,semantic_scholar,dcedb2b0f21d5731144d6475363b37deaf634ce0
 lfm3-1-7b,huggingface,LiquidAI/LFM3-1.7B
+lfm3-1-7b-base,huggingface,LiquidAI/LFM3-1.7B-Base
 lfm3-vl-2b,huggingface,LiquidAI/LFM3-VL-2B
 ling-1t,epoch,Ling-1T
 ling-1t,huggingface,inclusionAI/Ling-1T
@@ -4638,6 +4647,7 @@ xlam-7b-r,huggingface,Salesforce/xLAM-7b-r
 xlam-8x22b-r,huggingface,Salesforce/xLAM-8x22b-r
 xrouter,huggingface,Salesforce/xRouter
 yandex-8b-wmt26,huggingface,yandex/Yandex-8B-WMT26
+yarn-llama-2-13b-128k,huggingface,NousResearch/Yarn-Llama-2-13b-128k
 yarn-llama-2-7b-128k,huggingface,NousResearch/Yarn-Llama-2-7b-128k
 yarn-llama-2-7b-128k,openalex,W4386435778
 yarn-llama-2-7b-128k,semantic_scholar,819bbdc2dac9e13d9ca3e2508a6e063186ce5e40

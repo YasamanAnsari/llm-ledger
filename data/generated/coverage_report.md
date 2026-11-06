@@ -9,41 +9,41 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1900; events: 2951
-- Models: curated 73, corroborated 676, single-source 1151
-- Event confidence: verified 1184, inferred 1761, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 437 of 1658
+- Models: 1907; events: 2966
+- Models: curated 73, corroborated 678, single-source 1156
+- Event confidence: verified 1190, inferred 1770, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 439 of 1662
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
-| OpenAI | 75 | 304 | 19 | 48 | 8 | 73% |
+| OpenAI | 76 | 306 | 19 | 48 | 9 | 73% |
 | MBZUAI | 74 | 74 | 0 | 6 | 68 | 8% |
 | ByteDance | 64 | 86 | 0 | 24 | 40 | 33% |
 | Mistral | 59 | 110 | 4 | 31 | 24 | 45% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
+| Google | 57 | 159 | 7 | 28 | 22 | 42% |
+| Ant Group | 56 | 68 | 0 | 27 | 29 | 43% |
 | EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
-| Meta | 56 | 115 | 4 | 27 | 25 | 36% |
-| Ant Group | 55 | 67 | 0 | 27 | 28 | 43% |
-| Google | 55 | 153 | 7 | 26 | 22 | 42% |
+| Meta | 56 | 117 | 4 | 27 | 25 | 37% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Marin | 52 | 52 | 0 | 0 | 52 | 0% |
 | Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
 | DeepSeek | 47 | 105 | 3 | 27 | 17 | 54% |
+| Zhipu | 40 | 86 | 3 | 17 | 20 | 48% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
-| Zhipu | 39 | 85 | 3 | 17 | 19 | 48% |
 | OpenBMB | 38 | 38 | 0 | 6 | 32 | 16% |
-| Liquid AI | 34 | 37 | 0 | 23 | 11 | 65% |
+| Liquid AI | 35 | 38 | 0 | 23 | 12 | 63% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
 | Tencent | 34 | 45 | 1 | 15 | 18 | 42% |
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Baidu | 30 | 37 | 0 | 23 | 7 | 68% |
-| Nous | 28 | 36 | 0 | 7 | 21 | 25% |
+| Nous | 29 | 37 | 0 | 7 | 22 | 24% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
@@ -59,7 +59,7 @@ as settled.
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
-| Moonshot | 16 | 41 | 0 | 15 | 1 | 54% |
+| Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
@@ -98,37 +98,34 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1640 | 424 | 1215 | 1 |
-| platform_availability | 340 | 335 | 3 | 2 |
-| retired | 320 | 186 | 134 | 0 |
-| api_ga | 261 | 63 | 197 | 1 |
-| announced | 252 | 53 | 198 | 1 |
+| weights_released | 1644 | 425 | 1218 | 1 |
+| platform_availability | 342 | 337 | 3 | 2 |
+| retired | 324 | 189 | 135 | 0 |
+| api_ga | 263 | 63 | 199 | 1 |
+| announced | 253 | 53 | 199 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
 | free_tier | 10 | 9 | 0 | 1 |
-| price_changed | 9 | 7 | 2 | 0 |
-| api_preview | 8 | 8 | 0 | 0 |
+| price_changed | 10 | 7 | 3 | 0 |
+| api_preview | 9 | 8 | 1 | 0 |
 | alias_repointed | 5 | 2 | 3 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 37 (verified 5, single-source inferred 32)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 12
+- Events it wrote: 40 (verified 5, single-source inferred 35)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 13
 
-Declined in the 7 days to 2026-11-05, by reason:
+Declined in the 7 days to 2026-11-06, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 84 |
-| no_dated_event | 44 |
+| community_lead | 76 |
+| no_dated_event | 39 |
 | malformed_candidate | 6 |
-| launch_event_required | 2 |
-| disagrees_with_record | 1 |
+| third_party_claim | 6 |
+| launch_event_required | 3 |
 | not_a_model | 1 |
-| order_violation | 1 |
-| third_party_claim | 1 |
-| validation_failed | 1 |
