@@ -211,7 +211,6 @@ hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.N
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,empero-ai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,erwanf,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,failspy,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -222,7 +221,7 @@ hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.
 hf_unmapped_namespace,huggingface,ornith-ai,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,roneneldan,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,trl-internal-testing,,,,4 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,6 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 lifecycle_ambiguous,litellm,azure_ai/DeepSeek-V4-Flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
@@ -241,6 +240,7 @@ md_no_consensus,models_dev,deepseek-v3,ledger,deepseek-v3,,resellers disagree: a
 md_no_consensus,models_dev,grok-3,ledger,grok-3,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,grok-3-mini,ledger,grok-3-mini,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,inclusionai/ring-2.6-1t,ledger,ring-2-6-1t,,resellers disagree: requesty:2026-05-08|zenmux:2026-05-07
+md_no_consensus,models_dev,ling-3.0-tiny,ledger,ling-3-0-tiny,,resellers disagree: kilo:2026-08-06|nano-gpt:2026-11-07|nano-gpt:2026-11-07|openrouter:2026-08-06|requesty:2026-08-05
 md_no_consensus,models_dev,mercury-coder-small,ledger,mercury-coder-small,,resellers disagree: nano-gpt:2024-01-01|vercel:2025-02-26
 md_no_consensus,models_dev,qwen/qwen3-vl-30b-a3b-thinking,ledger,qwen3-vl-30b-a3b-thinking,,resellers disagree: kilo:2025-10-06|openrouter:2025-10-06|qiniu-ai:2026-02-09|siliconflow:2025-10-11|siliconflow-cn:2025-10-11
 md_no_consensus,models_dev,qwen/qwen3-vl-8b-instruct,ledger,qwen3-vl-8b-instruct,,resellers disagree: kilo:2025-10-14|openrouter:2025-10-14|siliconflow:2025-10-15|siliconflow-cn:2025-10-15
@@ -565,6 +565,13 @@ paper_lead,ledger,kuaishou/HiPO,arxiv,https://arxiv.org/abs/2509.23967,,"v1 2025
 paper_lead,ledger,kuaishou/KAT-V1,arxiv,https://arxiv.org/abs/2507.08297,,"v1 2025-07-11 'KAT-V1: Kwai-AutoThink Technical Report'; family first available 2025-07-20; members: kat-v1-40b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,kuaishou/Thyme,arxiv,https://arxiv.org/abs/2508.11630,,"v1 2025-08-15 'Thyme: Think Beyond Images'; family first available 2025-08-15; members: thyme-sft; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,kuaishou/Thyme,arxiv,https://arxiv.org/abs/2507.09200,,"v1 2025-07-12 'THYME: Temporal Hierarchical-Cyclic Interactivity Modeling for Video Scene Graphs in Aerial Footage'; family first available 2025-08-15; members: thyme-sft; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/EXAONE-3.5,arxiv,https://arxiv.org/abs/2412.04862,,"v1 2024-12-06 'EXAONE 3.5: Series of Large Language Models for Real-world Use Cases'; family first available 2024-12-01; members: exaone-3-5-2-4b-instruct, exaone-3-5-32b-instruct, exaone-3-5-7-8b-instruct; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/EXAONE-4.0,arxiv,https://arxiv.org/abs/2507.11407,,"v1 2025-07-15 'EXAONE 4.0: Unified Large Language Models Integrating Non-reasoning and Reasoning Modes'; family first available 2025-07-11; members: exaone-4-0-1-2b, exaone-4-0-32b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/EXAONE-4.5,arxiv,https://arxiv.org/abs/2604.08644,,"v1 2026-04-09 'EXAONE 4.5 Technical Report'; family first available 2026-04-04; members: exaone-4-5-33b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/EXAONE-Deep,arxiv,https://arxiv.org/abs/2503.12524,,"v1 2025-03-16 'EXAONE Deep: Reasoning Enhanced Language Models'; family first available 2025-03-12; members: exaone-deep-2-4b, exaone-deep-32b, exaone-deep-7-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/K-EXAONE,arxiv,https://arxiv.org/abs/2601.01739,,"v1 2026-01-05 'K-EXAONE Technical Report'; family first available 2025-12-26; members: k-exaone-236b-a23b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,lg/K-EXAONE-2.0,arxiv,https://arxiv.org/abs/2608.04505,,"v1 2026-08-05 'K-EXAONE 2.0 Technical Report'; family first available 2026-07-29; members: k-exaone-2-0-750b-a37b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,liquid-ai/LFM2,arxiv,https://arxiv.org/abs/2511.23404,,"v1 2025-11-28 'LFM2 Technical Report'; family first available 2025-07-10; members: lfm2-1-2b, lfm2-2-6b, lfm2-24b-a2b, lfm2-350m, lfm2-700m, lfm2-8b-a1b ...; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/AIN,arxiv,https://arxiv.org/abs/2502.00094,,"v1 2025-01-31 'AIN: The Arabic INclusive Large Multimodal Model'; family first available 2025-01-07; members: mbzuai-ain; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/BiMediX2,arxiv,https://arxiv.org/abs/2412.07769,,"v1 2024-12-10 'BiMediX2: Bio-Medical EXpert LMM for Diverse Medical Modalities'; family first available 2024-12-15; members: bimedix2-4b, bimedix2-8b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/K2-V2,arxiv,https://arxiv.org/abs/2512.06201,,"v1 2025-12-05 'K2-V2: A 360-Open, Reasoning-Enhanced LLM'; family first available 2026-01-08; members: k2-think-v2; add paper_published to the model the paper describes, or reject"

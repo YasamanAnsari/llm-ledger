@@ -1,0 +1,8 @@
+{
+  "leaderboard_overall.csv": {
+    "bytes": 19795710,
+    "fetched_at": "2026-11-07T13:20:07+00:00",
+    "sha256": "79168cce02014a88a4f64efba821939d189ffb275a0692ee4397c09d558fc76a",
+    "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/tree/f566816dfe80f18d0bc804dd5deafa68d5957cb9"
+  }
+}

@@ -245,6 +245,7 @@ laguna-s-2-1,true,,,,,,1048576,32768,text,text,,true,,,0,0,0,2026-10-03,https://
 laguna-xs-2-1,true,,,,,,262144,32768,text,text,,true,,,0,0,0,2026-10-03,https://models.dev/api.json
 lfm-2-5-24b-a2b,true,,,,,,128000,8192,text,text,,true,,,0.05,0.7,0.025,2026-10-14,https://models.dev/api.json
 lfm2-5-2-6b,true,,,,,,65536,8192,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
+lfm3-1-7b,true,,,,,,262144,8192,text,text,,true,,,0.08,0.2,0.02,2026-11-07,https://models.dev/api.json
 ling-1t,false,none,,,,,128000,32000,text,text,2024-06,true,,,0.57,2.29,,2026-09-01,https://models.dev/api.json
 ling-2-6-flash,false,none,,,,,262144,262144,text,text,,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
 ling-3-0-flash,true,,,,,,262144,32768,text,text,,true,,,0.06,0.18,0.012,2026-09-01,https://models.dev/api.json
