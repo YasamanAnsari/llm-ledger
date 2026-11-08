@@ -210,7 +210,9 @@ llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,o
 llama-4-scout,Llama 4 Scout,meta,open_weights,2025-04-05,,,,,,2025-04-06,2026-02-22,2026-02-23,324,
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,2025-04-02,2025-05-11,19,2025-08-04,2025-08-07,127,,,,,
 longcat-flash-chat,LongCat-Flash,meituan,open_weights,2025-08-29,2025-09-17,9,2026-01-29,2026-02-06,161,,,,,
-mercury-2,mercury-2,inception-labs,api_only,2026-02-24,2026-03-11,52,,2026-03-11,15,,,,,
+mercury-2,mercury-2,inception-labs,api_only,2026-02-24,2026-03-11,52,,2026-03-11,15,,,,,2026-11-07
+mercury-2-5,mercury-2.5,inception-labs,api_only,2026-09-08,,,,,,,,,,2026-11-07
+mercury-3,mercury-3,inception-labs,api_only,2026-10-16,,,,,,,,,,2026-11-07
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,2026-04-22,2026-04-28,17,2026-06-10,2026-06-15,54,2026-05-10,2026-10-20,,,
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,2026-04-22,2026-04-28,11,2026-09-01,2026-09-02,133,2026-04-23,2026-09-20,2026-09-21,152,
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,2026-09-22,2026-09-25,16,2026-11-06,,,2026-09-22,2026-11-01,,,

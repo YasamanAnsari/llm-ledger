@@ -746,6 +746,7 @@ delphi-3e19-1-4bparams-3-5btokens,huggingface,marin-community/delphi-3e19-1.4Bpa
 delphi-3e19-1-9bparams-2-5btokens,huggingface,marin-community/delphi-3e19-1.9Bparams-2.5Btokens
 delphi-3e19-273mparams-22-3btokens,huggingface,marin-community/delphi-3e19-273Mparams-22.3Btokens
 delphi-3e19-447mparams-12-2btokens,huggingface,marin-community/delphi-3e19-447Mparams-12.2Btokens
+delphi-3e19-669mparams-7-8btokens,huggingface,marin-community/delphi-3e19-669Mparams-7.8Btokens
 delphi-3e19-998mparams-5btokens,huggingface,marin-community/delphi-3e19-998Mparams-5Btokens
 delphi-3e20-1-4bparams-35-2btokens,huggingface,marin-community/delphi-3e20-1.4Bparams-35.2Btokens
 delphi-3e20-1-9bparams-24-7btokens,huggingface,marin-community/delphi-3e20-1.9Bparams-24.7Btokens
@@ -755,12 +756,14 @@ delphi-3e20-273mparams-223btokens,huggingface,marin-community/delphi-3e20-273Mpa
 delphi-3e20-3-4bparams-13-9btokens,huggingface,marin-community/delphi-3e20-3.4Bparams-13.9Btokens
 delphi-3e20-447mparams-122btokens,huggingface,marin-community/delphi-3e20-447Mparams-122Btokens
 delphi-3e20-5-3bparams-8-8btokens,huggingface,marin-community/delphi-3e20-5.3Bparams-8.8Btokens
+delphi-3e20-6-7bparams-7btokens,huggingface,marin-community/delphi-3e20-6.7Bparams-7Btokens
 delphi-3e20-669mparams-77-9btokens,huggingface,marin-community/delphi-3e20-669Mparams-77.9Btokens
 delphi-3e20-998mparams-49-8btokens,huggingface,marin-community/delphi-3e20-998Mparams-49.8Btokens
 delphi-9e18-1-2bparams-1-3btokens,huggingface,marin-community/delphi-9e18-1.2Bparams-1.3Btokens
 delphi-9e18-157mparams-12-9btokens,huggingface,marin-community/delphi-9e18-157Mparams-12.9Btokens
 delphi-9e18-210mparams-9-1btokens,huggingface,marin-community/delphi-9e18-210Mparams-9.1Btokens
 delphi-9e18-273mparams-6-7btokens,huggingface,marin-community/delphi-9e18-273Mparams-6.7Btokens
+delphi-9e18-358mparams-4-7btokens,huggingface,marin-community/delphi-9e18-358Mparams-4.7Btokens
 delphi-9e18-447mparams-3-7btokens,huggingface,marin-community/delphi-9e18-447Mparams-3.7Btokens
 delphi-9e18-550mparams-2-9btokens,huggingface,marin-community/delphi-9e18-550Mparams-2.9Btokens
 delphi-9e18-998mparams-1-5btokens,huggingface,marin-community/delphi-9e18-998Mparams-1.5Btokens
@@ -770,6 +773,7 @@ delphi-9e19-11-8bparams-1-2btokens,huggingface,marin-community/delphi-9e19-11.8B
 delphi-9e19-273mparams-66-8btokens,huggingface,marin-community/delphi-9e19-273Mparams-66.8Btokens
 delphi-9e19-447mparams-36-7btokens,huggingface,marin-community/delphi-9e19-447Mparams-36.7Btokens
 delphi-9e19-5-3bparams-2-6btokens,huggingface,marin-community/delphi-9e19-5.3Bparams-2.6Btokens
+delphi-9e19-8-1bparams-1-7btokens,huggingface,marin-community/delphi-9e19-8.1Bparams-1.7Btokens
 delphi-9e19-998mparams-14-9btokens,huggingface,marin-community/delphi-9e19-998Mparams-14.9Btokens
 devstral-2512,huggingface,mistralai/Devstral-2-123B-Instruct-2512
 devstral-2512,models_dev,aimlapi/mistralai/devstral-2512
@@ -2039,7 +2043,10 @@ isaac-0-1,huggingface,PerceptronAI/Isaac-0.1
 isaac-0-1-base,huggingface,PerceptronAI/Isaac-0.1-Base
 isaac-0-2-1b,huggingface,PerceptronAI/Isaac-0.2-1B
 isaac-0-2-2b-preview,huggingface,PerceptronAI/Isaac-0.2-2B-Preview
+jais-3-3-7b,huggingface,IFM/Jais-3-3.7B-FP8
 jais-3-32b,huggingface,IFM/Jais-3-32B-FP8
+jais-3-375b-a23b,huggingface,IFM/Jais-3-375B-A23B-FP8
+jais-3-7b,huggingface,IFM/Jais-3-7B-FP8
 jais-3-mova-36b-a4b,huggingface,IFM/Jais-3-MoVA-36B-A4B-FP8
 jamba-tiny-random,huggingface,ai21labs/Jamba-tiny-random
 jamba-v0-1,huggingface,ai21labs/Jamba-v0.1
@@ -3696,6 +3703,7 @@ pythia-70m-seed4,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
 pythia-70m-seed5,huggingface,EleutherAI/pythia-70m-seed5
 pythia-70m-seed5,openalex,W4415098724
 pythia-70m-seed5,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
+pythia-70m-seed6,huggingface,EleutherAI/pythia-70m-seed6
 qianfan-ocr,huggingface,baidu/Qianfan-OCR
 qianfan-vl-3b,huggingface,baidu/Qianfan-VL-3B
 qianfan-vl-70b,huggingface,baidu/Qianfan-VL-70B
@@ -4463,6 +4471,7 @@ superapriel-15b-instruct,huggingface,ServiceNow-AI/SuperApriel-15B-Instruct
 superapriel-15b-instruct,openalex,W7155369144
 superapriel-15b-instruct,semantic_scholar,da1baa311dcf4ec2b5fa8d6e571db2536cdaf3ef
 supernova-medius,huggingface,arcee-ai/SuperNova-Medius
+swe-fixer-retriever-7b,huggingface,internlm/SWE-Fixer-Retriever-7B
 synlogic-32b,huggingface,MiniMaxAI/SynLogic-32B
 synlogic-32b,semantic_scholar,c4b20ea0556444a870e94ad58076ced9e21d57de
 synlogic-7b,huggingface,MiniMaxAI/SynLogic-7B

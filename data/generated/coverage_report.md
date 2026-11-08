@@ -9,41 +9,41 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1916; events: 2979
-- Models: curated 73, corroborated 681, single-source 1162
-- Event confidence: verified 1195, inferred 1778, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 440 of 1671
+- Models: 1925; events: 2988
+- Models: curated 73, corroborated 684, single-source 1168
+- Event confidence: verified 1198, inferred 1784, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 440 of 1680
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
+| MBZUAI | 77 | 77 | 0 | 6 | 71 | 8% |
 | OpenAI | 76 | 306 | 19 | 48 | 9 | 73% |
-| MBZUAI | 74 | 74 | 0 | 6 | 68 | 8% |
 | ByteDance | 65 | 87 | 0 | 24 | 41 | 32% |
+| Marin | 61 | 61 | 0 | 0 | 61 | 0% |
 | Mistral | 59 | 112 | 4 | 31 | 24 | 44% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
-| Ant Group | 57 | 68 | 0 | 27 | 30 | 43% |
+| Ant Group | 57 | 68 | 0 | 28 | 29 | 44% |
+| EleutherAI | 57 | 57 | 0 | 1 | 56 | 2% |
 | Google | 57 | 159 | 7 | 28 | 22 | 42% |
-| Marin | 57 | 57 | 0 | 0 | 57 | 0% |
-| EleutherAI | 56 | 56 | 0 | 1 | 55 | 2% |
 | Meta | 56 | 117 | 4 | 27 | 25 | 37% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
-| Shanghai AI Lab | 51 | 51 | 0 | 13 | 38 | 25% |
+| Shanghai AI Lab | 52 | 52 | 0 | 13 | 39 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
 | DeepSeek | 47 | 105 | 3 | 27 | 17 | 54% |
 | Zhipu | 40 | 86 | 3 | 18 | 19 | 49% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
-| OpenBMB | 39 | 39 | 0 | 6 | 33 | 15% |
+| OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
 | Liquid AI | 35 | 40 | 0 | 25 | 10 | 68% |
 | NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
 | Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
 | Tencent | 34 | 45 | 1 | 15 | 18 | 42% |
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Baidu | 30 | 37 | 0 | 23 | 7 | 68% |
-| Nous | 30 | 38 | 0 | 7 | 23 | 24% |
+| Nous | 30 | 38 | 0 | 8 | 22 | 26% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
 | Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
@@ -98,7 +98,7 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1653 | 427 | 1225 | 1 |
+| weights_released | 1662 | 430 | 1231 | 1 |
 | platform_availability | 343 | 338 | 3 | 2 |
 | retired | 328 | 191 | 137 | 0 |
 | api_ga | 262 | 63 | 198 | 1 |
@@ -119,12 +119,12 @@ as settled.
 - Events it wrote: 40 (verified 5, single-source inferred 35)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 13
 
-Declined in the 7 days to 2026-11-07, by reason:
+Declined in the 7 days to 2026-11-08, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 73 |
-| no_dated_event | 34 |
+| community_lead | 67 |
+| no_dated_event | 32 |
 | malformed_candidate | 6 |
 | third_party_claim | 6 |
 | launch_event_required | 3 |
