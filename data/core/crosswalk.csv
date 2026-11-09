@@ -766,11 +766,13 @@ delphi-9e18-273mparams-6-7btokens,huggingface,marin-community/delphi-9e18-273Mpa
 delphi-9e18-358mparams-4-7btokens,huggingface,marin-community/delphi-9e18-358Mparams-4.7Btokens
 delphi-9e18-447mparams-3-7btokens,huggingface,marin-community/delphi-9e18-447Mparams-3.7Btokens
 delphi-9e18-550mparams-2-9btokens,huggingface,marin-community/delphi-9e18-550Mparams-2.9Btokens
+delphi-9e18-837mparams-1-8btokens,huggingface,marin-community/delphi-9e18-837Mparams-1.8Btokens
 delphi-9e18-998mparams-1-5btokens,huggingface,marin-community/delphi-9e18-998Mparams-1.5Btokens
 delphi-9e19-1-4bparams-10-6btokens,huggingface,marin-community/delphi-9e19-1.4Bparams-10.6Btokens
 delphi-9e19-1-9bparams-7-4btokens,huggingface,marin-community/delphi-9e19-1.9Bparams-7.4Btokens
 delphi-9e19-11-8bparams-1-2btokens,huggingface,marin-community/delphi-9e19-11.8Bparams-1.2Btokens
 delphi-9e19-273mparams-66-8btokens,huggingface,marin-community/delphi-9e19-273Mparams-66.8Btokens
+delphi-9e19-4-3bparams-3-3btokens,huggingface,marin-community/delphi-9e19-4.3Bparams-3.3Btokens
 delphi-9e19-447mparams-36-7btokens,huggingface,marin-community/delphi-9e19-447Mparams-36.7Btokens
 delphi-9e19-5-3bparams-2-6btokens,huggingface,marin-community/delphi-9e19-5.3Bparams-2.6Btokens
 delphi-9e19-8-1bparams-1-7btokens,huggingface,marin-community/delphi-9e19-8.1Bparams-1.7Btokens
@@ -841,8 +843,10 @@ doubao-seed-2-0-pro,epoch,Doubao-Seed-2.0 Pro
 doubao-seed-2-0-pro,models_dev,aihubmix/doubao-seed-2-0-pro
 doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
+doubao-seed-2-1-pro,models_dev,ofox/volcengine/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
 doubao-seed-2-1-turbo,models_dev,nano-gpt/bytedance/doubao-seed-2.1-turbo
+doubao-seed-2-1-turbo,models_dev,ofox/volcengine/doubao-seed-2.1-turbo
 doubao-seed-evolving,epoch,Doubao Seed Evolving
 doubao-seed-evolving,models_dev,ofox/volcengine/doubao-seed-evolving
 e1-acereason-14b,huggingface,Salesforce/E1-AceReason-14B
@@ -2629,6 +2633,8 @@ longcat-2-0,huggingface,meituan-longcat/LongCat-2.0-INT8
 longcat-2-0,models_dev,aihubmix/longcat-2.0
 longcat-2-0,models_dev,longcat/LongCat-2.0
 longcat-2-0,openrouter,meituan/longcat-2.0
+longcat-2-5,huggingface,meituan-longcat/LongCat-2.5
+longcat-2-5-w4a4,huggingface,meituan-longcat/LongCat-2.5-W4A4
 longcat-flash-chat,epoch,LongCat-Flash
 longcat-flash-chat,huggingface,meituan-longcat/LongCat-Flash-Chat
 longcat-flash-chat,huggingface,meituan-longcat/LongCat-Flash-Chat-FP8
@@ -3573,6 +3579,7 @@ plamo-2-1-8b-vl,huggingface,pfnet/plamo-2.1-8b-vl
 plamo-2-1b,huggingface,pfnet/plamo-2-1b
 plamo-2-8b,huggingface,pfnet/plamo-2-8b
 plamo-3-610m-fin-instruct,huggingface,pfnet/plamo-3-610m-fin-instruct
+plamo-3-8b-fin-instruct,huggingface,pfnet/plamo-3-8b-fin-instruct
 plamo-3-nict-2604-31b-base,huggingface,pfnet/plamo-3-nict-2604-31b-base
 plamo-3-nict-2b-base,huggingface,pfnet/plamo-3-nict-2b-base
 plamo-3-nict-31b-base,huggingface,pfnet/plamo-3-nict-31b-base

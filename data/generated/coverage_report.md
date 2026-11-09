@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1925; events: 2988
-- Models: curated 73, corroborated 684, single-source 1168
-- Event confidence: verified 1198, inferred 1784, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 440 of 1680
+- Models: 1930; events: 2992
+- Models: curated 73, corroborated 684, single-source 1173
+- Event confidence: verified 1197, inferred 1789, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 441 of 1685
 
 ## By organization
 
@@ -22,7 +22,7 @@ as settled.
 | MBZUAI | 77 | 77 | 0 | 6 | 71 | 8% |
 | OpenAI | 76 | 306 | 19 | 48 | 9 | 73% |
 | ByteDance | 65 | 87 | 0 | 24 | 41 | 32% |
-| Marin | 61 | 61 | 0 | 0 | 61 | 0% |
+| Marin | 63 | 63 | 0 | 0 | 63 | 0% |
 | Mistral | 59 | 112 | 4 | 31 | 24 | 44% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
 | Ant Group | 57 | 68 | 0 | 28 | 29 | 44% |
@@ -50,16 +50,16 @@ as settled.
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
+| PFN | 23 | 23 | 0 | 1 | 22 | 4% |
 | Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
 | Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
-| PFN | 22 | 22 | 0 | 1 | 21 | 5% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
-| Moonshot | 16 | 43 | 0 | 15 | 1 | 58% |
+| Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
@@ -69,9 +69,9 @@ as settled.
 | Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
+| Meituan | 12 | 15 | 0 | 9 | 3 | 60% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 5 | 6 | 45% |
-| Meituan | 10 | 13 | 0 | 9 | 1 | 69% |
 | RedNote | 10 | 12 | 0 | 1 | 9 | 17% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
 | Aleph Alpha | 9 | 9 | 0 | 1 | 8 | 11% |
@@ -98,10 +98,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1662 | 430 | 1231 | 1 |
+| weights_released | 1667 | 429 | 1237 | 1 |
 | platform_availability | 343 | 338 | 3 | 2 |
 | retired | 328 | 191 | 137 | 0 |
-| api_ga | 262 | 63 | 198 | 1 |
+| api_ga | 261 | 63 | 197 | 1 |
 | announced | 253 | 53 | 199 | 1 |
 | system_card | 32 | 31 | 1 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
@@ -119,12 +119,12 @@ as settled.
 - Events it wrote: 40 (verified 5, single-source inferred 35)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 13
 
-Declined in the 7 days to 2026-11-08, by reason:
+Declined in the 7 days to 2026-11-09, by reason:
 
 | reason | count |
 |---|---|
 | community_lead | 67 |
-| no_dated_event | 32 |
+| no_dated_event | 33 |
 | malformed_candidate | 6 |
 | third_party_claim | 6 |
 | launch_event_required | 3 |

@@ -162,6 +162,7 @@ hf_mirror_repo,huggingface,rinna/llama-3-youko-8b-instruct,ledger,meta,,re-hoste
 hf_mirror_repo,huggingface,rinna/qwen2.5-bakeneko-32b,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,rinna/qwen2.5-bakeneko-32b-instruct,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,tencent/DeepSeek-V3.1-Terminus-W4AFP8,ledger,deepseek,,re-hosted copy of another lab's weights; not a release
+hf_mirror_repo,huggingface,tencent/Qwen3.8-27B-DSpine-b16,ledger,alibaba,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,upstage/Llama-2-70b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,upstage/llama-30b-instruct,ledger,meta,,re-hosted copy of another lab's weights; not a release
 hf_mirror_repo,huggingface,upstage/llama-30b-instruct-2048,ledger,meta,,re-hosted copy of another lab's weights; not a release
@@ -222,7 +223,7 @@ hf_unmapped_namespace,huggingface,modularai,,,,1 in-scope repos; add to pull_hf.
 hf_unmapped_namespace,huggingface,ornith-ai,,,,11 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,roneneldan,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,trl-internal-testing,,,,6 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,trl-internal-testing,,,,7 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 lifecycle_ambiguous,litellm,azure_ai/DeepSeek-V4-Flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
@@ -583,6 +584,10 @@ paper_lead,ledger,mbzuai/OpenEarthAgent,arxiv,https://arxiv.org/abs/2602.17665,,
 paper_lead,ledger,mbzuai/PALO,arxiv,https://arxiv.org/abs/2503.04462,,"v1 2025-03-06 'PALo: Learning Posture-Aware Locomotion for Quadruped Robots'; family first available 2024-03-25; members: palo-7b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/PALO,arxiv,https://arxiv.org/abs/2402.14818,,"v1 2024-02-22 'PALO: A Polyglot Large Multimodal Model for 5B People'; family first available 2024-03-25; members: palo-7b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,mbzuai/geochat,arxiv,https://arxiv.org/abs/2311.15826,,"v1 2023-11-24 'GeoChat: Grounded Large Vision-Language Model for Remote Sensing'; family first available 2024-02-26; members: geochat-7b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,pfn/plamo,arxiv,https://arxiv.org/abs/2406.18237,,"v1 2024-06-26 'PlaMo: Plan and Move in Rich 3D Physical Environments'; family first available 2023-09-25; members: plamo-100b, plamo-13b, plamo-13b-instruct; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,pfn/plamo-2,arxiv,https://arxiv.org/abs/2509.04897,,"v1 2025-09-05 'PLaMo 2 Technical Report'; family first available 2025-02-05; members: plamo-2-1b, plamo-2-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,prime-intellect/INTELLECT-1,arxiv,https://arxiv.org/abs/2412.01152,,"v1 2024-12-02 'INTELLECT-1 Technical Report'; family first available 2024-11-22; members: intellect-1, intellect-1-fp32, intellect-1-instruct; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,prime-intellect/INTELLECT-3,arxiv,https://arxiv.org/abs/2512.16144,,"v1 2025-12-18 'INTELLECT-3: Technical Report'; family first available 2025-09-09; members: intellect-3, intellect-3-base; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,rednote/dots.ocr,arxiv,https://arxiv.org/abs/2512.02498,,"v1 2025-12-02 'dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model'; family first available 2025-07-30; members: dots-ocr; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,sensetime/SenseNova-MARS,arxiv,https://arxiv.org/abs/2512.24330,,"v1 2025-12-30 'SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning'; family first available 2025-12-26; members: sensenova-mars-32b, sensenova-mars-8b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-R1V2,arxiv,https://arxiv.org/abs/2504.16656,,"v1 2025-04-23 'Skywork R1V2: Multimodal Hybrid Reinforcement Learning for Reasoning'; family first available 2025-04-22; members: skywork-r1v2-38b; add paper_published to the model the paper describes, or reject"
@@ -675,6 +680,7 @@ predecessor_lead,ledger,llama-3-1-70b,ledger,llama-2-70b,,"Llama 2 (2023-11-29) 
 predecessor_lead,ledger,llama-3-1-70b-instruct,ledger,llama-3-70b-instruct,,"Llama 3 (2024-04-18) -> Llama 3.1 (2024-07-23); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,llama-3-1-8b-instruct,ledger,llama-3-8b-instruct,,"Llama 3 (2024-07-23) -> Llama 3.1 (2024-07-23); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,llama-3-3-70b-instruct,ledger,llama-3-1-70b-instruct,,"Llama 3.1 (2024-07-23) -> Llama 3.3 (2024-12-06); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,longcat-2-5,ledger,longcat-2-0,,"LongCat-2.0 (2026-06-30) -> LongCat-2.5 (2026-11-04); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,mercury-2-5,ledger,mercury-2,,"mercury-2 (2026-02-24) -> mercury-2.5 (2026-09-08); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,mercury-3,ledger,mercury-2-5,,"mercury-2.5 (2026-09-08) -> mercury-3 (2026-10-16); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,mimo-v2-5-pro,ledger,mimo-v2-pro,,"MiMo-V2 (2026-03-18) -> MiMo-V2.5 (2026-04-22); set predecessor_id / successor_id in models.csv, or reject"
