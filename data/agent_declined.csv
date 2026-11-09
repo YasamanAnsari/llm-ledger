@@ -96,5 +96,9 @@ date,reason,count
 2026-11-07,no_dated_event,5
 2026-11-08,community_lead,5
 2026-11-08,no_dated_event,2
-2026-11-09,community_lead,13
-2026-11-09,no_dated_event,2
+2026-11-09,already_recorded,1
+2026-11-09,community_lead,6
+2026-11-09,launch_event_required,2
+2026-11-09,malformed_candidate,2
+2026-11-09,no_dated_event,6
+2026-11-09,would_touch_verified,2

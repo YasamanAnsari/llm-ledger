@@ -709,3 +709,17 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `gpt‑6-cyber-announced-1` 2026-11-05 inferred (vendor_blog; evidence: "We’re introducing GPT‑6 Cyber, a major leap in security research: more capable at finding and fixing vulnerabilities" (read via wayback))
 - `gpt‑6-cyber-api_preview-1` 2026-11-05 inferred (vendor_blog; evidence: "GPT‑6 Cyber is initially available through the API and Codex to a select group of approved Daybreak Red customers." (read via wayback))
 - `gemini-omni-1-2-flash-price_changed-1` 2026-11-05 inferred (vendor_blog; evidence: "We have dropped the price 30% from Gemini Omni 1.1 making it available at $0.07 per second for 720p video.")
+
+## 2026-11-09
+
+- new model `claude-fable-5-2`
+- new model `claude-mythos-5-2`
+- `claude-fable-5-2-announced-1` 2026-11-09 inferred (vendor_blog; evidence: "Introducing Claude Fable 5.2 and Claude Mythos 5.2")
+- `claude-mythos-5-2-announced-1` 2026-11-09 inferred (vendor_blog; evidence: "Introducing Claude Fable 5.2 and Claude Mythos 5.2")
+- `claude-haiku-5-5-api_ga-1` 2026-10-07 verified (vendor_blog; evidence: "Claude Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure."; agrees: anthropic_api created)
+- `claude-sonnet-5-5-api_ga-1` 2026-09-28 verified (vendor_blog; evidence: "Claude Sonnet 5.5 is now available on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure."; agrees: anthropic_api create)
+- `claude-fable-5-2-platform_availability-1` 2026-11-09 inferred (vendor_blog; evidence: "Claude Fable 5.2 and Claude Mythos 5.2 are available today on Amazon Bedrock through US Geo CRIS and Global CRIS inference profiles.")
+- `claude-mythos-5-2-platform_availability-1` 2026-11-09 inferred (vendor_blog; evidence: "Claude Fable 5.2 and Claude Mythos 5.2 are available today on Amazon Bedrock through US Geo CRIS and Global CRIS inference profiles.")
+- `claude-fable-5-2-system_card-1` 2026-11-09 inferred (vendor_blog; evidence: "For details on evaluation methodology, see the Claude Fable 5.2 and Claude Mythos 5.2 System Card")
+- `claude-mythos-5-2-system_card-1` 2026-11-09 inferred (vendor_blog; evidence: "For details on evaluation methodology, see the Claude Fable 5.2 and Claude Mythos 5.2 System Card")
+- `claude-sonnet-5-5-price_changed-1` 2026-10-07 inferred (vendor_blog; evidence: "First, starting today, we’re lowering the price of cache reads on Claude Sonnet 5.5 .")

@@ -1,4 +1,6 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
+2026-11-09,platform_availability_fallback,inferred,claude-fable-5-2,Claude Fable 5.2,anthropic,Claude Fable 5.2,,llm,api_only,
+2026-11-09,platform_availability_fallback,inferred,claude-mythos-5-2,Claude Mythos 5.2,anthropic,Claude Mythos 5.2,,llm,api_only,
 2026-11-08,weights_released,inferred,plamo-3-8b-fin-instruct,plamo-3-8b-fin-instruct,pfn,plamo-3-fin,instruct,llm,open_weights,
 2026-11-06,weights_released,verified,arete-27b,Arete-27B,nous-research,Arete,,llm,open_weights,osi_approved
 2026-11-06,weights_released,inferred,cola2,Cola2,bytedance,Cola2,,llm,open_weights,

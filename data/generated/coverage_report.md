@@ -9,9 +9,9 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1930; events: 2992
-- Models: curated 73, corroborated 684, single-source 1173
-- Event confidence: verified 1197, inferred 1789, disputed 6
+- Models: 1932; events: 2999
+- Models: curated 73, corroborated 684, single-source 1175
+- Event confidence: verified 1197, inferred 1796, disputed 6
 - Open-weight models with no `license_family` (license tag missing or `other`): 441 of 1685
 
 ## By organization
@@ -44,8 +44,8 @@ as settled.
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Baidu | 30 | 37 | 0 | 23 | 7 | 68% |
 | Nous | 30 | 38 | 0 | 8 | 22 | 26% |
+| Anthropic | 29 | 164 | 25 | 0 | 4 | 70% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
-| Anthropic | 27 | 157 | 25 | 0 | 2 | 73% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
@@ -99,33 +99,35 @@ as settled.
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
 | weights_released | 1667 | 429 | 1237 | 1 |
-| platform_availability | 343 | 338 | 3 | 2 |
+| platform_availability | 345 | 338 | 5 | 2 |
 | retired | 328 | 191 | 137 | 0 |
 | api_ga | 261 | 63 | 197 | 1 |
-| announced | 253 | 53 | 199 | 1 |
-| system_card | 32 | 31 | 1 | 0 |
+| announced | 255 | 53 | 201 | 1 |
+| system_card | 34 | 31 | 3 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
 | paper_published | 14 | 14 | 0 | 0 |
+| price_changed | 11 | 7 | 4 | 0 |
 | feature_added | 10 | 10 | 0 | 0 |
 | free_tier | 10 | 9 | 0 | 1 |
-| price_changed | 10 | 7 | 3 | 0 |
 | api_preview | 9 | 8 | 1 | 0 |
 | alias_repointed | 5 | 2 | 3 | 0 |
 | renamed | 1 | 1 | 0 | 0 |
 
 ## Page-reading agent
 
-- Events it wrote: 40 (verified 5, single-source inferred 35)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 13
+- Events it wrote: 49 (verified 7, single-source inferred 42)
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 15
 
 Declined in the 7 days to 2026-11-09, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 67 |
-| no_dated_event | 33 |
-| malformed_candidate | 6 |
+| community_lead | 60 |
+| no_dated_event | 37 |
+| malformed_candidate | 8 |
 | third_party_claim | 6 |
-| launch_event_required | 3 |
+| launch_event_required | 5 |
+| would_touch_verified | 2 |
+| already_recorded | 1 |
 | not_a_model | 1 |

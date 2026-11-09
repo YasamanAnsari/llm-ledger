@@ -604,6 +604,8 @@ paper_lead,ledger,xiaomi/mimo-v2.6,arxiv,https://arxiv.org/abs/2610.11959,,"v1 2
 paper_lead,ledger,zhipu/GLM-4.5,arxiv,https://arxiv.org/abs/2508.06471,,"v1 2025-08-08 'GLM-4.5: Agentic, Reasoning, and Coding (ARC) Foundation Models'; family first available 2025-07-28; members: glm-4-5; add paper_published to the model the paper describes, or reject"
 predecessor_lead,ledger,bfs-prover-v2-7b,ledger,bfs-prover-v1-7b,,"BFS-Prover-V1 (2025-02-23) -> BFS-Prover-V2 (2025-10-06); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,claude-fable-5-1,ledger,claude-fable-5,,"Claude Fable 5 (2026-06-07) -> claude-fable-5-1 (2026-09-01); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,claude-fable-5-2,ledger,claude-fable-5-1,,"claude-fable-5-1 (2026-09-01) -> Claude Fable 5.2 (2026-11-09); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,claude-mythos-5-2,ledger,claude-mythos-5,,"Claude Mythos 5 (2026-06-09) -> Claude Mythos 5.2 (2026-11-09); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3,ledger,deepseek-v2,,"DeepSeek-V2 (2024-04-22) -> DeepSeek-V3 (2024-12-26); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3-2,ledger,deepseek-v3-1,,"DeepSeek-V3.1 (2025-08-21) -> DeepSeek-V3.2 (2025-12-01); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v4-1-flash,ledger,deepseek-v4-flash,,"DeepSeek V4 (2026-04-24) -> deepseek-v4.1 (2026-09-10); set predecessor_id / successor_id in models.csv, or reject"

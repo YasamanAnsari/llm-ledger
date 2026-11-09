@@ -343,8 +343,6 @@ claude-haiku-4-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/opena
 claude-haiku-4-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2026-11-15,day,"azure_lifecycle (claude-haiku-4-5, claude-haiku-4-5)",false,true,,2026-10-03
 claude-haiku-4-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-19,day,litellm (azure_ai/claude-haiku-4-5),false,false,2026-10-03,2026-09-01
 claude-haiku-4-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-15,day,litellm (azure_ai/claude-haiku-4-5),false,false,,2026-10-03
-claude-haiku-5-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-10-07,day,anthropic_api created,true,false,,2026-10-08
-claude-haiku-5-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-10-07,day,models.dev (first_party),false,false,,2026-10-08
 claude-haiku-5-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-10-07,day,openrouter,false,true,,2026-10-08
 claude-haiku-5-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-29,day,litellm (azure_ai/claude-haiku-5-5),false,false,,2026-10-08
 claude-mythos-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-06-09,day,epoch.ai,false,false,,2026-09-01
@@ -419,8 +417,6 @@ claude-sonnet-4-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main
 claude-sonnet-4-retired-2,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html,lifecycle_table,2026-10-14,day,bedrock_lifecycle (anthropic.claude-sonnet-4-20250514-v1:0),false,true,,2026-09-10
 claude-sonnet-4-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-10-14,day,litellm (anthropic.claude-sonnet-4-20250514-v1:0),false,false,,2026-09-01
 claude-sonnet-4-retired-3,https://openrouter.ai/api/v1/models,api_metadata,2026-10-15,day,openrouter expiration,false,true,,2026-10-15
-claude-sonnet-5-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-09-28,day,anthropic_api created,true,false,,2026-10-03
-claude-sonnet-5-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-28,day,models.dev (first_party),false,false,,2026-10-03
 claude-sonnet-5-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-28,day,openrouter,false,true,,2026-10-03
 claude-sonnet-5-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-29,day,litellm (azure_ai/claude-sonnet-5-5),false,false,,2026-10-07
 claude-sonnet-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-30,day,openrouter,false,true,,2026-09-01
