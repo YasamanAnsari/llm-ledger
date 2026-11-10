@@ -14,6 +14,7 @@ claude-3-opus,,none,,,,,200000,,text|image,text,,,,,15,75,,2024-03-04,https://ww
 claude-3-sonnet,,none,,,,,200000,,text|image,text,,,,,3,15,,2024-03-04,https://www.anthropic.com/news/claude-3-family
 claude-fable-5,true,,,,,,1000000,128000,text|image|pdf,text,,true,,,10,50,1,2026-09-01,https://models.dev/api.json
 claude-fable-5-1,true,,,,,,1000000,128000,text|image,text,2026-06,true,,,10,50,0.25,2026-09-01,https://models.dev/api.json
+claude-fable-5-2,true,,,,,,1000000,128000,text|image|pdf,text,2026-06,true,,,8,40,0.2,2026-11-10,https://models.dev/api.json
 claude-haiku-4-5,false,none,,,,,200000,8192,text|image,text,2025-10,true,,,1,5,0.09999999999999999,2026-09-01,https://models.dev/api.json
 claude-haiku-5-5,true,,,,,,1000000,128000,text|image|pdf,text,2026-06,true,,,0.1,0.5,0.01,2026-10-08,https://models.dev/api.json
 claude-mythos-5,true,,,,,,1000000,128000,text|image|pdf,text,2026-01-31,true,,,10,50,1,2026-09-01,https://models.dev/api.json
@@ -231,6 +232,7 @@ hy-mt2-7b,false,none,,,,,8192,4096,text,text,,false,,,0.074,0.295,,2026-09-01,ht
 hy3-preview,true,,,,,,256000,128000,text,text,,true,,,0.17,0.566661,0.051,2026-09-01,https://models.dev/api.json
 hy4-preview,true,,,,,,1048576,65536,text,text,,true,,,0.96,2.88,0.048,2026-09-01,https://models.dev/api.json
 inkling,true,,,,,,65536,65536,text|image,text,,true,,,1.87,4.68,0.374,2026-10-03,https://models.dev/api.json
+inkling-2-small,true,,,,,,1048576,131072,text|image,text,,true,,,0,0,,2026-11-10,https://models.dev/api.json
 inkling-small,true,,,,,,262144,262144,text,text,,true,,,0.5,1.2,0.1,2026-10-03,https://models.dev/api.json
 k2-think,false,none,,,,,128000,32768,text,text,,false,,,0.17,0.68,0.085,2026-10-15,https://models.dev/api.json
 kat-coder-pro-v2-5,false,none,,,,,262144,235929,text,text,,true,,,0.74,2.96,0.15,2026-10-03,https://models.dev/api.json
@@ -320,6 +322,7 @@ mistral-small-4,false,none,,,,,256000,65536,text|image,text,2025-06,true,,,0.15,
 mixtral-8x22b-instruct,false,none,,,,,65536,52428,text|pdf,text,,true,,,2,6,0.2,2026-09-01,https://models.dev/api.json
 mixtral-8x7b-instruct,,none,,,,,32768,,text,text,,,,,,,,,https://mistral.ai/news/mixtral-of-experts
 motif-3,true,,,,,,262144,262144,text,text,,true,,,0.5,2,0.2,2026-10-15,https://models.dev/api.json
+muse-ember,true,,,,,,1048576,943718,text|image|video|pdf|audio,text,,true,,,0.1,0.5,0.004,2026-11-10,https://models.dev/api.json
 muse-glimmer-30b,true,,,,,,131072,131072,text|image,text,2026-01-04,false,,,0.3,1.1,,2026-09-01,https://models.dev/api.json
 muse-spark-1-1,true,,,,,,1000000,32000,text|image|video,text,,true,,,1.25,4.25,0.15,2026-09-01,https://models.dev/api.json
 muse-spark-1-2,true,,,,,,1048576,131072,text|image|audio|video,text,,true,,,1.25,4.25,0.15,2026-09-01,https://models.dev/api.json
@@ -339,6 +342,7 @@ nemotron-3-ultra,true,,,,,,262144,128000,text,text,,true,,,,,,2026-09-01,https:/
 nemotron-3-ultra-550b-a55b,true,,,,,,1000000,65536,text,text,,true,,,0.5,2.5,0.15,2026-09-01,https://models.dev/api.json
 nex-n2-5-mini,true,,,,,,262144,235929,text|image,text,,false,,,0.025,0.1,0.0025,2026-10-27,https://models.dev/api.json
 nex-n2-5-pro,true,,,,,,262144,235929,text|image,text,,true,,,0.075,0.25,0.015,2026-10-27,https://models.dev/api.json
+nex-n2-6,true,,,,,,262144,235929,text|image,text,,true,,,0.15,0.5,0.03,2026-11-10,https://models.dev/api.json
 north-mini-code,true,,,,,,256000,64000,text,text,2025-09-23,false,,,0.2,0.8,0.1,2026-09-01,https://models.dev/api.json
 nova-2-lite-v1,false,none,,,,,1000000,65535,text,text,,false,,,0.51,4.25,0.255,2026-09-01,https://models.dev/api.json
 nova-lite-v1,false,none,,,,,300000,5120,text,text,,false,,,0.0595,0.238,0.02975,2026-09-01,https://models.dev/api.json

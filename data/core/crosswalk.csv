@@ -15,6 +15,7 @@ afm-4-5b-preview,semantic_scholar,97803ac38c2dedd85fde1e96f2ba799fedd0b7f9
 ahn-dn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B
 ahn-dn-for-qwen-2-5-instruct-14b,openalex,W4415098413
 ahn-dn-for-qwen-2-5-instruct-14b,semantic_scholar,c7e97e22da90d07382a0588e6df74002ed195409
+ahn-dn-for-qwen-2-5-instruct-7b,huggingface,ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-7B
 ahn-gdn-for-qwen-2-5-instruct-14b,huggingface,ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B
 ahn-gdn-for-qwen-2-5-instruct-14b,openalex,W4415098413
 ahn-gdn-for-qwen-2-5-instruct-14b,semantic_scholar,c7e97e22da90d07382a0588e6df74002ed195409
@@ -323,6 +324,9 @@ claude-fable-5-1,epoch,Claude Fable 5.1
 claude-fable-5-1,models_dev,302ai/claude-fable-5-1
 claude-fable-5-1,models_dev,venice/claude-fable-5-1
 claude-fable-5-1,openrouter,anthropic/claude-fable-5.1
+claude-fable-5-2,anthropic_api,claude-fable-5-2
+claude-fable-5-2,models_dev,amazon-bedrock/anthropic.claude-fable-5-2
+claude-fable-5-2,openrouter,anthropic/claude-fable-5.2
 claude-haiku-4-5,anthropic_api,claude-haiku-4-5-20251001
 claude-haiku-4-5,epoch,Claude Haiku 4.5
 claude-haiku-4-5,models_dev,302ai/claude-haiku-4-5
@@ -744,6 +748,7 @@ delphi-3e18-358mparams-1-6btokens,huggingface,marin-community/delphi-3e18-358Mpa
 delphi-3e18-447mparams-1-2btokens,huggingface,marin-community/delphi-3e18-447Mparams-1.2Btokens
 delphi-3e19-1-4bparams-3-5btokens,huggingface,marin-community/delphi-3e19-1.4Bparams-3.5Btokens
 delphi-3e19-1-9bparams-2-5btokens,huggingface,marin-community/delphi-3e19-1.9Bparams-2.5Btokens
+delphi-3e19-2-5bparams-1-9btokens,huggingface,marin-community/delphi-3e19-2.5Bparams-1.9Btokens
 delphi-3e19-273mparams-22-3btokens,huggingface,marin-community/delphi-3e19-273Mparams-22.3Btokens
 delphi-3e19-447mparams-12-2btokens,huggingface,marin-community/delphi-3e19-447Mparams-12.2Btokens
 delphi-3e19-669mparams-7-8btokens,huggingface,marin-community/delphi-3e19-669Mparams-7.8Btokens
@@ -1928,6 +1933,8 @@ inkling,epoch,Inkling
 inkling,huggingface,thinkingmachines/Inkling
 inkling,models_dev,thinkingmachines/thinkingmachines/Inkling
 inkling,openrouter,thinkingmachines/inkling
+inkling-2-small,models_dev,kilo/thinkingmachines/inkling-2-small:free
+inkling-2-small,openrouter,thinkingmachines/inkling-2-small:free
 inkling-small,epoch,Inkling-Small
 inkling-small,huggingface,thinkingmachines/Inkling-Small
 inkling-small,models_dev,aimlapi/thinkingmachines/inkling-small
@@ -3167,6 +3174,8 @@ mt0-xxl-mt,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
 mt0-xxl-p3,huggingface,bigscience/mt0-xxl-p3
 mt0-xxl-p3,openalex,W4308244210
 mt0-xxl-p3,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
+muse-ember,models_dev,kilo/meta/muse-ember
+muse-ember,openrouter,meta/muse-ember
 muse-glimmer-30b,huggingface,meta-models/Muse-Glimmer-30B
 muse-glimmer-30b,models_dev,aimlapi/meta/muse-glimmer-30b
 muse-glimmer-30b,models_dev,edenai/flexai/Muse-Glimmer-30B
@@ -3253,6 +3262,8 @@ nex-n2-5-pro,huggingface,nex-agi/Nex-N2.5-Pro
 nex-n2-5-pro,models_dev,kilo/nex-agi/nex-n2.5-pro
 nex-n2-5-pro,openrouter,nex-agi/nex-n2.5-pro
 nex-n2-5-pro-dflash,huggingface,nex-agi/Nex-N2.5-Pro-DFlash
+nex-n2-6,models_dev,kilo/nex-agi/nex-n2.6
+nex-n2-6,openrouter,nex-agi/nex-n2.6
 nex-n2-mini,huggingface,nex-agi/Nex-N2-mini
 nex-n2-pro,huggingface,nex-agi/Nex-N2-Pro
 nex-n2-pro,huggingface,nex-agi/Nex-N2-Pro-fp8
@@ -3288,6 +3299,7 @@ nova-pro-v1,models_dev,cortecs/nova-pro-v1
 nova-pro-v1,openrouter,amazon/nova-pro-v1
 nvidia-nemotron-3-5-lightning-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
 nvidia-nemotron-3-5-lightning-30b-a3b-base,huggingface,nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16
+nvidia-nemotron-3-5-super-vl-120b-a12b,huggingface,nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16
 nvidia-nemotron-3-nano-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
 nvidia-nemotron-3-nano-30b-a3b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8
 nvidia-nemotron-3-nano-4b,huggingface,nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
@@ -3578,6 +3590,7 @@ plamo-2-1-8b-cpt,huggingface,pfnet/plamo-2.1-8b-cpt
 plamo-2-1-8b-vl,huggingface,pfnet/plamo-2.1-8b-vl
 plamo-2-1b,huggingface,pfnet/plamo-2-1b
 plamo-2-8b,huggingface,pfnet/plamo-2-8b
+plamo-3-0-8b-fin-instruct,huggingface,pfnet/plamo-3-0.8b-fin-instruct
 plamo-3-610m-fin-instruct,huggingface,pfnet/plamo-3-610m-fin-instruct
 plamo-3-8b-fin-instruct,huggingface,pfnet/plamo-3-8b-fin-instruct
 plamo-3-nict-2604-31b-base,huggingface,pfnet/plamo-3-nict-2604-31b-base
@@ -4090,6 +4103,7 @@ rlt-7b,huggingface,SakanaAI/RLT-7B
 rlvr-8b,huggingface,stepfun-ai/RLVR-8B-0926
 rlvr-8b,openalex,W7123287583
 rlvr-8b,semantic_scholar,13c63c0022707708b90c77a7332102f01bb34f84
+rubicon-preview,huggingface,inclusionAI/Rubicon-Preview
 rwkv-2-pile-430m,huggingface,BlinkDL/rwkv-2-pile-430m
 rwkv-3-pile-169m,huggingface,BlinkDL/rwkv-3-pile-169m
 rwkv-3-pile-1b5,huggingface,BlinkDL/rwkv-3-pile-1b5

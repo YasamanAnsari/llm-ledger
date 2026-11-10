@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1932; events: 2999
-- Models: curated 73, corroborated 684, single-source 1175
-- Event confidence: verified 1197, inferred 1796, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 441 of 1685
+- Models: 1940; events: 3012
+- Models: curated 73, corroborated 688, single-source 1179
+- Event confidence: verified 1202, inferred 1804, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 443 of 1690
 
 ## By organization
 
@@ -21,14 +21,14 @@ as settled.
 | Alibaba | 89 | 198 | 2 | 68 | 19 | 52% |
 | MBZUAI | 77 | 77 | 0 | 6 | 71 | 8% |
 | OpenAI | 76 | 306 | 19 | 48 | 9 | 73% |
-| ByteDance | 65 | 87 | 0 | 24 | 41 | 32% |
-| Marin | 63 | 63 | 0 | 0 | 63 | 0% |
+| ByteDance | 66 | 88 | 0 | 24 | 42 | 32% |
+| Marin | 64 | 64 | 0 | 0 | 64 | 0% |
 | Mistral | 59 | 112 | 4 | 31 | 24 | 44% |
+| Ant Group | 58 | 69 | 0 | 28 | 30 | 43% |
 | RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
-| Ant Group | 57 | 68 | 0 | 28 | 29 | 44% |
 | EleutherAI | 57 | 57 | 0 | 1 | 56 | 2% |
 | Google | 57 | 159 | 7 | 28 | 22 | 42% |
-| Meta | 56 | 117 | 4 | 27 | 25 | 37% |
+| Meta | 57 | 119 | 4 | 28 | 25 | 37% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Shanghai AI Lab | 52 | 52 | 0 | 13 | 39 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
@@ -38,19 +38,19 @@ as settled.
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
 | Liquid AI | 35 | 40 | 0 | 25 | 10 | 68% |
-| NVIDIA | 34 | 54 | 0 | 14 | 20 | 26% |
+| NVIDIA | 35 | 55 | 0 | 14 | 21 | 25% |
 | Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
 | Tencent | 34 | 45 | 1 | 15 | 18 | 42% |
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Baidu | 30 | 37 | 0 | 23 | 7 | 68% |
 | Nous | 30 | 38 | 0 | 8 | 22 | 26% |
-| Anthropic | 29 | 164 | 25 | 0 | 4 | 70% |
+| Anthropic | 29 | 166 | 25 | 1 | 3 | 70% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
 | Xiaomi | 25 | 35 | 0 | 22 | 3 | 69% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
+| PFN | 24 | 24 | 0 | 1 | 23 | 4% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
-| PFN | 23 | 23 | 0 | 1 | 22 | 4% |
 | Swiss AI | 23 | 25 | 0 | 5 | 18 | 20% |
 | Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
@@ -79,8 +79,8 @@ as settled.
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
 | Motif | 8 | 9 | 0 | 3 | 5 | 33% |
+| Nex | 8 | 11 | 0 | 5 | 3 | 64% |
 | IEIT | 7 | 7 | 0 | 0 | 7 | 0% |
-| Nex | 7 | 9 | 0 | 4 | 3 | 67% |
 | Prime Intellect | 7 | 7 | 0 | 4 | 3 | 57% |
 | NAVER | 6 | 6 | 0 | 3 | 3 | 50% |
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
@@ -89,8 +89,8 @@ as settled.
 | Inception | 5 | 15 | 0 | 3 | 2 | 40% |
 | Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
+| Thinking Machines | 3 | 10 | 0 | 3 | 0 | 40% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
-| Thinking Machines | 2 | 8 | 0 | 2 | 0 | 38% |
 | Yandex | 2 | 2 | 0 | 0 | 2 | 0% |
 | Reflection | 1 | 2 | 0 | 1 | 0 | 100% |
 
@@ -98,10 +98,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1667 | 429 | 1237 | 1 |
-| platform_availability | 345 | 338 | 5 | 2 |
+| weights_released | 1672 | 429 | 1242 | 1 |
+| platform_availability | 349 | 342 | 5 | 2 |
 | retired | 328 | 191 | 137 | 0 |
-| api_ga | 261 | 63 | 197 | 1 |
+| api_ga | 265 | 64 | 200 | 1 |
 | announced | 255 | 53 | 201 | 1 |
 | system_card | 34 | 31 | 3 | 0 |
 | consumer_rollout | 31 | 23 | 8 | 0 |
@@ -117,16 +117,16 @@ as settled.
 ## Page-reading agent
 
 - Events it wrote: 49 (verified 7, single-source inferred 42)
-- Models no catalog has listed yet (withdrawn after 60 days unless one does): 15
+- Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-09, by reason:
+Declined in the 7 days to 2026-11-10, by reason:
 
 | reason | count |
 |---|---|
 | community_lead | 60 |
-| no_dated_event | 37 |
+| no_dated_event | 41 |
 | malformed_candidate | 8 |
-| third_party_claim | 6 |
+| third_party_claim | 7 |
 | launch_event_required | 5 |
 | would_touch_verified | 2 |
 | already_recorded | 1 |

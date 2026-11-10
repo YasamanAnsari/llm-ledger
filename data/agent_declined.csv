@@ -102,3 +102,6 @@ date,reason,count
 2026-11-09,malformed_candidate,2
 2026-11-09,no_dated_event,6
 2026-11-09,would_touch_verified,2
+2026-11-10,community_lead,12
+2026-11-10,no_dated_event,9
+2026-11-10,third_party_claim,1

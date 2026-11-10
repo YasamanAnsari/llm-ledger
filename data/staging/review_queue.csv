@@ -23,7 +23,6 @@ catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; 
 catalog_unmapped_vendor,openrouter,particle-ai,ledger,,,e.g. particle-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,ricursiveai,ledger,,,e.g. ripple-65b-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
-catalog_unmapped_vendor,openrouter,stealth,ledger,,,e.g. crouton-alpha; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,xingchen-agi,ledger,,,e.g. xing4-0-29b-a4b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,claude-3-opus,ledger_cluster,claude-4-opus,92.3,92-97 band: confirm or reject before crosswalking

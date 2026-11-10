@@ -52,6 +52,7 @@ claude-sonnet-5,Claude Sonnet 5,Claude 5,api_only,,2026-06-30,2026-07-15,2607.13
 claude-sonnet-5-5,Claude Sonnet 5.5,Claude 5.5,api_only,,2026-09-28,2026-10-12,2610.09458,14
 codegen-2b-mono,codegen-2B-mono,codegen-mono,open_weights,2022-04-11,2022-04-11,2023-12-01,2306.03438,
 codestral-2508,codestral-2508,Codestral,open_weights,,2025-07-30,2026-05-18,2605.18073,292
+cola2,Cola2,Cola2,open_weights,2026-11-06,2026-11-06,2026-10-22,2610.31305,-15
 cosmo-1b,cosmo-1b,cosmo,open_weights,2024-02-19,2024-02-19,2026-09-23,2609.19513,947
 cosmos-reason2-2b,Cosmos-Reason2-2B,Cosmos-Reason2,open_weights,2025-12-12,2025-12-12,2026-06-02,2606.01624,172
 cosmos-reason2-8b,Cosmos-Reason2-8B,Cosmos-Reason2,open_weights,2025-12-12,2025-12-12,2026-07-08,2605.21917,208
@@ -283,6 +284,7 @@ kimi-k3,Kimi K3,Kimi K3,open_weights,2026-07-16,2026-07-16,2026-07-30,2607.28568
 kimi-linear-48b-a3b-instruct,Kimi-Linear-48B-A3B-Instruct,Kimi-Linear,open_weights,2025-10-30,2025-10-30,2026-09-29,2609.38169,334
 kimi-vl-a3b-thinking-2506,Kimi-VL-A3B-Thinking-2506,Kimi,open_weights,2025-06-21,2025-06-21,2025-09-02,2508.21113,73
 laguna-xs-2,Laguna-XS.2,Laguna-XS.2,open_weights,2026-04-23,2026-04-23,2026-05-26,2605.27605,33
+lbs-27b,LBS-27B,LBS,open_weights,2026-10-26,2026-10-26,2026-10-27,2610.37093,1
 lensvlm-9b,LensVLM-9B,LensVLM,open_weights,2026-09-21,2026-09-21,2026-11-01,2611.01517,41
 lfm2-1-2b,LFM2-1.2B,LFM2,open_weights,2025-07-10,2025-07-10,2025-09-17,2509.14008,69
 lfm2-2-6b,LFM2-2.6B,LFM2,open_weights,2025-09-22,2025-09-22,2025-11-28,2511.23404,67
@@ -291,6 +293,7 @@ lfm2-5-2-6b-base,LFM2.5-2.6B-Base,LFM2.5,open_weights,2026-08-01,2026-08-01,2026
 lfm2-5-350m,LFM2.5-350M,LFM2.5,open_weights,2026-03-31,2026-03-31,2026-08-25,2608.24571,147
 lfm2-5-8b-a1b,LFM2.5-8B-A1B,LFM2.5,open_weights,2026-05-28,2026-05-28,2026-07-16,2607.15232,49
 lfm2-8b-a1b,LFM2-8B-A1B,LFM2,open_weights,2025-10-07,2025-10-07,2026-07-16,2607.15232,282
+lfm2-vl-1-6b,LFM2-VL-1.6B,LFM2,open_weights,2025-08-12,2025-08-12,2026-11-07,2611.10720,452
 ling-1t,Ling-1T,Ling,open_weights,2025-10-09,2025-10-09,2025-11-07,2510.22115,29
 ling-3-0-flash-base,Ling-3.0-flash-base,Ling-3.0,open_weights,2026-08-11,2026-08-11,2026-11-01,2611.02074,82
 ling-flash-2-0,Ling-flash-2.0,Ling-2.0,open_weights,2025-09-17,2025-09-17,2025-11-07,2510.22115,51
@@ -385,6 +388,7 @@ mixtral-8x22b-instruct,Mixtral 8x22B,Mixtral,open_weights,2024-04-17,2024-04-17,
 mixtral-8x7b-instruct,Mixtral 8x7B Instruct,Mixtral,open_weights,,,2023-12-28,2312.17238,
 mixtral-8x7b-v0-1,Mixtral-8x7B-v0.1,Mixtral-v0.1,open_weights,2023-12-01,2023-12-01,2024-03-04,2403.01851,94
 molmo2-4b,Molmo2-4B,Molmo2,open_weights,2025-12-14,2025-12-14,2026-05-05,2605.02834,142
+molmo2-8b,Molmo2-8B,Molmo2,open_weights,2025-12-14,2025-12-14,2026-11-06,2605.31557,327
 molmo2-er,Molmo2-ER,Molmo2-ER,open_weights,2026-05-04,2026-05-04,2026-08-14,2608.08904,102
 moonlight-16b-a3b,Moonlight-16B-A3B,Moonlight,open_weights,2025-02-22,2025-02-22,2026-05-07,2605.05696,439
 moonlight-16b-a3b-instruct,Moonlight-16B-A3B-Instruct,Moonlight,open_weights,2025-02-22,2025-02-22,2026-05-22,2605.23872,454

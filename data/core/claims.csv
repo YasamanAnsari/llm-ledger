@@ -11,6 +11,7 @@ afm-4-5b-weights_released-1,https://huggingface.co/arcee-ai/AFM-4.5B,hf_hub,2025
 afm-4-5b-weights_released-1,https://web.archive.org/web/20250729/https://huggingface.co/arcee-ai/AFM-4.5B,wayback,2025-07-29,day,first public capture,true,false,,2026-10-07
 ahn-dn-for-qwen-2-5-instruct-14b-weights_released-1,https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B,hf_hub,2025-10-08,day,hub repo created,true,false,,2026-09-11
 ahn-dn-for-qwen-2-5-instruct-14b-weights_released-1,https://web.archive.org/web/20251009/https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B,wayback,2025-10-09,day,first public capture,true,false,,2026-09-13
+ahn-dn-for-qwen-2-5-instruct-7b-weights_released-1,https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-7B,hf_hub,2025-10-08,day,hub repo created,true,false,,2026-11-10
 ahn-gdn-for-qwen-2-5-instruct-14b-weights_released-1,https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B,hf_hub,2025-10-08,day,hub repo created,true,false,,2026-09-04
 ahn-gdn-for-qwen-2-5-instruct-14b-weights_released-1,https://web.archive.org/web/20251009/https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B,wayback,2025-10-09,day,first public capture,true,false,,2026-09-05
 ahn-gdn-for-qwen-2-5-instruct-3b-weights_released-1,https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B,hf_hub,2025-10-08,day,hub repo created,true,false,,2026-09-01
@@ -328,6 +329,9 @@ claude-fable-5-1-platform_availability-1,https://openrouter.ai/api/v1/models,api
 claude-fable-5-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-01,day,litellm (claude-fable-5-1),false,false,,2026-09-01
 claude-fable-5-1-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-05,day,azure_lifecycle (claude-fable-5-1),false,true,,2026-09-03
 claude-fable-5-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5-1),false,false,,2026-09-06
+claude-fable-5-2-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-11-09,day,anthropic_api created,true,false,,2026-11-10
+claude-fable-5-2-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-09,day,models.dev (first_party),false,false,,2026-11-10
+claude-fable-5-2-platform_availability-2,https://openrouter.ai/api/v1/models,api_metadata,2026-11-09,day,openrouter,false,true,,2026-11-10
 claude-fable-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-06-07,day,anthropic_api created,true,false,,2026-09-01
 claude-fable-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-06-07,day,models.dev (first_party),false,false,,2026-09-10
 claude-fable-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-06-09,day,openrouter,false,true,,2026-09-01
@@ -795,6 +799,7 @@ delphi-3e18-358mparams-1-6btokens-weights_released-1,https://huggingface.co/mari
 delphi-3e18-447mparams-1-2btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e18-447Mparams-1.2Btokens,hf_hub,2026-05-04,day,hub repo created,true,false,,2026-10-27
 delphi-3e19-1-4bparams-3-5btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-1.4Bparams-3.5Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-10-27
 delphi-3e19-1-9bparams-2-5btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-1.9Bparams-2.5Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-10-27
+delphi-3e19-2-5bparams-1-9btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-2.5Bparams-1.9Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-10
 delphi-3e19-273mparams-22-3btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-273Mparams-22.3Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-02
 delphi-3e19-447mparams-12-2btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-447Mparams-12.2Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-10-27
 delphi-3e19-669mparams-7-8btokens-weights_released-1,https://huggingface.co/marin-community/delphi-3e19-669Mparams-7.8Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-08
@@ -824,6 +829,7 @@ delphi-9e19-1-9bparams-7-4btokens-weights_released-1,https://huggingface.co/mari
 delphi-9e19-11-8bparams-1-2btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-11.8Bparams-1.2Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-10-30
 delphi-9e19-273mparams-66-8btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-273Mparams-66.8Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-07
 delphi-9e19-4-3bparams-3-3btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-4.3Bparams-3.3Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-09
+delphi-9e19-4-3bparams-3-3btokens-weights_released-1,https://web.archive.org/web/20260824/https://huggingface.co/marin-community/delphi-9e19-4.3Bparams-3.3Btokens,wayback,2026-08-24,day,first public capture,true,false,,2026-11-10
 delphi-9e19-447mparams-36-7btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-447Mparams-36.7Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-07
 delphi-9e19-5-3bparams-2-6btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-5.3Bparams-2.6Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-10-28
 delphi-9e19-8-1bparams-1-7btokens-weights_released-1,https://huggingface.co/marin-community/delphi-9e19-8.1Bparams-1.7Btokens,hf_hub,2026-05-05,day,hub repo created,true,false,,2026-11-08
@@ -1984,6 +1990,8 @@ hyperclovax-seed-think-32b-weights_released-1,https://huggingface.co/naver-hyper
 hyperclovax-seed-think-32b-weights_released-1,https://web.archive.org/web/20260102/https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B,wayback,2026-01-02,day,first public capture,true,false,,2026-10-08
 hyperclovax-seed-vision-instruct-3b-weights_released-1,https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B,hf_hub,2025-04-22,day,hub repo created,true,false,,2026-10-03
 hyperclovax-seed-vision-instruct-3b-weights_released-1,https://web.archive.org/web/20250424/https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B,wayback,2025-04-24,day,first public capture,true,false,,2026-10-05
+inkling-2-small-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-05,day,models.dev (majority),false,false,,2026-11-10
+inkling-2-small-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-09,day,openrouter,false,true,,2026-11-10
 inkling-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-15,day,epoch.ai,false,false,,2026-10-03
 inkling-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-17,day,openrouter,false,true,,2026-10-03
 inkling-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-07,day,litellm (fireworks_ai/accounts/fireworks/models/inkling),false,false,,2026-10-20
@@ -3213,6 +3221,8 @@ mt0-xxl-p3-weights_released-1,https://huggingface.co/bigscience/mt0-xxl-p3,hf_hu
 mt0-xxl-p3-weights_released-1,https://web.archive.org/web/20221104/https://huggingface.co/bigscience/mt0-xxl-p3,wayback,2022-11-04,day,first public capture,true,false,,2026-10-05
 mt0-xxl-weights_released-1,https://huggingface.co/bigscience/mt0-xxl,hf_hub,2022-10-19,day,hub repo created,true,false,,2026-10-03
 mt0-xxl-weights_released-1,https://web.archive.org/web/20221104/https://huggingface.co/bigscience/mt0-xxl,wayback,2022-11-04,day,first public capture,true,false,,2026-10-06
+muse-ember-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-09,day,models.dev (majority),false,false,,2026-11-10
+muse-ember-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-09,day,openrouter,false,true,,2026-11-10
 muse-glimmer-30b-assistant-weights_released-1,https://huggingface.co/meta-models/Muse-Glimmer-30B-assistant,hf_hub,2026-08-09,day,hub repo created,true,false,,2026-10-27
 muse-glimmer-30b-assistant-weights_released-1,https://web.archive.org/web/20260810/https://huggingface.co/meta-models/Muse-Glimmer-30B-assistant,wayback,2026-08-10,day,first public capture,true,false,,2026-10-28
 muse-glimmer-30b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-08-09,day,openrouter,false,true,,2026-09-01
@@ -3292,6 +3302,8 @@ nex-n2-5-pro-dflash-weights_released-1,https://huggingface.co/nex-agi/Nex-N2.5-P
 nex-n2-5-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-08,day,openrouter,false,true,,2026-10-27
 nex-n2-5-pro-weights_released-1,https://huggingface.co/nex-agi/Nex-N2.5-Pro,hf_hub,2026-09-08,day,hub repo created,true,false,,2026-10-27
 nex-n2-5-pro-weights_released-1,https://models.dev/api.json,api_metadata,2026-09-08,day,models.dev (majority),false,false,,2026-10-27
+nex-n2-6-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-10,day,models.dev (majority),false,false,,2026-11-10
+nex-n2-6-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-10,day,openrouter,false,true,,2026-11-10
 nex-n2-mini-weights_released-1,https://huggingface.co/nex-agi/Nex-N2-mini,hf_hub,2026-06-04,day,hub repo created,true,false,,2026-10-27
 nex-n2-mini-weights_released-1,https://web.archive.org/web/20260609/https://huggingface.co/nex-agi/Nex-N2-mini,wayback,2026-06-09,day,first public capture,true,false,,2026-10-28
 nex-n2-pro-weights_released-1,https://huggingface.co/nex-agi/Nex-N2-Pro,hf_hub,2026-06-03,day,hub repo created,true,false,,2026-10-27
@@ -3335,6 +3347,7 @@ nvidia-nemotron-3-5-lightning-30b-a3b-base-weights_released-1,https://huggingfac
 nvidia-nemotron-3-5-lightning-30b-a3b-base-weights_released-1,https://web.archive.org/web/20260812/https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Base-BF16,wayback,2026-08-12,day,first public capture,true,false,,2026-09-10
 nvidia-nemotron-3-5-lightning-30b-a3b-weights_released-1,https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,hf_hub,2026-08-01,day,hub repo created,true,false,,2026-09-10
 nvidia-nemotron-3-5-lightning-30b-a3b-weights_released-1,https://web.archive.org/web/20260811/https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16,wayback,2026-08-11,day,first public capture,true,false,,2026-09-10
+nvidia-nemotron-3-5-super-vl-120b-a12b-weights_released-1,https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16,hf_hub,2026-10-12,day,hub repo created,true,false,,2026-11-10
 nvidia-nemotron-3-nano-30b-a3b-weights_released-1,https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,hf_hub,2025-12-04,day,hub repo created,true,false,,2026-09-10
 nvidia-nemotron-3-nano-30b-a3b-weights_released-1,https://web.archive.org/web/20251215/https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16,wayback,2025-12-15,day,first public capture,true,false,,2026-09-10
 nvidia-nemotron-3-nano-4b-weights_released-1,https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16,hf_hub,2026-03-07,day,hub repo created,true,false,,2026-09-10
@@ -3620,6 +3633,7 @@ plamo-2-1b-weights_released-1,https://huggingface.co/pfnet/plamo-2-1b,hf_hub,202
 plamo-2-1b-weights_released-1,https://web.archive.org/web/20250524/https://huggingface.co/pfnet/plamo-2-1b,wayback,2025-05-24,day,first public capture,true,false,,2026-10-05
 plamo-2-8b-weights_released-1,https://huggingface.co/pfnet/plamo-2-8b,hf_hub,2025-02-07,day,hub repo created,true,false,,2026-10-03
 plamo-2-8b-weights_released-1,https://web.archive.org/web/20250225/https://huggingface.co/pfnet/plamo-2-8b,wayback,2025-02-25,day,first public capture,true,false,,2026-10-05
+plamo-3-0-8b-fin-instruct-weights_released-1,https://huggingface.co/pfnet/plamo-3-0.8b-fin-instruct,hf_hub,2026-09-24,day,hub repo created,true,false,,2026-11-10
 plamo-3-610m-fin-instruct-weights_released-1,https://huggingface.co/pfnet/plamo-3-610m-fin-instruct,hf_hub,2026-09-24,day,hub repo created,true,false,,2026-10-03
 plamo-3-8b-fin-instruct-weights_released-1,https://huggingface.co/pfnet/plamo-3-8b-fin-instruct,hf_hub,2026-11-08,day,hub repo created,true,false,,2026-11-09
 plamo-3-nict-2604-31b-base-weights_released-1,https://huggingface.co/pfnet/plamo-3-nict-2604-31b-base,hf_hub,2026-06-12,day,hub repo created,true,false,,2026-10-03
@@ -3730,6 +3744,7 @@ pythia-70m-seed4-weights_released-1,https://web.archive.org/web/20250313/https:/
 pythia-70m-seed5-weights_released-1,https://huggingface.co/EleutherAI/pythia-70m-seed5,hf_hub,2024-01-13,day,hub repo created,true,false,,2026-10-20
 pythia-70m-seed5-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-70m-seed5,wayback,2025-03-13,day,first public capture,true,false,,2026-10-21
 pythia-70m-seed6-weights_released-1,https://huggingface.co/EleutherAI/pythia-70m-seed6,hf_hub,2024-01-13,day,hub repo created,true,false,,2026-11-08
+pythia-70m-seed6-weights_released-1,https://web.archive.org/web/20250313/https://huggingface.co/EleutherAI/pythia-70m-seed6,wayback,2025-03-13,day,first public capture,true,false,,2026-11-10
 qianfan-ocr-weights_released-1,https://huggingface.co/baidu/Qianfan-OCR,hf_hub,2026-03-18,day,hub repo created,true,false,,2026-09-01
 qianfan-ocr-weights_released-1,https://modelscope.cn/models/baidu/Qianfan-OCR,modelscope,2026-11-05,day,modelscope repo created,true,false,,2026-11-05
 qianfan-ocr-weights_released-1,https://web.archive.org/web/20260318/https://huggingface.co/baidu/Qianfan-OCR,wayback,2026-03-18,day,first public capture,true,false,,2026-09-06
@@ -4089,6 +4104,8 @@ rlt-7b-weights_released-1,https://web.archive.org/web/20250627/https://huggingfa
 rlvr-8b-weights_released-1,https://huggingface.co/stepfun-ai/RLVR-8B-0926,hf_hub,2025-12-09,day,hub repo created,true,false,,2026-09-01
 rlvr-8b-weights_released-1,https://modelscope.cn/models/stepfun-ai/RLVR-8B-0926,modelscope,2025-12-09,day,modelscope repo created,true,false,,2026-09-10
 rlvr-8b-weights_released-1,https://web.archive.org/web/20251209/https://huggingface.co/stepfun-ai/RLVR-8B-0926,wayback,2025-12-09,day,first public capture,true,false,,2026-09-05
+rubicon-preview-weights_released-1,https://huggingface.co/inclusionAI/Rubicon-Preview,hf_hub,2025-08-18,day,hub repo created,true,false,,2026-11-10
+rubicon-preview-weights_released-1,https://modelscope.cn/models/inclusionAI/Rubicon-Preview,modelscope,2025-12-30,day,modelscope repo created,true,false,,2026-11-10
 rwkv-2-pile-430m-weights_released-1,https://huggingface.co/BlinkDL/rwkv-2-pile-430m,hf_hub,2022-06-23,day,hub repo created,true,false,,2026-09-13
 rwkv-2-pile-430m-weights_released-1,https://modelscope.cn/models/RWKV/rwkv-2-pile-430m,modelscope,2024-12-12,day,modelscope repo created,true,false,,2026-09-13
 rwkv-2-pile-430m-weights_released-1,https://web.archive.org/web/20231224/https://huggingface.co/BlinkDL/rwkv-2-pile-430m,wayback,2023-12-24,day,first public capture,true,false,,2026-09-14
