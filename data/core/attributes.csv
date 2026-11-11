@@ -82,6 +82,8 @@ ernie-4-5-300b-a47b,false,none,,,,,131000,131000,text,text,,true,,,0.28,1.1,,202
 ernie-4-5-vl-28b-a3b,true,,,,,,30000,8000,text|image,text,,true,,,0.14,0.56,,2026-09-01,https://models.dev/api.json
 ernie-4-5-vl-424b-a47b,true,,,,,,123000,16000,image|text,text,,false,,,0.42,1.25,,2026-09-01,https://models.dev/api.json
 ernie-5-1,false,none,,,,,119000,64000,text,text,,false,,,0.75,3,0.75,2026-09-01,https://models.dev/api.json
+ernie-5-5-flash-preview,true,,,,,,1024000,921600,text,text,,true,,,0,0,,2026-11-11,https://models.dev/api.json
+ernie-light-dt-1-0-intl,true,,,,,,1024000,131072,text,text,,true,,,1.13,3.94,0.113,2026-11-11,https://models.dev/api.json
 fugu-max,true,,,,,,1000000,1000000,text|image,text,,true,,,2,6,0.25,2026-10-03,https://models.dev/api.json
 fugu-ultra,true,,,,,,1000000,128000,text|image,text,,true,,,5,30,0.5,2026-10-03,https://models.dev/api.json
 fugu-ultra-v2,true,,,,,,1000000,1000000,text|image,text,,true,,,5,30,0.5,2026-10-03,https://models.dev/api.json
@@ -109,6 +111,7 @@ gemini-3-flash,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,0.4,2
 gemini-3-flash-preview,true,,,,,,1048576,65536,text|image|audio,text,2025-01,true,,,0.5,3,0.05,2026-09-01,https://models.dev/api.json
 gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6,0.16,2026-09-01,https://models.dev/api.json
 gemini-4-argon,true,,,,,,1048576,1048576,text|image|audio,text,,true,,,4,20,0.2,2026-10-14,https://models.dev/api.json
+gemini-4-carbon,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,2026-03,true,,,4,20,0.2,2026-11-11,https://models.dev/api.json
 gemini-nano-banana-2-1,true,,,,,,65536,58982,image|text|pdf,image|text,,true,,,1.5,7.5,,2026-10-07,https://models.dev/api.json
 gemini-omni-1-1-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json
 gemini-omni-1-2-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json

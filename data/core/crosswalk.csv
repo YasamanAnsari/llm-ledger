@@ -897,6 +897,10 @@ ernie-5-1,epoch,ERNIE 5.1
 ernie-5-1,models_dev,nano-gpt/ernie-5.1
 ernie-5-5-flash-base,huggingface,baidu/ERNIE-5.5-Flash-Base
 ernie-5-5-flash-base,huggingface,baidu/ERNIE-5.5-Flash-Base-BF16
+ernie-5-5-flash-preview,models_dev,kilo/baidu/ernie-5.5-flash-preview:free
+ernie-5-5-flash-preview,openrouter,baidu/ernie-5.5-flash-preview:free
+ernie-light-dt-1-0-intl,models_dev,kilo/baidu/ernie-light-dt-1.0-intl
+ernie-light-dt-1-0-intl,openrouter,baidu/ernie-light-dt-1.0-intl
 evollm-jp-a-v1-7b,huggingface,SakanaAI/EvoLLM-JP-A-v1-7B
 evollm-jp-a-v1-7b,semantic_scholar,828f98e0feba2baa55a5486f354fd074cca0880c
 evollm-jp-v1-10b,huggingface,SakanaAI/EvoLLM-JP-v1-10B
@@ -1141,6 +1145,10 @@ gemini-4-argon,models_dev,302ai/gemini-4-argon
 gemini-4-argon,models_dev,llmgateway-providers/google-vertex/gemini-4-argon
 gemini-4-argon,models_dev,llmgateway/gemini-4-argon
 gemini-4-argon,openrouter,google/gemini-4-argon
+gemini-4-carbon,epoch,Gemini 4 Carbon
+gemini-4-carbon,google_api,gemini-4-carbon
+gemini-4-carbon,models_dev,edenai/google/gemini-4-carbon
+gemini-4-carbon,openrouter,google/gemini-4-carbon
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
@@ -3159,6 +3167,7 @@ motif-3,epoch,Motif-3
 motif-3,huggingface,Motif-Technologies/Motif-3
 motif-3,models_dev,aiand/motif-technologies/motif-3
 motif-3,openalex,W7202168841
+motif-3,openrouter,motif-technologies/motif-3
 motif-3-base,huggingface,Motif-Technologies/Motif-3-Base
 motif-3-base,openalex,W7202168841
 motif-3-beta,huggingface,Motif-Technologies/Motif-3-Beta
@@ -3616,6 +3625,7 @@ pythia-14m-deduped,huggingface,EleutherAI/pythia-14m-deduped
 pythia-14m-seed1,huggingface,EleutherAI/pythia-14m-seed1
 pythia-14m-seed1,openalex,W4415098724
 pythia-14m-seed1,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
+pythia-14m-seed2,huggingface,EleutherAI/pythia-14m-seed2
 pythia-14m-seed6,huggingface,EleutherAI/pythia-14m-seed6
 pythia-14m-seed6,openalex,W4415098724
 pythia-14m-seed6,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
@@ -3779,6 +3789,7 @@ qwen2-5-7b-instruct,epoch,Qwen2.5-7B
 qwen2-5-7b-instruct,huggingface,Qwen/Qwen2.5-7B-Instruct
 qwen2-5-7b-instruct,models_dev,alibaba/qwen2-5-7b-instruct
 qwen2-5-7b-instruct,models_dev,kilo/qwen/qwen-2.5-7b-instruct
+qwen2-5-7b-instruct,models_dev,siliconflow/Qwen/Qwen2.5-7B-Instruct
 qwen2-5-7b-instruct,openrouter,qwen/qwen-2.5-7b-instruct
 qwen2-5-coder-14b-instruct,huggingface,Qwen/Qwen2.5-Coder-14B-Instruct
 qwen2-5-coder-32b-instruct,epoch,Qwen2.5-Coder (32B)
@@ -3872,6 +3883,7 @@ qwen3-4b-instruct-2507,semantic_scholar,d2d84d56f730f81d276a02b48d5d44db5bde0b4a
 qwen3-5-0-8b,epoch,Qwen3.5-0.8B
 qwen3-5-0-8b,huggingface,Qwen/Qwen3.5-0.8B
 qwen3-5-0-8b,models_dev,qvac/qwen3.5-0.8b
+qwen3-5-0-8b-base,huggingface,Qwen/Qwen3.5-0.8B-Base
 qwen3-5-122b-a10b,epoch,Qwen3.5-122B-A10B
 qwen3-5-122b-a10b,huggingface,Qwen/Qwen3.5-122B-A10B
 qwen3-5-122b-a10b,huggingface,Qwen/Qwen3.5-122B-A10B-FP8

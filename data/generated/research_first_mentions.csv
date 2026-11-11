@@ -222,6 +222,7 @@ gpt-5-mini,GPT-5 mini,GPT-5,api_only,,2025-08-07,2025-08-13,2508.08224,6
 gpt-5-nano,GPT-5 nano,GPT-5,api_only,,2025-08-07,2025-08-13,2508.08224,6
 gpt-5-pro,GPT-5 Pro,GPT-5,api_only,,2025-10-06,2025-10-07,2510.06135,1
 gpt-6-1-sol,GPT-6.1 Sol,GPT-6.1 Sol,api_only,,2026-09-29,2026-10-14,2610.19704,15
+gpt-6-1-terra,GPT-6.1 Terra,GPT-6.1 Terra,api_only,,2026-10-26,2026-11-09,2611.13011,14
 gpt-6-astra,GPT-6 Astra,GPT-6 Astra,api_only,,2026-09-04,2026-09-06,2609.25050,2
 gpt-6-astra-pro,gpt-6-astra-pro,gpt-6-astra,api_only,,2026-09-04,2026-10-01,2610.02204,27
 gpt-6-luna,gpt-6-luna,gpt-6-luna,api_only,,2026-09-22,2026-09-29,2609.33628,7
@@ -345,6 +346,7 @@ mimo-7b-rl,MiMo-7B-RL,MiMo-RL,open_weights,2025-04-29,2025-04-29,2025-06-05,2505
 mimo-7b-sft,MiMo-7B-SFT,MiMo,open_weights,2025-04-29,2025-04-29,2026-09-15,2609.16648,504
 mimo-v2-5,mimo-v2.5,MiMo-V2.5,open_weights,2026-04-22,2026-04-22,2026-07-14,2607.13095,83
 mimo-v2-5-pro,MiMo-V2.5-Pro,MiMo-V2.5,open_weights,2026-04-22,2026-04-22,2026-05-16,2605.17079,24
+mimo-v2-6-distill-qwen-9b,MiMo-V2.6-Distill-Qwen-9B,MiMo-V2.6-Distill-Qwen,open_weights,2026-09-21,2026-09-21,2026-11-10,2610.16717,50
 mimo-v2-6-flash,mimo-v2.6-flash,mimo-v2.6,open_weights,2026-09-22,2026-09-22,2026-09-26,2609.32577,4
 mimo-v2-6-pro,mimo-v2.6-pro,mimo-v2.6,open_weights,2026-09-22,2026-09-22,2026-09-26,2609.32577,4
 mimo-v2-flash,MiMo-V2-Flash,MiMo-V2,open_weights,2025-12-16,2025-12-16,2026-01-08,2601.02780,23
@@ -356,6 +358,7 @@ minicpm4-0-5b,MiniCPM4-0.5B,MiniCPM4,open_weights,2025-06-05,2025-06-05,2025-10-
 minicpm4-1-8b,MiniCPM4.1-8B,MiniCPM4.1,open_weights,2025-09-02,2025-09-02,2025-09-29,2509.24663,27
 minicpm5-1b,MiniCPM5-1B,MiniCPM5,open_weights,2026-05-21,2026-05-21,2026-09-29,2609.36860,131
 minicpm5-1b-sft,MiniCPM5-1B-SFT,MiniCPM5,open_weights,2026-05-21,2026-05-21,2026-09-30,2609.40063,132
+minicpm5-2b-base,MiniCPM5-2B-Base,MiniCPM5,open_weights,2026-08-27,2026-08-27,2026-11-10,2611.14015,75
 minimax-01,minimax-01,minimax-01,api_only,,2025-01-15,2025-01-14,2501.08313,-1
 minimax-m1,MiniMax-M1,MiniMax-M1,open_weights,,2025-06-17,2025-06-16,2506.13585,-1
 minimax-m2,MiniMax-M2,MiniMax-M2,open_weights,2025-10-27,2025-10-27,2026-07-09,2607.08535,255
@@ -394,7 +397,7 @@ moonlight-16b-a3b,Moonlight-16B-A3B,Moonlight,open_weights,2025-02-22,2025-02-22
 moonlight-16b-a3b-instruct,Moonlight-16B-A3B-Instruct,Moonlight,open_weights,2025-02-22,2025-02-22,2026-05-22,2605.23872,454
 motif-2-12-7b-reasoning,Motif-2-12.7B-Reasoning,Motif-2,open_weights,2025-11-28,2025-11-28,2025-12-11,2512.11463,13
 motif-2-6b,Motif-2.6B,Motif,open_weights,2025-06-06,2025-06-06,2025-08-02,2508.09148,57
-motif-3,Motif-3,Motif-3,open_weights,2026-08-07,2026-08-07,2026-08-10,2608.09119,3
+motif-3,Motif-3,Motif-3,open_weights,2026-11-02,2026-11-02,2026-08-10,2608.09119,-84
 mt0-xl,mt0-xl,mt0-xl,open_weights,2022-10-27,2022-10-27,2025-07-24,2507.18769,
 muse-glimmer-30b,Muse-Glimmer-30B,Muse-Glimmer,open_weights,2026-08-10,2026-08-10,2026-09-09,2609.10016,30
 muse-spark-1-1,Muse Spark 1.1,Muse Spark 1.1,api_only,,2026-04-08,2026-07-30,2607.27189,113
@@ -472,7 +475,7 @@ qwen2-5-14b-instruct,Qwen2.5-14B,Qwen2.5,open_weights,2024-09-16,2024-09-16,2025
 qwen2-5-32b-instruct,Qwen2.5-32B,Qwen2.5,open_weights,2024-09-17,2024-09-17,2024-11-08,2411.05934,52
 qwen2-5-3b-instruct,Qwen2.5-3B-Instruct,Qwen2.5,open_weights,2024-09-17,2024-09-17,2025-05-19,2505.13348,244
 qwen2-5-72b-instruct,Qwen2.5 72B Instruct,Qwen2.5,open_weights,,2024-09-19,2024-12-13,2412.09796,85
-qwen2-5-7b-instruct,Qwen2.5-7B,Qwen2.5,open_weights,2024-09-18,2024-09-18,2024-12-13,2412.09796,86
+qwen2-5-7b-instruct,Qwen2.5-7B,Qwen2.5,open_weights,2024-09-19,2024-09-19,2024-12-13,2412.09796,85
 qwen2-5-coder-14b-instruct,Qwen2.5-Coder-14B-Instruct,Qwen2.5,open_weights,2024-11-06,2024-11-06,2026-05-18,2605.18374,558
 qwen2-5-coder-32b-instruct,Qwen2.5-Coder (32B),Qwen2.5,open_weights,2024-11-12,2024-11-12,2024-12-28,2412.12544,46
 qwen2-5-coder-7b-instruct,Qwen2.5-Coder (7B),Qwen2.5,open_weights,2024-09-17,2024-09-17,2024-12-20,2412.15660,94
