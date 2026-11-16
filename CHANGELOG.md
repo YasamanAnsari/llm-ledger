@@ -723,3 +723,11 @@ re-typed rows changed. v2026.08 remains available as a tagged release.
 - `claude-fable-5-2-system_card-1` 2026-11-09 inferred (vendor_blog; evidence: "For details on evaluation methodology, see the Claude Fable 5.2 and Claude Mythos 5.2 System Card")
 - `claude-mythos-5-2-system_card-1` 2026-11-09 inferred (vendor_blog; evidence: "For details on evaluation methodology, see the Claude Fable 5.2 and Claude Mythos 5.2 System Card")
 - `claude-sonnet-5-5-price_changed-1` 2026-10-07 inferred (vendor_blog; evidence: "First, starting today, we’re lowering the price of cache reads on Claude Sonnet 5.5 .")
+
+## 2026-11-16
+
+- `gemini-4-hydrogen-announced-1` 2026-11-12 verified (vendor_blog; evidence: "Today, we’re introducing Gemini 4 Hydrogen, bringing cutting-edge intelligence to everyone"; agrees: epoch.ai 2026-11-12)
+- `gemini-4-hydrogen-api_ga-1` 2026-11-12 verified (vendor_blog; evidence: "Gemini 4 Hydrogen, available to everyone today Starting today, Hydrogen is rolling out globally across our developer, enterprise, and consumer surfac)
+- `qwen4-max-announced-1` 2026-08-03 inferred (vendor_blog; evidence: "Today, we are introducing Qwen4-Max, your new AI teammate for work, creativity, and discovery." (read via reader))
+- `gemini-4-hydrogen-consumer_rollout-1` 2026-11-12 inferred (vendor_blog; evidence: "Today, Google Search is bringing cutting-edge intelligence to everyone with Gemini 4 Hydrogen")
+- `gemini-4-hydrogen-system_card-1` 2026-11-12 inferred (vendor_blog; evidence: "For more details see the Gemini 4 Hydrogen model card and the Safety and Security Report")

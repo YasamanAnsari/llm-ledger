@@ -4,6 +4,7 @@ amazon-nova-micro,false,none,,,,,128000,8192,text,text,,true,,,0.03,0.1,,2026-09
 amazon-nova-pro,false,none,,,,,300000,8192,text|image|video,text,,true,,,0.56,2.13,,2026-09-01,https://models.dev/api.json
 apertus-70b,true,,,,,,65536,16384,text,text,2025-09,true,,,1.393,2.228,,2026-10-03,https://models.dev/api.json
 apertus-8b-instruct,false,none,,,,,65536,8192,text,text,2025-09,true,,,0.1,0.2,,2026-10-03,https://models.dev/api.json
+beam-1-0,true,,,,,,1048576,131072,text,text,2026-06-30,true,,,0.5,1.5,0.05,2026-11-16,https://models.dev/api.json
 beam-1-0-501b-a23b,true,,,,,,262144,131072,text,text,2026-06-30,true,,,0,0,0,2026-10-27,https://models.dev/api.json
 claude-2,,none,,,,,100000,,text,text,,,,,,,,,https://www.anthropic.com/news/claude-2
 claude-3-5-haiku,false,none,,,,,200000,8192,text|image|pdf,text,2024-07-31,true,,,0.8,4,,2026-09-01,https://models.dev/api.json
@@ -112,6 +113,7 @@ gemini-3-flash-preview,true,,,,,,1048576,65536,text|image|audio,text,2025-01,tru
 gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6,0.16,2026-09-01,https://models.dev/api.json
 gemini-4-argon,true,,,,,,1048576,1048576,text|image|audio,text,,true,,,4,20,0.2,2026-10-14,https://models.dev/api.json
 gemini-4-carbon,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,2026-03,true,,,4,20,0.2,2026-11-11,https://models.dev/api.json
+gemini-4-hydrogen,true,,,,,,1048576,65536,text|image|audio|pdf,text,2026-03,true,,,1.688,8.437,0.085,2026-11-16,https://models.dev/api.json
 gemini-nano-banana-2-1,true,,,,,,65536,58982,image|text|pdf,image|text,,true,,,1.5,7.5,,2026-10-07,https://models.dev/api.json
 gemini-omni-1-1-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json
 gemini-omni-1-2-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json
@@ -233,6 +235,7 @@ hy-mt2-1-8b,false,none,,,,,8192,4096,text,text,,false,,,0.044,0.177,,2026-09-01,
 hy-mt2-30b-a3b,false,none,,,,,8192,4096,text,text,,false,,,0.074,0.295,,2026-09-01,https://models.dev/api.json
 hy-mt2-7b,false,none,,,,,8192,4096,text,text,,false,,,0.074,0.295,,2026-09-01,https://models.dev/api.json
 hy3-preview,true,,,,,,256000,128000,text,text,,true,,,0.17,0.566661,0.051,2026-09-01,https://models.dev/api.json
+hy4-flash,true,,,,,,1048576,65536,text|image,text,,true,,,0.08,0.32,0.0032,2026-11-16,https://models.dev/api.json
 hy4-preview,true,,,,,,1048576,65536,text,text,,true,,,0.96,2.88,0.048,2026-09-01,https://models.dev/api.json
 inkling,true,,,,,,65536,65536,text|image,text,,true,,,1.87,4.68,0.374,2026-10-03,https://models.dev/api.json
 inkling-2-small,true,,,,,,1048576,131072,text|image,text,,true,,,0,0,,2026-11-10,https://models.dev/api.json
@@ -259,6 +262,7 @@ ling-3-0-flash-sante,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-09-05,ht
 ling-3-0-flash-vl,true,,,,,,262144,32768,text|image|video,text,,true,,,0.06,0.18,0.012,2026-09-10,https://models.dev/api.json
 ling-3-0-tiny,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-11-05,https://models.dev/api.json
 ling-3-1-flash,true,,,,,,262144,32768,text,text,,true,,,0.075,0.22,0.015,2026-10-03,https://models.dev/api.json
+ling-3-2-flash,true,,,,,,1000000,32768,text|image|video,text,,true,,,,,,2026-11-16,https://models.dev/api.json
 llama-2-70b,,none,,,,,4096,,text,text,2022-09-01,,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md
 llama-3-1-405b-instruct,,none,,,,,131072,,text,text,2023-12-01,true,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
 llama-3-1-70b-instruct,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json
@@ -445,6 +449,7 @@ qwen3-vl-30b-a3b-thinking,true,,,,,,131072,32768,text|image,text,,true,,,0.2,2.4
 qwen3-vl-32b-instruct,false,none,,,,,262000,262000,text|image,text,,true,,,0.2,0.6,,2026-09-01,https://models.dev/api.json
 qwen3-vl-8b-instruct,false,none,,,,,131072,32768,image|text,text,,true,,,0.117,0.455,,2026-09-01,https://models.dev/api.json
 qwen3-vl-8b-thinking,true,,,,,,131072,32768,image|text,text,,true,,,0.18,2.1,,2026-09-01,https://models.dev/api.json
+qwen4-max,true,,,,,,1000000,393216,text|image|video,text,,true,,,1.6,4.8,0.08,2026-11-16,https://models.dev/api.json
 qwq-32b,true,,,,,,32768,32768,text,text,,true,,,0.4,0.4,,2026-09-01,https://models.dev/api.json
 qwq-plus,true,,,,,,131072,8192,text,text,2024-04,true,,,0.8,2.4,,2026-09-01,https://models.dev/api.json
 reka-edge,false,none,,,,,16384,14745,image|text|video,text,,true,,,0.1,0.1,,2026-09-01,https://models.dev/api.json

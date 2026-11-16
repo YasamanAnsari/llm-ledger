@@ -109,3 +109,9 @@ date,reason,count
 2026-11-11,launch_event_required,1
 2026-11-11,no_dated_event,12
 2026-11-11,third_party_claim,3
+2026-11-16,already_recorded,1
+2026-11-16,community_lead,19
+2026-11-16,malformed_candidate,1
+2026-11-16,no_dated_event,20
+2026-11-16,quote_not_on_page,1
+2026-11-16,third_party_claim,3

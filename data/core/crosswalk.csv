@@ -58,6 +58,7 @@ amber,semantic_scholar,9266dc3c65334e36a12fef7e4b231091d346b8a4
 apertus-70b,epoch,Apertus 70B
 apertus-70b,models_dev,cortecs/apertus-70b
 apertus-70b,models_dev,llmtr/publicai/apertus-70b-instruct
+apertus-70b,models_dev,regolo-ai/apertus-70b
 apertus-70b-2509,huggingface,swiss-ai/Apertus-70B-2509
 apertus-70b-2509,semantic_scholar,ffa18585a16330b9f585ca0578f8d2c4000dfd01
 apertus-70b-instruct-2509,huggingface,swiss-ai/Apertus-70B-Instruct-2509
@@ -124,6 +125,7 @@ arcee-vylinh,huggingface,arcee-ai/Arcee-VyLinh
 areal-boba-2-14b,huggingface,inclusionAI/AReaL-boba-2-14B
 areal-boba-2-32b,huggingface,inclusionAI/AReaL-boba-2-32B
 areal-boba-2-8b,huggingface,inclusionAI/AReaL-boba-2-8B
+areal-sea-235b-a22b,huggingface,inclusionAI/AReaL-SEA-235B-A22B
 arete-27b,huggingface,NousResearch/Arete-27B
 armorocr,huggingface,inclusionAI/ArmorOCR
 armorocr,openalex,W7203889917
@@ -158,6 +160,8 @@ baichuan2-7b-base,huggingface,baichuan-inc/Baichuan2-7B-Base
 baichuan2-7b-chat,huggingface,baichuan-inc/Baichuan2-7B-Chat
 baichuanmed-ocr-72b,huggingface,baichuan-inc/BaichuanMed-OCR-72B
 baichuanmed-ocr-7b,huggingface,baichuan-inc/BaichuanMed-OCR-7B
+beam-1-0,epoch,Beam 1.0
+beam-1-0,models_dev,nano-gpt/reflection/beam-1.0
 beam-1-0-501b-a23b,huggingface,reflection/Beam-1.0-501B-A23B
 beam-1-0-501b-a23b,huggingface,reflection/Beam-1.0-501B-A23B-FP8
 beam-1-0-501b-a23b,models_dev,cloudflare-ai-gateway/reflection-ai/beam-1.0-501b-a23b
@@ -322,9 +326,12 @@ claude-fable-5,openrouter,anthropic/claude-fable-5
 claude-fable-5-1,anthropic_api,claude-fable-5-1
 claude-fable-5-1,epoch,Claude Fable 5.1
 claude-fable-5-1,models_dev,302ai/claude-fable-5-1
+claude-fable-5-1,models_dev,infer/infer/claude-fable-5-1:low-cost
 claude-fable-5-1,models_dev,venice/claude-fable-5-1
 claude-fable-5-1,openrouter,anthropic/claude-fable-5.1
 claude-fable-5-2,anthropic_api,claude-fable-5-2
+claude-fable-5-2,epoch,Claude Fable 5.2
+claude-fable-5-2,models_dev,aigrow/claude-fable-5.2
 claude-fable-5-2,models_dev,amazon-bedrock/anthropic.claude-fable-5-2
 claude-fable-5-2,openrouter,anthropic/claude-fable-5.2
 claude-haiku-4-5,anthropic_api,claude-haiku-4-5-20251001
@@ -375,6 +382,7 @@ claude-opus-5,wikipedia,Claude (language model)
 claude-opus-5-5,anthropic_api,claude-opus-5-5
 claude-opus-5-5,epoch,Claude Opus 5.5
 claude-opus-5-5,models_dev,302ai/claude-opus-5-5
+claude-opus-5-5,models_dev,infer/infer/claude-opus-5-5:low-cost
 claude-opus-5-5,models_dev,venice/claude-opus-5-5
 claude-opus-5-5,openrouter,anthropic/claude-opus-5.5
 claude-sonnet-4,epoch,Claude Sonnet 4
@@ -402,6 +410,7 @@ claude-sonnet-5,wikipedia,Claude (language model)
 claude-sonnet-5-5,anthropic_api,claude-sonnet-5-5
 claude-sonnet-5-5,epoch,Claude Sonnet 5.5
 claude-sonnet-5-5,models_dev,302ai/claude-sonnet-5-5
+claude-sonnet-5-5,models_dev,infer/infer/claude-sonnet-5-5:low-cost
 claude-sonnet-5-5,models_dev,venice/claude-sonnet-5-5
 claude-sonnet-5-5,openrouter,anthropic/claude-sonnet-5.5
 coda-v0-instruct,huggingface,Salesforce/CoDA-v0-Instruct
@@ -469,6 +478,7 @@ codellama-7b-python,openalex,W4386185625
 codellama-7b-python,semantic_scholar,0b0debb710366cdff461938c80763eace1651af6
 codestral,epoch,Codestral
 codestral,huggingface,mistralai/Codestral-22B-v0.1
+codestral,models_dev,kilo/mistralai/codestral
 codestral,models_dev,vercel/mistral/codestral
 codestral-2508,mistral_api,codestral-2508
 codestral-2508,models_dev,aimlapi/mistralai/codestral-2508
@@ -839,6 +849,7 @@ doubao-seed-1-8,models_dev,zenmux/volcengine/doubao-seed-1.8
 doubao-seed-2-0-code,epoch,Doubao Seed 2.0 Code
 doubao-seed-2-0-code,models_dev,ofox/volcengine/doubao-seed-2.0-code
 doubao-seed-2-0-lite,epoch,Doubao Seed 2.0 Lite
+doubao-seed-2-0-lite,models_dev,adzuki/doubao-seed-2.0-lite
 doubao-seed-2-0-lite,models_dev,ofox/volcengine/doubao-seed-2.0-lite
 doubao-seed-2-0-lite-260428,epoch,Doubao Seed 2.0 Lite 260428
 doubao-seed-2-0-lite-260428,models_dev,volcengine/doubao-seed-2-0-lite-260428
@@ -847,6 +858,7 @@ doubao-seed-2-0-mini,models_dev,ofox/volcengine/doubao-seed-2.0-mini
 doubao-seed-2-0-pro,epoch,Doubao-Seed-2.0 Pro
 doubao-seed-2-0-pro,models_dev,aihubmix/doubao-seed-2-0-pro
 doubao-seed-2-1-pro,epoch,Doubao Seed 2.1 Pro
+doubao-seed-2-1-pro,models_dev,adzuki/doubao-seed-2.1-pro
 doubao-seed-2-1-pro,models_dev,nano-gpt/bytedance/doubao-seed-2.1-pro
 doubao-seed-2-1-pro,models_dev,ofox/volcengine/doubao-seed-2.1-pro
 doubao-seed-2-1-turbo,epoch,Doubao Seed 2.1 Turbo
@@ -1098,6 +1110,7 @@ gemini-3-1-pro,models_dev,neon/gemini-3-1-pro
 gemini-3-1-pro-preview,google_api,gemini-3.1-pro-preview
 gemini-3-1-pro-preview,models_dev,302ai/gemini-3.1-pro-preview
 gemini-3-1-pro-preview,models_dev,frogbot/gemini-3-1-pro-preview
+gemini-3-1-pro-preview,models_dev,infer/infer/gemini-3.1-pro-preview:low-cost
 gemini-3-1-pro-preview,openrouter,google/gemini-3.1-pro-preview
 gemini-3-1-pro-preview-customtools,google_api,gemini-3.1-pro-preview-customtools
 gemini-3-1-pro-preview-customtools,models_dev,aihubmix/gemini-3.1-pro-preview-customtools
@@ -1127,6 +1140,7 @@ gemini-3-8-flash,google_api,gemini-3.8-flash
 gemini-3-8-flash,models_dev,302ai/gemini-3.8-flash
 gemini-3-8-flash,models_dev,crossmodel/gemini/gemini-3.8-flash
 gemini-3-8-flash,models_dev,google/gemini-3.8-flash
+gemini-3-8-flash,models_dev,infer/infer/gemini-3.8-flash:low-cost
 gemini-3-8-flash,openrouter,google/gemini-3.8-flash
 gemini-3-flash,epoch,Gemini 3 Flash
 gemini-3-flash,models_dev,cloudflare-ai-gateway/google/gemini-3-flash
@@ -1147,8 +1161,13 @@ gemini-4-argon,models_dev,llmgateway/gemini-4-argon
 gemini-4-argon,openrouter,google/gemini-4-argon
 gemini-4-carbon,epoch,Gemini 4 Carbon
 gemini-4-carbon,google_api,gemini-4-carbon
+gemini-4-carbon,models_dev,cloudflare-ai-gateway/google/gemini-4-carbon
 gemini-4-carbon,models_dev,edenai/google/gemini-4-carbon
 gemini-4-carbon,openrouter,google/gemini-4-carbon
+gemini-4-hydrogen,epoch,Gemini 4 Hydrogen
+gemini-4-hydrogen,google_api,gemini-4-hydrogen
+gemini-4-hydrogen,models_dev,cortecs/gemini-4-hydrogen
+gemini-4-hydrogen,openrouter,google/gemini-4-hydrogen
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
@@ -1196,11 +1215,13 @@ gemma-3-4b-it,openrouter,google/gemma-3-4b-it
 gemma-3-4b-pt,huggingface,google/gemma-3-4b-pt
 gemma-3n-e2b-it,huggingface,google/gemma-3n-E2B-it
 gemma-4-12b-it,epoch,Gemma 4 12B
+gemma-4-12b-it,models_dev,kitani/google/gemma-4-12b-it
 gemma-4-12b-it,models_dev,nano-gpt/gemma-4-12b-it
 gemma-4-12b-it,models_dev,pioneer/google/gemma-4-12B-it
 gemma-4-26b-a4b-it,epoch,Gemma 4 26B A4B
 gemma-4-26b-a4b-it,google_api,gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it,huggingface,google/gemma-4-26B-A4B-it
+gemma-4-26b-a4b-it,models_dev,adaption/gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it,models_dev,aimlapi/google/gemma-4-26b-a4b-it
 gemma-4-26b-a4b-it,models_dev,amazon-bedrock/google.gemma-4-26b-a4b
 gemma-4-26b-a4b-it,models_dev,scaleway/gemma-4-26b-a4b-it
@@ -1365,6 +1386,7 @@ glm-5-1,models_dev,302ai/glm-5.1
 glm-5-1,models_dev,nearai/zai-org/GLM-5.1-FP8
 glm-5-1,models_dev,novita-ai/zai-org/glm-5.1
 glm-5-1,models_dev,ollama-cloud/glm-5.1
+glm-5-1,models_dev,zenifra/zenifra/glm-5.1
 glm-5-1,openalex,W7130402983
 glm-5-1,openrouter,z-ai/glm-5.1
 glm-5-1,semantic_scholar,e0db747ad65d72559e583ff92f729d68949e9daf
@@ -1655,17 +1677,20 @@ gpt-5-pro,openrouter,openai/gpt-5-pro
 gpt-6-1-sol,epoch,GPT-6.1 Sol
 gpt-6-1-sol,models_dev,302ai/gpt-6.1-sol
 gpt-6-1-sol,models_dev,amazon-bedrock/openai.gpt-6.1-sol
+gpt-6-1-sol,models_dev,infer/infer/gpt-6.1-sol:low-cost
 gpt-6-1-sol,openai_api,gpt-6.1-sol
 gpt-6-1-sol,openrouter,openai/gpt-6.1-sol
 gpt-6-1-sol-pro,models_dev,kilo/openai/gpt-6.1-sol-pro
 gpt-6-1-sol-pro,openrouter,openai/gpt-6.1-sol-pro
 gpt-6-1-terra,epoch,GPT-6.1 Terra
+gpt-6-1-terra,models_dev,aigrow/gpt-6.1-terra
 gpt-6-1-terra,models_dev,aimlapi/openai/gpt-6.1-terra
 gpt-6-1-terra,openai_api,gpt-6.1-terra
 gpt-6-1-terra,openrouter,openai/gpt-6.1-terra
 gpt-6-1-terra-pro,models_dev,kilo/openai/gpt-6.1-terra-pro
 gpt-6-1-terra-pro,openrouter,openai/gpt-6.1-terra-pro
 gpt-6-astra,epoch,GPT-6 Astra
+gpt-6-astra,models_dev,infer/infer/gpt-6-astra:low-cost
 gpt-6-astra,models_dev,infer/infer/gpt-6-astra:official
 gpt-6-astra,models_dev,llmgateway/gpt-6-astra
 gpt-6-astra,openai_api,gpt-6-astra
@@ -1811,6 +1836,7 @@ grok-4-6,models_dev,venice/grok-4-6
 grok-4-6,openrouter,x-ai/grok-4.6
 grok-4-7,epoch,Grok 4.7
 grok-4-7,models_dev,302ai/grok-4.7
+grok-4-7,models_dev,infer/infer/grok-4.7:low-cost
 grok-4-7,models_dev,venice/grok-4-7
 grok-4-7,openrouter,x-ai/grok-4.7
 grok-4-fast,epoch,Grok 4 Fast
@@ -1924,6 +1950,9 @@ hy-mt2-7b,openrouter,tencent/hy-mt2-7b
 hy3-preview,huggingface,tencent/Hy3-preview
 hy3-preview,models_dev,aihubmix/hy3-preview
 hy3-preview,openrouter,tencent/hy3-preview
+hy3-preview-base,huggingface,tencent/Hy3-preview-Base
+hy4-flash,models_dev,crossmodel/tencent/hy4-flash
+hy4-flash,openrouter,tencent/hy4-flash
 hy4-preview,huggingface,tencent/Hy4-preview
 hy4-preview,huggingface,tencent/Hy4-preview-FP8
 hy4-preview,models_dev,aihubmix/hy4-preview
@@ -1941,7 +1970,11 @@ inkling,epoch,Inkling
 inkling,huggingface,thinkingmachines/Inkling
 inkling,models_dev,thinkingmachines/thinkingmachines/Inkling
 inkling,openrouter,thinkingmachines/inkling
+inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small
+inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small-MXFP8
+inkling-2-small,models_dev,cortecs/inkling-2-small
 inkling-2-small,models_dev,kilo/thinkingmachines/inkling-2-small:free
+inkling-2-small,openrouter,thinkingmachines/inkling-2-small
 inkling-2-small,openrouter,thinkingmachines/inkling-2-small:free
 inkling-small,epoch,Inkling-Small
 inkling-small,huggingface,thinkingmachines/Inkling-Small
@@ -2102,6 +2135,7 @@ k-exaone-236b-a23b,huggingface,LGAI-EXAONE/K-EXAONE-236B-A23B
 k-exaone-236b-a23b,huggingface,LGAI-EXAONE/K-EXAONE-236B-A23B-FP8
 k-exaone-236b-a23b,openalex,W7118588936
 k-exaone-236b-a23b,semantic_scholar,94909901a883cfb81b8b2075c27e6fb85e4d18f2
+k2-chat,huggingface,IFM/K2-Chat
 k2-horizon-0-9b,huggingface,IFM/K2-Horizon-0.9B
 k2-horizon-3-7b,huggingface,IFM/K2-Horizon-3.7B
 k2-horizon-32b,huggingface,IFM/K2-Horizon-32B
@@ -2185,6 +2219,7 @@ kimi-k2-5,epoch,Kimi K2.5
 kimi-k2-5,huggingface,moonshotai/Kimi-K2.5
 kimi-k2-5,models_dev,302ai/kimi-k2.5
 kimi-k2-5,models_dev,frogbot/kimi-k2.5
+kimi-k2-5,models_dev,zenifra/zenifra/kimi-k2.5
 kimi-k2-5,openalex,W7127380112
 kimi-k2-5,openrouter,moonshotai/kimi-k2.5
 kimi-k2-5,semantic_scholar,e1c32d718ad38e17d66b1ffb91744a169b592be7
@@ -2212,6 +2247,7 @@ kimi-k3,wikipedia,Kimi (AI)
 kimi-k3-1-pro,epoch,Kimi K3.1 Pro
 kimi-k3-1-pro,huggingface,moonshotai/Kimi-K3.1-Pro
 kimi-k3-1-pro,models_dev,302ai/kimi-k3.1-pro
+kimi-k3-1-pro,models_dev,cline-pass/cline-pass/kimi-k3.1-pro
 kimi-k3-1-pro,models_dev,edenai/moonshot/kimi-k3.1-pro
 kimi-k3-1-pro,openrouter,moonshotai/kimi-k3.1-pro
 kimi-linear-48b-a3b-base,huggingface,moonshotai/Kimi-Linear-48B-A3B-Base
@@ -2404,6 +2440,7 @@ ling-2-6-flash-base,semantic_scholar,5ef7aa7efaf62e28fe9402f4d31da8190257403f
 ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash
 ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash-fp8
 ling-3-0-flash,huggingface,inclusionAI/Ling-3.0-flash-int4
+ling-3-0-flash,models_dev,bailing/Ling-3.0-flash
 ling-3-0-flash,models_dev,kilo/inclusionai/ling-3.0-flash
 ling-3-0-flash,openrouter,inclusionai/ling-3.0-flash
 ling-3-0-flash-base,huggingface,inclusionAI/Ling-3.0-flash-base
@@ -2430,6 +2467,7 @@ ling-3-0-flash-ubtree,huggingface,inclusionAI/Ling-3.0-flash-UBTree
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL-fp8
 ling-3-0-flash-vl,huggingface,inclusionAI/Ling-3.0-flash-VL-int4
+ling-3-0-flash-vl,models_dev,bailing/Ling-3.0-flash-VL
 ling-3-0-flash-vl,models_dev,kilo/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,models_dev,nano-gpt/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
@@ -2441,10 +2479,13 @@ ling-3-0-tiny,openrouter,inclusionai/ling-3.0-tiny
 ling-3-0-tiny-ubtree,huggingface,inclusionAI/Ling-3.0-tiny-UBTree
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash
 ling-3-1-flash,huggingface,inclusionAI/Ling-3.1-flash-1019
+ling-3-1-flash,models_dev,bailing/Ling-3.1-flash
 ling-3-1-flash,models_dev,commandcode/inclusionai/ling-3.1-flash:free
 ling-3-1-flash,models_dev,llmgateway/ling-3.1-flash
 ling-3-1-flash,models_dev,nano-gpt/inclusionai/ling-3.1-flash
 ling-3-1-flash,openrouter,inclusionai/ling-3.1-flash
+ling-3-2-flash,models_dev,bailing/Ling-3.2-flash
+ling-3-2-flash,openrouter,inclusionai/ling-3.2-flash:free
 ling-coder-lite,huggingface,inclusionAI/Ling-Coder-lite
 ling-flash-2-0,huggingface,inclusionAI/Ling-flash-2.0
 ling-flash-2-0,openalex,W4415203133
@@ -2773,6 +2814,7 @@ medmo-8b-next,openalex,W7128373603
 medmo-8b-next,semantic_scholar,c10461a3bab1173dab7ad68c270050c827a31325
 mercury-2,epoch,Mercury 2
 mercury-2,models_dev,aimlapi/inception/mercury-2
+mercury-2,models_dev,inception/mercury-2
 mercury-2,models_dev,nano-gpt/mercury-2
 mercury-2,models_dev,venice/mercury-2
 mercury-2,openrouter,inception/mercury-2
@@ -2804,6 +2846,7 @@ mimo-7b-sft,semantic_scholar,97e0a3548a6f0818262b4f86e4180f256e2f0128
 mimo-embodied-7b,huggingface,XiaomiMiMo/MiMo-Embodied-7B
 mimo-embodied-7b,openalex,W4416551720
 mimo-embodied-7b,semantic_scholar,c0e2bdbf8e7875037e7003a7cb6529f7cf590f9e
+mimo-v2-5,epoch,MiMo-V2.5
 mimo-v2-5,huggingface,XiaomiMiMo/MiMo-V2.5
 mimo-v2-5,models_dev,cline-pass/cline-pass/mimo-v2.5
 mimo-v2-5,openrouter,xiaomi/mimo-v2.5
@@ -2814,11 +2857,13 @@ mimo-v2-5-pro,models_dev,cline-pass/cline-pass/mimo-v2.5-pro
 mimo-v2-5-pro,openrouter,xiaomi/mimo-v2.5-pro
 mimo-v2-5-pro-base,huggingface,XiaomiMiMo/MiMo-V2.5-Pro-Base
 mimo-v2-6-distill-qwen-9b,huggingface,XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B
+mimo-v2-6-flash,epoch,MiMo-V2.6 Flash
 mimo-v2-6-flash,models_dev,cline-pass/cline-pass/mimo-v2.6-flash
 mimo-v2-6-flash,models_dev,crossmodel/xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash,openrouter,xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash-mopd,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-MOPD
 mimo-v2-6-flash-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-RL
+mimo-v2-6-pro,epoch,MiMo-V2.6 Pro
 mimo-v2-6-pro,models_dev,cline-pass/cline-pass/mimo-v2.6-pro
 mimo-v2-6-pro,models_dev,crossmodel/xiaomi/mimo-v2.6-pro
 mimo-v2-6-pro,openrouter,xiaomi/mimo-v2.6-pro
@@ -2943,6 +2988,7 @@ minimax-m3,openalex,W7164548514
 minimax-m3,openrouter,minimax/minimax-m3
 minimax-m3,semantic_scholar,f67a29537aa3f04aae5aac40f6b4e02972b4be27
 minimax-m3-1-flash,huggingface,MiniMaxAI/MiniMax-M3.1-Flash
+minimax-m3-1-flash,models_dev,cline-pass/cline-pass/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,cortecs/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,digitalocean/minimax-m3.1-flash
 minimax-m3-1-flash,models_dev,edenai/minimax/MiniMax-M3.1-Flash
@@ -2988,6 +3034,7 @@ ministral-3-8b-reasoning-2512,huggingface,mistralai/Ministral-3-8B-Reasoning-251
 ministral-3-8b-reasoning-2512,openalex,W7124165156
 ministral-3-8b-reasoning-2512,semantic_scholar,6aa88dc32e65da7e530d8ba274fac6e13edfce9c
 ministral-3b,epoch,Ministral 3B
+ministral-3b,models_dev,kilo/mistralai/ministral-3b
 ministral-3b,models_dev,pioneer/ministral-3b
 ministral-3b,models_dev,vercel/mistral/ministral-3b
 ministral-3b-2512,huggingface,mistralai/Ministral-3-3B-Instruct-2512
@@ -3000,6 +3047,7 @@ ministral-3b-2512,openrouter,mistralai/ministral-3b-2512
 ministral-3b-2512,semantic_scholar,6aa88dc32e65da7e530d8ba274fac6e13edfce9c
 ministral-8b,epoch,Ministral 8B
 ministral-8b,huggingface,mistralai/Ministral-8B-Instruct-2410
+ministral-8b,models_dev,kilo/mistralai/ministral-8b
 ministral-8b,models_dev,vercel/mistral/ministral-8b
 ministral-8b,openrouter,mistralai/ministral-8b
 ministral-8b-2512,huggingface,mistralai/Ministral-3-8B-Instruct-2512
@@ -3041,6 +3089,7 @@ mistral-large-3,models_dev,ollama-cloud/mistral-large-3:675b
 mistral-large-3,models_dev,pioneer/mistral-large-3
 mistral-large-4,epoch,Mistral Large 4
 mistral-large-4,mistral_api,mistral-large-4
+mistral-large-4,models_dev,cloudcode/mistral-large-4
 mistral-large-4,models_dev,commandcode/mistral/mistral-large-4
 mistral-large-4-0,mistral_api,mistral-large-4-0
 mistral-large-4-0,models_dev,cortecs/mistral-large-4-0
@@ -3211,6 +3260,7 @@ muse-spark-1-3-contributor,models_dev,kilo/meta/muse-spark-1.3-contributor
 muse-spark-1-3-contributor,openrouter,meta/muse-spark-1.3-contributor
 muse-spark-open,epoch,Muse Spark Open
 muse-spark-open,huggingface,meta-models/Muse-Spark-Open-816B-A42B
+muse-spark-open,models_dev,abliteratedllm/muse-spark-open
 muse-spark-open,models_dev,aiand/meta/muse-spark-open
 muse-spark-open,models_dev,cloudflare-ai-gateway/meta/muse-spark-open
 muse-spark-open,openrouter,meta/muse-spark-open
@@ -3239,6 +3289,7 @@ nemotron-3-5-content-safety,openrouter,nvidia/nemotron-3.5-content-safety:free
 nemotron-3-5-lightning,epoch,Nemotron 3.5 Lightning
 nemotron-3-5-lightning,models_dev,kilo/nvidia/nemotron-3.5-lightning
 nemotron-3-5-lightning,openrouter,nvidia/nemotron-3.5-lightning
+nemotron-3-5-super-vl,models_dev,cheapest-token/nemotron-3.5-super-vl
 nemotron-3-5-super-vl,models_dev,digitalocean/nemotron-3.5-super-vl
 nemotron-3-5-super-vl,openrouter,nvidia/nemotron-3.5-super-vl
 nemotron-3-nano-30b-a3b,epoch,Nemotron 3-Nano-30B-A3B
@@ -3260,8 +3311,10 @@ nemotron-3-ultra,openalex,W7117311976
 nemotron-3-ultra,semantic_scholar,4324fc31d90cd55b64f8fc7ed16e77fd1e46b890
 nemotron-3-ultra-550b-a55b,models_dev,nvidia/nvidia/nemotron-3-ultra-550b-a55b
 nemotron-3-ultra-550b-a55b,openrouter,nvidia/nemotron-3-ultra-550b-a55b
+nemotron-labs-diffusion-3b,huggingface,nvidia/Nemotron-Labs-Diffusion-3B
 nemotron-labs-diffusion-8b,huggingface,nvidia/Nemotron-Labs-Diffusion-8B
 nemotron-labs-diffusion-8b-base,huggingface,nvidia/Nemotron-Labs-Diffusion-8B-Base
+nemotron-mini-4b-instruct,huggingface,nvidia/Nemotron-Mini-4B-Instruct
 nex-n2-5-max,huggingface,nex-agi/Nex-N2.5-Max
 nex-n2-5-max-dspark,huggingface,nex-agi/Nex-N2.5-Max-DSpark
 nex-n2-5-mini,huggingface,nex-agi/Nex-N2.5-mini
@@ -3271,6 +3324,7 @@ nex-n2-5-pro,huggingface,nex-agi/Nex-N2.5-Pro
 nex-n2-5-pro,models_dev,kilo/nex-agi/nex-n2.5-pro
 nex-n2-5-pro,openrouter,nex-agi/nex-n2.5-pro
 nex-n2-5-pro-dflash,huggingface,nex-agi/Nex-N2.5-Pro-DFlash
+nex-n2-6,huggingface,nex-agi/Nex-N2.6
 nex-n2-6,models_dev,kilo/nex-agi/nex-n2.6
 nex-n2-6,openrouter,nex-agi/nex-n2.6
 nex-n2-mini,huggingface,nex-agi/Nex-N2-mini
@@ -3333,6 +3387,7 @@ o1-pro,models_dev,aimlapi/openai/o1-pro
 o1-pro,models_dev,edenai/openai/o1-pro
 o1-pro,models_dev,kilo/openai/o1-pro
 o1-pro,models_dev,nano-gpt/openai/o1-pro
+o1-pro,models_dev,openai/o1-pro
 o1-pro,openai_api,o1-pro
 o1-pro,openai_api,o1-pro-2025-03-19
 o1-pro,openrouter,openai/o1-pro
@@ -3626,6 +3681,7 @@ pythia-14m-seed1,huggingface,EleutherAI/pythia-14m-seed1
 pythia-14m-seed1,openalex,W4415098724
 pythia-14m-seed1,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
 pythia-14m-seed2,huggingface,EleutherAI/pythia-14m-seed2
+pythia-14m-seed3,huggingface,EleutherAI/pythia-14m-seed3
 pythia-14m-seed6,huggingface,EleutherAI/pythia-14m-seed6
 pythia-14m-seed6,openalex,W4415098724
 pythia-14m-seed6,semantic_scholar,843a3924de7a24689bc080362e9ddd610fd25507
@@ -3686,6 +3742,7 @@ pythia-2-8b,huggingface,EleutherAI/pythia-2.8b
 pythia-2-8b-deduped,huggingface,EleutherAI/pythia-2.8b-deduped
 pythia-31m,huggingface,EleutherAI/pythia-31m
 pythia-31m-deduped,huggingface,EleutherAI/pythia-31m-deduped
+pythia-31m-seed1,huggingface,EleutherAI/pythia-31m-seed1
 pythia-410m,huggingface,EleutherAI/pythia-410m
 pythia-410m-deduped,huggingface,EleutherAI/pythia-410m-deduped
 pythia-410m-seed1,huggingface,EleutherAI/pythia-410m-seed1
@@ -3789,6 +3846,7 @@ qwen2-5-7b-instruct,epoch,Qwen2.5-7B
 qwen2-5-7b-instruct,huggingface,Qwen/Qwen2.5-7B-Instruct
 qwen2-5-7b-instruct,models_dev,alibaba/qwen2-5-7b-instruct
 qwen2-5-7b-instruct,models_dev,kilo/qwen/qwen-2.5-7b-instruct
+qwen2-5-7b-instruct,models_dev,phala/qwen/qwen-2.5-7b-instruct
 qwen2-5-7b-instruct,models_dev,siliconflow/Qwen/Qwen2.5-7B-Instruct
 qwen2-5-7b-instruct,openrouter,qwen/qwen-2.5-7b-instruct
 qwen2-5-coder-14b-instruct,huggingface,Qwen/Qwen2.5-Coder-14B-Instruct
@@ -3946,6 +4004,7 @@ qwen3-6-35b-a3b,models_dev,deepinfra/Qwen/Qwen3.6-35B-A3B
 qwen3-6-35b-a3b,openrouter,qwen/qwen3.6-35b-a3b
 qwen3-6-flash,models_dev,302ai/qwen3.6-flash
 qwen3-6-flash,models_dev,aihubmix/qwen3.6-flash
+qwen3-6-flash,models_dev,zenifra/zenifra/qwen3.6-flash
 qwen3-6-flash,openrouter,qwen/qwen3.6-flash
 qwen3-6-max-preview,models_dev,alibaba/qwen3.6-max-preview
 qwen3-6-max-preview,openrouter,qwen/qwen3.6-max-preview
@@ -3953,6 +4012,7 @@ qwen3-6-plus,epoch,Qwen 3.6 Plus
 qwen3-6-plus,models_dev,302ai/qwen3.6-plus
 qwen3-6-plus,models_dev,auriko/qwen-3.6-plus
 qwen3-6-plus,models_dev,kilo/stealth/qwen3.6-plus
+qwen3-6-plus,models_dev,zenifra/zenifra/qwen3.6-plus
 qwen3-6-plus,openrouter,qwen/qwen3.6-plus
 qwen3-7-flash,epoch,Qwen3.7 Flash
 qwen3-7-flash,models_dev,aihubmix/qwen3.7-flash
@@ -3965,18 +4025,21 @@ qwen3-7-plus,epoch,Qwen3.7-Plus
 qwen3-7-plus,models_dev,cline-pass/cline-pass/qwen3.7-plus
 qwen3-7-plus,openrouter,qwen/qwen3.7-plus
 qwen3-8-2-4t-a95b,epoch,Qwen3.8-2.4T-A95B
+qwen3-8-2-4t-a95b,models_dev,abliteratedllm/qwen3.8-2.4t-a95b
 qwen3-8-2-4t-a95b,models_dev,aihubmix/qwen3.8-2.4t-a95b
 qwen3-8-2-4t-a95b,models_dev,cortecs/qwen3.8-2.4t-a95b
 qwen3-8-2-4t-a95b,openrouter,qwen/qwen3.8-2.4t-a95b
 qwen3-8-27b,epoch,Qwen 3.8 27B
 qwen3-8-27b,huggingface,Qwen/Qwen3.8-27B
 qwen3-8-27b,huggingface,Qwen/Qwen3.8-27B-FP8
+qwen3-8-27b,models_dev,adaption/qwen3.8-27b
 qwen3-8-27b,models_dev,aiand/qwen/qwen3.8-27b
 qwen3-8-27b,models_dev,iteracompute/iteracompute/qwen3.8-27b
 qwen3-8-27b,models_dev,venice/qwen-3-8-27b
 qwen3-8-27b,openrouter,qwen/qwen3.8-27b
 qwen3-8-flash,models_dev,302ai/qwen3.8-flash
 qwen3-8-flash,models_dev,alibaba/qwen3.8-flash
+qwen3-8-flash,models_dev,zenifra/zenifra/qwen3.8-flash
 qwen3-8-flash,openrouter,qwen/qwen3.8-flash
 qwen3-8-flash-next,huggingface,Qwen/Qwen3.8-Flash-Next
 qwen3-8-max,epoch,Qwen 3.8 Max
@@ -4018,6 +4081,7 @@ qwen3-coder-flash,models_dev,alibaba/qwen3-coder-flash
 qwen3-coder-flash,openrouter,qwen/qwen3-coder-flash
 qwen3-coder-next,epoch,Qwen3-Coder-Next
 qwen3-coder-next,huggingface,Qwen/Qwen3-Coder-Next-FP8
+qwen3-coder-next,models_dev,aihubmix/qwen3-coder-next
 qwen3-coder-next,models_dev,alibaba-coding-plan/qwen3-coder-next
 qwen3-coder-next,models_dev,jiekou/qwen/qwen3-coder-next
 qwen3-coder-next,models_dev,llmgateway/qwen3-coder-next
@@ -4029,6 +4093,7 @@ qwen3-max,models_dev,302ai/qwen3-max-2025-09-23
 qwen3-max,models_dev,iflowcn/qwen3-max
 qwen3-max,openrouter,qwen/qwen3-max
 qwen3-max-thinking,epoch,Qwen3-Max-Thinking
+qwen3-max-thinking,models_dev,kilo/qwen/qwen3-max-thinking
 qwen3-max-thinking,models_dev,vercel/alibaba/qwen3-max-thinking
 qwen3-max-thinking,openrouter,qwen/qwen3-max-thinking
 qwen3-next-80b-a3b-instruct,epoch,Qwen3-Next-80B-A3B
@@ -4072,6 +4137,8 @@ qwen3-vl-8b-instruct,models_dev,kilo/qwen/qwen3-vl-8b-instruct
 qwen3-vl-8b-instruct,openrouter,qwen/qwen3-vl-8b-instruct
 qwen3-vl-8b-thinking,models_dev,kilo/qwen/qwen3-vl-8b-thinking
 qwen3-vl-8b-thinking,openrouter,qwen/qwen3-vl-8b-thinking
+qwen4-max,models_dev,crossmodel/qwen/qwen4-max
+qwen4-max,openrouter,qwen/qwen4-max
 qwq-32b,epoch,QwQ-32B
 qwq-32b,models_dev,abacus/Qwen/QwQ-32B
 qwq-32b,models_dev,alibaba-cn/qwq-32b
@@ -4603,6 +4670,7 @@ trinity-mini-base-pre-anneal,huggingface,arcee-ai/Trinity-Mini-Base-Pre-Anneal
 trinity-nano-base,huggingface,arcee-ai/Trinity-Nano-Base
 trinity-nano-base-pre-anneal,huggingface,arcee-ai/Trinity-Nano-Base-Pre-Anneal
 trinity-nano-preview,huggingface,arcee-ai/Trinity-Nano-Preview
+trinity-nano-preview,huggingface,arcee-ai/Trinity-Nano-Preview-FP8-Block
 truthfulqa-info-judge-llama2-7b,huggingface,allenai/truthfulqa-info-judge-llama2-7B
 truthfulqa-truth-judge-llama2-7b,huggingface,allenai/truthfulqa-truth-judge-llama2-7B
 tulu-2-7b,huggingface,allenai/tulu-2-7b
