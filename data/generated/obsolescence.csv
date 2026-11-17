@@ -352,7 +352,7 @@ qwen3-vl-8b-instruct,qwen3-vl-8b-instruct,alibaba,open_weights,2025-10-11,,,,,,2
 qwen3-vl-8b-thinking,qwen3-vl-8b-thinking,alibaba,api_only,2025-10-14,,,,,,,,,,2026-10-09
 qwen4-max,qwen4-max,alibaba,api_only,2026-11-16,2026-11-15,6,2026-11-15,,,,,,,
 qwq-32b,QwQ-32B,alibaba,open_weights,2025-03-05,2025-03-15,11,2025-07-07,2025-07-15,132,2025-03-06,2025-09-24,2025-09-25,204,
-ring-2-6-1t,Ring-2.6-1T,ant-group,open_weights,2026-05-08,,,,,,2026-05-09,2026-05-15,2026-05-16,8,
+ring-2-6-1t,Ring-2.6-1T,ant-group,open_weights,2026-05-07,,,,,,2026-05-09,2026-05-15,2026-05-16,9,
 ring-flash-2-0,Ring-flash-2.0,ant-group,open_weights,2025-09-19,2025-10-07,78,,2025-10-07,18,,,,,
 seed-1-6,Seed 1.6,bytedance,api_only,2025-10-15,,,,,,,,,,2026-11-10
 seed-1-6-flash,seed-1.6-flash,bytedance,api_only,2025-08-28,,,,,,,,,,2026-11-10

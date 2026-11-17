@@ -1,0 +1,8 @@
+{
+  "models.json": {
+    "bytes": 853270,
+    "fetched_at": "2026-11-17T16:04:36+00:00",
+    "sha256": "2bbee3a9c42cde2a139d49ab953dd21cf830c23f04d85ac09237ba94b954aded",
+    "url": "https://openrouter.ai/api/v1/models"
+  }
+}

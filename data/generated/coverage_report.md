@@ -9,25 +9,25 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1957; events: 3055
-- Models: curated 73, corroborated 698, single-source 1186
-- Event confidence: verified 1221, inferred 1828, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 447 of 1702
+- Models: 1963; events: 3063
+- Models: curated 73, corroborated 699, single-source 1191
+- Event confidence: verified 1223, inferred 1834, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 448 of 1708
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
-| Alibaba | 91 | 202 | 2 | 70 | 19 | 51% |
+| Alibaba | 91 | 203 | 2 | 70 | 19 | 51% |
 | MBZUAI | 78 | 78 | 0 | 6 | 72 | 8% |
 | OpenAI | 76 | 312 | 19 | 48 | 9 | 73% |
 | ByteDance | 66 | 88 | 0 | 25 | 41 | 33% |
-| Marin | 64 | 64 | 0 | 0 | 64 | 0% |
-| Ant Group | 60 | 72 | 0 | 30 | 30 | 43% |
+| Marin | 66 | 66 | 0 | 0 | 66 | 0% |
+| Ant Group | 60 | 72 | 0 | 31 | 29 | 44% |
 | EleutherAI | 60 | 60 | 0 | 1 | 59 | 2% |
 | Google | 59 | 167 | 7 | 30 | 22 | 42% |
-| Mistral | 59 | 114 | 4 | 31 | 24 | 43% |
-| RWKV | 58 | 58 | 0 | 4 | 54 | 7% |
+| Mistral | 59 | 115 | 4 | 31 | 24 | 43% |
+| RWKV | 59 | 59 | 0 | 4 | 55 | 7% |
 | Meta | 57 | 120 | 4 | 28 | 25 | 37% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Shanghai AI Lab | 52 | 52 | 0 | 13 | 39 | 25% |
@@ -49,19 +49,19 @@ as settled.
 | Xiaomi | 25 | 36 | 0 | 22 | 3 | 67% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | PFN | 24 | 24 | 0 | 1 | 23 | 4% |
+| Swiss AI | 24 | 25 | 0 | 5 | 19 | 20% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
-| Swiss AI | 23 | 24 | 0 | 5 | 18 | 21% |
 | Microsoft | 22 | 35 | 0 | 13 | 9 | 43% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
+| SenseTime | 17 | 17 | 0 | 2 | 15 | 12% |
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
 | Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| SenseTime | 16 | 16 | 0 | 2 | 14 | 12% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | Skywork | 15 | 15 | 0 | 6 | 9 | 40% |
@@ -86,8 +86,8 @@ as settled.
 | Perceptron | 6 | 8 | 0 | 3 | 3 | 38% |
 | Perplexity | 6 | 11 | 0 | 5 | 1 | 45% |
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
+| Sarvam | 6 | 6 | 0 | 0 | 6 | 0% |
 | Inception | 5 | 15 | 0 | 3 | 2 | 40% |
-| Sarvam | 5 | 5 | 0 | 0 | 5 | 0% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Thinking Machines | 3 | 10 | 0 | 3 | 0 | 50% |
 | Reflection | 2 | 4 | 0 | 1 | 1 | 50% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1682 | 430 | 1251 | 1 |
+| weights_released | 1688 | 431 | 1256 | 1 |
 | platform_availability | 357 | 350 | 5 | 2 |
-| retired | 337 | 198 | 139 | 0 |
+| retired | 338 | 199 | 139 | 0 |
 | api_ga | 274 | 65 | 208 | 1 |
-| announced | 260 | 55 | 204 | 1 |
+| announced | 261 | 55 | 205 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,13 +119,13 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-16, by reason:
+Declined in the 7 days to 2026-11-17, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 41 |
-| no_dated_event | 41 |
-| third_party_claim | 7 |
+| community_lead | 42 |
+| no_dated_event | 34 |
+| third_party_claim | 6 |
 | already_recorded | 1 |
 | launch_event_required | 1 |
 | malformed_candidate | 1 |

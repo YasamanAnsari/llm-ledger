@@ -743,6 +743,7 @@ delphi-2e19-447mparams-7-3btokens,huggingface,marin-community/delphi-2e19-447Mpa
 delphi-2e19-550mparams-5-8btokens,huggingface,marin-community/delphi-2e19-550Mparams-5.8Btokens
 delphi-2e19-669mparams-4-7btokens,huggingface,marin-community/delphi-2e19-669Mparams-4.7Btokens
 delphi-2e19-837mparams-3-6btokens,huggingface,marin-community/delphi-2e19-837Mparams-3.6Btokens
+delphi-2e19-998mparams-3btokens,huggingface,marin-community/delphi-2e19-998Mparams-3Btokens
 delphi-2e20-1-4bparams-21-1btokens,huggingface,marin-community/delphi-2e20-1.4Bparams-21.1Btokens
 delphi-2e20-1-9bparams-14-8btokens,huggingface,marin-community/delphi-2e20-1.9Bparams-14.8Btokens
 delphi-2e20-273mparams-134btokens,huggingface,marin-community/delphi-2e20-273Mparams-134Btokens
@@ -781,6 +782,7 @@ delphi-9e18-273mparams-6-7btokens,huggingface,marin-community/delphi-9e18-273Mpa
 delphi-9e18-358mparams-4-7btokens,huggingface,marin-community/delphi-9e18-358Mparams-4.7Btokens
 delphi-9e18-447mparams-3-7btokens,huggingface,marin-community/delphi-9e18-447Mparams-3.7Btokens
 delphi-9e18-550mparams-2-9btokens,huggingface,marin-community/delphi-9e18-550Mparams-2.9Btokens
+delphi-9e18-669mparams-2-3btokens,huggingface,marin-community/delphi-9e18-669Mparams-2.3Btokens
 delphi-9e18-837mparams-1-8btokens,huggingface,marin-community/delphi-9e18-837Mparams-1.8Btokens
 delphi-9e18-998mparams-1-5btokens,huggingface,marin-community/delphi-9e18-998Mparams-1.5Btokens
 delphi-9e19-1-4bparams-10-6btokens,huggingface,marin-community/delphi-9e19-1.4Bparams-10.6Btokens
@@ -1166,6 +1168,7 @@ gemini-4-carbon,models_dev,edenai/google/gemini-4-carbon
 gemini-4-carbon,openrouter,google/gemini-4-carbon
 gemini-4-hydrogen,epoch,Gemini 4 Hydrogen
 gemini-4-hydrogen,google_api,gemini-4-hydrogen
+gemini-4-hydrogen,models_dev,cloudflare-ai-gateway/google/gemini-4-hydrogen
 gemini-4-hydrogen,models_dev,cortecs/gemini-4-hydrogen
 gemini-4-hydrogen,openrouter,google/gemini-4-hydrogen
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
@@ -2474,6 +2477,7 @@ ling-3-0-flash-vl,models_dev,vercel/inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl
 ling-3-0-flash-vl,openrouter,inclusionai/ling-3.0-flash-vl:free
 ling-3-0-tiny,huggingface,inclusionAI/Ling-3.0-tiny
+ling-3-0-tiny,models_dev,kilo/inclusionai/ling-3.0-tiny
 ling-3-0-tiny,models_dev,requesty/ling-3.0-tiny
 ling-3-0-tiny,openrouter,inclusionai/ling-3.0-tiny
 ling-3-0-tiny-ubtree,huggingface,inclusionAI/Ling-3.0-tiny-UBTree
@@ -3120,6 +3124,7 @@ mistral-medium-3-5,mistral_api,mistral-medium-3-5
 mistral-medium-3-5,mistral_api,mistral-medium-3.5
 mistral-medium-3-5,models_dev,kenari/mistral-medium-3-5:free
 mistral-medium-3-5,models_dev,nano-gpt/mistral/mistral-medium-3.5
+mistral-medium-3-5,models_dev,nano-gpt/mistralai/mistral-medium-3.5
 mistral-medium-3-5,openrouter,mistralai/mistral-medium-3-5
 mistral-nemo,epoch,Mistral NeMo
 mistral-nemo,huggingface,mistralai/Mistral-Nemo-Instruct-2407
@@ -3997,6 +4002,7 @@ qwen3-6-27b,huggingface,Qwen/Qwen3.6-27B
 qwen3-6-27b,huggingface,Qwen/Qwen3.6-27B-FP8
 qwen3-6-27b,models_dev,abacus/Qwen/Qwen3.6-27B
 qwen3-6-27b,openrouter,qwen/qwen3.6-27b
+qwen3-6-35b-a3b,epoch,Qwen 3.6 35B-A3B
 qwen3-6-35b-a3b,huggingface,Qwen/Qwen3.6-35B-A3B
 qwen3-6-35b-a3b,huggingface,Qwen/Qwen3.6-35B-A3B-FP8
 qwen3-6-35b-a3b,models_dev,302ai/qwen3.6-35b-a3b
@@ -4213,6 +4219,7 @@ rwkv-6-world-1b6,huggingface,RWKV/rwkv-6-world-1b6
 rwkv-6-world-3b,huggingface,RWKV/rwkv-6-world-3b
 rwkv-6-world-7b,huggingface,RWKV/rwkv-6-world-7b
 rwkv-7-world,huggingface,BlinkDL/rwkv-7-world
+rwkv-raven-14b,huggingface,RWKV/rwkv-raven-14b
 rwkv-raven-1b5,huggingface,RWKV/rwkv-raven-1b5
 rwkv-raven-7b,huggingface,RWKV/rwkv-raven-7b
 rwkv7-1-5b,huggingface,RWKV/RWKV7-1.5B-20260805
@@ -4288,6 +4295,8 @@ sarvam-1,huggingface,sarvamai/sarvam-1
 sarvam-1-v0-5,huggingface,sarvamai/sarvam-1-v0.5
 sarvam-105b,huggingface,sarvamai/sarvam-105b
 sarvam-105b,huggingface,sarvamai/sarvam-105b-fp8
+sarvam-105b-1711,huggingface,sarvamai/sarvam-105b-1711
+sarvam-105b-1711,huggingface,sarvamai/sarvam-105b-1711-bf16
 sarvam-30b,huggingface,sarvamai/sarvam-30b
 sarvam-30b,huggingface,sarvamai/sarvam-30b-fp8
 sarvam-m,huggingface,sarvamai/sarvam-m
@@ -4323,6 +4332,7 @@ seed-oss-36b-base,huggingface,ByteDance-Seed/Seed-OSS-36B-Base
 seed-oss-36b-base-wosyn,huggingface,ByteDance-Seed/Seed-OSS-36B-Base-woSyn
 seed-oss-36b-instruct,huggingface,ByteDance-Seed/Seed-OSS-36B-Instruct
 sensenova-6-8-code2video,huggingface,sensenova/SenseNova-6.8-Code2Video
+sensenova-loop-9b,huggingface,sensenova/SenseNova-Loop-9B
 sensenova-loop-9b-preview,huggingface,sensenova/SenseNova-Loop-9B-Preview
 sensenova-mars-32b,huggingface,sensenova/SenseNova-MARS-32B
 sensenova-mars-32b,openalex,W7117964748
@@ -4451,6 +4461,7 @@ solar-10-7b-instruct-v1-0,huggingface,upstage/SOLAR-10.7B-Instruct-v1.0
 solar-10-7b-v1-0,huggingface,upstage/SOLAR-10.7B-v1.0
 solar-10-7b-v1-0,openalex,W4390306040
 solar-10-7b-v1-0,semantic_scholar,ab7d320cbae173aef86c31faa087780cba44551f
+solar-mini4,models_dev,kenari/solar-mini4:free
 solar-mini4,models_dev,kilo/upstage/solar-mini4
 solar-mini4,models_dev,nano-gpt/upstage/solar-mini4
 solar-mini4,openrouter,upstage/solar-mini4
@@ -4620,6 +4631,7 @@ tiny-aya-l2-thinker,semantic_scholar,d48ed7cca9e69c540f8c8083e2d340e958f0c129
 tiny-aya-water,huggingface,CohereLabs/tiny-aya-water
 tiny-aya-water,openalex,W7135227745
 tiny-aya-water,semantic_scholar,8546b1ade756761f056d849753f59cd5ed3d56c3
+tiny-processor-apertus1p5,huggingface,swiss-ai/tiny-processor-apertus1p5
 tiny-random-stablelm-2,huggingface,stabilityai/tiny-random-stablelm-2
 tinyllama-1-1b-chat-v0-1,huggingface,TinyLlama/TinyLlama-1.1B-Chat-v0.1
 tinyllama-1-1b-chat-v0-2,huggingface,TinyLlama/TinyLlama-1.1B-Chat-v0.2

@@ -104,6 +104,7 @@ doubao-seed-1-6-flash,Doubao-Seed-1.6 Flash,Doubao-Seed-1.6,api_only,,2025-08-28
 doubao-seed-1-8,Doubao Seed 1.8,Doubao Seed 1.8,api_only,,2025-12-28,2026-04-17,2604.15736,110
 doubao-seed-2-0-pro,Doubao-Seed-2.0 Pro,Doubao-Seed-2.0,api_only,,2026-02-14,2026-09-21,2609.05435,219
 ernie-4-5-300b-a47b,ERNIE-4.5-300B-A47B,ERNIE-4.5,open_weights,2025-06-30,2025-06-30,2025-07-09,2507.07145,9
+ernie-5-5-flash-base,ERNIE-5.5-Flash-Base,ERNIE-5.5,open_weights,2026-10-21,2026-10-21,2026-11-16,2611.21315,26
 exaone-3-0-7-8b-instruct,EXAONE-3.0-7.8B-Instruct,EXAONE-3.0,open_weights,2024-07-31,2024-07-31,2026-01-02,2408.03541,520
 exaone-deep-2-4b,EXAONE-Deep-2.4B,EXAONE-Deep,open_weights,2025-03-12,2025-03-12,2026-01-02,2503.12524,296
 exaone-deep-32b,EXAONE-Deep-32B,EXAONE-Deep,open_weights,2025-03-12,2025-03-12,2025-08-13,2508.10948,154
@@ -260,6 +261,7 @@ hy-embodied-vlm-1-0,Hy-Embodied-VLM-1.0,Hy-Embodied-VLM-1.0,open_weights,2026-07
 hy-memory-30b-a3b,Hy-Memory-30B-A3B,Hy-Memory,open_weights,2026-10-15,2026-10-15,2026-10-15,2610.22196,0
 hy-mt2-7b,hy-mt2-7b,hy-mt2,open_weights,2026-05-21,2026-05-21,2026-10-12,2610.16466,144
 hy3-preview,hy3-preview,Hy3,open_weights,2026-04-20,2026-04-20,2026-04-28,2604.25727,8
+hy3-preview-base,Hy3-preview-Base,Hy3,open_weights,2026-04-13,2026-04-13,2026-11-16,2611.21315,217
 hy4-preview,hy4-preview,hy4,open_weights,2026-08-28,2026-08-28,2026-09-03,2609.04128,6
 instructblip-vicuna-7b,instructblip-vicuna-7b,instructblip-vicuna,open_weights,2023-05-22,2023-05-22,2025-01-14,2501.09039,603
 intellect-3,INTELLECT-3,INTELLECT-3,open_weights,2025-11-26,2025-11-26,2025-12-18,2512.16144,22
@@ -298,6 +300,7 @@ lfm2-5-350m,LFM2.5-350M,LFM2.5,open_weights,2026-03-31,2026-03-31,2026-08-25,260
 lfm2-5-8b-a1b,LFM2.5-8B-A1B,LFM2.5,open_weights,2026-05-28,2026-05-28,2026-07-16,2607.15232,49
 lfm2-8b-a1b,LFM2-8B-A1B,LFM2,open_weights,2025-10-07,2025-10-07,2026-07-16,2607.15232,282
 lfm2-vl-1-6b,LFM2-VL-1.6B,LFM2,open_weights,2025-08-12,2025-08-12,2026-11-07,2611.10720,452
+lfm3-1-7b,LFM3-1.7B,LFM3,open_weights,2026-11-06,2026-11-06,2026-11-14,2611.19588,8
 ling-1t,Ling-1T,Ling,open_weights,2025-10-09,2025-10-09,2025-11-07,2510.22115,29
 ling-3-0-flash,ling-3.0-flash,Ling-3.0,open_weights,2026-07-23,2026-07-23,2026-11-12,2611.16661,112
 ling-3-0-flash-base,Ling-3.0-flash-base,Ling-3.0,open_weights,2026-08-11,2026-08-11,2026-11-01,2611.02074,82
@@ -350,6 +353,7 @@ mimo-7b-base,MiMo-7B-Base,MiMo,open_weights,2025-04-29,2025-04-29,2025-06-05,250
 mimo-7b-rl,MiMo-7B-RL,MiMo-RL,open_weights,2025-04-29,2025-04-29,2025-06-05,2505.07608,37
 mimo-7b-sft,MiMo-7B-SFT,MiMo,open_weights,2025-04-29,2025-04-29,2026-09-15,2609.16648,504
 mimo-v2-5,mimo-v2.5,MiMo-V2.5,open_weights,2026-04-22,2026-04-22,2026-07-14,2607.13095,83
+mimo-v2-5-base,MiMo-V2.5-Base,MiMo-V2.5,open_weights,2026-04-27,2026-04-27,2026-11-16,2611.21315,203
 mimo-v2-5-pro,MiMo-V2.5-Pro,MiMo-V2.5,open_weights,2026-04-22,2026-04-22,2026-05-16,2605.17079,24
 mimo-v2-6-distill-qwen-9b,MiMo-V2.6-Distill-Qwen-9B,MiMo-V2.6-Distill-Qwen,open_weights,2026-09-21,2026-09-21,2026-11-10,2610.16717,50
 mimo-v2-6-flash,mimo-v2.6-flash,mimo-v2.6,open_weights,2026-09-22,2026-09-22,2026-09-26,2609.32577,4
@@ -553,7 +557,7 @@ qwen3-vl-8b-thinking,qwen3-vl-8b-thinking,Qwen3,api_only,,2025-10-14,2026-01-29,
 qwq-32b,QwQ-32B,QwQ,open_weights,2025-03-05,2025-03-05,2025-01-03,2501.01257,-61
 ring-1t,Ring-1T,Ring,open_weights,2025-10-12,2025-10-12,2025-10-25,2510.18855,13
 ring-2-5-1t,Ring-2.5-1T,Ring-2.5,open_weights,2026-02-10,2026-02-10,2026-07-16,2607.12395,156
-ring-2-6-1t,Ring-2.6-1T,Ring-2.6,open_weights,2026-05-08,2026-05-08,2026-06-13,2606.15079,36
+ring-2-6-1t,Ring-2.6-1T,Ring-2.6,open_weights,2026-05-07,2026-05-07,2026-06-13,2606.15079,37
 ring-mini-linear-2-0,Ring-mini-linear-2.0,Ring-linear-2.0,open_weights,2025-09-24,2025-09-24,2025-10-23,2510.19338,29
 rwkv-4-raven,rwkv-4-raven,rwkv-4-raven,open_weights,2023-04-01,2023-04-01,2026-09-29,2609.38261,1277
 sa2va-26b,Sa2VA-26B,Sa2VA,open_weights,2025-01-14,2025-01-14,2025-11-18,2509.19082,308
