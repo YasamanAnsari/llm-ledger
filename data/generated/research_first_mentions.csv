@@ -38,6 +38,7 @@ claude-fable-5-2,Claude Fable 5.2,Claude Fable 5.2,api_only,,2026-11-09,2026-11-
 claude-haiku-4-5,Claude Haiku 4.5,Claude 4.5,api_only,,2025-10-15,2025-12-22,2409.01382,68
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic.claude-5-5,api_only,,2026-10-07,2026-10-17,2610.24649,10
 claude-mythos-5,Claude Mythos 5,Claude Mythos 5,api_only,,2026-06-09,2026-09-16,2609.14796,99
+claude-mythos-5-2,Claude Mythos 5.2,Claude Mythos 5.2,api_only,,2026-11-09,2026-11-17,2610.14350,8
 claude-opus-4,Claude Opus 4,Claude 4,api_only,,2025-05-22,2025-06-03,2506.02987,12
 claude-opus-4-1,Claude Opus 4.1,Claude 4.1,api_only,,2025-08-05,2025-09-29,2509.25559,55
 claude-opus-4-5,Claude Opus 4.5,Claude 4.5,api_only,,2025-11-24,2025-12-17,2512.16030,23

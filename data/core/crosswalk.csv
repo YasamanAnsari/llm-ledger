@@ -1692,6 +1692,18 @@ gpt-6-1-terra,openai_api,gpt-6.1-terra
 gpt-6-1-terra,openrouter,openai/gpt-6.1-terra
 gpt-6-1-terra-pro,models_dev,kilo/openai/gpt-6.1-terra-pro
 gpt-6-1-terra-pro,openrouter,openai/gpt-6.1-terra-pro
+gpt-6-2-astra,epoch,GPT-6.2 Astra
+gpt-6-2-astra,models_dev,crossmodel/openai/gpt-6.2-astra
+gpt-6-2-astra,openai_api,gpt-6.2-astra
+gpt-6-2-astra,openrouter,openai/gpt-6.2-astra
+gpt-6-2-astra-pro,models_dev,kilo/openai/gpt-6.2-astra-pro
+gpt-6-2-astra-pro,openrouter,openai/gpt-6.2-astra-pro
+gpt-6-2-sol,epoch,GPT-6.2 Sol
+gpt-6-2-sol,models_dev,crossmodel/openai/gpt-6.2-sol
+gpt-6-2-sol,openai_api,gpt-6.2-sol
+gpt-6-2-sol,openrouter,openai/gpt-6.2-sol
+gpt-6-2-sol-pro,models_dev,kilo/openai/gpt-6.2-sol-pro
+gpt-6-2-sol-pro,openrouter,openai/gpt-6.2-sol-pro
 gpt-6-astra,epoch,GPT-6 Astra
 gpt-6-astra,models_dev,infer/infer/gpt-6-astra:low-cost
 gpt-6-astra,models_dev,infer/infer/gpt-6-astra:official
@@ -1973,6 +1985,7 @@ inkling,epoch,Inkling
 inkling,huggingface,thinkingmachines/Inkling
 inkling,models_dev,thinkingmachines/thinkingmachines/Inkling
 inkling,openrouter,thinkingmachines/inkling
+inkling-2-small,epoch,Inkling 2 Small
 inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small
 inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small-MXFP8
 inkling-2-small,models_dev,cortecs/inkling-2-small
@@ -3237,6 +3250,7 @@ mt0-xxl-mt,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
 mt0-xxl-p3,huggingface,bigscience/mt0-xxl-p3
 mt0-xxl-p3,openalex,W4308244210
 mt0-xxl-p3,semantic_scholar,44087314eec67a06bc68625cb8cb2fda29c3b8aa
+muse-ember,epoch,Muse Ember
 muse-ember,models_dev,kilo/meta/muse-ember
 muse-ember,openrouter,meta/muse-ember
 muse-glimmer-30b,huggingface,meta-models/Muse-Glimmer-30B
@@ -4582,6 +4596,7 @@ superapriel-15b-instruct,huggingface,ServiceNow-AI/SuperApriel-15B-Instruct
 superapriel-15b-instruct,openalex,W7155369144
 superapriel-15b-instruct,semantic_scholar,da1baa311dcf4ec2b5fa8d6e571db2536cdaf3ef
 supernova-medius,huggingface,arcee-ai/SuperNova-Medius
+swe-dev-32b,huggingface,zai-org/SWE-Dev-32B
 swe-fixer-retriever-7b,huggingface,internlm/SWE-Fixer-Retriever-7B
 synlogic-32b,huggingface,MiniMaxAI/SynLogic-32B
 synlogic-32b,semantic_scholar,c4b20ea0556444a870e94ad58076ced9e21d57de

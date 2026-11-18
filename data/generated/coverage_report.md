@@ -9,18 +9,18 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1963; events: 3063
-- Models: curated 73, corroborated 699, single-source 1191
-- Event confidence: verified 1223, inferred 1834, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 448 of 1708
+- Models: 1968; events: 3077
+- Models: curated 73, corroborated 703, single-source 1192
+- Event confidence: verified 1227, inferred 1844, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 448 of 1709
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 91 | 203 | 2 | 70 | 19 | 51% |
+| OpenAI | 80 | 322 | 19 | 52 | 9 | 72% |
 | MBZUAI | 78 | 78 | 0 | 6 | 72 | 8% |
-| OpenAI | 76 | 312 | 19 | 48 | 9 | 73% |
 | ByteDance | 66 | 88 | 0 | 25 | 41 | 33% |
 | Marin | 66 | 66 | 0 | 0 | 66 | 0% |
 | Ant Group | 60 | 72 | 0 | 31 | 29 | 44% |
@@ -28,12 +28,12 @@ as settled.
 | Google | 59 | 167 | 7 | 30 | 22 | 42% |
 | Mistral | 59 | 115 | 4 | 31 | 24 | 43% |
 | RWKV | 59 | 59 | 0 | 4 | 55 | 7% |
-| Meta | 57 | 120 | 4 | 28 | 25 | 37% |
+| Meta | 57 | 121 | 4 | 28 | 25 | 36% |
 | AI2 | 53 | 53 | 0 | 14 | 39 | 26% |
 | Shanghai AI Lab | 52 | 52 | 0 | 13 | 39 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
 | DeepSeek | 47 | 106 | 3 | 27 | 17 | 54% |
-| Zhipu | 40 | 87 | 3 | 18 | 19 | 49% |
+| Zhipu | 41 | 88 | 3 | 18 | 20 | 49% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
@@ -59,7 +59,7 @@ as settled.
 | StepFun | 17 | 20 | 0 | 10 | 7 | 50% |
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
-| MiniMax | 16 | 39 | 1 | 10 | 5 | 56% |
+| MiniMax | 16 | 40 | 1 | 10 | 5 | 55% |
 | Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
 | xAI | 16 | 46 | 2 | 11 | 3 | 37% |
@@ -89,7 +89,7 @@ as settled.
 | Sarvam | 6 | 6 | 0 | 0 | 6 | 0% |
 | Inception | 5 | 15 | 0 | 3 | 2 | 40% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
-| Thinking Machines | 3 | 10 | 0 | 3 | 0 | 50% |
+| Thinking Machines | 3 | 11 | 0 | 3 | 0 | 45% |
 | Reflection | 2 | 4 | 0 | 1 | 1 | 50% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
 | Yandex | 2 | 2 | 0 | 0 | 2 | 0% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1688 | 431 | 1256 | 1 |
-| platform_availability | 357 | 350 | 5 | 2 |
-| retired | 338 | 199 | 139 | 0 |
-| api_ga | 274 | 65 | 208 | 1 |
-| announced | 261 | 55 | 205 | 1 |
+| weights_released | 1689 | 431 | 1257 | 1 |
+| platform_availability | 361 | 354 | 5 | 2 |
+| retired | 341 | 199 | 142 | 0 |
+| api_ga | 278 | 65 | 212 | 1 |
+| announced | 263 | 55 | 207 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,14 +119,13 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-17, by reason:
+Declined in the 7 days to 2026-11-18, by reason:
 
 | reason | count |
 |---|---|
-| community_lead | 42 |
-| no_dated_event | 34 |
-| third_party_claim | 6 |
-| already_recorded | 1 |
-| launch_event_required | 1 |
+| community_lead | 35 |
+| no_dated_event | 35 |
+| third_party_claim | 3 |
+| already_recorded | 2 |
 | malformed_candidate | 1 |
 | quote_not_on_page | 1 |

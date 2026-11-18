@@ -195,6 +195,10 @@ gpt-6-1-sol,true,,,,,,1050000,128000,text|image|pdf,text,2026-04-30,true,,,2.2,1
 gpt-6-1-sol-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,2,10,0.1,2026-10-03,https://models.dev/api.json
 gpt-6-1-terra,true,,,,,,1050000,128000,text|image|pdf,text,2026-06-01,true,,,1,5,0.05,2026-10-27,https://models.dev/api.json
 gpt-6-1-terra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,1,5,0.05,2026-10-27,https://models.dev/api.json
+gpt-6-2-astra,true,,,,,,1050000,128000,text|image,text,2026-05-18,true,,,8,40,0.4,2026-11-18,https://models.dev/api.json
+gpt-6-2-astra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,16,60,0.8,2026-11-18,https://models.dev/api.json
+gpt-6-2-sol,true,,,,,,1050000,128000,text|image,text,2026-06-01,true,,,2,10,0.1,2026-11-18,https://models.dev/api.json
+gpt-6-2-sol-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,4,15,0.2,2026-11-18,https://models.dev/api.json
 gpt-6-astra,true,,,,,,1050000,1050000,text|image,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-6-astra-pro,true,,,,,,1050000,128000,pdf|image|text,text,,true,,,10,50,1,2026-09-05,https://models.dev/api.json
 gpt-6-luna,true,,,,,,1050000,128000,text|image|pdf,text,2026-05-18,true,,,0.1,0.5,0.01,2026-09-23,https://models.dev/api.json
