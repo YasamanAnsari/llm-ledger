@@ -76,6 +76,7 @@ fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or 
 fuzzy_match,epoch,rerank-3-5,ledger_cluster,rerank-v3-5,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,ring-flash-2-0,ledger_cluster,ling-flash-2-0,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,solar-pro,ledger_cluster,solar-pro4,94.7,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,solar-pro-3,ledger_cluster,solar-pro3,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,tencent-hy4-preview,ledger_cluster,tencent/hy4-preview,94.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,whisper,ledger_cluster,whisper-1,93.3,92-97 band: confirm or reject before crosswalking
 hf_backfill_date,huggingface,EleutherAI/gpt-j-6b,,,,createdAt is the HF backfill artifact; weights date needs another primary source
@@ -212,6 +213,7 @@ hf_unmapped_namespace,huggingface,Kling-Keye-Official,,,,3 in-scope repos; add t
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,cjvt,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,datificate,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss

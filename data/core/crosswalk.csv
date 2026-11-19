@@ -1171,6 +1171,9 @@ gemini-4-hydrogen,google_api,gemini-4-hydrogen
 gemini-4-hydrogen,models_dev,cloudflare-ai-gateway/google/gemini-4-hydrogen
 gemini-4-hydrogen,models_dev,cortecs/gemini-4-hydrogen
 gemini-4-hydrogen,openrouter,google/gemini-4-hydrogen
+gemini-4-neon,google_api,gemini-4-neon
+gemini-4-neon,models_dev,crossmodel/gemini/gemini-4-neon
+gemini-4-neon,openrouter,google/gemini-4-neon
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,edenai/google/gemini-nano-banana-2.1
 gemini-nano-banana-2-1,models_dev,kilo/google/gemini-nano-banana-2.1
@@ -1693,12 +1696,14 @@ gpt-6-1-terra,openrouter,openai/gpt-6.1-terra
 gpt-6-1-terra-pro,models_dev,kilo/openai/gpt-6.1-terra-pro
 gpt-6-1-terra-pro,openrouter,openai/gpt-6.1-terra-pro
 gpt-6-2-astra,epoch,GPT-6.2 Astra
+gpt-6-2-astra,models_dev,amazon-bedrock/openai.gpt-6.2-astra
 gpt-6-2-astra,models_dev,crossmodel/openai/gpt-6.2-astra
 gpt-6-2-astra,openai_api,gpt-6.2-astra
 gpt-6-2-astra,openrouter,openai/gpt-6.2-astra
 gpt-6-2-astra-pro,models_dev,kilo/openai/gpt-6.2-astra-pro
 gpt-6-2-astra-pro,openrouter,openai/gpt-6.2-astra-pro
 gpt-6-2-sol,epoch,GPT-6.2 Sol
+gpt-6-2-sol,models_dev,amazon-bedrock/openai.gpt-6.2-sol
 gpt-6-2-sol,models_dev,crossmodel/openai/gpt-6.2-sol
 gpt-6-2-sol,openai_api,gpt-6.2-sol
 gpt-6-2-sol,openrouter,openai/gpt-6.2-sol
@@ -2583,6 +2588,7 @@ llama-3-1-70b,openalex,W4297070268
 llama-3-1-70b,semantic_scholar,76cb108e37d9d2a06f5a49df04e993f5fb123c26
 llama-3-1-70b-instruct,epoch,Llama 3.1-70B
 llama-3-1-70b-instruct,huggingface,meta-llama/Llama-3.1-70B-Instruct
+llama-3-1-70b-instruct,models_dev,huggingface/meta-llama/Llama-3.1-70B-Instruct
 llama-3-1-70b-instruct,models_dev,kilo/meta-llama/llama-3.1-70b-instruct
 llama-3-1-70b-instruct,models_dev,nvidia/meta/llama-3.1-70b-instruct
 llama-3-1-70b-instruct,openalex,W4297070268
@@ -2623,6 +2629,7 @@ llama-3-2-11b-vision-instruct,semantic_scholar,76cb108e37d9d2a06f5a49df04e993f5f
 llama-3-2-1b,huggingface,meta-llama/Llama-3.2-1B
 llama-3-2-1b-instruct,epoch,Llama 3.2 1B
 llama-3-2-1b-instruct,huggingface,meta-llama/Llama-3.2-1B-Instruct
+llama-3-2-1b-instruct,models_dev,huggingface/meta-llama/Llama-3.2-1B-Instruct
 llama-3-2-1b-instruct,models_dev,inference/meta/llama-3.2-1b-instruct
 llama-3-2-1b-instruct,models_dev,nvidia/meta/llama-3.2-1b-instruct
 llama-3-2-1b-instruct,models_dev,pioneer/meta-llama/Llama-3.2-1B-Instruct
@@ -2631,6 +2638,7 @@ llama-3-2-1b-instruct-spinquant-int4-eo8,huggingface,meta-llama/Llama-3.2-1B-Ins
 llama-3-2-3b,huggingface,meta-llama/Llama-3.2-3B
 llama-3-2-3b-instruct,epoch,Llama 3.2 3B
 llama-3-2-3b-instruct,huggingface,meta-llama/Llama-3.2-3B-Instruct
+llama-3-2-3b-instruct,models_dev,huggingface/meta-llama/Llama-3.2-3B-Instruct
 llama-3-2-3b-instruct,models_dev,kilo/meta-llama/llama-3.2-3b-instruct
 llama-3-2-3b-instruct,models_dev,llmgateway/llama-3.2-3b-instruct
 llama-3-2-3b-instruct,models_dev,nano-gpt/meta-llama/llama-3.2-3b-instruct
@@ -3364,6 +3372,7 @@ nous-hermes-2-solar-10-7b,huggingface,NousResearch/Nous-Hermes-2-SOLAR-10.7B
 nous-hermes-2-yi-34b,huggingface,NousResearch/Nous-Hermes-2-Yi-34B
 nous-hermes-llama-2-7b,huggingface,NousResearch/Nous-Hermes-llama-2-7b
 nous-hermes-llama2-13b,huggingface,NousResearch/Nous-Hermes-Llama2-13b
+nouscoder-14b,huggingface,NousResearch/NousCoder-14B
 nova-2-lite-v1,models_dev,kilo/amazon/nova-2-lite-v1
 nova-2-lite-v1,models_dev,nano-gpt/amazon/nova-2-lite-v1
 nova-2-lite-v1,models_dev,nova/nova-2-lite-v1

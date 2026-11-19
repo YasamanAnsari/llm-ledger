@@ -114,6 +114,7 @@ gemini-3-pro,true,,,,,,1048576,65536,text|image|video|audio,text,,true,,,1.6,9.6
 gemini-4-argon,true,,,,,,1048576,1048576,text|image|audio,text,,true,,,4,20,0.2,2026-10-14,https://models.dev/api.json
 gemini-4-carbon,true,,,,,,1048576,65536,text|image|video|audio|pdf,text,2026-03,true,,,4,20,0.2,2026-11-11,https://models.dev/api.json
 gemini-4-hydrogen,true,,,,,,1048576,65536,text|image|audio|pdf,text,2026-03,true,,,1.688,8.437,0.085,2026-11-16,https://models.dev/api.json
+gemini-4-neon,true,,,,,,1048576,65536,text|image|audio|video,text,2026-03,true,,,3,15,0.15,2026-11-19,https://models.dev/api.json
 gemini-nano-banana-2-1,true,,,,,,65536,58982,image|text|pdf,image|text,,true,,,1.5,7.5,,2026-10-07,https://models.dev/api.json
 gemini-omni-1-1-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json
 gemini-omni-1-2-flash,true,,,,,,131072,65536,text|image|video|pdf,text|video,,false,,,1.5,9,,2026-11-06,https://models.dev/api.json
