@@ -383,6 +383,7 @@ phi-4-multimodal,false,none,,,,,128000,4096,text|image|audio,text,2023-10,false,
 phi-4-reasoning,true,,,,,,32000,4096,text,text,2023-10,false,,,0.125,0.5,,2026-09-01,https://models.dev/api.json
 phi-4-reasoning-plus,true,,,,,,32000,4096,text,text,2023-10,false,,,0.125,0.5,,2026-09-01,https://models.dev/api.json
 pixtral-12b,false,none,,,,,128000,128000,text|image,text,2024-09,true,,,0.15,0.15,,2026-09-01,https://models.dev/api.json
+pixtral-large-2502,true,,,,,,128000,128000,text|image|pdf,text,,true,,,1.993,5.978,,2026-11-20,https://models.dev/api.json
 qvq-max,true,,,,,,131072,8192,text|image,text,2024-04,true,,,1.2,4.8,,2026-09-01,https://models.dev/api.json
 qwen-plus,true,,,,,,1000000,32768,text,text,2024-04,true,,,0.4,1.2,,2026-09-01,https://models.dev/api.json
 qwen-turbo,true,,,,,,1000000,16384,text,text,2024-04,true,,,0.05,0.2,,2026-09-01,https://models.dev/api.json

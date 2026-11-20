@@ -1171,7 +1171,9 @@ gemini-4-hydrogen,google_api,gemini-4-hydrogen
 gemini-4-hydrogen,models_dev,cloudflare-ai-gateway/google/gemini-4-hydrogen
 gemini-4-hydrogen,models_dev,cortecs/gemini-4-hydrogen
 gemini-4-hydrogen,openrouter,google/gemini-4-hydrogen
+gemini-4-neon,epoch,Gemini 4 Neon
 gemini-4-neon,google_api,gemini-4-neon
+gemini-4-neon,models_dev,cortecs/gemini-4-neon
 gemini-4-neon,models_dev,crossmodel/gemini/gemini-4-neon
 gemini-4-neon,openrouter,google/gemini-4-neon
 gemini-nano-banana-2-1,google_api,gemini-nano-banana-2.1
@@ -1971,6 +1973,7 @@ hy3-preview,huggingface,tencent/Hy3-preview
 hy3-preview,models_dev,aihubmix/hy3-preview
 hy3-preview,openrouter,tencent/hy3-preview
 hy3-preview-base,huggingface,tencent/Hy3-preview-Base
+hy4-flash,huggingface,tencent/Hy4-flash
 hy4-flash,models_dev,crossmodel/tencent/hy4-flash
 hy4-flash,openrouter,tencent/hy4-flash
 hy4-preview,huggingface,tencent/Hy4-preview
@@ -3459,6 +3462,7 @@ olmo-2-0425-1b-dpo,huggingface,allenai/OLMo-2-0425-1B-DPO
 olmo-2-0425-1b-instruct,huggingface,allenai/OLMo-2-0425-1B-Instruct
 olmo-2-0425-1b-sft,huggingface,allenai/OLMo-2-0425-1B-SFT
 olmo-2-1124-13b-instruct,huggingface,allenai/OLMo-2-1124-13B-Instruct
+olmo-2-1124-7b-dpo,huggingface,allenai/OLMo-2-1124-7B-DPO
 olmo-2-1124-7b-instruct,huggingface,allenai/OLMo-2-1124-7B-Instruct
 olmo-2-1124-7b-sft,huggingface,allenai/OLMo-2-1124-7B-SFT
 olmo-3-1-32b-instruct,huggingface,allenai/Olmo-3.1-32B-Instruct
@@ -3647,6 +3651,7 @@ phi-4-mini,huggingface,microsoft/Phi-4-mini-instruct
 phi-4-mini,models_dev,azure/phi-4-mini
 phi-4-mini,openalex,W4415085804
 phi-4-mini,semantic_scholar,f6e39cee044a03747fbb4b20e335b640b43b884c
+phi-4-mini-reasoning,huggingface,microsoft/Phi-4-mini-reasoning
 phi-4-multimodal,epoch,Phi-4-Multimodal
 phi-4-multimodal,models_dev,azure/phi-4-multimodal
 phi-4-multimodal,openalex,W4415085804
@@ -3664,6 +3669,8 @@ phi-tiny-moe-instruct,huggingface,microsoft/Phi-tiny-MoE-instruct
 pixtral-12b,epoch,Pixtral 12B
 pixtral-12b,huggingface,mistralai/Pixtral-12B-2409
 pixtral-12b,models_dev,mistral/pixtral-12b
+pixtral-large-2502,models_dev,cortecs/pixtral-large-2502
+pixtral-large-2502,openrouter,mistralai/pixtral-large-2502
 plamo-100b,huggingface,pfnet/plamo-100b
 plamo-100b,openalex,W4403364498
 plamo-100b,semantic_scholar,d9a27cc766ed7d4e5395707592f2c35033426ac7
@@ -3922,6 +3929,7 @@ qwen3-1-7b-base,openalex,W4414939355
 qwen3-1-7b-base,semantic_scholar,d2d84d56f730f81d276a02b48d5d44db5bde0b4a
 qwen3-14b,epoch,Qwen3-14B
 qwen3-14b,huggingface,Qwen/Qwen3-14B
+qwen3-14b,huggingface,Qwen/Qwen3-14B-FP8
 qwen3-14b,models_dev,nano-gpt/qwen/qwen3-14b
 qwen3-14b,openrouter,qwen/qwen3-14b
 qwen3-235b-a22b,epoch,Qwen3-235B-A22B
