@@ -22,6 +22,7 @@ catalog_unmapped_vendor,openrouter,elorian,ledger,,,e.g. glimpse; add to orgs_se
 catalog_unmapped_vendor,openrouter,kt,ledger,,,e.g. midm-k-3-0-pro; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,moondream,ledger,,,e.g. moondream3-1-9b-a2b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,particle-ai,ledger,,,e.g. particle-1; add to orgs_seed.PROVIDER_TO_ORG or dismiss
+catalog_unmapped_vendor,openrouter,radixark,ledger,,,e.g. daisyrose-27b; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,recursive,ledger,,,e.g. flint-v1-0; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 catalog_unmapped_vendor,openrouter,ricursiveai,ledger,,,e.g. ripple-65b-preview; add to orgs_seed.PROVIDER_TO_ORG or dismiss
 fuzzy_match,epoch,allam-7b,ledger_cluster,allam-2-7b,94.1,92-97 band: confirm or reject before crosswalking
@@ -202,12 +203,14 @@ hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b,ledger,pythia-6-9b,,first a
 hf_recreated_repo,huggingface,EleutherAI/pythia-6.9b-deduped,ledger,pythia-6-9b-deduped,,first archive capture 2023-02-01 predates repo creation 2023-02-25; weights date needs a primary source
 hf_recreated_repo,huggingface,EleutherAI/pythia-70m-deduped,ledger,pythia-70m-deduped,,first archive capture 2023-01-26 predates repo creation 2023-02-13; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-13B-Instruct,ledger,olmo-2-1124-13b-instruct,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
+hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-DPO,ledger,olmo-2-1124-7b-dpo,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124-7b-instruct,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-sft,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_recreated_repo,huggingface,tencent/Hunyuan-7B-Instruct,ledger,hunyuan-7b-instruct,,first archive capture 2025-01-24 predates repo creation 2025-07-30; weights date needs a primary source
 hf_unmapped_namespace,huggingface,0xSero,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,HuggingFaceM4,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Kling-Keye-Official,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -609,6 +612,8 @@ paper_lead,ledger,pfn/plamo-2,arxiv,https://arxiv.org/abs/2509.04897,,"v1 2025-0
 paper_lead,ledger,prime-intellect/INTELLECT-1,arxiv,https://arxiv.org/abs/2412.01152,,"v1 2024-12-02 'INTELLECT-1 Technical Report'; family first available 2024-11-22; members: intellect-1, intellect-1-fp32, intellect-1-instruct; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,prime-intellect/INTELLECT-3,arxiv,https://arxiv.org/abs/2512.16144,,"v1 2025-12-18 'INTELLECT-3: Technical Report'; family first available 2025-09-09; members: intellect-3, intellect-3-base; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,rednote/dots.ocr,arxiv,https://arxiv.org/abs/2512.02498,,"v1 2025-12-02 'dots.ocr: Multilingual Document Layout Parsing in a Single Vision-Language Model'; family first available 2025-07-30; members: dots-ocr; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,salesforce/E1,arxiv,https://arxiv.org/abs/2510.27042,,"v1 2025-10-30 'e1: Learning Adaptive Control of Reasoning Effort'; family first available 2025-05-19; members: e1-code-14b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,salesforce/GTA1,arxiv,https://arxiv.org/abs/2507.05791,,"v1 2025-07-08 'GTA1: GUI Test-time Scaling Agent'; family first available 2025-09-25; members: gta1-7b-2507; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,sensetime/SenseNova-MARS,arxiv,https://arxiv.org/abs/2512.24330,,"v1 2025-12-30 'SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning'; family first available 2025-12-26; members: sensenova-mars-32b, sensenova-mars-8b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-Math,arxiv,https://arxiv.org/abs/2407.08348,,"v1 2024-07-11 'Skywork-Math: Data Scaling Laws for Mathematical Reasoning in Large Language Models -- The Story Goes On'; family first available 2023-10-24; members: skywork-13b-math; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-MoE,arxiv,https://arxiv.org/abs/2406.06563,,"v1 2024-06-03 'Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models'; family first available 2024-05-31; members: skywork-moe-base; add paper_published to the model the paper describes, or reject"

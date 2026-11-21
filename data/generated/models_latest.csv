@@ -1,9 +1,11 @@
 first_public_availability_date,first_availability_via,first_availability_confidence,model_id,canonical_name,developer_org_id,family,variant_role,model_type,access_type,license_family
 2026-11-18,api_ga,inferred,gemini-4-neon,gemini-4-neon,google,gemini-4-neon,,vlm,api_only,proprietary
+2026-11-18,weights_released,inferred,tml-d24-varloop-research,TML-d24-varloop-research,thinking-machines,TML-d24-varloop-research,,vlm,open_weights,osi_approved
 2026-11-17,api_ga,inferred,gpt-6-2-astra,GPT-6.2 Astra,openai,GPT-6.2 Astra,,vlm,api_only,proprietary
 2026-11-17,api_ga,inferred,gpt-6-2-astra-pro,gpt-6.2-astra-pro,openai,gpt-6.2-astra,pro,vlm,api_only,proprietary
 2026-11-17,api_ga,inferred,gpt-6-2-sol,GPT-6.2 Sol,openai,GPT-6.2 Sol,,vlm,api_only,proprietary
 2026-11-17,api_ga,inferred,gpt-6-2-sol-pro,gpt-6.2-sol-pro,openai,gpt-6.2-sol,pro,vlm,api_only,proprietary
+2026-11-17,weights_released,inferred,inkling-2-mini,inkling-2-mini,thinking-machines,inkling-2,mini,vlm,open_weights,osi_approved
 2026-11-17,weights_released,inferred,sensenova-loop-9b,SenseNova-Loop-9B,sensetime,SenseNova-Loop,,vlm,open_weights,osi_approved
 2026-11-17,weights_released,inferred,tiny-processor-apertus1p5,tiny-processor-apertus1p5,swiss-ai,processor-apertus1p5,mini,vlm,open_weights,osi_approved
 2026-11-16,api_ga,inferred,hy4-flash,hy4-flash,tencent,hy4,mini,vlm,open_weights,
@@ -1127,7 +1129,7 @@ first_public_availability_date,first_availability_via,first_availability_confide
 2025-04-29,weights_released,verified,mimo-7b-rl-zero,MiMo-7B-RL-Zero,xiaomi,MiMo-RL-Zero,,llm,open_weights,osi_approved
 2025-04-29,weights_released,verified,mimo-7b-sft,MiMo-7B-SFT,xiaomi,MiMo,instruct,llm,open_weights,osi_approved
 2025-04-29,weights_released,inferred,olmo-2-0425-1b-instruct,OLMo-2-0425-1B-Instruct,allenai,OLMo-2,instruct,llm,open_weights,osi_approved
-2025-04-29,weights_released,inferred,phi-4-mini-reasoning,Phi-4-mini-reasoning,microsoft,Phi-4,thinking,llm,open_weights,osi_approved
+2025-04-29,weights_released,verified,phi-4-mini-reasoning,Phi-4-mini-reasoning,microsoft,Phi-4,thinking,llm,open_weights,osi_approved
 2025-04-29,weights_released,verified,qwen3-4b,Qwen3-4B,alibaba,Qwen3,,llm,open_weights,osi_approved
 2025-04-28,weights_released,inferred,deephermes-financial-fundamentals-prediction-specialist-atropos,DeepHermes-Financial-Fundamentals-Prediction-Specialist-Atropos,nous-research,DeepHermes-Financial-Fundamentals-Prediction-Specialist-Atropos,,llm,open_weights,open_weights_restricted
 2025-04-28,weights_released,inferred,olmo-2-0425-1b-dpo,OLMo-2-0425-1B-DPO,allenai,OLMo-2-DPO,,llm,open_weights,osi_approved

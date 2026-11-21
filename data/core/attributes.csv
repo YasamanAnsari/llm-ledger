@@ -243,6 +243,7 @@ hy3-preview,true,,,,,,256000,128000,text,text,,true,,,0.17,0.566661,0.051,2026-0
 hy4-flash,true,,,,,,1048576,65536,text|image,text,,true,,,0.08,0.32,0.0032,2026-11-16,https://models.dev/api.json
 hy4-preview,true,,,,,,1048576,65536,text,text,,true,,,0.96,2.88,0.048,2026-09-01,https://models.dev/api.json
 inkling,true,,,,,,65536,65536,text|image,text,,true,,,1.87,4.68,0.374,2026-10-03,https://models.dev/api.json
+inkling-2-mini,true,,,,,,1048576,65536,text|image,text,,true,,,0.08,0.35,0.016,2026-11-21,https://models.dev/api.json
 inkling-2-small,true,,,,,,1048576,131072,text|image,text,,true,,,0,0,,2026-11-10,https://models.dev/api.json
 inkling-small,true,,,,,,262144,262144,text,text,,true,,,0.5,1.2,0.1,2026-10-03,https://models.dev/api.json
 k2-think,false,none,,,,,128000,32768,text,text,,false,,,0.17,0.68,0.085,2026-10-15,https://models.dev/api.json

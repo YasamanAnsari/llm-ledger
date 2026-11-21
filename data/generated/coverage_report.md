@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1973; events: 3099
-- Models: curated 73, corroborated 706, single-source 1194
-- Event confidence: verified 1241, inferred 1852, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 449 of 1713
+- Models: 1975; events: 3105
+- Models: curated 73, corroborated 707, single-source 1195
+- Event confidence: verified 1243, inferred 1856, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 449 of 1715
 
 ## By organization
 
@@ -39,7 +39,7 @@ as settled.
 | OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
 | NVIDIA | 37 | 57 | 0 | 14 | 23 | 25% |
 | Tencent | 36 | 49 | 1 | 16 | 19 | 41% |
-| Liquid AI | 35 | 40 | 0 | 25 | 10 | 68% |
+| Liquid AI | 35 | 41 | 0 | 25 | 10 | 66% |
 | Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
 | Baidu | 32 | 41 | 0 | 25 | 7 | 66% |
 | Nous | 31 | 39 | 0 | 8 | 23 | 26% |
@@ -52,7 +52,7 @@ as settled.
 | Swiss AI | 24 | 25 | 0 | 5 | 19 | 20% |
 | 01.AI | 23 | 24 | 1 | 8 | 14 | 38% |
 | BigScience | 23 | 23 | 0 | 2 | 21 | 9% |
-| Microsoft | 23 | 37 | 0 | 14 | 9 | 43% |
+| Microsoft | 23 | 37 | 0 | 14 | 9 | 46% |
 | Sakana | 19 | 23 | 0 | 5 | 14 | 22% |
 | Apple | 17 | 17 | 0 | 3 | 14 | 18% |
 | SenseTime | 17 | 17 | 0 | 2 | 15 | 12% |
@@ -62,7 +62,7 @@ as settled.
 | MiniMax | 16 | 40 | 1 | 10 | 5 | 55% |
 | Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
-| xAI | 16 | 48 | 2 | 11 | 3 | 42% |
+| xAI | 16 | 49 | 2 | 11 | 3 | 41% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | Skywork | 15 | 15 | 0 | 6 | 9 | 40% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
@@ -88,8 +88,8 @@ as settled.
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
 | Sarvam | 6 | 6 | 0 | 0 | 6 | 0% |
 | Inception | 5 | 15 | 0 | 3 | 2 | 40% |
+| Thinking Machines | 5 | 15 | 0 | 4 | 1 | 40% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
-| Thinking Machines | 3 | 11 | 0 | 3 | 0 | 45% |
 | Reflection | 2 | 4 | 0 | 1 | 1 | 50% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
 | Yandex | 2 | 2 | 0 | 0 | 2 | 0% |
@@ -98,10 +98,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1693 | 431 | 1261 | 1 |
-| platform_availability | 363 | 356 | 5 | 2 |
-| retired | 354 | 211 | 143 | 0 |
-| api_ga | 280 | 65 | 214 | 1 |
+| weights_released | 1695 | 432 | 1262 | 1 |
+| platform_availability | 364 | 357 | 5 | 2 |
+| retired | 355 | 211 | 144 | 0 |
+| api_ga | 282 | 65 | 216 | 1 |
 | announced | 264 | 55 | 208 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
@@ -119,12 +119,12 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-20, by reason:
+Declined in the 7 days to 2026-11-21, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 53 |
-| community_lead | 39 |
+| no_dated_event | 58 |
+| community_lead | 40 |
 | third_party_claim | 7 |
 | already_recorded | 2 |
 | malformed_candidate | 1 |

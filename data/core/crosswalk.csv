@@ -1993,6 +1993,9 @@ inkling,epoch,Inkling
 inkling,huggingface,thinkingmachines/Inkling
 inkling,models_dev,thinkingmachines/thinkingmachines/Inkling
 inkling,openrouter,thinkingmachines/inkling
+inkling-2-mini,huggingface,thinkingmachines/Inkling-2-Mini
+inkling-2-mini,models_dev,kilo/thinkingmachines/inkling-2-mini
+inkling-2-mini,openrouter,thinkingmachines/inkling-2-mini
 inkling-2-small,epoch,Inkling 2 Small
 inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small
 inkling-2-small,huggingface,thinkingmachines/Inkling-2-Small-MXFP8
@@ -4174,6 +4177,7 @@ qwen3-vl-8b-instruct,models_dev,kilo/qwen/qwen3-vl-8b-instruct
 qwen3-vl-8b-instruct,openrouter,qwen/qwen3-vl-8b-instruct
 qwen3-vl-8b-thinking,models_dev,kilo/qwen/qwen3-vl-8b-thinking
 qwen3-vl-8b-thinking,openrouter,qwen/qwen3-vl-8b-thinking
+qwen4-max,epoch,Qwen4-Max
 qwen4-max,models_dev,crossmodel/qwen/qwen4-max
 qwen4-max,openrouter,qwen/qwen4-max
 qwq-32b,epoch,QwQ-32B
@@ -4693,6 +4697,7 @@ tinyswallow-1-5b-instruct,semantic_scholar,58c7aed0229d8709718321f2d38a93a192b1e
 tinyswallow-1-5b-instruct-q4f32-1-mlc,huggingface,SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC
 tinyswallow-1-5b-instruct-q4f32-1-mlc,openalex,W4406960744
 tinyswallow-1-5b-instruct-q4f32-1-mlc,semantic_scholar,58c7aed0229d8709718321f2d38a93a192b1e416
+tml-d24-varloop-research,huggingface,thinkingmachines/TML-d24-varloop-research
 trinity-large-base,huggingface,arcee-ai/Trinity-Large-Base
 trinity-large-preview,huggingface,arcee-ai/Trinity-Large-Preview
 trinity-large-preview,huggingface,arcee-ai/Trinity-Large-Preview-FP8

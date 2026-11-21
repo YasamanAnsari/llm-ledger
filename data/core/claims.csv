@@ -1927,6 +1927,7 @@ grok-4-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts
 grok-4-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-31,day,litellm (azure_ai/grok-4),false,false,,2026-10-30
 grok-build-0-1-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-16,day,models.dev (majority),false,false,,2026-09-01
 grok-build-0-1-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-05-20,day,openrouter,false,true,,2026-09-01
+grok-build-0-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-19,day,litellm (xai/grok-build-0.1),false,false,,2026-11-21
 grok-code-fast-1-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-08-28,day,epoch.ai,false,false,,2026-09-10
 grok-code-fast-1-api_ga-1,https://models.dev/api.json,api_metadata,2025-09-02,day,models.dev (majority),false,false,,2026-10-22
 grok-code-fast-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-05-15,day,litellm (xai/grok-code-fast-1),false,false,,2026-09-01
@@ -2066,13 +2067,17 @@ hyperclovax-seed-think-32b-weights_released-1,https://huggingface.co/naver-hyper
 hyperclovax-seed-think-32b-weights_released-1,https://web.archive.org/web/20260102/https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Think-32B,wayback,2026-01-02,day,first public capture,true,false,,2026-10-08
 hyperclovax-seed-vision-instruct-3b-weights_released-1,https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B,hf_hub,2025-04-22,day,hub repo created,true,false,,2026-10-03
 hyperclovax-seed-vision-instruct-3b-weights_released-1,https://web.archive.org/web/20250424/https://huggingface.co/naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B,wayback,2025-04-24,day,first public capture,true,false,,2026-10-05
+inkling-2-mini-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-21,day,models.dev (majority),false,false,,2026-11-21
+inkling-2-mini-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-21,day,openrouter,false,true,,2026-11-21
+inkling-2-mini-weights_released-1,https://huggingface.co/thinkingmachines/Inkling-2-Mini,hf_hub,2026-11-17,day,hub repo created,true,false,,2026-11-21
 inkling-2-small-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-11-05,day,epoch.ai,false,false,,2026-11-18
 inkling-2-small-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-09,day,openrouter,false,true,,2026-11-10
 inkling-2-small-weights_released-1,https://huggingface.co/thinkingmachines/Inkling-2-Small,hf_hub,2026-11-04,day,hub repo created,true,false,,2026-11-16
 inkling-2-small-weights_released-1,https://models.dev/api.json,api_metadata,2026-11-05,day,models.dev (majority),false,false,,2026-11-16
 inkling-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-15,day,epoch.ai,false,false,,2026-10-03
 inkling-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-17,day,openrouter,false,true,,2026-10-03
-inkling-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-07,day,litellm (fireworks_ai/accounts/fireworks/models/inkling),false,false,,2026-10-20
+inkling-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-07,day,litellm (fireworks_ai/accounts/fireworks/models/inkling),false,false,2026-11-21,2026-10-20
+inkling-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-20,day,litellm (fireworks_ai/accounts/fireworks/models/inkling),false,false,,2026-11-21
 inkling-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-06,day,"litellm (together_ai/thinkingmachines/Inkling, together_ai/thinkingmachines/inkling)",false,false,,2026-10-28
 inkling-small-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-30,day,epoch.ai,false,false,,2026-10-03
 inkling-small-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-30,day,openrouter,false,true,,2026-10-03
@@ -2543,6 +2548,7 @@ lfm2-vl-3b-weights_released-1,https://huggingface.co/LiquidAI/LFM2-VL-3B,hf_hub,
 lfm2-vl-3b-weights_released-1,https://web.archive.org/web/20251022/https://huggingface.co/LiquidAI/LFM2-VL-3B,wayback,2025-10-22,day,first public capture,true,false,,2026-09-05
 lfm2-vl-450m-weights_released-1,https://huggingface.co/LiquidAI/LFM2-VL-450M,hf_hub,2025-08-12,day,hub repo created,true,false,,2026-09-01
 lfm2-vl-450m-weights_released-1,https://web.archive.org/web/20250813/https://huggingface.co/LiquidAI/LFM2-VL-450M,wayback,2025-08-13,day,first public capture,true,false,,2026-09-04
+lfm3-1-7b-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-06,day,models.dev (majority),false,false,,2026-11-21
 lfm3-1-7b-base-weights_released-1,https://huggingface.co/LiquidAI/LFM3-1.7B-Base,hf_hub,2026-10-26,day,hub repo created,true,false,,2026-11-06
 lfm3-1-7b-base-weights_released-1,https://web.archive.org/web/20261027/https://huggingface.co/LiquidAI/LFM3-1.7B-Base,wayback,2026-10-27,day,first public capture,true,false,,2026-11-07
 lfm3-1-7b-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-06,day,openrouter,false,true,,2026-11-07
@@ -3704,6 +3710,7 @@ phi-3-vision-128k-instruct-weights_released-1,https://web.archive.org/web/202405
 phi-4-mini-reasoning-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-01-17,day,azure_lifecycle (Phi-4-mini-reasoning),false,true,,2026-11-20
 phi-4-mini-reasoning-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-17,day,litellm (azure_ai/Phi-4-mini-reasoning),false,false,,2026-11-20
 phi-4-mini-reasoning-weights_released-1,https://huggingface.co/microsoft/Phi-4-mini-reasoning,hf_hub,2025-04-29,day,hub repo created,true,false,,2026-11-20
+phi-4-mini-reasoning-weights_released-1,https://web.archive.org/web/20250501/https://huggingface.co/microsoft/Phi-4-mini-reasoning,wayback,2025-05-01,day,first public capture,true,false,,2026-11-21
 phi-4-mini-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-01-17,day,azure_lifecycle (Phi-4-mini-instruct),false,true,,2026-10-21
 phi-4-mini-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-17,day,litellm (azure_ai/Phi-4-mini-instruct),false,false,,2026-10-24
 phi-4-mini-weights_released-1,https://huggingface.co/microsoft/Phi-4-mini-instruct,hf_hub,2025-02-19,day,hub repo created,true,false,,2026-09-01
@@ -4773,6 +4780,7 @@ tinyswallow-1-5b-instruct-weights_released-1,https://huggingface.co/SakanaAI/Tin
 tinyswallow-1-5b-instruct-weights_released-1,https://web.archive.org/web/20250130/https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct,wayback,2025-01-30,day,first public capture,true,false,,2026-10-05
 tinyswallow-1-5b-weights_released-1,https://huggingface.co/SakanaAI/TinySwallow-1.5B,hf_hub,2024-12-26,day,hub repo created,true,false,,2026-10-03
 tinyswallow-1-5b-weights_released-1,https://web.archive.org/web/20250130/https://huggingface.co/SakanaAI/TinySwallow-1.5B,wayback,2025-01-30,day,first public capture,true,false,,2026-10-05
+tml-d24-varloop-research-weights_released-1,https://huggingface.co/thinkingmachines/TML-d24-varloop-research,hf_hub,2026-11-18,day,hub repo created,true,false,,2026-11-21
 trinity-large-base-weights_released-1,https://huggingface.co/arcee-ai/Trinity-Large-Base,hf_hub,2026-01-27,day,hub repo created,true,false,,2026-10-03
 trinity-large-base-weights_released-1,https://web.archive.org/web/20260128/https://huggingface.co/arcee-ai/Trinity-Large-Base,wayback,2026-01-28,day,first public capture,true,false,,2026-10-07
 trinity-large-preview-weights_released-1,https://huggingface.co/arcee-ai/Trinity-Large-Preview,hf_hub,2026-01-27,day,hub repo created,true,false,,2026-10-03
