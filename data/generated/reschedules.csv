@@ -7,7 +7,9 @@ claude-3-haiku-retired-2,claude-3-haiku,retired,bedrock,bedrock_lifecycle,https:
 claude-3-haiku-retired-2,claude-3-haiku,retired,bedrock,bedrock_lifecycle,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html,true,2026-10-17,2026-11-13,27,2026-10-19
 claude-3-sonnet-retired-2,claude-3-sonnet,retired,bedrock,bedrock_lifecycle,https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html,true,2026-10-17,2026-11-13,27,2026-10-19
 claude-fable-5-1-retired-2,claude-fable-5-1,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-12-05,2027-12-07,2,2026-11-19
+claude-fable-5-1-retired-2,claude-fable-5-1,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-12-05,2027-12-07,2,2026-11-22
 claude-fable-5-retired-2,claude-fable-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2027-12-05,2027-12-07,2,2026-11-19
+claude-fable-5-retired-2,claude-fable-5,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2027-12-05,2027-12-07,2,2026-11-22
 claude-haiku-4-5-retired-2,claude-haiku-4-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-10-19,2026-11-15,27,2026-10-03
 claude-haiku-4-5-retired-2,claude-haiku-4-5,retired,azure,azure_lifecycle,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,true,2026-11-15,2027-02-22,99,2026-11-16
 claude-haiku-4-5-retired-2,claude-haiku-4-5,retired,azure,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-10-19,2026-11-15,27,2026-10-03
@@ -48,6 +50,7 @@ deepseek-v4-pro-retired-1,deepseek-v4-pro,retired,azure,azure_lifecycle,https://
 deepseek-v4-pro-retired-2,deepseek-v4-pro,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-29,33,2026-09-18
 deepseek-v4-pro-retired-3,deepseek-v4-pro,retired,fireworks,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-25,29,2026-09-24
 deepseek-v4-pro-weights_released-1,deepseek-v4-pro,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-12,2026-08-13,1,2026-10-20
+gemini-3-6-flash-retired-1,gemini-3-6-flash,retired,vertex,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-11-19,2027-01-28,70,2026-11-22
 gemini-4-argon-announced-1,gemini-4-argon,announced,,epoch.ai,https://epoch.ai/data/all_ai_models.csv,false,2026-09-30,2026-10-13,13,2026-11-16
 gemini-4-carbon-announced-1,gemini-4-carbon,announced,,epoch.ai,https://epoch.ai/data/all_ai_models.csv,false,2026-10-28,2026-11-10,13,2026-11-16
 gemma-4-31b-it-retired-1,gemma-4-31b-it,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-14,18,2026-09-13

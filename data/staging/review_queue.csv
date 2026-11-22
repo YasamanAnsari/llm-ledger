@@ -208,13 +208,11 @@ hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-sft,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_recreated_repo,huggingface,tencent/Hunyuan-7B-Instruct,ledger,hunyuan-7b-instruct,,first archive capture 2025-01-24 predates repo creation 2025-07-30; weights date needs a primary source
-hf_unmapped_namespace,huggingface,0xSero,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,HuggingFaceM4,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Kling-Keye-Official,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,RedHatAI,,,,2 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,Voicelab,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,XLabs-AI,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,cjvt,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,datificate,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -615,6 +613,11 @@ paper_lead,ledger,rednote/dots.ocr,arxiv,https://arxiv.org/abs/2512.02498,,"v1 2
 paper_lead,ledger,salesforce/E1,arxiv,https://arxiv.org/abs/2510.27042,,"v1 2025-10-30 'e1: Learning Adaptive Control of Reasoning Effort'; family first available 2025-05-19; members: e1-code-14b; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,salesforce/GTA1,arxiv,https://arxiv.org/abs/2507.05791,,"v1 2025-07-08 'GTA1: GUI Test-time Scaling Agent'; family first available 2025-09-25; members: gta1-7b-2507; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,sensetime/SenseNova-MARS,arxiv,https://arxiv.org/abs/2512.24330,,"v1 2025-12-30 'SenseNova-MARS: Empowering Multimodal Agentic Reasoning and Search via Reinforcement Learning'; family first available 2025-12-26; members: sensenova-mars-32b, sensenova-mars-8b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,servicenow/AprielGuard,arxiv,https://arxiv.org/abs/2512.20293,,"v1 2025-12-23 'AprielGuard'; family first available 2025-11-21; members: aprielguard; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,shanghai-ai-lab/CapRL,arxiv,https://arxiv.org/abs/2509.22647,,"v1 2025-09-26 'CapRL: Stimulating Dense Image Caption Capabilities via Reinforcement Learning'; family first available 2025-09-24; members: caprl-3b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,shanghai-ai-lab/Intern-Decision,arxiv,https://arxiv.org/abs/2610.22131,,"v1 2026-10-15 'Intern-Decision: Efficient Multimodal Decision Making with Autoregressive Masked Language Modeling'; family first available 2026-09-26; members: intern-decision-0-8b, intern-decision-2b, intern-decision-4b; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,shanghai-ai-lab/Intern-S1,arxiv,https://arxiv.org/abs/2508.15763,,"v1 2025-08-21 'Intern-S1: A Scientific Multimodal Foundation Model'; family first available 2025-07-24; members: intern-s1, intern-s1-mini, intern-s1-pro; add paper_published to the model the paper describes, or reject"
+paper_lead,ledger,shanghai-ai-lab/Intern-S2-Mobius,arxiv,https://arxiv.org/abs/2608.14290,,"v1 2026-08-14 'Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning'; family first available 2026-07-29; members: intern-s2-mobius; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-Math,arxiv,https://arxiv.org/abs/2407.08348,,"v1 2024-07-11 'Skywork-Math: Data Scaling Laws for Mathematical Reasoning in Large Language Models -- The Story Goes On'; family first available 2023-10-24; members: skywork-13b-math; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-MoE,arxiv,https://arxiv.org/abs/2406.06563,,"v1 2024-06-03 'Skywork-MoE: A Deep Dive into Training Techniques for Mixture-of-Experts Language Models'; family first available 2024-05-31; members: skywork-moe-base; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,skywork/Skywork-R1V,arxiv,https://arxiv.org/abs/2504.05599,,"v1 2025-04-08 'Skywork R1V: Pioneering Multimodal Reasoning with Chain-of-Thought'; family first available 2025-03-17; members: skywork-r1v-38b; add paper_published to the model the paper describes, or reject"

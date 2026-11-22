@@ -336,7 +336,8 @@ claude-fable-5-1-platform_availability-1,https://openrouter.ai/api/v1/models,api
 claude-fable-5-1-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-09-01,day,litellm (claude-fable-5-1),false,false,,2026-09-01
 claude-fable-5-1-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-05,day,azure_lifecycle (claude-fable-5-1),false,true,2026-11-19,2026-09-03
 claude-fable-5-1-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-07,day,azure_lifecycle (claude-fable-5-1),false,true,,2026-11-19
-claude-fable-5-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5-1),false,false,,2026-09-06
+claude-fable-5-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5-1),false,false,2026-11-22,2026-09-06
+claude-fable-5-1-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-07,day,litellm (azure_ai/claude-fable-5-1),false,false,,2026-11-22
 claude-fable-5-2-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2026-11-09,day,anthropic_api created,true,false,,2026-11-10
 claude-fable-5-2-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-09,day,models.dev (first_party),false,false,,2026-11-10
 claude-fable-5-2-platform_availability-2,https://openrouter.ai/api/v1/models,api_metadata,2026-11-09,day,openrouter,false,true,,2026-11-10
@@ -346,7 +347,8 @@ claude-fable-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_m
 claude-fable-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-06-09,day,litellm (claude-fable-5),false,false,,2026-09-01
 claude-fable-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-05,day,azure_lifecycle (claude-fable-5),false,true,2026-11-19,2026-09-01
 claude-fable-5-retired-2,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-12-07,day,azure_lifecycle (claude-fable-5),false,true,,2026-11-19
-claude-fable-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5),false,false,,2026-09-01
+claude-fable-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-05,day,litellm (azure_ai/claude-fable-5),false,false,2026-11-22,2026-09-01
+claude-fable-5-retired-2,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-12-07,day,litellm (azure_ai/claude-fable-5),false,false,,2026-11-22
 claude-haiku-4-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-10-15,day,epoch.ai,false,false,,2026-09-01
 claude-haiku-4-5-api_ga-1,https://api.anthropic.com/v1/models,api_metadata,2025-10-15,day,anthropic_api created,true,false,,2026-09-01
 claude-haiku-4-5-api_ga-1,https://models.dev/api.json,api_metadata,2025-10-15,day,models.dev (first_party),false,false,,2026-09-01
@@ -1223,7 +1225,8 @@ gemini-3-5-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/mai
 gemini-3-6-flash-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-21,day,epoch.ai,false,false,,2026-09-01
 gemini-3-6-flash-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-21,day,models.dev (first_party),false,false,,2026-09-01
 gemini-3-6-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-21,day,openrouter,false,true,,2026-09-01
-gemini-3-6-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-19,day,"litellm (gemini-3.6-flash, vertex_ai/gemini-3.6-flash)",false,false,,2026-10-07
+gemini-3-6-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2026-11-19,day,"litellm (gemini-3.6-flash, vertex_ai/gemini-3.6-flash)",false,false,2026-11-22,2026-10-07
+gemini-3-6-flash-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-01-28,day,"litellm (gemini-3.6-flash, vertex_ai/gemini-3.6-flash)",false,false,,2026-11-22
 gemini-3-7-flash-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-08-13,day,epoch.ai,false,false,,2026-09-01
 gemini-3-7-flash-api_ga-1,https://models.dev/api.json,api_metadata,2026-08-13,day,models.dev (first_party),false,false,,2026-09-01
 gemini-3-7-flash-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-08-13,day,openrouter,false,true,,2026-09-01
@@ -1656,7 +1659,7 @@ gpt-5-6-luna-platform_availability-1,https://openrouter.ai/api/v1/models,api_met
 gpt-5-6-luna-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev (majority),false,false,,2026-09-01
 gpt-5-6-luna-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true,,2026-09-01
 gpt-5-6-luna-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-luna-2026-07-09),false,true,,2026-09-01
-gpt-5-6-luna-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-luna, azure/gpt-5.6-luna, azure/gpt-5.6-luna-2026-07-09, azure/us/gpt-5.6-luna)",false,false,,2026-09-01
+gpt-5-6-luna-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-luna, azure/gpt-5.6-luna, azure/gpt-5.6-luna-2026-07-09, azure/us/gpt-5.6-luna, azure_ai/gpt-5.6-luna, azure_ai/gpt-5.6-luna-2026-07-09)",false,false,,2026-09-01
 gpt-5-6-sol-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-09,day,epoch.ai,false,false,,2026-09-10
 gpt-5-6-sol-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-06-23,day,openai_api created,true,false,,2026-09-01
 gpt-5-6-sol-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev (first_party),false,false,,2026-09-01
@@ -1664,7 +1667,7 @@ gpt-5-6-sol-platform_availability-1,https://openrouter.ai/api/v1/models,api_meta
 gpt-5-6-sol-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev (majority),false,false,,2026-09-01
 gpt-5-6-sol-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true,,2026-09-01
 gpt-5-6-sol-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-sol-2026-07-09),false,true,,2026-09-01
-gpt-5-6-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-sol, azure/gpt-5.6-sol, azure/gpt-5.6-sol-2026-07-09, azure/us/gpt-5.6-sol)",false,false,,2026-09-01
+gpt-5-6-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-sol, azure/gpt-5.6-sol, azure/gpt-5.6-sol-2026-07-09, azure/us/gpt-5.6-sol, azure_ai/gpt-5.6-sol, azure_ai/gpt-5.6-sol-2026-07-09)",false,false,,2026-09-01
 gpt-5-6-terra-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-09,day,epoch.ai,false,false,,2026-09-10
 gpt-5-6-terra-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-06-23,day,openai_api created,true,false,,2026-09-01
 gpt-5-6-terra-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev (first_party),false,false,,2026-09-01
@@ -1672,7 +1675,7 @@ gpt-5-6-terra-platform_availability-1,https://openrouter.ai/api/v1/models,api_me
 gpt-5-6-terra-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-09,day,models.dev (majority),false,false,,2026-09-01
 gpt-5-6-terra-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-09,day,openrouter,false,true,,2026-09-01
 gpt-5-6-terra-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-5.6-terra-2026-07-09),false,true,,2026-09-01
-gpt-5-6-terra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-terra, azure/gpt-5.6-terra, azure/gpt-5.6-terra-2026-07-09, azure/us/gpt-5.6-terra)",false,false,,2026-09-01
+gpt-5-6-terra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-5.6-terra, azure/gpt-5.6-terra, azure/gpt-5.6-terra-2026-07-09, azure/us/gpt-5.6-terra, azure_ai/gpt-5.6-terra, azure_ai/gpt-5.6-terra-2026-07-09)",false,false,,2026-09-01
 gpt-5-codex-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-09-15,day,epoch.ai,false,false,,2026-09-10
 gpt-5-codex-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-09-10,day,openai_api created,true,false,,2026-09-01
 gpt-5-codex-api_ga-1,https://models.dev/api.json,api_metadata,2025-09-15,day,models.dev (majority),false,false,,2026-09-01
@@ -1718,14 +1721,14 @@ gpt-6-1-sol-platform_availability-1,https://openrouter.ai/api/v1/models,api_meta
 gpt-6-1-sol-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-29,day,models.dev (majority),false,false,,2026-10-03
 gpt-6-1-sol-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-29,day,openrouter,false,true,,2026-10-03
 gpt-6-1-sol-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-03-11,day,azure_lifecycle (gpt-6.1-sol-2026-09-29),false,true,,2026-11-19
-gpt-6-1-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/apac/gpt-6.1-sol, azure/eu/gpt-6.1-sol, azure/gpt-6.1-sol, azure/gpt-6.1-sol-2026-09-29, azure/us/gpt-6.1-sol)",false,false,,2026-10-03
+gpt-6-1-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/apac/gpt-6.1-sol, azure/eu/gpt-6.1-sol, azure/gpt-6.1-sol, azure/gpt-6.1-sol-2026-09-29, azure/us/gpt-6.1-sol, azure_ai/gpt-6.1-sol)",false,false,,2026-10-03
 gpt-6-1-terra-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-10-13,day,openai_api created,true,false,,2026-10-27
 gpt-6-1-terra-api_ga-1,https://models.dev/api.json,api_metadata,2026-10-26,day,models.dev (first_party),false,false,,2026-10-27
 gpt-6-1-terra-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-10-26,day,openrouter,false,true,,2026-10-27
 gpt-6-1-terra-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-10-26,day,models.dev (majority),false,false,,2026-10-27
 gpt-6-1-terra-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-10-26,day,openrouter,false,true,,2026-10-27
 gpt-6-1-terra-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-10-26,day,azure_lifecycle (gpt-6.1-terra-2026-10-26),false,true,,2026-11-19
-gpt-6-1-terra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-10-26,day,"litellm (azure/apac/gpt-6.1-terra, azure/eu/gpt-6.1-terra, azure/gpt-6.1-terra, azure/us/gpt-6.1-terra)",false,false,,2026-11-20
+gpt-6-1-terra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-10-26,day,"litellm (azure/apac/gpt-6.1-terra, azure/eu/gpt-6.1-terra, azure/gpt-6.1-terra, azure/us/gpt-6.1-terra, azure_ai/gpt-6.1-terra)",false,false,,2026-11-20
 gpt-6-2-astra-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-10-31,day,openai_api created,true,false,,2026-11-18
 gpt-6-2-astra-api_ga-1,https://models.dev/api.json,api_metadata,2026-11-17,day,models.dev (first_party),false,false,,2026-11-18
 gpt-6-2-astra-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-11-17,day,openrouter,false,true,,2026-11-18
@@ -1744,21 +1747,21 @@ gpt-6-astra-platform_availability-1,https://openrouter.ai/api/v1/models,api_meta
 gpt-6-astra-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-04,day,models.dev (majority),false,false,,2026-09-05
 gpt-6-astra-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-04,day,openrouter,false,true,,2026-09-05
 gpt-6-astra-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-01-11,day,azure_lifecycle (gpt-6-astra-2026-09-03),false,true,,2026-11-19
-gpt-6-astra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-6-astra, azure/gpt-6-astra, azure/gpt-6-astra-2026-09-03, azure/us/gpt-6-astra)",false,false,,2026-09-24
+gpt-6-astra-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-01-11,day,"litellm (azure/eu/gpt-6-astra, azure/gpt-6-astra, azure/gpt-6-astra-2026-09-03, azure/us/gpt-6-astra, azure_ai/gpt-6-astra)",false,false,,2026-09-24
 gpt-6-luna-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-09-14,day,openai_api created,true,false,,2026-09-23
 gpt-6-luna-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-22,day,models.dev (first_party),false,false,,2026-09-23
 gpt-6-luna-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-22,day,openrouter,false,true,,2026-09-23
 gpt-6-luna-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-22,day,models.dev (majority),false,false,,2026-09-23
 gpt-6-luna-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-22,day,openrouter,false,true,,2026-09-23
 gpt-6-luna-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-03-11,day,azure_lifecycle (gpt-6-luna-2026-09-22),false,true,,2026-11-19
-gpt-6-luna-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/eu/gpt-6-luna, azure/gpt-6-luna, azure/gpt-6-luna-2026-09-22, azure/us/gpt-6-luna)",false,false,,2026-09-24
+gpt-6-luna-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/eu/gpt-6-luna, azure/gpt-6-luna, azure/gpt-6-luna-2026-09-22, azure/us/gpt-6-luna, azure_ai/gpt-6-luna)",false,false,,2026-09-24
 gpt-6-sol-api_ga-1,https://api.openai.com/v1/models,api_metadata,2026-09-14,day,openai_api created,true,false,,2026-09-23
 gpt-6-sol-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-22,day,models.dev (first_party),false,false,,2026-09-23
 gpt-6-sol-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-22,day,openrouter,false,true,,2026-09-23
 gpt-6-sol-pro-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-22,day,models.dev (majority),false,false,,2026-09-23
 gpt-6-sol-pro-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-22,day,openrouter,false,true,,2026-09-23
 gpt-6-sol-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2028-03-11,day,azure_lifecycle (gpt-6-sol-2026-09-22),false,true,,2026-11-19
-gpt-6-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/eu/gpt-6-sol, azure/gpt-6-sol, azure/gpt-6-sol-2026-09-22, azure/us/gpt-6-sol)",false,false,,2026-09-24
+gpt-6-sol-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2028-03-11,day,"litellm (azure/eu/gpt-6-sol, azure/gpt-6-sol, azure/gpt-6-sol-2026-09-22, azure/us/gpt-6-sol, azure_ai/gpt-6-sol)",false,false,,2026-09-24
 gpt-audio-api_ga-1,https://api.openai.com/v1/models,api_metadata,2025-08-27,day,openai_api created,true,false,,2026-09-01
 gpt-audio-api_ga-1,https://models.dev/api.json,api_metadata,2025-08-28,day,models.dev (majority),false,false,,2026-10-20
 gpt-audio-api_ga-1,https://models.dev/api.json,api_metadata,2026-01-19,day,models.dev (majority),false,false,2026-10-20,2026-09-01
@@ -1906,6 +1909,7 @@ grok-4-20-platform_availability-1,https://openrouter.ai/api/v1/models,api_metada
 grok-4-3-api_ga-1,https://models.dev/api.json,api_metadata,2026-04-17,day,models.dev (first_party),false,false,,2026-09-01
 grok-4-3-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-04-30,day,openrouter,false,true,,2026-09-01
 grok-4-3-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-05-12,day,azure_lifecycle (grok-4.3),false,true,,2026-11-19
+grok-4-3-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-05-12,day,litellm (azure_ai/grok-4.3),false,false,,2026-11-22
 grok-4-5-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-07-08,day,epoch.ai,false,false,,2026-09-01
 grok-4-5-api_ga-1,https://models.dev/api.json,api_metadata,2026-07-08,day,models.dev (first_party),false,false,,2026-09-01
 grok-4-5-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-07-08,day,openrouter,false,true,,2026-09-01
@@ -1913,6 +1917,7 @@ grok-4-6-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-0
 grok-4-6-api_ga-1,https://models.dev/api.json,api_metadata,2026-08-12,day,models.dev (first_party),false,false,,2026-09-01
 grok-4-6-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-08-12,day,openrouter,false,true,,2026-09-01
 grok-4-6-retired-1,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-08-24,day,azure_lifecycle (grok-4.6),false,true,,2026-11-19
+grok-4-6-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-08-24,day,litellm (azure_ai/grok-4.6),false,false,,2026-11-22
 grok-4-7-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2026-09-21,day,epoch.ai,false,false,,2026-09-22
 grok-4-7-api_ga-1,https://models.dev/api.json,api_metadata,2026-09-21,day,models.dev (first_party),false,false,,2026-09-22
 grok-4-7-platform_availability-1,https://openrouter.ai/api/v1/models,api_metadata,2026-09-21,day,openrouter,false,true,,2026-09-22
@@ -3219,6 +3224,7 @@ mistral-medium-3-5-platform_availability-1,https://openrouter.ai/api/v1/models,a
 mistral-medium-3-5-retired-1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-04-30,day,litellm (mistral/mistral-medium-3-5),false,false,,2026-11-07
 mistral-medium-3-5-retired-2,https://openrouter.ai/api/v1/models,api_metadata,2027-01-31,day,openrouter expiration,false,true,,2026-11-17
 mistral-medium-3-5-retired-3,https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule,lifecycle_table,2027-10-01,day,azure_lifecycle (mistral-medium-3-5),false,true,,2026-11-19
+mistral-medium-3-5-retired-3,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,api_metadata,2027-10-01,day,litellm (azure_ai/mistral-medium-3-5),false,false,,2026-11-22
 mistral-medium-3-5-weights_released-1,https://huggingface.co/mistralai/Mistral-Medium-3.5-128B,hf_hub,2026-03-31,day,hub repo created,true,false,,2026-10-03
 mistral-medium-3-5-weights_released-1,https://web.archive.org/web/20260429/https://huggingface.co/mistralai/Mistral-Medium-3.5-128B,wayback,2026-04-29,day,first public capture,true,false,,2026-10-08
 mistral-medium-3-announced-1,https://epoch.ai/data/all_ai_models.csv,api_metadata,2025-05-07,day,epoch.ai,false,false,,2026-09-01

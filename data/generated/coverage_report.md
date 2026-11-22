@@ -119,12 +119,12 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-21, by reason:
+Declined in the 7 days to 2026-11-22, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 58 |
-| community_lead | 40 |
+| no_dated_event | 59 |
+| community_lead | 41 |
 | third_party_claim | 7 |
 | already_recorded | 2 |
 | malformed_candidate | 1 |
