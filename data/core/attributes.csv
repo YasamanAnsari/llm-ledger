@@ -310,6 +310,8 @@ minimax-m3,true,,,,,,1048576,512000,text|image|video,text,,true,,,0.3,1.2,0.06,2
 minimax-m3-1-flash,true,,,,,,1000000,131072,text|image|video,text,,true,,,0.1875,0.75,0.01875,2026-10-19,https://models.dev/api.json
 minimax-text-01,true,,,,,,1000000,131072,text,text,,false,,,0.2,1.1,,2026-09-01,https://models.dev/api.json
 ministral-14b-2512,false,none,,,,,262144,209715,text|image,text,,true,,,0.2,0.2,0.02,2026-09-01,https://models.dev/api.json
+ministral-3-3b,false,none,,,,,256000,32000,text|image|pdf,text,,true,,,0.1,0.1,,2026-11-23,https://models.dev/api.json
+ministral-3-8b,false,none,,,,,256000,32000,text|image|pdf,text,,true,,,0.15,0.15,,2026-11-23,https://models.dev/api.json
 ministral-3b,false,none,,,,,128000,128000,text,text,2024-10,true,,,0.04,0.04,,2026-09-01,https://models.dev/api.json
 ministral-3b-2512,false,none,,,,,131072,104857,text|image,text,,true,,,0.1,0.1,0.01,2026-09-01,https://models.dev/api.json
 ministral-8b,false,none,,,,,128000,128000,text,text,2024-10,true,,,0.1,0.1,,2026-09-01,https://models.dev/api.json
@@ -329,7 +331,9 @@ mistral-nemo,false,none,,,,,131072,16384,text,text,2024-07,true,,,0.019,0.03,,20
 mistral-saba,false,none,,,,,32000,32768,text,text,,false,,,0.1989,0.595,0.09945,2026-09-01,https://models.dev/api.json
 mistral-small-24b-instruct-2501,false,none,,,,,32768,16384,text,text,,false,,,0.05,0.08,,2026-09-01,https://models.dev/api.json
 mistral-small-2603,true,,,,,,262144,262144,text|image,text,2025-06,true,,,0.143,0.568,0.014,2026-09-01,https://models.dev/api.json
+mistral-small-3-1,false,none,,,,,128000,32000,text|pdf,text,2023-10-31,true,,,0.351,0.555,,2026-11-23,https://models.dev/api.json
 mistral-small-3-1-24b-instruct,false,none,,,,,128000,102400,text|image,text,,false,,,0.351,0.555,,2026-09-01,https://models.dev/api.json
+mistral-small-3-2,false,none,,,,,128000,16384,text|image|pdf,text,2023-10-31,true,,,0.1,0.3,,2026-11-23,https://models.dev/api.json
 mistral-small-3-2-24b-instruct,false,none,,,,,128000,16384,image|text,text,,true,,,0.075,0.2,,2026-09-01,https://models.dev/api.json
 mistral-small-4,false,none,,,,,256000,65536,text|image,text,2025-06,true,,,0.15,0.6,0.15,2026-09-01,https://models.dev/api.json
 mixtral-8x22b-instruct,false,none,,,,,65536,52428,text|pdf,text,,true,,,2,6,0.2,2026-09-01,https://models.dev/api.json

@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1975; events: 3105
-- Models: curated 73, corroborated 707, single-source 1195
-- Event confidence: verified 1243, inferred 1856, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 449 of 1715
+- Models: 1982; events: 3117
+- Models: curated 73, corroborated 707, single-source 1202
+- Event confidence: verified 1244, inferred 1867, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 454 of 1722
 
 ## By organization
 
@@ -23,10 +23,10 @@ as settled.
 | MBZUAI | 78 | 78 | 0 | 6 | 72 | 8% |
 | ByteDance | 66 | 88 | 0 | 25 | 41 | 33% |
 | Marin | 66 | 66 | 0 | 0 | 66 | 0% |
-| Ant Group | 60 | 72 | 0 | 31 | 29 | 44% |
+| Mistral | 64 | 128 | 4 | 32 | 28 | 41% |
+| Ant Group | 61 | 73 | 0 | 31 | 30 | 44% |
 | EleutherAI | 60 | 60 | 0 | 1 | 59 | 2% |
 | Google | 60 | 170 | 7 | 31 | 22 | 42% |
-| Mistral | 60 | 120 | 4 | 32 | 24 | 43% |
 | RWKV | 59 | 59 | 0 | 4 | 55 | 7% |
 | Meta | 57 | 123 | 4 | 28 | 25 | 36% |
 | AI2 | 54 | 54 | 0 | 14 | 40 | 26% |
@@ -37,10 +37,10 @@ as settled.
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
 | IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
-| NVIDIA | 37 | 57 | 0 | 14 | 23 | 25% |
+| NVIDIA | 37 | 58 | 0 | 14 | 23 | 26% |
 | Tencent | 36 | 49 | 1 | 16 | 19 | 41% |
 | Liquid AI | 35 | 41 | 0 | 25 | 10 | 66% |
-| Salesforce | 34 | 34 | 0 | 6 | 28 | 18% |
+| Salesforce | 35 | 35 | 0 | 6 | 29 | 17% |
 | Baidu | 32 | 41 | 0 | 25 | 7 | 66% |
 | Nous | 31 | 39 | 0 | 8 | 23 | 26% |
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
@@ -72,9 +72,9 @@ as settled.
 | Meituan | 12 | 15 | 0 | 9 | 3 | 60% |
 | Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 5 | 6 | 45% |
+| Aleph Alpha | 10 | 10 | 0 | 1 | 9 | 10% |
 | RedNote | 10 | 12 | 0 | 1 | 9 | 17% |
 | AI21 | 9 | 9 | 0 | 1 | 8 | 11% |
-| Aleph Alpha | 9 | 9 | 0 | 1 | 8 | 11% |
 | ServiceNow | 9 | 9 | 0 | 1 | 8 | 11% |
 | TinyLlama | 9 | 9 | 0 | 1 | 8 | 11% |
 | Amazon | 8 | 16 | 0 | 5 | 3 | 31% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1695 | 432 | 1262 | 1 |
+| weights_released | 1702 | 432 | 1269 | 1 |
 | platform_availability | 364 | 357 | 5 | 2 |
-| retired | 355 | 211 | 144 | 0 |
+| retired | 356 | 212 | 144 | 0 |
 | api_ga | 282 | 65 | 216 | 1 |
-| announced | 264 | 55 | 208 | 1 |
+| announced | 268 | 55 | 212 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,13 +119,11 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 14
 
-Declined in the 7 days to 2026-11-22, by reason:
+Declined in the 7 days to 2026-11-23, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 59 |
-| community_lead | 41 |
-| third_party_claim | 7 |
-| already_recorded | 2 |
-| malformed_candidate | 1 |
-| quote_not_on_page | 1 |
+| no_dated_event | 41 |
+| community_lead | 23 |
+| third_party_claim | 4 |
+| already_recorded | 1 |
