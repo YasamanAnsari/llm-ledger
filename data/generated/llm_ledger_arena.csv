@@ -81,6 +81,7 @@ beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,webdev,Beam 1.0 50
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,webdev,Beam 1.0 501B A23B,name,2026-11-19,1436.9154492763948,1423.2420776099036,1450.5888209428858,2501,95
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,webdev,Beam 1.0 501B A23B,name,2026-11-20,1436.770258518934,1423.0899577455602,1450.4505592923078,2494,95
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,webdev,Beam 1.0 501B A23B,name,2026-11-22,1437.5343787289617,1423.8497103377479,1451.2190471201754,2485,96
+beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,webdev,Beam 1.0 501B A23B,name,2026-11-23,1437.3435784816943,1423.6462155185804,1451.0409414448081,2482,96
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,text,claude-3-5-haiku-20241022,name_one_snapshot,2024-12-10,1243.184367018836,1234.1180357708688,1252.3525307288105,3548,31
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,text,claude-3-5-haiku-20241022,name_one_snapshot,2024-12-15,1238.4131480295578,1230.6899560126892,1249.0090397749123,4179,33
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,text,claude-3-5-haiku-20241022,name_one_snapshot,2024-12-18,1238.3893597599663,1229.85197119212,1246.3818161465051,4535,33
@@ -3306,6 +3307,7 @@ claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,Claude Fable 5 (High),na
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,Claude Fable 5 (High),name,2026-11-19,1625.9595857862305,1619.9792152404568,1631.9399563320044,16874,33
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,Claude Fable 5 (High),name,2026-11-20,1625.883247160607,1619.903795013499,1631.862699307715,16876,32
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,Claude Fable 5 (High),name,2026-11-22,1625.884744970482,1619.9072520954028,1631.8622378455614,16857,32
+claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,Claude Fable 5 (High),name,2026-11-23,1625.8274645929919,1619.8478318449856,1631.807097340998,16844,33
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,text,claude-fable-5.1-max,name,2026-09-02,1513.6991395858593,1502.5928918921604,1524.8053872795579,2906,1
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,text,claude-fable-5.1-max,name,2026-09-11,1510.4631272211782,1502.0889675504575,1518.8372868918987,5447,1
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,text,claude-fable-5.1-max,name,2026-09-13,1507.5817496991563,1499.428825651965,1515.7346737463474,5783,1
@@ -3385,6 +3387,7 @@ claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,Claude Fable 5.1 (Ma
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,Claude Fable 5.1 (Max),name,2026-11-19,1741.2514149753727,1733.641249173745,1748.8615807770004,10591,11
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,Claude Fable 5.1 (Max),name,2026-11-20,1741.875983647807,1734.2726148748911,1749.479352420723,10654,11
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,Claude Fable 5.1 (Max),name,2026-11-22,1742.1002817722865,1734.5513264464103,1749.649237098163,10764,11
+claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,Claude Fable 5.1 (Max),name,2026-11-23,1741.8110561298713,1734.283265854091,1749.338846405652,10805,11
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text,Claude Fable 5.2 (Max),name,2026-11-19,1478.3425849167008,1469.6233869722396,1487.061782861162,5216,26
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text,Claude Fable 5.2 (Max),name,2026-11-22,1477.2239486461922,1468.8465947697787,1485.6013025226061,5842,27
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text_style_control,Claude Fable 5.2 (Max),name,2026-11-19,1503.0556390529787,1494.3075265972857,1511.8037515086717,5216,7
@@ -3397,6 +3400,7 @@ claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xH
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-19,1823.415214122922,1807.388830607177,1839.441597638667,1993,1
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-20,1823.6359080977645,1807.8183949805966,1839.4534212149324,2042,1
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-22,1822.1334535572094,1806.6489424224105,1837.6179646920082,2124,1
+claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-23,1821.6543300273584,1806.3070508261007,1837.001609228616,2159,1
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,text,claude-haiku-4-5-20251001,name_one_snapshot,2025-10-16,1378.8997486022251,1367.4883823560567,1390.3111148483936,2698,43
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,text,claude-haiku-4-5-20251001,name_one_snapshot,2025-10-17,1378.1379798843247,1366.0454510283007,1390.2305087403488,2380,43
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,text,claude-haiku-4-5-20251001,name_one_snapshot,2025-11-05,1385.8082783605878,1378.9623074640187,1392.6542492571568,8663,39
@@ -3740,6 +3744,7 @@ claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,webdev,Claude Haiku 4.5 (20
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,webdev,Claude Haiku 4.5 (20251001),name_one_snapshot,2026-11-19,1330.2582775235685,1325.2632545273887,1335.2533005197483,28721,137
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,webdev,Claude Haiku 4.5 (20251001),name_one_snapshot,2026-11-20,1330.218860069453,1325.2186671687373,1335.2190529701688,28713,137
 claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,webdev,Claude Haiku 4.5 (20251001),name_one_snapshot,2026-11-22,1330.1234938537095,1325.121399337027,1335.125588370392,28694,138
+claude-haiku-4-5,Claude Haiku 4.5,anthropic,api_only,webdev,Claude Haiku 4.5 (20251001),name_one_snapshot,2026-11-23,1330.111344096381,1325.1106909643718,1335.1119972283898,28706,138
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,text,Claude Haiku 5.5 (High),name,2026-10-22,1400.623743347211,1392.3264675511505,1408.9210191432717,6080,153
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,text,Claude Haiku 5.5 (High),name,2026-10-28,1400.8832528627713,1393.378704897716,1408.3878008278261,7890,154
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,text,Claude Haiku 5.5 (High),name,2026-11-06,1399.564959227618,1393.1894683941373,1405.9404500610985,12481,157
@@ -3777,6 +3782,7 @@ claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,webdev,Claude Hai
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,webdev,Claude Haiku 5.5 (High),name,2026-11-19,1595.791619017178,1588.0310215465151,1603.5522164878407,8314,44
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,webdev,Claude Haiku 5.5 (High),name,2026-11-20,1595.3781282520786,1587.63994342478,1603.116313079377,8448,44
 claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,webdev,Claude Haiku 5.5 (High),name,2026-11-22,1595.1199560828725,1587.4230280903396,1602.8168840754054,8656,44
+claude-haiku-5-5,anthropic.claude-haiku-5-5,anthropic,api_only,webdev,Claude Haiku 5.5 (High),name,2026-11-23,1594.68828242659,1587.025269284286,1602.3512955688943,8776,44
 claude-opus-4,Claude Opus 4,anthropic,api_only,text,claude-opus-4-20250514,name_one_snapshot,2025-06-01,1365.85086839043,1357.6684672730119,1373.1412601222185,7729,7
 claude-opus-4,Claude Opus 4,anthropic,api_only,text,claude-opus-4-20250514,name_one_snapshot,2025-06-03,1365.9779535894133,1358.2780826009814,1372.3489063511583,8536,7
 claude-opus-4,Claude Opus 4,anthropic,api_only,text,claude-opus-4-20250514,name_one_snapshot,2025-06-05,1366.4005695071587,1361.1985958459718,1372.9359279557827,10402,7
@@ -5111,6 +5117,7 @@ claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,webdev,Claude Opus 4.1 (20250
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,webdev,Claude Opus 4.1 (20250805),name_one_snapshot,2026-11-19,1390.3554115106185,1379.5742394265192,1401.136583594718,6881,115
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,webdev,Claude Opus 4.1 (20250805),name_one_snapshot,2026-11-20,1390.3696777174755,1379.584951061019,1401.1544043739323,6881,115
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,webdev,Claude Opus 4.1 (20250805),name_one_snapshot,2026-11-22,1390.2287724876946,1379.4436780149972,1401.0138669603919,6879,116
+claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,webdev,Claude Opus 4.1 (20250805),name_one_snapshot,2026-11-23,1390.2002304415937,1379.4154332858993,1400.9850275972883,6879,116
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,text,claude-opus-4-5-20251101,name_one_snapshot,2025-11-26,1444.8152441718787,1435.3659716046466,1454.2645167391108,4677,5
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,text,claude-opus-4-5-20251101-thinking-32k,name_one_snapshot,2025-11-26,1434.6420002651375,1422.9343430821264,1446.3496574481487,2763,9
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,text,claude-opus-4-5-20251101,name_one_snapshot,2025-12-01,1439.265133059209,1430.4586234586225,1448.0716426597949,7003,8
@@ -5751,6 +5758,8 @@ claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,Claude Opus 4.5 (20251
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,"Claude Opus 4.5 (High, 32K, 20251101)",name_one_snapshot,2026-11-20,1493.6428306958815,1485.2916552243844,1501.9940061673785,10961,76
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,Claude Opus 4.5 (20251101),name_one_snapshot,2026-11-22,1469.041662628633,1461.7649959919447,1476.3183292653216,13322,85
 claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,"Claude Opus 4.5 (High, 32K, 20251101)",name_one_snapshot,2026-11-22,1493.7184579492139,1485.36445798547,1502.0724579129576,10956,77
+claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,Claude Opus 4.5 (20251101),name_one_snapshot,2026-11-23,1469.081470901135,1461.8065979619184,1476.3563438403517,13325,85
+claude-opus-4-5,Claude Opus 4.5,anthropic,api_only,webdev,"Claude Opus 4.5 (High, 32K, 20251101)",name_one_snapshot,2026-11-23,1493.7119819862355,1485.3593596902988,1502.0646042821722,10959,77
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,text,claude-opus-4-6,name,2026-02-06,1493.9807361765843,1482.8035388977369,1505.1579334554324,2829,3
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,text,claude-opus-4-6-thinking,name,2026-02-06,1501.424995520557,1486.655284605182,1516.1947064359324,1579,1
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,text,claude-opus-4-6,name,2026-02-09,1499.5874783540469,1490.0921942060595,1509.0827625020336,4131,2
@@ -6372,6 +6381,8 @@ claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6,name,2
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6 (High),name,2026-11-20,1546.3686781446218,1540.8486145945908,1551.8887416946527,19013,58
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6,name,2026-11-22,1536.7295872549491,1531.3366478933447,1542.1225266165538,20319,63
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6 (High),name,2026-11-22,1546.555808845319,1541.0357476127426,1552.0758700778956,18999,59
+claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6,name,2026-11-23,1536.614231369147,1531.2236282553777,1542.0048344829165,20332,63
+claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,Claude Opus 4.6 (High),name,2026-11-23,1546.3530721710918,1540.836774808744,1551.8693695334396,19016,59
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,text,claude-opus-4-7,name,2026-04-17,1484.6268543696208,1474.7445667798752,1494.5091419593666,3485,5
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,text,claude-opus-4-7-thinking,name,2026-04-17,1489.9043776833437,1478.4486993892197,1501.3600559774675,2618,3
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,text,claude-opus-4-7,name,2026-04-20,1483.0521996551447,1474.4067776333277,1491.6976216769615,4646,5
@@ -6833,6 +6844,8 @@ claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7,name,2
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7 (High),name,2026-11-20,1557.425402803327,1551.6292163701496,1563.2215892365043,17558,54
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7,name,2026-11-22,1555.502495613465,1549.8510475400014,1561.1539436869286,17857,57
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7 (High),name,2026-11-22,1557.5228489262315,1551.7273018215067,1563.3183960309561,17529,54
+claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7,name,2026-11-23,1555.5839597922704,1549.9336962565108,1561.23422332803,17868,56
+claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,Claude Opus 4.7 (High),name,2026-11-23,1557.3954105121502,1551.6017117402412,1563.1891092840592,17544,55
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,text,claude-opus-4-8,name,2026-06-03,1459.069329446016,1450.6849939133842,1467.4536649786478,5472,19
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,text,claude-opus-4-8-thinking,name,2026-06-03,1465.311730369349,1456.789035910388,1473.83442482831,5191,16
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,text,claude-opus-4-8,name,2026-06-04,1456.0145219983217,1447.874403903029,1464.1546400936143,5865,20
@@ -7183,6 +7196,8 @@ claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8,name,2
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8 (High),name,2026-11-20,1555.492290967823,1549.693827935716,1561.2907539999296,17949,56
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8,name,2026-11-22,1536.1840770272686,1530.4563087584165,1541.9118452961206,16862,64
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8 (High),name,2026-11-22,1555.5595725598923,1549.7579147487802,1561.3612303710045,17914,56
+claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8,name,2026-11-23,1536.2792018450414,1530.5522459657254,1542.0061577243573,16865,64
+claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,Claude Opus 4.8 (High),name,2026-11-23,1555.5656330756242,1549.7644001975282,1561.3668659537198,17912,57
 claude-opus-5,Claude Opus 5,anthropic,api_only,text,claude-opus-5-high,name,2026-07-26,1505.9987402903253,1497.632575351949,1514.3649052287014,5417,1
 claude-opus-5,Claude Opus 5,anthropic,api_only,text,claude-opus-5-high,name,2026-07-27,1504.6724054622268,1496.7822396424558,1512.5625712819974,6159,2
 claude-opus-5,Claude Opus 5,anthropic,api_only,text,claude-opus-5-max,name,2026-07-27,1511.5966036132436,1499.1398008326787,1524.053406393809,2386,1
@@ -7419,6 +7434,8 @@ claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (High),name,
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (Max),name,2026-11-20,1691.5705485043668,1685.474136971061,1697.666960037673,19462,15
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (High),name,2026-11-22,1656.5658490486398,1651.3035605786195,1661.8281375186602,26750,24
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (Max),name,2026-11-22,1691.6504623219375,1685.55499105244,1697.745933591435,19440,15
+claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (High),name,2026-11-23,1656.4457858311303,1651.1826813186976,1661.7088903435624,26727,24
+claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,Claude Opus 5 (Max),name,2026-11-23,1691.5779347983207,1685.4837217894628,1697.6721478071781,19435,15
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,text,claude-opus-5.5-high,name,2026-09-25,1517.7921223112396,1505.6151276832159,1529.9691169392634,2307,1
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,text,claude-opus-5.5-high,name,2026-09-30,1511.952359638075,1502.3127516885784,1521.5919675875716,3932,2
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,text,claude-opus-5.5-high,name,2026-10-02,1511.6842591617774,1502.6296005598463,1520.7389177637085,4552,2
@@ -7483,6 +7500,7 @@ claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,Claude Opus 5.5 (Max),
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,Claude Opus 5.5 (Max),name,2026-11-19,1818.3481391767866,1807.4119086310754,1829.2843697224978,4912,2
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,Claude Opus 5.5 (Max),name,2026-11-20,1819.0439502180366,1808.1345698898372,1829.953330546236,4952,2
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,Claude Opus 5.5 (Max),name,2026-11-22,1820.2717791077653,1809.4956575507558,1831.0479006647745,5075,2
+claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,Claude Opus 5.5 (Max),name,2026-11-23,1820.352133915408,1809.6186057496352,1831.085662081181,5121,2
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,text,claude-sonnet-4-20250514,name_one_snapshot,2025-06-01,1339.4675213966536,1332.1736775350698,1345.8079031292468,6384,19
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,text,claude-sonnet-4-20250514,name_one_snapshot,2025-06-03,1338.4845762024893,1330.9401591804747,1344.493216035267,6824,19
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,text,claude-sonnet-4-20250514,name_one_snapshot,2025-06-05,1339.269265088273,1331.4104263876775,1345.5686986602998,8087,19
@@ -8890,6 +8908,8 @@ claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,Claude Sonnet 4.5 
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,"Claude Sonnet 4.5 (High, 32K, 20250929)",name_one_snapshot,2026-11-20,1393.9470162946654,1386.162098592428,1401.7319339969029,13162,114
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,Claude Sonnet 4.5 (20250929),name_one_snapshot,2026-11-22,1384.8319271764558,1377.474692112024,1392.1891622408875,15613,118
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,"Claude Sonnet 4.5 (High, 32K, 20250929)",name_one_snapshot,2026-11-22,1393.8760562782272,1386.0869935673195,1401.665118989135,13157,115
+claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,Claude Sonnet 4.5 (20250929),name_one_snapshot,2026-11-23,1384.7172483367672,1377.36177449124,1392.0727221822945,15614,118
+claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,webdev,"Claude Sonnet 4.5 (High, 32K, 20250929)",name_one_snapshot,2026-11-23,1393.8354954016907,1386.0475141253705,1401.6234766780105,13158,115
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,text,claude-sonnet-4-6,name,2026-02-19,1441.2528262208211,1430.9348319498476,1451.5708204917946,3228,20
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,text,claude-sonnet-4-6,name,2026-02-20,1441.822669752146,1431.5571166099107,1452.088222894381,3255,20
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,text,claude-sonnet-4-6,name,2026-02-21,1441.162068886205,1430.981641046556,1451.3424967258538,3297,19
@@ -9185,6 +9205,7 @@ claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,Claude Sonnet 4.6,
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,Claude Sonnet 4.6,name,2026-11-19,1521.8853259035698,1516.693230795594,1527.0774210115458,22529,66
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,Claude Sonnet 4.6,name,2026-11-20,1521.9237219870906,1516.7291961437363,1527.118247830445,22529,66
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,Claude Sonnet 4.6,name,2026-11-22,1521.996993255396,1516.8013522567494,1527.1926342540428,22491,67
+claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,Claude Sonnet 4.6,name,2026-11-23,1521.9701054721168,1516.777477180543,1527.162733763691,22515,67
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,text,claude-sonnet-5-thinking,name,2026-07-02,1445.2867303101593,1436.1405872891933,1454.432873331125,4385,36
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,text,claude-sonnet-5-high,name,2026-07-10,1442.9064274990892,1435.741709078919,1450.071145919259,9008,46
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,text,claude-sonnet-5-high,name,2026-07-12,1443.6555892402969,1436.703810468905,1450.6073680116888,9850,46
@@ -9337,6 +9358,7 @@ claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,Claude Sonnet 5 (High)
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,Claude Sonnet 5 (High),name,2026-11-19,1539.353892357519,1533.5520308166422,1545.155753898396,16696,60
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,Claude Sonnet 5 (High),name,2026-11-20,1539.440270739059,1533.6375839515126,1545.2429575266056,16693,60
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,Claude Sonnet 5 (High),name,2026-11-22,1539.6269742847192,1533.8233673080895,1545.4305812613486,16663,61
+claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,Claude Sonnet 5 (High),name,2026-11-23,1539.4492060589214,1533.6454652380962,1545.2529468797466,16656,61
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,text,claude-sonnet-5.5-xhigh,name,2026-10-02,1466.5750303259465,1456.1718008778928,1476.9782597740002,3145,34
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,text,claude-sonnet-5.5-xhigh,name,2026-10-08,1471.1563597911008,1462.3540190387055,1479.9587005434964,4838,28
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,text,claude-sonnet-5.5-xhigh,name,2026-10-13,1470.6328959582916,1462.6680555885953,1478.5977363279876,6254,30
@@ -9416,6 +9438,8 @@ claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 (xHigh),name,2026-11-20,1771.9964582141224,1762.7435214585353,1781.24939496971,6785,3
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 (High),name,2026-11-22,1715.9238330916182,1708.035588212931,1723.8120779703052,9072,13
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 (xHigh),name,2026-11-22,1772.3567021268916,1763.2025384909264,1781.5108657628566,6925,3
+claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 (High),name,2026-11-23,1715.4181220142164,1707.5656207091524,1723.2706233192803,9129,13
+claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,Claude Sonnet 5.5 (xHigh),name,2026-11-23,1772.644765547574,1763.5164045165143,1781.7731265786338,6973,3
 codellama-34b-instruct,CodeLlama-34b-Instruct-hf,meta,open_weights,text,codellama-34b-instruct,name,2023-09-05,1032.0,,,,7
 codellama-34b-instruct,CodeLlama-34b-Instruct-hf,meta,open_weights,text,codellama-34b-instruct,name,2023-10-02,1031.0,,,,7
 codellama-34b-instruct,CodeLlama-34b-Instruct-hf,meta,open_weights,text,codellama-34b-instruct,name,2023-11-08,1028.0,,,,11
@@ -13496,6 +13520,8 @@ deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2,name,2026
 deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2 (Thinking),name,2026-11-20,1362.484273111811,1353.3306400746656,1371.6379061489565,6872,124
 deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2,name,2026-11-22,1325.6923249788695,1317.6587913449912,1333.7258586127477,9313,139
 deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2 (Thinking),name,2026-11-22,1362.711023945393,1353.5587327845956,1371.8633151061904,6869,125
+deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2,name,2026-11-23,1325.6393972984743,1317.606288429546,1333.672506167402,9312,139
+deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,webdev,DeepSeek-V3.2 (Thinking),name,2026-11-23,1362.76675807408,1353.6148660294068,1371.9186501187528,6870,125
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,text,deepseek-v3.2-exp,name,2025-10-03,1420.1896259108623,1407.253071078528,1433.1261807431968,2100,14
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,text,deepseek-v3.2-exp,name,2025-10-07,1415.38572431787,1404.5871430455472,1426.1843055901927,3007,25
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,text,deepseek-v3.2-exp-thinking,name,2025-10-07,1418.8671197929632,1407.9071200411452,1429.8271195447812,2861,15
@@ -14073,6 +14099,7 @@ deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,webdev,DeepSeek-V3.2-E
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,webdev,DeepSeek-V3.2-Exp,name,2026-11-19,1271.3878950145947,1257.7836029438631,1284.9921870853261,3935,144
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,webdev,DeepSeek-V3.2-Exp,name,2026-11-20,1271.3896020791697,1257.7823128156665,1284.9968913426728,3935,144
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,webdev,DeepSeek-V3.2-Exp,name,2026-11-22,1271.336963890124,1257.7289158656745,1284.9450119145738,3936,145
+deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,webdev,DeepSeek-V3.2-Exp,name,2026-11-23,1271.3061784387824,1257.698396285869,1284.9139605916953,3936,145
 deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,text,deepseek-v4.1-flash-max,name,2026-09-25,1464.9038367313653,1457.307641315951,1472.5000321467796,6630,35
 deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,text,deepseek-v4.1-flash-max,name,2026-09-30,1460.7416946397652,1453.7076670247238,1467.775722254807,8125,37
 deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,text,deepseek-v4.1-flash-max,name,2026-10-02,1462.4521722590196,1455.5646700152954,1469.3396745027435,8728,37
@@ -14316,6 +14343,7 @@ deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,webdev,DeepSeek-V
 deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,webdev,DeepSeek-V4-Flash (High),name,2026-11-19,1581.8345719821993,1572.4251108312023,1591.2440331331964,4809,48
 deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,webdev,DeepSeek-V4-Flash (High),name,2026-11-20,1582.1146464710569,1572.7040951138933,1591.5251978282204,4803,48
 deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,webdev,DeepSeek-V4-Flash (High),name,2026-11-22,1582.0087862554997,1572.5966549708594,1591.42091754014,4800,48
+deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,webdev,DeepSeek-V4-Flash (High),name,2026-11-23,1582.0102283043625,1572.5934899810418,1591.4269666276837,4798,48
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,text,deepseek-v4-pro,name,2026-04-23,1446.7027268696843,1437.93009673864,1455.4753570007283,4163,25
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,text,deepseek-v4-pro-thinking,name,2026-04-23,1447.183832211532,1437.8592701953255,1456.5083942277383,3783,23
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,text,deepseek-v4-pro,name,2026-04-27,1446.6038851663395,1437.8103695182429,1455.3974008144364,4175,27
@@ -14576,6 +14604,7 @@ deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,webdev,DeepSeek-V4-Pro,nam
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,webdev,DeepSeek-V4-Pro,name,2026-11-19,1448.418785654514,1442.0485314887583,1454.7890398202696,13743,89
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,webdev,DeepSeek-V4-Pro,name,2026-11-20,1448.4418088387788,1442.0675831241513,1454.8160345534066,13738,89
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,webdev,DeepSeek-V4-Pro,name,2026-11-22,1448.6802748692253,1442.3059521729424,1455.0545975655084,13724,90
+deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,webdev,DeepSeek-V4-Pro,name,2026-11-23,1448.461010382081,1442.0899030467144,1454.8321177174475,13737,90
 ernie-5-1,ERNIE 5.1,baidu,api_only,text,ernie-5.1,name,2026-05-06,1471.9868076698313,1464.1689615537136,1479.8046537859489,5577,8
 ernie-5-1,ERNIE 5.1,baidu,api_only,text,ernie-5.1,name,2026-05-07,1472.7873078649025,1465.0653959491715,1480.5092197806334,5733,8
 ernie-5-1,ERNIE 5.1,baidu,api_only,text,ernie-5.1,name,2026-05-12,1471.1810436923438,1464.0755433716429,1478.286544013045,6949,9
@@ -15496,6 +15525,7 @@ gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,Gemini 2.5 Pro,name,2026-11
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,Gemini 2.5 Pro,name,2026-11-19,1226.5320680425054,1210.6326182117793,1242.4315178732313,2706,154
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,Gemini 2.5 Pro,name,2026-11-20,1226.5547077625984,1210.6526847274135,1242.4567307977832,2705,154
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,Gemini 2.5 Pro,name,2026-11-22,1226.5231932877393,1210.61922916861,1242.4271574068687,2705,155
+gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,Gemini 2.5 Pro,name,2026-11-23,1226.4889306006512,1210.5853115025402,1242.3925496987627,2705,155
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,text,gemini-3.1-flash-lite-preview,name,2026-03-03,1423.979036195704,1414.7884703955574,1433.169601995851,3824,34
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,text,gemini-3.1-flash-lite-preview,name,2026-03-04,1423.498725842425,1414.3096836214286,1432.6877680634211,3828,35
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,text,gemini-3.1-flash-lite-preview,name,2026-03-05,1423.8511558596224,1414.6926619573965,1433.0096497618483,3853,34
@@ -15774,6 +15804,7 @@ gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webd
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,Gemini 3.1 Flash-Lite Preview,name,2026-11-19,1255.7997598850197,1248.9102246314233,1262.6892951386162,14234,147
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,Gemini 3.1 Flash-Lite Preview,name,2026-11-20,1255.7956937007607,1248.9020476493165,1262.6893397522051,14234,147
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,Gemini 3.1 Flash-Lite Preview,name,2026-11-22,1255.9266725067162,1249.030890305451,1262.8224547079813,14215,148
+gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,Gemini 3.1 Flash-Lite Preview,name,2026-11-23,1255.8328224118745,1248.9383985044042,1262.727246319345,14229,148
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,text,gemini-3.1-pro-preview,name,2026-02-06,1496.6993407121024,1485.366870849302,1508.031810574903,2670,2
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,text,gemini-3.1-pro-preview,name,2026-02-09,1495.1224152962732,1485.8468732094825,1504.3979573830638,4066,3
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,text,gemini-3.1-pro-preview,name,2026-02-10,1495.505978380843,1486.254739539114,1504.757217222572,4081,3
@@ -16090,6 +16121,7 @@ gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,Gemini 3.1 
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,Gemini 3.1 Pro Preview,name,2026-11-19,1446.2877778575205,1441.1902249190548,1451.3853307959862,23817,90
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,Gemini 3.1 Pro Preview,name,2026-11-20,1446.3410786199092,1441.2395216547836,1451.442635585035,23808,90
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,Gemini 3.1 Pro Preview,name,2026-11-22,1446.5004040945703,1441.396625280942,1451.6041829081987,23775,91
+gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,Gemini 3.1 Pro Preview,name,2026-11-23,1446.4257131784339,1441.3238512633375,1451.5275750935302,23798,91
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,text,gemini-3.5-flash,name,2026-05-19,1485.9508700785311,1478.2635901394822,1493.6381500175803,5907,3
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,text,gemini-3.5-flash,name,2026-05-27,1482.49371928515,1475.8014447289952,1489.1859938413047,9045,4
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,text,gemini-3.5-flash,name,2026-06-03,1479.9521131737738,1473.3664194136225,1486.5378069339254,9557,6
@@ -16401,6 +16433,8 @@ gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (High)
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (Medium),name,2026-11-20,1490.0828493692597,1483.3800980288152,1496.7856007097043,11842,77
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (High),name,2026-11-22,1499.975944627982,1492.6563048601888,1507.295584395775,9115,76
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (Medium),name,2026-11-22,1490.3851669649005,1483.6865823842172,1497.0837515455837,11846,78
+gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (High),name,2026-11-23,1499.9136708180567,1492.5949230642148,1507.2324185718987,9120,76
+gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,Gemini 3.5 Flash (Medium),name,2026-11-23,1490.3302638833225,1483.631589984751,1497.0289377818945,11845,78
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,text,gemini-3.5-flash-lite,name,2026-07-21,1438.2557530930483,1429.4964974238358,1447.0150087622608,4674,58
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,text,gemini-3.5-flash-lite,name,2026-07-26,1436.7545386033107,1428.661888901353,1444.847188305269,5589,63
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,text,gemini-3.5-flash-lite,name,2026-07-27,1438.6096852669602,1430.7820761292178,1446.4372944047032,6015,60
@@ -16530,6 +16564,7 @@ gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,Gemini 3.5 Fl
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,Gemini 3.5 Flash-Lite,name,2026-11-19,1431.7848712668952,1390.4384619417647,1473.1312805920259,231,100
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,Gemini 3.5 Flash-Lite,name,2026-11-20,1433.3957709971678,1392.0424164877986,1474.7491255065365,230,100
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,Gemini 3.5 Flash-Lite,name,2026-11-22,1434.4933792194483,1393.3005396361334,1475.6862188027633,231,101
+gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,Gemini 3.5 Flash-Lite,name,2026-11-23,1434.451295285351,1393.2609906729517,1475.6415998977504,231,101
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,text,gemini-3.6-flash,name,2026-07-21,1481.056880624653,1472.1960550004378,1489.9177062488686,4747,7
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,text,gemini-3.6-flash,name,2026-07-26,1478.2472095330431,1469.9665455234617,1486.527873542624,5642,11
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,text,gemini-3.6-flash,name,2026-07-27,1477.4723348094508,1469.3690613941953,1485.5756082247067,6065,12
@@ -16661,6 +16696,7 @@ gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,Gemini 3.6 Flash (High)
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,Gemini 3.6 Flash (High),name,2026-11-19,1537.6910254688496,1530.1156380970697,1545.2664128406293,8473,61
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,Gemini 3.6 Flash (High),name,2026-11-20,1537.7928488859525,1530.2111149139382,1545.3745828579672,8464,61
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,Gemini 3.6 Flash (High),name,2026-11-22,1537.9064690816265,1530.326344217455,1545.486593945798,8459,62
+gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,Gemini 3.6 Flash (High),name,2026-11-23,1538.0393764770001,1530.4583411212998,1545.6204118327,8454,62
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,text,gemini-3.7-flash-high,name,2026-08-19,1490.5732441319328,1482.4477283286674,1498.6987599351978,5723,6
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,text,gemini-3.7-flash-high,name,2026-08-21,1490.2116753124994,1482.0807074514883,1498.3426431735109,5718,6
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,text,gemini-3.7-flash-high,name,2026-08-27,1490.3965490672852,1482.2705737395008,1498.5225243950695,5720,6
@@ -16752,6 +16788,7 @@ gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,Gemini 3.7 Flash (High)
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,Gemini 3.7 Flash (High),name,2026-11-19,1588.6367172985824,1582.173184742806,1595.1002498543592,14496,46
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,Gemini 3.7 Flash (High),name,2026-11-20,1588.7033685480242,1582.2391460735566,1595.1675910224913,14501,46
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,Gemini 3.7 Flash (High),name,2026-11-22,1588.7230846168109,1582.2612659153574,1595.1849033182643,14484,46
+gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,Gemini 3.7 Flash (High),name,2026-11-23,1588.7344105515144,1582.269597867626,1595.1992232354032,14472,46
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,text,gemini-3.8-flash-high,name,2026-09-02,1495.230004368004,1486.7191426506297,1503.7408660853787,5125,6
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,text,gemini-3.8-flash-high,name,2026-09-11,1494.3841032313019,1485.8542510840905,1502.9139553785135,5094,6
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,text,gemini-3.8-flash-high,name,2026-09-13,1494.673989980363,1486.1392835301197,1503.2086964306066,5076,6
@@ -16830,6 +16867,7 @@ gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,Gemini 3.8 Flash (High)
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,Gemini 3.8 Flash (High),name,2026-11-19,1583.8469991924553,1577.4501931931857,1590.2438051917247,15072,47
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,Gemini 3.8 Flash (High),name,2026-11-20,1584.1684280794043,1577.782304933905,1590.5545512249041,15142,47
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,Gemini 3.8 Flash (High),name,2026-11-22,1584.0154399737366,1577.6571456527379,1590.3737342947354,15288,47
+gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,Gemini 3.8 Flash (High),name,2026-11-23,1584.313184986891,1577.9704880188547,1590.6558819549273,15356,47
 gemini-3-flash,Gemini 3 Flash,google,api_only,text,gemini-3-flash,name,2025-12-16,1469.9065851954554,1459.712716188145,1480.100454202766,3824,2
 gemini-3-flash,Gemini 3 Flash,google,api_only,text,gemini-3-flash,name,2025-12-18,1470.3558072308626,1460.2561795188326,1480.455434942893,3901,2
 gemini-3-flash,Gemini 3 Flash,google,api_only,text,gemini-3-flash,name,2025-12-19,1468.1548173343865,1458.4258892392866,1477.8837454294862,4431,2
@@ -17504,6 +17542,8 @@ gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash,name,2026-11
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash (Minimal),name,2026-11-20,1384.459194530386,1379.1770198868803,1389.7413691738916,21951,118
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash,name,2026-11-22,1440.2619910584126,1431.5869153006638,1448.9370668161614,10793,94
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash (Minimal),name,2026-11-22,1384.5217179293977,1379.2371081304623,1389.806327728333,21919,119
+gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash,name,2026-11-23,1440.4185068889637,1431.7439680072855,1449.0930457706418,10796,94
+gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,Gemini 3 Flash (Minimal),name,2026-11-23,1384.357522303656,1379.0755649464452,1389.6394796608665,21939,119
 gemini-3-pro,Gemini 3 Pro,google,api_only,text,gemini-3-pro,name,2025-11-16,1494.803370131599,1483.4999128289207,1506.1068274342772,3044,1
 gemini-3-pro,Gemini 3 Pro,google,api_only,text,gemini-3-pro,name,2025-11-17,1497.164786953509,1485.6001629924217,1508.7294109145969,2872,1
 gemini-3-pro,Gemini 3 Pro,google,api_only,text,gemini-3-pro,name,2025-11-18,1492.2724458714315,1481.7188201501676,1502.8260715926958,3768,1
@@ -17887,6 +17927,7 @@ gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,Gemini 3 Pro,name,2026-11-18,14
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,Gemini 3 Pro,name,2026-11-19,1441.1045606634955,1432.5998346505216,1449.6092866764693,13968,92
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,Gemini 3 Pro,name,2026-11-20,1441.1309287534455,1432.6221860901073,1449.6396714167836,13968,92
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,Gemini 3 Pro,name,2026-11-22,1441.1298285050232,1432.6179447875425,1449.6417122225039,13953,93
+gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,Gemini 3 Pro,name,2026-11-23,1441.0787903983446,1432.5673454174012,1449.590235379288,13953,93
 gemini-4-argon,Gemini 4 Argon,google,api_only,text,gemini-4-argon-high,name,2026-09-30,1533.0887688463727,1524.3136884436476,1541.8638492490982,4942,1
 gemini-4-argon,Gemini 4 Argon,google,api_only,text,gemini-4-argon-high,name,2026-10-02,1533.4609832971757,1524.6678224950515,1542.2541440993,4932,1
 gemini-4-argon,Gemini 4 Argon,google,api_only,text,gemini-4-argon-high,name,2026-10-08,1533.8551230242795,1525.046043106506,1542.6642029420527,4892,1
@@ -17939,6 +17980,7 @@ gemini-4-argon,Gemini 4 Argon,google,api_only,webdev,Gemini 4 Argon (High),name,
 gemini-4-argon,Gemini 4 Argon,google,api_only,webdev,Gemini 4 Argon (High),name,2026-11-19,1680.8146001926873,1671.8331130687018,1689.7960873166726,5978,18
 gemini-4-argon,Gemini 4 Argon,google,api_only,webdev,Gemini 4 Argon (High),name,2026-11-20,1682.4396284020372,1673.4729109965988,1691.4063458074756,6016,18
 gemini-4-argon,Gemini 4 Argon,google,api_only,webdev,Gemini 4 Argon (High),name,2026-11-22,1681.4217235601088,1672.580742448527,1690.2627046716907,6176,18
+gemini-4-argon,Gemini 4 Argon,google,api_only,webdev,Gemini 4 Argon (High),name,2026-11-23,1682.0602691734389,1673.2549862795827,1690.865552067295,6227,18
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,text,Gemini 4 Carbon (High),name,2026-10-28,1540.042092301771,1530.6889542506292,1549.3952303529127,4403,1
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,text,Gemini 4 Carbon (High),name,2026-11-06,1539.077948051864,1529.7579049657247,1548.3979911380031,4483,1
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,text,Gemini 4 Carbon (High),name,2026-11-08,1538.9225817731053,1529.3759375893924,1548.469225956818,4281,1
@@ -17966,6 +18008,7 @@ gemini-4-carbon,Gemini 4 Carbon,google,api_only,webdev,Gemini 4 Carbon (High),na
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,webdev,Gemini 4 Carbon (High),name,2026-11-19,1768.7703295228937,1753.3773328532768,1784.16332619251,2092,4
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,webdev,Gemini 4 Carbon (High),name,2026-11-20,1768.7337302312299,1753.3390401196812,1784.128420342778,2093,4
 gemini-4-carbon,Gemini 4 Carbon,google,api_only,webdev,Gemini 4 Carbon (High),name,2026-11-22,1768.897000921913,1753.4965387950367,1784.2974630487895,2092,4
+gemini-4-carbon,Gemini 4 Carbon,google,api_only,webdev,Gemini 4 Carbon (High),name,2026-11-23,1768.9772706074991,1753.5672603134308,1784.3872809015675,2091,4
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,text,Gemini 4 Hydrogen (High),name,2026-11-11,1502.1225848020104,1493.1423096294052,1511.102859974616,4741,8
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,text,Gemini 4 Hydrogen (High),name,2026-11-18,1501.7686144174559,1492.8120943709798,1510.7251344639321,4737,9
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,text,Gemini 4 Hydrogen (High),name,2026-11-19,1501.7760000165435,1492.8345268291323,1510.7174732039548,4743,9
@@ -17980,6 +18023,7 @@ gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,webdev,Gemini 4 Hydrogen (Hi
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,webdev,Gemini 4 Hydrogen (High),name,2026-11-19,1701.2138582856971,1687.0098845750288,1715.417831996366,2039,14
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,webdev,Gemini 4 Hydrogen (High),name,2026-11-20,1700.6265375121202,1686.3795583783954,1714.873516645845,2021,14
 gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,webdev,Gemini 4 Hydrogen (High),name,2026-11-22,1701.1091693901035,1686.8489466205936,1715.3693921596134,2014,14
+gemini-4-hydrogen,Gemini 4 Hydrogen,google,api_only,webdev,Gemini 4 Hydrogen (xHigh),name,2026-11-23,1701.4196190243106,1687.1462735697573,1715.6929644788643,2012,14
 gemini-4-neon,gemini-4-neon,google,api_only,text,Gemini 4 Neon (High),name,2026-11-18,1529.6792212040723,1519.7781971652055,1539.580245242939,3885,2
 gemini-4-neon,gemini-4-neon,google,api_only,text,Gemini 4 Neon (High),name,2026-11-19,1523.5532166015744,1515.0798165977105,1532.026616605438,5555,3
 gemini-4-neon,gemini-4-neon,google,api_only,text,Gemini 4 Neon (High),name,2026-11-22,1522.8896905416118,1514.4615620110144,1531.3178190722097,5611,3
@@ -17990,6 +18034,7 @@ gemini-4-neon,gemini-4-neon,google,api_only,webdev,Gemini 4 Neon (High),name,202
 gemini-4-neon,gemini-4-neon,google,api_only,webdev,Gemini 4 Neon (High),name,2026-11-19,1763.1503443828433,1749.4981068892873,1776.8025818763992,2324,5
 gemini-4-neon,gemini-4-neon,google,api_only,webdev,Gemini 4 Neon (High),name,2026-11-20,1764.886599440801,1751.1939467381808,1778.5792521434214,2305,6
 gemini-4-neon,gemini-4-neon,google,api_only,webdev,Gemini 4 Neon (High),name,2026-11-22,1765.7693354866158,1752.1079646072874,1779.4307063659442,2310,5
+gemini-4-neon,gemini-4-neon,google,api_only,webdev,Gemini 4 Neon (xHigh),name,2026-11-23,1765.2738702758857,1751.6212036071151,1778.9265369446566,2308,5
 gemma-2-27b-it,Gemma 2 27B,google,open_weights,text,gemma-2-27b-it,name,2024-06-29,1214.139389417216,1207.1292446360678,1220.5600254624505,5875,10
 gemma-2-27b-it,Gemma 2 27B,google,open_weights,text,gemma-2-27b-it,name,2024-07-06,1217.0931922298316,1210.6990717768806,1221.7239291266897,11407,10
 gemma-2-27b-it,Gemma 2 27B,google,open_weights,text,gemma-2-27b-it,name,2024-07-08,1216.3555182834443,1210.6862620221432,1223.0499344757643,13030,10
@@ -20452,6 +20497,7 @@ gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,Gemma 4 26B A4B,na
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,Gemma 4 26B A4B,name,2026-11-19,1357.5650931707721,1340.566113088684,1374.5640732528605,1487,127
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,Gemma 4 26B A4B,name,2026-11-20,1357.5968060531084,1340.5958735075083,1374.5977385987085,1487,127
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,Gemma 4 26B A4B,name,2026-11-22,1357.677243496498,1340.6768799150805,1374.6776070779156,1487,128
+gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,Gemma 4 26B A4B,name,2026-11-23,1357.6223950214903,1340.6224373078485,1374.6223527351322,1487,128
 gemma-4-31b,gemma-4-31B,google,open_weights,text,gemma-4-31b,name,2026-03-31,1444.042420093377,1435.1077716231384,1452.9770685636151,4298,22
 gemma-4-31b,gemma-4-31B,google,open_weights,text,gemma-4-31b,name,2026-04-02,1441.5399195014759,1433.7964364595443,1449.2834025434074,5834,25
 gemma-4-31b,gemma-4-31B,google,open_weights,text,gemma-4-31b,name,2026-04-07,1441.323911978924,1433.6910201698006,1448.9568037880474,6002,26
@@ -20681,6 +20727,7 @@ gemma-4-31b,gemma-4-31B,google,open_weights,webdev,Gemma 4 31B,name,2026-11-18,1
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,Gemma 4 31B,name,2026-11-19,1370.3640434238046,1364.388435113393,1376.3396517342162,16572,122
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,Gemma 4 31B,name,2026-11-20,1370.2444132925807,1364.2658415444375,1376.2229850407239,16567,122
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,Gemma 4 31B,name,2026-11-22,1370.6853714888523,1364.707264510253,1376.6634784674516,16527,123
+gemma-4-31b,gemma-4-31B,google,open_weights,webdev,Gemma 4 31B,name,2026-11-23,1370.5641443874654,1364.586600425872,1376.5416883490589,16532,123
 glm-4-5,GLM-4.5,zhipu,open_weights,text,glm-4.5,name,2025-08-04,1434.6975642650718,1425.2776047268155,1444.117523803328,4112,2
 glm-4-5,GLM-4.5,zhipu,open_weights,text,glm-4.5,name,2025-08-07,1432.745357628676,1424.039413066296,1441.451302191056,4872,5
 glm-4-5,GLM-4.5,zhipu,open_weights,text,glm-4.5,name,2025-08-14,1432.6668237586323,1425.005034691099,1440.3286128261657,6562,4
@@ -21859,6 +21906,7 @@ glm-4-6,GLM-4.6,zhipu,open_weights,webdev,GLM-4.6,name,2026-11-18,1341.955077939
 glm-4-6,GLM-4.6,zhipu,open_weights,webdev,GLM-4.6,name,2026-11-19,1341.9373235021303,1331.0639524367894,1352.8106945674713,6719,133
 glm-4-6,GLM-4.6,zhipu,open_weights,webdev,GLM-4.6,name,2026-11-20,1341.9516351716088,1331.074746307254,1352.8285240359635,6718,133
 glm-4-6,GLM-4.6,zhipu,open_weights,webdev,GLM-4.6,name,2026-11-22,1341.9810150919682,1331.1029497051047,1352.8590804788314,6718,134
+glm-4-6,GLM-4.6,zhipu,open_weights,webdev,GLM-4.6,name,2026-11-23,1341.9528549632305,1331.074997734595,1352.830712191866,6718,134
 glm-4-6v,glm-4.6v,zhipu,open_weights,text,glm-4.6v,name,2026-01-27,1375.3151674164835,1364.0263477506994,1386.6039870822683,2823,72
 glm-4-6v,glm-4.6v,zhipu,open_weights,text,glm-4.6v,name,2026-01-29,1375.172541132221,1363.886121652713,1386.4589606117297,2822,74
 glm-4-6v,glm-4.6v,zhipu,open_weights,text,glm-4.6v,name,2026-02-06,1374.916493419296,1363.631679375982,1386.2013074626095,2819,79
@@ -22376,6 +22424,7 @@ glm-4-7,GLM-4.7,zhipu,open_weights,webdev,GLM-4.7,name,2026-11-18,1435.849892773
 glm-4-7,GLM-4.7,zhipu,open_weights,webdev,GLM-4.7,name,2026-11-19,1435.837985576723,1423.7946030971843,1447.8813680562614,3992,97
 glm-4-7,GLM-4.7,zhipu,open_weights,webdev,GLM-4.7,name,2026-11-20,1435.8630830765837,1423.8167886523988,1447.9093775007686,3992,97
 glm-4-7,GLM-4.7,zhipu,open_weights,webdev,GLM-4.7,name,2026-11-22,1436.0515254386073,1423.9974656917846,1448.10558518543,3988,98
+glm-4-7,GLM-4.7,zhipu,open_weights,webdev,GLM-4.7,name,2026-11-23,1436.0192312384359,1423.9653426716116,1448.0731198052601,3988,98
 glm-4-7-flash,GLM 4.7 Flash,zhipu,open_weights,text,glm-4.7-flash,name,2026-01-27,1345.448184831919,1334.6702708105015,1356.2260988533365,3026,101
 glm-4-7-flash,GLM 4.7 Flash,zhipu,open_weights,text,glm-4.7-flash,name,2026-01-29,1347.7896620856827,1338.3497975086698,1357.229526662696,4090,102
 glm-4-7-flash,GLM 4.7 Flash,zhipu,open_weights,text,glm-4.7-flash,name,2026-02-06,1345.7548340828184,1337.9439180508225,1353.5657501148146,6255,107
@@ -23218,6 +23267,7 @@ glm-5,GLM-5,zhipu,open_weights,webdev,GLM-5,name,2026-11-18,1434.9752302534769,1
 glm-5,GLM-5,zhipu,open_weights,webdev,GLM-5,name,2026-11-19,1434.8410894870901,1426.6424751204688,1443.0397038537114,7431,98
 glm-5,GLM-5,zhipu,open_weights,webdev,GLM-5,name,2026-11-20,1434.875875658062,1426.6723545137374,1443.0793968023863,7430,98
 glm-5,GLM-5,zhipu,open_weights,webdev,GLM-5,name,2026-11-22,1434.8364338006375,1426.6331306088896,1443.0397369923853,7429,100
+glm-5,GLM-5,zhipu,open_weights,webdev,GLM-5,name,2026-11-23,1434.7886227063495,1426.5855515619762,1442.9916938507226,7429,100
 glm-5-1,GLM-5.1,zhipu,open_weights,text,glm-5.1,name,2026-04-07,1464.4021528127878,1455.007112148967,1473.7971934766088,3743,8
 glm-5-1,GLM-5.1,zhipu,open_weights,text,glm-5.1,name,2026-04-09,1467.7225170323575,1459.5753154597846,1475.86971860493,5096,8
 glm-5-1,GLM-5.1,zhipu,open_weights,text,glm-5.1,name,2026-04-10,1468.231048990801,1460.2509575981935,1476.2111403834083,5326,8
@@ -23428,6 +23478,7 @@ glm-5-1,GLM-5.1,zhipu,open_weights,webdev,GLM-5.1,name,2026-11-18,1508.139215377
 glm-5-1,GLM-5.1,zhipu,open_weights,webdev,GLM-5.1,name,2026-11-19,1508.1112141817766,1501.2966183626086,1514.9258100009445,10513,73
 glm-5-1,GLM-5.1,zhipu,open_weights,webdev,GLM-5.1,name,2026-11-20,1508.065956480597,1501.2482346988286,1514.8836782623648,10506,73
 glm-5-1,GLM-5.1,zhipu,open_weights,webdev,GLM-5.1,name,2026-11-22,1508.2193523644025,1501.3995354405156,1515.0391692882897,10497,74
+glm-5-1,GLM-5.1,zhipu,open_weights,webdev,GLM-5.1,name,2026-11-23,1508.10517802282,1501.2859385019433,1514.924417543697,10497,74
 glm-5-2,GLM-5.2,zhipu,open_weights,text,glm-5.2 (max),name,2026-06-16,1466.6316444972363,1456.4041535987005,1476.8591353957718,3357,16
 glm-5-2,GLM-5.2,zhipu,open_weights,text,glm-5.2 (max),name,2026-06-25,1464.7854165346075,1457.4295722271377,1472.1412608420776,7552,17
 glm-5-2,GLM-5.2,zhipu,open_weights,text,glm-5.2 (max),name,2026-07-02,1463.4457653441268,1456.5217344181738,1470.3697962700799,9338,17
@@ -23569,6 +23620,7 @@ glm-5-2,GLM-5.2,zhipu,open_weights,webdev,GLM-5.2 (Max),name,2026-11-18,1607.540
 glm-5-2,GLM-5.2,zhipu,open_weights,webdev,GLM-5.2 (Max),name,2026-11-19,1607.4733793580479,1601.5949789838685,1613.3517797322272,17837,43
 glm-5-2,GLM-5.2,zhipu,open_weights,webdev,GLM-5.2 (Max),name,2026-11-20,1607.5086828006774,1601.628770483781,1613.3885951175735,17837,43
 glm-5-2,GLM-5.2,zhipu,open_weights,webdev,GLM-5.2 (Max),name,2026-11-22,1607.335758974533,1601.4583517005387,1613.2131662485276,17823,43
+glm-5-2,GLM-5.2,zhipu,open_weights,webdev,GLM-5.2 (Max),name,2026-11-23,1607.3921597419799,1601.512114339639,1613.272205144321,17818,43
 glm-5-3,GLM-5.3,zhipu,open_weights,text,glm-5.3-max,name,2026-08-19,1474.0046897010106,1462.522660003176,1485.4867193988453,2698,19
 glm-5-3,GLM-5.3,zhipu,open_weights,text,glm-5.3-max,name,2026-08-21,1476.929093287472,1467.056715442164,1486.8014711327796,3751,15
 glm-5-3,GLM-5.3,zhipu,open_weights,text,glm-5.3-max,name,2026-08-27,1474.6651366326478,1466.5272487507816,1482.803024514514,5820,18
@@ -23651,6 +23703,7 @@ glm-5-3,GLM-5.3,zhipu,open_weights,webdev,GLM-5.3 (Max),name,2026-11-18,1622.441
 glm-5-3,GLM-5.3,zhipu,open_weights,webdev,GLM-5.3 (Max),name,2026-11-19,1621.8463546165178,1615.232669722225,1628.460039510811,13737,34
 glm-5-3,GLM-5.3,zhipu,open_weights,webdev,GLM-5.3 (Max),name,2026-11-20,1622.6581163151664,1616.0425188959416,1629.273713734391,13776,34
 glm-5-3,GLM-5.3,zhipu,open_weights,webdev,GLM-5.3 (Max),name,2026-11-22,1622.9511692846652,1616.3702886912288,1629.5320498781018,13904,34
+glm-5-3,GLM-5.3,zhipu,open_weights,webdev,GLM-5.3 (Max),name,2026-11-23,1623.0219356379225,1616.4494628572074,1629.5944084186372,13948,34
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,text,glm-5.3-flash,name,2026-08-27,1465.8110568853576,1453.8590090996645,1477.763104671051,2424,28
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,text,glm-5.3-flash,name,2026-09-01,1470.909051464369,1461.805266359691,1480.012836569047,4399,23
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,text,glm-5.3-flash,name,2026-09-02,1470.8396223086356,1461.9597270777788,1479.7195175394925,4672,25
@@ -23737,6 +23790,7 @@ glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,GLM-5.3-Flash,name,20
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,GLM-5.3-Flash,name,2026-11-19,1610.3142482750186,1604.2621780991024,1616.3663184509348,24714,40
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,GLM-5.3-Flash,name,2026-11-20,1610.4774625556197,1604.4309819072564,1616.5239432039834,24789,40
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,GLM-5.3-Flash,name,2026-11-22,1610.7839118554873,1604.7618975880378,1616.8059261229366,24928,40
+glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,GLM-5.3-Flash,name,2026-11-23,1611.0532405732251,1605.0388488149606,1617.0676323314901,25005,40
 glm-5v-turbo,glm-5v-turbo,zhipu,api_only,text,glm-5v-turbo,name,2026-07-10,1443.2820148588785,1433.0047898757803,1453.5592398419763,3358,45
 glm-5v-turbo,glm-5v-turbo,zhipu,api_only,text,glm-5v-turbo,name,2026-07-12,1444.4782285342167,1435.1064583346204,1453.849998733813,4147,43
 glm-5v-turbo,glm-5v-turbo,zhipu,api_only,text,glm-5v-turbo,name,2026-07-14,1441.383721460624,1432.14124928077,1450.626193640478,4293,48
@@ -27759,6 +27813,7 @@ gpt-5,GPT-5,openai,api_only,webdev,GPT-5 (Medium),name,2026-11-18,1417.541355154
 gpt-5,GPT-5,openai,api_only,webdev,GPT-5 (Medium),name,2026-11-19,1417.5394742783676,1401.9302191688007,1433.1487293879345,3075,103
 gpt-5,GPT-5,openai,api_only,webdev,GPT-5 (Medium),name,2026-11-20,1417.542224556689,1401.9304540285339,1433.153995084844,3075,103
 gpt-5,GPT-5,openai,api_only,webdev,GPT-5 (Medium),name,2026-11-22,1417.620580986529,1402.0082615160036,1433.2329004570543,3076,104
+gpt-5,GPT-5,openai,api_only,webdev,GPT-5 (Medium),name,2026-11-23,1417.585295566434,1401.9733185963169,1433.197272536551,3076,104
 gpt-5-1,GPT-5.1,openai,api_only,text,gpt-5.1,name,2025-11-16,1424.0901636547444,1411.817440187401,1436.3628871220878,2341,16
 gpt-5-1,GPT-5.1,openai,api_only,text,gpt-5.1,name,2025-11-17,1422.9740839203428,1410.287799259925,1435.6603685807606,2153,16
 gpt-5-1,GPT-5.1,openai,api_only,text,gpt-5.1,name,2025-11-18,1414.563803636358,1404.4108022556477,1424.7168050170685,3828,28
@@ -28511,6 +28566,8 @@ gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1,name,2026-11-20,1342.346752400471
 gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1 (Medium),name,2026-11-20,1397.2488535429338,1385.6455009802798,1408.8522061055874,4878,113
 gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1,name,2026-11-22,1342.2417008756522,1333.6750398549323,1350.8083618963724,10627,133
 gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1 (Medium),name,2026-11-22,1397.44971140007,1385.8433824337192,1409.0560403664213,4876,114
+gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1,name,2026-11-23,1342.2118690902225,1333.6469385255036,1350.7767996549412,10629,133
+gpt-5-1,GPT-5.1,openai,api_only,webdev,GPT-5.1 (Medium),name,2026-11-23,1397.4225554469785,1385.816420360743,1409.0286905332146,4876,114
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,gpt-5.1-codex,name,2025-11-21,1336.412713385979,1321.6689342972377,1351.1564924747204,1862,10
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,gpt-5.1-codex,name,2025-11-25,1339.8448425008098,1326.7516765710568,1352.9380084305628,2493,10
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,gpt-5.1-codex,name,2025-11-26,1340.21816647314,1327.7754003315167,1352.6609326147632,2793,12
@@ -28621,6 +28678,7 @@ gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,GPT-5.1-Codex,name,2026-11-18
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,GPT-5.1-Codex,name,2026-11-19,1338.0534919459199,1326.4085451760327,1349.6984387158072,4967,135
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,GPT-5.1-Codex,name,2026-11-20,1338.0236603342973,1326.3757486792124,1349.6715719893828,4968,135
 gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,GPT-5.1-Codex,name,2026-11-22,1338.2736481016634,1326.6255431216096,1349.921753081717,4964,136
+gpt-5-1-codex,GPT-5.1-Codex,openai,api_only,webdev,GPT-5.1-Codex,name,2026-11-23,1338.2453190761416,1326.5975287538754,1349.8931093984074,4964,136
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,gpt-5.1-codex-mini,name,2025-11-21,1252.0086565313472,1235.6535468836223,1268.363766179072,1560,14
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,gpt-5.1-codex-mini,name,2025-11-25,1252.499873977189,1236.143850239952,1268.8558977144262,1562,15
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,gpt-5.1-codex-mini,name,2025-11-26,1253.426251876489,1237.140632700981,1269.7118710519967,1563,17
@@ -28731,6 +28789,7 @@ gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,GPT-5.1-Codex-Mini,
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,GPT-5.1-Codex-Mini,name,2026-11-19,1243.5066707888836,1221.2330400002922,1265.7803015774748,1135,149
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,GPT-5.1-Codex-Mini,name,2026-11-20,1243.516910149861,1221.2412575250796,1265.7925627746417,1135,149
 gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,GPT-5.1-Codex-Mini,name,2026-11-22,1243.520297979182,1221.2441661713067,1265.7964297870576,1135,151
+gpt-5-1-codex-mini,GPT-5.1-Codex-mini,openai,api_only,webdev,GPT-5.1-Codex-Mini,name,2026-11-23,1243.4859029153295,1221.2101420349545,1265.7616637957044,1135,151
 gpt-5-2,GPT-5.2,openai,api_only,text,gpt-5.2-high,name,2025-12-16,1418.9814844953278,1410.3361175797004,1427.6268514109552,6035,27
 gpt-5-2,GPT-5.2,openai,api_only,text,gpt-5.2,name,2025-12-18,1419.2496940272115,1406.8021492886485,1431.697238765775,2349,25
 gpt-5-2,GPT-5.2,openai,api_only,text,gpt-5.2-high,name,2025-12-18,1418.37480973507,1409.7940360040946,1426.9555834660453,6187,30
@@ -29314,6 +29373,7 @@ gpt-5-2,GPT-5.2,openai,api_only,webdev,GPT-5.2,name,2026-11-18,1418.989661320239
 gpt-5-2,GPT-5.2,openai,api_only,webdev,GPT-5.2,name,2026-11-19,1418.949119261986,1396.2435359624087,1441.6547025615632,1074,102
 gpt-5-2,GPT-5.2,openai,api_only,webdev,GPT-5.2,name,2026-11-20,1418.956024499078,1396.248443543438,1441.6636054547184,1074,102
 gpt-5-2,GPT-5.2,openai,api_only,webdev,GPT-5.2,name,2026-11-22,1418.9775048431984,1396.2686946000656,1441.686315086331,1074,103
+gpt-5-2,GPT-5.2,openai,api_only,webdev,GPT-5.2,name,2026-11-23,1418.9492398164925,1396.240397346436,1441.6580822865492,1074,103
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,text,GPT-5.2 Chat (20260210),name_one_snapshot,2026-10-20,1438.315501204859,1434.3195281137228,1442.3114742959954,35991,79
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,text,GPT-5.2 Chat (20260210),name_one_snapshot,2026-10-22,1438.4699948410193,1434.4744349835678,1442.4655546984714,35982,78
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,text,GPT-5.2 Chat (20260210),name_one_snapshot,2026-10-28,1438.4978566547375,1434.5034036996658,1442.4923096098096,35974,80
@@ -29438,6 +29498,7 @@ gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,GPT-5.2-Codex,name,2026-11-18
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,GPT-5.2-Codex,name,2026-11-19,1338.7474412703345,1329.7561134782502,1347.7387690624187,6671,134
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,GPT-5.2-Codex,name,2026-11-20,1338.7440454135997,1329.7469620850752,1347.7411287421241,6670,134
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,GPT-5.2-Codex,name,2026-11-22,1338.919820972687,1329.9235636790859,1347.916078266288,6667,135
+gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,GPT-5.2-Codex,name,2026-11-23,1338.74655107026,1329.7521985140506,1347.7409036264698,6669,135
 gpt-5-4,GPT-5.4,openai,api_only,text,gpt-5.4,name,2026-03-11,1448.1145338467425,1438.7687617996394,1457.4603058938455,4055,13
 gpt-5-4,GPT-5.4,openai,api_only,text,gpt-5.4-high,name,2026-03-11,1411.2971824658227,1401.7763180497177,1420.818046881928,4017,63
 gpt-5-4,GPT-5.4,openai,api_only,text,gpt-5.4,name,2026-03-16,1448.4710563351573,1439.9423614953264,1456.9997511749884,4957,17
@@ -29845,6 +29906,7 @@ gpt-5-4,GPT-5.4,openai,api_only,webdev,GPT-5.4,name,2026-11-18,1399.912073088056
 gpt-5-4,GPT-5.4,openai,api_only,webdev,GPT-5.4,name,2026-11-19,1399.704174231291,1389.8448660977228,1409.5634823648593,4628,110
 gpt-5-4,GPT-5.4,openai,api_only,webdev,GPT-5.4,name,2026-11-20,1399.9929732440903,1390.134976095554,1409.8509703926266,4626,109
 gpt-5-4,GPT-5.4,openai,api_only,webdev,GPT-5.4,name,2026-11-22,1400.2700263984652,1390.4112797753369,1410.1287730215936,4619,109
+gpt-5-4,GPT-5.4,openai,api_only,webdev,GPT-5.4,name,2026-11-23,1399.88973631533,1390.029922181645,1409.749550449015,4620,111
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,text,gpt-5.4-mini-high,name,2026-03-18,1434.217639921227,1413.6487978983475,1454.786481944106,786,31
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,text,gpt-5.4-mini-high,name,2026-03-19,1430.2638558118758,1411.9373079320678,1448.5904036916836,979,33
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,text,gpt-5.4-mini-high,name,2026-03-20,1419.1882730634668,1404.8460240346958,1433.530522092238,1638,52
@@ -30103,6 +30165,7 @@ gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,GPT-5.4 mini (High),name,2026-1
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,GPT-5.4 mini (High),name,2026-11-19,1398.0580478306229,1391.4856711605253,1404.6304245007204,11791,112
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,GPT-5.4 mini (High),name,2026-11-20,1398.17746747263,1391.5990652737955,1404.7558696714646,11782,111
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,GPT-5.4 mini (High),name,2026-11-22,1397.9827710140364,1391.4045579959636,1404.560984032109,11773,113
+gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,GPT-5.4 mini (High),name,2026-11-23,1398.0933984071448,1391.517285535942,1404.669511278348,11783,112
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,text,gpt-5.4-nano-high,name,2026-03-18,1363.785893791906,1325.9105623443827,1401.6612252394289,229,116
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,text,gpt-5.4-nano-high,name,2026-03-19,1370.0174133926284,1336.4690833534155,1403.565743431841,290,107
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,text,gpt-5.4-nano-high,name,2026-03-20,1373.4855995094197,1355.278794243298,1391.6924047755413,1008,105
@@ -31633,6 +31696,7 @@ gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,GPT-6.1 Sol (Max),name,2026-11-18
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,GPT-6.1 Sol (Max),name,2026-11-19,1743.6559423458189,1734.4836526307442,1752.8282320608935,6459,10
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,GPT-6.1 Sol (Max),name,2026-11-20,1743.3593118201588,1734.23188324974,1752.4867403905778,6538,10
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,GPT-6.1 Sol (Max),name,2026-11-22,1744.4402610654995,1735.4189093197747,1753.461612811224,6699,10
+gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,GPT-6.1 Sol (Max),name,2026-11-23,1744.7305522570327,1735.7337398068244,1753.7273647072411,6737,10
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text,GPT-6.1 Terra (Max),name,2026-11-19,1426.0322782340704,1418.2109937920723,1433.8535626760688,8278,106
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text,GPT-6.1 Terra (Max),name,2026-11-22,1426.0173531911273,1418.4816503771517,1433.553056005103,9100,106
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text_style_control,GPT-6.1 Terra (Max),name,2026-11-19,1474.1416573960823,1466.2523063579415,1482.0310084342227,8278,44
@@ -31650,6 +31714,7 @@ gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-11-19,1684.181755431481,1674.6467031110335,1693.7168077519284,5170,16
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-11-20,1685.431213188368,1675.9243183198691,1694.9381080568673,5239,16
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-11-22,1686.413765504842,1677.035569468246,1695.7919615414385,5390,16
+gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-11-23,1686.2645897755729,1676.9396068118785,1695.5895727392667,5462,16
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,text,GPT-6.2 Astra (Max),name,2026-11-19,1414.1633904154094,1401.7604239275677,1426.566356903251,2398,141
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,text,GPT-6.2 Astra (Max),name,2026-11-22,1413.329882319853,1404.6807423535006,1421.9790222862057,5268,142
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,text_style_control,GPT-6.2 Astra (Max),name,2026-11-19,1468.220705643531,1455.8237413099118,1480.6176699771504,2398,55
@@ -31658,6 +31723,7 @@ gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,webdev,GPT-6.2 Astra (Max),name,2026
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,webdev,GPT-6.2 Astra (Max),name,2026-11-19,1759.2790499354217,1743.8076115159345,1774.7504883549088,1848,7
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,webdev,GPT-6.2 Astra (Max),name,2026-11-20,1766.1844637793192,1750.878568724183,1781.490358834455,1913,5
 gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,webdev,GPT-6.2 Astra (Max),name,2026-11-22,1759.4459073817447,1744.8180928481743,1774.0737219153154,2088,7
+gpt-6-2-astra,GPT-6.2 Astra,openai,api_only,webdev,GPT-6.2 Astra (Max),name,2026-11-23,1760.6727670955838,1746.3172360362132,1775.028298154954,2170,7
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,text,GPT-6.2 Sol (Max),name,2026-11-19,1414.2604657557658,1402.30325708458,1426.2176744269516,2541,140
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,text,GPT-6.2 Sol (Max),name,2026-11-22,1413.6613007109495,1405.2211450642349,1422.1014563576646,5526,141
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,text_style_control,GPT-6.2 Sol (Max),name,2026-11-19,1464.7033984474492,1452.713504024634,1476.6932928702645,2541,64
@@ -31666,6 +31732,7 @@ gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,webdev,GPT-6.2 Sol (Max),name,2026-11-18
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,webdev,GPT-6.2 Sol (Max),name,2026-11-19,1754.5128820616385,1739.5689411828662,1769.4568229404106,1947,8
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,webdev,GPT-6.2 Sol (Max),name,2026-11-20,1754.042714895044,1739.462105212463,1768.6233245776248,2067,8
 gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,webdev,GPT-6.2 Sol (Max),name,2026-11-22,1755.0678190213337,1741.004133003554,1769.1315050391136,2247,8
+gpt-6-2-sol,GPT-6.2 Sol,openai,api_only,webdev,GPT-6.2 Sol (Max),name,2026-11-23,1754.823285761312,1740.9739735809553,1768.6725979416688,2336,8
 gpt-6-astra,GPT-6 Astra,openai,api_only,text,gpt-6-astra-max,name,2026-09-11,1441.8292574056338,1428.5824128230106,1455.076101988257,2059,61
 gpt-6-astra,GPT-6 Astra,openai,api_only,text,gpt-6-astra-max,name,2026-09-13,1443.7243904445113,1432.0809442661064,1455.3678366229162,2693,59
 gpt-6-astra,GPT-6 Astra,openai,api_only,text,gpt-6-astra-max,name,2026-09-25,1442.8889572695782,1435.4119357691086,1450.3659787700478,7185,64
@@ -31741,6 +31808,7 @@ gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,GPT-6 Astra (Max),name,2026-11-18
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,GPT-6 Astra (Max),name,2026-11-19,1763.076436152142,1754.929805472818,1771.2230668314658,9316,6
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,GPT-6 Astra (Max),name,2026-11-20,1763.9611761987949,1755.835445623472,1772.0869067741178,9391,7
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,GPT-6 Astra (Max),name,2026-11-22,1764.3365718071632,1756.2615576417488,1772.4115859725773,9495,6
+gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,GPT-6 Astra (Max),name,2026-11-23,1763.6447154168923,1755.5878947246115,1771.7015361091735,9541,6
 gpt-6-luna,gpt-6-luna,openai,api_only,text,gpt-6-luna-max,name,2026-09-25,1392.4179997629763,1383.7054762057653,1401.130523320187,4792,158
 gpt-6-luna,gpt-6-luna,openai,api_only,text,gpt-6-luna-max,name,2026-09-30,1392.800323220276,1385.6367777378114,1399.9638687027405,7654,159
 gpt-6-luna,gpt-6-luna,openai,api_only,text,gpt-6-luna-max,name,2026-10-02,1391.4764807064155,1384.9547465921305,1397.9982148207002,10014,163
@@ -31804,6 +31872,7 @@ gpt-6-luna,gpt-6-luna,openai,api_only,webdev,GPT-6 Luna (Max),name,2026-11-18,15
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,GPT-6 Luna (Max),name,2026-11-19,1578.7351098582317,1572.8749621011896,1584.5952576152738,32231,51
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,GPT-6 Luna (Max),name,2026-11-20,1578.321646218737,1572.4709098060011,1584.1723826314728,32346,51
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,GPT-6 Luna (Max),name,2026-11-22,1578.6377859741026,1572.8013095166596,1584.4742624315459,32519,51
+gpt-6-luna,gpt-6-luna,openai,api_only,webdev,GPT-6 Luna (Max),name,2026-11-23,1578.6975414663725,1572.8687057643965,1584.5263771683485,32623,51
 gpt-6-sol,gpt-6-sol,openai,api_only,text,gpt-6-sol-max,name,2026-09-25,1395.797278939484,1386.9759119705132,1404.6186459084547,4773,153
 gpt-6-sol,gpt-6-sol,openai,api_only,text,gpt-6-sol-max,name,2026-09-30,1394.0176646182867,1386.7433214750813,1401.2920077614917,7574,156
 gpt-6-sol,gpt-6-sol,openai,api_only,text,gpt-6-sol-max,name,2026-10-02,1395.4178028385118,1388.4778731294423,1402.357732547581,8787,158
@@ -31868,6 +31937,7 @@ gpt-6-sol,gpt-6-sol,openai,api_only,webdev,GPT-6 Sol (Max),name,2026-11-18,1674.
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,GPT-6 Sol (Max),name,2026-11-19,1674.334965009223,1666.454806903616,1682.2151231148298,8303,20
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,GPT-6 Sol (Max),name,2026-11-20,1674.4293973521571,1666.5787978513022,1682.2799968530126,8376,19
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,GPT-6 Sol (Max),name,2026-11-22,1674.8160322803112,1667.0210084414728,1682.61105611915,8512,19
+gpt-6-sol,gpt-6-sol,openai,api_only,webdev,GPT-6 Sol (Max),name,2026-11-23,1674.5323280937087,1666.760810742344,1682.3038454450734,8574,19
 gpt-oss-120b,gpt-oss-120b,openai,open_weights,text,gpt-oss-120b,name,2025-08-07,1390.7169748347126,1365.695573478047,1415.7383761913782,547,16
 gpt-oss-120b,gpt-oss-120b,openai,open_weights,text,gpt-oss-120b,name,2025-08-14,1371.0801885854348,1362.1045630590495,1380.0558141118204,4458,28
 gpt-oss-120b,gpt-oss-120b,openai,open_weights,text,gpt-oss-120b,name,2025-08-18,1367.995031535863,1359.3272255089903,1376.6628375627356,4807,30
@@ -34027,6 +34097,7 @@ granite-4-1-8b,Granite 4.1 8B,ibm,open_weights,webdev,Granite 4.1 8B,name,2026-1
 granite-4-1-8b,Granite 4.1 8B,ibm,open_weights,webdev,Granite 4.1 8B,name,2026-11-19,1192.7445349581203,1174.2432525920337,1211.245817324207,1759,157
 granite-4-1-8b,Granite 4.1 8B,ibm,open_weights,webdev,Granite 4.1 8B,name,2026-11-20,1192.7908342191686,1174.2881460893395,1211.2935223489972,1759,157
 granite-4-1-8b,Granite 4.1 8B,ibm,open_weights,webdev,Granite 4.1 8B,name,2026-11-22,1193.3677870471124,1174.7940864485827,1211.9414876456422,1745,158
+granite-4-1-8b,Granite 4.1 8B,ibm,open_weights,webdev,Granite 4.1 8B,name,2026-11-23,1192.7632261304452,1174.2606862783227,1211.2657659825682,1759,158
 granite-4-2-30b,granite-4.2-30b,ibm,open_weights,text,granite-4.2-30b,name,2026-09-01,1362.5549595369964,1351.9338489011202,1373.1760701728726,3287,177
 granite-4-2-30b,granite-4.2-30b,ibm,open_weights,text,granite-4.2-30b,name,2026-09-02,1362.977782466358,1352.3434650922622,1373.6120998404538,3275,178
 granite-4-2-30b,granite-4.2-30b,ibm,open_weights,text,granite-4.2-30b,name,2026-09-11,1363.0669619109487,1352.42174127426,1373.7121825476374,3261,180
@@ -35305,6 +35376,7 @@ grok-4-1,Grok 4.1,xai,api_only,webdev,Grok 4.1 (Thinking),name,2026-11-18,1216.0
 grok-4-1,Grok 4.1,xai,api_only,webdev,Grok 4.1 (Thinking),name,2026-11-19,1215.9921603615562,1191.0218984556438,1240.9624222674684,955,155
 grok-4-1,Grok 4.1,xai,api_only,webdev,Grok 4.1 (Thinking),name,2026-11-20,1216.008833996032,1191.0367741289401,1240.980893863124,955,155
 grok-4-1,Grok 4.1,xai,api_only,webdev,Grok 4.1 (Thinking),name,2026-11-22,1216.0148285718155,1191.0418073293863,1240.987849814245,955,156
+grok-4-1,Grok 4.1,xai,api_only,webdev,Grok 4.1 (Thinking),name,2026-11-23,1215.9820553143031,1191.009416640401,1240.9546939882048,955,156
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,text,grok-4-1-fast-reasoning,name,2025-11-26,1401.273289772657,1389.5246025379631,1413.0219770073516,2774,43
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,text,grok-4-1-fast-reasoning,name,2025-12-01,1409.9638645228265,1400.922712192361,1419.005016853292,5128,38
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,text,grok-4-1-fast-reasoning,name,2025-12-04,1408.1669286166918,1400.0574566792525,1416.2764005541314,6534,41
@@ -35663,6 +35735,7 @@ grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,Grok 4.1 Fast (Reasoning),name,2
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,Grok 4.1 Fast (Reasoning),name,2026-11-19,1241.6770415619587,1230.5060816369287,1252.8480014869888,5452,151
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,Grok 4.1 Fast (Reasoning),name,2026-11-20,1241.703876998508,1230.5296088187579,1252.878145178258,5452,151
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,Grok 4.1 Fast (Reasoning),name,2026-11-22,1241.6696587799222,1230.4881768914552,1252.8511406683895,5449,152
+grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,Grok 4.1 Fast (Reasoning),name,2026-11-23,1241.6294879826992,1230.4485208192623,1252.810455146136,5449,152
 grok-4-3,grok-4.3,xai,api_only,text,grok-4.3,name,2026-05-01,1425.958483837096,1414.8507224236887,1437.0662452505035,2505,54
 grok-4-3,grok-4.3,xai,api_only,text,grok-4.3,name,2026-05-06,1425.6218880326412,1417.5840680525766,1433.6597080127058,5011,55
 grok-4-3,grok-4.3,xai,api_only,text,grok-4.3,name,2026-05-07,1425.808569969946,1417.941425823025,1433.6757141168669,5234,55
@@ -35867,6 +35940,7 @@ grok-4-3,grok-4.3,xai,api_only,webdev,Grok 4.3,name,2026-11-18,1357.372286281059
 grok-4-3,grok-4.3,xai,api_only,webdev,Grok 4.3,name,2026-11-19,1357.4057386679779,1351.1244244363436,1363.6870528996124,14667,128
 grok-4-3,grok-4.3,xai,api_only,webdev,Grok 4.3,name,2026-11-20,1357.5090925940954,1351.2265616269697,1363.791623561221,14661,128
 grok-4-3,grok-4.3,xai,api_only,webdev,Grok 4.3,name,2026-11-22,1357.4500225996235,1351.1663708067692,1363.733674392478,14636,129
+grok-4-3,grok-4.3,xai,api_only,webdev,Grok 4.3,name,2026-11-23,1357.4271590044264,1351.1461920196434,1363.7081259892093,14652,129
 grok-4-5,Grok 4.5,xai,api_only,text,grok-4.5,name,2026-07-10,1455.0098681927147,1444.4339159121087,1465.5858204733208,3224,28
 grok-4-5,Grok 4.5,xai,api_only,text,grok-4.5,name,2026-07-12,1451.6819677923459,1442.158404277442,1461.2055313072494,4103,31
 grok-4-5,Grok 4.5,xai,api_only,text,grok-4.5,name,2026-07-14,1450.5646978173475,1441.2006610495248,1459.9287345851699,4252,31
@@ -36013,6 +36087,7 @@ grok-4-5,Grok 4.5,xai,api_only,webdev,Grok 4.5,name,2026-11-18,1552.347247110186
 grok-4-5,Grok 4.5,xai,api_only,webdev,Grok 4.5,name,2026-11-19,1552.3494809613587,1545.628336222971,1559.0706256997462,10756,57
 grok-4-5,Grok 4.5,xai,api_only,webdev,Grok 4.5,name,2026-11-20,1552.3928346054745,1545.6700779651023,1559.1155912458462,10754,57
 grok-4-5,Grok 4.5,xai,api_only,webdev,Grok 4.5,name,2026-11-22,1552.3972741184702,1545.6753835423945,1559.119164694546,10739,58
+grok-4-5,Grok 4.5,xai,api_only,webdev,Grok 4.5,name,2026-11-23,1552.4448958178587,1545.7232518040978,1559.16653983162,10737,58
 grok-4-6,Grok 4.6,xai,api_only,text,grok-4.6-high,name,2026-08-12,1446.35180952003,1434.4893947607868,1458.2142242792731,2448,44
 grok-4-6,Grok 4.6,xai,api_only,text,grok-4.6-high,name,2026-08-19,1444.3740010022693,1434.3091719504432,1454.438830054096,3478,54
 grok-4-6,Grok 4.6,xai,api_only,text,grok-4.6-high,name,2026-08-21,1443.7345059556712,1433.6623242044946,1453.806687706848,3473,54
@@ -36105,6 +36180,7 @@ grok-4-6,Grok 4.6,xai,api_only,webdev,Grok 4.6 (High),name,2026-11-18,1617.99693
 grok-4-6,Grok 4.6,xai,api_only,webdev,Grok 4.6 (High),name,2026-11-19,1617.865904705778,1610.9358814742804,1624.7959279372756,12121,38
 grok-4-6,Grok 4.6,xai,api_only,webdev,Grok 4.6 (High),name,2026-11-20,1617.9532275125075,1611.0236674507005,1624.8827875743145,12125,38
 grok-4-6,Grok 4.6,xai,api_only,webdev,Grok 4.6 (High),name,2026-11-22,1618.0648991739006,1611.1358144710184,1624.9939838767827,12097,38
+grok-4-6,Grok 4.6,xai,api_only,webdev,Grok 4.6 (High),name,2026-11-23,1618.071048155995,1611.1409790476496,1625.0011172643408,12088,38
 grok-4-7,Grok 4.7,xai,api_only,text,grok-4.7-xhigh,name,2026-09-25,1397.2344693547072,1387.7840821341763,1406.6848565752384,4114,148
 grok-4-7,Grok 4.7,xai,api_only,text,grok-4.7-xhigh,name,2026-09-30,1399.8374244882102,1391.665434231164,1408.0094147452564,5675,148
 grok-4-7,Grok 4.7,xai,api_only,text,grok-4.7-xhigh,name,2026-10-02,1399.8492021397637,1392.0858268448237,1407.612577434704,6405,151
@@ -36170,6 +36246,7 @@ grok-4-7,Grok 4.7,xai,api_only,webdev,Grok 4.7 (xHigh),name,2026-11-18,1639.0245
 grok-4-7,Grok 4.7,xai,api_only,webdev,Grok 4.7 (xHigh),name,2026-11-19,1637.9690221244643,1630.45002164636,1645.4880226025687,9273,29
 grok-4-7,Grok 4.7,xai,api_only,webdev,Grok 4.7 (xHigh),name,2026-11-20,1638.9189709011612,1631.4090431024433,1646.428898699879,9336,29
 grok-4-7,Grok 4.7,xai,api_only,webdev,Grok 4.7 (xHigh),name,2026-11-22,1639.494292854653,1632.039853928559,1646.948731780747,9458,29
+grok-4-7,Grok 4.7,xai,api_only,webdev,Grok 4.7 (xHigh),name,2026-11-23,1639.0292895238558,1631.5994987590511,1646.4590802886605,9526,29
 grok-4-fast,Grok 4 Fast,xai,api_only,text,grok-4-fast-reasoning,name,2025-09-30,1388.890267817412,1377.0770895834892,1400.7034460513348,2454,32
 grok-4-fast,Grok 4 Fast,xai,api_only,text,grok-4-fast-reasoning,name,2025-10-01,1388.727652187914,1377.5558384300168,1399.899465945811,2730,33
 grok-4-fast,Grok 4 Fast,xai,api_only,text,grok-4-fast-reasoning,name,2025-10-03,1391.7333242320026,1381.445810803143,1402.0208376608618,3243,35
@@ -36515,6 +36592,7 @@ grok-4-fast,Grok 4 Fast,xai,api_only,webdev,Grok 4 Fast (Reasoning),name,2026-11
 grok-4-fast,Grok 4 Fast,xai,api_only,webdev,Grok 4 Fast (Reasoning),name,2026-11-19,1159.0371665925506,1131.6252210074517,1186.4491121776496,742,160
 grok-4-fast,Grok 4 Fast,xai,api_only,webdev,Grok 4 Fast (Reasoning),name,2026-11-20,1159.0526808628842,1131.6390409157038,1186.4663208100646,742,160
 grok-4-fast,Grok 4 Fast,xai,api_only,webdev,Grok 4 Fast (Reasoning),name,2026-11-22,1158.4915651806223,1131.028199350527,1185.9549310107175,741,161
+grok-4-fast,Grok 4 Fast,xai,api_only,webdev,Grok 4 Fast (Reasoning),name,2026-11-23,1158.460344568934,1130.9972536470627,1185.9234354908053,741,161
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,grok-code-fast-1,name,2025-11-12,1123.9001970050815,1091.7092427390153,1156.0911512711475,373,8
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,grok-code-fast-1,name,2025-11-16,1115.8041172088,1092.17476933351,1139.4334650840904,752,14
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,grok-code-fast-1,name,2025-11-17,1116.3054726947378,1092.6442503974474,1139.966694992028,752,14
@@ -36628,6 +36706,7 @@ grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,Grok Code Fast 1,name,2026
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,Grok Code Fast 1,name,2026-11-19,1165.8611891739897,1137.4571465901236,1194.2652317578559,780,159
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,Grok Code Fast 1,name,2026-11-20,1165.8776036207064,1137.471650040593,1194.2835572008194,780,159
 grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,Grok Code Fast 1,name,2026-11-22,1165.814587866719,1137.4053373568634,1194.2238383765748,780,160
+grok-code-fast-1,Grok Code Fast 1,xai,api_only,webdev,Grok Code Fast 1,name,2026-11-23,1165.78075358674,1137.371763658266,1194.1897435152136,780,160
 hunyuan-large,Hunyuan-Large,tencent,open_weights,text,hunyuan-large-2025-02-10,name_one_snapshot,2025-02-27,1269.190024181345,1260.5056684001859,1277.7278369310109,3635,26
 hunyuan-large,Hunyuan-Large,tencent,open_weights,text,hunyuan-large-2025-02-10,name_one_snapshot,2025-03-03,1271.345403398806,1260.2901913527417,1280.4839000614854,3860,28
 hunyuan-large,Hunyuan-Large,tencent,open_weights,text,hunyuan-large-2025-02-10,name_one_snapshot,2025-03-11,1271.6159196920385,1261.8684903122794,1279.4582861595882,3863,28
@@ -36991,6 +37070,7 @@ hy3-preview,hy3-preview,tencent,open_weights,webdev,Hy3 preview,name,2026-11-18,
 hy3-preview,hy3-preview,tencent,open_weights,webdev,Hy3 preview,name,2026-11-19,1358.8710386542714,1341.404096716646,1376.3379805918967,1426,126
 hy3-preview,hy3-preview,tencent,open_weights,webdev,Hy3 preview,name,2026-11-20,1358.7906614729784,1341.3060425902238,1376.275280355733,1425,126
 hy3-preview,hy3-preview,tencent,open_weights,webdev,Hy3 preview,name,2026-11-22,1358.9424324436625,1341.4399688763885,1376.4448960109366,1422,127
+hy3-preview,hy3-preview,tencent,open_weights,webdev,Hy3 preview,name,2026-11-23,1358.8416286378722,1341.3815692340838,1376.3016880416603,1427,127
 hy4-preview,hy4-preview,tencent,open_weights,webdev,hy4-preview,name,2026-08-30,1630.8352549070412,1612.681128583531,1648.989381230551,1276,5
 hy4-preview,hy4-preview,tencent,open_weights,webdev,hy4-preview,name,2026-09-01,1629.1832295513711,1611.6532635672027,1646.7131955355399,1368,6
 hy4-preview,hy4-preview,tencent,open_weights,webdev,hy4-preview,name,2026-09-02,1625.77575150351,1608.9949769208868,1642.5565260861333,1472,8
@@ -37025,6 +37105,7 @@ hy4-preview,hy4-preview,tencent,open_weights,webdev,Hy4 preview,name,2026-11-18,
 hy4-preview,hy4-preview,tencent,open_weights,webdev,Hy4 preview,name,2026-11-19,1631.508033150834,1621.720549320366,1641.295516981302,4577,31
 hy4-preview,hy4-preview,tencent,open_weights,webdev,Hy4 preview,name,2026-11-20,1631.4446481511932,1621.6530630910488,1641.2362332113375,4575,31
 hy4-preview,hy4-preview,tencent,open_weights,webdev,Hy4 preview,name,2026-11-22,1631.227653878617,1621.425253135766,1641.0300546214683,4564,31
+hy4-preview,hy4-preview,tencent,open_weights,webdev,Hy4 preview,name,2026-11-23,1631.3354119536648,1621.5264464405368,1641.1443774667923,4562,31
 inkling,Inkling,thinking-machines,open_weights,text,inkling,name,2026-07-16,1443.793088906877,1430.0534401838354,1457.532737629919,1797,45
 inkling,Inkling,thinking-machines,open_weights,text,inkling,name,2026-07-20,1445.3673631835547,1436.616337460799,1454.1183889063104,4641,41
 inkling,Inkling,thinking-machines,open_weights,text,inkling,name,2026-07-21,1443.5267903557974,1435.3540836334091,1451.699497078186,5386,47
@@ -37147,9 +37228,11 @@ inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-18,14
 inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-19,1414.312041820796,1408.3354781020043,1420.2886055395875,17090,104
 inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-20,1414.0503990654543,1408.0735289267036,1420.027269204205,17085,104
 inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-22,1413.8324507566845,1407.8547123333335,1419.8101891800354,17053,105
+inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-23,1413.9528449856919,1407.9746652130564,1419.9310247583273,17046,105
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,text,Inkling 2 Mini,name,2026-11-22,1343.6829566726776,1329.304691621091,1358.0612217242642,1793,220
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,text_style_control,Inkling 2 Mini,name,2026-11-22,1366.9184356806572,1352.363519567366,1381.4733517939485,1793,210
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,webdev,Inkling 2 Mini,name,2026-11-22,1557.149244794357,1539.4309285756708,1574.8675610130433,1239,55
+inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,webdev,Inkling 2 Mini,name,2026-11-23,1559.7868951203154,1542.6101204998345,1576.9636697407964,1312,54
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text,Inkling 2 Small,name,2026-11-08,1402.6740223114791,1390.8747970069435,1414.473247616015,2653,153
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text,Inkling 2 Small,name,2026-11-09,1403.175477868264,1391.4330754094508,1414.9178803270775,2668,153
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text,Inkling 2 Small,name,2026-11-11,1402.6388120558368,1390.908501507437,1414.369122604237,2669,153
@@ -37172,6 +37255,7 @@ inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkli
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-19,1643.5661418883994,1625.812944636703,1661.3193391400962,1195,28
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-20,1642.652251914471,1624.9198049444308,1660.3846988845112,1204,28
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-22,1640.624094232206,1622.9577555364085,1658.2904329280038,1209,28
+inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-23,1642.1287050746696,1624.4934141527378,1659.7639959966018,1214,28
 inkling-small,Inkling-Small,thinking-machines,open_weights,text,Inkling Small,name,2026-08-19,1411.960137782883,1405.3805973750168,1418.5396781907493,10465,121
 inkling-small,Inkling-Small,thinking-machines,open_weights,text,Inkling Small,name,2026-08-21,1411.7032038135117,1405.3010796878607,1418.1053279391624,11455,122
 inkling-small,Inkling-Small,thinking-machines,open_weights,text,Inkling Small,name,2026-08-27,1413.8442073002095,1407.8127989744044,1419.875615626015,13438,120
@@ -37265,6 +37349,7 @@ inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling-Small,
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling-Small,name,2026-11-19,1407.8884136079569,1398.7200122737727,1417.056814942141,5199,105
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling-Small,name,2026-11-20,1407.7045614081544,1398.533600336078,1416.8755224802308,5197,105
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling-Small,name,2026-11-22,1407.6327916303615,1398.4628695475315,1416.8027137131915,5195,106
+inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling-Small,name,2026-11-23,1407.475269422044,1398.302164266131,1416.648374577957,5193,106
 intellect-3,INTELLECT-3,prime-intellect,open_weights,text,intellect-3,name,2025-12-11,1347.6412294145505,1334.20533708147,1361.0771217476308,2020,84
 intellect-3,INTELLECT-3,prime-intellect,open_weights,text,intellect-3,name,2025-12-15,1350.1560097048218,1339.917281825622,1360.3947375840216,3574,83
 intellect-3,INTELLECT-3,prime-intellect,open_weights,text,intellect-3,name,2025-12-16,1350.9818349318234,1341.2106279105433,1360.7530419531035,3949,85
@@ -38181,6 +38266,7 @@ kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,Kimi K2.5 (Thinking),name,2026-
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,Kimi K2.5 (Thinking),name,2026-11-19,1436.3332879956288,1431.0704173524462,1441.5961586388116,19776,96
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,Kimi K2.5 (Thinking),name,2026-11-20,1436.3695114042007,1431.1019598727544,1441.6370629356468,19769,96
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,Kimi K2.5 (Thinking),name,2026-11-22,1436.4228019470754,1431.1567548708215,1441.6888490233293,19758,97
+kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,Kimi K2.5 (Thinking),name,2026-11-23,1436.2995374936563,1431.0343217901845,1441.5647531971283,19769,97
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,text,kimi-k2.6,name,2026-04-22,1453.0589033871724,1444.1041539333144,1462.0136528410305,4034,16
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,text,kimi-k2.6,name,2026-04-23,1452.4451996434009,1443.8129426069388,1461.0774566798627,4355,16
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,text,kimi-k2.6,name,2026-04-27,1453.929211785834,1445.7504478533886,1462.1079757182792,4901,17
@@ -38404,6 +38490,7 @@ kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,Kimi K2.6,name,2026-11-18,1509.
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,Kimi K2.6,name,2026-11-19,1509.0351600884326,1501.7601826307414,1516.3101375461238,10000,72
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,Kimi K2.6,name,2026-11-20,1509.1384163001007,1501.859608294501,1516.4172243057005,9998,72
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,Kimi K2.6,name,2026-11-22,1509.0031648022205,1501.724289632956,1516.282039971485,9988,73
+kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,Kimi K2.6,name,2026-11-23,1508.8499946385537,1501.5740655628335,1516.125923714274,9993,73
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,kimi-k2.7-code,name,2026-06-15,1479.8545309088167,1465.1682045890943,1494.5408572285387,1726,18
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,kimi-k2.7-code,name,2026-06-16,1478.2231306854626,1464.0337597734779,1492.4125015974473,1869,20
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,kimi-k2.7-code,name,2026-06-18,1478.2231306854626,1464.0337597734779,1492.4125015974473,1869,20
@@ -38464,6 +38551,7 @@ kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,Kimi K2.7 Code,name,2
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,Kimi K2.7 Code,name,2026-11-19,1474.8517610557317,1465.3935037272938,1484.3100183841693,4869,83
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,Kimi K2.7 Code,name,2026-11-20,1474.8946237774685,1465.434278144804,1484.354969410133,4869,83
 kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,Kimi K2.7 Code,name,2026-11-22,1475.0124636958437,1465.5538508150719,1484.4710765766154,4869,84
+kimi-k2-7-code,Kimi K2.7 Code,moonshot,open_weights,webdev,Kimi K2.7 Code,name,2026-11-23,1474.9550267141997,1465.495033604578,1484.4150198238215,4868,84
 kimi-k3,Kimi K3,moonshot,open_weights,text,kimi-k3,name,2026-07-16,1473.3612823912404,1462.5604741351385,1484.1620906473422,3026,12
 kimi-k3,Kimi K3,moonshot,open_weights,text,kimi-k3,name,2026-07-20,1474.1434964316336,1464.2093866326018,1484.0776062306654,3614,12
 kimi-k3,Kimi K3,moonshot,open_weights,text,kimi-k3,name,2026-07-21,1472.928609430429,1463.015887904047,1482.8413309568111,3619,13
@@ -38584,6 +38672,7 @@ kimi-k3,Kimi K3,moonshot,open_weights,webdev,Kimi K3 (Max),name,2026-11-18,1657.
 kimi-k3,Kimi K3,moonshot,open_weights,webdev,Kimi K3 (Max),name,2026-11-19,1658.3858311251677,1652.7866820902666,1663.9849801600687,23328,23
 kimi-k3,Kimi K3,moonshot,open_weights,webdev,Kimi K3 (Max),name,2026-11-20,1659.1521340087347,1653.5560509209436,1664.7482170965259,23391,22
 kimi-k3,Kimi K3,moonshot,open_weights,webdev,Kimi K3 (Max),name,2026-11-22,1658.7846800157013,1653.2098722974051,1664.3594877339972,23497,22
+kimi-k3,Kimi K3,moonshot,open_weights,webdev,Kimi K3 (Max),name,2026-11-23,1658.4449671446018,1652.8768744330541,1664.01305985615,23561,23
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,text,Kimi K3.1 Pro (Max),name,2026-11-09,1457.3106116796416,1446.6675909809087,1467.953632378374,3443,44
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,text,Kimi K3.1 Pro (Max),name,2026-11-11,1459.1373497152172,1449.162419694478,1469.1122797359562,3995,43
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,text,Kimi K3.1 Pro (Max),name,2026-11-18,1461.8327334941791,1453.3928272683047,1470.2726397200536,6011,43
@@ -38607,6 +38696,7 @@ kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,webdev,Kimi K3.1 Pro (Max),nam
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,webdev,Kimi K3.1 Pro (Max),name,2026-11-19,1683.0561609295605,1674.0548191208918,1692.057502738229,5958,17
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,webdev,Kimi K3.1 Pro (Max),name,2026-11-20,1682.9504676988922,1674.0072097475459,1691.8937256502386,6022,17
 kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,webdev,Kimi K3.1 Pro (Max),name,2026-11-22,1683.1322989374808,1674.2788204088138,1691.9857774661475,6154,17
+kimi-k3-1-pro,Kimi K3.1 Pro,moonshot,open_weights,webdev,Kimi K3.1 Pro (Max),name,2026-11-23,1682.8911109229225,1674.0560593972882,1691.7261624485568,6207,17
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,laguna-m.1,name,2026-06-15,1350.8079451841484,1334.578158186724,1367.0377321815727,1501,59
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,laguna-m.1,name,2026-06-16,1346.7023279433984,1330.8288133351502,1362.5758425516465,1582,61
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,laguna-m.1,name,2026-06-18,1346.7023279433984,1330.8288133351502,1362.5758425516465,1582,61
@@ -38667,6 +38757,7 @@ laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,Laguna M.1,name,2026-11-18,13
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,Laguna M.1,name,2026-11-19,1350.0845862654623,1340.7512122282674,1359.4179603026573,5297,131
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,Laguna M.1,name,2026-11-20,1350.0788234355105,1340.7438371430803,1359.4138097279406,5298,131
 laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,Laguna M.1,name,2026-11-22,1350.1424808403735,1340.800536633264,1359.484425047483,5289,132
+laguna-m-1,Laguna-M.1,poolside,open_weights,webdev,Laguna M.1,name,2026-11-23,1349.900136967064,1340.5605652906293,1359.239708643499,5292,132
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,laguna-xs.2,name,2026-06-15,1296.610823928806,1281.1507063062668,1312.0709415513452,1826,69
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,laguna-xs.2,name,2026-06-16,1298.1277733574948,1283.0175672514215,1313.2379794635679,1933,71
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,laguna-xs.2,name,2026-06-18,1298.1277733574948,1283.0175672514215,1313.2379794635679,1933,71
@@ -38727,6 +38818,7 @@ laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,Laguna XS.2,name,2026-11-18
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,Laguna XS.2,name,2026-11-19,1304.0036448115975,1293.2771074538052,1314.7301821693898,4157,140
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,Laguna XS.2,name,2026-11-20,1303.9658435089864,1293.233901336559,1314.6977856814142,4156,140
 laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,Laguna XS.2,name,2026-11-22,1303.8417476716536,1293.1096951268146,1314.5738002164924,4153,141
+laguna-xs-2,Laguna-XS.2,poolside,open_weights,webdev,Laguna XS.2,name,2026-11-23,1304.0476113569944,1293.3169679157031,1314.7782547982856,4152,141
 ling-flash-2-0,Ling-flash-2.0,ant-group,open_weights,text,ling-flash-2.0,name,2025-10-07,1367.509672589197,1357.38766934804,1377.631675830354,3374,52
 ling-flash-2-0,Ling-flash-2.0,ant-group,open_weights,text,ling-flash-2.0,name,2025-10-16,1360.215786717507,1351.721638977774,1368.70993445724,4925,61
 ling-flash-2-0,Ling-flash-2.0,ant-group,open_weights,text,ling-flash-2.0,name,2025-10-17,1360.07311909485,1351.5492770028848,1368.5969611868152,4893,61
@@ -45940,6 +46032,7 @@ mercury-2,mercury-2,inception-labs,api_only,webdev,Mercury 2,name,2026-11-18,117
 mercury-2,mercury-2,inception-labs,api_only,webdev,Mercury 2,name,2026-11-19,1170.5306017962607,1145.77909854042,1195.2821050521015,940,158
 mercury-2,mercury-2,inception-labs,api_only,webdev,Mercury 2,name,2026-11-20,1170.560536896524,1145.8068181417816,1195.314255651266,940,158
 mercury-2,mercury-2,inception-labs,api_only,webdev,Mercury 2,name,2026-11-22,1169.636442539069,1144.8510394379718,1194.4218456401663,939,159
+mercury-2,mercury-2,inception-labs,api_only,webdev,Mercury 2,name,2026-11-23,1169.5710120767048,1144.7855662553357,1194.356457898074,939,159
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,text,mimo-v2.5,name,2026-04-28,1415.5979634481366,1405.7974913294145,1425.3984355668586,3442,81
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,text,mimo-v2.5,name,2026-04-29,1414.5031003150664,1405.6418759222427,1423.36432470789,4246,83
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,text,mimo-v2.5,name,2026-04-30,1414.8889991793972,1406.7021603085896,1423.0758380502045,5005,84
@@ -46152,6 +46245,7 @@ mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,MiMo-V2.5,name,2026-11-18,1437.82
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,MiMo-V2.5,name,2026-11-19,1437.8368283786517,1431.7773276957855,1443.8963290615177,14600,94
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,MiMo-V2.5,name,2026-11-20,1437.8748309182067,1431.8109468622865,1443.938714974127,14588,94
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,MiMo-V2.5,name,2026-11-22,1437.9277968773035,1431.858666890085,1443.996926864522,14564,95
+mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,MiMo-V2.5,name,2026-11-23,1437.818176491485,1431.7510759459028,1443.8852770370672,14575,95
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,text,mimo-v2.5-pro,name,2026-04-28,1459.7797225614736,1449.7937394511068,1469.7657056718404,3375,15
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,text,mimo-v2.5-pro,name,2026-04-29,1458.0698047091685,1449.0251556083088,1467.1144538100282,4153,16
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,text,mimo-v2.5-pro,name,2026-04-30,1458.0541340159734,1449.7293767737644,1466.3788912581824,4901,16
@@ -46336,6 +46430,7 @@ mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,webdev,MiMo-V2.5-Pro,name,2026-1
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,webdev,MiMo-V2.5-Pro,name,2026-11-19,1479.3309542624665,1474.0719107194086,1484.589997805524,21969,82
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,webdev,MiMo-V2.5-Pro,name,2026-11-20,1479.341981872303,1474.0815123648113,1484.6024513797947,21961,82
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,webdev,MiMo-V2.5-Pro,name,2026-11-22,1479.3949758499728,1474.134443956942,1484.6555077430032,21911,83
+mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,webdev,MiMo-V2.5-Pro,name,2026-11-23,1479.2733487448663,1474.0150515138052,1484.5316459759276,21915,83
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,text,mimo-v2.6-flash,name,2026-09-25,1459.0752930990946,1449.7593429855424,1468.391243212647,4067,38
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,text,mimo-v2.6-flash,name,2026-09-30,1458.3625049260531,1450.2401075490257,1466.484902303081,5465,39
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,text,mimo-v2.6-flash,name,2026-10-02,1456.4392704793624,1448.666682180228,1464.211858778497,6053,42
@@ -46396,6 +46491,7 @@ mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,MiMo-V2.6-Flash,name,
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,MiMo-V2.6-Flash,name,2026-11-19,1637.7007116373288,1630.314153889152,1645.0872693855058,9966,30
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,MiMo-V2.6-Flash,name,2026-11-20,1637.5023750556993,1630.1290669062423,1644.8756832051563,10015,30
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,MiMo-V2.6-Flash,name,2026-11-22,1636.9862571018007,1629.6612702583247,1644.3112439452766,10152,30
+mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,MiMo-V2.6-Flash,name,2026-11-23,1637.214746940664,1629.899400764621,1644.5300931167067,10215,30
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,text,mimo-v2.6-pro,name,2026-09-25,1490.7337018885637,1481.327269952919,1500.1401338242083,4026,9
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,text,mimo-v2.6-pro,name,2026-09-30,1490.5095591860168,1481.1543187821949,1499.8647995898386,4074,10
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,text,mimo-v2.6-pro,name,2026-10-02,1491.0410115857658,1481.676729210111,1500.4052939614205,4056,10
@@ -46461,6 +46557,7 @@ mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,MiMo-V2.6-Pro,name,2026-1
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,MiMo-V2.6-Pro,name,2026-11-19,1621.8239815476352,1614.528293736563,1629.1196693587071,10177,35
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,MiMo-V2.6-Pro,name,2026-11-20,1622.0566379548054,1614.7830096204739,1629.3302662891365,10272,35
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,MiMo-V2.6-Pro,name,2026-11-22,1622.4017069116076,1615.170514669981,1629.6328991532341,10441,35
+mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,MiMo-V2.6-Pro,name,2026-11-23,1622.4705526542643,1615.2501053688438,1629.6909999396848,10521,35
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,text,mimo-v2-flash (thinking),name,2026-01-27,1392.8309884322468,1385.1024889017713,1400.5594879627222,6601,61
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,text,mimo-v2-flash (thinking),name,2026-01-29,1391.648994885198,1384.1397702665668,1399.1582195038293,7135,65
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,text,mimo-v2-flash (thinking),name,2026-02-06,1391.4220660330825,1384.7611600365994,1398.082972029565,9353,69
@@ -46744,6 +46841,7 @@ mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,webdev,MiMo-V2-Flash (Thinking),
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,webdev,MiMo-V2-Flash (Thinking),name,2026-11-19,1290.98535045619,1274.476538638242,1307.494162274138,1666,142
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,webdev,MiMo-V2-Flash (Thinking),name,2026-11-20,1291.0174382868809,1274.5064869158846,1307.5283896578771,1666,142
 mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,webdev,MiMo-V2-Flash (Thinking),name,2026-11-22,1290.9700201967114,1274.4562875065997,1307.483752886823,1666,143
+mimo-v2-flash,MiMo-V2-Flash,xiaomi,open_weights,webdev,MiMo-V2-Flash (Thinking),name,2026-11-23,1290.9318530874402,1274.4181132549884,1307.4455929198923,1666,143
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,text,mimo-v2-omni,name,2026-05-27,1401.6046313088584,1390.5746616725828,1412.6346009451338,2968,104
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,text,mimo-v2-omni,name,2026-06-03,1414.7312012206771,1406.5297101309654,1422.932692310389,5722,91
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,text,mimo-v2-omni,name,2026-06-04,1416.723447220776,1408.6764298402793,1424.7704646012726,6026,88
@@ -47084,6 +47182,7 @@ mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,webdev,MiMo-V2-Pro,name,2026-11-18,1434.
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,webdev,MiMo-V2-Pro,name,2026-11-19,1434.6201502132883,1426.4300198833675,1442.8102805432093,7185,99
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,webdev,MiMo-V2-Pro,name,2026-11-20,1434.7785885586566,1426.5795833957745,1442.9775937215386,7176,99
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,webdev,MiMo-V2-Pro,name,2026-11-22,1435.023090708668,1426.8151371351967,1443.231044282139,7163,99
+mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,webdev,MiMo-V2-Pro,name,2026-11-23,1434.8195696514645,1426.6171486824119,1443.0219906205173,7172,99
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,minicpm-v-2_6,name,2024-08-22,979.2638580932838,963.9828621500383,990.1409217722761,1460,13
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,minicpm-v-2_6,name,2024-08-23,979.2638580932838,963.9828621500383,990.1409217722761,1460,13
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,minicpm-v-2_6,name,2024-08-27,977.2591834495489,963.7672735576843,991.8466676199535,1960,14
@@ -47840,6 +47939,7 @@ minimax-m2,MiniMax-M2,minimax,open_weights,webdev,MiniMax-M2,name,2026-11-18,129
 minimax-m2,MiniMax-M2,minimax,open_weights,webdev,MiniMax-M2,name,2026-11-19,1298.9342559466588,1287.9342083142149,1309.934303579103,6658,141
 minimax-m2,MiniMax-M2,minimax,open_weights,webdev,MiniMax-M2,name,2026-11-20,1298.947103314625,1287.9435840527535,1309.9506225764967,6658,141
 minimax-m2,MiniMax-M2,minimax,open_weights,webdev,MiniMax-M2,name,2026-11-22,1298.9891887217834,1287.9764689871984,1310.0019084563683,6654,142
+minimax-m2,MiniMax-M2,minimax,open_weights,webdev,MiniMax-M2,name,2026-11-23,1298.9605586343614,1287.9481670470718,1309.972950221651,6654,142
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,text,minimax-m2.5,name,2026-02-16,1381.2129901424653,1371.6095340890158,1390.8164461959143,3929,78
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,text,minimax-m2.5,name,2026-02-17,1380.5187601852856,1371.0353723799756,1390.0021479905954,4030,78
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,text,minimax-m2.5,name,2026-02-19,1378.295409099327,1369.4791771569742,1387.1116410416796,4712,83
@@ -48105,6 +48205,7 @@ minimax-m2-5,MiniMax-M2.5,minimax,open_weights,webdev,MiniMax-M2.5,name,2026-11-
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,webdev,MiniMax-M2.5,name,2026-11-19,1385.8514633375378,1377.4693834566338,1394.233543218442,7580,116
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,webdev,MiniMax-M2.5,name,2026-11-20,1385.8841914308769,1377.4986615463376,1394.269721315416,7580,116
 minimax-m2-5,MiniMax-M2.5,minimax,open_weights,webdev,MiniMax-M2.5,name,2026-11-22,1385.9398079170805,1377.5544619450504,1394.3251538891107,7580,117
+minimax-m2-5,MiniMax-M2.5,minimax,open_weights,webdev,MiniMax-M2.5,name,2026-11-23,1385.8115977845741,1377.428926971199,1394.1942685979488,7588,117
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,text,minimax-m2.7,name,2026-03-18,1389.8251039163315,1378.8771379296174,1400.7730699030456,2797,91
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,text,minimax-m2.7,name,2026-03-19,1392.4304200483114,1381.8940695174028,1402.96677057922,3027,90
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,text,minimax-m2.7,name,2026-03-20,1391.6450297034685,1381.0407964411909,1402.2492629657463,2981,91
@@ -48331,6 +48432,7 @@ minimax-m2-7,MiniMax-M2.7,minimax,open_weights,webdev,MiniMax-M2.7,name,2026-11-
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,webdev,MiniMax-M2.7,name,2026-11-19,1398.1827075151791,1392.3394866471206,1404.025928383238,15690,111
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,webdev,MiniMax-M2.7,name,2026-11-20,1398.0380886139792,1392.191910715065,1403.8842665128936,15682,112
 minimax-m2-7,MiniMax-M2.7,minimax,open_weights,webdev,MiniMax-M2.7,name,2026-11-22,1398.0064063767911,1392.1608843743534,1403.851928379229,15665,112
+minimax-m2-7,MiniMax-M2.7,minimax,open_weights,webdev,MiniMax-M2.7,name,2026-11-23,1397.9128553136584,1392.067869982487,1403.7578406448297,15670,113
 minimax-m3,MiniMax-M3,minimax,open_weights,text,minimax-m3,name,2026-06-03,1444.447983861633,1434.9219752293352,1453.973992493931,4124,37
 minimax-m3,MiniMax-M3,minimax,open_weights,text,minimax-m3,name,2026-06-04,1444.8521825353437,1435.634442358904,1454.0699227117834,4443,37
 minimax-m3,MiniMax-M3,minimax,open_weights,text,minimax-m3,name,2026-06-05,1445.7499940023708,1436.7960818903648,1454.703906114377,4750,33
@@ -48506,6 +48608,7 @@ minimax-m3,MiniMax-M3,minimax,open_weights,webdev,MiniMax-M3,name,2026-11-18,148
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,MiniMax-M3,name,2026-11-19,1484.2791351977735,1478.8696428606813,1489.6886275348659,20968,80
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,MiniMax-M3,name,2026-11-20,1484.3500299879897,1478.9394140850277,1489.7606458909518,20962,80
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,MiniMax-M3,name,2026-11-22,1484.1964237886375,1478.7850316275992,1489.6078159496756,20920,81
+minimax-m3,MiniMax-M3,minimax,open_weights,webdev,MiniMax-M3,name,2026-11-23,1484.2010329776285,1478.7921286441126,1489.6099373111442,20926,81
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-10-19,1587.4766779108527,1573.21572367423,1601.7376321474753,1853,33
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-10-22,1589.7463962339605,1576.367940183677,1603.1248522842438,2164,33
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-10-23,1588.7951462032179,1575.5035830871584,1602.0867093192774,2212,34
@@ -48521,6 +48624,7 @@ minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-F
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-11-19,1581.6705135206494,1572.7945250075552,1590.5465020337438,5948,49
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-11-20,1581.4305626831228,1572.5899279310597,1590.271197435186,5996,49
 minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-11-22,1581.5917873993749,1572.8512649158695,1590.3323098828803,6113,49
+minimax-m3-1-flash,minimax-m3-1-flash,minimax,open_weights,webdev,MiniMax-M3.1-Flash,name,2026-11-23,1581.6310218869808,1572.9395928702234,1590.3224509037382,6187,49
 ministral-8b,Ministral 8B,mistral,open_weights,text,Ministral 8B (2410),name_one_snapshot,2026-10-20,1190.9424248090766,1181.9701570607867,1199.9146925573664,4781,325
 ministral-8b,Ministral 8B,mistral,open_weights,text,Ministral 8B (2410),name_one_snapshot,2026-10-22,1190.8904581274446,1181.918349362495,1199.8625668923942,4781,326
 ministral-8b,Ministral 8B,mistral,open_weights,text,Ministral 8B (2410),name_one_snapshot,2026-10-28,1190.8951956617093,1181.9231209516843,1199.8672703717339,4781,327
@@ -49702,6 +49806,7 @@ mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,Mistral Large 3,name
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,Mistral Large 3,name,2026-11-19,1232.5759580956878,1206.7424498534347,1258.409466337941,822,153
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,Mistral Large 3,name,2026-11-20,1232.5978590921443,1206.7623174920698,1258.4334006922188,822,153
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,Mistral Large 3,name,2026-11-22,1232.6597423133696,1206.8244046153914,1258.495080011348,822,154
+mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,Mistral Large 3,name,2026-11-23,1232.629623357218,1206.7945905541128,1258.464656160323,822,154
 mistral-large-4,Mistral Large 4,mistral,api_only,text,mistral-large-4,name,2026-10-08,1427.3941077787622,1418.1609827102436,1436.6272328472808,4179,100
 mistral-large-4,Mistral Large 4,mistral,api_only,text,mistral-large-4,name,2026-10-13,1429.737845356948,1422.1716518067956,1437.3040389071004,6607,96
 mistral-large-4,Mistral Large 4,mistral,api_only,text,mistral-large-4,name,2026-10-15,1429.9946133933556,1422.782100314175,1437.2071264725364,7451,94
@@ -49752,6 +49857,7 @@ mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,202
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,2026-11-19,1569.7630807855726,1557.2848715354298,1582.241290035715,2710,53
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,2026-11-20,1573.1653499379909,1560.6522468209755,1585.6784530550058,2706,52
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,2026-11-22,1572.5110238838154,1560.3476506097966,1584.6743971578342,2863,52
+mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,2026-11-23,1572.3896552009987,1560.3999450309866,1584.3793653710109,2950,52
 mistral-medium,Mistral Medium,mistral,open_weights,text,mistral-medium,name,2024-01-09,1149.866992198609,1137.1107383577325,1164.8815195824204,6586,3
 mistral-medium,Mistral Medium,mistral,open_weights,text,mistral-medium,name,2024-01-18,1148.263903132619,1135.5638857367867,1162.1456993609713,9370,3
 mistral-medium,Mistral Medium,mistral,open_weights,text,mistral-medium,name,2024-01-25,1150.2373995704907,1135.4590367546837,1165.559225131381,11480,3
@@ -50425,6 +50531,7 @@ mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,Mistral Medium
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,Mistral Medium 3.5,name,2026-11-19,1263.356457763503,1248.4846808979858,1278.2282346290199,2275,145
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,Mistral Medium 3.5,name,2026-11-20,1263.3945119160162,1248.5211802928347,1278.2678435391974,2275,145
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,Mistral Medium 3.5,name,2026-11-22,1263.1893606952653,1248.29152350986,1278.0871978806708,2270,146
+mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,Mistral Medium 3.5,name,2026-11-23,1263.2125877591725,1248.3317333687894,1278.0934421495556,2274,146
 mistral-small-24b-instruct-2501,mistral-small-24b-instruct-2501,mistral,open_weights,text,mistral-small-24b-instruct-2501,name,2025-02-11,1217.6357214527343,1208.509678854264,1227.1147154724754,2455,51
 mistral-small-24b-instruct-2501,mistral-small-24b-instruct-2501,mistral,open_weights,text,mistral-small-24b-instruct-2501,name,2025-02-14,1219.4700617512822,1207.6466197659481,1230.3759049990838,3019,51
 mistral-small-24b-instruct-2501,mistral-small-24b-instruct-2501,mistral,open_weights,text,mistral-small-24b-instruct-2501,name,2025-02-17,1216.7521773776743,1207.5109142928911,1224.9701114958477,3481,52
@@ -51079,6 +51186,7 @@ muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-18,1608
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-19,1608.6968918317143,1591.8135723921764,1625.580211271252,1322,41
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-20,1608.2924731994244,1591.367188787413,1625.217757611436,1316,42
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-22,1608.18828666169,1591.2886096174695,1625.0879637059102,1320,42
+muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-23,1607.4826440215238,1590.5857456945823,1624.3795423484653,1318,42
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,text,muse-spark-1.1,name,2026-07-10,1477.8613493807384,1468.0231061570903,1487.699592604386,3750,9
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,text,muse-spark-1.1,name,2026-07-12,1479.4782779499142,1470.443300232386,1488.5132556674425,4498,8
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,text,muse-spark-1.1,name,2026-07-14,1478.7760062150435,1469.8567097751363,1487.6953026549506,4632,9
@@ -51224,6 +51332,7 @@ muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,Muse Spark 1.1,name,2026-11-1
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,Muse Spark 1.1,name,2026-11-19,1541.3908215052727,1533.7128899086752,1549.0687531018702,7819,59
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,Muse Spark 1.1,name,2026-11-20,1541.2534478202415,1533.5694763051501,1548.9374193353328,7805,59
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,Muse Spark 1.1,name,2026-11-22,1541.4120401120108,1533.7259099539915,1549.0981702700303,7798,60
+muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,Muse Spark 1.1,name,2026-11-23,1541.345934430838,1533.6572929645645,1549.034575897112,7795,60
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,text,muse-spark-1.2 (xHigh),name,2026-08-06,1487.792137725642,1474.8373805946624,1500.746894856622,2057,8
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,text,muse-spark-1.2 (xHigh),name,2026-08-10,1488.1903203479544,1477.7886018877903,1498.5920388081186,3278,8
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,text,muse-spark-1.2 (xHigh),name,2026-08-11,1488.0410962246387,1477.6370080589636,1498.4451843903141,3278,8
@@ -51331,6 +51440,7 @@ muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,Muse Spark 1.2 (xHigh),name,2
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,Muse Spark 1.2 (xHigh),name,2026-11-19,1533.6654079980883,1519.8679592061374,1547.462856790039,2114,64
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,Muse Spark 1.2 (xHigh),name,2026-11-20,1533.3254947532805,1519.5225666223005,1547.1284228842605,2112,64
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,Muse Spark 1.2 (xHigh),name,2026-11-22,1533.1917451175395,1519.3870311237781,1546.996459111301,2111,65
+muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,Muse Spark 1.2 (xHigh),name,2026-11-23,1532.95378197347,1519.152049531595,1546.7555144153453,2112,65
 muse-spark-1-3,muse-spark-1.3,meta,api_only,text,muse-spark-1.3-max,name,2026-09-13,1489.7405893263447,1480.9145693724488,1498.5666092802405,4723,10
 muse-spark-1-3,muse-spark-1.3,meta,api_only,text,muse-spark-1.3-max,name,2026-09-25,1490.0082182120964,1483.440916779504,1496.5755196446887,10036,11
 muse-spark-1-3,muse-spark-1.3,meta,api_only,text,muse-spark-1.3-max,name,2026-09-30,1490.2269304427268,1483.9609599302385,1496.4929009552152,11698,12
@@ -51440,6 +51550,8 @@ muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (Max),name,202
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (xHigh),name,2026-11-20,1620.825838732299,1614.1476567895434,1627.504020675055,12932,37
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (Max),name,2026-11-22,1652.3301529189641,1645.6653656920669,1658.9949401458614,13564,25
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (xHigh),name,2026-11-22,1619.6907741171842,1613.0541376934418,1626.3274105409266,13059,37
+muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (Max),name,2026-11-23,1652.3208963362117,1645.666867685733,1658.9749249866904,13627,25
+muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,Muse Spark 1.3 (xHigh),name,2026-11-23,1619.679794631872,1613.0575421701128,1626.3020470936317,13127,37
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-10-16,1511.3260970415822,1491.437717356725,1531.2144767264394,991,55
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-10-18,1523.9409813114835,1506.6164697863342,1541.2654928366328,1337,50
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-10-19,1528.0938901467541,1511.060363865893,1545.1274164276151,1380,52
@@ -51457,6 +51569,7 @@ muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),n
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-11-19,1527.0108835062376,1512.7674954695194,1541.2542715429558,2011,65
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-11-20,1527.3422968846594,1513.1231658140173,1541.561427955302,2015,65
 muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-11-22,1527.5474038104987,1513.3619560235445,1541.732851597453,2028,66
+muse-spark-open,Muse Spark Open,meta,open_weights,webdev,Muse Spark Open (Max),name,2026-11-23,1526.9671468743263,1512.8250665869534,1541.1092271616994,2038,66
 muse-wonder,muse-wonder,meta,api_only,text,muse-wonder-max,name,2026-10-13,1503.8711863062053,1490.6870337604707,1517.0553388519397,1944,5
 muse-wonder,muse-wonder,meta,api_only,text,Muse Wonder (Max),name,2026-10-15,1500.9554786587114,1490.4384889817616,1511.4724683356612,3247,7
 muse-wonder,muse-wonder,meta,api_only,text,Muse Wonder (Max),name,2026-10-20,1501.6949006218686,1493.0250789844645,1510.3647222592724,5099,6
@@ -51499,6 +51612,7 @@ muse-wonder,muse-wonder,meta,api_only,webdev,Muse Wonder (Max),name,2026-11-18,1
 muse-wonder,muse-wonder,meta,api_only,webdev,Muse Wonder (Max),name,2026-11-19,1647.6861603979903,1639.119423488322,1656.252897307659,6477,27
 muse-wonder,muse-wonder,meta,api_only,webdev,Muse Wonder (Max),name,2026-11-20,1647.0207018243118,1638.5240926519537,1655.51731099667,6570,27
 muse-wonder,muse-wonder,meta,api_only,webdev,Muse Wonder (Max),name,2026-11-22,1646.0052671307333,1637.6143925585673,1654.3961417028995,6761,27
+muse-wonder,muse-wonder,meta,api_only,webdev,Muse Wonder (Max),name,2026-11-23,1645.9398221536017,1637.5797468954956,1654.2998974117077,6833,27
 nous-hermes-2-mixtral-8x7b-dpo,Nous-Hermes-2-Mixtral-8x7B-DPO,nous-research,open_weights,text,nous-hermes-2-mixtral-8x7b-dpo,name,2024-02-15,1080.4487235046145,1067.451863676131,1090.893702735573,3073,18
 nous-hermes-2-mixtral-8x7b-dpo,Nous-Hermes-2-Mixtral-8x7B-DPO,nous-research,open_weights,text,nous-hermes-2-mixtral-8x7b-dpo,name,2024-03-05,1081.4983090919595,1070.3943106694571,1088.4090671743745,4051,19
 nous-hermes-2-mixtral-8x7b-dpo,Nous-Hermes-2-Mixtral-8x7B-DPO,nous-research,open_weights,text,nous-hermes-2-mixtral-8x7b-dpo,name,2024-03-07,1081.8370151932966,1072.2785013319826,1091.9183195350813,4047,21
@@ -59876,6 +59990,7 @@ qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,Qwen3.5-122B-A10
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,Qwen3.5-122B-A10B,name,2026-11-19,1360.1274574079873,1352.4348558166039,1367.8200589993708,8199,125
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,Qwen3.5-122B-A10B,name,2026-11-20,1360.2122347437999,1352.5156143568033,1367.9088551307964,8194,125
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,Qwen3.5-122B-A10B,name,2026-11-22,1360.369178163605,1352.6655912842893,1368.072765042921,8186,126
+qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,Qwen3.5-122B-A10B,name,2026-11-23,1360.350079433465,1352.6545327673116,1368.045626099618,8195,126
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,text,qwen3.5-27b,name,2026-02-26,1414.446799552821,1385.790670804887,1443.1029283007551,388,56
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,text,qwen3.5-27b,name,2026-03-03,1409.5191216681749,1397.5342202503775,1421.5040230859722,2279,62
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,text,qwen3.5-27b,name,2026-03-04,1410.5587720596718,1399.8181163085155,1421.2994278108283,2848,61
@@ -60156,6 +60271,7 @@ qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,Qwen3.5-27B,name,2026-11-18,
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,Qwen3.5-27B,name,2026-11-19,1356.985986329413,1348.915137836885,1365.056834821941,7746,129
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,Qwen3.5-27B,name,2026-11-20,1357.0237245363915,1348.949893070043,1365.09755600274,7746,129
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,Qwen3.5-27B,name,2026-11-22,1357.230222888965,1349.152406319961,1365.308039457969,7733,130
+qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,Qwen3.5-27B,name,2026-11-23,1357.1361585250293,1349.0637181516377,1365.2085988984209,7745,130
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,text,qwen3.5-35b-a3b,name,2026-02-26,1402.351447397934,1374.0924707492677,1430.6104240466002,392,70
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,text,qwen3.5-35b-a3b,name,2026-03-03,1395.1446557723443,1383.1500263035614,1407.1392852411277,2315,77
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,text,qwen3.5-35b-a3b,name,2026-03-04,1393.7686020435644,1382.9077724322158,1404.629431654913,2876,80
@@ -60400,6 +60516,7 @@ qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,webdev,Qwen3.5-35B-A3B,name
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,webdev,Qwen3.5-35B-A3B,name,2026-11-19,1253.1008884402509,1235.6274382571996,1270.5743386233025,1611,148
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,webdev,Qwen3.5-35B-A3B,name,2026-11-20,1253.3649857092232,1235.8875630119082,1270.8424084065382,1610,148
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,webdev,Qwen3.5-35B-A3B,name,2026-11-22,1253.4317076759228,1235.9540308883265,1270.9093844635188,1610,149
+qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,webdev,Qwen3.5-35B-A3B,name,2026-11-23,1253.3729491787813,1235.895314825922,1270.8505835316407,1610,149
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,text,qwen3.5-397b-a17b,name,2026-02-19,1447.8341509139427,1438.1377544746306,1457.530547353255,3572,11
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,text,qwen3.5-397b-a17b,name,2026-02-20,1448.6476083012817,1438.9764212358868,1458.318795366676,3602,10
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,text,qwen3.5-397b-a17b,name,2026-02-21,1447.8173491515572,1438.6272619607678,1457.0074363423466,3955,10
@@ -60697,6 +60814,7 @@ qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,Qwen3.5-397B-A17
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,Qwen3.5-397B-A17B,name,2026-11-19,1399.9098609657271,1394.7411612797669,1405.0785606516877,20822,109
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,Qwen3.5-397B-A17B,name,2026-11-20,1399.9496326462033,1394.7771848973653,1405.1220803950414,20811,110
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,Qwen3.5-397B-A17B,name,2026-11-22,1399.9679197486396,1394.7946981557052,1405.141141341574,20785,110
+qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,Qwen3.5-397B-A17B,name,2026-11-23,1399.9444996196626,1394.7737696089212,1405.115229630404,20805,110
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,text,qwen3.6-max-preview,name,2026-04-30,1441.9359523222809,1432.8955902458845,1450.976314398677,3943,35
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,text,qwen3.6-max-preview,name,2026-05-01,1441.8424391517776,1432.805467495881,1450.8794108076743,3943,35
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,text,qwen3.6-max-preview,name,2026-05-06,1442.173899491449,1433.1448670617895,1451.2029319211083,3960,34
@@ -60874,6 +60992,7 @@ qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,webdev,Qwen3.6-Max-Prev
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,webdev,Qwen3.6-Max-Preview,name,2026-11-19,1481.4946429779452,1468.9356985854974,1494.053587370393,2685,81
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,webdev,Qwen3.6-Max-Preview,name,2026-11-20,1481.3473240060605,1468.7920672379796,1493.9025807741414,2685,81
 qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,webdev,Qwen3.6-Max-Preview,name,2026-11-22,1481.51453620184,1468.9410073782476,1494.0880650254323,2674,82
+qwen3-6-max-preview,qwen3.6-max-preview,alibaba,api_only,webdev,Qwen3.6-Max-Preview,name,2026-11-23,1481.246456693862,1468.6871773885007,1493.8057359992235,2682,82
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,text,qwen3.6-plus,name,2026-04-20,1442.435793844681,1433.7893805800704,1451.0822071092914,4305,27
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,text,qwen3.6-plus,name,2026-04-22,1440.3068512105472,1432.3445072765749,1448.2691951445192,5160,33
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,text,qwen3.6-plus,name,2026-04-23,1440.7430329952292,1432.9937791072343,1448.492286883224,5480,34
@@ -61071,6 +61190,7 @@ qwen3-6-plus,qwen3.6-plus,alibaba,api_only,webdev,Qwen3.6-Plus,name,2026-11-18,1
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,webdev,Qwen3.6-Plus,name,2026-11-19,1461.6799827028735,1456.059212924868,1467.300752480879,18233,86
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,webdev,Qwen3.6-Plus,name,2026-11-20,1461.8943997090146,1456.2698590285947,1467.5189403894346,18217,86
 qwen3-6-plus,qwen3.6-plus,alibaba,api_only,webdev,Qwen3.6-Plus,name,2026-11-22,1461.8118039494004,1456.1897557273405,1467.43385217146,18212,87
+qwen3-6-plus,qwen3.6-plus,alibaba,api_only,webdev,Qwen3.6-Plus,name,2026-11-23,1461.861438073035,1456.239984018804,1467.482892127266,18217,87
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,qwen3.7-max-20260517,name_one_snapshot,2026-05-25,1540.770133365261,1524.7194203920092,1556.8208463385129,1522,4
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,qwen3.7-max-20260517,name_one_snapshot,2026-06-03,1536.328934118576,1523.2197713132396,1549.4380969239123,2351,7
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,qwen3.7-max-20260517,name_one_snapshot,2026-06-05,1536.6411436061233,1523.7898292123466,1549.4924579999,2466,7
@@ -61135,6 +61255,7 @@ qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,Qwen3.7-Max (20260517),name_one_
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,Qwen3.7-Max (20260517),name_one_snapshot,2026-11-19,1515.4650045954372,1508.0553386586714,1522.8746705322028,8719,70
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,Qwen3.7-Max (20260517),name_one_snapshot,2026-11-20,1515.6863230205263,1508.2726866394592,1523.0999594015934,8713,70
 qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,Qwen3.7-Max (20260517),name_one_snapshot,2026-11-22,1515.924819790866,1508.5083141370603,1523.3413254446714,8701,71
+qwen3-7-max,Qwen3.7-Max,alibaba,api_only,webdev,Qwen3.7-Max (20260517),name_one_snapshot,2026-11-23,1515.856358587116,1508.442503849023,1523.2702133252083,8708,71
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,text,qwen3.7-plus,name,2026-06-25,1463.0100707952893,1456.573771976312,1469.4463696142666,11899,19
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,text,qwen3.7-plus,name,2026-07-02,1461.6000720931297,1455.5714048137274,1467.6287393725324,14900,21
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,text,qwen3.7-plus,name,2026-07-10,1458.5452572917934,1452.710316947342,1464.3801976362442,18501,23
@@ -61324,6 +61445,7 @@ qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,Qwen3.8-27B,name,2026-11-18,
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,Qwen3.8-27B,name,2026-11-19,1589.3464642598371,1583.4389112905558,1595.2540172291187,22065,45
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,Qwen3.8-27B,name,2026-11-20,1589.5330383624355,1583.6368029224259,1595.4292738024446,22159,45
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,Qwen3.8-27B,name,2026-11-22,1590.177649407764,1584.3062126722489,1596.0490861432788,22304,45
+qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,Qwen3.8-27B,name,2026-11-23,1590.2557609636428,1584.3918828679507,1596.119639059335,22378,45
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,qwen3.8-flash-next,name,2026-08-30,1621.7179249345086,1606.104663300178,1637.3311865688393,1778,8
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,qwen3.8-flash-next,name,2026-09-01,1619.9592704268825,1604.7744041878814,1635.1441366658835,1876,9
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,qwen3.8-flash-next,name,2026-09-02,1622.2820662997308,1607.4440485183602,1637.1200840811011,1977,9
@@ -61358,6 +61480,7 @@ qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,Qwen3.8-Flash-
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,Qwen3.8-Flash-Next,name,2026-11-19,1625.9776243353701,1619.1335920156914,1632.821656655049,12404,32
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,Qwen3.8-Flash-Next,name,2026-11-20,1625.7162536990577,1618.8954893541868,1632.5370180439286,12473,33
 qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,Qwen3.8-Flash-Next,name,2026-11-22,1625.5016615310535,1618.718254088595,1632.2850689735121,12616,33
+qwen3-8-flash-next,Qwen3.8-Flash-Next,alibaba,open_weights,webdev,Qwen3.8-Flash-Next,name,2026-11-23,1625.8388451198834,1619.0589546108413,1632.6187356289252,12662,32
 qwen3-8-max,qwen3.8-max,alibaba,api_only,text,qwen3.8-max,name,2026-08-02,1496.0832599411456,1485.7416037260598,1506.4249161562313,3327,5
 qwen3-8-max,qwen3.8-max,alibaba,api_only,text,qwen3.8-max,name,2026-08-03,1496.0832599411456,1485.7416037260598,1506.4249161562313,3327,5
 qwen3-8-max,qwen3.8-max,alibaba,api_only,text,qwen3.8-max,name,2026-08-06,1497.3816108993922,1488.5388181322555,1506.2244036665288,4662,4
@@ -61471,6 +61594,7 @@ qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,Qwen3.8-Max,name,2026-11-18,1670
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,Qwen3.8-Max,name,2026-11-19,1670.8249720991691,1658.7064013440277,1682.9435428543109,3356,21
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,Qwen3.8-Max,name,2026-11-20,1670.3637166244057,1658.2419204504731,1682.4855127983387,3353,21
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,Qwen3.8-Max,name,2026-11-22,1670.5592725144666,1658.4362239298448,1682.6823210990885,3351,21
+qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,Qwen3.8-Max,name,2026-11-23,1670.5277833582195,1658.4049140440325,1682.6506526724065,3351,21
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,text,qwen3-coder-480b-a35b-instruct,name,2025-07-28,1367.9503860989137,1356.1734770764594,1379.7272951213681,2534,19
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,text,qwen3-coder-480b-a35b-instruct,name,2025-08-01,1356.988531342954,1349.0984260068747,1364.8786366790334,5547,28
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,text,qwen3-coder-480b-a35b-instruct,name,2025-08-04,1357.6721314397707,1350.0504418136886,1365.293821065853,6012,30
@@ -61845,6 +61969,7 @@ qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,webdev
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,webdev,Qwen3-Coder-480B-A35B-Instruct,name,2026-11-19,1274.3530051305752,1266.4853546691324,1282.220655592018,12632,143
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,webdev,Qwen3-Coder-480B-A35B-Instruct,name,2026-11-20,1274.3788618935341,1266.506905199447,1282.2508185876213,12631,143
 qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,webdev,Qwen3-Coder-480B-A35B-Instruct,name,2026-11-22,1274.4411575734243,1266.568842785749,1282.3134723610995,12630,144
+qwen3-coder-480b-a35b-instruct,Qwen3-Coder-480B-A35B,alibaba,open_weights,webdev,Qwen3-Coder-480B-A35B-Instruct,name,2026-11-23,1274.4575468828298,1266.5852240526287,1282.329869713031,12630,144
 qwen3-max,Qwen3-Max,alibaba,api_only,text,qwen3-max-2025-09-23,name_one_snapshot,2025-09-30,1409.2170653161036,1399.4334502666975,1419.0006803655094,3599,26
 qwen3-max,Qwen3-Max,alibaba,api_only,text,qwen3-max-2025-09-23,name_one_snapshot,2025-10-01,1410.6280834233064,1401.177759851714,1420.0784069948988,3893,26
 qwen3-max,Qwen3-Max,alibaba,api_only,text,qwen3-max-2025-09-23,name_one_snapshot,2025-10-03,1411.0135058688036,1402.0004488517784,1420.0265628858288,4339,28
@@ -63166,6 +63291,7 @@ qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-18,17
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-19,1749.7357281402312,1734.2444969225928,1765.2269593578694,1808,9
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-20,1750.9038736649559,1735.3610977384574,1766.4466495914544,1797,9
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-22,1751.9711365052117,1736.421344457004,1767.5209285534193,1792,9
+qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-23,1752.14420959669,1736.6035390794104,1767.68488011397,1794,9
 qwq-32b,QwQ-32B,alibaba,open_weights,text,qwq-32b,name,2025-03-15,1311.8721072813782,1301.5887168547247,1322.2026425259473,2691,11
 qwq-32b,QwQ-32B,alibaba,open_weights,text,qwq-32b,name,2025-03-17,1312.0081740840978,1302.2457441303316,1322.2676028150952,2732,12
 qwq-32b,QwQ-32B,alibaba,open_weights,text,qwq-32b,name,2025-03-20,1309.9565931021343,1297.114704681269,1318.218017638087,3403,13
@@ -65347,6 +65473,7 @@ step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,Step 5 Preview (High),
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,Step 5 Preview (High),name,2026-11-19,1570.3581436251511,1562.5208288582974,1578.1954583920046,8344,52
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,Step 5 Preview (High),name,2026-11-20,1570.1140404539433,1562.2762982779395,1577.951782629947,8328,53
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,Step 5 Preview (High),name,2026-11-22,1570.2696790099062,1562.4351246195863,1578.1042334002261,8310,53
+step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,Step 5 Preview (High),name,2026-11-23,1570.2012742006268,1562.3665335360442,1578.0360148652094,8315,53
 tencent-hy3,Hy3,tencent,open_weights,text,hy3,name,2026-07-26,1442.288426726654,1431.9822038814737,1452.5946495718345,3275,50
 tencent-hy3,Hy3,tencent,open_weights,text,hy3,name,2026-07-27,1442.4262838204677,1432.1145028102924,1452.738064830643,3267,50
 tencent-hy3,Hy3,tencent,open_weights,text,hy3,name,2026-07-30,1442.4262838204677,1432.1145028102924,1452.738064830643,3267,51
@@ -65461,9 +65588,11 @@ tencent-hy3,Hy3,tencent,open_weights,webdev,Hy3,name,2026-11-18,1505.38561847388
 tencent-hy3,Hy3,tencent,open_weights,webdev,Hy3,name,2026-11-19,1505.5513585309654,1497.8440344703627,1513.2586825915687,7605,74
 tencent-hy3,Hy3,tencent,open_weights,webdev,Hy3,name,2026-11-20,1505.792639410784,1498.105487316308,1513.4797915052595,7638,74
 tencent-hy3,Hy3,tencent,open_weights,webdev,Hy3,name,2026-11-22,1506.1113989279459,1498.4378137744927,1513.784984081399,7657,75
-tencent-hy4,hy4,tencent,api_only,webdev,Hy4,name,2026-11-19,1649.4640363693234,1637.4927558543993,1661.4353168842476,2924,26
-tencent-hy4,hy4,tencent,api_only,webdev,Hy4,name,2026-11-20,1650.4819437810052,1638.489751502671,1662.4741360593393,2909,26
-tencent-hy4,hy4,tencent,api_only,webdev,Hy4,name,2026-11-22,1650.382804169449,1638.396628216377,1662.368980122521,2909,26
+tencent-hy3,Hy3,tencent,open_weights,webdev,Hy3,name,2026-11-23,1506.334064545486,1498.6593747793759,1514.008754311596,7680,75
+tencent-hy4,hy4,tencent,open_weights,webdev,Hy4,name,2026-11-19,1649.4640363693234,1637.4927558543993,1661.4353168842476,2924,26
+tencent-hy4,hy4,tencent,open_weights,webdev,Hy4,name,2026-11-20,1650.4819437810052,1638.489751502671,1662.4741360593393,2909,26
+tencent-hy4,hy4,tencent,open_weights,webdev,Hy4,name,2026-11-22,1650.382804169449,1638.396628216377,1662.368980122521,2909,26
+tencent-hy4,hy4,tencent,open_weights,webdev,Hy4,name,2026-11-23,1650.0889491020257,1638.1026626861117,1662.0752355179397,2909,26
 trinity-large-preview,Trinity-Large-Preview,arcee,open_weights,text,trinity-large-preview,name,2026-04-09,1330.147141889749,1324.4816307614565,1335.812653018042,13146,153
 trinity-large-preview,Trinity-Large-Preview,arcee,open_weights,text,trinity-large-preview,name,2026-04-10,1329.6424262751902,1323.999078561064,1335.2857739893166,13315,153
 trinity-large-preview,Trinity-Large-Preview,arcee,open_weights,text,trinity-large-preview,name,2026-04-14,1329.744203851542,1324.214792765803,1335.273614937281,14164,153
@@ -65769,6 +65898,7 @@ trinity-large-thinking,trinity-large-thinking,arcee,open_weights,webdev,Trinity 
 trinity-large-thinking,trinity-large-thinking,arcee,open_weights,webdev,Trinity Large Thinking,name,2026-11-19,1236.878329971483,1216.8115833582624,1256.9450765847037,1346,152
 trinity-large-thinking,trinity-large-thinking,arcee,open_weights,webdev,Trinity Large Thinking,name,2026-11-20,1236.581532871528,1216.4907074806465,1256.6723582624093,1345,152
 trinity-large-thinking,trinity-large-thinking,arcee,open_weights,webdev,Trinity Large Thinking,name,2026-11-22,1236.6533555050455,1216.5628943447307,1256.7438166653606,1345,153
+trinity-large-thinking,trinity-large-thinking,arcee,open_weights,webdev,Trinity Large Thinking,name,2026-11-23,1236.9272778121367,1216.8596457364592,1256.9949098878142,1346,153
 yi-1-5-34b-chat,Yi-1.5-34B-Chat,01ai,open_weights,text,yi-1.5-34b-chat,name,2024-06-02,1161.6473005461971,1155.2825696877806,1168.4218153308493,8286,16
 yi-1-5-34b-chat,Yi-1.5-34B-Chat,01ai,open_weights,text,yi-1.5-34b-chat,name,2024-06-06,1160.985396527203,1155.871550830555,1166.2940154739536,10425,17
 yi-1-5-34b-chat,Yi-1.5-34B-Chat,01ai,open_weights,text,yi-1.5-34b-chat,name,2024-06-11,1161.6000305158714,1156.760150496116,1166.7366437981166,13787,17

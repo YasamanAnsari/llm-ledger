@@ -50,7 +50,6 @@ fuzzy_match,epoch,granite-4-1-8b,ledger_cluster,granite-4-2-8b,92.9,92-97 band: 
 fuzzy_match,epoch,grok-1,ledger_cluster,grok-4-1,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,grok-4-3-beta,ledger_cluster,grok-4-2-beta,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,hermes-3-405b,ledger_cluster,hermes-4-405b,92.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,hunyuan-turbo,ledger_cluster,hunyuan-turbos,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,imagen,ledger_cluster,imagen-3,92.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,llama-3-70b,ledger_cluster,llama-3-3-70b-instruct,95.7,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mai-code-1-flash,ledger_cluster,mai-code-1-1-flash,94.1,92-97 band: confirm or reject before crosswalking
@@ -63,15 +62,14 @@ fuzzy_match,epoch,minimax-m1-40k,ledger_cluster,minimax-m1-80k,92.9,92-97 band: 
 fuzzy_match,epoch,ministral-3-14b,ledger_cluster,mistral-3-14b,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mistral-large-2,ledger_cluster,mistral-large2,96.6,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,mistral-small-3,ledger_cluster,mistral-small-3-1,93.8,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,qwen-14b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,qwen-14b,ledger_cluster,qwen-3-14b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen-image-2-1,ledger_cluster,qwen-image-2-0,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen-image-2-1-pro,ledger_cluster,qwen-image-2-0-pro,94.4,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen-vl,ledger_cluster,qwen3-vl,93.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,qwen2-5-omni-3b,ledger_cluster,qwen2-5-omni-7b,93.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-5-vl-3b,ledger_cluster,qwen2-5-vl-32b-instruct,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-5-vl-7b,ledger_cluster,qwen2-5-vl-72b-instruct,96.3,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,qwen2-vl-72b,ledger_cluster,qwen2-5-vl-72b-instruct,92.3,92-97 band: confirm or reject before crosswalking
-fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen3-14b,94.1,92-97 band: confirm or reject before crosswalking
+fuzzy_match,epoch,qwen3-4b,ledger_cluster,qwen-3-14b,94.1,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,rerank-3-5,ledger_cluster,rerank-v3-5,95.2,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,ring-flash-2-0,ledger_cluster,ling-flash-2-0,92.9,92-97 band: confirm or reject before crosswalking
 fuzzy_match,epoch,solar-pro,ledger_cluster,solar-pro4,94.7,92-97 band: confirm or reject before crosswalking
@@ -206,7 +204,6 @@ hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-Instruct,ledger,olmo-2-1124
 hf_recreated_repo,huggingface,allenai/OLMo-2-1124-7B-SFT,ledger,olmo-2-1124-7b-sft,,first archive capture 2024-11-27 predates repo creation 2024-12-18; weights date needs a primary source
 hf_recreated_repo,huggingface,openbmb/MiniCPM-V-4.7-35B-A3B,ledger,minicpm-v-4-7-35b-a3b,,first archive capture 2026-10-06 predates repo creation 2026-10-07; weights date needs a primary source
 hf_recreated_repo,huggingface,tencent/Hunyuan-7B-Instruct,ledger,hunyuan-7b-instruct,,first archive capture 2025-01-24 predates repo creation 2025-07-30; weights date needs a primary source
-hf_unmapped_namespace,huggingface,Bahushruth,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,HuggingFaceM4,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,IlyaGusev,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,Kling-Keye-Official,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -217,9 +214,9 @@ hf_unmapped_namespace,huggingface,datificate,,,,1 in-scope repos; add to pull_hf
 hf_unmapped_namespace,huggingface,distilbert,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,dphn,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,erwanf,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
-hf_unmapped_namespace,huggingface,failspy,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,farbodtavakkoli,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,incoai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
+hf_unmapped_namespace,huggingface,katuni4ka,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,kindlingai,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,llamafactory,,,,1 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,ornith-ai,,,,10 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
@@ -229,21 +226,21 @@ hf_unmapped_namespace,huggingface,sshleifer,,,,1 in-scope repos; add to pull_hf.
 hf_unmapped_namespace,huggingface,trl-internal-testing,,,,7 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 hf_unmapped_namespace,huggingface,unsloth,,,,3 in-scope repos; add to pull_hf.NAMESPACE_TO_ORG or dismiss
 lifecycle_ambiguous,litellm,azure_ai/DeepSeek-V4-Flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
+lifecycle_ambiguous,litellm,azure_ai/deepseek-v4.1-flash-1017,ledger,crosswalk:deepseek-v4-1-flash-1017|name:deepseek-v4-1-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,fireworks_ai/deepseek-v4-flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 lifecycle_ambiguous,litellm,together_ai/deepseek-ai/DeepSeek-V4-Flash-0731,ledger,crosswalk:deepseek-v4-flash-0731|name:deepseek-v4-flash,,exact-id crosswalk and name matching name different models; add the id to crosswalk.csv for the right one
 long_announce_gap,ledger,amazon-nova-lite,,,364,api_ga 2025-12-02 is 364d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,hunyuan-turbos,,,362,api_ga 2026-03-08 is 362d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,llama-3-1-nemotron-70b-instruct,,,185,weights_released 2025-04-15 is 185d after the announcement and unverified: confirm the launch date or reject the later listing
-long_announce_gap,ledger,mistral-medium,,,870,weights_released 2026-04-29 is 870d after the announcement and unverified: confirm the launch date or reject the later listing
+long_announce_gap,ledger,mistral-medium,,,869,weights_released 2026-04-28 is 869d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,qwen-turbo,,,269,api_ga 2024-11-01 is 269d after the announcement and unverified: confirm the launch date or reject the later listing
 long_announce_gap,ledger,reka-edge,,,692,weights_released 2026-03-11 is 692d after the announcement and unverified: confirm the launch date or reject the later listing
 md_no_consensus,models_dev,apertus-70b,ledger,apertus-70b,,resellers disagree: inference-coop:2026-07-24|regolo-ai:2025-09-02
-md_no_consensus,models_dev,cline-pass/deepseek-v4-flash,ledger,deepseek-v4-flash,,resellers disagree: abacus:2026-04-24|above:2026-09-10|adaption:2026-07-31|agentrouter:2026-04-24|aihubmix:2026-07-31|aimlapi:2026-04-24|alibaba:2026-07-31|alibaba-cn:2026-04-24|alibaba-token-plan:2026-04-24|alibaba-token-plan:2026-07-31|alibaba-token-plan-cn:2026-04-24|alibaba-token-plan-cn:2026-07-31|amd:2026-07-31|anyapi:2026-04-24|auriko:2026-04-24|azure:2026-04-24|azure-cognitive-services:2026-04-24|baseten:2026-07-31|bothub:2026-07-31|cline-pass:2026-04-24|commandcode:2026-04-24|concentrate:2026-04-23|concentrate:2026-07-31|confidential-ai:2026-07-31|cortecs:2026-07-31|deepinfra:2026-04-24|deepinfra:2026-07-31|deepseek:2026-10-17|digitalocean:2026-07-31|doubleword:2026-07-31|ebcloud:2026-04-24|edenai:2026-04-24|edenai:2026-07-31|edenai:2026-07-31|edenai:2026-07-31|edenai:2026-07-31|empiriolabs:2026-07-31|engy:2026-07-31|gmicloud:2026-04-24|greenpt:2026-07-31|hpc-ai:2026-04-24|huawei-maas:2026-04-24|huggingface:2026-04-24|huggingface:2026-07-31|impossibl:2026-04-24|inceptron:2026-07-31|inferenceapis:2026-04-24|inferx:2026-04-24|iteracompute:2026-09-10|jalapeno:2026-04-24|joingonka:2026-07-31|jzstoken:2026-04-24|kenari:2026-04-24|kilo:2026-04-24|kilo:2026-07-31|klavo:2026-07-31|llmgateway:2026-04-24|llmgateway:2026-07-31|llmgateway-providers:2026-04-24|llmgateway-providers:2026-04-24|llmgateway-providers:2026-04-24|llmgateway-providers:2026-04-24|llmgateway-providers:2026-04-24|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|llmgateway-providers:2026-07-31|lyceum:2026-07-31|melious:2026-07-31|merge-gateway:2026-04-23|merge-gateway:2026-04-24|merge-gateway:2026-07-31|moark:2026-04-24|moark:2026-07-31|modelis:2026-04-24|moneo:2026-04-24|munito:2026-07-31|munito-eu:2026-07-31|nan:2026-10-17|nano-gpt:2026-04-23|nano-gpt:2026-04-23|nano-gpt:2026-04-24|nano-gpt:2026-04-24|nano-gpt:2026-07-31|nano-gpt:2026-07-31|novita-ai:2026-07-31|obscurify:2026-04-24|ofox:2026-04-23|ofox:2026-04-24|ofox:2026-07-31|opencode:2026-07-31|openreason:2026-07-31|openrouter:2026-04-24|openrouter:2026-07-31|opper:2026-04-24|orcarouter:2026-04-24|orcarouter:2026-07-31|pendra:2026-04-24|perplexity-agent:2026-07-31|phala:2026-07-31|pioneer:2026-04-24|prime:2026-04-24|prime:2026-07-31|requesty:2026-04-24|requesty:2026-07-31|routing-run:2026-04-24|runinfra:2026-07-31|sagg:2026-07-31|sandbase:2026-04-24|scaleway:2026-07-31|scnet-token-plan:2026-04-24|scnet-token-plan:2026-07-31|scx-ai:2026-04-24|sensenova:2026-04-24|siliconflow:2026-04-24|siliconflow:2026-07-31|siliconflow-cn:2026-04-24|standardcompute:2026-04-24|standardcompute:2026-07-31|steadyrouter:2026-04-24|stepping-stone:2026-07-31|teamorouter:2026-07-31|tensorx:2026-07-31|togetherai:2026-07-31|tokengo:2026-04-24|tokenify:2026-07-31|unorouter:2026-04-24|unorouter:2026-04-24|venice:2026-04-24|venice:2026-07-31|vercel:2026-04-24|vercel:2026-07-31|vivgrid:2026-07-31|volcengine-coding-plan:2026-04-24|vultr:2026-07-31|wafer.ai:2026-04-23|wally:2026-07-31|wandb:2026-07-31|watt:2026-04-24|watt:2026-07-31|zenifra:2026-07-31|zenmux:2026-04-24
 md_no_consensus,models_dev,deepseek-ai/DeepSeek-V3.1-Terminus:thinking,ledger,deepseek-v3-1-terminus,,resellers disagree: abacus:2025-06-01|alibaba-cn:2025-09-29|helicone:2025-09-22|kilo:2025-09-22|nano-gpt:2024-01-01|nano-gpt:2025-08-02|openrouter:2025-09-22|qiniu-ai:2025-09-22|siliconflow:2025-09-29|siliconflow-cn:2025-09-29
 md_no_consensus,models_dev,deepseek-ai/deepseek-v3.2-exp,ledger,deepseek-v3-2-exp,,resellers disagree: alibaba-cn:2025-01-01|kilo:2025-09-29|meganova:2025-10-10|nano-gpt:2024-01-01|openrouter:2025-09-29|qiniu-ai:2025-09-29|siliconflow:2025-10-10|zenmux:2025-09-29
 md_no_consensus,models_dev,deepseek-r1-distill-llama-70b,ledger,deepseek-r1-distill-llama-70b,,resellers disagree: alibaba-cn:2025-01-01|helicone:2025-01-20
-md_no_consensus,models_dev,deepseek-v3,ledger,deepseek-v3,,resellers disagree: alibaba-cn:2024-12-01|alibaba-cn:2024-12-26|anonrouter:2024-12-26|crusoe:2025-03-24|deepinfra:2024-12-26|deepinfra:2025-03-24|drun:2024-12-26|helicone:2024-12-26|huggingface:2024-12-26|huggingface:2025-03-24|jiekou:2025-03-24|meganova:2025-03-24|merge-gateway:2024-12-26|nano-gpt:2025-03-24|novita-ai:2024-12-26|qiniu-ai:2024-12-26|siliconflow:2025-03-24|siliconflow-cn:2025-03-24|submodel:2025-03-24|togetherai:2024-12-26
+md_no_consensus,models_dev,deepseek-v3,ledger,deepseek-v3,,resellers disagree: alibaba-cn:2024-12-01|alibaba-cn:2024-12-26|anonrouter:2024-12-26|crusoe:2025-03-24|deepinfra:2024-12-26|drun:2024-12-26|helicone:2024-12-26|huggingface:2024-12-26|huggingface:2025-03-24|jiekou:2025-03-24|meganova:2025-03-24|merge-gateway:2024-12-26|nano-gpt:2025-03-24|novita-ai:2024-12-26|qiniu-ai:2024-12-26|siliconflow:2025-03-24|siliconflow-cn:2025-03-24|submodel:2025-03-24
 md_no_consensus,models_dev,grok-3,ledger,grok-3,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,grok-3-mini,ledger,grok-3-mini,,resellers disagree: helicone:2024-06-01|poe:2025-04-11
 md_no_consensus,models_dev,mistralai/ministral-3b,ledger,ministral-3b,,resellers disagree: azure:2024-10-22|azure-cognitive-services:2024-10-22|kilo:2024-10-16|vercel:2024-10-16
@@ -544,6 +541,7 @@ nhlocal_lead,nhlocal_aitimeline,o3 full@2025-04-01,,,,"month-precision community
 nhlocal_lead,nhlocal_aitimeline,text-davinci-002@2022-03-01,,,,month-precision community-timeline lead: OpenAI releases text-davinci-002 and code-davinci-002 with an API approach.
 nhlocal_lead,nhlocal_aitimeline,v4@2024-11-01,,,,"month-precision community-timeline lead: Suno upgraded its AIpowered music generator to v4, introducing new features and performance improvements."
 nhlocal_lead,nhlocal_aitimeline,v7@2025-04-01,,,,"month-precision community-timeline lead: Midjourney launches v7, with higher image quality and more precise control over style."
+paper_lead,ledger,01ai/Yi,arxiv,https://arxiv.org/abs/2403.04652,,"v1 2024-03-07 'Yi: Open Foundation Models by 01.AI'; family first available 2023-11-01; members: yi-34b, yi-34b-200k, yi-6b, yi-6b-200k, yi-6b-chat, yi-9b ...; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,alibaba/Qwen,arxiv,https://arxiv.org/abs/2309.16609,,"v1 2023-09-28 'Qwen Technical Report'; family first available 2023-11-26; members: qwen-72b, qwen-plus, qwen-turbo, qwen-vl-max; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,alibaba/Qwen2,arxiv,https://arxiv.org/abs/2407.10671,,"v1 2024-07-15 'Qwen2 Technical Report'; family first available 2024-08-28; members: qwen2-vl-2b-instruct; add paper_published to the model the paper describes, or reject"
 paper_lead,ledger,alibaba/Qwen3-Omni,arxiv,https://arxiv.org/abs/2509.17765,,"v1 2025-09-22 'Qwen3-Omni Technical Report'; family first available 2025-09-15; members: qwen3-omni-30b-a3b-instruct, qwen3-omni-flash; add paper_published to the model the paper describes, or reject"
@@ -648,7 +646,7 @@ predecessor_lead,ledger,claude-fable-5-2,ledger,claude-fable-5-1,,"claude-fable-
 predecessor_lead,ledger,claude-mythos-5-2,ledger,claude-mythos-5,,"Claude Mythos 5 (2026-06-09) -> Claude Mythos 5.2 (2026-11-09); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3,ledger,deepseek-v2,,"DeepSeek-V2 (2024-04-22) -> DeepSeek-V3 (2024-12-26); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,deepseek-v3-2,ledger,deepseek-v3-1,,"DeepSeek-V3.1 (2025-08-21) -> DeepSeek-V3.2 (2025-12-01); set predecessor_id / successor_id in models.csv, or reject"
-predecessor_lead,ledger,deepseek-v4-1-flash,ledger,deepseek-v4-flash,,"DeepSeek V4 (2026-04-24) -> deepseek-v4.1 (2026-09-10); set predecessor_id / successor_id in models.csv, or reject"
+predecessor_lead,ledger,deepseek-v4-1-flash,ledger,deepseek-v4-flash,,"DeepSeek V4 (2026-07-31) -> deepseek-v4.1 (2026-09-10); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,delphi-1e21-3-4bparams-46-3btokens-seed62746,ledger,delphi-1e21-3-4bparams-46-3btokens-seed42,,"delphi-1e21-3.4Bparams-46.3Btokens-seed42 (2026-05-05) -> delphi-1e21-3.4Bparams-46.3Btokens-seed62746 (2026-05-05); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,doubao-seed-1-8,ledger,doubao-seed-1-6,,"Doubao-Seed-1.6 (2025-10-15) -> Doubao Seed 1.8 (2025-12-28); set predecessor_id / successor_id in models.csv, or reject"
 predecessor_lead,ledger,doubao-seed-2-1-pro,ledger,doubao-seed-2-0-pro,,"Doubao-Seed-2.0 (2026-02-14) -> Doubao Seed 2.1 (2026-06-23); set predecessor_id / successor_id in models.csv, or reject"

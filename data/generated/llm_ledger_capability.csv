@@ -33,7 +33,7 @@ deepseek-v3-2,DeepSeek-V3.2,deepseek,open_weights,osi_approved,2025-12-01,DeepSe
 deepseek-v3-2-exp,DeepSeek-V3.2-Exp,deepseek,open_weights,osi_approved,2025-09-29,DeepSeek-V3.2-Exp,crosswalk,144.39,142.15,146.7,2025-09-29,Open weights,2026-11-20
 deepseek-v4-1-flash,deepseek-v4.1-flash,deepseek,open_weights,osi_approved,2026-09-10,DeepSeek V4.1 Flash,crosswalk,157.01,155.05,159.2,2026-09-09,Open weights,2026-11-20
 deepseek-v4-1-flash-1017,DeepSeek V4.1 Flash 1017,deepseek,open_weights,osi_approved,2026-10-17,DeepSeek V4.1 Flash 1017,crosswalk,159.41,157.13,161.91,2026-10-17,Open weights,2026-11-20
-deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-04-24,DeepSeek-V4-Flash,name,146.91,143.68,150.18,2026-04-24,Open weights,2026-11-20
+deepseek-v4-flash,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-07-31,DeepSeek-V4-Flash,name,146.91,143.68,150.18,2026-04-24,Open weights,2026-11-20
 deepseek-v4-flash-0731,DeepSeek V4 Flash 0731,deepseek,open_weights,osi_approved,2026-07-31,DeepSeek V4 Flash 0731,crosswalk,154.43,152.61,156.4,2026-07-31,Open weights,2026-11-20
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek V4 Pro 0813,crosswalk,155.96,154.05,158.06,2026-08-13,Open weights,2026-11-20
 deepseek-v4-pro,DeepSeek-V4-Pro,deepseek,open_weights,osi_approved,2026-08-13,DeepSeek-V4-Pro,crosswalk,150.19,148.42,151.99,2026-04-24,Open weights,2026-11-20
@@ -123,9 +123,9 @@ llama-4-maverick,Llama 4 Maverick,meta,open_weights,open_weights_restricted,2025
 llama-4-scout,Llama 4 Scout,meta,open_weights,,2025-04-05,Llama 4 Scout,crosswalk,127.75,124.86,130.35,2025-04-05,Open weights,2026-11-20
 minimax-m3,MiniMax-M3,minimax,open_weights,open_weights_restricted,2026-06-01,MiniMax-M3,crosswalk,147.84,145.68,149.96,2026-06-01,Open weights,2026-11-20
 mistral-large,Mistral Large,mistral,api_only,proprietary,2024-02-26,Mistral Large,crosswalk,119.97,115.91,123.59,2024-02-26,Closed weights,2026-11-20
-mistral-large-4,Mistral Large 4,mistral,api_only,,2026-10-06,Mistral Large 4,crosswalk,154.57,151.81,157.43,2026-10-29,Open weights,2026-11-20
+mistral-large-4,Mistral Large 4,mistral,api_only,,,Mistral Large 4,crosswalk,154.57,151.81,157.43,2026-10-29,Open weights,2026-11-20
 mistral-medium-3,Mistral Medium 3,mistral,api_only,proprietary,2025-05-07,Mistral Medium 3,crosswalk,132.8,130.12,135.29,2025-05-07,Closed weights,2026-11-20
-mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,,2026-03-31,Mistral Medium 3.5,crosswalk,141.58,138.33,144.71,2026-04-28,Open weights,2026-11-20
+mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,,2026-04-28,Mistral Medium 3.5,crosswalk,141.58,138.33,144.71,2026-04-28,Open weights,2026-11-20
 mistral-nemo,Mistral NeMo,mistral,open_weights,osi_approved,2024-07-18,Mistral NeMo,crosswalk,113.87,108.58,118.38,2024-07-18,Open weights,2026-11-20
 mixtral-8x22b-instruct,Mixtral 8x22B,mistral,open_weights,osi_approved,2024-04-17,Mixtral 8x22B,crosswalk,118.71,114.5,122.52,2024-04-17,Open weights,2026-11-20
 mixtral-8x7b-instruct,Mixtral 8x7B Instruct,mistral,open_weights,osi_approved,,Mixtral 8x7B,crosswalk,113.19,108.12,117.55,2023-12-11,Open weights,2026-11-20
@@ -146,10 +146,10 @@ phi-2,phi-2,microsoft,open_weights,osi_approved,2023-12-13,Phi-2,name,96.21,86.8
 phi-4,Phi-4,microsoft,open_weights,osi_approved,2024-12-11,Phi-4,crosswalk,129.24,126.07,132.03,2024-12-12,Open weights,2026-11-20
 qwen2-5-72b-instruct,Qwen2.5 72B Instruct,alibaba,open_weights,open_weights_restricted,2024-09-19,Qwen2.5-72B,crosswalk,127.23,124.36,129.84,2024-09-19,Open weights,2026-11-20
 qwen2-5-coder-7b-instruct,Qwen2.5-Coder (7B),alibaba,open_weights,osi_approved,2024-09-17,Qwen2.5-Coder (7B),crosswalk,107.42,97.72,116.06,2024-09-18,Open weights,2026-11-20
-qwen3-14b,Qwen3-14B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-14B,crosswalk,136.06,133.32,138.65,2025-04-29,Open weights,2026-11-20
+qwen3-14b,Qwen3-14B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-14B,crosswalk,136.06,133.32,138.65,2025-04-29,Open weights,2026-11-20
 qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-235B-A22B,crosswalk,138.4,136.04,140.72,2025-04-28,Open weights,2026-11-20
 qwen3-30b-a3b,Qwen3-30B-A3B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-30B-A3B,crosswalk,134.16,131.29,136.71,2025-04-29,Open weights,2026-11-20
-qwen3-32b,Qwen3-32B,alibaba,open_weights,osi_approved,2025-04-27,Qwen3-32B,crosswalk,136.85,134.39,139.13,2025-04-29,Open weights,2026-11-20
+qwen3-32b,Qwen3-32B,alibaba,open_weights,osi_approved,2025-04-28,Qwen3-32B,crosswalk,136.85,134.39,139.13,2025-04-29,Open weights,2026-11-20
 qwen3-5-35b-a3b,Qwen3.5-35B-A3B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-35B-A3B,crosswalk,144.05,141.51,146.63,2026-02-24,Open weights,2026-11-20
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,,2026-02-15,Qwen3.5 397B-A17B,crosswalk,147.96,145.86,150.13,2026-02-13,Open weights,2026-11-20
 qwen3-5-9b,Qwen3.5-9B,alibaba,open_weights,osi_approved,2026-02-23,Qwen3.5-9B,crosswalk,139.5,137.31,141.66,2026-02-24,Open weights,2026-11-20
@@ -160,7 +160,7 @@ qwen3-7-max,Qwen3.7-Max,alibaba,api_only,proprietary,2026-05-21,Qwen3.7-Max,cros
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,proprietary,2026-06-02,Qwen3.7-Plus,crosswalk,147.92,145.96,150.02,2026-06-02,Closed weights,2026-11-20
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,osi_approved,2026-08-14,Qwen 3.8 27B,crosswalk,152.63,150.65,154.67,2026-08-14,Open weights,2026-11-20
 qwen3-8-max,qwen3.8-max,alibaba,api_only,proprietary,2026-08-03,Qwen 3.8 Max,crosswalk,157.55,155.52,159.85,2026-08-02,Closed weights,2026-11-20
-qwen3-8b,Qwen3-8B,alibaba,open_weights,osi_approved,2025-04-30,Qwen3-8B,crosswalk,132.07,128.93,134.94,2025-04-28,Open weights,2026-11-20
+qwen3-8b,Qwen3-8B,alibaba,open_weights,osi_approved,2025-04-29,Qwen3-8B,crosswalk,132.07,128.93,134.94,2025-04-28,Open weights,2026-11-20
 qwen3-max,Qwen3-Max,alibaba,api_only,proprietary,2025-09-23,Qwen3-Max,crosswalk,142.43,140.38,144.46,2025-09-24,Closed weights,2026-11-20
 qwq-32b,QwQ-32B,alibaba,open_weights,,2025-03-05,QwQ-32B,crosswalk,136.44,133.66,139.1,2025-03-05,Open weights,2026-11-20
 yi-6b,Yi-6B,01ai,open_weights,osi_approved,2023-11-01,Yi 6B,name,94.27,84.08,103.19,2023-11-22,Open weights,2026-11-20
