@@ -293,6 +293,7 @@ mercury-edit-2,false,none,,,,,32000,8192,text,text,,false,,,0.25,0.75,0.025,2026
 mimo-v2-5,true,,,,,,1048576,131072,text|image|audio|video,text,2024-12,true,,,0.14,0.28,0.0028,2026-09-01,https://models.dev/api.json
 mimo-v2-5-pro,true,,,,,,1048576,131072,text,text,2024-12,true,,,1.74,3.48,0.0145,2026-09-01,https://models.dev/api.json
 mimo-v2-6-flash,true,,,,,,1048576,131072,text|image|audio|video,text,2026-09-22,true,,,0.16,0.32,0.004,2026-09-22,https://models.dev/api.json
+mimo-v2-6-flash-mopd,true,,,,,,1048576,32768,text|image|video|audio,text,,true,,,0.5,1,0.05,2026-11-25,https://models.dev/api.json
 mimo-v2-6-pro,true,,,,,,1048576,131072,text|image|audio|video,text,2026-09-22,true,,,0.47,0.94,0.005,2026-09-22,https://models.dev/api.json
 mimo-v2-6-pro-ultraspeed,true,,,,,,1000000,131072,text|image|video|audio,text,,true,,,21.75,43.5,21.75,2026-09-22,https://models.dev/api.json
 mimo-v2-flash,true,,,,,,262144,4096,text,text,2024-12,true,,,0.1,0.3,,2026-09-01,https://models.dev/api.json
@@ -474,8 +475,10 @@ seed-2-0-code,true,,,,,,256000,131072,text|image,text,,true,,,0.5,3,0.1,2026-09-
 seed-2-0-lite,true,,,,,,256000,128000,text|image|video,text,,true,,,0.31,2.5,0.31,2026-09-01,https://models.dev/api.json
 seed-2-0-mini,true,,,,,,256000,32000,text|image,text,,true,,,0.1,0.4,0.02,2026-09-01,https://models.dev/api.json
 seed-2-1-turbo,true,,,,,,256000,65536,text|image|video,text,,true,,,0.63,3.13,0.63,2026-09-01,https://models.dev/api.json
+solar-mini-4-5,true,,,,,,524288,131072,text,text,,true,,,0.1,0.4,0.01,2026-11-25,https://models.dev/api.json
 solar-mini4,true,,,,,,524288,131072,text,text,,true,,,0.1,0.4,0.01,2026-10-03,https://models.dev/api.json
 solar-pro-3,true,,,,,,131072,117964,text,text,,true,,,0.15,0.6,0.015,2026-10-03,https://models.dev/api.json
+solar-pro-4-contributor,true,,,,,,524288,131072,text,text,,true,,,0.3,1.2,0.06,2026-11-25,https://models.dev/api.json
 solar-pro4,true,,,,,,524288,131072,text,text,2026-02,true,,,0.03,0.12,,2026-10-03,https://models.dev/api.json
 sonar,false,none,,,,,128000,8192,text,text,2025-09-01,true,,,0.25,2.5,0.0625,2026-09-01,https://models.dev/api.json
 sonar-deep-research,true,,,,,,127000,4096,text,text,2025-01,false,,,2,8,,2026-09-01,https://models.dev/api.json

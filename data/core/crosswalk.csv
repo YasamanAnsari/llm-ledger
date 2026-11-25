@@ -1430,6 +1430,7 @@ glm-5-3-flash,semantic_scholar,e0db747ad65d72559e583ff92f729d68949e9daf
 glm-5-3-flashx,models_dev,commandcode/z-ai/glm-5.3-flashx
 glm-5-3-flashx,models_dev,vercel/zai/glm-5.3-flashx
 glm-5-3-flashx,openrouter,z-ai/glm-5.3-flashx
+glm-5-3-flashx-legal,models_dev,concentrate/glm-5.3-flashx-legal
 glm-5-3-flashx-legal,models_dev,kilo/z-ai/glm-5.3-flashx-legal
 glm-5-3-flashx-legal,openrouter,z-ai/glm-5.3-flashx-legal
 glm-5-3-prime,models_dev,alibaba/glm-5.3-prime
@@ -1824,6 +1825,7 @@ granite-4-1-8b-base,huggingface,ibm-granite/granite-4.1-8b-base
 granite-4-2-30b,huggingface,ibm-granite/granite-4.2-30b
 granite-4-2-3b,huggingface,ibm-granite/granite-4.2-3b
 granite-4-2-8b,huggingface,ibm-granite/granite-4.2-8b
+granite-4-2-8b,models_dev,deepinfra/ibm-granite/granite-4.2-8b
 granite-4-2-8b,models_dev,huggingface/ibm-granite/granite-4.2-8b
 granite-4-2-8b,models_dev,kilo/ibm-granite/granite-4.2-8b
 granite-4-2-8b,models_dev,wandb/ibm-granite/granite-4.2-8b
@@ -2006,6 +2008,7 @@ inkling,epoch,Inkling
 inkling,huggingface,thinkingmachines/Inkling
 inkling,models_dev,thinkingmachines/thinkingmachines/Inkling
 inkling,openrouter,thinkingmachines/inkling
+inkling-2-mini,epoch,Inkling 2 Mini
 inkling-2-mini,huggingface,thinkingmachines/Inkling-2-Mini
 inkling-2-mini,models_dev,kilo/thinkingmachines/inkling-2-mini
 inkling-2-mini,models_dev,thinkingmachines/thinkingmachines/Inkling-2-Mini
@@ -2546,6 +2549,7 @@ ling-mini-2-0,openalex,W4415203133
 ling-mini-2-0,semantic_scholar,fe100060a35c19a6c538e0453cdf3662ec015199
 ling-plus,huggingface,inclusionAI/Ling-plus
 ling-plus,semantic_scholar,075ed3f43edc114b1942ee8f98a0894a16fee3f5
+lingsante-3-1-air-vl,huggingface,inclusionAI/LingSante-3.1-air-VL
 llada-moe-7b-a1b-base,huggingface,inclusionAI/LLaDA-MoE-7B-A1B-Base
 llada-ui,huggingface,inclusionAI/LLaDA-UI
 llada-ui,openalex,W7213333313
@@ -2911,6 +2915,8 @@ mimo-v2-6-flash,models_dev,cline-pass/cline-pass/mimo-v2.6-flash
 mimo-v2-6-flash,models_dev,crossmodel/xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash,openrouter,xiaomi/mimo-v2.6-flash
 mimo-v2-6-flash-mopd,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-MOPD
+mimo-v2-6-flash-mopd,models_dev,kilo/xiaomi/mimo-v2.6-flash-mopd
+mimo-v2-6-flash-mopd,openrouter,xiaomi/mimo-v2.6-flash-mopd
 mimo-v2-6-flash-rl,huggingface,XiaomiMiMo/MiMo-V2.6-Flash-RL
 mimo-v2-6-pro,epoch,MiMo-V2.6 Pro
 mimo-v2-6-pro,models_dev,cline-pass/cline-pass/mimo-v2.6-pro
@@ -3167,6 +3173,7 @@ mistral-medium-3,models_dev,kilo/mistralai/mistral-medium-3
 mistral-medium-3,openrouter,mistralai/mistral-medium-3
 mistral-medium-3-1,epoch,Mistral Medium 3.1
 mistral-medium-3-1,models_dev,aimlapi/mistralai/mistral-medium-3.1
+mistral-medium-3-1,models_dev,concentrate/mistral-medium-3.1
 mistral-medium-3-1,models_dev,kilo/mistralai/mistral-medium-3.1
 mistral-medium-3-1,openrouter,mistralai/mistral-medium-3.1
 mistral-medium-3-5,epoch,Mistral Medium 3.5
@@ -4543,6 +4550,8 @@ solar-10-7b-instruct-v1-0,huggingface,upstage/SOLAR-10.7B-Instruct-v1.0
 solar-10-7b-v1-0,huggingface,upstage/SOLAR-10.7B-v1.0
 solar-10-7b-v1-0,openalex,W4390306040
 solar-10-7b-v1-0,semantic_scholar,ab7d320cbae173aef86c31faa087780cba44551f
+solar-mini-4-5,models_dev,kilo/upstage/solar-mini-4-5
+solar-mini-4-5,openrouter,upstage/solar-mini-4-5
 solar-mini4,models_dev,kenari/solar-mini4:free
 solar-mini4,models_dev,kilo/upstage/solar-mini4
 solar-mini4,models_dev,nano-gpt/upstage/solar-mini4
@@ -4558,6 +4567,8 @@ solar-pro-3,models_dev,aimlapi/upstage/solar-pro-3
 solar-pro-3,models_dev,kilo/upstage/solar-pro-3
 solar-pro-3,models_dev,nano-gpt/upstage/solar-pro-3
 solar-pro-3,openrouter,upstage/solar-pro-3
+solar-pro-4-contributor,models_dev,kilo/upstage/solar-pro-4-contributor
+solar-pro-4-contributor,openrouter,upstage/solar-pro-4-contributor
 solar-pro-preview-instruct,huggingface,upstage/solar-pro-preview-instruct
 solar-pro-preview-pretrained,huggingface,upstage/solar-pro-preview-pretrained
 solar-pro4,models_dev,aimlapi/upstage/solar-pro4
@@ -4685,6 +4696,7 @@ tencent-hy3,models_dev,crossmodel/tencent/hy3
 tencent-hy3,openrouter,tencent/hy3
 tencent-hy4,huggingface,tencent/Hy4
 tencent-hy4,models_dev,chutes/tencent/Hy4
+tencent-hy4,models_dev,concentrate/hy4
 tencent-hy4,models_dev,vercel/tencent/hy4
 tencent-hy4,openrouter,tencent/hy4
 test-bloomd,huggingface,bigscience/test-bloomd

@@ -55,6 +55,10 @@ deepseek-v4-pro-retired-1,deepseek-v4-pro,retired,azure,litellm,https://raw.gith
 deepseek-v4-pro-retired-2,deepseek-v4-pro,retired,together,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-29,33,2026-09-18
 deepseek-v4-pro-retired-3,deepseek-v4-pro,retired,fireworks,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-08-27,2026-09-25,29,2026-09-24
 deepseek-v4-pro-weights_released-1,deepseek-v4-pro,weights_released,,models.dev,https://models.dev/api.json,false,2026-08-12,2026-08-13,1,2026-10-20
+gemini-2-0-flash-lite-api_ga-1,gemini-2-0-flash-lite,api_ga,,models.dev,https://models.dev/api.json,false,2024-12-11,2025-02-25,76,2026-11-25
+gemini-2-5-flash-lite-api_ga-1,gemini-2-5-flash-lite,api_ga,,models.dev,https://models.dev/api.json,false,2025-06-17,2025-07-22,35,2026-11-25
+gemini-2-5-flash-retired-2,gemini-2-5-flash,retired,openrouter,openrouter expiration,https://openrouter.ai/api/v1/models,true,2026-10-20,2026-12-01,42,2026-11-25
+gemini-2-5-pro-retired-2,gemini-2-5-pro,retired,openrouter,openrouter expiration,https://openrouter.ai/api/v1/models,true,2026-10-20,2026-12-01,42,2026-11-25
 gemini-3-6-flash-retired-1,gemini-3-6-flash,retired,vertex,litellm,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json,false,2026-11-19,2027-01-28,70,2026-11-22
 gemini-4-argon-announced-1,gemini-4-argon,announced,,epoch.ai,https://epoch.ai/data/all_ai_models.csv,false,2026-09-30,2026-10-13,13,2026-11-16
 gemini-4-carbon-announced-1,gemini-4-carbon,announced,,epoch.ai,https://epoch.ai/data/all_ai_models.csv,false,2026-10-28,2026-11-10,13,2026-11-16

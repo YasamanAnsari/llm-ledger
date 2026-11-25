@@ -132,9 +132,9 @@ gemini-1-0-pro,Gemini 1.0 Pro,Gemini 1.0,api_only,,2023-12-06,2024-01-02,2401.02
 gemini-1-5-flash,Gemini 1.5 Flash,Gemini 1.5,api_only,,2024-05-23,2024-06-27,2406.19497,35
 gemini-1-5-pro,Gemini 1.5 Pro,Gemini 1.5,api_only,,2024-05-14,2024-05-07,2405.02937,-7
 gemini-2-0-flash,Gemini 2.0 Flash,Gemini 2.0,api_only,,2025-02-05,2025-01-02,2412.19260,-34
-gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Gemini 2.0,api_only,,2024-12-11,2025-09-25,2403.16851,288
+gemini-2-0-flash-lite,Gemini 2.0 Flash-Lite,Gemini 2.0,api_only,,2025-02-25,2025-09-25,2403.16851,212
 gemini-2-5-flash,Gemini 2.5 Flash,Gemini 2.5,api_only,,2025-06-17,2025-05-17,2505.12000,-31
-gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,Gemini 2.5,api_only,,2025-06-17,2025-10-09,2510.08111,114
+gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,Gemini 2.5,api_only,,2025-07-22,2025-10-09,2510.08111,79
 gemini-2-5-pro,Gemini 2.5 Pro,Gemini 2.5,api_only,,2025-06-17,2025-04-16,2504.10337,-62
 gemini-2-5-pro-preview,gemini-2.5-pro-preview,gemini-2.5,api_only,,2025-06-05,2025-06-02,2506.02314,-3
 gemini-2-5-pro-preview-05-06,gemini-2.5-pro-preview-05-06,gemini-2.5-05-06,api_only,,2025-05-07,2025-11-17,2512.02024,194
@@ -227,6 +227,7 @@ gpt-5-nano,GPT-5 nano,GPT-5,api_only,,2025-08-07,2025-08-13,2508.08224,6
 gpt-5-pro,GPT-5 Pro,GPT-5,api_only,,2025-10-06,2025-10-07,2510.06135,1
 gpt-6-1-sol,GPT-6.1 Sol,GPT-6.1 Sol,api_only,,2026-09-29,2026-10-14,2610.19704,15
 gpt-6-1-terra,GPT-6.1 Terra,GPT-6.1 Terra,api_only,,2026-10-26,2026-11-09,2611.13011,14
+gpt-6-2-astra,GPT-6.2 Astra,GPT-6.2 Astra,api_only,,2026-11-17,2026-11-24,2610.24744,7
 gpt-6-astra,GPT-6 Astra,GPT-6 Astra,api_only,,2026-09-04,2026-09-06,2609.25050,2
 gpt-6-astra-pro,gpt-6-astra-pro,gpt-6-astra,api_only,,2026-09-04,2026-10-01,2610.02204,27
 gpt-6-luna,gpt-6-luna,gpt-6-luna,api_only,,2026-09-22,2026-09-29,2609.33628,7

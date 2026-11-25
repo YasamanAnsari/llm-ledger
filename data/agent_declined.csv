@@ -133,3 +133,7 @@ date,reason,count
 2026-11-23,no_dated_event,2
 2026-11-24,community_lead,4
 2026-11-24,no_dated_event,10
+2026-11-25,already_recorded,1
+2026-11-25,community_lead,1
+2026-11-25,launch_event_required,3
+2026-11-25,no_dated_event,6

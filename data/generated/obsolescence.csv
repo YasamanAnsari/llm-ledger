@@ -58,7 +58,7 @@ dots-3-note-preview,dots-3-note-preview:free,rednote,api_only,2026-08-14,,,,,,20
 ernie-4-5-vl-424b-a47b,ernie-4.5-vl-424b-a47b,baidu,open_weights,2025-06-28,,,,,,,,,,2026-10-08
 ernie-5-1,ERNIE 5.1,baidu,api_only,2026-05-10,2026-05-06,8,2026-09-13,2026-09-25,138,,,,,
 gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,2025-06-17,2025-06-24,3,2026-04-19,2026-04-20,307,2025-06-18,2026-10-15,,,
-gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,google,api_only,2025-06-17,,,,,,2025-07-23,2026-10-20,,,
+gemini-2-5-flash-lite,Gemini 2.5 Flash-Lite,google,api_only,2025-07-22,,,,,,2025-07-23,2026-10-20,,,
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,2025-06-17,2025-06-24,1,2026-08-12,2026-08-14,423,2025-06-18,2026-07-01,2026-07-02,380,
 gemini-2-5-pro-preview,gemini-2.5-pro-preview,google,api_only,2025-06-05,,,,,,2025-06-05,2025-06-25,2025-06-26,21,
 gemini-2-5-pro-preview-05-06,gemini-2.5-pro-preview-05-06,google,api_only,2025-05-07,,,,,,2025-04-04,2025-06-25,2025-06-26,50,
@@ -225,7 +225,7 @@ longcat-flash-chat,LongCat-Flash,meituan,open_weights,2025-08-29,2025-09-17,9,20
 mercury-2,mercury-2,inception-labs,api_only,2026-02-24,2026-03-11,52,,2026-03-11,15,,,,,2026-11-07
 mercury-2-5,mercury-2.5,inception-labs,api_only,2026-09-08,,,,,,,,,,2026-11-07
 mercury-3,mercury-3,inception-labs,api_only,2026-10-16,,,,,,,,,,2026-11-07
-mimo-v2-5,mimo-v2.5,xiaomi,open_weights,2026-04-22,2026-04-28,17,2026-06-10,2026-06-15,54,2026-05-10,2026-10-20,,,
+mimo-v2-5,mimo-v2.5,xiaomi,open_weights,2026-04-22,2026-04-28,17,2026-06-10,2026-06-15,54,2026-05-10,2026-10-20,,,2026-11-24
 mimo-v2-5-pro,MiMo-V2.5-Pro,xiaomi,open_weights,2026-04-22,2026-04-28,11,2026-09-01,2026-09-02,133,2026-04-23,2026-09-20,2026-09-21,152,2026-11-23
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,2026-09-22,2026-09-25,16,2026-11-23,,,2026-09-22,2026-11-01,,,
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,2026-09-22,2026-09-24,9,2026-11-22,2026-11-23,62,2026-09-22,2026-11-01,,,

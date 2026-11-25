@@ -9,10 +9,10 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1983; events: 3118
-- Models: curated 73, corroborated 707, single-source 1203
-- Event confidence: verified 1246, inferred 1866, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 456 of 1726
+- Models: 1986; events: 3124
+- Models: curated 73, corroborated 709, single-source 1204
+- Event confidence: verified 1248, inferred 1870, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 456 of 1727
 
 ## By organization
 
@@ -24,9 +24,9 @@ as settled.
 | ByteDance | 66 | 88 | 0 | 25 | 41 | 33% |
 | Marin | 66 | 66 | 0 | 0 | 66 | 0% |
 | Mistral | 64 | 126 | 4 | 32 | 28 | 41% |
-| Ant Group | 61 | 73 | 0 | 31 | 30 | 44% |
+| Ant Group | 62 | 74 | 0 | 31 | 31 | 43% |
 | EleutherAI | 60 | 60 | 0 | 1 | 59 | 2% |
-| Google | 60 | 170 | 7 | 31 | 22 | 42% |
+| Google | 60 | 171 | 7 | 31 | 22 | 42% |
 | RWKV | 59 | 59 | 0 | 4 | 55 | 7% |
 | Meta | 57 | 123 | 4 | 28 | 25 | 36% |
 | AI2 | 54 | 54 | 0 | 14 | 40 | 26% |
@@ -46,7 +46,7 @@ as settled.
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Anthropic | 29 | 167 | 25 | 1 | 3 | 71% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
-| Xiaomi | 25 | 36 | 0 | 22 | 3 | 67% |
+| Xiaomi | 25 | 37 | 0 | 22 | 3 | 65% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | PFN | 24 | 24 | 0 | 1 | 23 | 4% |
 | Swiss AI | 24 | 25 | 0 | 5 | 19 | 20% |
@@ -62,11 +62,11 @@ as settled.
 | MiniMax | 16 | 40 | 1 | 10 | 5 | 55% |
 | Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
+| Upstage | 16 | 20 | 0 | 8 | 8 | 45% |
 | xAI | 16 | 49 | 2 | 11 | 3 | 41% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
 | Skywork | 15 | 15 | 0 | 6 | 9 | 40% |
 | LG AI Research | 14 | 14 | 0 | 2 | 12 | 14% |
-| Upstage | 14 | 18 | 0 | 6 | 8 | 39% |
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Meituan | 12 | 15 | 0 | 9 | 3 | 60% |
@@ -88,7 +88,7 @@ as settled.
 | Poolside | 6 | 10 | 0 | 3 | 3 | 50% |
 | Sarvam | 6 | 6 | 0 | 0 | 6 | 0% |
 | Inception | 5 | 15 | 0 | 3 | 2 | 40% |
-| Thinking Machines | 5 | 14 | 0 | 4 | 1 | 43% |
+| Thinking Machines | 5 | 15 | 0 | 4 | 1 | 40% |
 | Snowflake | 3 | 3 | 0 | 1 | 2 | 33% |
 | Reflection | 2 | 4 | 0 | 1 | 1 | 50% |
 | Reka | 2 | 6 | 0 | 2 | 0 | 33% |
@@ -98,11 +98,11 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1707 | 433 | 1273 | 1 |
-| platform_availability | 364 | 357 | 5 | 2 |
+| weights_released | 1708 | 432 | 1275 | 1 |
+| platform_availability | 367 | 360 | 5 | 2 |
 | retired | 357 | 213 | 144 | 0 |
 | api_ga | 277 | 65 | 211 | 1 |
-| announced | 268 | 55 | 212 | 1 |
+| announced | 270 | 55 | 214 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
 | deprecation_announced | 18 | 18 | 0 | 0 |
@@ -119,11 +119,12 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 15
 
-Declined in the 7 days to 2026-11-24, by reason:
+Declined in the 7 days to 2026-11-25, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 49 |
-| community_lead | 14 |
+| no_dated_event | 42 |
+| community_lead | 12 |
 | third_party_claim | 4 |
+| launch_event_required | 3 |
 | already_recorded | 1 |
