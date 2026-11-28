@@ -1,4 +1,5 @@
 model_id,canonical_name,family,access_type,weights_released_date,first_public_availability_date,first_mention,first_mention_arxiv_id,days_to_first_mention
+aliceai-foundation-80b-a3b-base,AliceAI-Foundation-80B-A3B-Base,AliceAI-Foundation,open_weights,2026-09-12,2026-09-12,2026-11-25,2611.34529,74
 apertus-70b,Apertus 70B,Apertus,open_weights,,,2026-05-29,2605.16215,
 apertus-8b-2509,Apertus-8B-2509,Apertus,open_weights,2025-09-02,2025-09-02,2025-09-06,2509.05668,4
 apertus-8b-instruct,Apertus 8B,Apertus,open_weights,2025-09-02,2025-09-02,2026-05-13,2605.13329,253
@@ -228,6 +229,7 @@ gpt-5-pro,GPT-5 Pro,GPT-5,api_only,,2025-10-06,2025-10-07,2510.06135,1
 gpt-6-1-sol,GPT-6.1 Sol,GPT-6.1 Sol,api_only,,2026-09-29,2026-10-14,2610.19704,15
 gpt-6-1-terra,GPT-6.1 Terra,GPT-6.1 Terra,api_only,,2026-10-26,2026-11-09,2611.13011,14
 gpt-6-2-astra,GPT-6.2 Astra,GPT-6.2 Astra,api_only,,2026-11-17,2026-11-24,2610.24744,7
+gpt-6-2-sol,GPT-6.2 Sol,GPT-6.2 Sol,api_only,,2026-11-17,2026-11-25,2611.34575,8
 gpt-6-astra,GPT-6 Astra,GPT-6 Astra,api_only,,2026-09-04,2026-09-06,2609.25050,2
 gpt-6-astra-pro,gpt-6-astra-pro,gpt-6-astra,api_only,,2026-09-04,2026-10-01,2610.02204,27
 gpt-6-luna,gpt-6-luna,gpt-6-luna,api_only,,2026-09-22,2026-09-29,2609.33628,7
@@ -258,13 +260,14 @@ grok-4-5,Grok 4.5,Grok 4.5,api_only,,2026-07-08,2026-07-15,2607.13618,7
 grok-4-6,Grok 4.6,Grok 4.6,api_only,,2026-08-12,2026-09-02,2608.20574,21
 grok-4-7,Grok 4.7,Grok 4.7,api_only,,2026-09-21,2026-10-04,2605.30654,13
 grok-4-fast,Grok 4 Fast,Grok 4 Fast,api_only,,2025-09-20,2025-12-02,2512.02445,73
-grok-code-fast-1,Grok Code Fast 1,Grok Fast 1,api_only,,2025-09-02,2026-04-24,2603.03456,234
+grok-code-fast-1,Grok Code Fast 1,Grok Fast 1,api_only,,2025-08-28,2026-04-24,2603.03456,239
 hermes-4-70b,hermes-4-70b,Hermes-4,open_weights,2025-08-26,2025-08-26,2025-10-30,2510.26732,65
 hy-embodied-vlm-1-0,Hy-Embodied-VLM-1.0,Hy-Embodied-VLM-1.0,open_weights,2026-07-14,2026-07-14,2026-07-14,2607.12894,0
 hy-memory-30b-a3b,Hy-Memory-30B-A3B,Hy-Memory,open_weights,2026-10-15,2026-10-15,2026-10-15,2610.22196,0
 hy-mt2-7b,hy-mt2-7b,hy-mt2,open_weights,2026-05-21,2026-05-21,2026-10-12,2610.16466,144
 hy3-preview,hy3-preview,Hy3,open_weights,2026-04-20,2026-04-20,2026-04-28,2604.25727,8
 hy3-preview-base,Hy3-preview-Base,Hy3,open_weights,2026-04-13,2026-04-13,2026-11-16,2611.21315,217
+hy4-flash,hy4-flash,hy4,open_weights,2026-11-16,2026-11-16,2026-11-25,2611.34776,9
 hy4-preview,hy4-preview,hy4,open_weights,2026-08-28,2026-08-28,2026-09-03,2609.04128,6
 instructblip-vicuna-7b,instructblip-vicuna-7b,instructblip-vicuna,open_weights,2023-05-22,2023-05-22,2025-01-14,2501.09039,603
 intellect-3,INTELLECT-3,INTELLECT-3,open_weights,2025-11-26,2025-11-26,2025-12-18,2512.16144,22
@@ -283,7 +286,7 @@ internlm3-8b-instruct,internlm3-8b-instruct,internlm3,open_weights,2025-01-13,20
 k2-horizon-7b,K2-Horizon-7B,K2-Horizon,open_weights,2026-09-01,2026-09-01,2026-09-21,2609.11319,20
 k2-think,K2 Think,K2,open_weights,2025-07-26,2025-07-26,2025-09-15,2509.07604,51
 keye-vl-2-0-30b-a3b,Keye-VL-2.0-30B-A3B,Keye-2.0,open_weights,2026-05-25,2026-05-25,2026-06-09,2606.10651,15
-kimi-k2,Kimi K2,Kimi K2,open_weights,2025-09-05,2025-09-05,2025-08-07,2508.05257,-29
+kimi-k2,Kimi K2,Kimi K2,open_weights,2025-07-11,2025-07-11,2025-08-07,2508.05257,27
 kimi-k2-5,Kimi K2.5,Kimi K2.5,open_weights,2026-01-27,2026-01-27,2026-02-27,2603.10031,31
 kimi-k2-6,Kimi K2.6,Kimi K2.6,open_weights,2026-04-20,2026-04-20,2026-05-15,2605.10810,25
 kimi-k2-7-code,Kimi K2.7 Code,Kimi K2.7,open_weights,2026-06-12,2026-06-12,2026-09-30,2610.32993,110
@@ -301,6 +304,7 @@ lfm2-350m,LFM2-350M,LFM2,open_weights,2025-07-10,2025-07-10,2025-11-12,2511.0974
 lfm2-5-2-6b-base,LFM2.5-2.6B-Base,LFM2.5,open_weights,2026-08-01,2026-08-01,2026-10-30,2610.41576,90
 lfm2-5-350m,LFM2.5-350M,LFM2.5,open_weights,2026-03-31,2026-03-31,2026-08-25,2608.24571,147
 lfm2-5-8b-a1b,LFM2.5-8B-A1B,LFM2.5,open_weights,2026-05-28,2026-05-28,2026-07-16,2607.15232,49
+lfm2-5-vl-1-6b,LFM2.5-VL-1.6B,LFM2.5,open_weights,2026-01-05,2026-01-05,2026-11-25,2611.34601,324
 lfm2-8b-a1b,LFM2-8B-A1B,LFM2,open_weights,2025-10-07,2025-10-07,2026-07-16,2607.15232,282
 lfm2-vl-1-6b,LFM2-VL-1.6B,LFM2,open_weights,2025-08-12,2025-08-12,2026-11-07,2611.10720,452
 lfm2-vl-450m,LFM2-VL-450M,LFM2,open_weights,2025-08-12,2025-08-12,2026-11-17,2611.23615,462

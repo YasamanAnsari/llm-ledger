@@ -9,33 +9,33 @@ with, and `single-source` when no event
 reached `verified`. Filter on `events.confidence` before treating a date
 as settled.
 
-- Models: 1986; events: 3124
-- Models: curated 73, corroborated 709, single-source 1204
-- Event confidence: verified 1248, inferred 1870, disputed 6
-- Open-weight models with no `license_family` (license tag missing or `other`): 456 of 1727
+- Models: 1994; events: 3135
+- Models: curated 73, corroborated 711, single-source 1210
+- Event confidence: verified 1253, inferred 1876, disputed 6
+- Open-weight models with no `license_family` (license tag missing or `other`): 458 of 1734
 
 ## By organization
 
 | org | models | events | curated | corroborated | single-source | events verified |
 |---|---|---|---|---|---|---|
 | Alibaba | 91 | 207 | 2 | 70 | 19 | 51% |
-| OpenAI | 80 | 323 | 19 | 52 | 9 | 73% |
+| OpenAI | 80 | 324 | 19 | 52 | 9 | 73% |
 | MBZUAI | 79 | 79 | 0 | 6 | 73 | 8% |
 | ByteDance | 66 | 88 | 0 | 25 | 41 | 33% |
 | Marin | 66 | 66 | 0 | 0 | 66 | 0% |
 | Mistral | 64 | 126 | 4 | 32 | 28 | 41% |
-| Ant Group | 62 | 74 | 0 | 31 | 31 | 43% |
+| Ant Group | 63 | 76 | 0 | 32 | 31 | 45% |
 | EleutherAI | 60 | 60 | 0 | 1 | 59 | 2% |
 | Google | 60 | 171 | 7 | 31 | 22 | 42% |
 | RWKV | 59 | 59 | 0 | 4 | 55 | 7% |
-| Meta | 57 | 123 | 4 | 28 | 25 | 36% |
+| Meta | 58 | 124 | 4 | 28 | 26 | 35% |
 | AI2 | 54 | 54 | 0 | 14 | 40 | 26% |
 | Shanghai AI Lab | 52 | 52 | 0 | 13 | 39 | 25% |
 | TII | 51 | 51 | 0 | 4 | 47 | 8% |
-| DeepSeek | 47 | 107 | 3 | 27 | 17 | 54% |
+| DeepSeek | 48 | 109 | 3 | 28 | 17 | 54% |
 | Zhipu | 41 | 89 | 3 | 18 | 20 | 48% |
+| IBM | 40 | 45 | 0 | 4 | 36 | 9% |
 | Cohere | 39 | 53 | 1 | 10 | 28 | 23% |
-| IBM | 39 | 44 | 0 | 4 | 35 | 9% |
 | OpenBMB | 39 | 39 | 0 | 7 | 32 | 18% |
 | NVIDIA | 37 | 58 | 0 | 14 | 23 | 26% |
 | Tencent | 36 | 48 | 1 | 16 | 19 | 44% |
@@ -46,7 +46,7 @@ as settled.
 | Arcee | 30 | 33 | 0 | 18 | 12 | 61% |
 | Anthropic | 29 | 167 | 25 | 1 | 3 | 71% |
 | Stability | 28 | 28 | 0 | 9 | 19 | 32% |
-| Xiaomi | 25 | 37 | 0 | 22 | 3 | 65% |
+| Xiaomi | 25 | 37 | 0 | 22 | 3 | 68% |
 | Kakao | 24 | 24 | 0 | 3 | 21 | 12% |
 | PFN | 24 | 24 | 0 | 1 | 23 | 4% |
 | Swiss AI | 24 | 25 | 0 | 5 | 19 | 20% |
@@ -60,8 +60,9 @@ as settled.
 | Writer | 17 | 19 | 0 | 1 | 16 | 5% |
 | Kyutai | 16 | 16 | 0 | 1 | 15 | 6% |
 | MiniMax | 16 | 40 | 1 | 10 | 5 | 55% |
-| Moonshot | 16 | 42 | 0 | 15 | 1 | 57% |
+| Moonshot | 16 | 42 | 0 | 15 | 1 | 60% |
 | rinna | 16 | 16 | 0 | 6 | 10 | 38% |
+| Sber | 16 | 16 | 0 | 4 | 12 | 25% |
 | Upstage | 16 | 20 | 0 | 8 | 8 | 45% |
 | xAI | 16 | 49 | 2 | 11 | 3 | 41% |
 | Hugging Face | 15 | 15 | 0 | 4 | 11 | 27% |
@@ -70,7 +71,6 @@ as settled.
 | Zyphra | 13 | 13 | 0 | 0 | 13 | 0% |
 | Kuaishou | 12 | 13 | 0 | 6 | 6 | 46% |
 | Meituan | 12 | 15 | 0 | 9 | 3 | 60% |
-| Sber | 12 | 12 | 0 | 4 | 8 | 33% |
 | Baichuan | 11 | 11 | 0 | 5 | 6 | 45% |
 | Aleph Alpha | 10 | 10 | 0 | 1 | 9 | 10% |
 | RedNote | 10 | 12 | 0 | 1 | 9 | 17% |
@@ -98,10 +98,10 @@ as settled.
 
 | event_type | rows | verified | inferred | disputed |
 |---|---|---|---|---|
-| weights_released | 1708 | 432 | 1275 | 1 |
-| platform_availability | 367 | 360 | 5 | 2 |
-| retired | 357 | 213 | 144 | 0 |
-| api_ga | 277 | 65 | 211 | 1 |
+| weights_released | 1715 | 435 | 1279 | 1 |
+| platform_availability | 369 | 362 | 5 | 2 |
+| retired | 358 | 213 | 145 | 0 |
+| api_ga | 278 | 65 | 212 | 1 |
 | announced | 270 | 55 | 214 | 1 |
 | system_card | 35 | 31 | 4 | 0 |
 | consumer_rollout | 32 | 23 | 9 | 0 |
@@ -119,12 +119,11 @@ as settled.
 - Events it wrote: 54 (verified 10, single-source inferred 44)
 - Models no catalog has listed yet (withdrawn after 60 days unless one does): 15
 
-Declined in the 7 days to 2026-11-25, by reason:
+Declined in the 7 days to 2026-11-28, by reason:
 
 | reason | count |
 |---|---|
-| no_dated_event | 42 |
-| community_lead | 12 |
-| third_party_claim | 4 |
+| no_dated_event | 22 |
+| community_lead | 11 |
 | launch_event_required | 3 |
 | already_recorded | 1 |

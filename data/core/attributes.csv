@@ -54,6 +54,7 @@ deepseek-r1-distill-qwen-1-5b,true,,,,,,32768,16384,text,text,,true,,,0,0,,2026-
 deepseek-r1-distill-qwen-14b,true,,,,,,32768,16384,text,text,,true,,,0.144,0.431,,2026-09-01,https://models.dev/api.json
 deepseek-r1-distill-qwen-32b,true,,,,,,32768,16384,text,text,,true,,,0.287,0.861,,2026-09-01,https://models.dev/api.json
 deepseek-r1-distill-qwen-7b,true,,,,,,32768,16384,text,text,,true,,,0.072,0.144,,2026-09-01,https://models.dev/api.json
+deepseek-r1t2-chimera,true,,,,,,131072,32768,text,text,,false,,,1,2.625,0.02,2026-11-28,https://models.dev/api.json
 deepseek-v3,,none,,,,,163840,,text,text,,true,true,true,0.27,1.10,0.07,2025-02-08,https://huggingface.co/deepseek-ai/DeepSeek-V3
 deepseek-v3-1,false,none,,,,,128000,65536,text,text,,true,,,0.2,0.7,0.1,2026-09-01,https://models.dev/api.json
 deepseek-v3-1-terminus,false,none,,,,,128000,65536,text,text,,true,,,0.25,0.7,0.125,2026-09-01,https://models.dev/api.json
@@ -269,6 +270,7 @@ ling-3-0-flash-vl,true,,,,,,262144,32768,text|image|video,text,,true,,,0.06,0.18
 ling-3-0-tiny,true,,,,,,262144,32768,text,text,,true,,,0,0,,2026-11-05,https://models.dev/api.json
 ling-3-1-flash,true,,,,,,262144,32768,text,text,,true,,,0.075,0.22,0.015,2026-10-03,https://models.dev/api.json
 ling-3-2-flash,true,,,,,,1000000,32768,text|image|video,text,,true,,,,,,2026-11-16,https://models.dev/api.json
+lingsante-3-1-air-vl,true,,,,,,131072,32768,text|image|video,text,,true,,,0.06,0.18,0.012,2026-11-28,https://models.dev/api.json
 llama-2-70b,,none,,,,,4096,,text,text,2022-09-01,,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md
 llama-3-1-405b-instruct,,none,,,,,131072,,text,text,2023-12-01,true,,,,,,,https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
 llama-3-1-70b-instruct,false,none,,,,,128000,4096,text,text,,true,,,0,0,,2026-09-01,https://models.dev/api.json

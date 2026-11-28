@@ -1,0 +1,8 @@
+{
+  "benchmark_data.zip": {
+    "bytes": 2353649,
+    "fetched_at": "2026-11-28T18:30:08+00:00",
+    "sha256": "d5d566652fdee96427048629ed920e52a103021cb9821fa180222de189b8ce79",
+    "url": "https://epoch.ai/data/benchmark_data.zip"
+  }
+}

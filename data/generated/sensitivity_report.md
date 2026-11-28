@@ -12,8 +12,8 @@ positive means the second event happened after the first.
 
 | gap | models |
 |---|---|
-| same day | 99 |
-| 1-7d | 16 |
+| same day | 100 |
+| 1-7d | 15 |
 | 8-30d | 6 |
 | 31-90d | 11 |
 | 91-365d | 14 |
@@ -22,7 +22,6 @@ positive means the second event happened after the first.
 Per-organization medians (n>=3):
 
 - alibaba: 15d (n=9)
-- xai: 0d (n=10)
 - amazon: 0d (n=3)
 - anthropic: 0d (n=20)
 - mistral: 0d (n=7)
@@ -31,6 +30,7 @@ Per-organization medians (n>=3):
 - google: 0d (n=22)
 - zhipu: 0d (n=4)
 - openai: 0d (n=36)
+- xai: 0d (n=10)
 - meta: 0d (n=6)
 - inception-labs: 0d (n=4)
 
@@ -41,10 +41,10 @@ Per-organization medians (n>=3):
 
 | gap | models |
 |---|---|
-| same day | 77 |
+| same day | 78 |
 | 1-7d | 21 |
 | 8-30d | 2 |
-| 31-90d | 5 |
+| 31-90d | 4 |
 | 91-365d | 4 |
 | >365d | 3 |
 
@@ -150,5 +150,5 @@ The candidate treatment dates for the same product span **91 days**. A differenc
 
 ## Coverage
 
-- models with an anchor event: 1980
+- models with an anchor event: 1988
 - models with announced + an availability event: 247

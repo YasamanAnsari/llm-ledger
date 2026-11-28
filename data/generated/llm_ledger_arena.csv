@@ -44,6 +44,7 @@ aya-vision-32b,aya-vision-32b,cohere,open_weights,vision,Aya Vision 32B,name,202
 aya-vision-32b,aya-vision-32b,cohere,open_weights,vision,Aya Vision 32B,name,2026-11-08,995.4688174930524,973.4633601941086,1017.4742747919962,847,151
 aya-vision-32b,aya-vision-32b,cohere,open_weights,vision,Aya Vision 32B,name,2026-11-09,995.4811061868205,973.4752002439892,1017.4870121296518,847,151
 aya-vision-32b,aya-vision-32b,cohere,open_weights,vision,Aya Vision 32B,name,2026-11-19,995.4920272202983,973.4819620995834,1017.5020923410134,847,152
+aya-vision-32b,aya-vision-32b,cohere,open_weights,vision,Aya Vision 32B,name,2026-11-25,995.5345415043205,973.52699044518,1017.5420925634609,847,154
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,text,Beam 1.0 501B A23B,name,2026-10-20,1425.3924995387245,1416.0960227619883,1434.6889763154609,4200,104
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,text,Beam 1.0 501B A23B,name,2026-10-22,1425.5673213897276,1416.3082425407251,1434.82640023873,4237,103
 beam-1-0-501b-a23b,beam-1.0-501b-a23b,reflection,open_weights,text,Beam 1.0 501B A23B,name,2026-10-28,1425.369815377157,1416.0778472447923,1434.6617835095217,4233,105
@@ -531,6 +532,7 @@ claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,vision,Claude 3.5 Haiku (20
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,vision,Claude 3.5 Haiku (20241022),name_one_snapshot,2026-11-08,1091.9229134125342,1075.8698073656103,1107.9760194594578,1397,132
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,vision,Claude 3.5 Haiku (20241022),name_one_snapshot,2026-11-09,1091.9142896292763,1075.8607778398248,1107.967801418728,1397,132
 claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,vision,Claude 3.5 Haiku (20241022),name_one_snapshot,2026-11-19,1091.9969821712743,1075.9413419584785,1108.0526223840704,1397,133
+claude-3-5-haiku,Claude 3.5 Haiku,anthropic,api_only,vision,Claude 3.5 Haiku (20241022),name_one_snapshot,2026-11-25,1092.0335443550496,1075.9790755398537,1108.0880131702456,1397,135
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,text,claude-3-7-sonnet-20250219,name_one_snapshot,2025-02-27,1312.906303583919,1304.8473119359726,1321.8707840570132,3184,8
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,text,claude-3-7-sonnet-20250219,name_one_snapshot,2025-03-03,1308.5783389829817,1297.9186479113432,1317.428959567268,4254,12
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,text,claude-3-7-sonnet-20250219,name_one_snapshot,2025-03-11,1304.4821186989952,1296.689608288696,1312.1094572116451,6952,15
@@ -1353,6 +1355,8 @@ claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,Claude 3.7 Sonnet 
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,"Claude 3.7 Sonnet (Thinking 32K, 20250219)",name_one_snapshot,2026-11-09,1168.4706912588495,1152.9215968886842,1184.019785629015,1432,110
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,Claude 3.7 Sonnet (20250219),name_one_snapshot,2026-11-19,1150.7600020939865,1141.365392837833,1160.1546113501397,4515,121
 claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,"Claude 3.7 Sonnet (Thinking 32K, 20250219)",name_one_snapshot,2026-11-19,1168.6614912990383,1153.1084294906866,1184.21455310739,1431,111
+claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,Claude 3.7 Sonnet (20250219),name_one_snapshot,2026-11-25,1150.7931190299878,1141.3946977070084,1160.191540352967,4514,123
+claude-3-7-sonnet,Claude 3.7 Sonnet,anthropic,api_only,vision,"Claude 3.7 Sonnet (Thinking 32K, 20250219)",name_one_snapshot,2026-11-25,1168.702471632086,1153.1507348797716,1184.2542083844003,1431,113
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,text,claude-3-haiku-20240307,name_one_snapshot,2024-03-26,1178.9503811496104,1174.1811339675028,1183.6503197419677,18776,6
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,text,claude-3-haiku-20240307,name_one_snapshot,2024-03-27,1178.1635447339693,1174.5206025724933,1182.3510634737233,23026,6
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,text,claude-3-haiku-20240307,name_one_snapshot,2024-04-03,1178.8955715360423,1175.7852236680687,1182.248466489663,35838,6
@@ -1948,6 +1952,7 @@ claude-3-haiku,Claude 3 Haiku,anthropic,api_only,vision,Claude 3 Haiku (20240307
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,vision,Claude 3 Haiku (20240307),name_one_snapshot,2026-11-08,950.0299624216926,937.4973204929992,962.5626043503862,13380,159
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,vision,Claude 3 Haiku (20240307),name_one_snapshot,2026-11-09,950.0481250630764,937.5146006090794,962.5816495170735,13380,159
 claude-3-haiku,Claude 3 Haiku,anthropic,api_only,vision,Claude 3 Haiku (20240307),name_one_snapshot,2026-11-19,950.0633997801556,937.5157686094744,962.6110309508367,13380,160
+claude-3-haiku,Claude 3 Haiku,anthropic,api_only,vision,Claude 3 Haiku (20240307),name_one_snapshot,2026-11-25,950.1043838837226,937.5603559930089,962.6484117744361,13380,162
 claude-3-opus,Claude 3 Opus,anthropic,api_only,text,claude-3-opus-20240229,name_one_snapshot,2024-03-07,1233.0203412659519,1225.655436760535,1242.4630197193562,5246,3
 claude-3-opus,Claude 3 Opus,anthropic,api_only,text,claude-3-opus-20240229,name_one_snapshot,2024-03-13,1246.589912014265,1240.8635142415033,1252.5932316393896,14854,3
 claude-3-opus,Claude 3 Opus,anthropic,api_only,text,claude-3-opus-20240229,name_one_snapshot,2024-03-26,1253.1804816917502,1247.9755763443488,1257.9238377552035,33250,1
@@ -2545,6 +2550,7 @@ claude-3-opus,Claude 3 Opus,anthropic,api_only,vision,Claude 3 Opus (20240229),n
 claude-3-opus,Claude 3 Opus,anthropic,api_only,vision,Claude 3 Opus (20240229),name_one_snapshot,2026-11-08,1022.8007352703368,1012.4302147775812,1033.171255763092,15565,144
 claude-3-opus,Claude 3 Opus,anthropic,api_only,vision,Claude 3 Opus (20240229),name_one_snapshot,2026-11-09,1022.8188940701407,1012.4473971402315,1033.1903910000499,15565,144
 claude-3-opus,Claude 3 Opus,anthropic,api_only,vision,Claude 3 Opus (20240229),name_one_snapshot,2026-11-19,1022.8341639161285,1012.4436366558584,1033.224691176399,15565,145
+claude-3-opus,Claude 3 Opus,anthropic,api_only,vision,Claude 3 Opus (20240229),name_one_snapshot,2026-11-25,1022.8752105409023,1012.4877480012758,1033.2626730805289,15565,147
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,text,claude-3-sonnet-20240229,name_one_snapshot,2024-03-07,1179.810562097235,1171.342018638943,1189.6694648417424,5259,5
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,text,claude-3-sonnet-20240229,name_one_snapshot,2024-03-13,1190.0254289614713,1184.3776097198468,1196.0795753385207,14845,4
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,text,claude-3-sonnet-20240229,name_one_snapshot,2024-03-26,1198.3943655952683,1193.3500492357339,1203.032320692899,32761,4
@@ -3142,6 +3148,7 @@ claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,vision,Claude 3 Sonnet (20240
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,vision,Claude 3 Sonnet (20240229),name_one_snapshot,2026-11-08,983.7944520174259,972.374863794043,995.2140402408089,12314,154
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,vision,Claude 3 Sonnet (20240229),name_one_snapshot,2026-11-09,983.8126318492085,972.3920731218245,995.2331905765924,12314,154
 claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,vision,Claude 3 Sonnet (20240229),name_one_snapshot,2026-11-19,983.8278802898842,972.3924008322585,995.2633597475099,12314,155
+claude-3-sonnet,Claude 3 Sonnet,anthropic,api_only,vision,Claude 3 Sonnet (20240229),name_one_snapshot,2026-11-25,983.868876236673,972.4375074363363,995.3002450370095,12314,157
 claude-fable-5,Claude Fable 5,anthropic,api_only,text,claude-fable-5,name,2026-06-10,1496.711625485764,1485.5171578342336,1507.9060931372944,2883,3
 claude-fable-5,Claude Fable 5,anthropic,api_only,text,claude-fable-5,name,2026-06-16,1493.657010405268,1484.32192272086,1502.992098089676,4297,3
 claude-fable-5,Claude Fable 5,anthropic,api_only,text,claude-fable-5,name,2026-06-25,1494.4534584733174,1485.1654548586782,1503.7414620879567,4366,3
@@ -3246,6 +3253,7 @@ claude-fable-5,Claude Fable 5,anthropic,api_only,vision,Claude Fable 5 (High),na
 claude-fable-5,Claude Fable 5,anthropic,api_only,vision,Claude Fable 5 (High),name,2026-11-08,1325.6304730975955,1318.758541136216,1332.502405058975,15527,1
 claude-fable-5,Claude Fable 5,anthropic,api_only,vision,Claude Fable 5 (High),name,2026-11-09,1325.5950264504859,1318.7211498620286,1332.468903038943,15536,1
 claude-fable-5,Claude Fable 5,anthropic,api_only,vision,Claude Fable 5 (High),name,2026-11-19,1325.0059503519458,1318.1604835130877,1331.8514171908037,15449,1
+claude-fable-5,Claude Fable 5,anthropic,api_only,vision,Claude Fable 5 (High),name,2026-11-25,1325.699905249576,1318.8612706139386,1332.5385398852131,15428,1
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,claude-fable-5,name,2026-06-10,1664.9857254101455,1644.6324240536396,1685.3390267666514,1228,1
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,claude-fable-5,name,2026-06-15,1654.311730348098,1638.7702656013298,1669.8531950948664,2085,1
 claude-fable-5,Claude Fable 5,anthropic,api_only,webdev,claude-fable-5,name,2026-06-16,1654.481853238579,1638.944090554372,1670.0196159227862,2094,1
@@ -3355,6 +3363,7 @@ claude-fable-5-1,claude-fable-5-1,anthropic,api_only,vision,Claude Fable 5.1 (Ma
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,vision,Claude Fable 5.1 (Max),name,2026-11-08,1321.5383786182056,1312.9713701693977,1330.1053870670135,6330,3
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,vision,Claude Fable 5.1 (Max),name,2026-11-09,1321.6205983003467,1313.0309990753253,1330.2101975253681,6296,3
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,vision,Claude Fable 5.1 (Max),name,2026-11-19,1322.001447093446,1313.8442779096827,1330.1586162772091,7185,2
+claude-fable-5-1,claude-fable-5-1,anthropic,api_only,vision,Claude Fable 5.1 (Max),name,2026-11-25,1320.7956540336118,1312.8080784491574,1328.783229618066,7598,2
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,claude-fable-5.1-max,name,2026-09-02,1765.3671033054356,1742.3209659123174,1788.413240698554,1106,1
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,claude-fable-5.1-max,name,2026-09-04,1762.6101700709594,1746.4449332803877,1778.775406861531,2227,1
 claude-fable-5-1,claude-fable-5-1,anthropic,api_only,webdev,claude-fable-5.1-max,name,2026-09-05,1762.2464527581055,1746.2036425406081,1778.289262975603,2275,2
@@ -3393,6 +3402,7 @@ claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text,Claude Fable 5.2 (Max)
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text_style_control,Claude Fable 5.2 (Max),name,2026-11-19,1503.0556390529787,1494.3075265972857,1511.8037515086717,5216,7
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,text_style_control,Claude Fable 5.2 (Max),name,2026-11-22,1502.1805939266787,1493.7815948401014,1510.579593013256,5842,8
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,vision,Claude Fable 5.2 (Max),name,2026-11-19,1313.308811716814,1295.1590369610615,1331.4585864725666,1176,10
+claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,vision,Claude Fable 5.2 (Max),name,2026-11-25,1309.695572669412,1294.7286754292522,1324.6624699095719,1776,11
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-10,1835.7616196356087,1813.3260724030677,1858.1971668681497,994,1
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-11,1837.808306458596,1817.2695979499167,1858.3470149672753,1215,1
 claude-fable-5-2,Claude Fable 5.2,anthropic,api_only,webdev,Claude Fable 5.2 (xHigh),name,2026-11-15,1825.9621938325238,1807.1552146756683,1844.7691729893788,1445,1
@@ -4494,6 +4504,8 @@ claude-opus-4,Claude Opus 4,anthropic,api_only,vision,Claude Opus 4 (20250514),n
 claude-opus-4,Claude Opus 4,anthropic,api_only,vision,"Claude Opus 4 (Thinking 16K, 20250514)",name_one_snapshot,2026-11-09,1191.9287645224408,1175.9389270122058,1207.918602032676,1287,99
 claude-opus-4,Claude Opus 4,anthropic,api_only,vision,Claude Opus 4 (20250514),name_one_snapshot,2026-11-19,1175.3926051035965,1162.4503053973303,1188.3349048098626,2166,108
 claude-opus-4,Claude Opus 4,anthropic,api_only,vision,"Claude Opus 4 (Thinking 16K, 20250514)",name_one_snapshot,2026-11-19,1191.8078885690802,1175.8207263672214,1207.795050770939,1288,100
+claude-opus-4,Claude Opus 4,anthropic,api_only,vision,Claude Opus 4 (20250514),name_one_snapshot,2026-11-25,1175.4330463460915,1162.4918372462753,1188.3742554459075,2166,110
+claude-opus-4,Claude Opus 4,anthropic,api_only,vision,"Claude Opus 4 (Thinking 16K, 20250514)",name_one_snapshot,2026-11-25,1191.8466972849105,1175.860716709752,1207.8326778600692,1288,101
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,text,claude-opus-4-1-20250805,name_one_snapshot,2025-08-07,1436.6312309495938,1411.477481168336,1461.7849807308514,575,3
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,text,claude-opus-4-1-20250805,name_one_snapshot,2025-08-14,1419.0934550690026,1411.1277915879375,1427.0591185500678,6324,11
 claude-opus-4-1,Claude Opus 4.1,anthropic,api_only,text,claude-opus-4-1-20250805-thinking-16k,name_one_snapshot,2025-08-14,1422.9676452251256,1412.2951596836183,1433.640130766633,3157,9
@@ -6190,6 +6202,8 @@ claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6,name,2
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6 (High),name,2026-11-09,1315.5778808782616,1309.2440806278566,1321.9116811286667,22116,7
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6,name,2026-11-19,1312.0673142437292,1305.8968601570584,1318.2377683304,26552,11
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6 (High),name,2026-11-19,1315.0899503504263,1308.7896039981226,1321.39029670273,22067,7
+claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6,name,2026-11-25,1312.0396735658455,1305.8807594947025,1318.1985876369888,26527,10
+claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,vision,Claude Opus 4.6 (High),name,2026-11-25,1315.1345004427114,1308.8448599047417,1321.4241409806814,22041,7
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,claude-opus-4-6,name,2026-02-06,1575.6555609046047,1556.750629938241,1594.5604918709685,1422,1
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,claude-opus-4-6,name,2026-02-09,1568.9556139882566,1552.375548064056,1585.5356799124568,1824,2
 claude-opus-4-6,Claude Opus 4.6,anthropic,api_only,webdev,claude-opus-4-6-thinking,name,2026-02-09,1575.656358464357,1556.0141807751534,1595.298536153561,1268,1
@@ -6689,6 +6703,8 @@ claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7,name,2
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7 (High),name,2026-11-09,1313.9473396777987,1307.4411343426516,1320.453545012946,22609,8
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7,name,2026-11-19,1317.4264085382335,1311.1165732375114,1323.7362438389555,24930,4
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7 (High),name,2026-11-19,1313.7130943780119,1307.2353625231624,1320.1908262328616,22530,8
+claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7,name,2026-11-25,1317.6223043228563,1311.3996296442413,1323.8449790014713,25450,4
+claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,vision,Claude Opus 4.7 (High),name,2026-11-25,1313.7207603783445,1307.2558821703403,1320.1856385863487,22504,9
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,claude-opus-4-7,name,2026-04-17,1582.8546361966353,1561.7751675509915,1603.9341048422793,1008,1
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,claude-opus-4-7,name,2026-04-20,1568.562792698673,1551.9097549278376,1585.2158304695085,1566,2
 claude-opus-4-7,Claude Opus 4.7,anthropic,api_only,webdev,claude-opus-4-7-thinking,name,2026-04-20,1575.840271174165,1555.9829729295193,1595.6975694188104,1166,1
@@ -7070,6 +7086,8 @@ claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8,name,2
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8 (High),name,2026-11-09,1294.7311724791177,1288.3137744046755,1301.1485705535601,18178,23
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8,name,2026-11-19,1287.983412087309,1281.5631970025709,1294.4036271720474,18588,29
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8 (High),name,2026-11-19,1294.3228087249483,1287.9437012781996,1300.7019161716971,18113,26
+claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8,name,2026-11-25,1287.8946451254812,1281.4879403157483,1294.3013499352141,18562,29
+claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,vision,Claude Opus 4.8 (High),name,2026-11-25,1294.0694101739505,1287.7045877248872,1300.4342326230135,18104,26
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,claude-opus-4-8,name,2026-06-03,1547.5689245279184,1532.7897746423162,1562.3480744135206,1894,3
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,claude-opus-4-8-thinking,name,2026-06-03,1546.1972789422273,1529.294970553802,1563.0995873306526,1460,4
 claude-opus-4-8,Claude Opus 4.8,anthropic,api_only,webdev,claude-opus-4-8,name,2026-06-05,1545.0491494079822,1530.7111199823098,1559.3871788336546,2011,4
@@ -7339,6 +7357,7 @@ claude-opus-5,Claude Opus 5,anthropic,api_only,vision,Claude Opus 5 (High),name,
 claude-opus-5,Claude Opus 5,anthropic,api_only,vision,Claude Opus 5 (High),name,2026-11-08,1317.3391917918595,1310.8768854199375,1323.8014981637818,19342,5
 claude-opus-5,Claude Opus 5,anthropic,api_only,vision,Claude Opus 5 (High),name,2026-11-09,1317.4780604047467,1311.0156489838635,1323.9404718256299,19345,5
 claude-opus-5,Claude Opus 5,anthropic,api_only,vision,Claude Opus 5 (High),name,2026-11-19,1317.2672846533776,1310.8419534930756,1323.6926158136796,19229,5
+claude-opus-5,Claude Opus 5,anthropic,api_only,vision,Claude Opus 5 (High),name,2026-11-25,1316.9776265986848,1310.565902201274,1323.3893509960956,19202,5
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,claude-opus-5-high,name,2026-07-26,1673.3798795172952,1658.9379263266155,1687.8218327079753,2392,2
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,claude-opus-5-high,name,2026-07-27,1669.781035968175,1656.18104367255,1683.3810282638003,2654,3
 claude-opus-5,Claude Opus 5,anthropic,api_only,webdev,claude-opus-5-max,name,2026-07-27,1725.3353439334512,1698.3177776969544,1752.3529101699478,686,1
@@ -7474,6 +7493,7 @@ claude-opus-5-5,claude-opus-5-5,anthropic,api_only,vision,Claude Opus 5.5 (High)
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,vision,Claude Opus 5.5 (High),name,2026-11-08,1323.6515107668165,1313.845019658679,1333.4580018749543,4829,2
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,vision,Claude Opus 5.5 (High),name,2026-11-09,1323.800208469898,1313.9690516637563,1333.6313652760398,4789,2
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,vision,Claude Opus 5.5 (High),name,2026-11-19,1321.829437162068,1312.672459380843,1330.9864149432926,5903,3
+claude-opus-5-5,claude-opus-5-5,anthropic,api_only,vision,Claude Opus 5.5 (High),name,2026-11-25,1320.7307133518605,1311.8629106082037,1329.5985160955172,6457,3
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,claude-opus-5.5-max,name,2026-09-23,1818.4080843495262,1797.2705010866464,1839.5456676124059,1219,1
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,claude-opus-5.5-max,name,2026-09-24,1818.4080843495262,1797.2705010866464,1839.5456676124059,1219,1
 claude-opus-5-5,claude-opus-5-5,anthropic,api_only,webdev,claude-opus-5.5-max,name,2026-09-25,1826.7306745084245,1808.3764250901447,1845.084923926704,1607,1
@@ -8212,6 +8232,8 @@ claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,Claude Sonnet 4 (20250
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,"Claude Sonnet 4 (Thinking 32K, 20250514)",name_one_snapshot,2026-11-09,1190.7891504428812,1173.8253497677922,1207.75295111797,1141,100
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,Claude Sonnet 4 (20250514),name_one_snapshot,2026-11-19,1175.3575565007252,1161.3338293266693,1189.3812836747811,1802,109
 claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,"Claude Sonnet 4 (Thinking 32K, 20250514)",name_one_snapshot,2026-11-19,1191.197469526144,1174.2337717510025,1208.1611673012853,1142,101
+claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,Claude Sonnet 4 (20250514),name_one_snapshot,2026-11-25,1175.3971981591046,1161.3745457257473,1189.419850592462,1802,111
+claude-sonnet-4,Claude Sonnet 4,anthropic,api_only,vision,"Claude Sonnet 4 (Thinking 32K, 20250514)",name_one_snapshot,2026-11-25,1191.2349659332624,1174.2726279143988,1208.197303952126,1142,102
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,text,claude-sonnet-4-5-20250929,name_one_snapshot,2025-10-01,1419.4913028283377,1407.7205408325867,1431.2620648240886,2600,12
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,text,claude-sonnet-4-5-20250929,name_one_snapshot,2025-10-03,1418.7378166911583,1408.1651782881893,1429.3104550941273,3214,17
 claude-sonnet-4-5,Claude Sonnet 4.5,anthropic,api_only,text,claude-sonnet-4-5-20250929-thinking-32k,name_one_snapshot,2025-10-03,1430.837400159751,1418.3634642951922,1443.31133602431,2306,4
@@ -9113,6 +9135,7 @@ claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,vision,Claude Sonnet 4.6,
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,vision,Claude Sonnet 4.6,name,2026-11-08,1282.498548153031,1276.4352754437052,1288.5618208623569,27188,33
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,vision,Claude Sonnet 4.6,name,2026-11-09,1282.6520521392304,1276.5879923297755,1288.7161119486852,27201,33
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,vision,Claude Sonnet 4.6,name,2026-11-19,1282.4951793644625,1276.463356371989,1288.527002356936,27131,34
+claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,vision,Claude Sonnet 4.6,name,2026-11-25,1282.6131971098434,1276.5960324197474,1288.6303617999395,27102,34
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,claude-sonnet-4-6,name,2026-02-19,1519.9443624371302,1498.8170736181949,1541.0716512560657,945,3
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,claude-sonnet-4-6,name,2026-02-20,1524.3709021945028,1504.049552371062,1544.6922520179437,1021,3
 claude-sonnet-4-6,Claude Sonnet 4.6,anthropic,api_only,webdev,claude-sonnet-4-6,name,2026-02-24,1532.820032485965,1516.5743366569611,1549.0657283149685,1675,3
@@ -9302,6 +9325,7 @@ claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,vision,Claude Sonnet 5 (High)
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,vision,Claude Sonnet 5 (High),name,2026-11-08,1271.5032584169976,1264.807736244096,1278.1987805898991,14779,41
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,vision,Claude Sonnet 5 (High),name,2026-11-09,1271.6245987981652,1264.9296022406268,1278.3195953557035,14778,41
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,vision,Claude Sonnet 5 (High),name,2026-11-19,1271.5271313755632,1264.8625226077786,1278.191740143348,14701,42
+claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,vision,Claude Sonnet 5 (High),name,2026-11-25,1271.8534853840952,1265.199510949677,1278.5074598185136,14697,43
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,claude-sonnet-5-thinking,name,2026-07-02,1551.3313230436597,1533.6502182358122,1569.0124278515075,1250,6
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,claude-sonnet-5-high,name,2026-07-09,1544.1538539797666,1531.145310510581,1557.1623974489519,2309,7
 claude-sonnet-5,Claude Sonnet 5,anthropic,api_only,webdev,claude-sonnet-5-high,name,2026-07-10,1543.144797469257,1530.4567910904284,1555.8328038480854,2421,8
@@ -9394,6 +9418,7 @@ claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,vision,Claude Sonnet 5.5 
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,vision,Claude Sonnet 5.5 (xHigh),name,2026-11-08,1284.4459006466632,1274.3014489095049,1294.5903523838213,4290,32
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,vision,Claude Sonnet 5.5 (xHigh),name,2026-11-09,1284.2588078119034,1274.080326857742,1294.4372887660645,4257,32
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,vision,Claude Sonnet 5.5 (xHigh),name,2026-11-19,1285.9746364713856,1276.604060942043,1295.3452120007282,5388,31
+claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,vision,Claude Sonnet 5.5 (xHigh),name,2026-11-25,1285.4214789168318,1276.348749960534,1294.4942078731294,5903,31
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,claude-sonnet-5.5-high,name,2026-09-29,1698.8159656887804,1679.816962633085,1717.8149687444757,1205,4
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,claude-sonnet-5.5-high,name,2026-09-30,1708.6633845070737,1693.1066198420926,1724.2201491720548,1810,5
 claude-sonnet-5-5,Claude Sonnet 5.5,anthropic,api_only,webdev,claude-sonnet-5.5-high,name,2026-10-01,1715.2194510195666,1701.8507452734298,1728.5881567657036,2527,6
@@ -10027,6 +10052,7 @@ cogvlm2-llama3-chat-19b,cogvlm2-llama3-chat-19B,zhipu,open_weights,vision,CogVLM
 cogvlm2-llama3-chat-19b,cogvlm2-llama3-chat-19B,zhipu,open_weights,vision,CogVLM2 Llama3 Chat 19B,name,2026-11-08,927.4220534030097,912.1798978763696,942.6642089296498,1991,163
 cogvlm2-llama3-chat-19b,cogvlm2-llama3-chat-19B,zhipu,open_weights,vision,CogVLM2 Llama3 Chat 19B,name,2026-11-09,927.4405942679998,912.197574862283,942.6836136737166,1991,163
 cogvlm2-llama3-chat-19b,cogvlm2-llama3-chat-19B,zhipu,open_weights,vision,CogVLM2 Llama3 Chat 19B,name,2026-11-19,927.4555929422297,912.204585709529,942.7066001749301,1991,164
+cogvlm2-llama3-chat-19b,cogvlm2-llama3-chat-19B,zhipu,open_weights,vision,CogVLM2 Llama3 Chat 19B,name,2026-11-25,927.4966331886085,912.250600369692,942.742666007525,1991,166
 command-r-08-2024,command-r-08-2024,cohere,open_weights,text,command-r-08-2024,name,2024-09-04,1172.1503564538916,1158.6366726418817,1182.4866049772495,1885,34
 command-r-08-2024,command-r-08-2024,cohere,open_weights,text,command-r-08-2024,name,2024-09-15,1171.2469744509779,1163.2099160319622,1180.9333684251067,5133,35
 command-r-08-2024,command-r-08-2024,cohere,open_weights,text,command-r-08-2024,name,2024-09-17,1171.1270550540064,1164.6574263718119,1178.1494283620027,5837,37
@@ -15060,6 +15086,7 @@ gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,vision,Gemini 2.5 Flash,name,2
 gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,vision,Gemini 2.5 Flash,name,2026-11-08,1235.3341936306103,1230.8333426202935,1239.8350446409274,59913,75
 gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,vision,Gemini 2.5 Flash,name,2026-11-09,1235.2976160921105,1230.7953367136201,1239.7998954706006,59919,75
 gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,vision,Gemini 2.5 Flash,name,2026-11-19,1235.403861698724,1230.9217111531418,1239.8860122443064,59854,76
+gemini-2-5-flash,Gemini 2.5 Flash,google,api_only,vision,Gemini 2.5 Flash,name,2026-11-25,1235.5608525699968,1231.086361357666,1240.0353437823278,59832,77
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,text,gemini-2.5-pro,name,2025-06-24,1477.4863778383874,1472.8287529244394,1482.7419545025468,12327,1
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,text,gemini-2.5-pro,name,2025-07-01,1473.4990849185378,1469.077019825055,1478.2131369759313,14062,1
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,text,gemini-2.5-pro,name,2025-07-07,1476.9263077420123,1471.7085532246315,1481.5097193169772,15769,1
@@ -15412,6 +15439,7 @@ gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,vision,Gemini 2.5 Pro,name,2026-11
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,vision,Gemini 2.5 Pro,name,2026-11-08,1263.1652862355375,1258.6664577817132,1267.6641146893617,88555,52
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,vision,Gemini 2.5 Pro,name,2026-11-09,1263.2369615021967,1258.737625466912,1267.736297537481,88553,51
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,vision,Gemini 2.5 Pro,name,2026-11-19,1263.2470067142074,1258.7657788759225,1267.7282345524925,88464,52
+gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,vision,Gemini 2.5 Pro,name,2026-11-25,1263.2468531474788,1258.773076843495,1267.7206294514629,88442,52
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,gemini-2.5-pro,name,2025-11-12,1177.6862791137842,1155.8503966798676,1199.5221615477008,773,7
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,gemini-2.5-pro,name,2025-11-16,1207.285715869796,1194.031483036778,1220.5399487028144,2882,13
 gemini-2-5-pro,Gemini 2.5 Pro,google,api_only,webdev,gemini-2.5-pro,name,2025-11-17,1206.2126388401553,1192.7988501698887,1219.6264275104218,2794,13
@@ -15716,6 +15744,7 @@ gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,visi
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,vision,Gemini 3.1 Flash-Lite Preview,name,2026-11-08,1240.225956106805,1234.5354649001213,1245.9164473134883,27437,72
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,vision,Gemini 3.1 Flash-Lite Preview,name,2026-11-09,1240.2819286411168,1234.5909712035568,1245.972886078677,27443,72
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,vision,Gemini 3.1 Flash-Lite Preview,name,2026-11-19,1239.9909188659406,1234.332138816391,1245.64969891549,27378,73
+gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,vision,Gemini 3.1 Flash-Lite Preview,name,2026-11-25,1239.8854696618437,1234.238639306124,1245.5323000175636,27356,73
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,gemini-3.1-flash-lite-preview,name,2026-03-03,1254.953422237911,1238.011420625255,1271.8954238505664,1383,40
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,gemini-3.1-flash-lite-preview,name,2026-03-04,1255.3474747401117,1238.4505234628396,1272.2444260173834,1391,41
 gemini-3-1-flash-lite-preview,gemini-3.1-flash-lite-preview,google,api_only,webdev,gemini-3.1-flash-lite-preview,name,2026-03-12,1253.521915922404,1236.669291898026,1270.3745399467823,1397,43
@@ -16026,6 +16055,7 @@ gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,vision,Gemini 3.1 
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,vision,Gemini 3.1 Pro Preview,name,2026-11-08,1295.9744905178686,1290.9702287243094,1300.978752311428,48217,21
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,vision,Gemini 3.1 Pro Preview,name,2026-11-09,1296.0366845507438,1291.0320318547997,1301.0413372466878,48242,21
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,vision,Gemini 3.1 Pro Preview,name,2026-11-19,1296.4751730536896,1291.5097772225777,1301.4405688848017,48038,22
+gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,vision,Gemini 3.1 Pro Preview,name,2026-11-25,1296.3682151430692,1291.417979987762,1301.3184502983763,47993,23
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,gemini-3.1-pro-preview,name,2026-02-09,1468.1938537930291,1453.300544548018,1483.087163038041,1911,5
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,gemini-3.1-pro-preview,name,2026-02-12,1469.971761799154,1455.117003296218,1484.82652030209,1919,4
 gemini-3-1-pro-preview,gemini-3-1-pro-preview,google,api_only,webdev,gemini-3.1-pro-preview,name,2026-02-17,1461.9203985423455,1446.8430156336683,1476.9977814510223,1829,5
@@ -16327,6 +16357,8 @@ gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (High)
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (Medium),name,2026-11-09,1305.4918563080853,1298.8865479911153,1312.0971646250555,15418,15
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (High),name,2026-11-19,1307.6820328336216,1301.1130038215845,1314.2510618456586,15228,12
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (Medium),name,2026-11-19,1306.1644431356988,1299.5899091903527,1312.7389770810448,15320,15
+gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (High),name,2026-11-25,1307.1567174823451,1300.5998032721404,1313.71363169255,15221,13
+gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,vision,Gemini 3.5 Flash (Medium),name,2026-11-25,1305.8951937667887,1299.3326196843493,1312.457767849228,15316,14
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,gemini-3.5-flash,name,2026-05-19,1507.135154799262,1493.427319982938,1520.8429896155858,2148,9
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,gemini-3.5-flash,name,2026-05-25,1506.3793096555328,1492.9059547866866,1519.852664524379,2213,10
 gemini-3-5-flash,Gemini 3.5 Flash,google,api_only,webdev,gemini-3.5-flash,name,2026-06-03,1506.1300725485903,1492.6692584813627,1519.5908866158181,2212,13
@@ -16516,6 +16548,7 @@ gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,vision,Gemini 3.5 Fl
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,vision,Gemini 3.5 Flash-Lite,name,2026-11-08,1267.903860664943,1260.4464396226854,1275.3612817072008,10798,45
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,vision,Gemini 3.5 Flash-Lite,name,2026-11-09,1267.9829814713323,1260.5262851905284,1275.439677752136,10800,45
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,vision,Gemini 3.5 Flash-Lite,name,2026-11-19,1268.0584247869447,1260.6187396895398,1275.4981098843496,10713,46
+gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,vision,Gemini 3.5 Flash-Lite,name,2026-11-25,1267.9815540743348,1260.5586168954535,1275.4044912532163,10715,46
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,gemini-3.5-flash-lite,name,2026-07-26,1447.4246449423745,1401.4968155417876,1493.3524743429616,200,35
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,gemini-3.5-flash-lite,name,2026-07-27,1452.7492802035638,1408.7533309779462,1496.7452294291813,214,36
 gemini-3-5-flash-lite,Gemini 3.5 Flash-Lite,google,api_only,webdev,gemini-3.5-flash-lite,name,2026-07-28,1453.7662202857487,1409.8912870702404,1497.6411535012571,215,36
@@ -16646,6 +16679,7 @@ gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,vision,Gemini 3.6 Flash (High)
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,vision,Gemini 3.6 Flash (High),name,2026-11-08,1296.586012230033,1289.0649704782156,1304.1070539818504,10348,20
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,vision,Gemini 3.6 Flash (High),name,2026-11-09,1296.6928092716025,1289.1719178215487,1304.2137007216566,10352,20
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,vision,Gemini 3.6 Flash (High),name,2026-11-19,1296.974206969669,1289.4832990302734,1304.4651149090648,10275,21
+gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,vision,Gemini 3.6 Flash (High),name,2026-11-25,1296.817732418164,1289.3406214313263,1304.2948434050018,10268,21
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,gemini-3.6-flash,name,2026-07-21,1537.310725878735,1524.088580020942,1550.5328717365278,2280,12
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,gemini-3.6-flash,name,2026-07-24,1525.8477531114754,1512.4388521652152,1539.2566540577357,2409,15
 gemini-3-6-flash,Gemini 3.6 Flash,google,api_only,webdev,gemini-3.6-flash,name,2026-07-26,1524.4690109712128,1511.5169779284984,1537.4210440139268,2572,16
@@ -16751,6 +16785,7 @@ gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,vision,Gemini 3.7 Flash (High)
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,vision,Gemini 3.7 Flash (High),name,2026-11-08,1313.212221891393,1304.7218574108585,1321.7025863719277,6839,9
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,vision,Gemini 3.7 Flash (High),name,2026-11-09,1313.140885720848,1304.6505391052835,1321.6312323364125,6840,9
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,vision,Gemini 3.7 Flash (High),name,2026-11-19,1313.6371365776968,1305.1525852170032,1322.12168793839,6776,9
+gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,vision,Gemini 3.7 Flash (High),name,2026-11-25,1313.8911868163168,1305.4113360584574,1322.3710375741762,6769,8
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,gemini-3.7-flash-high,name,2026-08-14,1587.4801289809689,1574.3196278047635,1600.640630157174,2543,8
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,gemini-3.7-flash-high,name,2026-08-19,1587.8638513518767,1574.6984571536088,1601.0292455501444,2545,9
 gemini-3-7-flash,Gemini 3.7 Flash,google,api_only,webdev,gemini-3.7-flash-high,name,2026-08-21,1587.044813853989,1573.9055863185263,1600.1840413894517,2552,10
@@ -16835,6 +16870,7 @@ gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,vision,Gemini 3.8 Flash (High)
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,vision,Gemini 3.8 Flash (High),name,2026-11-08,1316.7587442172908,1308.6209060122915,1324.89658242229,7682,6
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,vision,Gemini 3.8 Flash (High),name,2026-11-09,1316.7805997775436,1308.6208815620646,1324.9403179930225,7624,6
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,vision,Gemini 3.8 Flash (High),name,2026-11-19,1316.4104703780179,1308.8943325566706,1323.9266081993649,9782,6
+gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,vision,Gemini 3.8 Flash (High),name,2026-11-25,1315.6528527589803,1308.349417700721,1322.9562878172399,10812,6
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,gemini-3.8-flash-high,name,2026-09-02,1567.3294476172298,1554.9159661913823,1579.7429290430773,2728,18
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,gemini-3.8-flash-high,name,2026-09-04,1567.4548365539529,1555.0597536902308,1579.849919417675,2728,20
 gemini-3-8-flash,Gemini 3.8 Flash,google,api_only,webdev,gemini-3.8-flash-high,name,2026-09-05,1567.230734798693,1554.8355933486482,1579.6258762487382,2727,21
@@ -17339,6 +17375,8 @@ gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash,name,2026-11
 gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash (Minimal),name,2026-11-09,1265.3578536835207,1260.0981555708506,1270.6175517961908,36907,49
 gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash,name,2026-11-19,1284.7577594150587,1279.6400495816004,1289.8754692485168,38733,32
 gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash (Minimal),name,2026-11-19,1265.6050637237422,1260.3782172507333,1270.8319101967509,36810,49
+gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash,name,2026-11-25,1284.593872942087,1279.4856368454743,1289.7021090387,38692,32
+gemini-3-flash,Gemini 3 Flash,google,api_only,vision,Gemini 3 Flash (Minimal),name,2026-11-25,1265.710118309822,1260.4937823910618,1270.926454228582,36782,48
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,gemini-3-flash,name,2025-12-16,1465.2038477366414,1450.3295094512152,1480.0781860220677,1725,4
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,gemini-3-flash,name,2025-12-22,1469.6657557848616,1455.8800882235091,1483.451423346214,2082,4
 gemini-3-flash,Gemini 3 Flash,google,api_only,webdev,gemini-3-flash,name,2025-12-23,1464.6399636416495,1451.248720622572,1478.031206660727,2233,4
@@ -17815,6 +17853,7 @@ gemini-3-pro,Gemini 3 Pro,google,api_only,vision,Gemini 3 Pro,name,2026-11-06,13
 gemini-3-pro,Gemini 3 Pro,google,api_only,vision,Gemini 3 Pro,name,2026-11-08,1304.8190653255704,1297.4606564149715,1312.1774742361695,13541,17
 gemini-3-pro,Gemini 3 Pro,google,api_only,vision,Gemini 3 Pro,name,2026-11-09,1304.9150332142974,1297.5565576335514,1312.2735087950434,13547,17
 gemini-3-pro,Gemini 3 Pro,google,api_only,vision,Gemini 3 Pro,name,2026-11-19,1304.5652272932277,1297.214141405422,1311.9163131810337,13482,17
+gemini-3-pro,Gemini 3 Pro,google,api_only,vision,Gemini 3 Pro,name,2026-11-25,1304.5236614219743,1297.1715780420263,1311.8757448019226,13465,17
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,gemini-3-pro,name,2025-11-16,1478.183725523107,1460.210980348197,1496.1564706980168,1425,1
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,gemini-3-pro,name,2025-11-17,1481.018586450574,1460.2499730695388,1501.787199831609,1044,1
 gemini-3-pro,Gemini 3 Pro,google,api_only,webdev,gemini-3-pro,name,2025-11-21,1483.1084062138946,1470.8464486993362,1495.370363728453,4209,1
@@ -19970,6 +20009,7 @@ gemma-3-27b-it,Gemma 3 27B,google,open_weights,vision,Gemma 3 27B IT,name,2026-1
 gemma-3-27b-it,Gemma 3 27B,google,open_weights,vision,Gemma 3 27B IT,name,2026-11-08,1164.465156371845,1156.4377884073483,1172.4925243363418,16940,112
 gemma-3-27b-it,Gemma 3 27B,google,open_weights,vision,Gemma 3 27B IT,name,2026-11-09,1164.3501145361581,1156.322857001626,1172.3773720706904,16943,112
 gemma-3-27b-it,Gemma 3 27B,google,open_weights,vision,Gemma 3 27B IT,name,2026-11-19,1164.3982891980759,1156.3666238224412,1172.4299545737103,16928,113
+gemma-3-27b-it,Gemma 3 27B,google,open_weights,vision,Gemma 3 27B IT,name,2026-11-25,1164.438659854818,1156.408743866938,1172.4685758426979,16925,115
 gemma-3-4b-it,Gemma 3 4B,google,open_weights,text,gemma-3-4b-it,name,2025-05-05,1272.3793842250861,1261.8646898009877,1284.5769883949704,2773,41
 gemma-3-4b-it,Gemma 3 4B,google,open_weights,text,gemma-3-4b-it,name,2025-05-06,1273.8538485503182,1259.4851712161949,1286.7249329299673,2845,41
 gemma-3-4b-it,Gemma 3 4B,google,open_weights,text,gemma-3-4b-it,name,2025-05-11,1274.704020336283,1265.0319406082274,1286.5680343886802,3326,41
@@ -20428,6 +20468,7 @@ gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,vision,Gemma 4 26B A4B,na
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,vision,Gemma 4 26B A4B,name,2026-11-08,1259.454747688973,1253.0679594733704,1265.8415359045757,23738,55
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,vision,Gemma 4 26B A4B,name,2026-11-09,1259.707837827482,1253.3227925069225,1266.0928831480417,23747,55
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,vision,Gemma 4 26B A4B,name,2026-11-19,1259.1660754373413,1252.81067812871,1265.5214727459725,23681,56
+gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,vision,Gemma 4 26B A4B,name,2026-11-25,1259.0991572512473,1252.754713445614,1265.4436010568807,23662,56
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,gemma-4-26b-a4b,name,2026-05-05,1360.2369637773277,1344.1945355073067,1376.2793920473482,1506,49
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,gemma-4-26b-a4b,name,2026-05-07,1360.0204551192178,1343.9894645254321,1376.051445713004,1507,49
 gemma-4-26b-a4b-it,Gemma 4 26B A4B,google,open_weights,webdev,gemma-4-26b-a4b,name,2026-05-12,1360.617499614991,1344.6369560578823,1376.5980431720998,1509,49
@@ -20658,6 +20699,7 @@ gemma-4-31b,gemma-4-31B,google,open_weights,vision,Gemma 4 31B,name,2026-11-06,1
 gemma-4-31b,gemma-4-31B,google,open_weights,vision,Gemma 4 31B,name,2026-11-08,1279.8752491175449,1274.3765624660887,1285.3739357690008,41815,36
 gemma-4-31b,gemma-4-31B,google,open_weights,vision,Gemma 4 31B,name,2026-11-09,1279.3879358017882,1273.8839186365733,1284.891952967003,41787,36
 gemma-4-31b,gemma-4-31B,google,open_weights,vision,Gemma 4 31B,name,2026-11-19,1279.2534991411474,1273.830899919571,1284.6760983627235,42217,37
+gemma-4-31b,gemma-4-31B,google,open_weights,vision,Gemma 4 31B,name,2026-11-25,1279.1828290123856,1273.7684379761556,1284.5972200486153,42173,37
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,gemma-4-31b,name,2026-05-05,1386.8621712019192,1374.011490469282,1399.7128519345565,2309,40
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,gemma-4-31b,name,2026-05-07,1383.212488137502,1370.6459041215621,1395.779072153442,2426,43
 gemma-4-31b,gemma-4-31B,google,open_weights,webdev,gemma-4-31b,name,2026-05-12,1381.2548778302948,1369.2740701410612,1393.2356855195283,2691,44
@@ -21559,6 +21601,7 @@ glm-4-5v,GLM-4.5V,zhipu,open_weights,vision,GLM-4.5V,name,2026-11-06,1154.283116
 glm-4-5v,GLM-4.5V,zhipu,open_weights,vision,GLM-4.5V,name,2026-11-08,1154.1418501536837,1142.5088731584608,1165.7748271489068,3233,118
 glm-4-5v,GLM-4.5V,zhipu,open_weights,vision,GLM-4.5V,name,2026-11-09,1154.1100435265762,1142.4765691757298,1165.7435178774228,3233,118
 glm-4-5v,GLM-4.5V,zhipu,open_weights,vision,GLM-4.5V,name,2026-11-19,1154.2501075820455,1142.6167473038568,1165.8834678602345,3236,119
+glm-4-5v,GLM-4.5V,zhipu,open_weights,vision,GLM-4.5V,name,2026-11-25,1154.0501146907304,1142.4187206237193,1165.6815087577413,3234,121
 glm-4-6,GLM-4.6,zhipu,open_weights,text,glm-4.6,name,2025-10-03,1442.8226081879764,1429.67826728411,1455.9669490918427,2045,2
 glm-4-6,GLM-4.6,zhipu,open_weights,text,glm-4.6,name,2025-10-07,1438.726958563284,1427.7585554340958,1449.695361692472,2935,3
 glm-4-6,GLM-4.6,zhipu,open_weights,text,glm-4.6,name,2025-10-16,1438.5390839721292,1429.586438382097,1447.4917295621617,4428,3
@@ -22133,6 +22176,7 @@ glm-4-6v,glm-4.6v,zhipu,open_weights,vision,GLM-4.6V,name,2026-11-06,1163.447430
 glm-4-6v,glm-4.6v,zhipu,open_weights,vision,GLM-4.6V,name,2026-11-08,1163.1359554145238,1149.4344516726337,1176.8374591564138,2440,113
 glm-4-6v,glm-4.6v,zhipu,open_weights,vision,GLM-4.6V,name,2026-11-09,1163.1068199490092,1149.4051634765813,1176.8084764214368,2440,113
 glm-4-6v,glm-4.6v,zhipu,open_weights,vision,GLM-4.6V,name,2026-11-19,1163.131540801137,1149.437100962134,1176.82598064014,2440,114
+glm-4-6v,glm-4.6v,zhipu,open_weights,vision,GLM-4.6V,name,2026-11-25,1163.0439009218503,1149.3415796044844,1176.746222239216,2438,116
 glm-4-7,GLM-4.7,zhipu,open_weights,text,glm-4.7,name,2025-12-30,1433.1793336904416,1424.1464503724462,1442.212217008437,4557,12
 glm-4-7,GLM-4.7,zhipu,open_weights,text,glm-4.7,name,2026-01-09,1437.215904542787,1429.6961934133974,1444.735615672177,7157,12
 glm-4-7,GLM-4.7,zhipu,open_weights,text,glm-4.7,name,2026-01-27,1434.3345340325138,1428.1156280095108,1440.553440055517,12024,14
@@ -23756,6 +23800,7 @@ glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,vision,GLM-5.3-Flash,name,20
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,vision,GLM-5.3-Flash,name,2026-11-08,1294.8500817678578,1289.334988050982,1300.3651754847335,31604,23
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,vision,GLM-5.3-Flash,name,2026-11-09,1294.6970050128477,1289.1804525330351,1300.2135574926606,31530,24
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,vision,GLM-5.3-Flash,name,2026-11-19,1296.4705628595646,1291.1279343936362,1301.8131913254929,36497,23
+glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,vision,GLM-5.3-Flash,name,2026-11-25,1296.3732509368374,1291.147316067869,1301.5991858058057,38935,22
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,glm-5.3-flash,name,2026-08-30,1605.603065102338,1589.1878006124361,1622.0183295922398,1593,11
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,glm-5.3-flash,name,2026-09-01,1604.1709438306682,1588.2321258894053,1620.109761771931,1698,12
 glm-5-3-flash,z-ai-glm-5-3-flash,zhipu,open_weights,webdev,glm-5.3-flash,name,2026-09-02,1604.4302396754217,1588.870948932593,1619.9895304182505,1781,12
@@ -24328,6 +24373,7 @@ gpt-4-1,GPT-4.1,openai,api_only,vision,GPT-4.1 (2025-04-14),name_one_snapshot,20
 gpt-4-1,GPT-4.1,openai,api_only,vision,GPT-4.1 (2025-04-14),name_one_snapshot,2026-11-08,1210.2682285395501,1203.5881607066392,1216.948296372461,40943,89
 gpt-4-1,GPT-4.1,openai,api_only,vision,GPT-4.1 (2025-04-14),name_one_snapshot,2026-11-09,1210.1969142605756,1203.5172175975356,1216.8766109236153,40946,90
 gpt-4-1,GPT-4.1,openai,api_only,vision,GPT-4.1 (2025-04-14),name_one_snapshot,2026-11-19,1210.4888964370557,1203.800824885975,1217.1769679881363,40925,89
+gpt-4-1,GPT-4.1,openai,api_only,vision,GPT-4.1 (2025-04-14),name_one_snapshot,2026-11-25,1210.5752626573142,1203.8882412853638,1217.2622840292643,40914,91
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,text,gpt-4.1-mini-2025-04-14,name_one_snapshot,2025-04-23,1321.8431270823412,1309.1917894813732,1330.6059421867972,2700,15
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,text,gpt-4.1-mini-2025-04-14,name_one_snapshot,2025-05-05,1322.7340077326426,1313.5354679283078,1330.5726022879346,4293,16
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,text,gpt-4.1-mini-2025-04-14,name_one_snapshot,2025-05-06,1323.590059097376,1315.0638557684827,1331.403884952389,4403,16
@@ -24718,6 +24764,7 @@ gpt-4-1-mini,GPT-4.1 mini,openai,api_only,vision,GPT-4.1 mini (2025-04-14),name_
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,vision,GPT-4.1 mini (2025-04-14),name_one_snapshot,2026-11-08,1181.3341660476851,1173.8597988955585,1188.808533199812,40154,103
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,vision,GPT-4.1 mini (2025-04-14),name_one_snapshot,2026-11-09,1181.2479185254751,1173.7729342417563,1188.722902809194,40154,103
 gpt-4-1-mini,GPT-4.1 mini,openai,api_only,vision,GPT-4.1 mini (2025-04-14),name_one_snapshot,2026-11-19,1181.4034597523275,1173.9205892104756,1188.8863302941795,40139,104
+gpt-4-1-mini,GPT-4.1 mini,openai,api_only,vision,GPT-4.1 mini (2025-04-14),name_one_snapshot,2026-11-25,1181.408396377651,1173.9265375967402,1188.8902551585613,40132,105
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,text,gpt-4.1-nano-2025-04-14,name_one_snapshot,2025-04-23,1271.043713894021,1262.0674716817407,1282.6386460941771,2787,42
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,text,gpt-4.1-nano-2025-04-14,name_one_snapshot,2025-05-05,1271.3897418490033,1263.7508416448086,1281.6965510558161,4452,44
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,text,gpt-4.1-nano-2025-04-14,name_one_snapshot,2025-05-06,1270.172435849358,1262.3060198205953,1277.2349048032906,4559,45
@@ -25109,6 +25156,7 @@ gpt-4-1-nano,GPT-4.1 nano,openai,api_only,vision,GPT-4.1 nano (2025-04-14),name_
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,vision,GPT-4.1 nano (2025-04-14),name_one_snapshot,2026-11-08,1063.1067037120474,1044.8164691636448,1081.39693826045,1211,139
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,vision,GPT-4.1 nano (2025-04-14),name_one_snapshot,2026-11-09,1063.105455748559,1044.8150712885363,1081.3958402085818,1211,139
 gpt-4-1-nano,GPT-4.1 nano,openai,api_only,vision,GPT-4.1 nano (2025-04-14),name_one_snapshot,2026-11-19,1063.1483015078738,1044.8520231527036,1081.4445798630438,1211,140
+gpt-4-1-nano,GPT-4.1 nano,openai,api_only,vision,GPT-4.1 nano (2025-04-14),name_one_snapshot,2026-11-25,1063.184621154918,1044.8895097575082,1081.4797325523277,1211,142
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,text,gpt-4-turbo-2024-04-09,name_one_snapshot,2024-04-11,1260.7410988821052,1253.2555994377879,1266.959294743836,8932,1
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,text,gpt-4-turbo-2024-04-09,name_one_snapshot,2024-04-13,1259.5083527473555,1254.4231135039931,1264.1757861246028,15751,1
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,text,gpt-4-turbo-2024-04-09,name_one_snapshot,2024-04-18,1258.3213973971626,1255.1220309584971,1263.4399592119669,21331,1
@@ -25699,6 +25747,7 @@ gpt-4-turbo,GPT-4 Turbo,openai,api_only,vision,GPT-4 Turbo (2024-04-09),name_one
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,vision,GPT-4 Turbo (2024-04-09),name_one_snapshot,2026-11-08,1089.7414334129505,1078.134766232089,1101.348100593812,13391,133
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,vision,GPT-4 Turbo (2024-04-09),name_one_snapshot,2026-11-09,1089.7596091024611,1078.152014406015,1101.3672037989072,13391,133
 gpt-4-turbo,GPT-4 Turbo,openai,api_only,vision,GPT-4 Turbo (2024-04-09),name_one_snapshot,2026-11-19,1089.7748261637018,1078.151344796304,1101.3983075310996,13391,134
+gpt-4-turbo,GPT-4 Turbo,openai,api_only,vision,GPT-4 Turbo (2024-04-09),name_one_snapshot,2026-11-25,1089.8158343887405,1078.195853488821,1101.4358152886603,13391,136
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,text,gpt-4o-2024-05-13,name_snapshot,2024-05-15,1289.1649796223994,1284.1932383958444,1295.2248853955505,12808,1
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,text,gpt-4o-2024-05-13,name_snapshot,2024-05-16,1287.0545165170488,1283.454728394693,1292.671222863016,15800,1
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,text,gpt-4o-2024-05-13,name_snapshot,2024-05-19,1286.6349805191508,1283.0914176860347,1291.3111266091323,18045,1
@@ -26281,6 +26330,7 @@ gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,vision,GPT-4o (20
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,vision,GPT-4o (2024-05-13),name_snapshot,2026-11-08,1136.4983715994676,1127.6970159686541,1145.299727230281,23273,124
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,vision,GPT-4o (2024-05-13),name_snapshot,2026-11-09,1136.5169400068573,1127.714522847012,1145.319357166703,23273,124
 gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,vision,GPT-4o (2024-05-13),name_snapshot,2026-11-19,1136.531755082671,1127.7047364785878,1145.3587736867541,23273,125
+gpt-4o-2024-05-13,GPT-4o (2024-05-13 snapshot),openai,api_only,vision,GPT-4o (2024-05-13),name_snapshot,2026-11-25,1136.5728465652094,1127.747998650552,1145.3976944798665,23273,127
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,text,gpt-4o-2024-08-06,name_snapshot,2024-08-22,1262.0344021101141,1257.3338211273217,1267.4151532812969,13603,7
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,text,gpt-4o-2024-08-06,name_snapshot,2024-08-23,1262.3274719396022,1257.1245145263294,1267.077094092066,13703,9
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,text,gpt-4o-2024-08-06,name_snapshot,2024-08-27,1262.4569586215557,1257.5826566574851,1269.027286139333,14960,9
@@ -26815,6 +26865,7 @@ gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,vision,GPT-4o (20
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,vision,GPT-4o (2024-08-06),name_snapshot,2026-11-08,1064.4274886633507,1051.925269348826,1076.9297079778753,3376,138
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,vision,GPT-4o (2024-08-06),name_snapshot,2026-11-09,1064.4477656262566,1051.9447546681658,1076.9507765843473,3376,138
 gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,vision,GPT-4o (2024-08-06),name_snapshot,2026-11-19,1064.461375618721,1051.9418941056974,1076.9808571317442,3376,139
+gpt-4o-2024-08-06,GPT-4o (2024-08-06 snapshot),openai,api_only,vision,GPT-4o (2024-08-06),name_snapshot,2026-11-25,1064.502441462418,1051.984639301668,1077.0202436231677,3376,141
 gpt-4o-mini,GPT-4o mini,openai,api_only,text,gpt-4o-mini-2024-07-18,name_one_snapshot,2024-07-22,1279.727409038307,1270.9693438813774,1287.6263793021851,4449,2
 gpt-4o-mini,GPT-4o mini,openai,api_only,text,gpt-4o-mini-2024-07-18,name_one_snapshot,2024-07-25,1278.729791080108,1270.698060445834,1287.8620401950022,6849,2
 gpt-4o-mini,GPT-4o mini,openai,api_only,text,gpt-4o-mini-2024-07-18,name_one_snapshot,2024-07-30,1279.8965072335059,1275.0645725716263,1285.5954731135676,10284,2
@@ -27377,6 +27428,7 @@ gpt-4o-mini,GPT-4o mini,openai,api_only,vision,GPT-4o mini (2024-07-18),name_one
 gpt-4o-mini,GPT-4o mini,openai,api_only,vision,GPT-4o mini (2024-07-18),name_one_snapshot,2026-11-08,1065.4989420196116,1057.1562012985544,1073.8416827406686,17341,137
 gpt-4o-mini,GPT-4o mini,openai,api_only,vision,GPT-4o mini (2024-07-18),name_one_snapshot,2026-11-09,1065.512645526031,1057.1690526135899,1073.8562384384722,17341,137
 gpt-4o-mini,GPT-4o mini,openai,api_only,vision,GPT-4o mini (2024-07-18),name_one_snapshot,2026-11-19,1065.5311724444675,1057.1599277914247,1073.9024170975104,17341,138
+gpt-4o-mini,GPT-4o mini,openai,api_only,vision,GPT-4o mini (2024-07-18),name_one_snapshot,2026-11-25,1065.5715500163446,1057.2006756323945,1073.9424244002946,17341,140
 gpt-5,GPT-5,openai,api_only,text,gpt-5-high,name,2025-08-07,1461.812973501465,1450.79638175635,1472.82956524658,3182,2
 gpt-5,GPT-5,openai,api_only,text,gpt-5-high,name,2025-08-14,1436.8036871651284,1428.70576110791,1444.901613222347,6549,2
 gpt-5,GPT-5,openai,api_only,text,gpt-5-high,name,2025-08-18,1433.8974606193497,1426.2403809870216,1441.5545402516775,7457,3
@@ -27701,6 +27753,7 @@ gpt-5,GPT-5,openai,api_only,vision,GPT-5 (High),name,2026-11-06,1208.37287024094
 gpt-5,GPT-5,openai,api_only,vision,GPT-5 (High),name,2026-11-08,1207.9829490307814,1201.190218189209,1214.7756798723535,34375,91
 gpt-5,GPT-5,openai,api_only,vision,GPT-5 (High),name,2026-11-09,1208.0131231128478,1201.220042226198,1214.8062039994975,34378,91
 gpt-5,GPT-5,openai,api_only,vision,GPT-5 (High),name,2026-11-19,1208.1394214199076,1201.3446700970635,1214.9341727427518,34338,92
+gpt-5,GPT-5,openai,api_only,vision,GPT-5 (High),name,2026-11-25,1207.9551672507496,1201.1613347318262,1214.748999769673,34325,93
 gpt-5,GPT-5,openai,api_only,webdev,gpt-5-medium,name,2025-11-16,1400.4392058716217,1386.5898519218622,1414.288559821381,2605,2
 gpt-5,GPT-5,openai,api_only,webdev,gpt-5-medium,name,2025-11-17,1403.1899143303044,1389.0797633037334,1417.3000653568754,2530,2
 gpt-5,GPT-5,openai,api_only,webdev,gpt-5-medium,name,2025-11-21,1395.5946259244947,1383.3864414394789,1407.8028104095106,3815,5
@@ -28344,6 +28397,8 @@ gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1,name,2026-11-09,1234.958830052028
 gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1 (High),name,2026-11-09,1249.1127525221798,1241.3458800928993,1256.8796249514603,9794,63
 gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1,name,2026-11-19,1235.1036559006338,1227.617411775543,1242.5899000257248,10727,77
 gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1 (High),name,2026-11-19,1248.988186799707,1241.2317929474175,1256.744580651996,9775,62
+gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1,name,2026-11-25,1235.0216005724028,1227.5382285485127,1242.504972596293,10715,78
+gpt-5-1,GPT-5.1,openai,api_only,vision,GPT-5.1 (High),name,2026-11-25,1248.9648716141564,1241.2120080706725,1256.7177351576404,9761,63
 gpt-5-1,GPT-5.1,openai,api_only,webdev,gpt-5.1,name,2025-11-16,1386.7395136814837,1372.2284478978274,1401.2505794651397,2126,6
 gpt-5-1,GPT-5.1,openai,api_only,webdev,gpt-5.1,name,2025-11-17,1388.295518372374,1373.651891564875,1402.939145179873,2030,5
 gpt-5-1,GPT-5.1,openai,api_only,webdev,gpt-5.1,name,2025-11-21,1363.9115541760284,1351.9526833804262,1375.8704249716309,3534,8
@@ -29268,6 +29323,8 @@ gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2,name,2026-11-09,1228.835138500435
 gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2 (High),name,2026-11-09,1245.4571668137262,1239.462896297854,1251.451437329598,18920,67
 gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2,name,2026-11-19,1228.2894200757387,1222.4032194448912,1234.1756207065862,19962,81
 gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2 (High),name,2026-11-19,1245.6888789570198,1239.7223860266784,1251.6553718873613,18881,69
+gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2,name,2026-11-25,1228.4121868950954,1222.5334502756825,1234.2909235145082,19930,82
+gpt-5-2,GPT-5.2,openai,api_only,vision,GPT-5.2 (High),name,2026-11-25,1245.8351894225111,1239.8779606337941,1251.7924182112279,18870,68
 gpt-5-2,GPT-5.2,openai,api_only,webdev,gpt-5.2,name,2025-12-11,1399.383028538928,1384.1298601495273,1414.6361969283284,1639,5
 gpt-5-2,GPT-5.2,openai,api_only,webdev,gpt-5.2,name,2025-12-16,1398.6116337973626,1383.216370999436,1414.0068965952894,1640,6
 gpt-5-2,GPT-5.2,openai,api_only,webdev,gpt-5.2,name,2025-12-22,1397.531671028145,1382.1983020744751,1412.8650399818148,1641,7
@@ -29399,6 +29456,7 @@ gpt-5-2-chat,gpt-5.2-chat,openai,api_only,vision,GPT-5.2 Chat (20260210),name_on
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,vision,GPT-5.2 Chat (20260210),name_one_snapshot,2026-11-08,1267.752205911828,1261.3208815702515,1274.1835302534046,16357,46
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,vision,GPT-5.2 Chat (20260210),name_one_snapshot,2026-11-09,1267.6857025374075,1261.2534366531552,1274.11796842166,16361,46
 gpt-5-2-chat,gpt-5.2-chat,openai,api_only,vision,GPT-5.2 Chat (20260210),name_one_snapshot,2026-11-19,1267.64150313388,1261.2438423211981,1274.039163946562,16336,47
+gpt-5-2-chat,gpt-5.2-chat,openai,api_only,vision,GPT-5.2 Chat (20260210),name_one_snapshot,2026-11-25,1267.7397861888248,1261.3520522512074,1274.127520126442,16329,47
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,gpt-5.2-codex,name,2026-01-24,1344.3756310399376,1331.280993176603,1357.470268903272,2500,19
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,gpt-5.2-codex,name,2026-01-29,1330.9559645164236,1318.5984585085912,1343.3134705242562,2919,18
 gpt-5-2-codex,GPT-5.2 Codex,openai,api_only,webdev,gpt-5.2-codex,name,2026-02-01,1333.4901352651568,1321.961485842928,1345.0187846873855,3235,19
@@ -29837,6 +29895,8 @@ gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4,name,2026-11-09,1291.728494828063
 gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4 (High),name,2026-11-09,1300.757987776311,1295.1811207335775,1306.3348548190443,32045,19
 gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4,name,2026-11-19,1291.2862092260327,1284.9035260567841,1297.6688923952815,22546,27
 gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4 (High),name,2026-11-19,1300.9161682001406,1295.376094591595,1306.4562418086864,31907,19
+gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4,name,2026-11-25,1291.5231437625714,1285.1530454572685,1297.8932420678743,22515,27
+gpt-5-4,GPT-5.4,openai,api_only,vision,GPT-5.4 (High),name,2026-11-25,1300.6349429713193,1295.1072826433112,1306.1626032993272,31848,20
 gpt-5-4,GPT-5.4,openai,api_only,webdev,gpt-5.4,name,2026-05-05,1383.0383171789515,1336.7430759840058,1429.3335583738972,166,43
 gpt-5-4,GPT-5.4,openai,api_only,webdev,gpt-5.4,name,2026-05-07,1385.2997685019654,1339.895469811811,1430.70406719212,172,41
 gpt-5-4,GPT-5.4,openai,api_only,webdev,gpt-5.4,name,2026-05-12,1386.8285850005432,1343.4788191564526,1430.1783508446333,191,40
@@ -30084,6 +30144,7 @@ gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,vision,GPT-5.4 mini (High),name,2026-1
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,vision,GPT-5.4 mini (High),name,2026-11-08,1244.4757269659985,1238.349815531585,1250.6016384004122,25522,68
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,vision,GPT-5.4 mini (High),name,2026-11-09,1244.4203160713519,1238.2940125211771,1250.5466196215264,25535,68
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,vision,GPT-5.4 mini (High),name,2026-11-19,1244.492718947158,1238.4001214500572,1250.5853164442588,25461,70
+gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,vision,GPT-5.4 mini (High),name,2026-11-25,1244.6328701535317,1238.5547769756458,1250.7109633314178,25435,70
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,gpt-5.4-mini-high,name,2026-04-02,1381.9585686831404,1364.2978915779936,1399.619245788287,1240,30
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,gpt-5.4-mini-high,name,2026-04-09,1387.5400372751699,1372.0729783347492,1403.0070962155905,1651,28
 gpt-5-4-mini,GPT-5.4 Mini,openai,api_only,webdev,gpt-5.4-mini-high,name,2026-04-14,1393.3863433473912,1378.6660603916398,1408.106626303142,1843,22
@@ -30343,6 +30404,7 @@ gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,vision,GPT-5.4 nano (High),name,2026-1
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,vision,GPT-5.4 nano (High),name,2026-11-08,1195.647873817689,1189.3983956002319,1201.8973520351462,25387,96
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,vision,GPT-5.4 nano (High),name,2026-11-09,1195.5354456740297,1189.2856307116297,1201.78526063643,25407,96
 gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,vision,GPT-5.4 nano (High),name,2026-11-19,1195.3226581280378,1189.1024822086733,1201.5428340474023,25347,97
+gpt-5-4-nano,GPT-5.4 Nano,openai,api_only,vision,GPT-5.4 nano (High),name,2026-11-25,1195.3206443365007,1189.113579117455,1201.5277095555466,25306,98
 gpt-5-5,GPT-5.5,openai,api_only,text,gpt-5.5,name,2026-04-27,1460.307101559268,1450.815245805612,1469.798957312924,3757,13
 gpt-5-5,GPT-5.5,openai,api_only,text,gpt-5.5-high,name,2026-04-27,1473.6995660456685,1463.948519208392,1483.450612882945,3587,8
 gpt-5-5,GPT-5.5,openai,api_only,text,gpt-5.5,name,2026-04-28,1460.307101559268,1450.815245805612,1469.798957312924,3757,13
@@ -30629,6 +30691,8 @@ gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5,name,2026-11-09,1295.831348796516
 gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5 (High),name,2026-11-09,1294.5362794368834,1288.8383901307648,1300.234168743002,28348,25
 gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5,name,2026-11-19,1296.026972292995,1290.437420305185,1301.6165242808047,29925,24
 gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5 (High),name,2026-11-19,1295.1624669159464,1289.5030885985202,1300.8218452333726,28221,25
+gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5,name,2026-11-25,1296.043189783949,1290.4658600325215,1301.6205195353762,29897,24
+gpt-5-5,GPT-5.5,openai,api_only,vision,GPT-5.5 (High),name,2026-11-25,1295.0580998221387,1289.4117022047774,1300.7044974395003,28198,25
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,text,gpt-5.5-instant,name,2026-05-06,1414.587449230978,1402.6160776731926,1426.5588207887636,2244,85
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,text,gpt-5.5-instant,name,2026-05-07,1417.5086497501595,1406.8411629778373,1428.1761365224818,2833,80
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,text,gpt-5.5-instant,name,2026-05-12,1418.1188466945891,1409.7278298365388,1426.5098635526397,4927,78
@@ -30759,6 +30823,7 @@ gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,vision,GPT-5.5 Instant,name,2026
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,vision,GPT-5.5 Instant,name,2026-11-08,1250.5741626008382,1242.0321129604065,1259.1162122412702,7568,61
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,vision,GPT-5.5 Instant,name,2026-11-09,1250.5250931184196,1241.9823495066378,1259.0678367302012,7567,61
 gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,vision,GPT-5.5 Instant,name,2026-11-19,1250.5928752918849,1242.0710739098636,1259.1146766739062,7549,61
+gpt-5-5-instant,GPT-5.5 Instant,openai,api_only,vision,GPT-5.5 Instant,name,2026-11-25,1250.3005157029882,1241.7868747445953,1258.8141566613813,7545,61
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,text,gpt-5.6-luna-xhigh,name,2026-07-30,1429.2137372658854,1422.3002771646866,1436.1271973670841,8890,75
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,text,gpt-5.6-luna-xhigh,name,2026-08-02,1427.330814152619,1420.9633494982509,1433.6982788069872,11383,79
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,text,gpt-5.6-luna-xhigh,name,2026-08-03,1427.330814152619,1420.9633494982509,1433.6982788069872,11383,78
@@ -30833,6 +30898,7 @@ gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,vision,GPT-5.6 Luna (xHigh),name,2026-
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,vision,GPT-5.6 Luna (xHigh),name,2026-11-08,1255.8321804697168,1248.4933119523523,1263.1710489870811,11073,58
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,vision,GPT-5.6 Luna (xHigh),name,2026-11-09,1255.8233155180828,1248.484418386015,1263.1622126501509,11071,58
 gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,vision,GPT-5.6 Luna (xHigh),name,2026-11-19,1256.0508382276632,1248.7397410314077,1263.3619354239188,10996,58
+gpt-5-6-luna,GPT-5.6 Luna,openai,api_only,vision,GPT-5.6 Luna (xHigh),name,2026-11-25,1255.899204341775,1248.5989946211214,1263.1994140624283,10977,58
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,text,gpt-5.6-sol-xhigh,name,2026-07-10,1457.8390166359582,1443.5536501703978,1472.124383101519,1740,24
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,text,gpt-5.6-sol-xhigh,name,2026-07-12,1455.2514522176045,1443.8708412072106,1466.6320632279985,2821,27
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,text,gpt-5.6-sol-xhigh,name,2026-07-14,1455.2828194890164,1444.2084296814116,1466.3572092966215,2992,27
@@ -30923,6 +30989,7 @@ gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,vision,GPT-5.6 Sol (xHigh),name,2026-11-
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,vision,GPT-5.6 Sol (xHigh),name,2026-11-08,1282.198490655392,1275.072692656372,1289.3242886544124,12340,35
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,vision,GPT-5.6 Sol (xHigh),name,2026-11-09,1282.1904721969697,1275.066227416964,1289.3147169769757,12342,35
 gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,vision,GPT-5.6 Sol (xHigh),name,2026-11-19,1282.2270615271113,1275.1228458814833,1289.3312771727394,12244,36
+gpt-5-6-sol,GPT-5.6 Sol,openai,api_only,vision,GPT-5.6 Sol (xHigh),name,2026-11-25,1281.7271365185823,1274.6278393764414,1288.826433660723,12237,36
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,text,gpt-5.6-terra-xhigh,name,2026-07-30,1448.8252228749911,1441.8918145317152,1455.7586312182675,8621,39
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,text,gpt-5.6-terra-xhigh,name,2026-08-02,1448.4104549091235,1442.0559471590727,1454.764962659174,11082,40
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,text,gpt-5.6-terra-xhigh,name,2026-08-03,1448.4104549091235,1442.0559471590727,1454.764962659174,11082,39
@@ -30997,6 +31064,7 @@ gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,vision,GPT-5.6 Terra (xHigh),name,20
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,vision,GPT-5.6 Terra (xHigh),name,2026-11-08,1268.8829314905627,1261.8934853176536,1275.8723776634715,13234,43
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,vision,GPT-5.6 Terra (xHigh),name,2026-11-09,1269.0727852801247,1262.0861933347107,1276.0593772255386,13243,43
 gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,vision,GPT-5.6 Terra (xHigh),name,2026-11-19,1269.7929977485207,1262.835367354932,1276.7506281421097,13166,44
+gpt-5-6-terra,GPT-5.6 Terra,openai,api_only,vision,GPT-5.6 Terra (xHigh),name,2026-11-25,1269.2503804143034,1262.305607728,1276.1951531006068,13148,45
 gpt-5-mini,GPT-5 mini,openai,api_only,text,gpt-5-mini-high,name,2025-08-14,1374.5149464346125,1363.6248065768334,1385.4050862923916,2948,25
 gpt-5-mini,GPT-5 mini,openai,api_only,text,gpt-5-mini-high,name,2025-08-18,1375.3269075170756,1365.5477828298508,1385.1060322043002,3737,24
 gpt-5-mini,GPT-5 mini,openai,api_only,text,gpt-5-mini-high,name,2025-08-21,1375.9434968460598,1367.4693090008536,1384.4176846912658,5140,25
@@ -31318,6 +31386,7 @@ gpt-5-mini,GPT-5 mini,openai,api_only,vision,GPT-5 mini (High),name,2026-11-06,1
 gpt-5-mini,GPT-5 mini,openai,api_only,vision,GPT-5 mini (High),name,2026-11-08,1202.6050864379304,1194.7951910090399,1210.4149818668207,28903,93
 gpt-5-mini,GPT-5 mini,openai,api_only,vision,GPT-5 mini (High),name,2026-11-09,1202.4710063970872,1194.6638811981993,1210.2781315959753,28904,93
 gpt-5-mini,GPT-5 mini,openai,api_only,vision,GPT-5 mini (High),name,2026-11-19,1202.644756088551,1194.8252907475664,1210.4642214295357,28878,94
+gpt-5-mini,GPT-5 mini,openai,api_only,vision,GPT-5 mini (High),name,2026-11-25,1202.5788638486074,1194.7607214703708,1210.3970062268443,28874,95
 gpt-5-nano,GPT-5 nano,openai,api_only,text,gpt-5-nano-high,name,2025-08-14,1326.721753412629,1316.1146582406448,1337.3288485846133,3098,57
 gpt-5-nano,GPT-5 nano,openai,api_only,text,gpt-5-nano-high,name,2025-08-18,1328.439523082909,1318.918449749248,1337.9605964165703,3918,56
 gpt-5-nano,GPT-5 nano,openai,api_only,text,gpt-5-nano-high,name,2025-08-21,1332.9053106840845,1324.219189483021,1341.5914318851476,4789,55
@@ -31639,6 +31708,7 @@ gpt-5-nano,GPT-5 nano,openai,api_only,vision,GPT-5 nano (High),name,2026-11-06,1
 gpt-5-nano,GPT-5 nano,openai,api_only,vision,GPT-5 nano (High),name,2026-11-08,1159.0837480772882,1148.039108187311,1170.1283879672653,3921,115
 gpt-5-nano,GPT-5 nano,openai,api_only,vision,GPT-5 nano (High),name,2026-11-09,1159.0526430805887,1148.007678822637,1170.0976073385405,3921,115
 gpt-5-nano,GPT-5 nano,openai,api_only,vision,GPT-5 nano (High),name,2026-11-19,1159.1213920944797,1148.0760819381774,1170.166702250782,3921,116
+gpt-5-nano,GPT-5 nano,openai,api_only,vision,GPT-5 nano (High),name,2026-11-25,1159.1579237124995,1148.1141533498994,1170.2016940750998,3921,118
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,text,gpt-6.1-sol-max,name,2026-10-02,1445.6162401741894,1435.0856366065975,1456.1468437417816,3071,60
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,text,gpt-6.1-sol-max,name,2026-10-08,1446.50994938648,1437.416957965898,1455.6029408070617,4512,58
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,text,gpt-6.1-sol-max,name,2026-10-13,1447.497688946659,1439.1771299740458,1455.8182479192724,5762,57
@@ -31674,6 +31744,7 @@ gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,vision,GPT-6.1 Sol (Max),name,2026-11-06
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,vision,GPT-6.1 Sol (Max),name,2026-11-08,1285.8122070933691,1275.3966036580985,1296.2278105286398,4034,30
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,vision,GPT-6.1 Sol (Max),name,2026-11-09,1285.9391490403186,1275.4805689582397,1296.3977291223973,3987,30
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,vision,GPT-6.1 Sol (Max),name,2026-11-19,1283.7651906408553,1274.1321729739277,1293.3982083077829,5043,33
+gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,vision,GPT-6.1 Sol (Max),name,2026-11-25,1283.3150777948033,1274.0250231336095,1292.6051324559971,5555,33
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,gpt-6.1-sol-max,name,2026-09-30,1758.724697016325,1739.6304407862358,1777.8189532464148,1264,3
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,gpt-6.1-sol-max,name,2026-10-01,1757.8125808243285,1740.978754351071,1774.646407297586,1620,4
 gpt-6-1-sol,GPT-6.1 Sol,openai,api_only,webdev,gpt-6.1-sol-max,name,2026-10-06,1757.3095509265854,1741.8610637774673,1772.758038075703,1965,4
@@ -31702,6 +31773,7 @@ gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text,GPT-6.1 Terra (Max),name,2026-1
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text_style_control,GPT-6.1 Terra (Max),name,2026-11-19,1474.1416573960823,1466.2523063579415,1482.0310084342227,8278,44
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,text_style_control,GPT-6.1 Terra (Max),name,2026-11-22,1473.8559043505186,1466.2501287414016,1481.4616799596356,9100,45
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,vision,GPT-6.1 Terra (Max),name,2026-11-19,1246.9445504830046,1234.1299704712699,1259.7591304947393,2796,66
+gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,vision,GPT-6.1 Terra (Max),name,2026-11-25,1249.3473352792666,1237.6721017593284,1261.022568799205,3463,62
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-10-27,1670.713647761856,1654.5218753393972,1686.905420184315,1615,14
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-10-28,1672.6547058209349,1657.3346917882454,1687.9747198536243,1821,14
 gpt-6-1-terra,GPT-6.1 Terra,openai,api_only,webdev,GPT-6.1 Terra (Max),name,2026-11-06,1679.751199354737,1668.586663561016,1690.9157351484582,3603,12
@@ -31778,6 +31850,7 @@ gpt-6-astra,GPT-6 Astra,openai,api_only,vision,GPT-6 Astra (Max),name,2026-11-06
 gpt-6-astra,GPT-6 Astra,openai,api_only,vision,GPT-6 Astra (Max),name,2026-11-08,1278.9698105223902,1269.8866513775035,1288.0529696672768,5567,37
 gpt-6-astra,GPT-6 Astra,openai,api_only,vision,GPT-6 Astra (Max),name,2026-11-09,1278.516695238096,1269.39651292382,1287.6368775523717,5517,38
 gpt-6-astra,GPT-6 Astra,openai,api_only,vision,GPT-6 Astra (Max),name,2026-11-19,1276.1585649485985,1267.53488714947,1284.782242747727,6436,40
+gpt-6-astra,GPT-6 Astra,openai,api_only,vision,GPT-6 Astra (Max),name,2026-11-25,1275.4265420772035,1267.0251057388487,1283.8279784155584,6907,40
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,gpt-6-astra-max,name,2026-09-05,1797.0426317593628,1773.4425056675068,1820.6427578512184,1199,1
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,gpt-6-astra-max,name,2026-09-08,1796.1945298745854,1777.5986039968625,1814.7904557523086,1810,1
 gpt-6-astra,GPT-6 Astra,openai,api_only,webdev,gpt-6-astra-max,name,2026-09-11,1800.2807670457605,1783.8060633153368,1816.7554707761842,2281,1
@@ -31847,6 +31920,7 @@ gpt-6-luna,gpt-6-luna,openai,api_only,vision,GPT-6 Luna (Max),name,2026-11-06,12
 gpt-6-luna,gpt-6-luna,openai,api_only,vision,GPT-6 Luna (Max),name,2026-11-08,1211.349253640358,1202.4849991305316,1220.2135081501845,6246,88
 gpt-6-luna,gpt-6-luna,openai,api_only,vision,GPT-6 Luna (Max),name,2026-11-09,1211.1836426875775,1202.295652849001,1220.0716325261537,6202,88
 gpt-6-luna,gpt-6-luna,openai,api_only,vision,GPT-6 Luna (Max),name,2026-11-19,1209.676230701142,1201.3854241200627,1217.9670372822213,7728,91
+gpt-6-luna,gpt-6-luna,openai,api_only,vision,GPT-6 Luna (Max),name,2026-11-25,1210.911414631396,1202.8372881604055,1218.9855411023864,8456,90
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,gpt-6-luna-max,name,2026-09-24,1593.1585323032814,1573.8667149869661,1612.4503496195969,1042,24
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,gpt-6-luna-max,name,2026-09-25,1592.646721210178,1578.1497290257992,1607.1437133945565,1903,24
 gpt-6-luna,gpt-6-luna,openai,api_only,webdev,gpt-6-luna-max,name,2026-09-29,1583.2818410208788,1573.8721083533662,1592.6915736883916,4987,26
@@ -31911,6 +31985,7 @@ gpt-6-sol,gpt-6-sol,openai,api_only,vision,GPT-6 Sol (Max),name,2026-11-06,1235.
 gpt-6-sol,gpt-6-sol,openai,api_only,vision,GPT-6 Sol (Max),name,2026-11-08,1232.2408474583494,1222.6540571273326,1241.8276377893667,5054,77
 gpt-6-sol,gpt-6-sol,openai,api_only,vision,GPT-6 Sol (Max),name,2026-11-09,1232.6474399308647,1223.0338107447508,1242.2610691169787,5018,77
 gpt-6-sol,gpt-6-sol,openai,api_only,vision,GPT-6 Sol (Max),name,2026-11-19,1232.1032254937809,1223.1984979810677,1241.007953006494,6202,78
+gpt-6-sol,gpt-6-sol,openai,api_only,vision,GPT-6 Sol (Max),name,2026-11-25,1232.0981396253785,1223.4427173817407,1240.7535618690163,6760,79
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,gpt-6-sol-max,name,2026-09-23,1685.8986154645982,1669.2805184309257,1702.5167124982709,1521,5
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,gpt-6-sol-max,name,2026-09-24,1685.8986154645982,1669.2805184309257,1702.5167124982709,1521,5
 gpt-6-sol,gpt-6-sol,openai,api_only,webdev,gpt-6-sol-max,name,2026-09-25,1680.9724563881532,1666.4681565732392,1695.476756203067,2019,5
@@ -34827,6 +34902,7 @@ grok-4,Grok 4,xai,api_only,vision,Grok 4 (0709),name_one_snapshot,2026-11-06,121
 grok-4,Grok 4,xai,api_only,vision,Grok 4 (0709),name_one_snapshot,2026-11-08,1210.2429390580717,1202.9564226366872,1217.5294554794561,30131,90
 grok-4,Grok 4,xai,api_only,vision,Grok 4 (0709),name_one_snapshot,2026-11-09,1210.3075973765278,1203.0207633215539,1217.594431431502,30130,89
 grok-4,Grok 4,xai,api_only,vision,Grok 4 (0709),name_one_snapshot,2026-11-19,1210.1480574064808,1202.8539076541858,1217.4422071587755,30106,90
+grok-4,Grok 4,xai,api_only,vision,Grok 4 (0709),name_one_snapshot,2026-11-25,1210.2688649570596,1202.977308649353,1217.560421264766,30105,92
 grok-4-1,Grok 4.1,xai,api_only,text,grok-4.1,name,2025-11-16,1443.988854016042,1433.5202790996743,1454.4574289324098,3413,5
 grok-4-1,Grok 4.1,xai,api_only,text,grok-4.1-thinking,name,2025-11-16,1455.3802077096182,1444.6293375740877,1466.1310778451486,3298,3
 grok-4-1,Grok 4.1,xai,api_only,text,grok-4.1,name,2025-11-17,1445.7486228137775,1434.6591021791878,1456.8381434483672,2920,4
@@ -35626,6 +35702,7 @@ grok-4-1-fast,Grok 4.1 Fast,xai,api_only,vision,Grok 4.1 Fast (Reasoning),name,2
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,vision,Grok 4.1 Fast (Reasoning),name,2026-11-08,1201.2934426287532,1194.431268719142,1208.155616538364,13296,94
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,vision,Grok 4.1 Fast (Reasoning),name,2026-11-09,1201.3103376039523,1194.4472034967416,1208.173471711163,13295,94
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,vision,Grok 4.1 Fast (Reasoning),name,2026-11-19,1201.4609017832215,1194.627265896465,1208.2945376699781,13282,95
+grok-4-1-fast,Grok 4.1 Fast,xai,api_only,vision,Grok 4.1 Fast (Reasoning),name,2026-11-25,1201.4725762530384,1194.6472935379304,1208.2978589681463,13277,96
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,grok-4-1-fast-reasoning,name,2025-11-25,1221.9665505110672,1203.6920634888652,1240.2410375332693,1231,16
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,grok-4-1-fast-reasoning,name,2025-11-26,1227.8387303959234,1211.206860689316,1244.4706001025309,1534,18
 grok-4-1-fast,Grok 4.1 Fast,xai,api_only,webdev,grok-4-1-fast-reasoning,name,2025-12-01,1233.683081500172,1220.2071407147698,1247.159022285574,2559,19
@@ -35869,6 +35946,7 @@ grok-4-3,grok-4.3,xai,api_only,vision,Grok 4.3,name,2026-11-06,1228.014629887256
 grok-4-3,grok-4.3,xai,api_only,vision,Grok 4.3,name,2026-11-08,1228.5821070995794,1222.895980877721,1234.2682333214377,29208,81
 grok-4-3,grok-4.3,xai,api_only,vision,Grok 4.3,name,2026-11-09,1228.6320915887682,1222.9459128365672,1234.318270340969,29224,81
 grok-4-3,grok-4.3,xai,api_only,vision,Grok 4.3,name,2026-11-19,1228.0428546636142,1222.3969493426357,1233.6887599845925,29102,82
+grok-4-3,grok-4.3,xai,api_only,vision,Grok 4.3,name,2026-11-25,1227.9474267569894,1222.313363732547,1233.5814897814319,29056,83
 grok-4-3,grok-4.3,xai,api_only,webdev,grok-4.3,name,2026-05-01,1408.482136915802,1389.9857981868486,1426.978475644755,1048,27
 grok-4-3,grok-4.3,xai,api_only,webdev,grok-4.3,name,2026-05-04,1405.0188843833091,1389.7912605975612,1420.246508169057,1585,29
 grok-4-3,grok-4.3,xai,api_only,webdev,grok-4.3,name,2026-05-05,1402.9728882429704,1388.295018547375,1417.6507579385657,1707,31
@@ -36032,6 +36110,7 @@ grok-4-5,Grok 4.5,xai,api_only,vision,Grok 4.5,name,2026-11-06,1288.166063784086
 grok-4-5,Grok 4.5,xai,api_only,vision,Grok 4.5,name,2026-11-08,1287.8878308650715,1281.0599514565265,1294.7157102736164,13985,29
 grok-4-5,Grok 4.5,xai,api_only,vision,Grok 4.5,name,2026-11-09,1288.0179055919846,1281.191854226318,1294.8439569576512,13991,29
 grok-4-5,Grok 4.5,xai,api_only,vision,Grok 4.5,name,2026-11-19,1287.8362181968089,1281.035827455312,1294.6366089383055,13903,30
+grok-4-5,Grok 4.5,xai,api_only,vision,Grok 4.5,name,2026-11-25,1287.8483463442801,1281.0572788309323,1294.639413857628,13896,30
 grok-4-5,Grok 4.5,xai,api_only,webdev,grok-4.5,name,2026-07-09,1572.4662698086472,1552.3485904464885,1592.583949170806,977,3
 grok-4-5,Grok 4.5,xai,api_only,webdev,grok-4.5,name,2026-07-10,1565.9403332587694,1550.3431449652583,1581.5375215522809,1598,4
 grok-4-5,Grok 4.5,xai,api_only,webdev,grok-4.5,name,2026-07-12,1556.9616101857487,1542.418796941661,1571.5044234298364,1805,6
@@ -36143,6 +36222,7 @@ grok-4-6,Grok 4.6,xai,api_only,vision,Grok 4.6 (High),name,2026-11-06,1263.69454
 grok-4-6,Grok 4.6,xai,api_only,vision,Grok 4.6 (High),name,2026-11-08,1264.021965019194,1256.143436917525,1271.9004931208635,8665,50
 grok-4-6,Grok 4.6,xai,api_only,vision,Grok 4.6 (High),name,2026-11-09,1263.9931788749898,1256.1150089709104,1271.8713487790692,8666,50
 grok-4-6,Grok 4.6,xai,api_only,vision,Grok 4.6 (High),name,2026-11-19,1264.8906623346236,1257.0158583448144,1272.765466324433,8578,50
+grok-4-6,Grok 4.6,xai,api_only,vision,Grok 4.6 (High),name,2026-11-25,1264.3018652005742,1256.437149975746,1272.1665804254023,8576,51
 grok-4-6,Grok 4.6,xai,api_only,webdev,grok-4.6-high,name,2026-08-12,1617.9367297526142,1596.7515918685071,1639.121867636721,1005,7
 grok-4-6,Grok 4.6,xai,api_only,webdev,grok-4.6-high,name,2026-08-14,1631.1223821916146,1613.9112088034258,1648.3335555798035,1513,5
 grok-4-6,Grok 4.6,xai,api_only,webdev,grok-4.6-high,name,2026-08-19,1629.120736571959,1611.9677161210627,1646.2737570228553,1519,5
@@ -36219,6 +36299,7 @@ grok-4-7,Grok 4.7,xai,api_only,vision,Grok 4.7 (xHigh),name,2026-11-06,1231.0477
 grok-4-7,Grok 4.7,xai,api_only,vision,Grok 4.7 (xHigh),name,2026-11-08,1229.7093647712911,1220.8843590059348,1238.5343705366474,6230,79
 grok-4-7,Grok 4.7,xai,api_only,vision,Grok 4.7 (xHigh),name,2026-11-09,1230.0212125163798,1221.1707134356507,1238.871711597109,6181,79
 grok-4-7,Grok 4.7,xai,api_only,vision,Grok 4.7 (xHigh),name,2026-11-19,1230.976428000711,1222.7780628539058,1239.1747931475159,7761,80
+grok-4-7,Grok 4.7,xai,api_only,vision,Grok 4.7 (xHigh),name,2026-11-25,1230.3173205958192,1222.3265892939544,1238.308051897684,8429,81
 grok-4-7,Grok 4.7,xai,api_only,webdev,grok-4.7-xhigh,name,2026-09-22,1632.484104446712,1615.3348226037413,1649.6333862896831,1425,10
 grok-4-7,Grok 4.7,xai,api_only,webdev,grok-4.7-xhigh,name,2026-09-23,1632.301456495259,1616.2342966458564,1648.3686163446612,1650,12
 grok-4-7,Grok 4.7,xai,api_only,webdev,grok-4.7-xhigh,name,2026-09-24,1632.301456495259,1616.2342966458564,1648.3686163446612,1650,12
@@ -37231,6 +37312,7 @@ inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-22,14
 inkling,Inkling,thinking-machines,open_weights,webdev,Inkling,name,2026-11-23,1413.9528449856919,1407.9746652130564,1419.9310247583273,17046,105
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,text,Inkling 2 Mini,name,2026-11-22,1343.6829566726776,1329.304691621091,1358.0612217242642,1793,220
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,text_style_control,Inkling 2 Mini,name,2026-11-22,1366.9184356806572,1352.363519567366,1381.4733517939485,1793,210
+inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,vision,Inkling 2 Mini,name,2026-11-25,1181.1988909347697,1164.893776050427,1197.5040058191123,1509,106
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,webdev,Inkling 2 Mini,name,2026-11-22,1557.149244794357,1539.4309285756708,1574.8675610130433,1239,55
 inkling-2-mini,inkling-2-mini,thinking-machines,open_weights,webdev,Inkling 2 Mini,name,2026-11-23,1559.7868951203154,1542.6101204998345,1576.9636697407964,1312,54
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text,Inkling 2 Small,name,2026-11-08,1402.6740223114791,1390.8747970069435,1414.473247616015,2653,153
@@ -37245,6 +37327,7 @@ inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text_style_c
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text_style_control,Inkling 2 Small,name,2026-11-18,1412.16115701922,1400.3714859365955,1423.9508281018443,2678,152
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text_style_control,Inkling 2 Small,name,2026-11-19,1411.9806908642627,1400.1983623678161,1423.7630193607092,2678,156
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,text_style_control,Inkling 2 Small,name,2026-11-22,1412.2006754396411,1400.430921710561,1423.9704291687212,2682,156
+inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,vision,Inkling 2 Small,name,2026-11-25,1239.049474428662,1223.3260036944382,1254.772945162886,1572,75
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-06,1647.7718111578304,1626.6597246902031,1668.8838976254574,831,21
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-08,1648.5741189010614,1628.9087142262642,1668.2395235758586,967,21
 inkling-2-small,inkling-2-small:free,thinking-machines,open_weights,webdev,Inkling 2 Small,name,2026-11-09,1649.4721697731702,1629.7840787380978,1669.1602608082424,964,21
@@ -37313,6 +37396,7 @@ inkling-small,Inkling-Small,thinking-machines,open_weights,vision,Inkling-Small,
 inkling-small,Inkling-Small,thinking-machines,open_weights,vision,Inkling-Small,name,2026-11-08,1236.157575520598,1228.3594321508558,1243.9557188903398,9249,74
 inkling-small,Inkling-Small,thinking-machines,open_weights,vision,Inkling-Small,name,2026-11-09,1235.864184409393,1228.0679702182697,1243.6603986005161,9259,74
 inkling-small,Inkling-Small,thinking-machines,open_weights,vision,Inkling-Small,name,2026-11-19,1236.3150997511639,1228.5288832613282,1244.1013162409995,9182,75
+inkling-small,Inkling-Small,thinking-machines,open_weights,vision,Inkling-Small,name,2026-11-25,1236.1352351250296,1228.3605144601675,1243.9099557898915,9178,76
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling Small,name,2026-08-19,1402.3485338896621,1391.5126799380148,1413.1843878413097,3638,63
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling Small,name,2026-08-21,1401.5560921317624,1390.927598162301,1412.1845861012239,3806,64
 inkling-small,Inkling-Small,thinking-machines,open_weights,webdev,Inkling Small,name,2026-08-30,1402.774508076895,1392.905248594004,1412.6437675597858,4529,67
@@ -38169,6 +38253,7 @@ kimi-k2-5,Kimi K2.5,moonshot,open_weights,vision,Kimi K2.5 (Thinking),name,2026-
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,vision,Kimi K2.5 (Thinking),name,2026-11-08,1268.7511654675138,1263.1449144093901,1274.3574165256377,28003,44
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,vision,Kimi K2.5 (Thinking),name,2026-11-09,1268.8509352618694,1263.2449716030208,1274.4568989207178,28014,44
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,vision,Kimi K2.5 (Thinking),name,2026-11-19,1269.318295326128,1263.7452648934886,1274.8913257587672,27947,45
+kimi-k2-5,Kimi K2.5,moonshot,open_weights,vision,Kimi K2.5 (Thinking),name,2026-11-25,1269.3249045430744,1263.7636658125098,1274.886143273639,27930,44
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,kimi-k2.5-thinking,name,2026-02-01,1446.863079941151,1430.9000486762134,1462.8261112060889,1488,4
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,kimi-k2.5-thinking,name,2026-02-06,1449.0057928880826,1435.3582852630009,1462.6533005131646,2123,5
 kimi-k2-5,Kimi K2.5,moonshot,open_weights,webdev,kimi-k2.5-thinking,name,2026-02-09,1446.419110461727,1433.9281996981128,1458.910021225341,2495,7
@@ -38415,6 +38500,7 @@ kimi-k2-6,Kimi K2.6,moonshot,open_weights,vision,Kimi K2.6,name,2026-11-06,1282.
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,vision,Kimi K2.6,name,2026-11-08,1282.4415057301483,1275.705344736311,1289.1776667239856,16255,34
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,vision,Kimi K2.6,name,2026-11-09,1282.4286534600185,1275.6924962564576,1289.1648106635794,16265,34
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,vision,Kimi K2.6,name,2026-11-19,1282.2996800428166,1275.5928001409839,1289.0065599446496,16241,35
+kimi-k2-6,Kimi K2.6,moonshot,open_weights,vision,Kimi K2.6,name,2026-11-25,1282.2479797961546,1275.5515617182973,1288.9443978740119,16226,35
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,kimi-k2.6,name,2026-04-22,1529.3193351782752,1511.3187632451736,1547.3199071113768,1232,6
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,kimi-k2.6,name,2026-04-23,1529.0513167733773,1512.1438894522616,1545.958744094493,1408,6
 kimi-k2-6,Kimi K2.6,moonshot,open_weights,webdev,kimi-k2.6,name,2026-04-27,1529.0466254949342,1513.6212291444108,1544.4720218454577,1699,6
@@ -42748,6 +42834,7 @@ llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,meta,open_weights,vi
 llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 11B Vision Instruct,name,2026-11-08,966.2605732022394,954.9082384623343,977.6129079421444,4817,157
 llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 11B Vision Instruct,name,2026-11-09,966.2799262051226,954.9267277034018,977.6331247068433,4817,157
 llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 11B Vision Instruct,name,2026-11-19,966.2942581069278,954.9226761652974,977.6658400485583,4817,158
+llama-3-2-11b-vision-instruct,Llama-3.2-11B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 11B Vision Instruct,name,2026-11-25,966.3353167051953,954.9656299547112,977.7050034556794,4817,160
 llama-3-2-1b-instruct,Llama 3.2 1B,meta,open_weights,text,llama-3.2-1b-instruct,name,2024-09-27,1060.6492740806043,1052.9395794478492,1068.735456430562,6024,87
 llama-3-2-1b-instruct,Llama 3.2 1B,meta,open_weights,text,llama-3.2-1b-instruct,name,2024-10-07,1053.6060519212872,1045.733774038682,1061.6012974621865,8699,91
 llama-3-2-1b-instruct,Llama 3.2 1B,meta,open_weights,text,llama-3.2-1b-instruct,name,2024-10-15,1053.8362545763744,1046.906941839467,1061.235499317962,8703,94
@@ -43537,6 +43624,7 @@ llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,meta,open_weights,vi
 llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 90B Vision Instruct,name,2026-11-08,999.5314679647638,990.2521604191378,1008.8107755103898,8682,149
 llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 90B Vision Instruct,name,2026-11-09,999.5484519953851,990.2682358453465,1008.8286681454236,8682,149
 llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 90B Vision Instruct,name,2026-11-19,999.5650198845942,990.2608861878693,1008.8691535813191,8682,150
+llama-3-2-90b-vision-instruct,Llama-3.2-90B-Vision-Instruct,meta,open_weights,vision,Llama 3.2 90B Vision Instruct,name,2026-11-25,999.6063238109987,990.3033604766428,1008.9092871453546,8682,152
 llama-3-3-70b-instruct,Llama 3.3 70B,meta,open_weights,text,llama-3.3-70b-instruct,name,2024-12-15,1255.9193087332956,1248.9290125566063,1263.5401974352362,7647,24
 llama-3-3-70b-instruct,Llama 3.3 70B,meta,open_weights,text,llama-3.3-70b-instruct,name,2024-12-18,1255.7816071727984,1249.4445782051075,1263.5297818250895,8089,24
 llama-3-3-70b-instruct,Llama 3.3 70B,meta,open_weights,text,llama-3.3-70b-instruct,name,2024-12-22,1256.2010617069654,1251.3747281270307,1261.4211577253734,8907,26
@@ -45198,6 +45286,7 @@ llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,o
 llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,open_weights,vision,Llama 4 Maverick 17B 128E Instruct,name,2026-11-08,1141.6412548013702,1132.589273938305,1150.6932356644354,6910,122
 llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,open_weights,vision,Llama 4 Maverick 17B 128E Instruct,name,2026-11-09,1141.5174885543734,1132.4652894428316,1150.569687665915,6912,122
 llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,open_weights,vision,Llama 4 Maverick 17B 128E Instruct,name,2026-11-19,1141.654542275462,1132.5987678529104,1150.7103166980135,6909,123
+llama-4-maverick-17b-128e-instruct,Llama-4-Maverick-17B-128E-Instruct-FP8,meta,open_weights,vision,Llama 4 Maverick 17B 128E Instruct,name,2026-11-25,1141.6495942342433,1132.5944154276729,1150.7047730408137,6907,125
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,text,llama-4-scout-17b-16e-instruct,name,2025-05-22,1239.4462434397237,1227.6767748943523,1250.1688693434212,3397,77
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,text,llama-4-scout-17b-16e-instruct,name,2025-06-24,1271.063069990893,1264.9918222348745,1281.6093543694067,4998,72
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,text,llama-4-scout-17b-16e-instruct,name,2025-07-07,1277.4989646636727,1271.8216490156278,1283.1838197620536,7451,70
@@ -45559,6 +45648,7 @@ llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,vision,Llama 4 Scout 17B 16E Instruct,name,2026-11-08,1118.5081735679817,1109.0592575482706,1127.9570895876927,6433,129
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,vision,Llama 4 Scout 17B 16E Instruct,name,2026-11-09,1118.3796288518733,1108.9299142863047,1127.829343417442,6431,129
 llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,vision,Llama 4 Scout 17B 16E Instruct,name,2026-11-19,1118.5127978515131,1109.060984252838,1127.9646114501884,6433,130
+llama-4-scout-17b-16e-instruct,Llama-4-Scout-17B-16E-Instruct,meta,open_weights,vision,Llama 4 Scout 17B 16E Instruct,name,2026-11-25,1118.5502763041573,1109.0997902896754,1128.0007623186389,6433,132
 longcat-flash-chat,LongCat-Flash,meituan,open_weights,text,longcat-flash-chat,name,2025-09-17,1417.8957093609636,1407.3561126419363,1428.4353060799904,3212,12
 longcat-flash-chat,LongCat-Flash,meituan,open_weights,text,longcat-flash-chat,name,2025-09-18,1420.6321193398735,1412.000016504903,1429.2642221748447,4937,9
 longcat-flash-chat,LongCat-Flash,meituan,open_weights,text,longcat-flash-chat,name,2025-09-30,1422.4798681995014,1415.525860878533,1429.43387552047,9343,9
@@ -46173,6 +46263,7 @@ mimo-v2-5,mimo-v2.5,xiaomi,open_weights,vision,MiMo-V2.5,name,2026-11-06,1247.82
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,vision,MiMo-V2.5,name,2026-11-08,1247.5087310248136,1241.743383100054,1253.2740789495733,29416,65
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,vision,MiMo-V2.5,name,2026-11-09,1247.513078273649,1241.7470478965836,1253.2791086507143,29427,65
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,vision,MiMo-V2.5,name,2026-11-19,1247.177289333396,1241.4511403669942,1252.9034382997977,29320,65
+mimo-v2-5,mimo-v2.5,xiaomi,open_weights,vision,MiMo-V2.5,name,2026-11-25,1247.169969591118,1241.4552902612709,1252.8846489209648,29278,66
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,mimo-v2.5,name,2026-04-28,1443.015946084723,1424.6990671147896,1461.3328250546565,1086,18
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,mimo-v2.5,name,2026-05-01,1443.5965521529654,1428.22705737859,1458.9660469273406,1570,18
 mimo-v2-5,mimo-v2.5,xiaomi,open_weights,webdev,mimo-v2.5,name,2026-05-04,1445.5562984857784,1431.4117023892836,1459.7008945822733,1891,17
@@ -46471,6 +46562,7 @@ mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,vision,MiMo-V2.6-Flash,name,
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,vision,MiMo-V2.6-Flash,name,2026-11-08,1259.30827557375,1250.7921876301975,1267.8243635173026,6950,56
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,vision,MiMo-V2.6-Flash,name,2026-11-09,1259.559769384553,1251.0220830013736,1268.097455767732,6906,56
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,vision,MiMo-V2.6-Flash,name,2026-11-19,1257.5100114406273,1249.7543657951874,1265.265657086067,9656,57
+mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,vision,MiMo-V2.6-Flash,name,2026-11-25,1257.8926006755673,1250.377621978321,1265.4075793728139,10865,57
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,mimo-v2.6-flash,name,2026-10-06,1635.695954173836,1625.0818988866326,1646.3100094610395,3851,16
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,mimo-v2.6-flash,name,2026-10-08,1636.8087536674434,1626.4133336246573,1647.20417371023,4058,16
 mimo-v2-6-flash,mimo-v2.6-flash,xiaomi,open_weights,webdev,mimo-v2.6-flash,name,2026-10-13,1635.1146468101183,1625.2071296244737,1645.022163995763,4693,17
@@ -46532,6 +46624,7 @@ mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,vision,MiMo-V2.6-Pro,name,2026-1
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,vision,MiMo-V2.6-Pro,name,2026-11-08,1265.6232538638947,1251.098082956108,1280.1484247716812,1827,48
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,vision,MiMo-V2.6-Pro,name,2026-11-09,1265.8849206588607,1251.3572000405088,1280.4126412772123,1826,47
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,vision,MiMo-V2.6-Pro,name,2026-11-19,1266.0135455031254,1251.4506152896392,1280.5764757166116,1812,48
+mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,vision,MiMo-V2.6-Pro,name,2026-11-25,1265.4847474729388,1250.8807593950237,1280.0887355508542,1802,49
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,mimo-v2.6-pro,name,2026-09-24,1619.3987956323829,1605.7663979656334,1633.0311932991324,2156,19
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,mimo-v2.6-pro,name,2026-09-25,1618.0515859954373,1605.510538901289,1630.592633089586,2591,19
 mimo-v2-6-pro,mimo-v2.6-pro,xiaomi,open_weights,webdev,mimo-v2.6-pro,name,2026-09-29,1618.414141954418,1606.1785518256106,1630.6497320832254,2738,21
@@ -46961,6 +47054,7 @@ mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,vision,MiMo-V2-Omni,name,2026-11-0
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,vision,MiMo-V2-Omni,name,2026-11-08,1228.0328918474409,1220.7478342795157,1235.3179494153658,10598,82
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,vision,MiMo-V2-Omni,name,2026-11-09,1227.988740724967,1220.7029616073576,1235.2745198425764,10599,82
 mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,vision,MiMo-V2-Omni,name,2026-11-19,1227.8979554011653,1220.6372106972406,1235.15870010509,10573,83
+mimo-v2-omni,MiMo-V2-Omni,xiaomi,open_weights,vision,MiMo-V2-Omni,name,2026-11-25,1227.8256887677219,1220.570327303422,1235.081050232022,10566,84
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,text,mimo-v2-pro,name,2026-03-20,1429.747905932281,1420.024704366033,1439.471107498529,3531,33
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,text,mimo-v2-pro,name,2026-03-26,1430.5680876161491,1422.102317890876,1439.0338573414224,4794,33
 mimo-v2-pro,MiMo-V2-Pro,xiaomi,api_only,text,mimo-v2-pro,name,2026-03-31,1429.1344853495566,1421.5369799187577,1436.7319907803558,6255,35
@@ -47326,6 +47420,7 @@ minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,MiniCPM-V 2.6,name,2026-
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,MiniCPM-V 2.6,name,2026-11-08,911.5007021265193,895.5156684639152,927.4857357891234,1987,165
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,MiniCPM-V 2.6,name,2026-11-09,911.5187680725438,895.532956780158,927.5045793649298,1987,165
 minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,MiniCPM-V 2.6,name,2026-11-19,911.5340694899685,895.5395094262517,927.5286295536853,1987,166
+minicpm-v-2-6,MiniCPM-V-2_6,openbmb,open_weights,vision,MiniCPM-V 2.6,name,2026-11-25,911.5749632561804,895.5845233734854,927.5654031388754,1987,168
 minimax-m1,MiniMax-M1,minimax,open_weights,text,minimax-m1,name,2025-06-24,1373.383076581067,1365.135273611975,1382.7925682188554,3895,13
 minimax-m1,MiniMax-M1,minimax,open_weights,text,minimax-m1,name,2025-07-01,1373.6655822857776,1365.7060334056573,1381.4152738148814,6117,13
 minimax-m1,MiniMax-M1,minimax,open_weights,text,minimax-m1,name,2025-07-07,1376.3605910837139,1370.7338606159014,1382.836393176251,8058,12
@@ -48545,6 +48640,7 @@ minimax-m3,MiniMax-M3,minimax,open_weights,vision,MiniMax-M3,name,2026-11-06,124
 minimax-m3,MiniMax-M3,minimax,open_weights,vision,MiniMax-M3,name,2026-11-08,1248.9155673392972,1242.7197045376674,1255.111430140927,21151,63
 minimax-m3,MiniMax-M3,minimax,open_weights,vision,MiniMax-M3,name,2026-11-09,1249.1551057128574,1242.959894347019,1255.3503170786962,21159,62
 minimax-m3,MiniMax-M3,minimax,open_weights,vision,MiniMax-M3,name,2026-11-19,1248.402688785522,1242.239037686178,1254.566339884866,21034,63
+minimax-m3,MiniMax-M3,minimax,open_weights,vision,MiniMax-M3,name,2026-11-25,1248.4418013736254,1242.2894370376252,1254.5941657096255,21024,64
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,minimax-m3,name,2026-06-03,1531.2146914466136,1514.155977389292,1548.2734055039355,1398,9
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,minimax-m3,name,2026-06-05,1527.753177458292,1512.101863383372,1543.4044915332117,1680,9
 minimax-m3,MiniMax-M3,minimax,open_weights,webdev,minimax-m3,name,2026-06-10,1521.467817250563,1507.6778762313472,1535.257758269779,2148,11
@@ -49701,6 +49797,7 @@ mistral-large-3,Mistral Large 3,mistral,open_weights,vision,Mistral Large 3,name
 mistral-large-3,Mistral Large 3,mistral,open_weights,vision,Mistral Large 3,name,2026-11-08,1221.865912513916,1214.3354751222705,1229.3963499055615,10135,84
 mistral-large-3,Mistral Large 3,mistral,open_weights,vision,Mistral Large 3,name,2026-11-09,1221.7868900962435,1214.2571053275105,1229.3166748649762,10142,84
 mistral-large-3,Mistral Large 3,mistral,open_weights,vision,Mistral Large 3,name,2026-11-19,1222.1782334005864,1214.6622032848875,1229.6942635162852,10071,85
+mistral-large-3,Mistral Large 3,mistral,open_weights,vision,Mistral Large 3,name,2026-11-25,1221.4946026829728,1213.9867290786697,1229.002476287276,10064,86
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,mistral-large-3,name,2025-12-11,1226.6345631576933,1206.8255547244603,1246.4435715909262,1023,21
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,mistral-large-3,name,2025-12-16,1225.747491589866,1205.7760501184498,1245.7189330612823,1025,24
 mistral-large-3,Mistral Large 3,mistral,open_weights,webdev,mistral-large-3,name,2025-12-22,1225.1367332883806,1205.234832102623,1245.0386344741382,1027,25
@@ -49838,6 +49935,7 @@ mistral-large-4,Mistral Large 4,mistral,api_only,vision,Mistral Large 4,name,202
 mistral-large-4,Mistral Large 4,mistral,api_only,vision,Mistral Large 4,name,2026-11-08,1242.6498146353417,1228.7719428074838,1256.5276864631999,2153,71
 mistral-large-4,Mistral Large 4,mistral,api_only,vision,Mistral Large 4,name,2026-11-09,1244.0002941431524,1229.94811403726,1258.0524742490445,2093,70
 mistral-large-4,Mistral Large 4,mistral,api_only,vision,Mistral Large 4,name,2026-11-19,1246.0792452302692,1234.7765184357709,1257.3819720247675,3699,68
+mistral-large-4,Mistral Large 4,mistral,api_only,vision,Mistral Large 4,name,2026-11-25,1245.4135690995158,1234.8557879884986,1255.971350210533,4410,69
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,mistral-large-4,name,2026-10-08,1541.3401178687932,1524.914061370027,1557.7661743675596,1478,42
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,mistral-large-4,name,2026-10-13,1542.3112524659052,1528.5144091255484,1556.1080958062623,2194,42
 mistral-large-4,Mistral Large 4,mistral,api_only,webdev,Mistral Large 4,name,2026-10-16,1542.109362234004,1529.2009256427496,1555.0177988252585,2536,43
@@ -50331,6 +50429,7 @@ mistral-medium-3,Mistral Medium 3,mistral,api_only,vision,Mistral Medium 3 (2505
 mistral-medium-3,Mistral Medium 3,mistral,api_only,vision,Mistral Medium 3 (2505),name_one_snapshot,2026-11-08,1156.7163808624855,1148.4586334058836,1164.9741283190874,10773,117
 mistral-medium-3,Mistral Medium 3,mistral,api_only,vision,Mistral Medium 3 (2505),name_one_snapshot,2026-11-09,1156.6979726728089,1148.439781379656,1164.9561639659614,10773,117
 mistral-medium-3,Mistral Medium 3,mistral,api_only,vision,Mistral Medium 3 (2505),name_one_snapshot,2026-11-19,1156.766233069698,1148.5014132826927,1165.0310528567036,10769,118
+mistral-medium-3,Mistral Medium 3,mistral,api_only,vision,Mistral Medium 3 (2505),name_one_snapshot,2026-11-25,1156.8166935430027,1148.5530501774058,1165.0803369085993,10767,120
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,text,Mistral Medium 3.1 (2508),name_one_snapshot,2026-10-20,1424.220255518691,1421.6571201775575,1426.7833908598243,95291,108
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,text,Mistral Medium 3.1 (2508),name_one_snapshot,2026-10-22,1424.249408341445,1421.6866452078107,1426.8121714750787,95285,108
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,text,Mistral Medium 3.1 (2508),name_one_snapshot,2026-10-28,1424.2158968944336,1421.6533559581035,1426.7784378307638,95269,109
@@ -50356,6 +50455,7 @@ mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,vision,Mistral Medium 3.1
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,vision,Mistral Medium 3.1 (2508),name_one_snapshot,2026-11-08,1172.387540167594,1166.242849709275,1178.5322306259127,41519,109
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,vision,Mistral Medium 3.1 (2508),name_one_snapshot,2026-11-09,1172.3432809843932,1166.1972858746697,1178.4892760941166,41518,109
 mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,vision,Mistral Medium 3.1 (2508),name_one_snapshot,2026-11-19,1172.2868616980174,1166.1488004861426,1178.424922909892,41496,110
+mistral-medium-3-1,Mistral Medium 3.1,mistral,api_only,vision,Mistral Medium 3.1 (2508),name_one_snapshot,2026-11-25,1172.3768241435928,1166.2414121510149,1178.5122361361707,41482,112
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,text,mistral-medium-3.5,name,2026-06-03,1417.7398378189332,1409.5177722119001,1425.9619034259663,5751,83
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,text,mistral-medium-3.5,name,2026-06-04,1416.9311674502935,1408.8839993417675,1424.9783355588195,6089,86
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,text,mistral-medium-3.5,name,2026-06-05,1417.7303913507442,1409.8431984342071,1425.6175842672812,6412,82
@@ -50468,6 +50568,7 @@ mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,vision,Mistral Medium
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,vision,Mistral Medium 3.5,name,2026-11-08,1222.7145002594198,1213.2382886843295,1232.1907118345098,5331,83
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,vision,Mistral Medium 3.5,name,2026-11-09,1222.412401133071,1212.933943343751,1231.8908589223909,5330,83
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,vision,Mistral Medium 3.5,name,2026-11-19,1222.2279789434658,1212.7765459829561,1231.6794119039755,5327,84
+mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,vision,Mistral Medium 3.5,name,2026-11-25,1222.0829225458626,1212.6326981363025,1231.533146955423,5311,85
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,mistral-medium-3.5,name,2026-06-03,1269.944805890953,1247.1877738290686,1292.7018379528372,888,69
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,mistral-medium-3.5,name,2026-06-05,1268.644656400597,1249.3984332245154,1287.8908795766788,1260,69
 mistral-medium-3-5,Mistral Medium 3.5,mistral,open_weights,webdev,mistral-medium-3.5,name,2026-06-10,1267.778500983581,1251.4005269782047,1284.1564749889574,1775,70
@@ -50891,6 +50992,7 @@ mistral-small-3-1-24b-instruct,mistral-small-3.1-24b-instruct,mistral,open_weigh
 mistral-small-3-1-24b-instruct,mistral-small-3.1-24b-instruct,mistral,open_weights,vision,Mistral Small 3.1 24B Instruct (2503),name_one_snapshot,2026-11-08,1136.1203382550136,1127.6538736646153,1144.5868028454117,28452,125
 mistral-small-3-1-24b-instruct,mistral-small-3.1-24b-instruct,mistral,open_weights,vision,Mistral Small 3.1 24B Instruct (2503),name_one_snapshot,2026-11-09,1136.0992840176084,1127.6324595957221,1144.5661084394949,28452,125
 mistral-small-3-1-24b-instruct,mistral-small-3.1-24b-instruct,mistral,open_weights,vision,Mistral Small 3.1 24B Instruct (2503),name_one_snapshot,2026-11-19,1136.1851200769893,1127.7160395665437,1144.654200587435,28440,126
+mistral-small-3-1-24b-instruct,mistral-small-3.1-24b-instruct,mistral,open_weights,vision,Mistral Small 3.1 24B Instruct (2503),name_one_snapshot,2026-11-25,1136.2160059949863,1127.7484675011326,1144.68354448884,28439,128
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,text,Mistral Small 3.2 (2506),name_one_snapshot,2026-10-20,1338.2266889521263,1333.0383634032798,1343.4150145009726,17459,218
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,text,Mistral Small 3.2 (2506),name_one_snapshot,2026-10-22,1337.8978472689107,1332.708898884055,1343.0867956537663,17454,220
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,text,Mistral Small 3.2 (2506),name_one_snapshot,2026-10-28,1338.0473975859254,1332.8586486225336,1343.2361465493173,17462,221
@@ -50916,6 +51018,7 @@ mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,vision,Mistral Small 3.
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,vision,Mistral Small 3.2 (2506),name_one_snapshot,2026-11-08,1141.7695873402793,1132.7067818790563,1150.832392801502,10824,121
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,vision,Mistral Small 3.2 (2506),name_one_snapshot,2026-11-09,1141.6010135749586,1132.536271859721,1150.6657552901963,10825,121
 mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,vision,Mistral Small 3.2 (2506),name_one_snapshot,2026-11-19,1142.062631905983,1132.9896116485886,1151.1356521633772,10814,122
+mistral-small-3-2,Mistral Small 3.2,mistral,open_weights,vision,Mistral Small 3.2 (2506),name_one_snapshot,2026-11-25,1142.0308901929243,1132.9604607164772,1151.1013196693714,10811,124
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,molmo-72b-0924,name_one_snapshot,2024-11-04,1077.6118014316835,1063.3834984507605,1092.4814233900192,2054,12
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,molmo-72b-0924,name_one_snapshot,2024-11-12,1076.441179291934,1064.094382809745,1086.1824045477024,2560,12
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,molmo-72b-0924,name_one_snapshot,2024-11-13,1076.6379290572115,1062.4179232463002,1088.220078490606,2619,12
@@ -51047,6 +51150,7 @@ molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,Molmo 72B (0924),name_one_s
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,Molmo 72B (0924),name_one_snapshot,2026-11-08,1012.1793083593421,999.0654772423808,1025.2931394763034,3048,145
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,Molmo 72B (0924),name_one_snapshot,2026-11-09,1012.200093739395,999.0854678504764,1025.3147196283135,3048,145
 molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,Molmo 72B (0924),name_one_snapshot,2026-11-19,1012.2132593076931,999.0834516467244,1025.343066968662,3048,146
+molmo-72b,Molmo-72B-0924,allenai,open_weights,vision,Molmo 72B (0924),name_one_snapshot,2026-11-25,1012.2543791530591,999.1264917136507,1025.3822665924677,3048,148
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,molmo-7b-d-0924,name_one_snapshot,2024-11-04,1020.42964479426,1004.8205834739725,1033.6527194251805,1810,22
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,molmo-7b-d-0924,name_one_snapshot,2024-11-12,1023.478367620214,1006.0088233486135,1034.5838955268375,2293,22
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,molmo-7b-d-0924,name_one_snapshot,2024-11-13,1023.2732570191278,1010.0241681342671,1036.6410088331115,2359,22
@@ -51178,6 +51282,7 @@ molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,Molmo 7B-D (0924),name_on
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,Molmo 7B-D (0924),name_one_snapshot,2026-11-08,958.5821358457998,944.7593207108687,972.404950980731,2815,158
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,Molmo 7B-D (0924),name_one_snapshot,2026-11-09,958.6029020961012,944.7793137052855,972.4264904869168,2815,158
 molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,Molmo 7B-D (0924),name_one_snapshot,2026-11-19,958.6160676375196,944.7784080539261,972.453727221113,2815,159
+molmo-7b-d,Molmo-7B-D-0924,allenai,open_weights,vision,Molmo 7B-D (0924),name_one_snapshot,2026-11-25,958.6572077995876,944.8215605851651,972.49285501401,2815,161
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-09,1608.1469077901104,1591.3217996622184,1624.9720159180026,1345,34
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-10,1608.5969820140517,1591.7658716456338,1625.4280923824697,1337,36
 muse-ember,muse-ember,meta,api_only,webdev,Muse Ember (Max),name,2026-11-11,1608.7542785259513,1591.935811276848,1625.5727457750547,1339,37
@@ -51278,6 +51383,7 @@ muse-spark-1-1,Muse Spark 1.1,meta,api_only,vision,Muse Spark 1.1,name,2026-11-0
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,vision,Muse Spark 1.1,name,2026-11-08,1291.5807369465062,1284.7943995035077,1298.3670743895048,13412,27
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,vision,Muse Spark 1.1,name,2026-11-09,1291.7308677513302,1284.9459510925806,1298.5157844100797,13413,26
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,vision,Muse Spark 1.1,name,2026-11-19,1291.073634518643,1284.3088127074743,1297.8384563298118,13311,28
+muse-spark-1-1,Muse Spark 1.1,meta,api_only,vision,Muse Spark 1.1,name,2026-11-25,1290.8693404067637,1284.1125847928208,1297.6260960207064,13298,28
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,muse-spark-1.1,name,2026-07-10,1539.951593876261,1522.9431068853496,1556.9600808671728,1342,10
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,muse-spark-1.1,name,2026-07-12,1535.8098285216383,1520.6858247247194,1550.9338323185575,1684,10
 muse-spark-1-1,Muse Spark 1.1,meta,api_only,webdev,muse-spark-1.1,name,2026-07-16,1538.1127371091582,1524.4827170400285,1551.7427571782878,2083,11
@@ -51399,6 +51505,7 @@ muse-spark-1-2,Muse Spark 1.2,meta,api_only,vision,Muse Spark 1.2 (xHigh),name,2
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,vision,Muse Spark 1.2 (xHigh),name,2026-11-08,1304.9866571392165,1290.6130172513992,1319.3602970270335,1929,16
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,vision,Muse Spark 1.2 (xHigh),name,2026-11-09,1304.9300308218815,1290.561224417088,1319.2988372266748,1930,16
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,vision,Muse Spark 1.2 (xHigh),name,2026-11-19,1304.1736959826903,1289.8000661523986,1318.547325812982,1922,18
+muse-spark-1-2,Muse Spark 1.2,meta,api_only,vision,Muse Spark 1.2 (xHigh),name,2026-11-25,1303.9584316284586,1289.5903436704994,1318.326519586418,1921,18
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,muse-spark-1.2 (xHigh),name,2026-08-06,1544.0692650039628,1526.4129902683485,1561.725539739577,1317,14
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,muse-spark-1.2 (xHigh),name,2026-08-10,1535.409542305023,1521.3400509404237,1549.4790336696221,2053,19
 muse-spark-1-2,Muse Spark 1.2,meta,api_only,webdev,muse-spark-1.2 (xHigh),name,2026-08-11,1534.8847140963835,1520.8262157502668,1548.9432124425007,2056,19
@@ -51490,6 +51597,8 @@ muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (Max),name,202
 muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (xHigh),name,2026-11-09,1300.8043533030595,1292.6019523784441,1309.006754227675,7522,18
 muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (Max),name,2026-11-19,1306.216975731572,1298.6813988517686,1313.7525526113754,9287,14
 muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (xHigh),name,2026-11-19,1300.4092435960597,1292.926951175105,1307.8915360170145,9809,20
+muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (Max),name,2026-11-25,1304.999862584843,1297.6510310214132,1312.3486941482724,10036,16
+muse-spark-1-3,muse-spark-1.3,meta,api_only,vision,Muse Spark 1.3 (xHigh),name,2026-11-25,1302.6151888238724,1295.361911234698,1309.8684664130467,10812,19
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,muse-spark-1.3 (xHigh),name,2026-09-04,1618.4149859813133,1599.138584576556,1637.6913873860706,1128,11
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,muse-spark-1.3 (xHigh),name,2026-09-05,1622.478323192865,1604.2512424795127,1640.7054039062168,1274,11
 muse-spark-1-3,muse-spark-1.3,meta,api_only,webdev,muse-spark-1.3 (xHigh),name,2026-09-08,1625.141894604484,1608.5771360260246,1641.7066531829432,1545,11
@@ -53936,6 +54045,7 @@ o4-mini,o4-mini,openai,api_only,vision,o4-mini (2025-04-16),name_one_snapshot,20
 o4-mini,o4-mini,openai,api_only,vision,o4-mini (2025-04-16),name_one_snapshot,2026-11-08,1193.9052352535002,1186.8436665275692,1200.9668039794315,41278,98
 o4-mini,o4-mini,openai,api_only,vision,o4-mini (2025-04-16),name_one_snapshot,2026-11-09,1193.9609010956033,1186.8981499193112,1201.0236522718953,41276,98
 o4-mini,o4-mini,openai,api_only,vision,o4-mini (2025-04-16),name_one_snapshot,2026-11-19,1193.8639023450096,1186.7973338075858,1200.9304708824332,41255,99
+o4-mini,o4-mini,openai,api_only,vision,o4-mini (2025-04-16),name_one_snapshot,2026-11-25,1193.929746434198,1186.8643290803216,1200.9951637880743,41243,100
 olmo-2-0325-32b-instruct,OLMo-2-0325-32B-Instruct,allenai,open_weights,text,olmo-2-0325-32b-instruct,name,2025-05-05,1204.8110600102618,1192.1708458157823,1215.0435688353502,2775,88
 olmo-2-0325-32b-instruct,OLMo-2-0325-32B-Instruct,allenai,open_weights,text,olmo-2-0325-32b-instruct,name,2025-05-06,1204.6084925381324,1192.315711601207,1214.1563046635515,2777,88
 olmo-2-0325-32b-instruct,OLMo-2-0325-32B-Instruct,allenai,open_weights,text,olmo-2-0325-32b-instruct,name,2025-05-11,1205.8510630983287,1196.7891004543292,1214.3636075335687,3183,87
@@ -55250,6 +55360,7 @@ openai-o1,o1,openai,api_only,vision,o1 (2024-12-17),name_one_snapshot,2026-11-06
 openai-o1,o1,openai,api_only,vision,o1 (2024-12-17),name_one_snapshot,2026-11-08,1168.2459564812955,1157.4501071478444,1179.0418058147463,3694,111
 openai-o1,o1,openai,api_only,vision,o1 (2024-12-17),name_one_snapshot,2026-11-09,1168.2527791062564,1157.4565110782632,1179.0490471342498,3694,111
 openai-o1,o1,openai,api_only,vision,o1 (2024-12-17),name_one_snapshot,2026-11-19,1168.27509069138,1157.4604491088032,1179.0897322739568,3694,112
+openai-o1,o1,openai,api_only,vision,o1 (2024-12-17),name_one_snapshot,2026-11-25,1168.3144866863545,1157.4991779921986,1179.1297953805101,3694,114
 openai-o3,o3,openai,api_only,text,o3-2025-04-16,name_one_snapshot,2025-04-23,1418.0693857752522,1409.3261170349447,1431.5866884974155,2211,1
 openai-o3,o3,openai,api_only,text,o3-2025-04-16,name_one_snapshot,2025-05-05,1411.0797260058494,1403.4832248179855,1419.5214131965881,5714,1
 openai-o3,o3,openai,api_only,text,o3-2025-04-16,name_one_snapshot,2025-05-06,1410.9575952540445,1403.4773883214646,1421.7323369262356,5844,1
@@ -55639,6 +55750,7 @@ openai-o3,o3,openai,api_only,vision,o3 (2025-04-16),name_one_snapshot,2026-11-06
 openai-o3,o3,openai,api_only,vision,o3 (2025-04-16),name_one_snapshot,2026-11-08,1213.6513616478887,1207.1173991950632,1220.185324100714,45506,86
 openai-o3,o3,openai,api_only,vision,o3 (2025-04-16),name_one_snapshot,2026-11-09,1213.7373377652327,1207.2035608884682,1220.2711146419972,45507,86
 openai-o3,o3,openai,api_only,vision,o3 (2025-04-16),name_one_snapshot,2026-11-19,1213.9564274759277,1207.4151995617572,1220.4976553900983,45482,86
+openai-o3,o3,openai,api_only,vision,o3 (2025-04-16),name_one_snapshot,2026-11-25,1214.0282141532068,1207.4880380838295,1220.568390222584,45479,87
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,phi-3.5-vision-instruct,name,2024-09-04,908.4818366443177,898.0007528785086,922.4315004272534,1964,17
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,phi-3.5-vision-instruct,name,2024-09-15,917.2338409204609,907.8256708858255,928.7885013493462,2555,19
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,phi-3.5-vision-instruct,name,2024-09-17,915.7242134046146,905.4623081968284,926.4864097311256,2656,19
@@ -55778,6 +55890,7 @@ phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,Ph
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,Phi-3.5 Vision Instruct,name,2026-11-08,851.3476394725807,835.5582105217899,867.1370684233713,2592,166
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,Phi-3.5 Vision Instruct,name,2026-11-09,851.3658179964124,835.5756236834442,867.1560123093806,2592,166
 phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,Phi-3.5 Vision Instruct,name,2026-11-19,851.3811189566829,835.5813421803284,867.1808957330375,2592,167
+phi-3-5-vision-instruct,Phi-3.5-vision-instruct,microsoft,open_weights,vision,Phi-3.5 Vision Instruct,name,2026-11-25,851.422129016754,835.6261609717205,867.2180970617874,2592,169
 phi-3-mini-128k-instruct,Phi-3-mini-128k-instruct,microsoft,open_weights,text,phi-3-mini-128k-instruct,name,2024-04-26,1064.4181228020548,1057.2865226453148,1070.9967954431445,6593,46
 phi-3-mini-128k-instruct,Phi-3-mini-128k-instruct,microsoft,open_weights,text,phi-3-mini-128k-instruct,name,2024-05-01,1050.1481252382014,1045.1351012783964,1054.3292514081368,19804,50
 phi-3-mini-128k-instruct,Phi-3-mini-128k-instruct,microsoft,open_weights,text,phi-3-mini-128k-instruct,name,2024-05-08,1052.0241477202678,1047.5713252963646,1055.6661179910657,22401,51
@@ -56777,6 +56890,7 @@ phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,microsoft,open_weights,vis
 phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,microsoft,open_weights,vision,Phi-3 Vision 128K Instruct,name,2026-11-08,811.6008212038566,792.8873429197145,830.3142994879987,1401,167
 phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,microsoft,open_weights,vision,Phi-3 Vision 128K Instruct,name,2026-11-09,811.6189886481824,792.9047129484526,830.3332643479124,1401,167
 phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,microsoft,open_weights,vision,Phi-3 Vision 128K Instruct,name,2026-11-19,811.6342923701716,792.9161258956537,830.3524588446896,1401,168
+phi-3-vision-128k-instruct,Phi-3-vision-128k-instruct,microsoft,open_weights,vision,Phi-3 Vision 128K Instruct,name,2026-11-25,811.6752440813375,792.9626546402276,830.3878335224473,1401,170
 phi-4,Phi-4,microsoft,open_weights,text,phi-4,name,2025-01-19,1209.5645729687135,1199.511843285549,1218.8309698258686,2485,50
 phi-4,Phi-4,microsoft,open_weights,text,phi-4,name,2025-01-21,1210.1980880530336,1200.0482320413112,1219.3772913830985,3077,50
 phi-4,Phi-4,microsoft,open_weights,text,phi-4,name,2025-01-22,1210.1980880530336,1200.0482320413112,1219.3772913830985,3077,50
@@ -57134,6 +57248,7 @@ pixtral-12b,Pixtral 12B,mistral,open_weights,vision,Pixtral 12B (2409),name_one_
 pixtral-12b,Pixtral 12B,mistral,open_weights,vision,Pixtral 12B (2409),name_one_snapshot,2026-11-08,1008.4477855829213,998.8633432426534,1018.0322279231891,7511,146
 pixtral-12b,Pixtral 12B,mistral,open_weights,vision,Pixtral 12B (2409),name_one_snapshot,2026-11-09,1008.4646382824977,998.879333080132,1018.0499434848635,7511,146
 pixtral-12b,Pixtral 12B,mistral,open_weights,vision,Pixtral 12B (2409),name_one_snapshot,2026-11-19,1008.4813132157003,998.8726810223868,1018.0899454090138,7511,147
+pixtral-12b,Pixtral 12B,mistral,open_weights,vision,Pixtral 12B (2409),name_one_snapshot,2026-11-25,1008.5226933605132,998.9151006512068,1018.1302860698198,7511,149
 qwen-plus,Qwen Plus,alibaba,api_only,text,qwen-plus-0125,name_one_snapshot,2025-02-14,1315.9952148591346,1306.3062374048982,1324.4693939961721,2960,7
 qwen-plus,Qwen Plus,alibaba,api_only,text,qwen-plus-0125,name_one_snapshot,2025-02-17,1313.3909707502607,1303.627218045746,1321.3866198197543,3682,7
 qwen-plus,Qwen Plus,alibaba,api_only,text,qwen-plus-0125,name_one_snapshot,2025-02-21,1310.8929489136733,1303.489135114197,1319.3980642878607,5112,8
@@ -58342,6 +58457,7 @@ qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,open_weights,vision,Qwen2.5-VL-72
 qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,open_weights,vision,Qwen2.5-VL-72B-Instruct,name,2026-11-08,1107.2612671183815,1096.3657070395063,1118.1568271972567,3768,130
 qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,open_weights,vision,Qwen2.5-VL-72B-Instruct,name,2026-11-09,1107.2693105461183,1096.3732656365232,1118.1653554557136,3768,130
 qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,open_weights,vision,Qwen2.5-VL-72B-Instruct,name,2026-11-19,1107.293433647927,1096.3780016659393,1118.208865629915,3768,131
+qwen2-5-vl-72b-instruct,Qwen2.5-VL-72B,alibaba,open_weights,vision,Qwen2.5-VL-72B-Instruct,name,2026-11-25,1107.3335105547028,1096.417497632153,1118.2495234772528,3768,133
 qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,text,qwen3-235b-a22b,name,2025-05-05,1342.4403878660764,1333.2720463872536,1352.4268424285565,2680,11
 qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,text,qwen3-235b-a22b,name,2025-05-06,1341.9875959731226,1333.065269830605,1353.1647533655985,2805,11
 qwen3-235b-a22b,Qwen3 235B-A22B,alibaba,open_weights,text,qwen3-235b-a22b,name,2025-05-11,1342.7855224111065,1333.6200742370272,1353.9092258359628,3611,12
@@ -59902,6 +60018,7 @@ qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,vision,Qwen3.5-122B-A10
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,vision,Qwen3.5-122B-A10B,name,2026-11-08,1244.2501792372473,1237.5347732230691,1250.9655852514252,13170,69
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,vision,Qwen3.5-122B-A10B,name,2026-11-09,1244.2201362239553,1237.5043547295963,1250.9359177183142,13171,69
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,vision,Qwen3.5-122B-A10B,name,2026-11-19,1243.9942981525855,1237.3095597457366,1250.6790365594343,13158,71
+qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,vision,Qwen3.5-122B-A10B,name,2026-11-25,1243.8643069284203,1237.1889897665062,1250.5396240903342,13148,71
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,qwen3.5-122b-a10b,name,2026-03-03,1381.9648313577536,1366.3472575676708,1397.5824051478364,1596,24
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,qwen3.5-122b-a10b,name,2026-03-04,1384.1034649731596,1368.855703459606,1399.351226486713,1675,24
 qwen3-5-122b-a10b,Qwen3.5-122B-A10B,alibaba,open_weights,webdev,qwen3.5-122b-a10b,name,2026-03-12,1378.9779387894405,1365.7549281769875,1392.2009494018937,2251,26
@@ -60183,6 +60300,7 @@ qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,vision,Qwen3.5-27B,name,2026-11-06,
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,vision,Qwen3.5-27B,name,2026-11-08,1239.5226615848417,1234.1508359595407,1244.8944872101429,31293,73
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,vision,Qwen3.5-27B,name,2026-11-09,1239.6375116994125,1234.2652781463016,1245.0097452525233,31308,73
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,vision,Qwen3.5-27B,name,2026-11-19,1239.328983569915,1233.9920628117634,1244.6659043280663,31190,74
+qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,vision,Qwen3.5-27B,name,2026-11-25,1239.1886927373282,1233.8622486816462,1244.5151367930102,31162,74
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,qwen3.5-27b,name,2026-03-03,1378.4566104583862,1362.4760535548462,1394.4371673619262,1514,25
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,qwen3.5-27b,name,2026-03-04,1375.4881281222422,1359.859339986653,1391.116916257832,1593,25
 qwen3-5-27b,Qwen3.5-27B,alibaba,open_weights,webdev,qwen3.5-27b,name,2026-03-12,1366.644638026214,1352.9039534130227,1380.3853226394056,2105,28
@@ -60724,6 +60842,7 @@ qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,vision,Qwen3.5-397B-A17
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,vision,Qwen3.5-397B-A17B,name,2026-11-08,1262.3454055347972,1257.1628154302948,1267.5279956392997,33591,54
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,vision,Qwen3.5-397B-A17B,name,2026-11-09,1262.3718419808017,1257.188463234548,1267.5552207270557,33611,54
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,vision,Qwen3.5-397B-A17B,name,2026-11-19,1262.169136447027,1257.026709807913,1267.3115630861412,33471,54
+qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,vision,Qwen3.5-397B-A17B,name,2026-11-25,1262.041095568571,1256.9113270110922,1267.1708641260502,33444,54
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,qwen3.5-397b-a17b,name,2026-02-24,1395.67658746758,1383.1679058973837,1408.1852690377764,2388,16
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,qwen3.5-397b-a17b,name,2026-02-26,1395.4979200133598,1383.1606206982135,1407.8352193285064,2473,16
 qwen3-5-397b-a17b,Qwen3.5 397B-A17B,alibaba,open_weights,webdev,qwen3.5-397b-a17b,name,2026-03-03,1396.3745270840102,1385.11400275448,1407.6350514135406,3087,17
@@ -61355,6 +61474,7 @@ qwen3-7-plus,qwen3.7-plus,alibaba,api_only,vision,Qwen3.7-Plus,name,2026-11-06,1
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,vision,Qwen3.7-Plus,name,2026-11-08,1277.099131983012,1270.5836775472876,1283.6145864187365,15141,39
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,vision,Qwen3.7-Plus,name,2026-11-09,1277.2546370300752,1270.737845939691,1283.7714281204594,15152,39
 qwen3-7-plus,qwen3.7-plus,alibaba,api_only,vision,Qwen3.7-Plus,name,2026-11-19,1277.2549907287748,1270.7720093088321,1283.7379721487173,15084,39
+qwen3-7-plus,qwen3.7-plus,alibaba,api_only,vision,Qwen3.7-Plus,name,2026-11-25,1276.8703409017253,1270.3983250747367,1283.3423567287139,15067,39
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,text,qwen3.8-27b,name,2026-08-21,1440.7741507579944,1430.3159074617424,1451.2323940542462,3205,61
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,text,qwen3.8-27b,name,2026-08-27,1436.9603617030184,1428.4263605883282,1445.4943628177086,5046,73
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,text,qwen3.8-27b,name,2026-09-01,1437.352948519007,1429.7161849947474,1444.9897120432665,6626,69
@@ -61410,6 +61530,7 @@ qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,vision,Qwen3.8-27B,name,2026-11-06,
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,vision,Qwen3.8-27B,name,2026-11-08,1270.7642034700993,1263.2543128628936,1278.274094077305,9682,42
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,vision,Qwen3.8-27B,name,2026-11-09,1269.6178149192242,1262.0852884614721,1277.1503413769763,9632,42
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,vision,Qwen3.8-27B,name,2026-11-19,1270.9774641620807,1263.8674628410188,1278.0874654831428,10910,43
+qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,vision,Qwen3.8-27B,name,2026-11-25,1273.6418398011888,1266.6730333962485,1280.610646206129,11516,42
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,qwen3.8-27b,name,2026-08-21,1594.7775370883076,1581.6995283838012,1607.8555457928137,2464,9
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,qwen3.8-27b,name,2026-08-30,1598.2894271524312,1586.6654744684422,1609.91337983642,3163,12
 qwen3-8-27b,qwen3.8-27b,alibaba,open_weights,webdev,qwen3.8-27b,name,2026-09-01,1599.1417957728195,1587.6619953334541,1610.6215962121848,3256,13
@@ -61552,6 +61673,7 @@ qwen3-8-max,qwen3.8-max,alibaba,api_only,vision,Qwen3.8-Max,name,2026-11-06,1312
 qwen3-8-max,qwen3.8-max,alibaba,api_only,vision,Qwen3.8-Max,name,2026-11-08,1312.0753272013394,1304.631417546327,1319.5192368563519,9839,10
 qwen3-8-max,qwen3.8-max,alibaba,api_only,vision,Qwen3.8-Max,name,2026-11-09,1312.00895414155,1304.5700734171535,1319.4478348659466,9842,11
 qwen3-8-max,qwen3.8-max,alibaba,api_only,vision,Qwen3.8-Max,name,2026-11-19,1306.72220222884,1299.4437392091227,1314.000665248557,10833,13
+qwen3-8-max,qwen3.8-max,alibaba,api_only,vision,Qwen3.8-Max,name,2026-11-25,1307.4658939338228,1300.3801868325927,1314.551601035053,11466,12
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,qwen3.8-max,name,2026-08-02,1667.607317174256,1649.9824997108667,1685.2321346376452,1563,4
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,qwen3.8-max,name,2026-08-06,1667.1911506211422,1651.35061517829,1683.0316860639946,1980,4
 qwen3-8-max,qwen3.8-max,alibaba,api_only,webdev,qwen3.8-max,name,2026-08-10,1671.1326888660947,1656.9761934177113,1685.289184314478,2531,3
@@ -62989,6 +63111,7 @@ qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,vis
 qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Instruct,name,2026-11-08,1246.6537289177165,1239.7350991551705,1253.5723586802626,12668,66
 qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Instruct,name,2026-11-09,1246.6187541696372,1239.6999806003598,1253.5375277389148,12672,66
 qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Instruct,name,2026-11-19,1246.5597245153817,1239.6456458439704,1253.473803186793,12648,67
+qwen3-vl-235b-a22b-instruct,qwen3-vl-235b-a22b-instruct,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Instruct,name,2026-11-25,1246.5901517573402,1239.6792066372059,1253.5010968774745,12638,67
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,text,qwen3-vl-235b-a22b-thinking,name,2025-09-30,1395.1941349740384,1384.7600351787198,1405.628234769357,3177,30
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,text,qwen3-vl-235b-a22b-thinking,name,2025-10-01,1395.5412788783854,1385.4155462379413,1405.6670115188294,3382,31
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,text,qwen3-vl-235b-a22b-thinking,name,2025-10-03,1394.945521804803,1385.2687159827535,1404.622327626853,3712,34
@@ -63286,6 +63409,7 @@ qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,vis
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Thinking,name,2026-11-08,1206.4220305221058,1194.1609527682,1218.6831082760116,2378,92
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Thinking,name,2026-11-09,1206.2733912882281,1194.0149193964753,1218.531863179981,2379,92
 qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Thinking,name,2026-11-19,1206.6963410979156,1194.4355199074148,1218.9571622884162,2378,93
+qwen3-vl-235b-a22b-thinking,qwen3-vl-235b-a22b-thinking,alibaba,open_weights,vision,Qwen3-VL-235B-A22B-Thinking,name,2026-11-25,1206.7392823568389,1194.4803040348402,1218.9982606788376,2378,94
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-15,1749.814651229602,1734.3497758156768,1765.2795266435273,1814,6
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-18,1750.0188416759474,1734.5433280005536,1765.4943553513415,1811,9
 qwen4-max,qwen4-max,alibaba,api_only,webdev,Qwen4-Max (xHigh),name,2026-11-19,1749.7357281402312,1734.2444969225928,1765.2269593578694,1808,9
@@ -65449,6 +65573,7 @@ step-5-preview,Step 5 Preview,stepfun,open_weights,vision,Step 5 Preview,name,20
 step-5-preview,Step 5 Preview,stepfun,open_weights,vision,Step 5 Preview,name,2026-11-08,1263.4795074086041,1252.5992893043988,1274.3597255128095,3555,51
 step-5-preview,Step 5 Preview,stepfun,open_weights,vision,Step 5 Preview,name,2026-11-09,1263.190951062395,1252.2754402354656,1274.1064618893245,3523,52
 step-5-preview,Step 5 Preview,stepfun,open_weights,vision,Step 5 Preview,name,2026-11-19,1264.5333251699356,1254.4735024231527,1274.5931479167186,4395,51
+step-5-preview,Step 5 Preview,stepfun,open_weights,vision,Step 5 Preview,name,2026-11-25,1264.4833086872602,1254.4620003684927,1274.5046170060277,4439,50
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,step-5-preview-high,name,2026-09-25,1565.2198243040011,1547.720108323355,1582.7195402846473,1247,29
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,step-5-preview-high,name,2026-09-29,1568.8037763595,1555.118212031058,1582.489340687942,2132,30
 step-5-preview,Step 5 Preview,stepfun,open_weights,webdev,step-5-preview-high,name,2026-09-30,1569.6312750677412,1556.4671295400085,1582.7954205954734,2326,32

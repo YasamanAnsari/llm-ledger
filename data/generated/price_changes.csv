@@ -19,6 +19,8 @@ beam-1-0-501b-a23b,reflection,models_dev,cloudflare-ai-gateway,reflection-ai/bea
 beam-1-0-501b-a23b,reflection,models_dev,openrouter,reflection/beam-1.0-501b-a23b,false,2026-11-18,2026-11-19,0.3,0.25,1,1,0.04,0.05,https://models.dev/api.json
 beam-1-0-501b-a23b,reflection,openrouter,openrouter,reflection/beam-1.0-501b-a23b,false,2026-11-19,2026-11-20,0.3,0.25,1,1,,,https://openrouter.ai/api/v1/models
 beam-1-0-501b-a23b,reflection,models_dev,huggingface,reflection/Beam-1.0-501B-A23B,false,2026-11-24,2026-11-25,0.4,0.25,1.2,1,,,https://models.dev/api.json
+beam-1-0-501b-a23b,reflection,models_dev,openrouter,reflection/beam-1.0-501b-a23b,false,2026-11-25,2026-11-28,0.25,0.3,1,1,0.05,0.04,https://models.dev/api.json
+beam-1-0-501b-a23b,reflection,openrouter,openrouter,reflection/beam-1.0-501b-a23b,false,2026-11-25,2026-11-28,0.25,0.3,1,1,,,https://openrouter.ai/api/v1/models
 claude-3-5-haiku,anthropic,litellm_git,anthropic,claude-3-5-haiku-20241022,true,2024-11-07,2024-11-08,1,1,5,5,,0.1,https://raw.githubusercontent.com/BerriAI/litellm/a3baec081bd08c5aaa725050b8e872f1a9a78991/model_prices_and_context_window.json
 claude-3-5-haiku,anthropic,litellm_git,anthropic,claude-3-5-haiku-20241022,true,2025-02-27,2025-02-28,1,0.8,5,4,0.1,0.8,https://raw.githubusercontent.com/BerriAI/litellm/1affd0f17842014f7b735f27ecf35ab34a7fecc5/model_prices_and_context_window.json
 claude-3-5-haiku,anthropic,litellm_git,anthropic,claude-3-5-haiku-20241022,true,2025-04-07,2025-04-08,0.8,0.8,4,4,0.8,0.08,https://raw.githubusercontent.com/BerriAI/litellm/11389535d53ccb429876b744514afd89aa8d8463/model_prices_and_context_window.json
@@ -157,6 +159,7 @@ claude-sonnet-5-5,anthropic,models_dev,aimlapi,anthropic/claude-sonnet-5.5,false
 claude-sonnet-5-5,anthropic,models_dev,requesty,claude-sonnet-5-5,false,2026-11-16,2026-11-17,2,2,10,10,0.2,0.1,https://models.dev/api.json
 claude-sonnet-5-5,anthropic,models_dev,cortecs,claude-sonnet-5.5,false,2026-11-17,2026-11-18,2.25,2.275,11.249,11.372,0.225,0.114,https://models.dev/api.json
 claude-sonnet-5-5,anthropic,models_dev,amazon-bedrock,anthropic.claude-sonnet-5-5,false,2026-11-19,2026-11-20,2,2.2,10,11,0.1,0.11,https://models.dev/api.json
+codestral,mistral,models_dev,concentrate,codestral,false,2026-11-25,2026-11-28,0.3,0.3,0.9,0.9,,0.03,https://models.dev/api.json
 codestral-2508,mistral,litellm_git,mistral,mistral/codestral-2508,true,2026-08-29,2026-08-30,0.3,0.3,0.9,0.9,,0.03,https://raw.githubusercontent.com/BerriAI/litellm/10631eb834c7802aa61611e807474170b8a4d425/model_prices_and_context_window.json
 codestral-2508,mistral,models_dev,aimlapi,mistralai/codestral-2508,false,2026-10-22,2026-10-23,0.41262,0.3174,1.23786,0.9522,0.041262,0.03174,https://models.dev/api.json
 cohere-command-a-reasoning,cohere,models_dev,sap-ai-core,cohere--command-a-reasoning,false,2026-10-21,2026-10-22,0.63,2.5,5.05,10,,,https://models.dev/api.json
@@ -206,6 +209,10 @@ deepseek-r1,deepseek,models_dev,kilo,deepseek/deepseek-r1-0528,false,2026-11-17,
 deepseek-r1,deepseek,models_dev,openrouter,deepseek/deepseek-r1-0528,false,2026-11-17,2026-11-18,0.5,0.571,2.15,2.286,0.35,,https://models.dev/api.json
 deepseek-r1,deepseek,openrouter,openrouter,deepseek/deepseek-r1-0528,false,2026-11-17,2026-11-18,0.5,0.571,2.15,2.286,,,https://openrouter.ai/api/v1/models
 deepseek-r1,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-R1-0528,false,2026-11-23,2026-11-24,3,0.5,5,2.15,,,https://models.dev/api.json
+deepseek-r1,deepseek,models_dev,concentrate,deepseek-r1-0528,false,2026-11-25,2026-11-28,0.7,0.5,2.5,2.15,0.35,0.35,https://models.dev/api.json
+deepseek-r1,deepseek,models_dev,kilo,deepseek/deepseek-r1-0528,false,2026-11-25,2026-11-28,0.571,0.5,2.286,2.18,,,https://models.dev/api.json
+deepseek-r1,deepseek,models_dev,openrouter,deepseek/deepseek-r1-0528,false,2026-11-25,2026-11-28,0.571,0.5,2.286,2.18,,,https://models.dev/api.json
+deepseek-r1,deepseek,openrouter,openrouter,deepseek/deepseek-r1-0528,false,2026-11-25,2026-11-28,0.571,0.5,2.286,2.18,,,https://openrouter.ai/api/v1/models
 deepseek-r1-distill-llama-70b,deepseek,litellm_git,deepinfra,deepinfra/deepseek-ai/DeepSeek-R1-Distill-Llama-70B,false,2025-10-03,2025-10-04,0.1,0.2,0.4,0.6,,,https://raw.githubusercontent.com/BerriAI/litellm/cb385e080f41af040e86ecf79006ec914c5d2304/model_prices_and_context_window.json
 deepseek-r1-distill-llama-70b,deepseek,litellm_git,novita,novita/deepseek/deepseek-r1-distill-llama-70b,false,2026-01-12,2026-01-13,6400,0.8,6400,0.8,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 deepseek-r1-distill-qwen-14b,deepseek,litellm_git,novita,novita/deepseek/deepseek-r1-distill-qwen-14b,false,2026-01-12,2026-01-13,1200,0.15,1200,0.15,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
@@ -479,6 +486,9 @@ deepseek-v4-1-flash,deepseek,models_dev,edenai,greenpt/deepseek-v4.1-flash,false
 deepseek-v4-1-flash,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4.1-Flash,false,2026-11-24,2026-11-25,0.3,0.14,1.2,0.42,,,https://models.dev/api.json
 deepseek-v4-1-flash,deepseek,models_dev,openrouter,deepseek/deepseek-v4.1-flash,false,2026-11-24,2026-11-25,0.0507,0.14,0.2028,0.42,0.001014,0.0042,https://models.dev/api.json
 deepseek-v4-1-flash,deepseek,models_dev,wandb,deepseek-ai/DeepSeek-V4.1-Flash,false,2026-11-24,2026-11-25,0.13,0.13,0.65,0.59,0.002,0.002,https://models.dev/api.json
+deepseek-v4-1-flash,deepseek,models_dev,kilo,deepseek/deepseek-v4.1-flash,false,2026-11-25,2026-11-28,0.14,0.051,0.42,0.567,0.0042,0.018,https://models.dev/api.json
+deepseek-v4-1-flash,deepseek,models_dev,openrouter,deepseek/deepseek-v4.1-flash,false,2026-11-25,2026-11-28,0.14,0.051,0.42,0.567,0.0042,0.018,https://models.dev/api.json
+deepseek-v4-1-flash,deepseek,openrouter,openrouter,deepseek/deepseek-v4.1-flash,false,2026-11-25,2026-11-28,0.0507,0.051,0.2028,0.567,,,https://openrouter.ai/api/v1/models
 deepseek-v4-1-flash-1017,deepseek,models_dev,nano-gpt,deepseek/deepseek-v4.1-flash-1017,false,2026-10-17,2026-10-18,0.15,0.1,0.6,0.6,0.003,0.003,https://models.dev/api.json
 deepseek-v4-1-flash-1017,deepseek,models_dev,nano-gpt,deepseek/deepseek-v4.1-flash-1017:thinking,false,2026-10-17,2026-10-18,0.15,0.1,0.6,0.6,0.003,0.003,https://models.dev/api.json
 deepseek-v4-1-flash-1017,deepseek,models_dev,vercel,deepseek/deepseek-v4.1-flash-1017,false,2026-10-17,2026-10-18,0.15,0.075,0.6,0.3,0.003,0.0015,https://models.dev/api.json
@@ -574,6 +584,8 @@ deepseek-v4-1-flash-1017,deepseek,models_dev,edenai,scaleway/deepseek-v4.1-flash
 deepseek-v4-1-flash-1017,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4.1-Flash-1017,false,2026-11-24,2026-11-25,0.3,0.05,1.2,0.3,,,https://models.dev/api.json
 deepseek-v4-1-flash-1017,deepseek,models_dev,openrouter,deepseek/deepseek-v4.1-flash-1017,false,2026-11-24,2026-11-25,0.03,0.15,0.2,0.6,0.001,0.003,https://models.dev/api.json
 deepseek-v4-1-flash-1017,deepseek,openrouter,openrouter,deepseek/deepseek-v4.1-flash-1017,false,2026-11-24,2026-11-25,0.03,0.15,0.2,0.6,,,https://openrouter.ai/api/v1/models
+deepseek-v4-1-flash-1017,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4.1-Flash-1017,false,2026-11-25,2026-11-28,0.05,0.04,0.3,0.1,,,https://models.dev/api.json
+deepseek-v4-1-flash-1017,deepseek,models_dev,prime,deepseek/deepseek-v4.1-flash-1017,false,2026-11-25,2026-11-28,0.175,0.04368,0.7,0.7,0.007,0.0024,https://models.dev/api.json
 deepseek-v4-flash,deepseek,litellm_git,deepseek,deepseek-v4-flash,true,2026-08-20,2026-08-21,0.14,0.44,0.28,1.32,0.0028,0.014,https://raw.githubusercontent.com/BerriAI/litellm/418c7c6012d7c39a9d4a28c72cabe1995595ad2b/model_prices_and_context_window.json
 deepseek-v4-flash,deepseek,litellm_git,deepseek,deepseek/deepseek-v4-flash,true,2026-08-20,2026-08-21,0.14,0.44,0.28,1.32,0.0028,0.014,https://raw.githubusercontent.com/BerriAI/litellm/418c7c6012d7c39a9d4a28c72cabe1995595ad2b/model_prices_and_context_window.json
 deepseek-v4-flash,deepseek,litellm_git,azure_ai,azure_ai/deepseek-v4-flash,false,2026-09-02,2026-09-03,0.19,0.19,0.51,0.51,,0.028,https://raw.githubusercontent.com/BerriAI/litellm/5be7ed1307478a7f53d7d84914b2d453cde224cf/model_prices_and_context_window.json
@@ -836,6 +848,11 @@ deepseek-v4-flash-0731,deepseek,models_dev,edenai,greenpt/deepseek-v4-flash-0731
 deepseek-v4-flash-0731,deepseek,models_dev,edenai,scaleway/deepseek-v4-flash-0731,false,2026-11-24,2026-11-25,0.43756,0.43852,0.87512,0.87704,0.087512,0.087704,https://models.dev/api.json
 deepseek-v4-flash-0731,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4-Flash-0731,false,2026-11-24,2026-11-25,0.14,0.07,0.28,0.14,,,https://models.dev/api.json
 deepseek-v4-flash-0731,deepseek,models_dev,openrouter,deepseek/deepseek-v4-flash-0731,false,2026-11-24,2026-11-25,0.0456,0.047,0.3,0.3,0.035,0.035,https://models.dev/api.json
+deepseek-v4-flash-0731,deepseek,models_dev,kilo,deepseek/deepseek-v4-flash-0731,false,2026-11-25,2026-11-28,0.047,0.0456,0.3,0.27,0.035,0.035,https://models.dev/api.json
+deepseek-v4-flash-0731,deepseek,models_dev,nano-gpt,deepseek/deepseek-v4-flash-0731,false,2026-11-25,2026-11-28,0.05,0.04532,0.16,0.13596,0.013,0.001442,https://models.dev/api.json
+deepseek-v4-flash-0731,deepseek,models_dev,nano-gpt,deepseek/deepseek-v4-flash-0731:thinking,false,2026-11-25,2026-11-28,0.05,0.04532,0.16,0.13596,0.013,0.001442,https://models.dev/api.json
+deepseek-v4-flash-0731,deepseek,models_dev,openrouter,deepseek/deepseek-v4-flash-0731,false,2026-11-25,2026-11-28,0.047,0.0456,0.3,0.27,0.035,0.035,https://models.dev/api.json
+deepseek-v4-flash-0731,deepseek,openrouter,openrouter,deepseek/deepseek-v4-flash-0731,false,2026-11-25,2026-11-28,0.0456,0.0456,0.3,0.27,,,https://openrouter.ai/api/v1/models
 deepseek-v4-flash-vision-exp,deepseek,litellm_git,deepseek,deepseek-v4-flash-vision-exp,true,2026-09-12,2026-09-13,0.44,0.3,1.32,1.2,0.014,0.006,https://raw.githubusercontent.com/BerriAI/litellm/30f33a949b8a2bb890a2baee18e2ab7ab015a4f7/model_prices_and_context_window.json
 deepseek-v4-flash-vision-exp,deepseek,litellm_git,deepseek,deepseek/deepseek-v4-flash-vision-exp,true,2026-09-12,2026-09-13,0.44,0.3,1.32,1.2,0.014,0.006,https://raw.githubusercontent.com/BerriAI/litellm/30f33a949b8a2bb890a2baee18e2ab7ab015a4f7/model_prices_and_context_window.json
 deepseek-v4-flash-vision-exp,deepseek,litellm_git,openrouter,openrouter/deepseek/deepseek-v4-flash-vision-exp,false,2026-09-17,2026-09-18,0.22,0.2156,0.66,0.6468,0.007,0.00686,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
@@ -858,6 +875,10 @@ deepseek-v4-flash-vision-exp,deepseek,models_dev,huggingface,deepseek-ai/DeepSee
 deepseek-v4-flash-vision-exp,deepseek,models_dev,kilo,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-24,2026-11-25,0.2156,0.44,0.6468,1.32,0.00686,0.028,https://models.dev/api.json
 deepseek-v4-flash-vision-exp,deepseek,models_dev,openrouter,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-24,2026-11-25,0.2156,0.44,0.6468,1.32,0.00686,0.028,https://models.dev/api.json
 deepseek-v4-flash-vision-exp,deepseek,openrouter,openrouter,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-24,2026-11-25,0.2156,0.44,0.6468,1.32,,,https://openrouter.ai/api/v1/models
+deepseek-v4-flash-vision-exp,deepseek,models_dev,kilo,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-25,2026-11-28,0.44,0.2156,1.32,0.6468,0.028,0.00686,https://models.dev/api.json
+deepseek-v4-flash-vision-exp,deepseek,models_dev,nano-gpt,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-25,2026-11-28,0.2156,0.238238,0.6468,0.714714,0.00686,0.00686,https://models.dev/api.json
+deepseek-v4-flash-vision-exp,deepseek,models_dev,openrouter,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-25,2026-11-28,0.44,0.2156,1.32,0.6468,0.028,0.00686,https://models.dev/api.json
+deepseek-v4-flash-vision-exp,deepseek,openrouter,openrouter,deepseek/deepseek-v4-flash-vision-exp,false,2026-11-25,2026-11-28,0.44,0.2156,1.32,0.6468,,,https://openrouter.ai/api/v1/models
 deepseek-v4-pro,deepseek,litellm_git,deepseek,deepseek-v4-pro,true,2026-08-20,2026-08-21,0.435,1.32,0.87,3.96,0.003625,0.044,https://raw.githubusercontent.com/BerriAI/litellm/418c7c6012d7c39a9d4a28c72cabe1995595ad2b/model_prices_and_context_window.json
 deepseek-v4-pro,deepseek,litellm_git,deepseek,deepseek/deepseek-v4-pro,true,2026-08-20,2026-08-21,0.435,1.32,0.87,3.96,0.003625,0.044,https://raw.githubusercontent.com/BerriAI/litellm/418c7c6012d7c39a9d4a28c72cabe1995595ad2b/model_prices_and_context_window.json
 deepseek-v4-pro,deepseek,litellm_git,together_ai,together_ai/deepseek-ai/DeepSeek-V4-Pro,false,2026-08-27,2026-08-28,1.74,1.74,3.48,3.48,,0.2,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
@@ -1038,6 +1059,13 @@ deepseek-v4-pro,deepseek,openrouter,openrouter,deepseek/deepseek-v4-pro-0813,fal
 deepseek-v4-pro,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4-Pro,false,2026-11-24,2026-11-25,0.435,0.888188,0.87,1.5082,0.003625,,https://models.dev/api.json
 deepseek-v4-pro,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4-Pro-0813,false,2026-11-24,2026-11-25,1.32,1.3,3.96,2.6,,,https://models.dev/api.json
 deepseek-v4-pro,deepseek,openrouter,openrouter,deepseek/deepseek-v4-pro,false,2026-11-24,2026-11-25,1.28,0.765692,2.56,1.5016,,,https://openrouter.ai/api/v1/models
+deepseek-v4-pro,deepseek,models_dev,huggingface,deepseek-ai/DeepSeek-V4-Pro,false,2026-11-25,2026-11-28,0.888188,0.89,1.5082,1.5069,,,https://models.dev/api.json
+deepseek-v4-pro,deepseek,models_dev,kilo,deepseek/deepseek-v4-pro,false,2026-11-25,2026-11-28,1.28,0.89,2.56,1.5069,0.108,0.2,https://models.dev/api.json
+deepseek-v4-pro,deepseek,models_dev,kilo,deepseek/deepseek-v4-pro-0813,false,2026-11-25,2026-11-28,0.111,0.0999,4.44,5,0.097,0.0999,https://models.dev/api.json
+deepseek-v4-pro,deepseek,models_dev,openrouter,deepseek/deepseek-v4-pro,false,2026-11-25,2026-11-28,1.28,0.89,2.56,1.5069,0.108,0.2,https://models.dev/api.json
+deepseek-v4-pro,deepseek,models_dev,openrouter,deepseek/deepseek-v4-pro-0813,false,2026-11-25,2026-11-28,0.111,0.0999,4.44,5,0.097,0.0999,https://models.dev/api.json
+deepseek-v4-pro,deepseek,openrouter,openrouter,deepseek/deepseek-v4-pro,false,2026-11-25,2026-11-28,0.765692,0.89,1.5016,1.5069,,,https://openrouter.ai/api/v1/models
+deepseek-v4-pro,deepseek,openrouter,openrouter,deepseek/deepseek-v4-pro-0813,false,2026-11-25,2026-11-28,0.111,0.0999,4.44,5,,,https://openrouter.ai/api/v1/models
 devstral-2512,mistral,litellm_git,openrouter,openrouter/mistralai/devstral-2512,false,2026-09-04,2026-09-05,0.15,0.4,0.6,2,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 devstral-2512,mistral,litellm_git,openrouter,openrouter/mistralai/devstral-2512,false,2026-09-17,2026-09-18,0.4,0.4,2,2,,0.04,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
 devstral-2512,mistral,models_dev,aimlapi,mistralai/devstral-2512,false,2026-10-22,2026-10-23,0.605176,0.46552,3.02588,2.3276,0.060518,0.046552,https://models.dev/api.json
@@ -1132,6 +1160,7 @@ gemini-3-1-pro-preview,google,models_dev,fastrouter,google/gemini-3.1-pro-previe
 gemini-3-1-pro-preview,google,models_dev,vivgrid,gemini-3.1-pro-preview,false,2026-10-21,2026-10-22,2,3,12,12,0.2,0.3,https://models.dev/api.json
 gemini-3-1-pro-preview,google,models_dev,aimlapi,google/gemini-3.1-pro-preview,false,2026-10-22,2026-10-23,2.6,2,15.6,12,0.65,0.5,https://models.dev/api.json
 gemini-3-1-pro-preview,google,models_dev,kilo,google/gemini-3.1-pro-preview,false,2026-11-17,2026-11-18,1,2,6,12,0.1,0.2,https://models.dev/api.json
+gemini-3-1-pro-preview,google,models_dev,aimlapi,google/gemini-3.1-pro-preview,false,2026-11-25,2026-11-28,2,2,12,12,0.5,0.2,https://models.dev/api.json
 gemini-3-1-pro-preview-customtools,google,models_dev,orcarouter,google/gemini-3.1-pro-preview-customtools,false,2026-10-21,2026-10-22,2,4,12,18,0.2,0.4,https://models.dev/api.json
 gemini-3-1-pro-preview-customtools,google,models_dev,aimlapi,google/gemini-3.1-pro-preview-customtools,false,2026-10-22,2026-10-23,2.7508,2.116,16.5048,12.696,0.27508,0.2116,https://models.dev/api.json
 gemini-3-1-pro-preview-customtools,google,models_dev,kilo,google/gemini-3.1-pro-preview-customtools,false,2026-11-17,2026-11-18,2,4,12,18,0.2,0.4,https://models.dev/api.json
@@ -1338,6 +1367,11 @@ gemma-4-26b-a4b-it,google,openrouter,openrouter,google/gemma-4-26b-a4b-it,false,
 gemma-4-26b-a4b-it,google,models_dev,kilo,google/gemma-4-26b-a4b-it,false,2026-11-23,2026-11-24,0.05,0.05,0.19,0.18,0.0125,0.025,https://models.dev/api.json
 gemma-4-26b-a4b-it,google,models_dev,nano-gpt,google/gemma-4-26b-a4b-it:thinking,false,2026-11-23,2026-11-24,0.056,0.07,0.192,0.24,0.028,0.046,https://models.dev/api.json
 gemma-4-26b-a4b-it,google,models_dev,huggingface,google/gemma-4-26B-A4B-it,false,2026-11-24,2026-11-25,0.13,0.07,0.4,0.24,,,https://models.dev/api.json
+gemma-4-26b-a4b-it,google,models_dev,aimlapi,google/gemma-4-26b-a4b-it,false,2026-11-25,2026-11-28,0.1587,0.1587,0.6348,0.6348,0.1587,0.1058,https://models.dev/api.json
+gemma-4-26b-a4b-it,google,models_dev,huggingface,google/gemma-4-26B-A4B-it,false,2026-11-25,2026-11-28,0.07,0.0675,0.24,0.225,,,https://models.dev/api.json
+gemma-4-26b-a4b-it,google,models_dev,nano-gpt,google/gemma-4-26b-a4b-it:thinking,false,2026-11-25,2026-11-28,0.07,0.0675,0.24,0.225,0.046,0.0375,https://models.dev/api.json
+gemma-4-26b-a4b-it,google,models_dev,openrouter,google/gemma-4-26b-a4b-it,false,2026-11-25,2026-11-28,0.09,0.0675,0.3,0.225,0.05,0.0375,https://models.dev/api.json
+gemma-4-26b-a4b-it,google,openrouter,openrouter,google/gemma-4-26b-a4b-it,false,2026-11-25,2026-11-28,0.09,0.0675,0.3,0.225,,,https://openrouter.ai/api/v1/models
 gemma-4-31b-it,google,models_dev,llmgateway-providers,deepinfra/gemma-4-31b-it,false,2026-10-03,2026-10-04,0.15,0.2,0.4,0.4,,,https://models.dev/api.json
 gemma-4-31b-it,google,models_dev,deepinfra,google/gemma-4-31B-it,false,2026-10-04,2026-10-05,0.15,0.2,0.4,0.4,,,https://models.dev/api.json
 gemma-4-31b-it,google,models_dev,openrouter,google/gemma-4-31b-it,false,2026-10-14,2026-10-15,0.09,0.2,0.34,0.4,0.05,,https://models.dev/api.json
@@ -1356,6 +1390,7 @@ gemma-4-31b-it,google,models_dev,kilo,google/gemma-4-31b-it,false,2026-11-06,202
 gemma-4-31b-it,google,models_dev,nano-gpt,google/gemma-4-31b-it,false,2026-11-11,2026-11-16,0.14,0.11,0.4,0.33,0.05,0.05,https://models.dev/api.json
 gemma-4-31b-it,google,models_dev,huggingface,google/gemma-4-31B-it,false,2026-11-24,2026-11-25,0.14,0.34,0.4,0.1,,,https://models.dev/api.json
 gemma-4-31b-it,google,models_dev,venice,google-gemma-4-31b-it,false,2026-11-24,2026-11-25,0.12,0.12,0.36,0.36,0.09,0.05,https://models.dev/api.json
+gemma-4-31b-it,google,models_dev,aimlapi,google/gemma-4-31b-it,false,2026-11-25,2026-11-28,1.04742,1.04742,1.57642,1.57642,1.04742,0.2645,https://models.dev/api.json
 gemma-sea-lion-v4-27b-it,google,models_dev,nano-gpt,aisingapore/gemma-sea-lion-v4-27b-it,false,2026-11-11,2026-11-16,0.24,0.24,0.48,0.48,,0.12,https://models.dev/api.json
 glm-4-5,zhipu,litellm_git,deepinfra,deepinfra/zai-org/GLM-4.5,false,2025-10-03,2025-10-04,0.55,0.4,2,1.6,,,https://raw.githubusercontent.com/BerriAI/litellm/cb385e080f41af040e86ecf79006ec914c5d2304/model_prices_and_context_window.json
 glm-4-5,zhipu,litellm_git,novita,novita/zai-org/glm-4.5,false,2026-01-12,2026-01-13,4800,0.6,17600,2.2,880,0.11,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
@@ -1378,6 +1413,9 @@ glm-4-5-air,zhipu,openrouter,openrouter,z-ai/glm-4.5-air,false,2026-11-11,2026-1
 glm-4-5-air,zhipu,models_dev,kilo,z-ai/glm-4.5-air,false,2026-11-24,2026-11-25,0.13,0.14,0.85,0.86,0.025,,https://models.dev/api.json
 glm-4-5-air,zhipu,models_dev,openrouter,z-ai/glm-4.5-air,false,2026-11-24,2026-11-25,0.13,0.14,0.85,0.86,0.025,,https://models.dev/api.json
 glm-4-5-air,zhipu,openrouter,openrouter,z-ai/glm-4.5-air,false,2026-11-24,2026-11-25,0.13,0.14,0.85,0.86,,,https://openrouter.ai/api/v1/models
+glm-4-5-air,zhipu,models_dev,kilo,z-ai/glm-4.5-air,false,2026-11-25,2026-11-28,0.14,0.2,0.86,1.1,,0.03,https://models.dev/api.json
+glm-4-5-air,zhipu,models_dev,openrouter,z-ai/glm-4.5-air,false,2026-11-25,2026-11-28,0.14,0.2,0.86,1.1,,0.03,https://models.dev/api.json
+glm-4-5-air,zhipu,openrouter,openrouter,z-ai/glm-4.5-air,false,2026-11-25,2026-11-28,0.14,0.2,0.86,1.1,,,https://openrouter.ai/api/v1/models
 glm-4-5v,zhipu,litellm_git,novita,novita/zai-org/glm-4.5v,false,2026-01-12,2026-01-13,4800,0.6,14400,1.8,880,0.11,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 glm-4-5v,zhipu,models_dev,zai,glm-4.5v,false,2026-10-17,2026-10-18,0.6,0.6,1.8,1.8,,0.11,https://models.dev/api.json
 glm-4-5v,zhipu,models_dev,zhipuai,glm-4.5v,true,2026-10-17,2026-10-18,0.6,0.6,1.8,1.8,,0.11,https://models.dev/api.json
@@ -1655,6 +1693,8 @@ glm-5-2,zhipu,models_dev,nano-gpt,z-ai/glm-5.2:thinking,false,2026-11-19,2026-11
 glm-5-2,zhipu,models_dev,kilo,z-ai/glm-5.2,false,2026-11-20,2026-11-21,1.4,1.4,4.4,4.4,0.26,0.14,https://models.dev/api.json
 glm-5-2,zhipu,models_dev,huggingface,zai-org/GLM-5.2,false,2026-11-23,2026-11-24,1.4,0.62,4.4,2.42,,,https://models.dev/api.json
 glm-5-2,zhipu,models_dev,huggingface,zai-org/GLM-5.2,false,2026-11-24,2026-11-25,0.62,0.5625,2.42,1.8,,,https://models.dev/api.json
+glm-5-2,zhipu,models_dev,aimlapi,zhipu/glm-5.2,false,2026-11-25,2026-11-28,1.4,0.31,4.4,2.4,0.26,0.075,https://models.dev/api.json
+glm-5-2,zhipu,openrouter,openrouter,z-ai/glm-5.2,false,2026-11-25,2026-11-28,0.62,0.007,2.42,6.8,,,https://openrouter.ai/api/v1/models
 glm-5-3,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3,false,2026-09-17,2026-09-18,1.4,0.91,4.4,2.86,0.14,0.169,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
 glm-5-3,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3,false,2026-09-21,2026-09-22,0.91,0.6538,2.86,2.0548,0.169,0.12142,https://raw.githubusercontent.com/BerriAI/litellm/95d4613bd3f64cbbdb752f77c935015166718409/model_prices_and_context_window.json
 glm-5-3,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3:batch,false,2026-09-21,2026-09-22,0.7,0.72,2.2,2.4,0.13,0.12,https://raw.githubusercontent.com/BerriAI/litellm/95d4613bd3f64cbbdb752f77c935015166718409/model_prices_and_context_window.json
@@ -1769,6 +1809,7 @@ glm-5-3,zhipu,models_dev,chutes,zai-org/GLM-5.3,false,2026-11-23,2026-11-24,0.8,
 glm-5-3,zhipu,models_dev,inceptron,zai-org/GLM-5.3,false,2026-11-23,2026-11-24,1.05,1,3.25,3.5,0.1776,0.1295,https://models.dev/api.json
 glm-5-3,zhipu,models_dev,chutes,zai-org/GLM-5.3,false,2026-11-24,2026-11-25,1.225,0.8,3.85,2.5,0.245,0.16,https://models.dev/api.json
 glm-5-3,zhipu,models_dev,huggingface,zai-org/GLM-5.3,false,2026-11-24,2026-11-25,1.4,0.0699,4.4,1.4,,,https://models.dev/api.json
+glm-5-3,zhipu,models_dev,llmgateway-providers,canopywave/glm-5.3,false,2026-11-25,2026-11-28,1.4,0.84,4.4,2.64,0.26,0.156,https://models.dev/api.json
 glm-5-3-flash,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3-flash,false,2026-09-12,2026-09-13,0.075,0.15,0.25,0.5,0.015,0.03,https://raw.githubusercontent.com/BerriAI/litellm/30f33a949b8a2bb890a2baee18e2ab7ab015a4f7/model_prices_and_context_window.json
 glm-5-3-flash,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3-flash,false,2026-09-15,2026-09-16,0.15,0.09,0.5,0.3,0.03,0.018,https://raw.githubusercontent.com/BerriAI/litellm/319f427c403043756917aea39cab89021a7f92e7/model_prices_and_context_window.json
 glm-5-3-flash,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3-flash,false,2026-09-20,2026-09-21,0.09,0.15,0.3,0.5,0.018,0.05,https://raw.githubusercontent.com/BerriAI/litellm/707c7493cfce501fa9da5f17fc3580e68310d947/model_prices_and_context_window.json
@@ -1896,6 +1937,10 @@ glm-5-3-flash,zhipu,openrouter,openrouter,z-ai/glm-5.3-flash,false,2026-11-23,20
 glm-5-3-flash,zhipu,models_dev,huggingface,zai-org/GLM-5.3-Flash,false,2026-11-24,2026-11-25,0.15,0.0356,0.5,0.0815,,,https://models.dev/api.json
 glm-5-3-flash,zhipu,models_dev,openrouter,z-ai/glm-5.3-flash,false,2026-11-24,2026-11-25,0.15,0.12,0.5,0.38,0.03,0.02,https://models.dev/api.json
 glm-5-3-flash,zhipu,openrouter,openrouter,z-ai/glm-5.3-flash,false,2026-11-24,2026-11-25,0.15,0.12,0.5,0.38,,,https://openrouter.ai/api/v1/models
+glm-5-3-flash,zhipu,models_dev,inceptron,zai-org/GLM-5.3-Flash,false,2026-11-25,2026-11-28,0.185,0.15,0.5,0.3,0.07,0.03,https://models.dev/api.json
+glm-5-3-flash,zhipu,models_dev,obscurify,z-ai/glm-5.3-flash,false,2026-11-25,2026-11-28,0.1105,0.0845,0.3315,0.312,,,https://models.dev/api.json
+glm-5-3-flash,zhipu,models_dev,openrouter,z-ai/glm-5.3-flash,false,2026-11-25,2026-11-28,0.12,0.15,0.38,0.5,0.02,0.03,https://models.dev/api.json
+glm-5-3-flash,zhipu,openrouter,openrouter,z-ai/glm-5.3-flash,false,2026-11-25,2026-11-28,0.12,0.15,0.38,0.5,,,https://openrouter.ai/api/v1/models
 glm-5-3-flashx,zhipu,litellm_git,openrouter,openrouter/z-ai/glm-5.3-flashx,false,2026-09-23,2026-09-24,0.37,0.37,1.25,1.25,0.075,0.09,https://raw.githubusercontent.com/BerriAI/litellm/bc1ebf7e9fb42d86a86e6b585952c0e03502d39a/model_prices_and_context_window.json
 glm-5-3-flashx,zhipu,models_dev,zhipuai,glm-5.3-flashx,true,2026-10-19,2026-10-20,0.37,0.29879,1.25,1.04577,0.075,0.08516,https://models.dev/api.json
 glm-5-3-flashx,zhipu,models_dev,kilo,z-ai/glm-5.3-flashx,false,2026-11-01,2026-11-02,0.37,0.37,1.25,1.25,0.09,0.075,https://models.dev/api.json
@@ -2543,6 +2588,7 @@ hermes-4-405b,nous-research,models_dev,nebius,NousResearch/Hermes-4-405B,false,2
 hunyuan-a13b-instruct,tencent,models_dev,siliconflow-cn,tencent/Hunyuan-A13B-Instruct,false,2026-10-21,2026-10-22,0.14,0.14944748,0.57,0.59778991,,,https://models.dev/api.json
 hy-mt2-1-8b,tencent,models_dev,aimlapi,tencent/hy-mt2-1.8b,false,2026-10-22,2026-10-23,0.060518,0.046552,0.243446,0.187266,,,https://models.dev/api.json
 hy-mt2-30b-a3b,tencent,models_dev,aimlapi,tencent/hy-mt2-30b-a3b,false,2026-10-22,2026-10-23,0.10178,0.078292,0.405743,0.31211,,,https://models.dev/api.json
+hy-mt2-30b-a3b,tencent,models_dev,aimlapi,tencent/hy-mt2-30b-a3b,false,2026-11-25,2026-11-28,0.078292,0.074,0.31211,0.295,,,https://models.dev/api.json
 hy-mt2-7b,tencent,models_dev,aimlapi,tencent/hy-mt2-7b,false,2026-10-22,2026-10-23,0.10178,0.078292,0.405743,0.31211,,,https://models.dev/api.json
 hy4-flash,tencent,models_dev,novita-ai,tencent/hy4-flash,false,2026-11-18,2026-11-19,0.07,0.035,0.281,0.1405,0.003,0.0015,https://models.dev/api.json
 hy4-flash,tencent,models_dev,huggingface,tencent/Hy4-flash,false,2026-11-23,2026-11-24,0.035,0.07,0.1405,0.281,,,https://models.dev/api.json
@@ -2583,6 +2629,7 @@ hy4-preview,tencent,openrouter,openrouter,tencent/hy4-preview,false,2026-11-17,2
 hy4-preview,tencent,models_dev,nano-gpt,tencent/hy4-preview,false,2026-11-19,2026-11-20,0.7506,0.834,2.2509,2.501,0.0378,0.042,https://models.dev/api.json
 hy4-preview,tencent,openrouter,openrouter,tencent/hy4-preview,false,2026-11-22,2026-11-23,0.834,0.7506,2.501,2.2509,,,https://openrouter.ai/api/v1/models
 hy4-preview,tencent,models_dev,tencent-token-plan,hy4-preview,false,2026-11-23,2026-11-24,0.90078512,0.898298,2.70235537,2.694894,0.04503926,0.044915,https://models.dev/api.json
+hy4-preview,tencent,models_dev,huggingface,tencent/Hy4-preview,false,2026-11-25,2026-11-28,0.834,1.0425,2.501,3.12625,,,https://models.dev/api.json
 inkling,thinking-machines,litellm_git,together_ai,together_ai/thinkingmachines/Inkling,false,2026-08-27,2026-08-28,1,1,4.05,4.05,,0.17,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
 inkling,thinking-machines,litellm,openrouter,openrouter/thinkingmachines/inkling,false,2026-10-06,2026-10-07,0.95,1,4.05,4.05,0.16,0.17,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json
 inkling,thinking-machines,models_dev,openrouter,thinkingmachines/inkling,false,2026-10-06,2026-10-07,0.95,1,4.05,4.05,0.16,0.17,https://models.dev/api.json
@@ -2601,19 +2648,30 @@ inkling-2-mini,thinking-machines,models_dev,openrouter,thinkingmachines/inkling-
 inkling-2-mini,thinking-machines,openrouter,openrouter,thinkingmachines/inkling-2-mini,false,2026-11-21,2026-11-22,0.1,0.075,0.4,0.3,,,https://openrouter.ai/api/v1/models
 inkling-2-mini,thinking-machines,models_dev,kilo,thinkingmachines/inkling-2-mini,false,2026-11-22,2026-11-23,0.075,0.0375,0.3,0.15,0.015,0.0075,https://models.dev/api.json
 inkling-2-mini,thinking-machines,models_dev,huggingface,thinkingmachines/Inkling-2-Mini,false,2026-11-24,2026-11-25,0.12,0.075,0.5,0.3,,,https://models.dev/api.json
+inkling-2-mini,thinking-machines,models_dev,huggingface,thinkingmachines/Inkling-2-Mini,false,2026-11-25,2026-11-28,0.075,0.06,0.3,0.24,,,https://models.dev/api.json
+inkling-2-mini,thinking-machines,models_dev,kilo,thinkingmachines/inkling-2-mini,false,2026-11-25,2026-11-28,0.0375,0.02625,0.15,0.105,0.0075,0.013125,https://models.dev/api.json
+inkling-2-mini,thinking-machines,models_dev,openrouter,thinkingmachines/inkling-2-mini,false,2026-11-25,2026-11-28,0.075,0.06,0.3,0.24,0.015,0.012,https://models.dev/api.json
+inkling-2-mini,thinking-machines,openrouter,openrouter,thinkingmachines/inkling-2-mini,false,2026-11-25,2026-11-28,0.075,0.06,0.3,0.24,,,https://openrouter.ai/api/v1/models
 inkling-2-small,thinking-machines,models_dev,kilo,thinkingmachines/inkling-2-small,false,2026-11-23,2026-11-24,0.15,0.075,0.5,0.25,0.03,0.015,https://models.dev/api.json
 inkling-2-small,thinking-machines,models_dev,huggingface,thinkingmachines/Inkling-2-Small,false,2026-11-24,2026-11-25,0.3,0.15,1,0.5,,,https://models.dev/api.json
+inkling-2-small,thinking-machines,models_dev,openrouter,thinkingmachines/inkling-2-small,false,2026-11-25,2026-11-28,0.3,0.15,1,0.5,0.03,0.03,https://models.dev/api.json
+inkling-2-small,thinking-machines,openrouter,openrouter,thinkingmachines/inkling-2-small,false,2026-11-25,2026-11-28,0.3,0.15,1,0.5,,,https://openrouter.ai/api/v1/models
 inkling-small,thinking-machines,litellm_git,together_ai,together_ai/thinkingmachines/Inkling-Small,false,2026-08-27,2026-08-28,0.5,0.5,1.2,1.2,,0.1,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
 inkling-small,thinking-machines,models_dev,nano-gpt,thinkingmachines/Inkling-Small,false,2026-10-17,2026-10-18,0.5,0.45,1.2,1.2,0.1,0.1,https://models.dev/api.json
 inkling-small,thinking-machines,models_dev,nano-gpt,thinkingmachines/Inkling-Small:thinking,false,2026-10-17,2026-10-18,0.5,0.45,1.2,1.2,0.1,0.1,https://models.dev/api.json
 inkling-small,thinking-machines,models_dev,llmtr,thinkingmachines/inkling-small,false,2026-10-21,2026-10-22,0.58,0.58,1.44,1.44,,0.116,https://models.dev/api.json
 inkling-small,thinking-machines,models_dev,aimlapi,thinkingmachines/inkling-small,false,2026-10-22,2026-10-23,0.797732,0.61364,1.980576,1.52352,0.159546,0.122728,https://models.dev/api.json
 inkling-small,thinking-machines,models_dev,huggingface,thinkingmachines/Inkling-Small,false,2026-11-24,2026-11-25,0.5,0.45,1.2,1.2,,,https://models.dev/api.json
+kimi-k2,moonshot,litellm_git,wandb,wandb/moonshotai/Kimi-K2-Instruct,false,2025-12-03,2025-12-04,135000,0.6,400000,2.5,,,https://raw.githubusercontent.com/BerriAI/litellm/8ee8cad4f1f8f472ed7031e668a983cd89e02c3b/model_prices_and_context_window.json
 kimi-k2,moonshot,litellm_git,novita,novita/moonshotai/kimi-k2-0905,false,2026-01-12,2026-01-13,4800,0.6,20000,2.5,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
+kimi-k2,moonshot,litellm_git,novita,novita/moonshotai/kimi-k2-instruct,false,2026-01-12,2026-01-13,4560,0.57,18400,2.3,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 kimi-k2,moonshot,models_dev,helicone,kimi-k2-0711,false,2026-10-21,2026-10-22,0.5700000000000001,0.57,2.3,2.3,,,https://models.dev/api.json
 kimi-k2,moonshot,models_dev,helicone,kimi-k2-0905,false,2026-10-21,2026-10-22,0.5,0.5,2,2,0.39999999999999997,0.4,https://models.dev/api.json
+kimi-k2,moonshot,models_dev,io-net,moonshotai/Kimi-K2-Instruct-0905,false,2026-10-21,2026-10-22,0.39,0.57,1.9,2.3,0.195,0.285,https://models.dev/api.json
 kimi-k2,moonshot,models_dev,aimlapi,moonshotai/kimi-k2,false,2026-10-22,2026-10-23,0.783978,0.60306,3.16342,2.4334,,,https://models.dev/api.json
 kimi-k2,moonshot,models_dev,aimlapi,moonshotai/kimi-k2-0905,false,2026-10-22,2026-10-23,1.3754,1.058,4.1262,3.174,,,https://models.dev/api.json
+kimi-k2,moonshot,models_dev,huggingface,moonshotai/Kimi-K2-Instruct,false,2026-11-23,2026-11-24,1,0.57,3,2.3,,,https://models.dev/api.json
+kimi-k2,moonshot,models_dev,huggingface,moonshotai/Kimi-K2-Instruct-0905,false,2026-11-23,2026-11-24,1,0.6,3,2.5,,,https://models.dev/api.json
 kimi-k2-5,moonshot,litellm_git,azure_ai,azure_ai/kimi-k2.5,false,2026-09-02,2026-09-03,0.6,0.6,3,3,,0.1,https://raw.githubusercontent.com/BerriAI/litellm/5be7ed1307478a7f53d7d84914b2d453cde224cf/model_prices_and_context_window.json
 kimi-k2-5,moonshot,litellm_git,openrouter,openrouter/moonshotai/kimi-k2.5,false,2026-09-04,2026-09-05,0.6,0.45,3,2.25,0.1,0.07,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 kimi-k2-5,moonshot,models_dev,openrouter,moonshotai/kimi-k2.5,false,2026-10-09,2026-10-10,0.45,0.5,2.25,2.5,0.07,0.15,https://models.dev/api.json
@@ -2639,6 +2697,10 @@ kimi-k2-5,moonshot,models_dev,nano-gpt,moonshotai/kimi-k2.5:thinking,false,2026-
 kimi-k2-5,moonshot,models_dev,openrouter,moonshotai/kimi-k2.5,false,2026-11-11,2026-11-16,0.532,0.5,3.325,2.5,0.209,0.15,https://models.dev/api.json
 kimi-k2-5,moonshot,openrouter,openrouter,moonshotai/kimi-k2.5,false,2026-11-11,2026-11-16,0.532,0.5,3.325,2.5,,,https://openrouter.ai/api/v1/models
 kimi-k2-5,moonshot,models_dev,huggingface,moonshotai/Kimi-K2.5,false,2026-11-24,2026-11-25,0.6,0.6,3,3,0.1,,https://models.dev/api.json
+kimi-k2-5,moonshot,models_dev,azure,kimi-k2.5,false,2026-11-25,2026-11-28,0.6,0.6,3,3,,0.1,https://models.dev/api.json
+kimi-k2-5,moonshot,models_dev,azure-cognitive-services,kimi-k2.5,false,2026-11-25,2026-11-28,0.6,0.6,3,3,,0.1,https://models.dev/api.json
+kimi-k2-5,moonshot,models_dev,openrouter,moonshotai/kimi-k2.5,false,2026-11-25,2026-11-28,0.5,0.6,2.5,3,0.15,,https://models.dev/api.json
+kimi-k2-5,moonshot,openrouter,openrouter,moonshotai/kimi-k2.5,false,2026-11-25,2026-11-28,0.5,0.6,2.5,3,,,https://openrouter.ai/api/v1/models
 kimi-k2-6,moonshot,litellm_git,azure_ai,azure_ai/kimi-k2.6,false,2026-09-02,2026-09-03,0.95,0.95,4,4,,0.16,https://raw.githubusercontent.com/BerriAI/litellm/5be7ed1307478a7f53d7d84914b2d453cde224cf/model_prices_and_context_window.json
 kimi-k2-6,moonshot,litellm_git,openrouter,openrouter/moonshotai/kimi-k2.6,false,2026-09-28,2026-09-29,0.95,0.65,4,3.41,0.16,0.15,https://raw.githubusercontent.com/BerriAI/litellm/e7460f1cff7fc1b6e323c9e4a969fe6b4609d164/model_prices_and_context_window.json
 kimi-k2-6,moonshot,litellm_git,openrouter,openrouter/moonshotai/kimi-k2.6,false,2026-10-01,2026-10-02,0.65,0.43415,3.41,1.828,0.15,0.07312,https://raw.githubusercontent.com/BerriAI/litellm/ac59ec6824ba609b5b2556f98fa2e24d56c98e73/model_prices_and_context_window.json
@@ -2712,6 +2774,7 @@ kimi-k2-6,moonshot,models_dev,inceptron,moonshotai/Kimi-K2.6,false,2026-11-19,20
 kimi-k2-6,moonshot,models_dev,inceptron,moonshotai/Kimi-K2.6,false,2026-11-20,2026-11-21,0.546,0.5648,3.15,2.788,0.19,0.19,https://models.dev/api.json
 kimi-k2-6,moonshot,models_dev,inceptron,moonshotai/Kimi-K2.6,false,2026-11-23,2026-11-24,0.5648,0.5655,2.788,3.06,0.19,0.15,https://models.dev/api.json
 kimi-k2-6,moonshot,models_dev,huggingface,moonshotai/Kimi-K2.6,false,2026-11-24,2026-11-25,0.95,0.57,4,2.4,0.16,,https://models.dev/api.json
+kimi-k2-6,moonshot,models_dev,inceptron,moonshotai/Kimi-K2.6,false,2026-11-25,2026-11-28,0.5655,0.6045,3.06,3.384,0.15,0.15,https://models.dev/api.json
 kimi-k2-7-code,moonshot,litellm_git,together_ai,together_ai/moonshotai/Kimi-K2.7-Code,false,2026-08-27,2026-08-28,0.95,0.95,4,4,,0.19,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
 kimi-k2-7-code,moonshot,litellm_git,openrouter,openrouter/moonshotai/kimi-k2.7-code,false,2026-09-12,2026-09-13,0.66,0.71,3.4,3.5,0.18,0.15,https://raw.githubusercontent.com/BerriAI/litellm/30f33a949b8a2bb890a2baee18e2ab7ab015a4f7/model_prices_and_context_window.json
 kimi-k2-7-code,moonshot,litellm_git,openrouter,openrouter/moonshotai/kimi-k2.7-code,false,2026-09-15,2026-09-16,0.71,0.7062,3.5,3.21,0.15,0.18,https://raw.githubusercontent.com/BerriAI/litellm/319f427c403043756917aea39cab89021a7f92e7/model_prices_and_context_window.json
@@ -2867,6 +2930,7 @@ kimi-k3,moonshot,models_dev,llmgateway,kimi-k3,false,2026-11-18,2026-11-19,3,2.7
 kimi-k3,moonshot,models_dev,llmgateway-providers,canopywave/kimi-k3,false,2026-11-18,2026-11-19,3,2.7,15,13.5,0.3,0.27,https://models.dev/api.json
 kimi-k3,moonshot,models_dev,tencent-token-plan,kimi-k3,false,2026-11-23,2026-11-24,3.00261708,2.994326,15.01308541,14.971631,0.30026171,0.299433,https://models.dev/api.json
 kimi-k3,moonshot,models_dev,huggingface,moonshotai/Kimi-K3,false,2026-11-24,2026-11-25,3,0.276,15,9.6,,,https://models.dev/api.json
+kimi-k3,moonshot,models_dev,aimlapi,moonshot/kimi-k3,false,2026-11-25,2026-11-28,3,0.6,15,15,0.3,0.2,https://models.dev/api.json
 kimi-k3-1-pro,moonshot,models_dev,venice,kimi-k3-1-pro,false,2026-10-30,2026-10-31,3,3.75,15,18.75,0.30000000000000004,0.375,https://models.dev/api.json
 kimi-k3-1-pro,moonshot,models_dev,llmgateway,kimi-k3.1-pro,false,2026-11-04,2026-11-05,2,1.9,10,9.5,0.2,0.19,https://models.dev/api.json
 kimi-k3-1-pro,moonshot,models_dev,venice,kimi-k3-1-pro,false,2026-11-04,2026-11-05,3.75,2,18.75,10,0.375,0.2,https://models.dev/api.json
@@ -3062,6 +3126,8 @@ llama-3-3-70b-instruct,meta,models_dev,edenai,greenpt/llama-3.3-70b-instruct,fal
 llama-3-3-70b-instruct,meta,models_dev,edenai,ionos/meta-llama/Llama-3.3-70B-Instruct,false,2026-11-24,2026-11-25,0.711035,0.712595,0.711035,0.712595,,,https://models.dev/api.json
 llama-3-3-70b-instruct,meta,models_dev,edenai,scaleway/llama-3.3-70b-instruct,false,2026-11-24,2026-11-25,0.98451,0.98667,0.98451,0.98667,,,https://models.dev/api.json
 llama-3-3-70b-instruct,meta,models_dev,huggingface,meta-llama/Llama-3.3-70B-Instruct,false,2026-11-24,2026-11-25,0.59,0.1,0.79,0.32,,,https://models.dev/api.json
+llama-3-3-70b-instruct,meta,models_dev,openrouter,meta-llama/llama-3.3-70b-instruct,false,2026-11-25,2026-11-28,0.71,0.59,0.71,0.79,0.71,0.295,https://models.dev/api.json
+llama-3-3-70b-instruct,meta,openrouter,openrouter,meta-llama/llama-3.3-70b-instruct,false,2026-11-25,2026-11-28,0.71,0.59,0.71,0.79,,,https://openrouter.ai/api/v1/models
 llama-3-70b-instruct,meta,litellm_git,openrouter,openrouter/meta-llama/llama-3-70b-instruct,false,2024-05-10,2024-05-11,0.8,0.59,0.8,0.79,,,https://raw.githubusercontent.com/BerriAI/litellm/3be5b72b43ce05851aa34ba05744ea95d1afce70/model_prices_and_context_window.json
 llama-3-70b-instruct,meta,litellm_git,deepinfra,deepinfra/meta-llama/Meta-Llama-3-70B-Instruct,false,2025-08-21,2025-08-22,0.59,0.3,0.79,0.4,,,https://raw.githubusercontent.com/BerriAI/litellm/9c4a86e98e781eabdb3c504dda33b40c3d691ec8/model_prices_and_context_window.json
 llama-3-70b-instruct,meta,litellm_git,novita,novita/meta-llama/llama-3-70b-instruct,false,2026-01-12,2026-01-13,5100,0.51,7400,0.74,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
@@ -3177,6 +3243,7 @@ minimax-m2,minimax,openrouter,openrouter,minimax/minimax-m2,false,2026-10-13,202
 minimax-m2,minimax,models_dev,minimax-cn,MiniMax-M2,false,2026-10-19,2026-10-20,0.3,0.3137,1.2,1.2549,,0.0314,https://models.dev/api.json
 minimax-m2,minimax,models_dev,kilo,minimax/minimax-m2,false,2026-10-27,2026-10-28,0.3,0.255,1.2,1.02,,,https://models.dev/api.json
 minimax-m2,minimax,models_dev,kilo,minimax/minimax-m2,false,2026-11-04,2026-11-16,0.255,0.3,1.02,1.2,,0.03,https://models.dev/api.json
+minimax-m2,minimax,models_dev,concentrate,minimax-m2,false,2026-11-25,2026-11-28,0.3,0.3,1.2,1.2,0.03,,https://models.dev/api.json
 minimax-m2-1,minimax,litellm_git,novita,novita/minimax/minimax-m2.1,false,2026-01-12,2026-01-13,3000,0.3,12000,1.2,300,0.03,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 minimax-m2-1,minimax,litellm_git,openrouter,openrouter/minimax/minimax-m2.1,false,2026-09-04,2026-09-05,0.27,0.3,1.2,1.2,0,0.03,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 minimax-m2-1,minimax,models_dev,nano-gpt,minimax/minimax-m2.1,false,2026-10-06,2026-10-07,0.33,0.33,1.32,1.32,0.165,0.03,https://models.dev/api.json
@@ -3188,6 +3255,7 @@ minimax-m2-1,minimax,models_dev,nano-gpt,minimax/minimax-m2.1,false,2026-11-11,2
 minimax-m2-1,minimax,models_dev,kilo,minimax/minimax-m2.1,false,2026-11-17,2026-11-18,0.3,0.3,1.2,1.2,0.03,0.15,https://models.dev/api.json
 minimax-m2-1,minimax,models_dev,vercel,minimax/minimax-m2.1,false,2026-11-17,2026-11-18,0.3,0.3,1.2,1.2,0.03,0.15,https://models.dev/api.json
 minimax-m2-1,minimax,models_dev,nano-gpt,minimax/minimax-m2.1,false,2026-11-21,2026-11-22,0.3,0.33,1.2,1.32,0.15,0.165,https://models.dev/api.json
+minimax-m2-1,minimax,models_dev,concentrate,minimax-m2-1,false,2026-11-25,2026-11-28,0.3,0.3,1.2,1.2,0.03,,https://models.dev/api.json
 minimax-m2-5,minimax,litellm_git,openrouter,openrouter/minimax/minimax-m2.5,false,2026-09-04,2026-09-05,0.3,0.27,1.1,1.08,0.15,0.027,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 minimax-m2-5,minimax,models_dev,cortecs,minimax-m2.5,false,2026-10-04,2026-10-05,0.296,0.348,1.186,1.39,0.075,0.075,https://models.dev/api.json
 minimax-m2-5,minimax,models_dev,openrouter,minimax/minimax-m2.5,false,2026-10-14,2026-10-15,0.27,0.27,1.08,0.95,0.027,0.03,https://models.dev/api.json
@@ -3273,6 +3341,7 @@ minimax-m3,minimax,models_dev,wally,minimax-m3,false,2026-11-11,2026-11-16,0.33,
 minimax-m3,minimax,models_dev,kilo,minimax/minimax-m3,false,2026-11-20,2026-11-21,0.3,0.23,1.2,0.96,0.06,0.05,https://models.dev/api.json
 minimax-m3,minimax,models_dev,openrouter,minimax/minimax-m3,false,2026-11-20,2026-11-21,0.3,0.23,1.2,0.96,0.06,0.05,https://models.dev/api.json
 minimax-m3,minimax,models_dev,huggingface,MiniMaxAI/MiniMax-M3,false,2026-11-23,2026-11-24,0.3,0.23,1.2,0.96,,,https://models.dev/api.json
+minimax-m3,minimax,models_dev,kilo,minimax/minimax-m3,false,2026-11-25,2026-11-28,0.23,0.224,0.96,0.88,0.05,0.0448,https://models.dev/api.json
 minimax-m3-1-flash,minimax,models_dev,minimax-cn,MiniMax-M3.1-Flash,false,2026-10-19,2026-10-20,0.15,0.1494,0.6,0.5976,0.015,0.0149,https://models.dev/api.json
 minimax-m3-1-flash,minimax,models_dev,vercel,minimax/minimax-m3.1-flash,false,2026-10-22,2026-10-23,0,0.15,0,0.6,,0.015,https://models.dev/api.json
 minimax-m3-1-flash,minimax,models_dev,llmgateway,minimax-m3.1-flash,false,2026-10-23,2026-10-24,0.15,0.1,0.6,0.5,0.015,0.005,https://models.dev/api.json
@@ -3317,10 +3386,13 @@ minimax-m3-1-flash,minimax,models_dev,huggingface,MiniMaxAI/MiniMax-M3.1-Flash,f
 minimax-m3-1-flash,minimax,models_dev,kilo,minimax/minimax-m3.1-flash,false,2026-11-24,2026-11-25,0.1,0.075,0.4,0.3,0.025,0.0075,https://models.dev/api.json
 minimax-m3-1-flash,minimax,models_dev,obscurify,minimax/minimax-m3.1-flash,false,2026-11-24,2026-11-25,0.13,0.0975,0.52,0.39,0.0325,0.00975,https://models.dev/api.json
 minimax-m3-1-flash,minimax,models_dev,openrouter,minimax/minimax-m3.1-flash,false,2026-11-24,2026-11-25,0.1,0.075,0.4,0.3,0.025,0.0075,https://models.dev/api.json
+minimax-m3-1-flash,minimax,models_dev,obscurify,minimax/minimax-m3.1-flash,false,2026-11-25,2026-11-28,0.0975,0.16575,0.39,0.663,0.00975,0.016575,https://models.dev/api.json
 ministral-14b-2512,mistral,litellm_git,mistral,mistral/ministral-14b-2512,true,2026-09-04,2026-09-05,0.2,0.2,0.2,0.2,,0.02,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 ministral-14b-2512,mistral,litellm_git,openrouter,openrouter/mistralai/ministral-14b-2512,false,2026-09-17,2026-09-18,0.2,0.2,0.2,0.2,,0.02,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
 ministral-14b-2512,mistral,models_dev,aimlapi,mistralai/ministral-14b-2512,false,2026-10-22,2026-10-23,0.48139,0.3703,0.48139,0.3703,0.027508,0.02116,https://models.dev/api.json
 ministral-14b-2512,mistral,models_dev,nano-gpt,mistralai/ministral-14b-2512,false,2026-11-11,2026-11-16,0.2,0.2,0.2,0.2,0.1,0.02,https://models.dev/api.json
+ministral-3-3b,mistral,models_dev,concentrate,ministral-3-3b,false,2026-11-25,2026-11-28,0.1,0.1,0.1,0.1,,0.01,https://models.dev/api.json
+ministral-3-8b,mistral,models_dev,concentrate,ministral-3-8b,false,2026-11-25,2026-11-28,0.15,0.15,0.15,0.15,,0.015,https://models.dev/api.json
 ministral-3b,mistral,models_dev,vercel,mistral/ministral-3b,false,2026-10-19,2026-10-20,0.04,0.1,0.04,0.1,,0.01,https://models.dev/api.json
 ministral-3b-2512,mistral,litellm_git,mistral,mistral/ministral-3b-2512,true,2026-09-04,2026-09-05,0.1,0.1,0.1,0.1,,0.01,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 ministral-3b-2512,mistral,litellm_git,openrouter,openrouter/mistralai/ministral-3b-2512,false,2026-09-17,2026-09-18,0.1,0.1,0.1,0.1,,0.01,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
@@ -3382,8 +3454,10 @@ mistral-nemo,mistral,models_dev,vercel,mistral/mistral-nemo,false,2026-10-08,202
 mistral-nemo,mistral,openrouter,openrouter,mistralai/mistral-nemo,false,2026-10-08,2026-10-09,0.019,0.029,0.03,0.03,,,https://openrouter.ai/api/v1/models
 mistral-nemo,mistral,models_dev,vercel,mistral/mistral-nemo,false,2026-10-09,2026-10-10,0.019,0.029,0.03,0.03,,,https://models.dev/api.json
 mistral-nemo,mistral,models_dev,aimlapi,mistralai/mistral-nemo,false,2026-10-22,2026-10-23,0.20631,0.1587,0.233818,0.17986,0.20631,0.1587,https://models.dev/api.json
+mistral-nemo,mistral,models_dev,kilo,mistralai/mistral-nemo,false,2026-11-25,2026-11-28,0.15,0.023,0.15,0.03,0.015,0.015,https://models.dev/api.json
 mistral-saba,mistral,models_dev,aimlapi,mistralai/mistral-saba,false,2026-10-22,2026-10-23,0.27508,0.2116,0.82524,0.6348,0.027508,0.02116,https://models.dev/api.json
 mistral-small-24b-instruct-2501,mistral,models_dev,aimlapi,mistralai/mistral-small-24b-instruct-2501,false,2026-10-22,2026-10-23,0.06877,0.0529,0.110032,0.08464,,,https://models.dev/api.json
+mistral-small-24b-instruct-2501,mistral,models_dev,kilo,mistralai/mistral-small-24b-instruct-2501,false,2026-11-25,2026-11-28,0.05,0.04,0.08,0.064,,,https://models.dev/api.json
 mistral-small-2603,mistral,litellm_git,mistral,mistral/mistral-small-2603,true,2026-08-29,2026-08-30,0.15,0.15,0.6,0.6,,0.015,https://raw.githubusercontent.com/BerriAI/litellm/10631eb834c7802aa61611e807474170b8a4d425/model_prices_and_context_window.json
 mistral-small-2603,mistral,models_dev,tempr,mistral/mistral-small-2603,false,2026-10-21,2026-10-22,0.15,0.15,0.6,0.6,,0.015,https://models.dev/api.json
 mistral-small-2603,mistral,models_dev,aimlapi,mistralai/mistral-small-2603,false,2026-10-22,2026-10-23,0.257888,0.198375,1.03155,0.7935,0.020631,0.01587,https://models.dev/api.json
@@ -3405,6 +3479,7 @@ mistral-small-3-2-24b-instruct,mistral,models_dev,nano-gpt,mistralai/mistral-sma
 mistral-small-3-2-24b-instruct,mistral,models_dev,openrouter,mistralai/mistral-small-3.2-24b-instruct,false,2026-11-17,2026-11-18,0.1,0.075,0.3,0.2,0.01,,https://models.dev/api.json
 mistral-small-3-2-24b-instruct,mistral,openrouter,openrouter,mistralai/mistral-small-3.2-24b-instruct,false,2026-11-17,2026-11-18,0.1,0.075,0.3,0.2,,,https://openrouter.ai/api/v1/models
 mistral-small-3-2-24b-instruct,mistral,models_dev,venice,mistral-small-3-2-24b-instruct,false,2026-11-24,2026-11-25,0.09375,0.075,0.25,0.2,,,https://models.dev/api.json
+mistral-small-3-2-24b-instruct,mistral,models_dev,kilo,mistralai/mistral-small-3.2-24b-instruct,false,2026-11-25,2026-11-28,0.075,0.06,0.2,0.16,,,https://models.dev/api.json
 mixtral-8x22b-instruct,mistral,litellm_git,openrouter,openrouter/mistralai/mixtral-8x22b-instruct,false,2026-09-04,2026-09-05,0.65,2,0.65,6,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 mixtral-8x22b-instruct,mistral,litellm_git,openrouter,openrouter/mistralai/mixtral-8x22b-instruct,false,2026-09-17,2026-09-18,2,2,6,6,,0.2,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
 mixtral-8x22b-instruct,mistral,models_dev,aimlapi,mistralai/mixtral-8x22b-instruct,false,2026-10-22,2026-10-23,2.7508,2.116,8.2524,6.348,0.27508,0.2116,https://models.dev/api.json
@@ -3420,6 +3495,8 @@ muse-glimmer-30b,meta,models_dev,aimlapi,meta/muse-glimmer-30b,false,2026-10-22,
 muse-glimmer-30b,meta,models_dev,edenai,flexai/Muse-Glimmer-30B,false,2026-11-11,2026-11-16,0.3,0.35,1.2,1.5,0.045,0.04,https://models.dev/api.json
 muse-glimmer-30b,meta,models_dev,openrouter,meta/muse-glimmer-30b,false,2026-11-16,2026-11-17,0.3,0.35,1.2,1.5,0.04,0.04,https://models.dev/api.json
 muse-glimmer-30b,meta,openrouter,openrouter,meta/muse-glimmer-30b,false,2026-11-16,2026-11-17,0.3,0.35,1.2,1.5,,,https://openrouter.ai/api/v1/models
+muse-glimmer-30b,meta,models_dev,openrouter,meta/muse-glimmer-30b,false,2026-11-25,2026-11-28,0.35,0.3,1.5,1.2,0.04,0.04,https://models.dev/api.json
+muse-glimmer-30b,meta,openrouter,openrouter,meta/muse-glimmer-30b,false,2026-11-25,2026-11-28,0.35,0.3,1.5,1.2,,,https://openrouter.ai/api/v1/models
 muse-spark-1-1,meta,models_dev,aimlapi,meta/muse-spark-1.1,false,2026-10-22,2026-10-23,1.71925,1.3225,5.84545,4.4965,0.20631,0.1587,https://models.dev/api.json
 muse-spark-1-2,meta,models_dev,aimlapi,meta/muse-spark-1.2,false,2026-10-22,2026-10-23,1.71925,1.3225,5.84545,4.4965,0.20631,0.1587,https://models.dev/api.json
 muse-spark-1-2-contributor,meta,models_dev,llmtr,meta/muse-spark-1.2-contributor,false,2026-10-21,2026-10-22,0.1,0.1,0.2,0.2,,0.002,https://models.dev/api.json
@@ -3450,6 +3527,8 @@ nemotron-3-5-lightning,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-lightnin
 nemotron-3-5-lightning,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-lightning,false,2026-11-23,2026-11-24,0.07,0.05,0.2,0.2,,,https://openrouter.ai/api/v1/models
 nemotron-3-5-lightning,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-lightning,false,2026-11-24,2026-11-25,0.05,0.07,0.2,0.2,0.01,0.04,https://models.dev/api.json
 nemotron-3-5-lightning,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-lightning,false,2026-11-24,2026-11-25,0.05,0.07,0.2,0.2,,,https://openrouter.ai/api/v1/models
+nemotron-3-5-lightning,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-lightning,false,2026-11-25,2026-11-28,0.07,0.05,0.2,0.2,0.04,0.01,https://models.dev/api.json
+nemotron-3-5-lightning,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-lightning,false,2026-11-25,2026-11-28,0.07,0.05,0.2,0.2,,,https://openrouter.ai/api/v1/models
 nemotron-3-5-super-vl,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-10-16,2026-10-17,0.15,0.1,0.5,0.4,0.02,0.08,https://models.dev/api.json
 nemotron-3-5-super-vl,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-10-16,2026-10-17,0.15,0.1,0.5,0.4,,,https://openrouter.ai/api/v1/models
 nemotron-3-5-super-vl,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-10-19,2026-10-20,0.1,0.15,0.4,0.5,0.08,0.02,https://models.dev/api.json
@@ -3462,6 +3541,8 @@ nemotron-3-5-super-vl,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-super-vl,
 nemotron-3-5-super-vl,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-11-11,2026-11-16,0.15,0.15,0.47,0.5,,,https://openrouter.ai/api/v1/models
 nemotron-3-5-super-vl,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-11-20,2026-11-21,0.15,0.15,0.5,0.47,0.02,0.02,https://models.dev/api.json
 nemotron-3-5-super-vl,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-11-20,2026-11-21,0.15,0.15,0.5,0.47,,,https://openrouter.ai/api/v1/models
+nemotron-3-5-super-vl,nvidia,models_dev,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-11-25,2026-11-28,0.15,0.15,0.47,0.45,0.02,0.02,https://models.dev/api.json
+nemotron-3-5-super-vl,nvidia,openrouter,openrouter,nvidia/nemotron-3.5-super-vl,false,2026-11-25,2026-11-28,0.15,0.15,0.47,0.45,,,https://openrouter.ai/api/v1/models
 nemotron-3-nano-30b-a3b,nvidia,litellm_git,openrouter,openrouter/nvidia/nemotron-3-nano-30b-a3b,false,2026-09-17,2026-09-18,0.05,0.06,0.2,0.24,0.03,0.03,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
 nemotron-3-nano-30b-a3b,nvidia,litellm_git,openrouter,openrouter/nvidia/nemotron-3-nano-30b-a3b,false,2026-09-20,2026-09-21,0.06,0.05,0.24,0.2,0.03,0.03,https://raw.githubusercontent.com/BerriAI/litellm/707c7493cfce501fa9da5f17fc3580e68310d947/model_prices_and_context_window.json
 nemotron-3-nano-30b-a3b,nvidia,models_dev,kilo,nvidia/nemotron-3-nano-30b-a3b,false,2026-10-07,2026-10-08,0.05,0.05,0.2,0.2,0.03,,https://models.dev/api.json
@@ -3543,6 +3624,7 @@ qwen2-5-72b-instruct,alibaba,litellm_git,deepinfra,deepinfra/Qwen/Qwen2.5-72B-In
 qwen2-5-72b-instruct,alibaba,models_dev,nano-gpt,qwen/qwen-2.5-72b-instruct,false,2026-10-17,2026-10-18,0.357,0.36,0.408,0.4,0.1785,0.1785,https://models.dev/api.json
 qwen2-5-72b-instruct,alibaba,models_dev,siliconflow-cn,Qwen/Qwen2.5-72B-Instruct,false,2026-10-21,2026-10-22,0.59,0.61721808,0.59,0.61721808,,,https://models.dev/api.json
 qwen2-5-72b-instruct,alibaba,models_dev,nano-gpt,qwen/qwen-2.5-72b-instruct,false,2026-11-11,2026-11-16,0.36,0.36,0.4,0.4,0.1785,0.18,https://models.dev/api.json
+qwen2-5-72b-instruct,alibaba,models_dev,kilo,qwen/qwen-2.5-72b-instruct,false,2026-11-25,2026-11-28,0.36,0.288,0.4,0.32,,,https://models.dev/api.json
 qwen2-5-7b-instruct,alibaba,litellm_git,novita,novita/qwen/qwen2.5-7b-instruct,false,2026-01-12,2026-01-13,560,0.07,560,0.07,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen2-5-7b-instruct,alibaba,models_dev,siliconflow-cn,Qwen/Qwen2.5-7B-Instruct,false,2026-10-21,2026-10-22,0.05,0,0.05,0,,,https://models.dev/api.json
 qwen2-5-coder-32b-instruct,alibaba,litellm_git,openrouter,openrouter/qwen/qwen-2.5-coder-32b-instruct,false,2026-09-04,2026-09-05,0.18,0.66,0.18,1,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
@@ -3565,6 +3647,7 @@ qwen3-14b,alibaba,models_dev,openrouter,qwen/qwen3-14b,false,2026-11-11,2026-11-
 qwen3-14b,alibaba,openrouter,openrouter,qwen/qwen3-14b,false,2026-11-11,2026-11-16,0.1,0.12,0.22,0.24,,,https://openrouter.ai/api/v1/models
 qwen3-14b,alibaba,models_dev,llmgateway,qwen3-14b,false,2026-11-16,2026-11-17,0.076,0.0608,0.228,0.1824,,,https://models.dev/api.json
 qwen3-14b,alibaba,models_dev,llmgateway-providers,greenference/qwen3-14b,false,2026-11-16,2026-11-17,0.076,0.0608,0.228,0.1824,,,https://models.dev/api.json
+qwen3-14b,alibaba,models_dev,kilo,qwen/qwen3-14b,false,2026-11-25,2026-11-28,0.12,0.096,0.24,0.192,,,https://models.dev/api.json
 qwen3-235b-a22b,alibaba,litellm_git,deepinfra,deepinfra/Qwen/Qwen3-235B-A22B,false,2025-10-03,2025-10-04,0.13,0.18,0.6,0.54,,,https://raw.githubusercontent.com/BerriAI/litellm/cb385e080f41af040e86ecf79006ec914c5d2304/model_prices_and_context_window.json
 qwen3-235b-a22b,alibaba,litellm_git,novita,novita/qwen/qwen3-235b-a22b-fp8,false,2026-01-12,2026-01-13,1600,0.2,6400,0.8,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-235b-a22b,alibaba,models_dev,nano-gpt,qwen/qwen3-235b-a22b,false,2026-10-17,2026-10-18,0.3,0.0875,0.5,0.35,0.15,0.0175,https://models.dev/api.json
@@ -3580,6 +3663,7 @@ qwen3-235b-a22b-2507,alibaba,models_dev,kilo,qwen/qwen3-235b-a22b-2507,false,202
 qwen3-235b-a22b-2507,alibaba,models_dev,kilo,qwen/qwen3-235b-a22b-2507,false,2026-11-03,2026-11-04,0.09,0.14,0.55,0.8,,0.05,https://models.dev/api.json
 qwen3-235b-a22b-2507,alibaba,models_dev,openrouter,qwen/qwen3-235b-a22b-2507,false,2026-11-03,2026-11-04,0.09,0.14,0.55,0.8,,0.05,https://models.dev/api.json
 qwen3-235b-a22b-2507,alibaba,openrouter,openrouter,qwen/qwen3-235b-a22b-2507,false,2026-11-03,2026-11-04,0.09,0.14,0.55,0.8,,,https://openrouter.ai/api/v1/models
+qwen3-235b-a22b-2507,alibaba,models_dev,kilo,qwen/qwen3-235b-a22b-2507,false,2026-11-25,2026-11-28,0.14,0.072,0.8,0.44,0.05,,https://models.dev/api.json
 qwen3-235b-a22b-thinking-2507,alibaba,litellm_git,deepinfra,deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507,false,2025-10-03,2025-10-04,0.13,0.3,0.6,2.9,,,https://raw.githubusercontent.com/BerriAI/litellm/cb385e080f41af040e86ecf79006ec914c5d2304/model_prices_and_context_window.json
 qwen3-235b-a22b-thinking-2507,alibaba,litellm_git,novita,novita/qwen/qwen3-235b-a22b-thinking-2507,false,2026-01-12,2026-01-13,2400,0.3,24000,3,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-235b-a22b-thinking-2507,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3-235b-a22b-thinking-2507,false,2026-09-04,2026-09-05,0.11,0.23,0.6,2.3,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
@@ -3622,6 +3706,8 @@ qwen3-30b-a3b-instruct-2507,alibaba,models_dev,kilo,qwen/qwen3-30b-a3b-instruct-
 qwen3-30b-a3b-instruct-2507,alibaba,models_dev,openrouter,qwen/qwen3-30b-a3b-instruct-2507,false,2026-10-27,2026-10-28,0.1,0.1,0.3,0.3,,0.1,https://models.dev/api.json
 qwen3-30b-a3b-instruct-2507,alibaba,litellm,nebius,nebius/Qwen/Qwen3-30B-A3B-Instruct-2507,false,2026-11-03,2026-11-04,0.1,0.1,0.3,0.3,,0.1,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json
 qwen3-30b-a3b-instruct-2507,alibaba,models_dev,huggingface,Qwen/Qwen3-30B-A3B-Instruct-2507,false,2026-11-24,2026-11-25,0.09,0.1,0.3,0.3,,,https://models.dev/api.json
+qwen3-30b-a3b-instruct-2507,alibaba,models_dev,ambient,qwen/qwen3-30b-a3b-instruct-2507,false,2026-11-25,2026-11-28,0.09,0.045,0.3,0.62,0.09,0.02,https://models.dev/api.json
+qwen3-30b-a3b-instruct-2507,alibaba,models_dev,kilo,qwen/qwen3-30b-a3b-instruct-2507,false,2026-11-25,2026-11-28,0.1,0.09,0.3,0.3,0.1,,https://models.dev/api.json
 qwen3-32b,alibaba,litellm_git,deepinfra,deepinfra/Qwen/Qwen3-32B,false,2025-10-03,2025-10-04,0.1,0.1,0.3,0.28,,,https://raw.githubusercontent.com/BerriAI/litellm/cb385e080f41af040e86ecf79006ec914c5d2304/model_prices_and_context_window.json
 qwen3-32b,alibaba,litellm_git,novita,novita/qwen/qwen3-32b-fp8,false,2026-01-12,2026-01-13,800,0.1,3600,0.45,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-32b,alibaba,litellm_git,deepinfra,deepinfra/Qwen/Qwen3-32B,false,2026-08-27,2026-08-28,0.1,0.08,0.28,0.28,,,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
@@ -3642,6 +3728,8 @@ qwen3-5-122b-a10b,alibaba,models_dev,openrouter,qwen/qwen3.5-122b-a10b,false,202
 qwen3-5-122b-a10b,alibaba,openrouter,openrouter,qwen/qwen3.5-122b-a10b,false,2026-10-25,2026-10-26,0.4,0.26,3.2,2.08,,,https://openrouter.ai/api/v1/models
 qwen3-5-122b-a10b,alibaba,models_dev,nano-gpt,qwen/qwen3.5-122b-a10b,false,2026-11-11,2026-11-16,0.26,0.26,2.08,2.08,0.103788,0.13,https://models.dev/api.json
 qwen3-5-122b-a10b,alibaba,models_dev,nano-gpt,qwen/qwen3.5-122b-a10b:thinking,false,2026-11-11,2026-11-16,0.26,0.26,2.08,2.08,0.103788,0.13,https://models.dev/api.json
+qwen3-5-122b-a10b,alibaba,models_dev,nano-gpt,qwen/qwen3.5-122b-a10b,false,2026-11-25,2026-11-28,0.26,0.4,2.08,3.2,0.13,0.2,https://models.dev/api.json
+qwen3-5-122b-a10b,alibaba,models_dev,nano-gpt,qwen/qwen3.5-122b-a10b:thinking,false,2026-11-25,2026-11-28,0.26,0.4,2.08,3.2,0.13,0.2,https://models.dev/api.json
 qwen3-5-27b,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3.5-27b,false,2026-09-04,2026-09-05,0.3,0.195,2.4,1.56,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 qwen3-5-27b,alibaba,models_dev,openrouter,qwen/qwen3.5-27b,false,2026-10-07,2026-10-08,0.195,0.26,1.56,2.6,,,https://models.dev/api.json
 qwen3-5-27b,alibaba,openrouter,openrouter,qwen/qwen3.5-27b,false,2026-10-07,2026-10-08,0.195,0.26,1.56,2.6,,,https://openrouter.ai/api/v1/models
@@ -3686,6 +3774,7 @@ qwen3-5-35b-a3b,alibaba,openrouter,openrouter,qwen/qwen3.5-35b-a3b,false,2026-10
 qwen3-5-35b-a3b,alibaba,models_dev,siliconflow,Qwen/Qwen3.5-35B-A3B,false,2026-10-21,2026-10-22,0.24,0.24,1.8,1.8,,0.15,https://models.dev/api.json
 qwen3-5-35b-a3b,alibaba,models_dev,siliconflow-cn,Qwen/Qwen3.5-35B-A3B,false,2026-10-21,2026-10-22,0.23,0.05977899,1.86,0.47823193,,,https://models.dev/api.json
 qwen3-5-35b-a3b,alibaba,models_dev,huggingface,Qwen/Qwen3.5-35B-A3B,false,2026-11-24,2026-11-25,0.25,0.14,2,1,,,https://models.dev/api.json
+qwen3-5-35b-a3b,alibaba,models_dev,kilo,qwen/qwen3.5-35b-a3b,false,2026-11-25,2026-11-28,0.1625,0.065,1.3,0.75,,0.0325,https://models.dev/api.json
 qwen3-5-397b-a17b,alibaba,litellm_git,together_ai,together_ai/Qwen/Qwen3.5-397B-A17B,false,2026-08-27,2026-08-28,0.6,0.6,3.6,3.6,,0.35,https://raw.githubusercontent.com/BerriAI/litellm/e55dbaf34710783ce263a2d1a3039953c4a05148/model_prices_and_context_window.json
 qwen3-5-397b-a17b,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3.5-397b-a17b,false,2026-09-04,2026-09-05,0.6,0.55,3.6,3.5,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 qwen3-5-397b-a17b,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3.5-397b-a17b,false,2026-09-17,2026-09-18,0.55,0.55,3.5,3.5,,0.225,https://raw.githubusercontent.com/BerriAI/litellm/ec05cd01282807ceed577f8b19165852bc10145e/model_prices_and_context_window.json
@@ -3715,6 +3804,10 @@ qwen3-5-397b-a17b,alibaba,models_dev,nano-gpt,qwen/qwen3.5-397b-a17b:thinking,fa
 qwen3-5-397b-a17b,alibaba,models_dev,openrouter,qwen/qwen3.5-397b-a17b,false,2026-11-11,2026-11-16,0.6,0.45,3.6,3,0.12,0.22,https://models.dev/api.json
 qwen3-5-397b-a17b,alibaba,openrouter,openrouter,qwen/qwen3.5-397b-a17b,false,2026-11-11,2026-11-16,0.6,0.45,3.6,3,,,https://openrouter.ai/api/v1/models
 qwen3-5-397b-a17b,alibaba,models_dev,huggingface,Qwen/Qwen3.5-397B-A17B,false,2026-11-24,2026-11-25,0.6,0.45,3.6,3,,,https://models.dev/api.json
+qwen3-5-397b-a17b,alibaba,models_dev,concentrate,qwen3.5-397b-a17b,false,2026-11-25,2026-11-28,0.6,0.45,3.6,3,0.22,0.22,https://models.dev/api.json
+qwen3-5-397b-a17b,alibaba,models_dev,kilo,qwen/qwen3.5-397b-a17b,false,2026-11-25,2026-11-28,0.39,0.36,2.34,2.4,,0.176,https://models.dev/api.json
+qwen3-5-397b-a17b,alibaba,models_dev,openrouter,qwen/qwen3.5-397b-a17b,false,2026-11-25,2026-11-28,0.45,0.5,3,3.6,0.22,0.3,https://models.dev/api.json
+qwen3-5-397b-a17b,alibaba,openrouter,openrouter,qwen/qwen3.5-397b-a17b,false,2026-11-25,2026-11-28,0.45,0.5,3,3.6,,,https://openrouter.ai/api/v1/models
 qwen3-5-9b,alibaba,models_dev,kilo,qwen/qwen3.5-9b,false,2026-10-20,2026-10-21,0.1,0.08,0.15,0.13,,0.04,https://models.dev/api.json
 qwen3-5-9b,alibaba,models_dev,openrouter,qwen/qwen3.5-9b,false,2026-10-20,2026-10-21,0.1,0.08,0.15,0.13,,0.04,https://models.dev/api.json
 qwen3-5-9b,alibaba,openrouter,openrouter,qwen/qwen3.5-9b,false,2026-10-20,2026-10-21,0.1,0.08,0.15,0.13,,,https://openrouter.ai/api/v1/models
@@ -3739,6 +3832,10 @@ qwen3-5-9b,alibaba,models_dev,openrouter,qwen/qwen3.5-9b,false,2026-11-19,2026-1
 qwen3-5-9b,alibaba,models_dev,huggingface,Qwen/Qwen3.5-9B,false,2026-11-24,2026-11-25,0.17,0.1,0.25,0.15,,,https://models.dev/api.json
 qwen3-5-9b,alibaba,models_dev,kilo,qwen/qwen3.5-9b,false,2026-11-24,2026-11-25,0.17,0.1,0.25,0.25,,,https://models.dev/api.json
 qwen3-5-9b,alibaba,models_dev,openrouter,qwen/qwen3.5-9b,false,2026-11-24,2026-11-25,0.17,0.1,0.25,0.25,,,https://models.dev/api.json
+qwen3-5-9b,alibaba,models_dev,huggingface,Qwen/Qwen3.5-9B,false,2026-11-25,2026-11-28,0.1,0.066,0.15,0.097,,,https://models.dev/api.json
+qwen3-5-9b,alibaba,models_dev,kilo,qwen/qwen3.5-9b,false,2026-11-25,2026-11-28,0.1,0.0425,0.25,0.0625,,0.03825,https://models.dev/api.json
+qwen3-5-9b,alibaba,models_dev,openrouter,qwen/qwen3.5-9b,false,2026-11-25,2026-11-28,0.1,0.085,0.25,0.125,,0.0765,https://models.dev/api.json
+qwen3-5-9b,alibaba,openrouter,openrouter,qwen/qwen3.5-9b,false,2026-11-25,2026-11-28,0.17,0.085,0.25,0.125,,,https://openrouter.ai/api/v1/models
 qwen3-5-flash-02-23,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3.5-flash-02-23,false,2026-09-04,2026-09-05,0.1,0.065,0.4,0.26,,,https://raw.githubusercontent.com/BerriAI/litellm/e56b26c255c1c059b62107be784fbe3c827db2a0/model_prices_and_context_window.json
 qwen3-5-plus,alibaba,models_dev,merge-gateway,qwen/qwen3.5-plus,false,2026-10-07,2026-10-08,0.115,0.115,0.688,0.688,0.023,0.0115,https://models.dev/api.json
 qwen3-5-plus,alibaba,models_dev,orcarouter,qwen/qwen3.5-plus,false,2026-10-21,2026-10-22,0.115,0.4,0.688,2.4,,,https://models.dev/api.json
@@ -3782,6 +3879,7 @@ qwen3-6-27b,alibaba,models_dev,huggingface,Qwen/Qwen3.6-27B,false,2026-11-24,202
 qwen3-6-27b,alibaba,models_dev,nano-gpt,qwen/qwen3.6-27b,false,2026-11-24,2026-11-25,0.203,0.25,2.24,2,0.1015,0.025,https://models.dev/api.json
 qwen3-6-27b,alibaba,models_dev,nano-gpt,qwen/qwen3.6-27b:thinking,false,2026-11-24,2026-11-25,0.203,0.25,2.24,2,0.1015,0.025,https://models.dev/api.json
 qwen3-6-27b,alibaba,models_dev,venice,qwen3-6-27b,false,2026-11-24,2026-11-25,0.325,0.32,3.25,3.2,,,https://models.dev/api.json
+qwen3-6-27b,alibaba,models_dev,kilo,qwen/qwen3.6-27b,false,2026-11-25,2026-11-28,0.6,0.25,3.6,2,,0.025,https://models.dev/api.json
 qwen3-6-35b-a3b,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3.6-35b-a3b,false,2026-09-19,2026-09-20,0.1,0.15,0.9,1,0.05,0.05,https://raw.githubusercontent.com/BerriAI/litellm/9ab609948d16627da1159ee1f86296582eb57d93/model_prices_and_context_window.json
 qwen3-6-35b-a3b,alibaba,models_dev,kilo,qwen/qwen3.6-35b-a3b,false,2026-10-10,2026-10-11,0.15,0.1,1,0.95,0.05,0.1,https://models.dev/api.json
 qwen3-6-35b-a3b,alibaba,models_dev,openrouter,qwen/qwen3.6-35b-a3b,false,2026-10-10,2026-10-11,0.15,0.1,1,0.95,0.05,0.1,https://models.dev/api.json
@@ -3814,6 +3912,8 @@ qwen3-6-35b-a3b,alibaba,models_dev,huggingface,Qwen/Qwen3.6-35B-A3B,false,2026-1
 qwen3-6-35b-a3b,alibaba,models_dev,kilo,qwen/qwen3.6-35b-a3b,false,2026-11-24,2026-11-25,0.05,0.1,0.7,0.89,0.025,0.035,https://models.dev/api.json
 qwen3-6-35b-a3b,alibaba,models_dev,openrouter,qwen/qwen3.6-35b-a3b,false,2026-11-24,2026-11-25,0.05,0.1,0.7,0.89,0.025,0.035,https://models.dev/api.json
 qwen3-6-35b-a3b,alibaba,openrouter,openrouter,qwen/qwen3.6-35b-a3b,false,2026-11-24,2026-11-25,0.05,0.1,0.7,0.89,,,https://openrouter.ai/api/v1/models
+qwen3-6-35b-a3b,alibaba,models_dev,ambient,qwen/qwen3.6-35b-a3b,false,2026-11-25,2026-11-28,0.1,0.1,0.9,0.88,0.04,0.04,https://models.dev/api.json
+qwen3-6-35b-a3b,alibaba,models_dev,kilo,qwen/qwen3.6-35b-a3b,false,2026-11-25,2026-11-28,0.1,0.05,0.89,0.7,0.035,0.025,https://models.dev/api.json
 qwen3-6-flash,alibaba,models_dev,merge-gateway,qwen/qwen3.6-flash,false,2026-10-07,2026-10-08,0.165,0.165,0.99,0.99,0.033,0.0165,https://models.dev/api.json
 qwen3-6-flash,alibaba,models_dev,alibaba,qwen3.6-flash,true,2026-10-19,2026-10-20,0.1875,0.25,1.125,1.5,,0.025,https://models.dev/api.json
 qwen3-6-flash,alibaba,models_dev,alibaba-cn,qwen3.6-flash,true,2026-10-19,2026-10-20,0.1875,0.165,1.125,0.99,,0.0165,https://models.dev/api.json
@@ -3845,6 +3945,7 @@ qwen3-7-max,alibaba,models_dev,togetherai,Qwen/Qwen3.7-Max,false,2026-10-20,2026
 qwen3-7-max,alibaba,models_dev,zenmux,qwen/qwen3.7-max,false,2026-10-21,2026-10-22,2.5,1.25,7.5,3.75,0.5,0.25,https://models.dev/api.json
 qwen3-7-max,alibaba,litellm,together_ai,together_ai/Qwen/Qwen3.7-Max,false,2026-11-07,2026-11-08,1.5,2.5,4.5,7.5,0.3,0.5,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json
 qwen3-7-max,alibaba,models_dev,kilo,qwen/qwen3.7-max,false,2026-11-17,2026-11-18,1.475,2.5,4.425,7.5,0.295,0.5,https://models.dev/api.json
+qwen3-7-max,alibaba,models_dev,novita-ai,qwen/qwen3.7-max,false,2026-11-25,2026-11-28,1.25,1.65,3.75,4.951,0.25,0.33,https://models.dev/api.json
 qwen3-7-plus,alibaba,models_dev,alibaba-cn,qwen3.7-plus,true,2026-10-19,2026-10-20,0.5,0.276,3,1.101,0.05,0.0276,https://models.dev/api.json
 qwen3-7-plus,alibaba,models_dev,302ai,qwen3.7-plus,false,2026-10-21,2026-10-22,0.285,0.228,1.15,0.92,,0.023,https://models.dev/api.json
 qwen3-7-plus,alibaba,models_dev,kenari,qwen3-7-plus,false,2026-10-21,2026-10-22,0,0.38285714,0,1.48571429,,0.07428571,https://models.dev/api.json
@@ -3907,6 +4008,10 @@ qwen3-8-27b,alibaba,openrouter,openrouter,qwen/qwen3.8-27b,false,2026-11-23,2026
 qwen3-8-27b,alibaba,models_dev,huggingface,Qwen/Qwen3.8-27B,false,2026-11-24,2026-11-25,0.4,0.04,3,1.35,,,https://models.dev/api.json
 qwen3-8-27b,alibaba,models_dev,openrouter,qwen/qwen3.8-27b,false,2026-11-24,2026-11-25,0.06,0.035,1.96,1.5,0.059,0.0175,https://models.dev/api.json
 qwen3-8-27b,alibaba,openrouter,openrouter,qwen/qwen3.8-27b,false,2026-11-24,2026-11-25,0.06,0.035,1.96,1.5,,,https://openrouter.ai/api/v1/models
+qwen3-8-27b,alibaba,models_dev,kilo,qwen/qwen3.8-27b,false,2026-11-25,2026-11-28,0.5,0.035,3,1.5,0.1,0.0175,https://models.dev/api.json
+qwen3-8-27b,alibaba,models_dev,openrouter,qwen/qwen3.8-27b,false,2026-11-25,2026-11-28,0.035,0.06,1.5,1.96,0.0175,0.059,https://models.dev/api.json
+qwen3-8-27b,alibaba,models_dev,prime,qwen/qwen3.8-27b,false,2026-11-25,2026-11-28,0.45,0.24,3.2,2.2,0.05,0.05,https://models.dev/api.json
+qwen3-8-27b,alibaba,openrouter,openrouter,qwen/qwen3.8-27b,false,2026-11-25,2026-11-28,0.035,0.06,1.5,1.96,,,https://openrouter.ai/api/v1/models
 qwen3-8-flash,alibaba,litellm_git,together_ai,together_ai/Qwen/Qwen3.8-Flash,false,2026-09-20,2026-09-21,0.15,0.09,0.47,0.282,,,https://raw.githubusercontent.com/BerriAI/litellm/707c7493cfce501fa9da5f17fc3580e68310d947/model_prices_and_context_window.json
 qwen3-8-flash,alibaba,litellm,together_ai,together_ai/Qwen/Qwen3.8-Flash,false,2026-10-06,2026-10-07,0.09,0.15,0.282,0.47,,,https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json
 qwen3-8-flash,alibaba,models_dev,302ai,qwen3.8-flash,false,2026-10-21,2026-10-22,0.18,0.15,0.564,0.47,,0.016,https://models.dev/api.json
@@ -4036,12 +4141,14 @@ qwen3-next-80b-a3b-instruct,alibaba,models_dev,vercel,alibaba/qwen3-next-80b-a3b
 qwen3-next-80b-a3b-instruct,alibaba,openrouter,openrouter,qwen/qwen3-next-80b-a3b-instruct,false,2026-11-17,2026-11-18,0.09,0.1,1.1,1.1,,,https://openrouter.ai/api/v1/models
 qwen3-next-80b-a3b-instruct,alibaba,models_dev,nano-gpt,qwen/qwen3-next-80b-a3b-instruct,false,2026-11-23,2026-11-24,0.09,0.09,1.1,1.1,0.045,0.09,https://models.dev/api.json
 qwen3-next-80b-a3b-instruct,alibaba,models_dev,huggingface,Qwen/Qwen3-Next-80B-A3B-Instruct,false,2026-11-24,2026-11-25,0.25,0.09,1,1.1,,,https://models.dev/api.json
+qwen3-next-80b-a3b-instruct,alibaba,models_dev,kilo,qwen/qwen3-next-80b-a3b-instruct,false,2026-11-25,2026-11-28,0.1,0.09,1.1,1.1,0.07,,https://models.dev/api.json
 qwen3-next-80b-a3b-thinking,alibaba,litellm_git,novita,novita/qwen/qwen3-next-80b-a3b-thinking,false,2026-01-12,2026-01-13,1200,0.15,12000,1.5,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-omni-flash,alibaba,models_dev,alibaba-cn,qwen3-omni-flash,true,2026-10-19,2026-10-20,0.058,0.258,0.23,0.989,,,https://models.dev/api.json
 qwen3-vl-235b-a22b-instruct,alibaba,litellm_git,novita,novita/qwen/qwen3-vl-235b-a22b-instruct,false,2026-01-12,2026-01-13,2400,0.3,12000,1.5,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-vl-235b-a22b-instruct,alibaba,models_dev,kilo,qwen/qwen3-vl-235b-a22b-instruct,false,2026-10-09,2026-10-10,0.26,0.21,1.04,1.9,,0.1,https://models.dev/api.json
 qwen3-vl-235b-a22b-instruct,alibaba,models_dev,merge-gateway,qwen/qwen3-vl-235b-a22b-instruct,false,2026-10-15,2026-10-16,0.287,0.21,1.147,1.9,0.15785,0.105,https://models.dev/api.json
 qwen3-vl-235b-a22b-instruct,alibaba,models_dev,huggingface,Qwen/Qwen3-VL-235B-A22B-Instruct,false,2026-11-24,2026-11-25,0.3,0.2,1.5,0.88,,,https://models.dev/api.json
+qwen3-vl-235b-a22b-instruct,alibaba,models_dev,kilo,qwen/qwen3-vl-235b-a22b-instruct,false,2026-11-25,2026-11-28,0.21,0.2,1.9,0.88,0.1,0.11,https://models.dev/api.json
 qwen3-vl-235b-a22b-thinking,alibaba,litellm_git,novita,novita/qwen/qwen3-vl-235b-a22b-thinking,false,2026-01-12,2026-01-13,7840,0.98,31600,3.95,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-vl-30b-a3b-instruct,alibaba,litellm_git,novita,novita/qwen/qwen3-vl-30b-a3b-instruct,false,2026-01-12,2026-01-13,1600,0.2,5600,0.7,,,https://raw.githubusercontent.com/BerriAI/litellm/a445d8a4b491a189bc01cc62ccbbf9be70903769/model_prices_and_context_window.json
 qwen3-vl-30b-a3b-instruct,alibaba,litellm_git,openrouter,openrouter/qwen/qwen3-vl-30b-a3b-instruct,false,2026-09-15,2026-09-16,0.15,0.13,0.6,0.52,,,https://raw.githubusercontent.com/BerriAI/litellm/319f427c403043756917aea39cab89021a7f92e7/model_prices_and_context_window.json
@@ -4156,6 +4263,7 @@ tencent-hy4,tencent,models_dev,nano-gpt,tencent/hy4,false,2026-11-11,2026-11-16,
 tencent-hy4,tencent,models_dev,huggingface,tencent/Hy4,false,2026-11-23,2026-11-24,0.417,0.834,1.2505,2.501,,,https://models.dev/api.json
 tencent-hy4,tencent,models_dev,tencent-token-plan,hy4,false,2026-11-23,2026-11-24,0.834,0.898298,2.501,2.694894,0.042,0.044915,https://models.dev/api.json
 tencent-hy4,tencent,models_dev,huggingface,tencent/Hy4,false,2026-11-24,2026-11-25,0.834,0.7089,2.501,2.12585,,,https://models.dev/api.json
+tencent-hy4,tencent,models_dev,huggingface,tencent/Hy4,false,2026-11-25,2026-11-28,0.7089,0.834,2.12585,2.501,,,https://models.dev/api.json
 trinity-large-thinking,arcee,models_dev,vercel,arcee-ai/trinity-large-thinking,false,2026-10-05,2026-10-06,0.25,0.25,0.9,0.8,,,https://models.dev/api.json
 trinity-large-thinking,arcee,models_dev,vercel,arcee-ai/trinity-large-thinking,false,2026-10-21,2026-10-22,0.25,0.25,0.8,0.8,,0.06,https://models.dev/api.json
 ui-tars-1-5-7b,bytedance,litellm_git,openrouter,openrouter/bytedance/ui-tars-1.5-7b,false,2025-07-26,2025-07-27,100000,0.1,200000,0.2,,,https://raw.githubusercontent.com/BerriAI/litellm/e8a374fc47b922abd999affc49061c1a40c0c2ec/model_prices_and_context_window.json
